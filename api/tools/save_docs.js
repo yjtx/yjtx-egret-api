@@ -110,8 +110,6 @@ exports.screening = function (apiArr) {
         //继承
         if (classDes["tempExtends"]) {
             classDes["augments"] = [];
-            if (key == "dragonBones.AnimationEvent") {
-            }
             var parent = getClassFullName(classDes["tempExtends"], classDes["memberof"]);
             classDes["augments"].push(parent);
 
