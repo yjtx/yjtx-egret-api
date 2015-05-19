@@ -53,6 +53,7 @@ exports.addExtends = function (tempClassArr) {
 
             var extendsArr = classInfo["class"]["augments"] || [];
 
+
             //继承function
             var funcNames = [];
             for (var tempKey in classInfo["function"]) {
@@ -66,8 +67,11 @@ exports.addExtends = function (tempClassArr) {
             }
 
             extendsArr = extendsArr.concat();
+
+            var implementsArr = [];
             for (var i = 0; classInfo["class"]["implements"] && i < classInfo["class"]["implements"].length; i++) {
                 extendsArr.push(classInfo["class"]["implements"][i]["name"]);
+                implementsArr.push(classInfo["class"]["implements"][i]["name"]);
             }
 
             for (var i = 0; i < extendsArr.length; i++) {
@@ -84,9 +88,10 @@ exports.addExtends = function (tempClassArr) {
 
                     if (parentFunc["name"] != "constructor" && parentFunc["scope"] == "instance" && funcNames.indexOf(parentFunc["name"]) < 0) {//可以继承的方法
                         classInfo["function"] = classInfo["function"] || [];
-
-                        parentFunc["inherits"] = extendsArr[i];
-                        parentFunc["inherited"] = true;
+                        if (implementsArr.indexOf(extendsArr[i]) < 0) {
+                            parentFunc["inherits"] = extendsArr[i];
+                            parentFunc["inherited"] = true;
+                        }
                         classInfo["function"].push(parentFunc);
 
                         funcNames.push(parentFunc["name"]);
@@ -100,9 +105,11 @@ exports.addExtends = function (tempClassArr) {
 
                     if (parentMember["scope"] == "instance" && memberNames.indexOf(parentMember["name"]) < 0) {//可以继承的方法
                         classInfo["member"] = classInfo["member"] || [];
+                        if (implementsArr.indexOf(extendsArr[i]) < 0) {
+                            parentMember["inherits"] = extendsArr[i];
+                            parentMember["inherited"] = true;
+                        }
 
-                        parentMember["inherits"] = extendsArr[i];
-                        parentMember["inherited"] = true;
                         classInfo["member"].push(parentMember);
 
                         memberNames.push(parentMember["name"]);
