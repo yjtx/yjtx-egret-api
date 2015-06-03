@@ -354,36 +354,32 @@ function analyze(item, name, parent, filename) {
             member["scope"] = "instance";
 
             var tempItem;
+
+            var useGet = false;
             if (rwType == 1) {
                 tempItem = item["get"];
+                useGet = true;
             }
             else {
                 tempItem = item["set"];
+
+                if (rwType == 3 && (!tempItem["parameters"] || !tempItem["parameters"]["description"] || tempItem["parameters"]["description"] == "")) {
+                    tempItem = item["get"];
+                    useGet = true;
+                }
             }
 
             initDesc(tempItem["docs"], tempItem["parameters"], member, true);
-            if (rwType != 1) {
+            if (!useGet) {
                 member["type"] = member["params"][0]["type"];
-
                 delete member["params"];
             }
+
             if ((member["description"] == null || member["description"] == "") && rwType == 3) {
                 member["description"] = getDesc(item["get"]["docs"]) || "";
             }
 
-            member["description"] = member["description"] || "";
-
-            member["description"] = member["description"].replace(/^(\s)*/, "");
-            member["description"] = member["description"].replace(/(\s)*$/, "");
-
-            if (member["description"] != "") {
-                //if (rwType == 1) {
-                //    member["description"] += "【只读】";
-                //}
-                //else if (rwType == 2){
-                //    member["description"] += "【只写】";
-                //}
-            }
+            member["description"] = trim.trimAll(member["description"] || "");
 
             member["description"] = changeDescription(member["description"]);
 
@@ -393,6 +389,7 @@ function analyze(item, name, parent, filename) {
                 member["noDes"] = true;
             }
             addOtherPropertis(member, tempItem);
+            delete member["returns"];
             break;
         }
         case "modulefunction"://变量
@@ -493,9 +490,6 @@ function initDesc(docs, parameters, obj, notTrans) {
                     }
 
                     break;
-                case "example" :
-                    obj["exampleC"] = trim.trimAll(doc["example"]);
-                    break;
                 case "params" :
                     paramsDoc = doc["params"];
                     break;
@@ -507,11 +501,10 @@ function initDesc(docs, parameters, obj, notTrans) {
                         obj["description"] = doc["description"];
                     }
                     break;
-                default :
+                default ://event state skinPart see example
                     obj[key] = doc[key];
             }
         }
-
     }
 
     if (parameters && parameters.length) {
@@ -531,7 +524,7 @@ function addOtherPropertis(item, orgItem) {
     if (orgItem["deprecated"]) {
         item["deprecated"] = true;
     }
-    var otherKeys = ["link", "example", "see", "pType", "version", "value"];
+    var otherKeys = ["pType", "version", "value", "default", "platform"];
     for (var i= 0; i < otherKeys.length; i++) {
         var key = otherKeys[i];
         if (orgItem[key]) {

@@ -5,6 +5,8 @@
 
 var file = require("../core/file.js");
 var trim = require("../core/trim");
+var globals = require("../core/globals");
+var path = require("path");
 
 function typeScriptCompiler(quitFunc,cmd) {
     file.save("tsc_config_temp.txt", cmd);//todo performance-optimize
@@ -467,21 +469,37 @@ function analyze(doc) {
         if (item == "") {
             continue;
         }
+
+        //描述
         if (i == 0 && item.charAt(0) != "@") {
-            docInfo["description"] = changeDescription(item);
+            docInfo["description"] = item;
             continue;
         }
         else if (i == 0) {
             item = item.substring(1);
         }
 
-        if (item.indexOf("private") == 0) {
+        if (item.indexOf("classdesc") == 0) {//兼容类描述
+            if (item.match(/^classdesc(\s)+/)) {
+                var temp = item.match(/^classdesc(\s)+/)[0];
+                if (docInfo["description"] == null) {
+                    docInfo["description"] = item.substring(temp.length);
+                }
+                else {
+                    docInfo["description"] += "\n" + item.substring(temp.length);
+                }
+            }
+            else {
+                //console.log("sdf");
+            }
+        }
+        else if (item.indexOf("private") == 0) {//private
             docInfo["private"] = true;
         }
-        else if (item.indexOf("deprecated") == 0) {
+        else if (item.indexOf("deprecated") == 0) {//deprecated
             docInfo["deprecated"] = true;
         }
-        else if (item.indexOf("param") == 0) {
+        else if (item.indexOf("param") == 0) {//param
             if (docInfo["params"] == null) {
                 docInfo["params"] = {};
             }
@@ -495,48 +513,80 @@ function analyze(doc) {
 
             docInfo["params"][paramName] = des;
         }
-        else if (item.indexOf("see") == 0) {
-            var temp = item.match(/^see(\s)+/)[0];
-            docInfo["see"] = item.substring(temp.length);
+        else if (item.indexOf("example") == 0) {//example
+            docInfo["example"] = {};
+            var temp = item.match(/^example(\s)+/)[0];
+            var des1 = item.substring(temp.length);
+
+            var reg = /<code>[\s\S]*<\/code>/;
+            if (des1.match(reg)) {
+                console.log("asdfsfsfsfsf")
+                var code = des1.match(reg)[0];
+                docInfo["example"]["code"] = des1.substring(des1.indexOf("<code>") + 6, des1.indexOf("</code>"));
+                des1 = des1.replace(code, "");
+            }
+            docInfo["example"]["description"] = trim.trimAll(des1);
+        }
+        else if (item.indexOf("includeExample") == 0) {//example
+            docInfo["example"] = {};
+            var tname = item.match(/^includeExample(\s)+/)[0];
+            var url = trim.trimAll(item.substring(tname.length));
+            docInfo["example"]["code"] = file.read(path.join(globals.getExampleRootPath(), url));
+            docInfo["example"]["description"] = "";
+        }
+        else if (item.indexOf("return") == 0) {//return(s)
+            var temp = item.match(/^return(s)?(\s)+(\{[\s\S]*\})?(\s)*/)[0];
+
+            docInfo["return"] = item.substring(temp.length);
+        }
+        else if (item.indexOf("event") == 0) {//event
+            var temp = item.match(/^event(\s)+/)[0];
+            if (docInfo["event"] == null) {
+                docInfo["event"] = [];
+            }
+            var des1 = trim.trimAll(item.substring(temp.length));
+            var eventType = des1.match(/(\S)+/)[0];
+            var des2 = trim.trimAll(des1.substring(eventType.length));
+            docInfo["event"].push({"type" : eventType, "description" : des2});
         }
         else if (item.indexOf("link") == 0) {
             var temp = item.match(/^link(\s)+/)[0];
             docInfo["link"] = item.substring(temp.length);
         }
-        else if (item.indexOf("example") == 0) {
-            var temp = item.match(/^example(\s)+/)[0];
-            docInfo["example"] = item.substring(temp.length);
-        }
-        else if (item.indexOf("classdesc") == 0) {
-            if (item.match(/^classdesc(\s)+/)) {
-                var temp = item.match(/^classdesc(\s)+/)[0];
-                if (docInfo["description"] == null) {
-                    docInfo["description"] = changeDescription(item.substring(temp.length));
-                }
-                else {
-                    docInfo["description"] += "\n" + changeDescription(item.substring(temp.length));
-                }
+        else if (item.indexOf("see") == 0) {
+            var temp = item.match(/^see(\s)+/)[0];
+            if (docInfo["see"] == null) {
+                docInfo["see"] = [];
             }
-            else {
-                //console.log("sdf");
+            docInfo["see"].push(trim.trimAll(item.substring(temp.length)));
+        }
+        else if (item.indexOf("state") == 0) {//state
+            var temp = item.match(/^state(\s)+/)[0];
+            if (docInfo["state"] == null) {
+                docInfo["state"] = [];
             }
+            var des1 = trim.trimAll(item.substring(temp.length));
+            var eventType = des1.match(/(\S)+/)[0];
+            var des2 = trim.trimAll(des1.substring(eventType.length));
+            docInfo["state"].push({"name" : eventType, "description" : des2});
         }
-        else if (item.indexOf("return") == 0) {
-            var temp = item.match(/^return(s)?(\s)+(\{[\s\S]*\})?(\s)*/)[0];
-
-            docInfo["return"] = item.substring(temp.length);
+        else if (item.indexOf("skinPart") == 0) {//skinPart
+            var temp = item.match(/^skinPart(\s)+/)[0];
+            if (docInfo["skinPart"] == null) {
+                docInfo["skinPart"] = [];
+            }
+            var des1 = trim.trimAll(item.substring(temp.length));
+            var eventType = des1.match(/(\S)+/)[0];
+            var des2 = trim.trimAll(des1.substring(eventType.length));
+            docInfo["skinPart"].push({"name" : eventType, "description" : des2});
         }
-        else {
+        else {//其他非特殊的标签  default version platform
             var docName = item.match(/^(\S)+/)[0];
-            docInfo[docName] = trim.trimAll(changeDescription(item.substring(docName.length)) || "");
+            docInfo[docName] = trim.trimAll(item.substring(docName.length) || "");
         }
     }
 
     return docInfo;
-}
-
-function changeDescription(des) {
-    return des;
 }
 
 exports.compile = typeScriptCompiler;
