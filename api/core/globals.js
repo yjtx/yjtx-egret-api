@@ -15,6 +15,37 @@ function getExampleRootPath() {
     return getOption("-examples-path") || getOption("--examples");
 }
 
+function getOutputPath() {
+    return getOption("--output");
+}
+
+
+function clone(frame) {
+    var result;
+    if (frame instanceof Array) {
+        result = [];
+    }
+    else if (frame instanceof Object) {
+        result = {};
+    }
+
+    for (var key in frame) {
+        if (frame[key] instanceof Array) {
+            result[key] = clone(frame[key]);
+        }
+        else if (frame[key] instanceof Object) {//
+            result[key] = clone(frame[key]);
+        }
+        else {
+            result[key] = frame[key];
+        }
+    }
+    return result;
+}
+
+exports.clone = clone;
+
 exports.getOption = getOption;
 exports.addQuotes = addQuotes;
 exports.getExampleRootPath = getExampleRootPath;
+exports.getOutputPath = getOutputPath;

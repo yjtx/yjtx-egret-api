@@ -1,0 +1,1 @@
+node tscdoc.js --path ../../../Egret/egret-core/src --output ../../../Egret/api/js/data/ --examples ../../../Egret/egret-core/examples

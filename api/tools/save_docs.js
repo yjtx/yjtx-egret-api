@@ -4,6 +4,7 @@
 
 var path = require("path");
 var trim = require("../core/trim");
+var globals = require("../core/globals");
 
 var classesArr = {};
 var windowArr = [];
@@ -64,7 +65,7 @@ function getMemberof(className) {
     }
 
     for (var i = 0; i < classMemberofs[name].length; i++) {
-        var fullName =  classMemberofs[name][i] + "." + name;
+        var fullName = classMemberofs[name][i] + "." + name;
         if (fullName.indexOf(className) == fullName.length - className.length) {
             return classMemberofs[name][i];
         }
@@ -125,7 +126,7 @@ exports.screening = function (apiArr) {
             for (var i = 0; i < classDes["tempImplements"].length; i++) {
                 var tempIm = classDes["tempImplements"][i];
 
-                classDes["implements"].push({"name" : getClassFullName(tempIm, classDes["memberof"])});
+                classDes["implements"].push({"name": getClassFullName(tempIm, classDes["memberof"])});
             }
         }
 
@@ -136,23 +137,22 @@ exports.screening = function (apiArr) {
 
     }
 
-    var tempClassArr = {};
-    clone(classesArr, tempClassArr);
+    var tempClassArr = globals.clone(classesArr);
     removeDefault(tempClassArr);
 
     return tempClassArr;
 };
 
-function exclude (tempObj) {
+function exclude(tempObj) {
     if (tempObj["pType"] == "private" || tempObj["pType"] == "protected") {
-        return true;
+        //return true;
     }
     if (tempObj["private"] == true) {
-        return true;
+        //return true;
     }
 
     if (tempObj["noDes"] == true) {
-        return true;
+        //return true;
     }
     return false;
 }
@@ -214,7 +214,13 @@ function _analyze(docsInfo, parent, filename) {
 function addClassInfo(name, parent) {
     var l = parent.concat([name]);
     if (classesArr[l.join(".")] == null) {
-        classesArr[l.join(".")] = {"memberof" : parent.join("."), "member":[], "function":[], "globalMember":[], "globalFunction":[]};
+        classesArr[l.join(".")] = {
+            "memberof": parent.join("."),
+            "member": [],
+            "function": [],
+            "globalMember": [],
+            "globalFunction": []
+        };
     }
 
     return classesArr[l.join(".")];
@@ -359,11 +365,12 @@ function analyze(item, name, parent, filename) {
             if (rwType == 1) {
                 tempItem = item["get"];
                 useGet = true;
+
             }
             else {
                 tempItem = item["set"];
 
-                if (rwType == 3 && (!tempItem["parameters"] || !tempItem["parameters"]["description"] || tempItem["parameters"]["description"] == "")) {
+                if (rwType == 3 && (!tempItem["docs"] || !tempItem["docs"][0]["description"] || tempItem["docs"][0]["description"] == "")) {
                     tempItem = item["get"];
                     useGet = true;
                 }
@@ -404,7 +411,7 @@ function analyze(item, name, parent, filename) {
                 var doc = item["docs"][item["docs"].length - 1];
 
                 if (doc["return"]) {
-                    member["returns"] = {"type" : member["type"], "description" : changeDescription(doc["return"])};
+                    member["returns"] = {"type": member["type"], "description": changeDescription(doc["return"])};
                 }
             }
 
@@ -432,7 +439,7 @@ function analyze(item, name, parent, filename) {
                 var doc = item["docs"][item["docs"].length - 1];
 
                 if (doc["return"]) {
-                    member["returns"] = {"type" : member["type"], "description" : changeDescription(doc["return"])};
+                    member["returns"] = {"type": member["type"], "description": changeDescription(doc["return"])};
                 }
             }
 
@@ -442,7 +449,7 @@ function analyze(item, name, parent, filename) {
             }
             else {
                 if (member["type"] != "void") {
-                    member["returns"] = {"type" : member["type"]};
+                    member["returns"] = {"type": member["type"]};
                 }
             }
             classesArr[member["memberof"]]["function"].push(member);
@@ -465,29 +472,31 @@ function getDesc(docs) {
 }
 
 function initDesc(docs, parameters, obj, notTrans) {
-    if (notTrans === void 0) { notTrans = false; }
+    if (notTrans === void 0) {
+        notTrans = false;
+    }
     var paramsDoc = {};
     if (docs && docs.length) {
         var doc = docs[docs.length - 1];
 
         for (var key in doc) {
-            switch (key)  {
+            switch (key) {
                 case "return" :
-                    obj["returns"] = {"description" : changeDescription(doc["return"])};
+                    obj["returns"] = {"description": changeDescription(doc["return"])};
                     break;
                 case "link" :
-                    obj["exampleU"] = [];
-
-                    var links = trim.trimAll(doc["link"]);
-                    var arr = links.split("\n");
-                    for (var m = 0; m < arr.length; m++) {
-                        var u = arr[m];
-
-                        var uo = {};
-                        obj["exampleU"].push(uo);
-                        uo["u"] = u.match(/^(\S)+/)[0];
-                        uo["t"] = trim.trimAll(u.substring(uo["u"].length));
-                    }
+                    //obj["exampleU"] = [];
+                    //
+                    //var links = trim.trimAll(doc["link"]);
+                    //var arr = links.split("\n");
+                    //for (var m = 0; m < arr.length; m++) {
+                    //    var u = arr[m];
+                    //
+                    //    var uo = {};
+                    //    obj["exampleU"].push(uo);
+                    //    uo["u"] = u.match(/^(\S)+/)[0];
+                    //    uo["t"] = trim.trimAll(u.substring(uo["u"].length));
+                    //}
 
                     break;
                 case "params" :
@@ -501,8 +510,16 @@ function initDesc(docs, parameters, obj, notTrans) {
                         obj["description"] = doc["description"];
                     }
                     break;
-                default ://event state skinPart see example
+                case "event" :
+                case "state" :
+                case "skinPart" :
+                case "see" :
+                case "example" :
+                case "private" :
+                case "deprecated" :
                     obj[key] = doc[key];
+                    break;
+                default :
             }
         }
     }
@@ -517,15 +534,8 @@ function initDesc(docs, parameters, obj, notTrans) {
 }
 
 function addOtherPropertis(item, orgItem) {
-    if (orgItem["private"]) {
-        item["private"] = true;
-    }
-
-    if (orgItem["deprecated"]) {
-        item["deprecated"] = true;
-    }
-    var otherKeys = ["pType", "version", "value", "default", "platform"];
-    for (var i= 0; i < otherKeys.length; i++) {
+    var otherKeys = ["pType", "version", "value", "default", "platform", "copy", "inheritDoc"];
+    for (var i = 0; i < otherKeys.length; i++) {
         var key = otherKeys[i];
         if (orgItem[key]) {
             if (orgItem[key] instanceof String) {
@@ -550,19 +560,4 @@ function changeDescription(des) {
     }
 
     return des;
-}
-
-function clone(frame, result) {
-    for (var key in frame) {
-        if (frame[key] instanceof Array) {
-            result[key] = clone(frame[key], []);
-        }
-        else if (frame[key] instanceof Object) {//
-            result[key] = clone(frame[key], {});
-        }
-        else {
-            result[key] = frame[key];
-        }
-    }
-    return result;
 }

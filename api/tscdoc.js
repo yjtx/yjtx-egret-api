@@ -6,7 +6,6 @@ var globals = require("./core/globals");
 var file = require("./core/file.js");
 var params = require("./core/params_analyze.js");
 var sdoc = require("./tools/save_docs");
-var addExtends = require("./tools/addExtends");
 var typeScriptCompiler = require("./tools/egret_tsc_api.js");
 
 function run(opts) {
@@ -17,24 +16,49 @@ function run(opts) {
     var outputPath = opts["--output"][0];
     var egretPath = opts["--path"][0];
 
-    var moduleArr = ["core", "res", "html5", "native", "gui", "socket", "dragonbones"];
-    var tsList = [];
-    for (var i = 0; i < moduleArr.length; i++) {
-        tsList = tsList.concat(getModuleList(moduleArr[i], egretPath));
-    }
+    //var tsList = [];
+    //var moduleArr = ["core", "res", "html5", "native", "gui", "socket", "dragonbones"];
+    //for (var i = 0; i < moduleArr.length; i++) {
+    //    tsList = tsList.concat(getModuleList(moduleArr[i], egretPath));
+    //}
 
-    tsList.push(path.join(egretPath,  "src/egret/i18n/cn.ts"));
+    var ignoreList = [/oldVersion.*NativeVersionController.ts/];
+    var tsList = file.getDirectoryAllListing(path.join(egretPath));
+    tsList = tsList.filter(function (item) {
+        for (var i = 0; i < ignoreList.length; i++) {
+            if (item.match(ignoreList[i])) {
+                return false;
+            }
+            else if (!item.match(/\.ts$/)) {
+                return false
+            }
+        }
+        return true;
+    });
 
     var cmd = tsList.join(" ") + " -d -t ES5 --out " + globals.addQuotes(path.join(outputPath, "a.d.ts"));
     var apiArr = typeScriptCompiler.compile(function () {
     }, cmd);
-
     var tempClassArr = sdoc.screening(apiArr);
-    tempClassArr = addExtends.addChildClasses(tempClassArr);
-    var extendsObj = addExtends.addExtends(tempClassArr);
+
+    //
+    var classChildren = require("./tools/addClassChildren");
+    classChildren.addClassChildren(tempClassArr);
+
+    //对 3个“_”的名字改成2个_
+    require("./tools/dealName").dealName(tempClassArr);
+
+    //处理继承相关信息
+    require("./tools/inherit").dealWithInherite(tempClassArr);
+    //处理copy相关信息
+    require("./tools/copy").dealWithCopy(tempClassArr);
+    //对文件内membe等按字母排序
+    require("./tools/sort").sortWithName(tempClassArr);
+
+    require("./tools/screening").screening(tempClassArr);
 
     file.remove(outputPath);
-    addExtends.save(extendsObj, outputPath);
+    require("./tools/save").save(tempClassArr);
 
     file.remove("tsc_config_temp.txt");
 }

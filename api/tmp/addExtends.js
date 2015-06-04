@@ -5,44 +5,21 @@
 var path = require("path");
 var file = require("../core/file.js");
 
-/**
- *
- * @param tempClassArr 已经排除了不需要的方法以及属性
- */
-exports.addChildClasses = function (tempClassArr) {
-    var classChildren = {};
-    for (var tempKey in tempClassArr) {
-        var item = tempClassArr[tempKey];
 
-        if (item.class) {//class interface
-            var classInfo = item.class;
-            if (classInfo["augments"] && classInfo["augments"].length) {
-                var classParent = classInfo["augments"][0];
-                if (classChildren[classParent] == null) {
-                    classChildren[classParent] = [];
-                }
-                classChildren[classParent].push(tempKey);
-            }
-        }
-    }
-
-    for (var key in tempClassArr) {
-        var item = tempClassArr[key];
-
-        if (item.class) {//class interface
-            if (classChildren[key]) {
-                var classInfo = item.class;
-                classInfo["children"] = classChildren[key];
-            }
-        }
-    }
-    return tempClassArr;
-};
 
 exports.addExtends = function (tempClassArr) {
 
+
     var classArr = {};//所有的class
     var moduleGlobals = {};//所有的全局函数、全局属性
+
+
+    //对inheritDoc进行处理
+
+    //对state skinPart进行处理
+
+    //对copy进行处理
+
 
     for (var key in tempClassArr) {
         var item = tempClassArr[key];

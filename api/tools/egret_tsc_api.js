@@ -8,9 +8,11 @@ var trim = require("../core/trim");
 var globals = require("../core/globals");
 var path = require("path");
 
+var flags = require("../tools/enumflag").getEnumFlag();
+
 function typeScriptCompiler(quitFunc,cmd) {
     file.save("tsc_config_temp.txt", cmd);//todo performance-optimize
-    var TypeScript = require('../core/typescript/tscapi.js');
+    var TypeScript = require('../tools/enumflag').getTscApi();
 
     TypeScript.exit = function(){
         setTimeout(quitFunc,1,arguments[0])
@@ -66,10 +68,10 @@ function check(obj, parent, text) {
     }
 
 
-
     switch (obj.flags) {
-        case 128: //module
-        case 256: //module
+        case flags["ValueModule"]: //ValueModule
+        case flags["NamespaceModule"]: //NamespaceModule
+        case flags["Module"]: //NamespaceModule
         {
             parent[objName]["$_tree_"] = {};
 
@@ -84,8 +86,12 @@ function check(obj, parent, text) {
 
             break;
         }
-        case 1://module var
+        case flags["FunctionScopedVariable"]://module var
+        case flags["BlockScopedVariable"]://module var
         {
+            parent[objName]["api"] = text.substring(obj.valueDeclaration.parent.pos, obj.valueDeclaration.parent.end);
+            addDoc(parent[objName]["api"], parent[objName]);
+
             parent[objName]["bodyType"] = "modulevar";
 
             if (obj.valueDeclaration && obj.valueDeclaration.type) {
@@ -94,7 +100,7 @@ function check(obj, parent, text) {
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
-        case 2://变量
+        case flags["Property"]://变量
         {
             parent[objName]["bodyType"] = "var";
 
@@ -118,7 +124,7 @@ function check(obj, parent, text) {
             addPublic(content, parent[objName], objName);
             break;
         }
-        case 8192://module var  get
+        case flags["GetAccessor"]://module var  get
         {
             parent[objName]["bodyType"] = "get";
 
@@ -137,7 +143,7 @@ function check(obj, parent, text) {
 
             break;
         }
-        case 16384://module var set
+        case flags["SetAccessor"]://module var set
         {
             parent[objName]["bodyType"] = "set";
 
@@ -154,7 +160,7 @@ function check(obj, parent, text) {
 
             break;
         }
-        case 24576://module var set get
+        case flags["Accessor"]://module var set get
         {
             parent[objName]["bodyType"] = "set get";
 
@@ -174,7 +180,7 @@ function check(obj, parent, text) {
 
             break;
         }
-        case 8://方法
+        case flags["Function"]://方法
         {
             parent[objName]["bodyType"] = "modulefunction";
             if (obj.valueDeclaration && obj.valueDeclaration.parameters) {
@@ -190,7 +196,7 @@ function check(obj, parent, text) {
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
-        case 4096://构造函数
+        case flags["Constructor"]://构造函数
         {
             parent[objName]["bodyType"] = "function";
 
@@ -207,7 +213,7 @@ function check(obj, parent, text) {
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
-        case 2048://方法
+        case flags["Method"]://方法
         {
             parent[objName]["bodyType"] = "function";
 
@@ -224,7 +230,7 @@ function check(obj, parent, text) {
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
-        case 32://接口
+        case flags["Interface"]://接口
         {
             parent[objName]["$_tree_"] = {};
             parent[objName]["bodyType"] = "interface";
@@ -256,7 +262,7 @@ function check(obj, parent, text) {
             }
             break;
         }
-        case 16://类
+        case flags["Class"]://类
         {
             parent[objName]["$_tree_"] = {};
             parent[objName]["bodyType"] = "class";
@@ -383,9 +389,15 @@ function addPublic(content, obj, name) {
     if (content.match(/(^private )|( private )/)) {
         obj["pType"] = "private";
     }
+    if (content.match(/(^protected )|( protected )/)) {
+        obj["pType"] = "protected";
+    }
     else {
         if (name.charAt(0) == "_") {
             obj["pType"] = "protected";
+        }
+        else if (name.charAt(0) == "$") {
+            obj["pType"] = "private";
         }
         else {
             obj["pType"] = "public";
@@ -499,6 +511,9 @@ function analyze(doc) {
         else if (item.indexOf("deprecated") == 0) {//deprecated
             docInfo["deprecated"] = true;
         }
+        else if (item.indexOf("inheritDoc") == 0) {//deprecated
+            docInfo["inheritDoc"] = true;
+        }
         else if (item.indexOf("param") == 0) {//param
             if (docInfo["params"] == null) {
                 docInfo["params"] = {};
@@ -520,7 +535,6 @@ function analyze(doc) {
 
             var reg = /<code>[\s\S]*<\/code>/;
             if (des1.match(reg)) {
-                console.log("asdfsfsfsfsf")
                 var code = des1.match(reg)[0];
                 docInfo["example"]["code"] = des1.substring(des1.indexOf("<code>") + 6, des1.indexOf("</code>"));
                 des1 = des1.replace(code, "");
@@ -547,7 +561,7 @@ function analyze(doc) {
             var des1 = trim.trimAll(item.substring(temp.length));
             var eventType = des1.match(/(\S)+/)[0];
             var des2 = trim.trimAll(des1.substring(eventType.length));
-            docInfo["event"].push({"type" : eventType, "description" : des2});
+            docInfo["event"].push({"name" : eventType, "description" : des2});
         }
         else if (item.indexOf("link") == 0) {
             var temp = item.match(/^link(\s)+/)[0];

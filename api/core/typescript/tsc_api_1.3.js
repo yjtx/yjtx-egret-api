@@ -15544,7 +15544,7 @@ var ts;
     function watchProgram(commandLine, compilerHost) {
         var watchers = {};
         var updatedFiles = {};
-        var program = compile(commandLine, compilerHost).program;
+        var program = compile(commandLine, compilerHost).program;tsc.js
         reportDiagnostic(ts.createCompilerDiagnostic(ts.Diagnostics.Compilation_complete_Watching_for_file_changes));
         addWatchers(program);
         return;
