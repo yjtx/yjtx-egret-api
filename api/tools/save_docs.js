@@ -53,7 +53,6 @@ function addClassInfo(name, parent) {
 }
 
 function analyze(item, name, parent, filename) {
-    var rwType = 0;
 
     var tempParent = parent.concat();
     switch (item.bodyType) {
@@ -141,7 +140,7 @@ function analyze(item, name, parent, filename) {
             }
             addOtherPropertis(member, item);
             break;
-        case "var"://变量
+        case "Property"://变量
             var member = {};
             member["kind"] = "member";
             member["type"] = item["type"];
@@ -158,21 +157,11 @@ function analyze(item, name, parent, filename) {
             }
             addOtherPropertis(member, item);
             break;
-        case "get"://
-            rwType = 1;
-        case "set"://
-            if (rwType == 0) {
-                rwType = 2;
-            }
-        case "set get":
+        case "GetAccessor"://
+        case "SetAccessor"://
+        case "Accessor":
         {
             var member = {};
-            if (rwType == 0) {
-                rwType = 3;
-            }
-            else {
-                member["rwType"] = rwType;
-            }
             member["kind"] = "member";
             member["type"] = item["type"];
             member["name"] = name;
@@ -180,30 +169,30 @@ function analyze(item, name, parent, filename) {
             member["scope"] = "instance";
 
             var tempItem;
-
             var useGet = false;
-            if (rwType == 1) {
-                tempItem = item["get"];
-                useGet = true;
-
-            }
-            else {
-                tempItem = item["set"];
-
-                if (rwType == 3 && (!tempItem["docs"] || !tempItem["docs"][0]["description"] || tempItem["docs"][0]["description"] == "")) {
+            switch (item.bodyType) {
+                case "GetAccessor":
+                    member["rwType"] = 1;
                     tempItem = item["get"];
                     useGet = true;
-                }
+                    break;
+                case "SetAccessor":
+                    member["rwType"] = 2;
+                    tempItem = item["set"];
+                    break;
+                default:
+                    tempItem = item["set"];
+                    if (!tempItem["docs"] || !tempItem["docs"][0]["description"] || tempItem["docs"][0]["description"] == "") {
+                        tempItem = item["get"];
+                        useGet = true;
+                    }
             }
+
 
             initDesc(tempItem["docs"], tempItem["parameters"], member, true);
             if (!useGet) {
                 member["type"] = member["params"][0]["type"];
                 delete member["params"];
-            }
-
-            if ((member["description"] == null || member["description"] == "") && rwType == 3) {
-                member["description"] = getDesc(item["get"]["docs"]) || "";
             }
 
             member["description"] = trim.trimAll(member["description"] || "");
@@ -282,15 +271,6 @@ function analyze(item, name, parent, filename) {
     }
 }
 
-function getDesc(docs) {
-    if (docs && docs.length) {
-        var doc = docs[docs.length - 1];
-
-        return changeDescription(doc["description"]);
-    }
-    return "";
-}
-
 function initDesc(docs, parameters, obj, notTrans) {
     if (notTrans === void 0) {
         notTrans = false;
@@ -330,16 +310,8 @@ function initDesc(docs, parameters, obj, notTrans) {
                         obj["description"] = doc["description"];
                     }
                     break;
-                case "event" :
-                case "state" :
-                case "skinPart" :
-                case "see" :
-                case "example" :
-                case "private" :
-                case "deprecated" :
-                    obj[key] = doc[key];
-                    break;
                 default :
+                    obj[key] = doc[key];
             }
         }
     }

@@ -5,7 +5,6 @@ var path = require("path");
 var globals = require("./core/globals");
 var file = require("./core/file.js");
 var params = require("./core/params_analyze.js");
-var sdoc = require("./tools/save_docs");
 var typeScriptCompiler = require("./tools/egret_tsc_api.js");
 
 function run(opts) {
@@ -39,7 +38,7 @@ function run(opts) {
     var cmd = tsList.join(" ") + " -d -t ES5 --out " + globals.addQuotes(path.join(outputPath, "a.d.ts"));
     var apiArr = typeScriptCompiler.compile(function () {
     }, cmd);
-    var tempClassArr = sdoc.screening(apiArr);
+    var tempClassArr = require("./tools/save_docs").screening(apiArr);
 
     //补全类名路径
     require("./tools/fillname").fillname(tempClassArr);

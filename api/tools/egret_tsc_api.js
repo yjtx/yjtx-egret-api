@@ -5,17 +5,16 @@
 
 var file = require("../core/file.js");
 var trim = require("../core/trim");
-var globals = require("../core/globals");
 var path = require("path");
 
 var flags = require("../tools/enumflag").getEnumFlag();
 
-function typeScriptCompiler(quitFunc,cmd) {
+function typeScriptCompiler(quitFunc, cmd) {
     file.save("tsc_config_temp.txt", cmd);//todo performance-optimize
     var TypeScript = require('../tools/enumflag').getTscApi();
 
-    TypeScript.exit = function(){
-        setTimeout(quitFunc,1,arguments[0])
+    TypeScript.exit = function () {
+        setTimeout(quitFunc, 1, arguments[0])
     };
 
     var nameArr = [];
@@ -34,7 +33,7 @@ function typeScriptCompiler(quitFunc,cmd) {
 
             nameArr.push(item.filename);
 
-            var root = {"filename" : item.filename, "$_tree_":{}};
+            var root = {"filename": item.filename, "$_tree_": {}};
             apiArr.push(root);
             for (var key in item.locals) {
                 if (key == "NaN" || key == "__proto__") {
@@ -102,7 +101,7 @@ function check(obj, parent, text) {
         }
         case flags["Property"]://变量
         {
-            parent[objName]["bodyType"] = "var";
+            parent[objName]["bodyType"] = "Property";
 
             if (obj.valueDeclaration && obj.valueDeclaration.type) {
                 parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
@@ -126,7 +125,7 @@ function check(obj, parent, text) {
         }
         case flags["GetAccessor"]://module var  get
         {
-            parent[objName]["bodyType"] = "get";
+            parent[objName]["bodyType"] = "GetAccessor";
 
             for (var i = 0; i < obj.declarations.length; i++) {
                 var decla = obj.declarations[i];
@@ -145,7 +144,7 @@ function check(obj, parent, text) {
         }
         case flags["SetAccessor"]://module var set
         {
-            parent[objName]["bodyType"] = "set";
+            parent[objName]["bodyType"] = "SetAccessor";
 
             for (var i = 0; i < obj.declarations.length; i++) {
                 var decla = obj.declarations[i];
@@ -162,7 +161,10 @@ function check(obj, parent, text) {
         }
         case flags["Accessor"]://module var set get
         {
-            parent[objName]["bodyType"] = "set get";
+            if (objName == "name") {
+                console.log("asdfsfsdfs")
+            }
+            parent[objName]["bodyType"] = "Accessor";
 
             for (var i = 0; i < obj.declarations.length; i++) {
                 var decla = obj.declarations[i];
@@ -292,75 +294,36 @@ function check(obj, parent, text) {
     }
 }
 
+
+var analyzedoc = require("../tools/analyzedoc");
 function addDoc(text, obj) {
     text = text.replace(/^(\s)*/, "");
     if (text.charAt(0) != "/") {
 
     }
-    else {
-
-        var arr = [];
+    else {//取注释
+        var noteStringBlocks = [];
         while (text.charAt(0) == "/") {
             if (text.charAt(1) == "*") {
                 var last = text.indexOf("*/");
-
-                arr.push(text.substring(0, last + 2));
-
+                noteStringBlocks.push(text.substring(0, last + 2));
                 text = text.substring(last + 2);
-
                 text = text.replace(/^(\s)*/, "");
             }
             else {
-                //arr.push(text.match(/(.)*/)[0]);
                 text = text.replace(/(.)*/, "");
-
                 text = text.replace(/^(\s)*/, "");
             }
         }
 
-        var brr = [];
-        var crr = [];
-        if (arr.length) {
-            for (var i = 0; i < arr.length; i++) {
-                var doc = arr[i];
-
-                doc = doc.replace(/^\/(\/)+/, "");
-                doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
-
-                doc = doc.replace(/^\/(\*)+/, "");
-                doc = doc.replace(/(\*)+\/$/, "");
-
-                doc = doc.replace(/(\n)(\s)*(\*)+@/g, "\n@");
-
-                doc = doc.replace(/(\n)(\s)*(\*)+[^\S\n]?/g, "\n");
-
-                //去掉 @member
-                doc = doc.replace(/@member.*/, "");
-                //去掉 @method
-                doc = doc.replace(/@method.*/, "");
-                //去掉 @class
-                doc = doc.replace(/@class .*/, "");
-                //去掉 @extends
-                doc = doc.replace(/@extends.*/, "");
-                //去掉 @constant
-                doc = doc.replace(/@constant.*/, "");
-                //去掉 @constructor
-                doc = doc.replace(/@constructor.*/, "");
-                //去掉 @implements
-                doc = doc.replace(/@implements.*/, "");
-
-                doc = doc.replace(/^(\s)*/, "");
-                doc = doc.replace(/(\s)*$/, "");
-                brr[i] = doc;
-
-                crr.push(analyze(doc));
+        var noteInfoBlocks = [];
+        if (noteStringBlocks.length) {
+            for (var i = 0; i < noteStringBlocks.length; i++) {
+                var doc = noteStringBlocks[i];
+                noteInfoBlocks.push(analyzedoc.analyze(doc));
             }
-
-            //obj["docapi"] = arr;
-            //obj["docapin"] = brr;
-            obj["docs"] = crr;
+            obj["docs"] = noteInfoBlocks;
         }
-
     }
 
 
@@ -464,143 +427,6 @@ function initImplements(implementedTypes, obj, text) {
     for (var i = 0; i < implementedTypes.length; i++) {
         obj["implements"].push(implementedTypes[i]["typeName"]["text"] || text.substring(baseType["typeName"].pos, baseType["typeName"].end));
     }
-}
-
-function analyze(doc) {
-    var docs;
-
-    docs = doc.split(/\n\@/);
-    if (docs == null) {
-        docs = [doc];
-    }
-
-    var docInfo = {};
-    for (var i = 0; i < docs.length; i++) {
-        var item = docs[i];
-        item = item.replace(/^(\s)*/, "");
-        if (item == "") {
-            continue;
-        }
-
-        //描述
-        if (i == 0 && item.charAt(0) != "@") {
-            docInfo["description"] = item;
-            continue;
-        }
-        else if (i == 0) {
-            item = item.substring(1);
-        }
-
-        if (item.indexOf("classdesc") == 0) {//兼容类描述
-            if (item.match(/^classdesc(\s)+/)) {
-                var temp = item.match(/^classdesc(\s)+/)[0];
-                if (docInfo["description"] == null) {
-                    docInfo["description"] = item.substring(temp.length);
-                }
-                else {
-                    docInfo["description"] += "\n" + item.substring(temp.length);
-                }
-            }
-            else {
-                //console.log("sdf");
-            }
-        }
-        else if (item.indexOf("private") == 0) {//private
-            docInfo["private"] = true;
-        }
-        else if (item.indexOf("deprecated") == 0) {//deprecated
-            docInfo["deprecated"] = true;
-        }
-        else if (item.indexOf("inheritDoc") == 0) {//deprecated
-            docInfo["inheritDoc"] = true;
-        }
-        else if (item.indexOf("param") == 0) {//param
-            if (docInfo["params"] == null) {
-                docInfo["params"] = {};
-            }
-
-            var itemArr = item.split(/^param(\s)+/);
-            var paramName = itemArr[itemArr.length - 1].match(/^(\S)+/)[0];
-
-            itemArr = itemArr[itemArr.length - 1].split(/^(\S)+(\s)+(\{(\s|\S)*\})?(\s)*/);
-            var des = "";
-            des = itemArr[itemArr.length - 1];
-
-            docInfo["params"][paramName] = des;
-        }
-        else if (item.indexOf("example") == 0) {//example
-            docInfo["example"] = {};
-            var temp = item.match(/^example(\s)+/)[0];
-            var des1 = item.substring(temp.length);
-
-            var reg = /<code>[\s\S]*<\/code>/;
-            if (des1.match(reg)) {
-                var code = des1.match(reg)[0];
-                docInfo["example"]["code"] = des1.substring(des1.indexOf("<code>") + 6, des1.indexOf("</code>"));
-                des1 = des1.replace(code, "");
-            }
-            docInfo["example"]["description"] = trim.trimAll(des1);
-        }
-        else if (item.indexOf("includeExample") == 0) {//example
-            docInfo["example"] = {};
-            var tname = item.match(/^includeExample(\s)+/)[0];
-            var url = trim.trimAll(item.substring(tname.length));
-            docInfo["example"]["code"] = file.read(path.join(globals.getExampleRootPath(), url));
-            docInfo["example"]["description"] = "";
-        }
-        else if (item.indexOf("return") == 0) {//return(s)
-            var temp = item.match(/^return(s)?(\s)+(\{[\s\S]*\})?(\s)*/)[0];
-
-            docInfo["return"] = item.substring(temp.length);
-        }
-        else if (item.indexOf("event") == 0) {//event
-            var temp = item.match(/^event(\s)+/)[0];
-            if (docInfo["event"] == null) {
-                docInfo["event"] = [];
-            }
-            var des1 = trim.trimAll(item.substring(temp.length));
-            var eventType = des1.match(/(\S)+/)[0];
-            var des2 = trim.trimAll(des1.substring(eventType.length));
-            docInfo["event"].push({"name" : eventType, "description" : des2});
-        }
-        else if (item.indexOf("link") == 0) {
-            var temp = item.match(/^link(\s)+/)[0];
-            docInfo["link"] = item.substring(temp.length);
-        }
-        else if (item.indexOf("see") == 0) {
-            var temp = item.match(/^see(\s)+/)[0];
-            if (docInfo["see"] == null) {
-                docInfo["see"] = [];
-            }
-            docInfo["see"].push(trim.trimAll(item.substring(temp.length)));
-        }
-        else if (item.indexOf("state") == 0) {//state
-            var temp = item.match(/^state(\s)+/)[0];
-            if (docInfo["state"] == null) {
-                docInfo["state"] = [];
-            }
-            var des1 = trim.trimAll(item.substring(temp.length));
-            var eventType = des1.match(/(\S)+/)[0];
-            var des2 = trim.trimAll(des1.substring(eventType.length));
-            docInfo["state"].push({"name" : eventType, "description" : des2});
-        }
-        else if (item.indexOf("skinPart") == 0) {//skinPart
-            var temp = item.match(/^skinPart(\s)+/)[0];
-            if (docInfo["skinPart"] == null) {
-                docInfo["skinPart"] = [];
-            }
-            var des1 = trim.trimAll(item.substring(temp.length));
-            var eventType = des1.match(/(\S)+/)[0];
-            var des2 = trim.trimAll(des1.substring(eventType.length));
-            docInfo["skinPart"].push({"name" : eventType, "description" : des2});
-        }
-        else {//其他非特殊的标签  default version platform
-            var docName = item.match(/^(\S)+/)[0];
-            docInfo[docName] = trim.trimAll(item.substring(docName.length) || "");
-        }
-    }
-
-    return docInfo;
 }
 
 exports.compile = typeScriptCompiler;

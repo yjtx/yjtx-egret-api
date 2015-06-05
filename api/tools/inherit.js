@@ -162,13 +162,6 @@ function addParentDoc(item, interfaces, parents) {
     for (var i = 0; i < list.length; i++) {
         var parentName = list[i]["name"];
         var parent = getClass(parentName);
-        if (item.kind == null) {
-            console.log(item)
-        }
-        if (parent == null) {
-            console.log(item)
-            console.log(parentName)
-        }
 
         var parentKindList = parent[item.kind];
         for (var j = 0; j < parentKindList.length; j++) {
