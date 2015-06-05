@@ -104,7 +104,7 @@ exports.screening = function (apiArr) {
             classDes = classinfo["interface"];
         }
         else {
-            setFullType(classinfo);
+            setFullType(classinfo, key);
             continue;
         }
 
@@ -133,7 +133,7 @@ exports.screening = function (apiArr) {
         delete classDes["tempExtends"];
         delete classDes["tempImplements"];
 
-        setFullType(classinfo);
+        setFullType(classinfo, classinfo["class"]["memberof"]);
 
     }
 
@@ -189,14 +189,14 @@ function removeDefault(tempObj) {
     }
 }
 
-function setFullType(obj) {
+function setFullType(obj, memberof) {
     if (obj instanceof Object) {
         for (var key in obj) {
             if (key == "type" && obj[key] != null && ["void", "number", "string", "boolean", "any"].indexOf(obj[key]) < 0) {
-                obj[key] = getClassFullName(obj[key]);
+                obj[key] = getClassFullName(obj[key], memberof);
             }
             else {
-                setFullType(obj[key]);
+                setFullType(obj[key], memberof);
             }
         }
     }
@@ -251,8 +251,6 @@ function analyze(item, name, parent, filename) {
             tempClass["filename"] = filename;
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
-            tempClass["classdesc"] = tempClass["description"];
-            delete tempClass["description"];
 
             tempClass["tempExtends"] = item["extends"];
 
@@ -265,8 +263,8 @@ function analyze(item, name, parent, filename) {
 
             addOtherPropertis(classInfo, item);
 
-            if (tempClass["classdesc"] == null || tempClass["classdesc"] == "") {
-                //classInfo["noDes"] = true;
+            if (tempClass["description"] == null || tempClass["description"] == "") {
+                classInfo["noDes"] = true;
             }
             break;
         case "class":
@@ -280,8 +278,6 @@ function analyze(item, name, parent, filename) {
             tempClass["filename"] = filename;
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
-            tempClass["classdesc"] = tempClass["description"];
-            delete tempClass["description"];
 
             tempClass["tempExtends"] = item["extends"];
             tempClass["tempImplements"] = item["implements"];
@@ -295,8 +291,8 @@ function analyze(item, name, parent, filename) {
 
             addOtherPropertis(classInfo, item);
 
-            if (tempClass["classdesc"] == null || tempClass["classdesc"] == "") {
-                //classInfo["noDes"] = true;
+            if (tempClass["description"] == null || tempClass["description"] == "") {
+                classInfo["noDes"] = true;
             }
             break;
         case "modulevar"://变量
