@@ -41,6 +41,9 @@ function run(opts) {
     }, cmd);
     var tempClassArr = sdoc.screening(apiArr);
 
+    //补全类名路径
+    require("./tools/fillname").fillname(tempClassArr);
+
     //
     var classChildren = require("./tools/addClassChildren");
     classChildren.addClassChildren(tempClassArr);

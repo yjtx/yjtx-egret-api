@@ -9,8 +9,6 @@ var globals = require("../core/globals");
 var classesArr = {};
 var windowArr = [];
 
-var classRelations = {};
-var classMemberofs = {};
 
 var modulesArr = {};
 function addToModulesArr(className, memberof) {
@@ -21,187 +19,15 @@ function addToModulesArr(className, memberof) {
     modulesArr[memberof].push(className);
 }
 
-function getExtendsClassName(className) {
-    if (className && classRelations[getClassFullName(className)]) {
-        return getClassFullName(classRelations[getClassFullName(className)]);
-    }
-    return null;
-}
-
-//获取类全称
-function getClassFullName(className, memberof) {
-    className = trim.trimAll(className);
-
-    if (classesArr[className]) {
-        return className;
-    }
-
-    if (memberof) {
-        if (classesArr[memberof + "." + className]) {
-            return memberof + "." + className;
-        }
-    }
-    var memberof = getMemberof(className);
-    if (memberof.length) {
-        var arr = className.split(".");
-        return memberof + "." + arr[arr.length - 1];
-    }
-    else {
-        return className;
-    }
-}
-
-function getMemberof(className) {
-    var arr = className.split(".");
-
-    var name = arr[arr.length - 1];
-
-    if (classMemberofs[name] == null) {
-        return "";
-    }
-
-    if (classMemberofs[name].length == 1) {
-        return classMemberofs[name][0];
-    }
-
-    for (var i = 0; i < classMemberofs[name].length; i++) {
-        var fullName = classMemberofs[name][i] + "." + name;
-        if (fullName.indexOf(className) == fullName.length - className.length) {
-            return classMemberofs[name][i];
-        }
-    }
-
-    arr.pop();
-    return arr.join(".");
-}
-
-function addExtendsClass(name, memberof, parent) {
-    classRelations[memberof + "." + name] = parent;
-
-    if (classMemberofs[name] == null) {
-        classMemberofs[name] = [];
-    }
-
-    if (classMemberofs[name].indexOf(memberof) < 0) {
-        classMemberofs[name].push(memberof);
-    }
-}
-
 exports.screening = function (apiArr) {
     for (var i = 0; i < apiArr.length; i++) {
         _analyze(apiArr[i], [], apiArr[i]["filename"]);
     }
 
-    //补全 extends、implements
-    for (var key in classesArr) {
-        var classinfo = classesArr[key];
-
-        var classDes;
-        if (classinfo["class"]) {
-            classDes = classinfo["class"];
-        }
-        else if (classinfo["interface"]) {
-            classDes = classinfo["interface"];
-        }
-        else {
-            setFullType(classinfo, key);
-            continue;
-        }
-
-        //继承
-        if (classDes["tempExtends"]) {
-            classDes["augments"] = [];
-            var parent = getClassFullName(classDes["tempExtends"], classDes["memberof"]);
-            classDes["augments"].push(parent);
-
-            while (parent = getExtendsClassName(parent)) {
-                classDes["augments"].push(parent);
-            }
-        }
-
-        //接口
-        if (classDes["tempImplements"]) {
-            classDes["implements"] = [];
-
-            for (var i = 0; i < classDes["tempImplements"].length; i++) {
-                var tempIm = classDes["tempImplements"][i];
-
-                classDes["implements"].push({"name": getClassFullName(tempIm, classDes["memberof"])});
-            }
-        }
-
-        delete classDes["tempExtends"];
-        delete classDes["tempImplements"];
-
-        setFullType(classinfo, classinfo["class"]["memberof"]);
-
-    }
-
     var tempClassArr = globals.clone(classesArr);
-    removeDefault(tempClassArr);
 
     return tempClassArr;
 };
-
-function exclude(tempObj) {
-    if (tempObj["pType"] == "private" || tempObj["pType"] == "protected") {
-        //return true;
-    }
-    if (tempObj["private"] == true) {
-        //return true;
-    }
-
-    if (tempObj["noDes"] == true) {
-        //return true;
-    }
-    return false;
-}
-
-function removeDefault(tempObj) {
-    if (!(tempObj instanceof Object)) {
-        return false;
-    }
-
-    if (exclude(tempObj)) {
-        return true;
-    }
-
-    if (tempObj instanceof Array) {
-        for (var i = tempObj.length - 1; i >= 0; i--) {
-            if (removeDefault(tempObj[i])) {
-                tempObj.splice(i, 1);
-            }
-        }
-    }
-    else {
-        for (var key in tempObj) {
-            if (tempObj[key] && tempObj[key].class) {//类或者接口
-                if (exclude(tempObj[key].class)) {
-                    delete tempObj[key];
-                    continue;
-                }
-            }
-
-            if (removeDefault(tempObj[key])) {
-                delete tempObj[key];
-            }
-        }
-    }
-}
-
-function setFullType(obj, memberof) {
-    if (obj instanceof Object) {
-        for (var key in obj) {
-            if (key == "type" && obj[key] != null && ["void", "number", "string", "boolean", "any"].indexOf(obj[key]) < 0) {
-                obj[key] = getClassFullName(obj[key], memberof);
-            }
-            else {
-                setFullType(obj[key], memberof);
-            }
-        }
-    }
-}
-
 
 function _analyze(docsInfo, parent, filename) {
 
@@ -254,7 +80,6 @@ function analyze(item, name, parent, filename) {
 
             tempClass["tempExtends"] = item["extends"];
 
-            addExtendsClass(name, tempClass["memberof"], tempClass["tempExtends"]);
 
             tempParent.push(name);
             _analyze(item, tempParent, filename);
@@ -282,7 +107,6 @@ function analyze(item, name, parent, filename) {
             tempClass["tempExtends"] = item["extends"];
             tempClass["tempImplements"] = item["implements"];
 
-            addExtendsClass(name, tempClass["memberof"], tempClass["tempExtends"]);
 
             tempParent.push(name);
             _analyze(item, tempParent, filename);

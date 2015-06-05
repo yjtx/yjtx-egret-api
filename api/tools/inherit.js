@@ -83,7 +83,6 @@ function inheriteMembersAndFunctions(classList) {
             if (item.class.augments && item.class.augments.length > 0) {//拥有父类
                 var parentName = item.class.augments[0];
                 var parent = getClass(parentName);
-
                 //方法继承
                 var parentFs = parent["function"];
                 for (var f = 0; f < parentFs.length; f++) {
