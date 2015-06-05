@@ -77,7 +77,7 @@ function analyze(item, name, parent, filename) {
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
 
-            tempClass["tempExtends"] = item["extends"];
+            tempClass["extends"] = item["extends"];
 
 
             tempParent.push(name);
@@ -103,8 +103,8 @@ function analyze(item, name, parent, filename) {
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
 
-            tempClass["tempExtends"] = item["extends"];
-            tempClass["tempImplements"] = item["implements"];
+            tempClass["extends"] = item["extends"];
+            tempClass["implements"] = item["implements"];
 
 
             tempParent.push(name);

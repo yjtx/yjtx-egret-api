@@ -9,16 +9,22 @@ exports.sortWithName = function (tempClassObjs) {
 
         //排序
         classInfo["function"].sort(function (a, b) {
-            return a["name"] > b["name"] ? 1 : -1
+            if (a["name"] == "constructor") {
+                return -1;
+            }
+            if (b["name"] == "constructor") {
+                return 1;
+            }
+            return a["name"] > b["name"] ? 1 : -1;
         });
         classInfo["member"].sort(function (a, b) {
-            return a["name"] > b["name"] ? 1 : -1
+            return a["name"] > b["name"] ? 1 : -1;
         });
         classInfo["globalFunction"].sort(function (a, b) {
-            return a["name"] > b["name"] ? 1 : -1
+            return a["name"] > b["name"] ? 1 : -1;
         });
         classInfo["globalMember"].sort(function (a, b) {
-            return a["name"] > b["name"] ? 1 : -1
+            return a["name"] > b["name"] ? 1 : -1;
         });
     }
 };

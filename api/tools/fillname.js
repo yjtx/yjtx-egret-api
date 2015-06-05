@@ -52,23 +52,21 @@ function getClassFullName(className, memberof) {
 }
 
 function setClassFullType(classDes, memberof) {
-    //继承
-    if (classDes["tempExtends"]) {
-        classDes["augments"] = [getClassFullName(classDes["tempExtends"], memberof)];
+    //继承e
+    if (classDes["extends"]) {
+        classDes["augments"] = [getClassFullName(classDes["extends"], memberof)];
 
-        delete classDes["tempExtends"];
+        delete classDes["extends"];
     }
 
     //接口
-    if (classDes["tempImplements"]) {
+    if (classDes["implements"]) {
         var tempImpls = [];
-        for (var i = 0; i < classDes["tempImplements"].length; i++) {
-            var tempIm = classDes["tempImplements"][i];
+        for (var i = 0; i < classDes["implements"].length; i++) {
+            var tempIm = classDes["implements"][i];
             tempImpls.push({"name": getClassFullName(tempIm, memberof)});
         }
         classDes["implements"] = tempImpls;
-
-        delete classDes["tempImplements"];
     }
 }
 

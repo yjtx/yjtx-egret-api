@@ -32,7 +32,6 @@ function typeScriptCompiler(quitFunc, cmd) {
             objArr.push(item.locals);
 
             nameArr.push(item.filename);
-
             var root = {"filename": item.filename, "$_tree_": {}};
             apiArr.push(root);
             for (var key in item.locals) {
@@ -96,6 +95,7 @@ function check(obj, parent, text) {
             if (obj.valueDeclaration && obj.valueDeclaration.type) {
                 parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
             }
+
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
@@ -108,7 +108,6 @@ function check(obj, parent, text) {
             }
 
             var content = parent[objName]["content"];
-            addStatic(content, parent[objName]);
 
             //获取值
             var firstIdx = content.indexOf('=');
@@ -120,6 +119,7 @@ function check(obj, parent, text) {
                 parent[objName]["value"] = trim.trimAll(content.substring(firstIdx + 1));
             }
 
+            addStatic(content, parent[objName]);
             addPublic(content, parent[objName], objName);
             break;
         }
@@ -161,9 +161,6 @@ function check(obj, parent, text) {
         }
         case flags["Accessor"]://module var set get
         {
-            if (objName == "name") {
-                console.log("asdfsfsdfs")
-            }
             parent[objName]["bodyType"] = "Accessor";
 
             for (var i = 0; i < obj.declarations.length; i++) {
@@ -211,6 +208,7 @@ function check(obj, parent, text) {
             }
 
             parent[objName]["type"] = null;
+
             addStatic(parent[objName]["content"], parent[objName]);
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
@@ -228,6 +226,7 @@ function check(obj, parent, text) {
             if (obj.valueDeclaration && obj.valueDeclaration.type) {
                 parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
             }
+
             addStatic(parent[objName]["content"], parent[objName]);
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
@@ -270,9 +269,10 @@ function check(obj, parent, text) {
             parent[objName]["bodyType"] = "class";
 
             for (var key in obj.members) {
-                if (["__proto__", "name"].indexOf(key) >= 0) {
+                if ("__proto__" == key) {
                     continue;
                 }
+
                 check(obj.members[key], parent[objName]["$_tree_"], text);
             }
 
@@ -348,11 +348,12 @@ function addStatic(content, obj) {
 
 //是否是public
 function addPublic(content, obj, name) {
+    content = trim.trimAll(content);
     //判断是否是 static
     if (content.match(/(^private )|( private )/)) {
         obj["pType"] = "private";
     }
-    if (content.match(/(^protected )|( protected )/)) {
+    else if (content.match(/(^protected )|( protected )/)) {
         obj["pType"] = "protected";
     }
     else {

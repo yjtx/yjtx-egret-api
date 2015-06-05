@@ -86,7 +86,7 @@ function inheriteMembersAndFunctions(classList) {
                 //方法继承
                 var parentFs = parent["function"];
                 for (var f = 0; f < parentFs.length; f++) {
-                    if (parentFs[f]["type"] != "function") {//构造函数排除
+                    if (parentFs[f]["type"] == null) {//构造函数排除
                         continue;
                     }
                     var itemFs = item["function"];
