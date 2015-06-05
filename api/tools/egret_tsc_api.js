@@ -377,15 +377,19 @@ function addParams(parameters, parametersArr, text) {
         var p = {};
 
         var value = text.substring(param.pos, param.end);
-        if (value.indexOf("...") >= 0) {
-            p["name"] = "..." + param.name.text;
+        if (param.name) {
+            p["name"] = trim.trimAll(text.substring(param.name.pos, param.name.end));
         }
-        else if (param.name) {
-            p["name"] = param.name.text;
+        if (value.indexOf("...") >= 0) {
+            p["name"] = "..." + p["name"];
         }
 
         if (param.type) {
-            p["type"] = text.substring(param.type.pos, param.type.end)
+            p["type"] = trim.trimAll(text.substring(param.type.pos, param.type.end));
+        }
+
+        if (param.initializer) {
+            p["default"] = trim.trimAll(text.substring(param.initializer.pos, param.initializer.end));
         }
         parametersArr.push(p);
     }
