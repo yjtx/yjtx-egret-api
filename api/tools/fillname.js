@@ -53,10 +53,13 @@ function getClassFullName(className, memberof) {
 
 function setClassFullType(classDes, memberof) {
     //继承e
-    if (classDes["extends"]) {
-        classDes["augments"] = [getClassFullName(classDes["extends"], memberof)];
-
-        delete classDes["extends"];
+    if (classDes["augments"]) {
+        var tempAugs = [];
+        for (var i = 0; i < classDes["augments"].length; i++) {
+            var tempAug = classDes["augments"][i];
+            tempAugs.push(getClassFullName(tempAug, memberof));
+        }
+        classDes["augments"] = tempAugs;
     }
 
     //接口

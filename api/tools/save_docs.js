@@ -58,7 +58,6 @@ function analyze(item, name, parent, filename) {
     switch (item.bodyType) {
         case "module":
             var moduleInfo = addClassInfo(name, tempParent);
-            moduleInfo["memberof"];
 
             tempParent.push(name);
             _analyze(item, tempParent, filename);
@@ -66,46 +65,20 @@ function analyze(item, name, parent, filename) {
             addOtherPropertis(moduleInfo, item);
             break;
         case "interface":
-            var classInfo = addClassInfo(name, tempParent);
-            delete classInfo["memberof"];
-
-            var tempClass = classInfo["class"] = {};
-            tempClass["kind"] = "interface";
-            tempClass["name"] = name;
-            tempClass["memberof"] = tempParent.join(".");
-            tempClass["filename"] = filename;
-
-            initDesc(item["docs"], item["parameters"], tempClass, true);
-
-            tempClass["extends"] = item["extends"];
-
-
-            tempParent.push(name);
-            _analyze(item, tempParent, filename);
-
-            addToModulesArr(name, tempClass["memberof"]);
-
-            addOtherPropertis(classInfo, item);
-
-            if (tempClass["description"] == null || tempClass["description"] == "") {
-                classInfo["noDes"] = true;
-            }
-            break;
         case "class":
             var classInfo = addClassInfo(name, tempParent);
             delete classInfo["memberof"];
 
             var tempClass = classInfo["class"] = {};
-            tempClass["kind"] = "class";
+            tempClass["kind"] = item.bodyType;
             tempClass["name"] = name;
             tempClass["memberof"] = tempParent.join(".");
             tempClass["filename"] = filename;
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
 
-            tempClass["extends"] = item["extends"];
+            tempClass["augments"] = item["augments"];
             tempClass["implements"] = item["implements"];
-
 
             tempParent.push(name);
             _analyze(item, tempParent, filename);
@@ -119,12 +92,27 @@ function analyze(item, name, parent, filename) {
             }
             break;
         case "modulevar"://变量
+        case "GetAccessor"://
+        case "SetAccessor"://
+        case "Accessor":
+        case "Property"://变量
+        case "modulefunction"://
+        case "function":
             var member = {};
-            member["kind"] = "globalmember";
+            member["kind"] = item["memberKind"];
             member["type"] = item["type"];
             member["name"] = name;
             member["memberof"] = tempParent.join(".");
             member["scope"] = item["scope"];
+
+            switch (item.bodyType) {
+                case "GetAccessor":
+                    member["rwType"] = 1;
+                    break;
+                case "SetAccessor":
+                    member["rwType"] = 2;
+                    break;
+            }
 
             initDesc(item["docs"], item["parameters"], member);
 
@@ -132,136 +120,8 @@ function analyze(item, name, parent, filename) {
                 windowArr.push(member);
             }
             else {
-                classesArr[member["memberof"]]["globalMember"].push(member);
+                classesArr[member["memberof"]][member["kind"]].push(member);
             }
-
-            if (member["description"] == null || member["description"] == "") {
-                member["noDes"] = true;
-            }
-            addOtherPropertis(member, item);
-            break;
-        case "Property"://变量
-            var member = {};
-            member["kind"] = "member";
-            member["type"] = item["type"];
-            member["name"] = name;
-            member["memberof"] = tempParent.join(".");
-            member["scope"] = item["scope"];
-
-            initDesc(item["docs"], item["parameters"], member);
-
-            classesArr[member["memberof"]]["member"].push(member);
-
-            if (member["description"] == null || member["description"] == "") {
-                member["noDes"] = true;
-            }
-            addOtherPropertis(member, item);
-            break;
-        case "GetAccessor"://
-        case "SetAccessor"://
-        case "Accessor":
-        {
-            var member = {};
-            member["kind"] = "member";
-            member["type"] = item["type"];
-            member["name"] = name;
-            member["memberof"] = tempParent.join(".");
-            member["scope"] = "instance";
-
-            var tempItem;
-            var useGet = false;
-            switch (item.bodyType) {
-                case "GetAccessor":
-                    member["rwType"] = 1;
-                    tempItem = item["get"];
-                    useGet = true;
-                    break;
-                case "SetAccessor":
-                    member["rwType"] = 2;
-                    tempItem = item["set"];
-                    break;
-                default:
-                    tempItem = item["set"];
-                    if (!tempItem["docs"] || !tempItem["docs"][0]["description"] || tempItem["docs"][0]["description"] == "") {
-                        tempItem = item["get"];
-                        useGet = true;
-                    }
-            }
-
-
-            initDesc(tempItem["docs"], tempItem["parameters"], member, true);
-            if (!useGet) {
-                member["type"] = member["params"][0]["type"];
-                delete member["params"];
-            }
-
-            member["description"] = trim.trimAll(member["description"] || "");
-
-            member["description"] = changeDescription(member["description"]);
-
-            classesArr[member["memberof"]]["member"].push(member);
-
-            if (member["description"] == null || member["description"] == "") {
-                member["noDes"] = true;
-            }
-            addOtherPropertis(member, tempItem);
-            delete member["returns"];
-            break;
-        }
-        case "modulefunction"://变量
-            var member = {};
-            member["kind"] = "globalFunction";
-            member["type"] = item["type"];
-            member["name"] = name;
-            member["memberof"] = tempParent.join(".");
-            member["scope"] = item["scope"];
-
-            if (item["docs"] && item["docs"].length) {
-                var doc = item["docs"][item["docs"].length - 1];
-
-                if (doc["return"]) {
-                    member["returns"] = {"type": member["type"], "description": changeDescription(doc["return"])};
-                }
-            }
-
-            initDesc(item["docs"], item["parameters"], member);
-            if (member["returns"]) {
-                member["returns"]["type"] = member["type"];
-            }
-
-            classesArr[member["memberof"]]["globalFunction"].push(member);
-
-            if (member["description"] == null || member["description"] == "") {
-                member["noDes"] = true;
-            }
-            addOtherPropertis(member, item);
-            break;
-        case "function"://变量
-            var member = {};
-            member["kind"] = "function";
-            member["type"] = item["type"];
-            member["name"] = name;
-            member["memberof"] = tempParent.join(".");
-            member["scope"] = item["scope"];
-
-            if (item["docs"] && item["docs"].length) {
-                var doc = item["docs"][item["docs"].length - 1];
-
-                if (doc["return"]) {
-                    member["returns"] = {"type": member["type"], "description": changeDescription(doc["return"])};
-                }
-            }
-
-            initDesc(item["docs"], item["parameters"], member);
-            if (member["returns"]) {
-                member["returns"]["type"] = member["type"];
-            }
-            else {
-                if (member["type"] != "void") {
-                    member["returns"] = {"type": member["type"]};
-                }
-            }
-            classesArr[member["memberof"]]["function"].push(member);
 
             if (member["description"] == null || member["description"] == "") {
                 member["noDes"] = true;
@@ -271,19 +131,13 @@ function analyze(item, name, parent, filename) {
     }
 }
 
-function initDesc(docs, parameters, obj, notTrans) {
-    if (notTrans === void 0) {
-        notTrans = false;
-    }
+function initDesc(docs, parameters, obj) {//注释中的相关字段
     var paramsDoc = {};
     if (docs && docs.length) {
         var doc = docs[docs.length - 1];
 
         for (var key in doc) {
             switch (key) {
-                case "return" :
-                    obj["returns"] = {"description": changeDescription(doc["return"])};
-                    break;
                 case "link" :
                     //obj["exampleU"] = [];
                     //
@@ -302,16 +156,13 @@ function initDesc(docs, parameters, obj, notTrans) {
                 case "params" :
                     paramsDoc = doc["params"];
                     break;
-                case "description" :
-                    if (!notTrans) {
-                        obj["description"] = changeDescription(doc["description"]);
+                default :
+                    if (doc[key] instanceof String) {
+                        obj[key] = changeDescription(doc[key]);
                     }
                     else {
-                        obj["description"] = doc["description"];
+                        obj[key] = doc[key];
                     }
-                    break;
-                default :
-                    obj[key] = doc[key];
             }
         }
     }
@@ -325,16 +176,16 @@ function initDesc(docs, parameters, obj, notTrans) {
     }
 }
 
-function addOtherPropertis(item, orgItem) {
-    var otherKeys = ["pType", "version", "value", "default", "platform", "copy", "inheritDoc"];
+function addOtherPropertis(member, item) {//从ts代码里解析出来的相关字段
+    var otherKeys = ["pType", "default"];
     for (var i = 0; i < otherKeys.length; i++) {
         var key = otherKeys[i];
-        if (orgItem[key]) {
-            if (orgItem[key] instanceof String) {
-                item[key] = trim.trimAll(orgItem[key].toString());
+        if (item[key]) {
+            if (item[key] instanceof String) {
+                member[key] = trim.trimAll(item[key].toString());
             }
             else {
-                item[key] = orgItem[key];
+                member[key] = item[key];
             }
         }
     }
@@ -344,12 +195,8 @@ function changeDescription(des) {
     if (des == null) {
         return des;
     }
-    des = des.replace(/^(\s)*/, "");
-    des = des.replace(/(\s)*$/, "");
-    des = des.replace(/<br\/>/g, "\n");
-    if (des == "") {
-        return des;
-    }
 
+    des = trim.trimAll(des);
+    des = des.replace(/<br\/>/g, "\n");
     return des;
 }

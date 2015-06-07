@@ -9,9 +9,10 @@ var path = require("path");
 
 var flags = require("../tools/enumflag").getEnumFlag();
 
+var TypeScript = require('../tools/enumflag').getTscApi();
+
 function typeScriptCompiler(quitFunc, cmd) {
     file.save("tsc_config_temp.txt", cmd);//todo performance-optimize
-    var TypeScript = require('../tools/enumflag').getTscApi();
 
     TypeScript.exit = function () {
         setTimeout(quitFunc, 1, arguments[0])
@@ -50,21 +51,12 @@ function check(obj, parent, text) {
     var objName = obj.name;
     if (obj.name == "__constructor") {
         objName = "constructor";
-        parent[objName] = {};
-        parent[objName]["api"] = text.substring(obj.declarations[0].pos, obj.declarations[0].end);
-
-        addDoc(parent[objName]["api"], parent[objName]);
     }
-    else if (obj.valueDeclaration) {
-        parent[objName] = {};
-        parent[objName]["api"] = text.substring(obj.valueDeclaration.pos, obj.valueDeclaration.end);
+    parent[objName] = {};
 
-        addDoc(parent[objName]["api"], parent[objName]);
+    if (obj.declarations && obj.declarations.length) {
+        getComments(text, obj.declarations[0].pos, parent[objName]);
     }
-    else {
-        parent[objName] = {};
-    }
-
 
     switch (obj.flags) {
         case flags["ValueModule"]: //ValueModule
@@ -87,14 +79,12 @@ function check(obj, parent, text) {
         case flags["FunctionScopedVariable"]://module var
         case flags["BlockScopedVariable"]://module var
         {
-            parent[objName]["api"] = text.substring(obj.valueDeclaration.parent.pos, obj.valueDeclaration.parent.end);
-            addDoc(parent[objName]["api"], parent[objName]);
+            getComments(text, obj.valueDeclaration.parent.pos, parent[objName]);
 
             parent[objName]["bodyType"] = "modulevar";
+            parent[objName]["memberKind"] = "globalMember";
 
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
-            }
+            setType(obj, parent[objName], text);
 
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
@@ -102,10 +92,9 @@ function check(obj, parent, text) {
         case flags["Property"]://变量
         {
             parent[objName]["bodyType"] = "Property";
+            parent[objName]["memberKind"] = "member";
 
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
-            }
+            setType(obj, parent[objName], text);
 
             var content = parent[objName]["content"];
 
@@ -113,163 +102,92 @@ function check(obj, parent, text) {
             var firstIdx = content.indexOf('=');
             var endIdx = content.indexOf(';');
             if (endIdx > 0) {
-                parent[objName]["value"] = trim.trimAll(content.substring(firstIdx + 1, endIdx));
+                parent[objName]["default"] = trim.trimAll(content.substring(firstIdx + 1, endIdx));
             }
             else {
-                parent[objName]["value"] = trim.trimAll(content.substring(firstIdx + 1));
+                parent[objName]["default"] = trim.trimAll(content.substring(firstIdx + 1));
             }
 
             addStatic(content, parent[objName]);
             addPublic(content, parent[objName], objName);
             break;
         }
-        case flags["GetAccessor"]://module var  get
-        {
-            parent[objName]["bodyType"] = "GetAccessor";
-
-            for (var i = 0; i < obj.declarations.length; i++) {
-                var decla = obj.declarations[i];
-                if (decla.parameters.length == 1) {//使用set
-                }
-                else {
-                    initGetParamObject(parent[objName], decla, text);
-                }
-            }
-
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
-            }
-
-            break;
-        }
         case flags["SetAccessor"]://module var set
         {
             parent[objName]["bodyType"] = "SetAccessor";
 
-            for (var i = 0; i < obj.declarations.length; i++) {
-                var decla = obj.declarations[i];
-                if (decla.parameters.length == 1) {//使用set
-                    initSetParamObject(parent[objName], decla, text);
-                }
+            var declarations = obj.declarations[0];
+            var param = declarations.parameters[0];
+            if (param.type) {
+                parent[objName]["type"] = text.substring(param.type.pos, param.type.end);
             }
-
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
+        }
+        case flags["GetAccessor"]://module var get
+        {
+            if (parent[objName]["bodyType"] == null) {
+                parent[objName]["bodyType"] = "GetAccessor";
             }
-
-            break;
         }
         case flags["Accessor"]://module var set get
         {
-            parent[objName]["bodyType"] = "Accessor";
+            if (parent[objName]["bodyType"] == null) {
+                parent[objName]["bodyType"] = "Accessor";
+            }
 
-            for (var i = 0; i < obj.declarations.length; i++) {
-                var decla = obj.declarations[i];
-                if (decla.parameters.length == 1) {//使用set
-                    initSetParamObject(parent[objName], decla, text);
-                }
-                else {
-                    initGetParamObject(parent[objName], decla, text);
+            if (parent[objName].docs == null || parent[objName].docs.length == 0) {
+                if (obj.declarations.length > 1) {//取set
+                    getComments(text, obj.declarations[1].pos, parent[objName]);
                 }
             }
 
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
+            if (parent[objName]["type"] == null) {
+                setType(obj, parent[objName], text);
             }
 
-            break;
-        }
-        case flags["Function"]://方法
-        {
-            parent[objName]["bodyType"] = "modulefunction";
-            if (obj.valueDeclaration && obj.valueDeclaration.parameters) {
-                parent[objName]["parameters"] = [];
-
-                addParams(obj.valueDeclaration.parameters, parent[objName]["parameters"], text);
-            }
-
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
-            }
-
-            addPublic(parent[objName]["content"], parent[objName], objName);
+            parent[objName]["memberKind"] = "member";
+            parent[objName]["scope"] = "instance";
             break;
         }
         case flags["Constructor"]://构造函数
+        case flags["Method"]://方法
         {
             parent[objName]["bodyType"] = "function";
+            parent[objName]["memberKind"] = "function";
+
+            addStatic(parent[objName]["content"], parent[objName]);
+        }
+        case flags["Function"]://方法
+        {
+            if (parent[objName]["bodyType"] == null) {
+                parent[objName]["bodyType"] = "modulefunction";
+                parent[objName]["memberKind"] = "globalFunction";
+            }
 
             var declarations = obj.declarations[0];
-
             if (declarations && declarations.parameters) {
                 parent[objName]["parameters"] = [];
 
                 addParams(declarations.parameters, parent[objName]["parameters"], text);
             }
 
-            parent[objName]["type"] = null;
+            setType(obj, parent[objName], text);
 
-            addStatic(parent[objName]["content"], parent[objName]);
-            addPublic(parent[objName]["content"], parent[objName], objName);
-            break;
-        }
-        case flags["Method"]://方法
-        {
-            parent[objName]["bodyType"] = "function";
-
-            if (obj.valueDeclaration && obj.valueDeclaration.parameters) {
-                parent[objName]["parameters"] = [];
-
-                addParams(obj.valueDeclaration.parameters, parent[objName]["parameters"], text);
-            }
-
-            if (obj.valueDeclaration && obj.valueDeclaration.type) {
-                parent[objName]["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
-            }
-
-            addStatic(parent[objName]["content"], parent[objName]);
             addPublic(parent[objName]["content"], parent[objName], objName);
             break;
         }
         case flags["Interface"]://接口
         {
-            parent[objName]["$_tree_"] = {};
             parent[objName]["bodyType"] = "interface";
-            for (var key in obj.members) {
-                if (["__proto__", "name"].indexOf(key) >= 0) {
-                    continue;
-                }
-
-                check(obj.members[key], parent[objName]["$_tree_"], text);
-            }
-
-            for (var key in obj.exports) {
-                if (["__proto__", "flags", "id"].indexOf(key) >= 0) {
-                    continue;
-                }
-
-                check(obj.exports[key], parent[objName]["$_tree_"], text);
-            }
-
-            if (obj["declarations"] && obj["declarations"].length) {
-                var docInfo = obj["declarations"][0];
-                if (docInfo["baseTypes"] && docInfo["baseTypes"].length) {
-                    initExtends(docInfo["baseTypes"][0], parent[objName], text);
-                }
-
-                parent[objName]["api"] = text.substring(docInfo.pos, docInfo.end);
-
-                addDoc(parent[objName]["api"], parent[objName]);
-            }
-            break;
         }
         case flags["Class"]://类
         {
             parent[objName]["$_tree_"] = {};
-            parent[objName]["bodyType"] = "class";
+            if (parent[objName]["bodyType"] == null) {
+                parent[objName]["bodyType"] = "class";
+            }
 
             for (var key in obj.members) {
-                if ("__proto__" == key) {
+                if (["__proto__"].indexOf(key) >= 0) {
                     continue;
                 }
 
@@ -284,10 +202,14 @@ function check(obj, parent, text) {
                 check(obj.exports[key], parent[objName]["$_tree_"], text);
             }
 
-            if (obj["valueDeclaration"]) {
-                initExtends(obj["valueDeclaration"]["baseType"], parent[objName], text);
-                initImplements(obj["valueDeclaration"]["implementedTypes"], parent[objName], text);
+
+            if (obj["declarations"] && obj["declarations"].length) {
+                var docInfo = obj["declarations"][0];
+
+                initExtends(docInfo["baseTypes"] || [docInfo["baseType"]], parent[objName], text);
+                initImplements(docInfo["implementedTypes"], parent[objName], text);
             }
+
             break;
         }
 
@@ -296,42 +218,46 @@ function check(obj, parent, text) {
 
 
 var analyzedoc = require("../tools/analyzedoc");
-function addDoc(text, obj) {
-    text = text.replace(/^(\s)*/, "");
-    if (text.charAt(0) != "/") {
 
-    }
-    else {//取注释
-        var noteStringBlocks = [];
-        while (text.charAt(0) == "/") {
-            if (text.charAt(1) == "*") {
-                var last = text.indexOf("*/");
-                noteStringBlocks.push(text.substring(0, last + 2));
-                text = text.substring(last + 2);
-                text = text.replace(/^(\s)*/, "");
-            }
-            else {
-                text = text.replace(/(.)*/, "");
-                text = text.replace(/^(\s)*/, "");
-            }
-        }
-
-        var noteInfoBlocks = [];
-        if (noteStringBlocks.length) {
-            for (var i = 0; i < noteStringBlocks.length; i++) {
-                var doc = noteStringBlocks[i];
-                noteInfoBlocks.push(analyzedoc.analyze(doc));
-            }
-            obj["docs"] = noteInfoBlocks;
-        }
-    }
-
-
-    if (text.indexOf("{") >= 0) {
-        obj["content"] = text.substring(0, text.indexOf("{"));
+function setType(obj, currentInfo, text) {
+    if (obj.valueDeclaration && obj.valueDeclaration.type) {
+        currentInfo["type"] = text.substring(obj.valueDeclaration.type.pos, obj.valueDeclaration.type.end);
     }
     else {
-        obj["content"] = text;
+        currentInfo["type"] = null;
+    }
+}
+
+function getComments(text, pos, obj) {
+    var contentpos = pos;
+
+    var note1 = TypeScript.ts.getLeadingCommentRanges(text, pos);
+    var noteStringBlocks = []
+    for (var i1 = 0; note1 && i1 < note1.length; i1++) {
+        noteStringBlocks.push(text.substring(note1[i1]["pos"], note1[i1]["end"]));
+
+        contentpos = Math.max(contentpos, note1[i1]["end"] + 1);
+    }
+    /*var note2 = TypeScript.ts.getTrailingCommentRanges(text, obj.valueDeclaration.pos);
+     var arr2 = []
+     for (var i2=0; note2 && i2<note2.length;i2++) {
+     arr2.push(text.substring(note2[i2]["pos"],note2[i2]["end"]));
+     }*/
+
+    var noteInfoBlocks = [];
+    if (noteStringBlocks.length) {
+        for (var i = 0; i < noteStringBlocks.length; i++) {
+            var doc = noteStringBlocks[i];
+            noteInfoBlocks.push(analyzedoc.analyze(doc));
+        }
+        obj["docs"] = noteInfoBlocks;
+    }
+
+    if (text.indexOf("{", contentpos) >= 0) {
+        obj["content"] = text.substring(contentpos, text.indexOf("{", contentpos));
+    }
+    else {
+        obj["content"] = text.substring(contentpos);
     }
 }
 
@@ -395,32 +321,19 @@ function addParams(parameters, parametersArr, text) {
     }
 }
 
-//set 参数列表
-function initGetParamObject(obj, decla, text) {
-    obj["get"] = {};
-    obj["get"]["api"] = text.substring(decla.pos, decla.end);
-    addDoc(obj["get"]["api"], obj["get"]);
-
-    obj["get"]["parameters"] = [];
-    addParams(decla.parameters, obj["get"]["parameters"], text);
-}
-
-//get 参数列表
-function initSetParamObject(obj, decla, text) {
-    obj["set"] = {};
-    obj["set"]["api"] = text.substring(decla.pos, decla.end);
-    addDoc(obj["set"]["api"], obj["set"]);
-
-    obj["set"]["parameters"] = [];
-    addParams(decla.parameters, obj["set"]["parameters"], text);
-}
-
 //extends
-function initExtends(baseType, obj, text) {
-    if (baseType == null) {
+function initExtends(baseTypes, obj, text) {
+    if (baseTypes == null || baseTypes.length == 0) {
         return;
     }
-    obj["extends"] = baseType["typeName"]["text"] || text.substring(baseType["typeName"].pos, baseType["typeName"].end);
+    obj["augments"] = [];
+    for (var i = 0; i < baseTypes.length; i++) {
+        var baseType = baseTypes[i];
+        if (baseType == null) {
+            continue;
+        }
+        obj["augments"].push(baseType["typeName"]["text"] || text.substring(baseType["typeName"].pos, baseType["typeName"].end));
+    }
 }
 
 //implements

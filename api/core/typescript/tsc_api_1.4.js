@@ -20752,5 +20752,9 @@ exports.exit = null;
 ts.sys.exit = function(code){
     exports.exit(code);
 }
+
+
+
+exports.ts = ts;
 //exports.exit = ts.sys.exit;
 

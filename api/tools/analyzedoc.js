@@ -129,7 +129,7 @@ exports.analyze = function analyze(doc) {
         else if (item.indexOf("return") == 0) {//return(s)
             var temp = item.match(/^return(s)?(\s)+(\{[\s\S]*\})?(\s)*/)[0];
 
-            docInfo["return"] = item.substring(temp.length);
+            docInfo["returns"] = item.substring(temp.length);
         }
         else if (item.indexOf("event") == 0) {//event
             var temp = item.match(/^event(\s)+/)[0];

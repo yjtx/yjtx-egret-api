@@ -15709,3 +15709,4 @@ sys.exit = function(code){
 }
 //exports.exit = sys.exit;
 
+exports.ts = ts;
