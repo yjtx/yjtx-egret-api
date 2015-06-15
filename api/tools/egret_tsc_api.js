@@ -5,6 +5,7 @@
 
 var file = require("../core/file.js");
 var trim = require("../core/trim");
+var globals = require("../core/globals");
 var path = require("path");
 
 var flags = require("../tools/enumflag").getEnumFlag();
@@ -244,14 +245,34 @@ function getComments(text, pos, obj) {
      arr2.push(text.substring(note2[i2]["pos"],note2[i2]["end"]));
      }*/
 
+    var language = globals.getLanguage();
+    var noteIdx = -1;
+    for (var i2 = 0; i2 < noteStringBlocks.length; i2++) {
+        var doc = noteStringBlocks[i2].toLowerCase();
+        var reg = new RegExp("@language.*" + language);
+
+        if (doc.match(reg)) {
+            noteIdx = i2;
+            break;
+        }
+    }
+
     var noteInfoBlocks = [];
-    if (noteStringBlocks.length) {
-        for (var i = 0; i < noteStringBlocks.length; i++) {
-            var doc = noteStringBlocks[i];
+    if (noteIdx != -1) {
+        var doc = noteStringBlocks[noteIdx];
+        noteInfoBlocks.push(analyzedoc.analyze(doc));
+    }
+    else {
+        if (noteStringBlocks.length) {
+            //for (var i = 0; i < noteStringBlocks.length; i++) {
+            //    var doc = noteStringBlocks[i];
+            //    noteInfoBlocks.push(analyzedoc.analyze(doc));
+            //}
+            var doc = noteStringBlocks[noteStringBlocks.length - 1];
             noteInfoBlocks.push(analyzedoc.analyze(doc));
         }
-        obj["docs"] = noteInfoBlocks;
     }
+    obj["docs"] = noteInfoBlocks;
 
     if (text.indexOf("{", contentpos) >= 0) {
         obj["content"] = text.substring(contentpos, text.indexOf("{", contentpos));

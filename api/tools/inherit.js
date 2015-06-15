@@ -175,6 +175,14 @@ function addParentDoc(item, interfaces, parents) {
                     item["params"] = globals.clone(parentItem["params"]);
                 }
 
+                if (parentItem["see"]) {
+                    item["see"] = globals.clone(parentItem["see"]);
+                }
+
+                if (parentItem["default"] && !item["default"]) {
+                    item["default"] = globals.clone(parentItem["default"]);
+                }
+
                 //暂时不将inheritDoc作为继承方法看待
                 /*if (parent.class.kind == "class") {
                     if (parentItem["inherited"] == true) {

@@ -19,6 +19,10 @@ function getOutputPath() {
     return getOption("--output");
 }
 
+function getLanguage() {
+    return getOption("--language") || "zh_cn";
+}
+
 
 function clone(frame) {
     var result;
@@ -27,6 +31,9 @@ function clone(frame) {
     }
     else if (frame instanceof Object) {
         result = {};
+    }
+    else {
+        return frame;
     }
 
     for (var key in frame) {
@@ -49,3 +56,4 @@ exports.getOption = getOption;
 exports.addQuotes = addQuotes;
 exports.getExampleRootPath = getExampleRootPath;
 exports.getOutputPath = getOutputPath;
+exports.getLanguage = getLanguage;

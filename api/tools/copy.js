@@ -76,11 +76,6 @@ function addCopy(item) {
         }
     }
 
-    console.log(arr)
-    console.log(copyType)
-    console.log(copyItemName)
-    console.log(copyClassName)
-
     var parent = getClass(copyClassName);
     var parentKindList = parent[copyType];
     for (var i = 0; i < parentKindList.length; i++) {
@@ -94,6 +89,15 @@ function addCopy(item) {
             if (parentItem["params"]) {
                 item["params"] = globals.clone(parentItem["params"]);
             }
+
+            if (parentItem["see"]) {
+                item["see"] = globals.clone(parentItem["see"]);
+            }
+
+            if (parentItem["default"] && !item["default"]) {
+                item["default"] = globals.clone(parentItem["default"]);
+            }
+
             //暂时不将copy作为继承方法看待
             /*if (parentItem["inherited"] == true) {
                 item["inherits"] = parentItem["inherits"];
