@@ -61,7 +61,7 @@ function run(opts) {
     //对文件内membe等按字母排序
     require("./tools/sort").sortWithName(tempClassArr);
 
-    //require("./tools/screening").screening(tempClassArr);
+    require("./tools/screening").screening(tempClassArr);
 
     file.remove(outputPath);
     require("./tools/save").save(tempClassArr);
