@@ -77,6 +77,9 @@ function addCopy(item) {
     }
 
     var parent = getClass(copyClassName);
+    if (!parent) {
+        console.log(copyClassName)
+    }
     var parentKindList = parent[copyType];
     for (var i = 0; i < parentKindList.length; i++) {
         var parentItem = parentKindList[i];

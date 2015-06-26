@@ -166,14 +166,19 @@ exports.analyze = function analyze(doc) {
             docInfo["state"].push({"name": eventType, "description": des2});
         }
         else if (item.indexOf("skinPart") == 0) {//skinPart
-            var temp = item.match(/^skinPart(\s)+/)[0];
-            if (docInfo["skinPart"] == null) {
-                docInfo["skinPart"] = [];
+            var reg = /^skinPart(\s)+/;
+            if (item.match(reg)) {
+                var temp = item.match(reg)[0];
+                if (docInfo["skinPart"] == null) {
+                    docInfo["skinPart"] = [];
+                }
+                var des1 = trim.trimAll(item.substring(temp.length));
+                if (des1.match(/(\S)+/)) {
+                    var eventType = des1.match(/(\S)+/)[0];
+                    var des2 = trim.trimAll(des1.substring(eventType.length));
+                    docInfo["skinPart"].push({"name": eventType, "description": des2});
+                }
             }
-            var des1 = trim.trimAll(item.substring(temp.length));
-            var eventType = des1.match(/(\S)+/)[0];
-            var des2 = trim.trimAll(des1.substring(eventType.length));
-            docInfo["skinPart"].push({"name": eventType, "description": des2});
         }
         else {//其他非特殊的标签  default version platform
             var docName = item.match(/^(\S)+/)[0];

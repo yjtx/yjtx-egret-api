@@ -18,6 +18,7 @@ exports.save = function (tempClassObjs) {
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
         if (item.class) {
+
             file.save(path.join(outputPath, "finalClasses/" + key + ".json"), JSON.stringify(item, null, "\t"));
 
             if (tempModulesArr[item.class.memberof] == null) {

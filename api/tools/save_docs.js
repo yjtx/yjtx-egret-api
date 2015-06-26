@@ -66,6 +66,7 @@ function analyze(item, name, parent, filename) {
             break;
         case "interface":
         case "class":
+
             var classInfo = addClassInfo(name, tempParent);
             delete classInfo["memberof"];
 
@@ -88,7 +89,7 @@ function analyze(item, name, parent, filename) {
             addOtherPropertis(classInfo, item);
 
             if (tempClass["description"] == null || tempClass["description"] == "") {
-                classInfo["noDes"] = true;
+                classInfo["class"]["noDes"] = true;
             }
             break;
         case "modulevar"://变量

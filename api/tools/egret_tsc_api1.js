@@ -46,7 +46,9 @@ function formatModule(statement, text, parent) {
 
     if (statement.kind == 189 /* ModuleDeclaration */) {
         var objName = statement.name.text;
-        parent[objName] = {"$_tree_": {}, "bodyType": "module"};
+        if (parent[objName] == null) {
+            parent[objName] = {"$_tree_": {}, "bodyType": "module"};
+        }
         var tempParent = parent[objName]["$_tree_"];
 
         if (statement.body.statements) {
@@ -80,18 +82,18 @@ function formatModule(statement, text, parent) {
             else if (tempStatement.kind == 189 /* ModuleDeclaration */) {
                 formatModule(tempStatement, text, parent[objName]["$_tree_"]);
             }
-            else if (tempStatement.kind == 164 /* VariableStatement */) {
-                formatMember(tempStatement, text, parent[objName]["$_tree_"]);
-            }
-            else if (tempStatement.kind == 184 /* FunctionDeclaration */) {
-                formatMember(tempStatement, text, parent[objName]["$_tree_"]);
-
-            }
-            else if (tempStatement.kind == 186 /* InterfaceDeclaration */
-                || (tempStatement.kind == 185 /* ClassDeclaration */)
-                || (tempStatement.kind == 188 /* EnumDeclaration */) ) {
-                formatClass(tempStatement, text, parent[objName]["$_tree_"]);
-            }
+            //else if (tempStatement.kind == 164 /* VariableStatement */) {
+            //    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
+            //}
+            //else if (tempStatement.kind == 184 /* FunctionDeclaration */) {
+            //    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
+            //
+            //}
+            //else if (tempStatement.kind == 186 /* InterfaceDeclaration */
+            //    || (tempStatement.kind == 185 /* ClassDeclaration */)
+            //    || (tempStatement.kind == 188 /* EnumDeclaration */) ) {
+            //    formatClass(tempStatement, text, parent[objName]["$_tree_"]);
+            //}
         }
     }
 }
@@ -113,6 +115,9 @@ function formatClass(statement, text, parent) {
                 parent[objName]["bodyType"] = "interface";
             }
 
+            if (objName == "UIComponent") {
+                console.log("sssssf")
+            }
         case 185 /* ClassDeclaration */
         :
             if (parent[objName]["bodyType"] == null) {
@@ -133,21 +138,28 @@ function formatClass(statement, text, parent) {
     }
 }
 
-function formatMembers(declaration, text, parent) {
+function formatMembers(declaration, text, parent, isStatic) {
     var members = declaration["members"];
     var length = members.length;
     for (var i = 0; i < length; i++) {
         var member = members[i];
-        formatMember(member, text, parent);
+        formatMember(member, text, parent, isStatic);
     }
 }
 
-function formatMember(member, text, parent) {
+function formatMember(member, text, parent, isStatic) {
     var flags = member.flags;
 
 
     if (member.kind == 164 /* VariableStatement */) {
         var name = member.declarations[0].name.getText();
+
+        if (parent[name] && parent[name]["bodyType"] == "interface") {
+            parent[name]["bodyType"] = "class";
+
+            formatMembers(member.declarations[0]["type"], text, parent[name]["$_tree_"], true);
+            return;
+        }
     }
     else if (member.kind == 126 /* Constructor */) {
         var name = "constructor";
@@ -156,9 +168,6 @@ function formatMember(member, text, parent) {
         return;
     }
     else {
-        if (!member.name) {
-            console.log("sdf")
-        }
         var name = member.name.getText();
     }
     parent[name] = {};
@@ -193,6 +202,38 @@ function formatMember(member, text, parent) {
 
     }
 
+    //作用域
+    if (name.charAt(0) == "$" || name.charAt(0) == "_") {
+        parent[name]["pType"] = "protected";
+    }
+    else if (member.kind == 164 /* VariableStatement */) {
+        if (isExport(member)) {
+            parent[name]["pType"] = "public";
+        }
+        else {
+            parent[name]["pType"] = "private";
+        }
+    }
+    else if (member.kind == 184 /* FunctionDeclaration */) {
+        if (isExport(member)) {
+            parent[name]["pType"] = "public";
+        }
+        else {
+            parent[name]["pType"] = "private";
+        }
+    }
+    else {
+        if (flags == 0 || (flags & 16 /* Public */)) {
+            parent[name]["pType"] = "public";
+        }
+        else if (flags & 64 /* Protected */) {
+            parent[name]["pType"] = "protected";
+        }
+        else {
+            parent[name]["pType"] = "private";
+        }
+    }
+
     if (member.type) {//类型
         parent[name]["type"] = text.substring(member.type.pos, member.type.end);
     }
@@ -202,23 +243,10 @@ function formatMember(member, text, parent) {
         parent[name]["default"] = str;
     }
 
-    if (!name) {
-        console.log("sf")
-    }
-    //作用域
-    if (name.charAt(0) == "$" || name.charAt(0) == "_") {
-        parent[name]["pType"] = "protected";
-    }
-    else {
-        if (flags == 0 || (flags & 16 /* Public */)) {
-            parent[name]["pType"] = "public";
-        }
-        else if (flags & 64 /* Protected */) {
-            parent[name]["pType"] = "protected";
-        }
-    }
-
     if (flags & 128 /* Static */) {
+        parent[name]["scope"] = "static";
+    }
+    else if (isStatic) {
         parent[name]["scope"] = "static";
     }
     else {
@@ -245,6 +273,7 @@ function formatMember(member, text, parent) {
     }
 
     getComments(text, member.pos, parent[name]);
+
 }
 
 var analyzedoc = require("../tools/analyzedoc");
@@ -294,10 +323,10 @@ function getComments(text, pos, obj) {
     obj["docs"] = noteInfoBlocks;
 
     if (text.indexOf("{", contentpos) >= 0) {
-        obj["content"] = text.substring(contentpos, text.indexOf("{", contentpos));
+        obj["content"] = trim.trimAll(text.substring(contentpos, text.indexOf("{", contentpos)));
     }
     else {
-        obj["content"] = text.substring(contentpos);
+        obj["content"] = trim.trimAll(text.substring(contentpos));
     }
 }
 
