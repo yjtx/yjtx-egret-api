@@ -35,9 +35,13 @@ function run(opts) {
         return true;
     });
 
-    var cmd = tsList.join(" ") + " -d -t ES5 --out " + globals.addQuotes(path.join(outputPath, "a.d.ts"));
-    var apiArr = typeScriptCompiler.compile(function () {
-    }, cmd);
+    var apiArr = require("./tools/egret_tsc_api1").run(tsList, egretPath);
+
+    //return;
+    //
+    //var cmd = tsList.join(" ") + " -d -t ES5 --out " + globals.addQuotes(path.join(outputPath, "a.d.ts"));
+    //var apiArr = typeScriptCompiler.compile(function () {
+    //}, cmd);
     var tempClassArr = require("./tools/save_docs").screening(apiArr);
 
     //补全类名路径
@@ -57,7 +61,7 @@ function run(opts) {
     //对文件内membe等按字母排序
     require("./tools/sort").sortWithName(tempClassArr);
 
-    require("./tools/screening").screening(tempClassArr);
+    //require("./tools/screening").screening(tempClassArr);
 
     file.remove(outputPath);
     require("./tools/save").save(tempClassArr);

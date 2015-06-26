@@ -127,7 +127,10 @@ exports.analyze = function analyze(doc) {
             docInfo["example"]["description"] = "";
         }
         else if (item.indexOf("return") == 0) {//return(s)
-            var temp = item.match(/^return(s)?(\s)+(\{[\s\S]*\})?(\s)*/)[0];
+            if (!item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)) {
+                console.log("sdf")
+            }
+            var temp = item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)[0];
 
             docInfo["returns"] = item.substring(temp.length);
         }

@@ -53,9 +53,9 @@ var id4 = {
 };
 
 exports.getEnumFlag = function () {
-    return id3;
+    return id4;
 };
 
 exports.getTscApi = function () {
-    return require('../core/typescript/tsc_api_1.3.js');
+    return require('../core/typescript/tsc_api_1.4.js');
 };
