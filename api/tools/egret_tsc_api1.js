@@ -106,20 +106,13 @@ function formatClass(statement, text, parent) {
     parent[objName] = {"$_tree_": {}};
 
     switch (statement.kind) {
-        case 188 /* EnumDeclaration */
-        :
+        case 188 /* EnumDeclaration */ :
             parent[objName]["bodyType"] = "enum";
-        case 186 /* InterfaceDeclaration */
-        :
+        case 186 /* InterfaceDeclaration */ :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "interface";
             }
-
-            if (objName == "UIComponent") {
-                console.log("sssssf")
-            }
-        case 185 /* ClassDeclaration */
-        :
+        case 185 /* ClassDeclaration */ :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "class";
             }
@@ -129,6 +122,11 @@ function formatClass(statement, text, parent) {
             }
             else {
                 parent[objName]["public"] = "private";
+                //由于局部的enum可能会重复，导致生成问题，因此直接排除局部enum
+                if (statement.kind == 188 /* EnumDeclaration */) {
+                    delete parent[objName];
+                    return;
+                }
             }
 
             formatMembers(statement, text, parent[objName]["$_tree_"]);
@@ -141,9 +139,23 @@ function formatClass(statement, text, parent) {
 function formatMembers(declaration, text, parent, isStatic) {
     var members = declaration["members"];
     var length = members.length;
+
+    var enumValue = 0;
     for (var i = 0; i < length; i++) {
         var member = members[i];
         formatMember(member, text, parent, isStatic);
+
+        if (member.kind == 200 /* EnumMember */) {
+            var name = member.name.getText();
+            parent[name]["type"] = "number";
+            if (parent[name]["default"] == null) {
+                parent[name]["default"] = enumValue;
+            }
+            else {
+                enumValue = parent[name]["default"];
+            }
+            enumValue++;
+        }
     }
 }
 
@@ -201,6 +213,11 @@ function formatMember(member, text, parent, isStatic) {
         parent[name]["memberKind"] = "globalFunction";
 
     }
+    else if (member.kind == 200 /* EnumMember */) {
+        parent[name]["bodyType"] = "Property";
+        parent[name]["memberKind"] = "member";
+
+    }
 
     //作用域
     if (name.charAt(0) == "$" || name.charAt(0) == "_") {
@@ -244,6 +261,9 @@ function formatMember(member, text, parent, isStatic) {
     }
 
     if (flags & 128 /* Static */) {
+        parent[name]["scope"] = "static";
+    }
+    else if (member.kind == 200 /* EnumMember */) {
         parent[name]["scope"] = "static";
     }
     else if (isStatic) {

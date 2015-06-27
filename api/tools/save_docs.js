@@ -53,7 +53,9 @@ function addClassInfo(name, parent) {
 }
 
 function analyze(item, name, parent, filename) {
-
+    if (item.bodyType == "bodyType") {
+        console.log("asdf")
+    }
     var tempParent = parent.concat();
     switch (item.bodyType) {
         case "module":
@@ -66,6 +68,7 @@ function analyze(item, name, parent, filename) {
             break;
         case "interface":
         case "class":
+        case "enum":
 
             var classInfo = addClassInfo(name, tempParent);
             delete classInfo["memberof"];
