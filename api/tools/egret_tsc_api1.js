@@ -131,10 +131,49 @@ function formatClass(statement, text, parent) {
 
             formatMembers(statement, text, parent[objName]["$_tree_"]);
 
+            if (objName == "DisplayObject") {
+                console.log("sdf");
+            }
+
+            if (statement.heritageClauses) {
+                initExtends(statement.heritageClauses[0]["types"], parent[objName], text);
+                if (statement.heritageClauses[1]) {
+                    initImplements(statement.heritageClauses[1]["types"], parent[objName], text);
+                }
+            }
+
             getComments(text, statement.pos, parent[objName]);
             break;
     }
 }
+
+//extends
+function initExtends(baseTypes, obj, text) {
+    if (baseTypes == null || baseTypes.length == 0) {
+        return;
+    }
+    obj["augments"] = [];
+    for (var i = 0; i < baseTypes.length; i++) {
+        var baseType = baseTypes[i];
+        if (baseType == null) {
+            continue;
+        }
+        obj["augments"].push(baseType.getText());
+    }
+}
+
+//implements
+function initImplements(implementedTypes, obj, text) {
+    if (implementedTypes == null) {
+        return;
+    }
+    obj["implements"] = [];
+    for (var i = 0; i < implementedTypes.length; i++) {
+        var implementedType = implementedTypes[i];
+        obj["implements"].push(implementedTypes[i]["typeName"]["text"] || text.substring(implementedType["typeName"].pos, implementedType["typeName"].end));
+    }
+}
+
 
 function formatMembers(declaration, text, parent, isStatic) {
     var members = declaration["members"];
