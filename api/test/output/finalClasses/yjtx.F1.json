@@ -24,8 +24,8 @@
 					"description": "F1v2"
 				},
 				{
-					"name": "args",
-					"description": "F1v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public"
@@ -37,6 +37,29 @@
 			"memberof": "yjtx.F1",
 			"scope": "instance",
 			"description": "yjtxF1f2",
+			"params": [
+				{
+					"name": "v1",
+					"type": "boolean",
+					"description": ""
+				},
+				{
+					"name": "v2",
+					"question": true,
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "v3",
+					"type": "string",
+					"default": "\"a\"",
+					"description": ""
+				},
+				{
+					"name": "...args",
+					"description": ""
+				}
+			],
 			"pType": "public"
 		},
 		{

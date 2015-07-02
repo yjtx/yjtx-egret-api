@@ -6,7 +6,7 @@ module yjtx {
     export const enum C {
         c1,
         c2,
-        c3 = 10,
+        c3 = 8,
         c4,
         c5
     }

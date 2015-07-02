@@ -20,8 +20,8 @@
 					"description": "yjtxf3v2"
 				},
 				{
-					"name": "args",
-					"description": "yjtxf3v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public"

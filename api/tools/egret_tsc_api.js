@@ -192,7 +192,7 @@ function formatMembers(declaration, text, parent, isStatic) {
                 parent[name]["default"] = enumValue + "";
             }
             else {
-                enumValue = parent[name]["default"];
+                enumValue = parseInt(parent[name]["default"]);
             }
             enumValue++;
         }
@@ -226,7 +226,7 @@ function formatMember(member, text, parent, isStatic) {
         parent[name] = {};
     }
 
-    if (name == "m5") {
+    if (name == "f2") {
         console.log("sdf")
     }
 
@@ -328,10 +328,8 @@ function formatMember(member, text, parent, isStatic) {
         parent[name]["type"] = text.substring(member.type.pos, member.type.end);
     }
 
-    if (member.initializer) {//默认值
-        var str = trim.trimAll(text.substring(member.initializer.pos, member.initializer.end));
-        parent[name]["default"] = str;
-    }
+    //默认值
+    getDefault(member, parent[name], text);
 
     if (flags & 128 /* Static */) {
         parent[name]["scope"] = "static";
@@ -359,14 +357,20 @@ function formatMember(member, text, parent, isStatic) {
 
                     var tempParam = {};
                     tempParam["name"] = parameter.name.getText();
+                    if (parameter.dotDotDotToken) {
+                        tempParam["name"] = "..." + tempParam["name"];
+                    }
+
+                    if (parameter.questionToken) {
+                        tempParam["question"] = true;
+                    }
                     if (parameter.type) {
                         tempParam["type"] = trim.trimAll(text.substring(parameter.type.pos, parameter.type.end));
                     }
 
-                    if (parameter.initializer) {//默认值
-                        var str = trim.trimAll(text.substring(parameter.initializer.pos, parameter.initializer.end));
-                        tempParam["default"] = str;
-                    }
+                    //默认值
+                    getDefault(parameter, tempParam, text);
+
                     parent[name]["parameters"].push(tempParam);
                 }
             }
@@ -374,6 +378,13 @@ function formatMember(member, text, parent, isStatic) {
     }
 
     getComments(text, member.pos, parent[name]);
+}
+
+function getDefault(parameter, tempParam, text) {
+    if (parameter.initializer) {//默认值
+        var str = trim.trimAll(text.substring(parameter.initializer.pos, parameter.initializer.end));
+        tempParam["default"] = str;
+    }
 }
 
 var analyzedoc = require("../tools/analyzedoc");

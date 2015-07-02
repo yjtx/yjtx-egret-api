@@ -24,8 +24,8 @@
 					"description": "F2v2"
 				},
 				{
-					"name": "args",
-					"description": "F2v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public"
@@ -49,8 +49,8 @@
 					"description": "F2v2"
 				},
 				{
-					"name": "args",
-					"description": "F2v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public",
@@ -79,8 +79,8 @@
 					"description": "F1v2"
 				},
 				{
-					"name": "args",
-					"description": "F1v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public",
@@ -109,8 +109,8 @@
 					"description": "yjtxf3v2"
 				},
 				{
-					"name": "args",
-					"description": "yjtxf3v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public",
@@ -140,8 +140,8 @@
 					"description": "F2f5v2"
 				},
 				{
-					"name": "args",
-					"description": "F2f5v3"
+					"name": "...args",
+					"description": ""
 				}
 			],
 			"pType": "public"

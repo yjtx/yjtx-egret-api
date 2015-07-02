@@ -25,7 +25,7 @@
 			"memberof": "yjtx.C",
 			"scope": "static",
 			"pType": "public",
-			"default": "10"
+			"default": "8"
 		},
 		{
 			"kind": "member",
@@ -34,7 +34,7 @@
 			"memberof": "yjtx.C",
 			"scope": "static",
 			"pType": "public",
-			"default": "11"
+			"default": "9"
 		},
 		{
 			"kind": "member",
@@ -43,7 +43,7 @@
 			"memberof": "yjtx.C",
 			"scope": "static",
 			"pType": "public",
-			"default": "12"
+			"default": "10"
 		}
 	],
 	"function": [],

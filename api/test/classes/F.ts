@@ -21,7 +21,7 @@ module yjtx {
         /**
          * yjtxF1f2
          */
-        f2():void {
+        f2(v1:boolean, v2?:string, v3:string = "a", ...args):void {
 
         }
 
