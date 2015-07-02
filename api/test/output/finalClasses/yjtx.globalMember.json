@@ -10,10 +10,10 @@
 		},
 		{
 			"kind": "globalMember",
-			"name": "M3",
+			"name": "m3",
 			"memberof": "yjtx",
 			"scope": "instance",
-			"description": "yjtxM3",
+			"description": "yjtxm3",
 			"pType": "public"
 		}
 	]

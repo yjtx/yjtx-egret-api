@@ -33,6 +33,24 @@ module yjtx {
          * @deprecated
          */
         m4:string;
+
+        /**
+         * yjtxM153
+         */
+        static m5:string = "";
+
+        /**
+         * yjtxM1m6
+         * @default yjtxM1m6
+         * @see http://www.egret.com  yjtxM1m6
+         */
+        public get m6():string {
+            return "";
+        }
+
+        public set m6(value:string) {
+        }
+
     }
 
     /**
@@ -44,7 +62,6 @@ module yjtx {
          * yjtxM2m1
          * @default yjtxM2m1
          * @see http://www.egret.com  yjtxM2m1
-         *
          */
         m1:string;
 
@@ -55,18 +72,18 @@ module yjtx {
         m2:string;
 
         /**
-         * @copy yjtx.M3
+         * @copy yjtx.m3
          */
         m3:string;
 
         /**
-         * @copy yjtx.M2#m1
+         * @copy yjtx.M1#m1
          */
         m4:string;
     }
 
     /**
-     * yjtxM3
+     * yjtxm3
      */
-    export var M3:string;
+    export var m3:string;
 }

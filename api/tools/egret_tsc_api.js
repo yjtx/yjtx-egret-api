@@ -226,6 +226,10 @@ function formatMember(member, text, parent, isStatic) {
         parent[name] = {};
     }
 
+    if (name == "m5") {
+        console.log("sdf")
+    }
+
     if (member.kind == 128 /* SetAccessor */) {
         if (parent[name]["bodyType"] == "GetAccessor") {
             parent[name]["bodyType"] = "Property";
@@ -312,8 +316,11 @@ function formatMember(member, text, parent, isStatic) {
         else if (flags & 64 /* Protected */) {
             parent[name]["pType"] = "protected";
         }
-        else {
+        else if (flags & 32 /* Private */) {
             parent[name]["pType"] = "private";
+        }
+        else {
+            parent[name]["pType"] = "public";
         }
     }
 

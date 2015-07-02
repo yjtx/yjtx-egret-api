@@ -61,22 +61,34 @@ module yjtx {
         }
 
         /**
-         * @copy yjtx.F3()
+         * @copy yjtx.f3()
          */
         f4(v1:boolean, v2:string, ...args):string {
             return "";
         }
 
+
+        /**
+         * yjtxF2f5
+         * @param v1  F2f5v1
+         * @param v2  F2f5v2
+         * @param args  F2f5v3
+         * @returns {string} F2f5v4
+         * @see http://www.egret.com  yjtxF2f5
+         */
+        static f5(v1:boolean, v2:string, ...args):string {
+            return "";
+        }
     }
 
     /**
-     * yjtxF3
-     * @param v1  F3v1
-     * @param v2  F3v2
-     * @param args  F3v3
-     * @returns {string} F3v4
+     * yjtxf3
+     * @param v1  yjtxf3v1
+     * @param v2  yjtxf3v2
+     * @param args  yjtxf3v3
+     * @returns {string} yjtxf3v4
      */
-    export function F3(v1:boolean, v2:string, ...args):string {
+    export function f3(v1:boolean, v2:string, ...args):string {
         return "";
     }
 }

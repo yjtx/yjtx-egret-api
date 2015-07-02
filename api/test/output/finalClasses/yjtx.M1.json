@@ -48,6 +48,29 @@
 			"scope": "instance",
 			"deprecated": true,
 			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m5",
+			"memberof": "yjtx.M1",
+			"scope": "static",
+			"description": "yjtxM153",
+			"pType": "public",
+			"default": "\"\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m6",
+			"memberof": "yjtx.M1",
+			"scope": "instance",
+			"description": "yjtxM1m6",
+			"default": "yjtxM1m6",
+			"see": [
+				"http://www.egret.com  yjtxM1m6"
+			],
+			"pType": "public"
 		}
 	],
 	"function": [],

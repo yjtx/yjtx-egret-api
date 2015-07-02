@@ -96,26 +96,55 @@
 			"name": "f4",
 			"memberof": "yjtx.F2",
 			"scope": "instance",
-			"copy": "yjtx.F3()",
+			"copy": "yjtx.f3()",
 			"params": [
 				{
 					"name": "v1",
 					"type": "boolean",
-					"description": "F3v1"
+					"description": "yjtxf3v1"
 				},
 				{
 					"name": "v2",
 					"type": "string",
-					"description": "F3v2"
+					"description": "yjtxf3v2"
 				},
 				{
 					"name": "args",
-					"description": "F3v3"
+					"description": "yjtxf3v3"
 				}
 			],
 			"pType": "public",
-			"description": "yjtxF3",
-			"returns": "F3v4"
+			"description": "yjtxf3",
+			"returns": "yjtxf3v4"
+		},
+		{
+			"kind": "function",
+			"type": "string",
+			"name": "f5",
+			"memberof": "yjtx.F2",
+			"scope": "static",
+			"description": "yjtxF2f5",
+			"returns": "F2f5v4",
+			"see": [
+				"http://www.egret.com  yjtxF2f5"
+			],
+			"params": [
+				{
+					"name": "v1",
+					"type": "boolean",
+					"description": "F2f5v1"
+				},
+				{
+					"name": "v2",
+					"type": "string",
+					"description": "F2f5v2"
+				},
+				{
+					"name": "args",
+					"description": "F2f5v3"
+				}
+			],
+			"pType": "public"
 		}
 	],
 	"globalMember": [],

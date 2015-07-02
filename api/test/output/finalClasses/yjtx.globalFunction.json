@@ -3,25 +3,25 @@
 		{
 			"kind": "globalFunction",
 			"type": "string",
-			"name": "F3",
+			"name": "f3",
 			"memberof": "yjtx",
 			"scope": "instance",
-			"description": "yjtxF3",
-			"returns": "F3v4",
+			"description": "yjtxf3",
+			"returns": "yjtxf3v4",
 			"params": [
 				{
 					"name": "v1",
 					"type": "boolean",
-					"description": "F3v1"
+					"description": "yjtxf3v1"
 				},
 				{
 					"name": "v2",
 					"type": "string",
-					"description": "F3v2"
+					"description": "yjtxf3v2"
 				},
 				{
 					"name": "args",
-					"description": "F3v3"
+					"description": "yjtxf3v3"
 				}
 			],
 			"pType": "public"

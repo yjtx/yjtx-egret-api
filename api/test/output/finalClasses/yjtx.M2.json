@@ -33,9 +33,9 @@
 			"name": "m3",
 			"memberof": "yjtx.M2",
 			"scope": "instance",
-			"copy": "yjtx.M3",
+			"copy": "yjtx.m3",
 			"pType": "public",
-			"description": "yjtxM3"
+			"description": "yjtxm3"
 		},
 		{
 			"kind": "member",
@@ -43,13 +43,13 @@
 			"name": "m4",
 			"memberof": "yjtx.M2",
 			"scope": "instance",
-			"copy": "yjtx.M2#m1",
+			"copy": "yjtx.M1#m1",
 			"pType": "public",
-			"description": "yjtxM2m1",
+			"description": "yjtxM1m1",
 			"see": [
-				"http://www.egret.com  yjtxM2m1"
+				"http://www.egret.com  yjtxM1m1"
 			],
-			"default": "yjtxM2m1"
+			"default": "yjtxM1m1"
 		}
 	],
 	"function": [],

@@ -3,6 +3,14 @@
 		{
 			"kind": "member",
 			"type": "number",
+			"name": "_a",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"pType": "protected"
+		},
+		{
+			"kind": "member",
+			"type": "number",
 			"name": "a",
 			"memberof": "yjtx.A",
 			"scope": "instance",
