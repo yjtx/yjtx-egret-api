@@ -6,7 +6,7 @@
 			"name": "m1",
 			"memberof": "yjtx.M2",
 			"scope": "instance",
-			"description": "yjtxM2#m1",
+			"description": "yjtxM2m1",
 			"default": "yjtxM2m1",
 			"see": [
 				"http://www.egret.com  yjtxM2m1"
@@ -22,7 +22,7 @@
 			"copy": "#m1",
 			"default": "yjtxM2m2",
 			"pType": "public",
-			"description": "yjtxM2#m1",
+			"description": "yjtxM2m1",
 			"see": [
 				"http://www.egret.com  yjtxM2m1"
 			]
@@ -45,7 +45,7 @@
 			"scope": "instance",
 			"copy": "yjtx.M2#m1",
 			"pType": "public",
-			"description": "yjtxM2#m1",
+			"description": "yjtxM2m1",
 			"see": [
 				"http://www.egret.com  yjtxM2m1"
 			],
@@ -59,7 +59,7 @@
 		"kind": "class",
 		"name": "M2",
 		"memberof": "yjtx",
-		"filename": "classes/M.ts",
+		"filename": "test/classes/M.ts",
 		"description": "yjtxM2"
 	}
 }

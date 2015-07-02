@@ -4,4 +4,4 @@ node tscdoc.js --path ../../../Egret/Lark/src --output ../../../Egret/api/js/dat
 node tscdoc.js --path ../../../Egret/egret-core/src --output ../../../Egret/api/js/data/ --examples ../../../Egret/egret-core/examples --language zh_cn
 
 
-node tscdoc.js --path classes --output output/ --examples examples --language zh_cn
+node tscdoc.js --path test/classes --output test/output/ --examples test/examples --language zh_cn

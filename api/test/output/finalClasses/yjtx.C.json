@@ -53,6 +53,6 @@
 		"kind": "enum",
 		"name": "C",
 		"memberof": "yjtx",
-		"filename": "classes/C.ts"
+		"filename": "test/classes/C.ts"
 	}
 }

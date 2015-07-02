@@ -17,7 +17,7 @@
 		"kind": "interface",
 		"name": "IB",
 		"memberof": "yjtx",
-		"filename": "classes/IA.ts",
+		"filename": "test/classes/IA.ts",
 		"description": "dsflafjlsf",
 		"children": [
 			"yjtx.IA"

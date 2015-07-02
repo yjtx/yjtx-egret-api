@@ -89,7 +89,7 @@
 		"kind": "class",
 		"name": "B1",
 		"memberof": "yjtx",
-		"filename": "classes/B.ts",
+		"filename": "test/classes/B.ts",
 		"description": "yjtxB1",
 		"event": [
 			{

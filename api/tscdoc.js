@@ -5,7 +5,6 @@ var path = require("path");
 var globals = require("./core/globals");
 var file = require("./core/file.js");
 var params = require("./core/params_analyze.js");
-var typeScriptCompiler = require("./tools/egret_tsc_api.js");
 
 function run(opts) {
     if (opts["--output"] == null || opts["--output"].length == 0 || opts["--output"][0] == "") {
@@ -14,12 +13,6 @@ function run(opts) {
     }
     var outputPath = opts["--output"][0];
     var egretPath = opts["--path"][0];
-
-    //var tsList = [];
-    //var moduleArr = ["core", "res", "html5", "native", "gui", "socket", "dragonbones"];
-    //for (var i = 0; i < moduleArr.length; i++) {
-    //    tsList = tsList.concat(getModuleList(moduleArr[i], egretPath));
-    //}
 
     var ignoreList = [/oldVersion.*NativeVersionController.ts/];
     var tsList = file.getDirectoryAllListing(path.join(egretPath));
@@ -35,13 +28,8 @@ function run(opts) {
         return true;
     });
 
-    var apiArr = require("./tools/egret_tsc_api1").run(tsList, egretPath);
+    var apiArr = require("./tools/egret_tsc_api").run(tsList, egretPath);
 
-    //return;
-    //
-    //var cmd = tsList.join(" ") + " -d -t ES5 --out " + globals.addQuotes(path.join(outputPath, "a.d.ts"));
-    //var apiArr = typeScriptCompiler.compile(function () {
-    //}, cmd);
     var tempClassArr = require("./tools/save_docs").screening(apiArr);
 
     //补全类名路径
