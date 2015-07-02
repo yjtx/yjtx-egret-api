@@ -1,0 +1,26 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b",
+			"memberof": "yjtx.IB",
+			"scope": "instance",
+			"description": "bbbbbbb",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IB",
+		"memberof": "yjtx",
+		"filename": "classes/IA.ts",
+		"description": "dsflafjlsf",
+		"children": [
+			"yjtx.IA"
+		]
+	}
+}

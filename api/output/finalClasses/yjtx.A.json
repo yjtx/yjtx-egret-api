@@ -1,0 +1,65 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "a",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"description": "aaaaa"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"description": "bbbbbbb"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"description": "f11111"
+				},
+				{
+					"name": "canuse",
+					"type": "boolean",
+					"description": "f22222"
+				}
+			],
+			"pType": "public",
+			"description": "fffffff"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "A",
+		"memberof": "yjtx",
+		"filename": "classes/A.ts",
+		"description": "sdfsdfs",
+		"implements": [
+			{
+				"name": "yjtx.IA"
+			}
+		],
+		"children": [
+			"yjtx.B"
+		]
+	}
+}

@@ -70,7 +70,7 @@ function formatModule(statement, text, parent) {
                 }
                 else if (tempStatement.kind == 186 /* InterfaceDeclaration */
                     || (tempStatement.kind == 185 /* ClassDeclaration */)
-                    || (tempStatement.kind == 188 /* EnumDeclaration */) ) {
+                    || (tempStatement.kind == 188 /* EnumDeclaration */)) {
                     formatClass(tempStatement, text, parent[objName]["$_tree_"]);
                 }
             }
@@ -106,13 +106,16 @@ function formatClass(statement, text, parent) {
     parent[objName] = {"$_tree_": {}};
 
     switch (statement.kind) {
-        case 188 /* EnumDeclaration */ :
+        case 188 /* EnumDeclaration */
+        :
             parent[objName]["bodyType"] = "enum";
-        case 186 /* InterfaceDeclaration */ :
+        case 186 /* InterfaceDeclaration */
+        :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "interface";
             }
-        case 185 /* ClassDeclaration */ :
+        case 185 /* ClassDeclaration */
+        :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "class";
             }
@@ -131,14 +134,15 @@ function formatClass(statement, text, parent) {
 
             formatMembers(statement, text, parent[objName]["$_tree_"]);
 
-            if (objName == "DisplayObject") {
-                console.log("sdf");
-            }
-
             if (statement.heritageClauses) {
-                initExtends(statement.heritageClauses[0]["types"], parent[objName], text);
-                if (statement.heritageClauses[1]) {
-                    initImplements(statement.heritageClauses[1]["types"], parent[objName], text);
+                for (var i2 = 0; i2 < statement.heritageClauses.length; i2++) {
+                    var heritageClause = statement.heritageClauses[i2];
+                    if (heritageClause.token == 100 /*ImplementsKeyword*/) {
+                        initImplements(heritageClause["types"], parent[objName], text);
+                    }
+                    else if (heritageClause.token == 77 /*ExtendsKeyword*/) {
+                        initExtends(heritageClause["types"], parent[objName], text);
+                    }
                 }
             }
 
@@ -188,7 +192,7 @@ function formatMembers(declaration, text, parent, isStatic) {
             var name = member.name.getText();
             parent[name]["type"] = "number";
             if (parent[name]["default"] == null) {
-                parent[name]["default"] = enumValue;
+                parent[name]["default"] = enumValue + "";
             }
             else {
                 enumValue = parent[name]["default"];
@@ -221,15 +225,41 @@ function formatMember(member, text, parent, isStatic) {
     else {
         var name = member.name.getText();
     }
-    parent[name] = {};
+    if (parent[name] == null) {
+        parent[name] = {};
+    }
 
     if (member.kind == 128 /* SetAccessor */) {
-        parent[name]["bodyType"] = "SetAccessor";
-        parent[name]["memberKind"] = "member";
+        if (parent[name]["bodyType"] == "GetAccessor") {
+            parent[name]["bodyType"] = "Property";
+
+            if (parent[name]["noNote"] == false) {//已经有注释，无需继续解析
+            }
+            else {//只需要再解析注释
+                getComments(text, member.pos, parent[name]);
+            }
+            return;
+        }
+        else {
+            parent[name]["bodyType"] = "SetAccessor";
+            parent[name]["memberKind"] = "member";
+        }
     }
     else if (member.kind == 127 /* GetAccessor */) {
-        parent[name]["bodyType"] = "GetAccessor";
-        parent[name]["memberKind"] = "member";
+        if (parent[name]["bodyType"] == "SetAccessor") {
+            parent[name]["bodyType"] = "Property";
+
+            if (parent[name]["noNote"] == false) {//已经有注释，无需继续解析
+            }
+            else {//只需要再解析注释
+                getComments(text, member.pos, parent[name]);
+            }
+            return;
+        }
+        else {
+            parent[name]["bodyType"] = "GetAccessor";
+            parent[name]["memberKind"] = "member";
+        }
     }
     else if (member.kind == 126 /* Constructor */) {
         parent[name]["bodyType"] = "function";
@@ -312,27 +342,34 @@ function formatMember(member, text, parent, isStatic) {
         parent[name]["scope"] = "instance";
     }
 
-    parent[name]["parameters"] = [];
-    if (member.parameters && member.parameters.length) {
-        for (var i1 = 0; i1 < member.parameters.length; i1++) {
-            var parameter = member.parameters[i1];
-
-            var tempParam = {};
-            tempParam["name"] = parameter.name.getText();
-            if (parameter.type) {
-                tempParam["type"] = trim.trimAll(text.substring(parameter.type.pos, parameter.type.end));
+    if (member.parameters) {
+        parent[name]["parameters"] = [];
+        if (member.parameters.length) {
+            if (member.kind == 128 /* SetAccessor */) {
+                var parameter = member.parameters[0];
+                parent[name]["type"] = trim.trimAll(text.substring(parameter.type.pos, parameter.type.end));
             }
+            else {
+                for (var i1 = 0; i1 < member.parameters.length; i1++) {
+                    var parameter = member.parameters[i1];
 
-            if (parameter.initializer) {//默认值
-                var str = trim.trimAll(text.substring(parameter.initializer.pos, parameter.initializer.end));
-                tempParam["default"] = str;
+                    var tempParam = {};
+                    tempParam["name"] = parameter.name.getText();
+                    if (parameter.type) {
+                        tempParam["type"] = trim.trimAll(text.substring(parameter.type.pos, parameter.type.end));
+                    }
+
+                    if (parameter.initializer) {//默认值
+                        var str = trim.trimAll(text.substring(parameter.initializer.pos, parameter.initializer.end));
+                        tempParam["default"] = str;
+                    }
+                    parent[name]["parameters"].push(tempParam);
+                }
             }
-            parent[name]["parameters"].push(tempParam);
         }
     }
 
     getComments(text, member.pos, parent[name]);
-
 }
 
 var analyzedoc = require("../tools/analyzedoc");
@@ -365,9 +402,10 @@ function getComments(text, pos, obj) {
     }
 
     var noteInfoBlocks = [];
-    if (noteIdx != -1) {
+    if (noteIdx != -1) {//当前语言的注释
         var doc = noteStringBlocks[noteIdx];
         noteInfoBlocks.push(analyzedoc.analyze(doc));
+        obj["noNote"] = false;
     }
     else {
         if (noteStringBlocks.length) {
@@ -377,6 +415,10 @@ function getComments(text, pos, obj) {
             //}
             var doc = noteStringBlocks[noteStringBlocks.length - 1];
             noteInfoBlocks.push(analyzedoc.analyze(doc));
+            obj["noNote"] = false;
+        }
+        else {
+            obj["noNote"] = true;
         }
     }
     obj["docs"] = noteInfoBlocks;

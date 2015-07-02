@@ -1,0 +1,87 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "a",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A",
+			"description": "aaaaa"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A",
+			"description": "bbbbbbb"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b1",
+			"memberof": "yjtx.B",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "dbbbb1111",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "b2",
+			"memberof": "yjtx.B",
+			"scope": "instance",
+			"rwType": 2,
+			"copy": "#b1",
+			"pType": "public",
+			"description": "dbbbb1111"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"description": "f11111"
+				},
+				{
+					"name": "canuse",
+					"type": "boolean",
+					"description": "f22222"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A",
+			"description": "fffffff"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "B",
+		"memberof": "yjtx",
+		"filename": "classes/B.ts",
+		"description": "sdfdfsfsfs",
+		"augments": [
+			"yjtx.A"
+		]
+	}
+}

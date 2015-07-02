@@ -91,9 +91,6 @@ function analyze(item, name, parent, filename) {
 
             addOtherPropertis(classInfo, item);
 
-            if (tempClass["description"] == null || tempClass["description"] == "") {
-                classInfo["class"]["noDes"] = true;
-            }
             break;
         case "modulevar"://变量
         case "GetAccessor"://
@@ -127,9 +124,6 @@ function analyze(item, name, parent, filename) {
                 classesArr[member["memberof"]][member["kind"]].push(member);
             }
 
-            if (member["description"] == null || member["description"] == "") {
-                member["noDes"] = true;
-            }
             addOtherPropertis(member, item);
             break;
     }
@@ -184,7 +178,7 @@ function addOtherPropertis(member, item) {//从ts代码里解析出来的相关�
     var otherKeys = ["pType", "default"];
     for (var i = 0; i < otherKeys.length; i++) {
         var key = otherKeys[i];
-        if (item[key]) {
+        if (item[key] && !member[key]) {
             if (item[key] instanceof String) {
                 member[key] = trim.trimAll(item[key].toString());
             }
