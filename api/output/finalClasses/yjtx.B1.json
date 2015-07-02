@@ -28,22 +28,33 @@
 			"kind": "member",
 			"type": "boolean",
 			"name": "b1",
-			"memberof": "yjtx.B",
+			"memberof": "yjtx.B1",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "dbbbb1111",
+			"description": "yjtxB1b1",
 			"pType": "public"
 		},
 		{
 			"kind": "member",
 			"type": "number",
 			"name": "b2",
-			"memberof": "yjtx.B",
+			"memberof": "yjtx.B1",
 			"scope": "instance",
 			"rwType": 2,
 			"copy": "#b1",
+			"version": "1.0",
 			"pType": "public",
-			"description": "dbbbb1111"
+			"description": "yjtxB1b1"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "b3",
+			"memberof": "yjtx.B1",
+			"scope": "instance",
+			"description": "yjtxB1b3",
+			"default": "bbb3",
+			"pType": "public"
 		}
 	],
 	"function": [
@@ -76,10 +87,22 @@
 	"globalFunction": [],
 	"class": {
 		"kind": "class",
-		"name": "B",
+		"name": "B1",
 		"memberof": "yjtx",
 		"filename": "classes/B.ts",
-		"description": "sdfdfsfsfs",
+		"description": "yjtxB1",
+		"event": [
+			{
+				"name": "egret.Event.CHANGE",
+				"description": "有变化时抛出"
+			},
+			{
+				"name": "egret.Event.COMPLETE",
+				"description": "加载完成时抛出",
+				"inherited": true,
+				"inherits": "yjtx.A"
+			}
+		],
 		"augments": [
 			"yjtx.A"
 		]

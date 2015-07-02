@@ -1,9 +1,16 @@
 {
 	"yjtx": [
+		"globalMember",
+		"globalFunction",
 		"A",
-		"B",
+		"B1",
+		"B2",
 		"C",
+		"F1",
+		"F2",
 		"IA",
-		"IB"
+		"IB",
+		"M1",
+		"M2"
 	]
 }

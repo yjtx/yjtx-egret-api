@@ -1,0 +1,30 @@
+{
+	"globalFunction": [
+		{
+			"kind": "globalFunction",
+			"type": "string",
+			"name": "F3",
+			"memberof": "yjtx",
+			"scope": "instance",
+			"description": "yjtxF3",
+			"returns": "F3v4",
+			"params": [
+				{
+					"name": "v1",
+					"type": "boolean",
+					"description": "F3v1"
+				},
+				{
+					"name": "v2",
+					"type": "string",
+					"description": "F3v2"
+				},
+				{
+					"name": "args",
+					"description": "F3v3"
+				}
+			],
+			"pType": "public"
+		}
+	]
+}

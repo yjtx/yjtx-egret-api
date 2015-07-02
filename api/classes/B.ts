@@ -3,11 +3,12 @@
  */
 module yjtx {
     /**
-     * sdfdfsfsfs
+     * yjtxB1
+     * @event egret.Event.CHANGE 有变化时抛出
      */
-    export class B extends A {
+    export class B1 extends A {
         /**
-         * dbbbb1111
+         * yjtxB1b1
          */
         public get b1():boolean {
             return true;
@@ -15,9 +16,36 @@ module yjtx {
 
         /**
          * @copy #b1
+         * @version 1.0
          */
         public set b2(value:number) {
 
         }
+
+        /**
+         * yjtxB1b3
+         * @default bbb3
+         */
+        b3:string;
     }
+
+    /**
+     * yjtxB2
+     */
+    export class B2 {
+        /**
+         * @copy yjtx.B1#b1
+         */
+        b2:string;
+
+        /**
+         * @copy yjtx.B3
+         */
+        b2:string;
+    }
+
+    /**
+     * yjtxB3
+     */
+    export var B3:string;
 }

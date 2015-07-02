@@ -4,6 +4,8 @@
 module yjtx {
     /**
      * sdfsdfs
+     *
+     * @event egret.Event.COMPLETE 加载完成时抛出
      */
     export class A implements IA {
 
@@ -18,6 +20,7 @@ module yjtx {
 
         /**
          * @inheritDoc
+         * @version 1.0
          */
         public get a():number {
             return this._a;

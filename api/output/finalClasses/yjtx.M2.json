@@ -1,0 +1,65 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m1",
+			"memberof": "yjtx.M2",
+			"scope": "instance",
+			"description": "yjtxM2#m1",
+			"default": "yjtxM2m1",
+			"see": [
+				"http://www.egret.com  yjtxM2m1"
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m2",
+			"memberof": "yjtx.M2",
+			"scope": "instance",
+			"copy": "#m1",
+			"default": "yjtxM2m2",
+			"pType": "public",
+			"description": "yjtxM2#m1",
+			"see": [
+				"http://www.egret.com  yjtxM2m1"
+			]
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m3",
+			"memberof": "yjtx.M2",
+			"scope": "instance",
+			"copy": "yjtx.M3",
+			"pType": "public",
+			"description": "yjtxM3"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "m4",
+			"memberof": "yjtx.M2",
+			"scope": "instance",
+			"copy": "yjtx.M2#m1",
+			"pType": "public",
+			"description": "yjtxM2#m1",
+			"see": [
+				"http://www.egret.com  yjtxM2m1"
+			],
+			"default": "yjtxM2m1"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "M2",
+		"memberof": "yjtx",
+		"filename": "classes/M.ts",
+		"description": "yjtxM2"
+	}
+}

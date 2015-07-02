@@ -1,0 +1,61 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "string",
+			"name": "f1",
+			"memberof": "yjtx.F1",
+			"scope": "instance",
+			"description": "yjtxF1f1",
+			"returns": "F1v4",
+			"see": [
+				"http://www.egret.com  yjtxF2f1"
+			],
+			"params": [
+				{
+					"name": "v1",
+					"type": "boolean",
+					"description": "F1v1"
+				},
+				{
+					"name": "v2",
+					"type": "string",
+					"description": "F1v2"
+				},
+				{
+					"name": "args",
+					"description": "F1v3"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f2",
+			"memberof": "yjtx.F1",
+			"scope": "instance",
+			"description": "yjtxF1f2",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f3",
+			"memberof": "yjtx.F1",
+			"scope": "instance",
+			"deprecated": true,
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "F1",
+		"memberof": "yjtx",
+		"filename": "classes/F.ts",
+		"description": "yjtxF1"
+	}
+}
