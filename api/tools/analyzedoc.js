@@ -22,6 +22,9 @@ function simplify(doc) {
     doc = doc.replace(/(\n)(\s)*(\*)+[^\S\n]?/g, "\n");
 
     //去掉 @member
+    doc = doc.replace(/@language.*/, "");
+
+    //去掉 @member
     doc = doc.replace(/@member.*/, "");
     //去掉 @method
     doc = doc.replace(/@method.*/, "");
@@ -41,6 +44,16 @@ function simplify(doc) {
     return doc;
 }
 
+
+function dealLineParam(doc, docs) {
+    var notes = [/@language/, /@version/, /@platform/];
+
+    for (var i = 0; i < notes.length; i++) {
+        if (doc.indexOf("@" + notes) >= 0) {
+
+        }
+    }
+}
 
 exports.analyze = function analyze(doc) {
     doc = simplify(doc);
