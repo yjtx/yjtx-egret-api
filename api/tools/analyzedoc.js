@@ -16,6 +16,10 @@ function simplify(doc) {
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
+    //根据
+    //
+    //* @type
+    ////////
     var reg = /(\n\r|\r\n|\n|\r)(\s)*(\*)+(\s)*@/g;
     doc = doc.replace(reg, splitStr);
 
@@ -43,17 +47,17 @@ function change(doc) {
     }
 
     if (doc.indexOf("@classdesc") == 0) {
-        doc = doc.replace(/^@classdesc\s/, "");
+        doc = doc.replace(/^@classdesc/, "");
     }
 
-    //doc = doc.replace(/^@/, "");
-
+    doc = trim.trimAll(doc);
     doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
-    doc = doc.replace(/(\n)?(\s)*(\*)+(\s)*/g, "");
+
+    doc = doc.replace(/((^(\*)+)|((\n)(\s)*(\*)+))(\s)*/g, "");
+
     doc = doc.replace(/(\n)/g, "");
 
-    doc = doc.replace(/^(\s)*/, "");
-    doc = doc.replace(/(\s)*$/, "");
+    doc = trim.trimAll(doc);
     return doc;
 }
 
