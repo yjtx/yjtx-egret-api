@@ -66,6 +66,7 @@ function saveFile(filepath, value) {
     var fileName = file.getFileName(filepath);
     var arr = fileName.split(".");
     var name = arr.pop() + "." + fileType;
-    console.log(path.join(filepath, "..", arr.join("/"), name));
     file.save(path.join(filepath, "..", arr.join("/"), name), value);
+
+    //file.save(filepath, value);
 }

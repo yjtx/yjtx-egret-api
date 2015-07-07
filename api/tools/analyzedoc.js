@@ -10,38 +10,47 @@ var path = require("path");
 var flags = require("../tools/enumflag").getEnumFlag();
 
 
-var splitStr = "@**@";
+var splitStr = "@**@@";
 function simplify(doc) {
+    var docs = [];
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
+    var reg = /(\n\r|\r\n|\n|\r)(\s)*(\*)+(\s)*@/g;
+    doc = doc.replace(reg, splitStr);
+
+    var docArr = doc.split("@**@");
+    for (var i = 0; i < docArr.length; i++) {
+        var tempDoc = docArr[i];
+        tempDoc = trim.trimAll(tempDoc);
+        var str = change(tempDoc);
+        if (str != "") {
+            docs.push(str);
+        }
+    }
+
+    return docs;
+}
+
+function change(doc) {
+    var arr = ["language", "member", "method", "class", "extends", "constant", "constructor", "implements"];
+    for (var i = 0; i <arr.length; i++) {
+        if (doc.indexOf("@" + arr[i]) == 0) {
+            var reg = new RegExp("@" + arr[i] + ".*");
+            doc = doc.replace(reg, "");
+            break;
+        }
+    }
+
+    if (doc.indexOf("@classdesc") == 0) {
+        doc = doc.replace(/^@classdesc\s/, "");
+    }
+
+    //doc = doc.replace(/^@/, "");
+
     doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
-
-    //去掉 @member
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@language.*/, "");
-
-    //去掉 @member
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@member.*/, "");
-    //去掉 @method
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@method.*/, "");
-    //去掉 @class
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@class .*/, "");
-    //去掉 @extends
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@extends.*/, "");
-    //去掉 @constant
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@constant.*/, "");
-    //去掉 @constructor
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@constructor.*/, "");
-    //去掉 @implements
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@implements.*/, "");
-
-
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@/g, splitStr);
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*/g, "");
-
-
+    doc = doc.replace(/(\n)?(\s)*(\*)+(\s)*/g, "");
     doc = doc.replace(/(\n)/g, "");
-
 
     doc = doc.replace(/^(\s)*/, "");
     doc = doc.replace(/(\s)*$/, "");
@@ -60,14 +69,14 @@ function dealLineParam(doc, docs) {
 }
 
 exports.analyze = function analyze(doc) {
-    doc = simplify(doc);
+    //doc = simplify(doc);
 
-    var docs;
+    var docs = simplify(doc);
 
-    docs = doc.split(/@\*\*@/);
-    if (docs == null) {
-        docs = [doc];
-    }
+    //docs = doc.split(/@\*\*@/);
+    //if (docs == null) {
+    //    docs = [doc];
+    //}
 
     var docInfo = {};
     for (var i = 0; i < docs.length; i++) {
@@ -77,30 +86,20 @@ exports.analyze = function analyze(doc) {
             continue;
         }
 
-        //描述
-        if (i == 0 && item.charAt(0) != "@") {
-            docInfo["description"] = item;
+        if (item.charAt(0) != "@") {
+            if (docInfo["description"] == null) {
+                docInfo["description"] = trim.trimAll(item);
+            }
+            else {
+                docInfo["description"] += trim.trimAll(item);
+            }
             continue;
         }
-        else if (i == 0) {
+        else {
             item = item.substring(1);
         }
 
-        if (item.indexOf("classdesc") == 0) {//兼容类描述
-            if (item.match(/^classdesc(\s)+/)) {
-                var temp = item.match(/^classdesc(\s)+/)[0];
-                if (docInfo["description"] == null) {
-                    docInfo["description"] = item.substring(temp.length);
-                }
-                else {
-                    docInfo["description"] += item.substring(temp.length);
-                }
-            }
-            else {
-                //console.log("sdf");
-            }
-        }
-        else if (item.indexOf("private") == 0) {//private
+        if (item.indexOf("private") == 0) {//private
             docInfo["private"] = true;
         }
         else if (item.indexOf("deprecated") == 0) {//deprecated
