@@ -95,6 +95,12 @@
 			{
 				"name": "egret.Event.CHANGE",
 				"description": "有变化时抛出"
+			},
+			{
+				"name": "egret.Event.COMPLETE",
+				"description": "加载完成时抛出",
+				"inherited": true,
+				"inherits": "yjtx.A"
 			}
 		],
 		"augments": [

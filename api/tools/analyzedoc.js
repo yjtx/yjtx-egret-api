@@ -9,20 +9,18 @@ var path = require("path");
 
 var flags = require("../tools/enumflag").getEnumFlag();
 
+
+var splitStr = "@**@";
 function simplify(doc) {
-    //doc = doc.replace(/^\/(\/)+/, "");
-
-    doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
-
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
+    doc = doc.replace(/(\n\r|\r\n|\n|\r)]/g, "\n");
 
-    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@/g, "\n@");
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@/g, splitStr);
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*/g, "");
 
-    doc = doc.replace(/(\s)*(\*)+(\s)*/g, "");
-
-    //doc = doc.replace(/(\n)(\s)*(\*)+[^\S\n]?/g, "\n");
+    doc = doc.replace(/(\n)/g, "");
 
     //去掉 @member
     doc = doc.replace(/@language.*/, "");
@@ -63,7 +61,7 @@ exports.analyze = function analyze(doc) {
 
     var docs;
 
-    docs = doc.split(/\n\@/);
+    docs = doc.split(/@\*\*@/);
     if (docs == null) {
         docs = [doc];
     }
@@ -92,7 +90,7 @@ exports.analyze = function analyze(doc) {
                     docInfo["description"] = item.substring(temp.length);
                 }
                 else {
-                    docInfo["description"] += "\n" + item.substring(temp.length);
+                    docInfo["description"] += item.substring(temp.length);
                 }
             }
             else {

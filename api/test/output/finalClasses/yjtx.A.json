@@ -52,7 +52,13 @@
 		"name": "A",
 		"memberof": "yjtx",
 		"filename": "test/classes/A.ts",
-		"description": "sdfsdfs@event egret.Event.COMPLETE 加载完成时抛出",
+		"description": "sdfsdfs",
+		"event": [
+			{
+				"name": "egret.Event.COMPLETE",
+				"description": "加载完成时抛出"
+			}
+		],
 		"implements": [
 			{
 				"name": "yjtx.IA"
