@@ -8,8 +8,13 @@ module yjtx {
     export class F1 {
         /**
          * yjtxF1f1
+         * yjtxF1f1<br/>
+         * yjtxF1f1
          * @param v1  F1v1
          * @param v2  F1v2
+         * dddd<br/>
+        eeeee
+         * fffff
          * @param args  F1v3
          * @returns {string} F1v4
          * @see http://www.egret.com  yjtxF2f1

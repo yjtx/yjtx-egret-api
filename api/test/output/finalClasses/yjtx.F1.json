@@ -7,7 +7,7 @@
 			"name": "f1",
 			"memberof": "yjtx.F1",
 			"scope": "instance",
-			"description": "yjtxF1f1",
+			"description": "yjtxF1f1yjtxF1f1<br/>yjtxF1f1",
 			"returns": "F1v4",
 			"see": [
 				"http://www.egret.com  yjtxF2f1"
@@ -21,7 +21,7 @@
 				{
 					"name": "v2",
 					"type": "string",
-					"description": "F1v2"
+					"description": "F1v2dddd<br/>\n        eeeeefffff"
 				},
 				{
 					"name": "...args",

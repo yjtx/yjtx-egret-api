@@ -17,9 +17,12 @@ function simplify(doc) {
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
-    doc = doc.replace(/(\n)(\s)*(\*)+@/g, "\n@");
 
-    doc = doc.replace(/(\n)(\s)*(\*)+[^\S\n]?/g, "\n");
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@/g, "\n@");
+
+    doc = doc.replace(/(\s)*(\*)+(\s)*/g, "");
+
+    //doc = doc.replace(/(\n)(\s)*(\*)+[^\S\n]?/g, "\n");
 
     //去掉 @member
     doc = doc.replace(/@language.*/, "");
@@ -44,7 +47,7 @@ function simplify(doc) {
     return doc;
 }
 
-
+//处理只能单行书写的注释
 function dealLineParam(doc, docs) {
     var notes = [/@language/, /@version/, /@platform/];
 
@@ -158,9 +161,9 @@ exports.analyze = function analyze(doc) {
             docInfo["event"].push({"name": eventType, "description": des2});
         }
         /*else if (item.indexOf("link") == 0) {
-         var temp = item.match(/^link(\s)+/)[0];
-         docInfo["link"] = item.substring(temp.length);
-         }*/
+            var temp = item.match(/^link(\s)+/)[0];
+            docInfo["see"] = item.substring(temp.length);
+        }*/
         else if (item.indexOf("see") == 0) {
             var temp = item.match(/^see(\s)+/)[0];
             if (docInfo["see"] == null) {

@@ -195,6 +195,6 @@ function changeDescription(des) {
     }
 
     des = trim.trimAll(des);
-    des = des.replace(/<br\/>/g, "\n");
+    //des = des.replace(/<br\/>/g, "\n");
     return des;
 }
