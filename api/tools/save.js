@@ -19,7 +19,7 @@ exports.save = function (tempClassObjs) {
         var item = tempClassObjs[key];
         if (item.class) {
 
-            file.save(path.join(outputPath, "finalClasses/" + key + ".json"), JSON.stringify(item, null, "\t"));
+            saveFile(path.join(outputPath, "finalClasses/" + key + ".json"), JSON.stringify(item, null, "\t"));
 
             if (tempModulesArr[item.class.memberof] == null) {
                 tempModulesArr[item.class.memberof] = [];
@@ -28,10 +28,10 @@ exports.save = function (tempClassObjs) {
         }
         else {
             if (item["globalMember"] && item["globalMember"].length) {
-                file.save(path.join(outputPath, "finalClasses", key + "." + "globalMember.json"), JSON.stringify({"globalMember": item["globalMember"]}, null, "\t"));
+                saveFile(path.join(outputPath, "finalClasses", key + "." + "globalMember.json"), JSON.stringify({"globalMember": item["globalMember"]}, null, "\t"));
             }
             if (item["globalFunction"] && item["globalFunction"].length) {
-                file.save(path.join(outputPath, "finalClasses", key + "." + "globalFunction.json"), JSON.stringify({"globalFunction": item["globalFunction"]}, null, "\t"));
+                saveFile(path.join(outputPath, "finalClasses", key + "." + "globalFunction.json"), JSON.stringify({"globalFunction": item["globalFunction"]}, null, "\t"));
             }
 
             var modeName = key;
@@ -58,5 +58,14 @@ exports.save = function (tempClassObjs) {
             }
         }
     }
-    file.save(path.join(outputPath, "relation/egret_list.json"), JSON.stringify(tempModulesArr, null, "\t"));
+    saveFile(path.join(outputPath, "relation/egret_list.json"), JSON.stringify(tempModulesArr, null, "\t"));
 };
+
+function saveFile(filepath, value) {
+    var fileType = file.getExtension(filepath);
+    var fileName = file.getFileName(filepath);
+    var arr = fileName.split(".");
+    var name = arr.pop() + "." + fileType;
+    console.log(path.join(filepath, "..", arr.join("/"), name));
+    file.save(path.join(filepath, "..", arr.join("/"), name), value);
+}
