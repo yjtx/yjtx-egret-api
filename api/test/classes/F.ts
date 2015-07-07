@@ -7,6 +7,7 @@ module yjtx {
      */
     export class F1 {
         /**
+         * @language zh_CN
          * yjtxF1f1
          * yjtxF1f1<br/>
          * yjtxF1f1

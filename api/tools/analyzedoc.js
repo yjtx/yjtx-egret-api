@@ -15,30 +15,33 @@ function simplify(doc) {
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
-    doc = doc.replace(/(\n\r|\r\n|\n|\r)]/g, "\n");
+    doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
+
+    //去掉 @member
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@language.*/, "");
+
+    //去掉 @member
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@member.*/, "");
+    //去掉 @method
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@method.*/, "");
+    //去掉 @class
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@class .*/, "");
+    //去掉 @extends
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@extends.*/, "");
+    //去掉 @constant
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@constant.*/, "");
+    //去掉 @constructor
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@constructor.*/, "");
+    //去掉 @implements
+    doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@implements.*/, "");
+
 
     doc = doc.replace(/(\n)(\s)*(\*)+(\s)*@/g, splitStr);
     doc = doc.replace(/(\n)(\s)*(\*)+(\s)*/g, "");
 
+
     doc = doc.replace(/(\n)/g, "");
 
-    //去掉 @member
-    doc = doc.replace(/@language.*/, "");
-
-    //去掉 @member
-    doc = doc.replace(/@member.*/, "");
-    //去掉 @method
-    doc = doc.replace(/@method.*/, "");
-    //去掉 @class
-    doc = doc.replace(/@class .*/, "");
-    //去掉 @extends
-    doc = doc.replace(/@extends.*/, "");
-    //去掉 @constant
-    doc = doc.replace(/@constant.*/, "");
-    //去掉 @constructor
-    doc = doc.replace(/@constructor.*/, "");
-    //去掉 @implements
-    doc = doc.replace(/@implements.*/, "");
 
     doc = doc.replace(/^(\s)*/, "");
     doc = doc.replace(/(\s)*$/, "");
@@ -122,7 +125,7 @@ exports.analyze = function analyze(doc) {
         }
         else if (item.indexOf("example") == 0) {//example
             docInfo["example"] = {};
-            var temp = item.match(/^example(\s)+/)[0];
+            var temp = item.match(/^example(\s)*/)[0];
             var des1 = item.substring(temp.length);
 
             var reg = /<code>[\s\S]*<\/code>/;
