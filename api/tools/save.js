@@ -62,11 +62,11 @@ exports.save = function (tempClassObjs) {
 };
 
 function saveFile(filepath, value) {
-    var fileType = file.getExtension(filepath);
-    var fileName = file.getFileName(filepath);
-    var arr = fileName.split(".");
-    var name = arr.pop() + "." + fileType;
-    file.save(path.join(filepath, "..", arr.join("/"), name), value);
-
-    //file.save(filepath, value);
+    //var fileType = file.getExtension(filepath);
+    //var fileName = file.getFileName(filepath);
+    //var arr = fileName.split(".");
+    //var name = arr.pop() + "." + fileType;
+    //file.save(path.join(filepath, "..", arr.join("/"), name), value);
+    //
+    file.save(filepath, value);
 }

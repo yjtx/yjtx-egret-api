@@ -37,6 +37,10 @@ function simplify(doc) {
 }
 
 function change(doc) {
+    if (doc.indexOf("@classdesc") == 0) {
+        doc = doc.replace(/^@classdesc/, "");
+    }
+
     var arr = ["language", "member", "method", "class", "extends", "constant", "constructor", "implements"];
     for (var i = 0; i <arr.length; i++) {
         if (doc.indexOf("@" + arr[i]) == 0) {
@@ -44,10 +48,6 @@ function change(doc) {
             doc = doc.replace(reg, "");
             break;
         }
-    }
-
-    if (doc.indexOf("@classdesc") == 0) {
-        doc = doc.replace(/^@classdesc/, "");
     }
 
     doc = trim.trimAll(doc);
