@@ -8,6 +8,7 @@
 			"memberof": "yjtx.F1",
 			"scope": "instance",
 			"description": "yjtxF1f1yjtxF1f1<br/>yjtxF1f1",
+			"platform": "Web",
 			"returns": "F1v4",
 			"see": [
 				"http://www.egret.com  yjtxF2f1"

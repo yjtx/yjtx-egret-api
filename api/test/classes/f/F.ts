@@ -20,6 +20,7 @@ module yjtx {
     eeeee
          * fffff
          * @param args  F1v3
+         * @platform Web
          * @returns {string} F1v4
          * @see http://www.egret.com  yjtxF2f1
          */

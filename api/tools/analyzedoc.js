@@ -57,39 +57,63 @@ function change(doc) {
 
     var codeArr = [];
     var idx = 0;
-    while (doc.indexOf("<code>", idx) >= 0) {
-        var first = doc.indexOf("<code>", idx);
-        idx = first + 6;
-        var last = doc.indexOf("</code>", idx);
-        if (last == -1) {
-            throw Error(doc + '中"<code>" 没有对应的 "</code>"');
+    while (getContains(doc, idx, true) != null) {
+        var first = getContains(doc, idx, true);
+        idx = first.index + first.length;
+        var last = getContains(doc, idx, false);
+        if (last == null) {
+            throw Error(doc + '中 ' + first.type + ' 没有对应的');
         }
 
-        var codeStr = doc.substring(first + 6, last);
-        doc = doc.substring(0, first + 6) + doc.substring(last);
+        var codeStr = doc.substring(first.index + first.length, last.index);
+        doc = doc.substring(0, first.index + first.length) + doc.substring(last.index);
 
         codeStr = codeStr.replace(/((^\*)|(\n\*))(\s)?/g, "\n");
         codeStr = replaceSpecial(codeStr);
         codeArr.push(codeStr);
     }
 
+
     doc = doc.replace(/((^\*)|(\n\*))( )?/g, "");
     doc = doc.replace(/(\n)/g, "");
 
 
     var idx = 0;
-    while (doc.indexOf("<code>", idx) >= 0) {
-        var first = doc.indexOf("<code>", idx);
-        idx = first + 6;
-        var last = doc.indexOf("</code>", idx);
+    while (getContains(doc, idx, true) != null) {
+        var first = getContains(doc, idx, true);
+        idx = first.index + first.length;
+        var last = getContains(doc, idx, false);
 
         var str = codeArr.shift();
-        doc = doc.substring(0, first + 6) + str + doc.substring(last);
-    }
+        doc = doc.substring(0, first.index + first.length) + str + doc.substring(last.index);
 
+    }
 
     doc = trim.trimAll(doc);
     return doc;
+}
+
+function getContains(doc, idx, isHead) {
+    if (isHead) {
+        if (doc.indexOf("<code>", idx) >= 0) {
+            return {"index":doc.indexOf("<code>", idx), "length":6, "type":"<code>"};
+        }
+
+        if (doc.indexOf("<pre>", idx) >= 0) {
+            return {"index":doc.indexOf("<pre>", idx), "length":5, "type":"<pre>"};
+        }
+    }
+    else {
+        if (doc.indexOf("</code>", idx) >= 0) {
+            return {"index":doc.indexOf("</code>", idx), "length":7, "type":"</code>"};
+        }
+
+        if (doc.indexOf("</pre>", idx) >= 0) {
+            return {"index":doc.indexOf("</pre>", idx), "length":6, "type":"</pre>"};
+        }
+    }
+
+    return null;
 }
 
 function replaceSpecial(value) {
@@ -189,7 +213,7 @@ exports.analyze = function analyze(doc) {
 
             var content = file.read(path.join(globals.getExampleRootPath(), url));
             content = replaceSpecial(content);
-            docInfo["example"] = "<code>" + content + "</code>";
+            docInfo["example"] = "<pre>" + content + "</pre>";
         }
         else if (item.indexOf("return") == 0) {//return(s)
             if (!item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)) {
