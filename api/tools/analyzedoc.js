@@ -250,7 +250,8 @@ exports.analyze = function analyze(doc) {
                 "return", "returns", "event",
                 "version", "platform", "deprecated",
                 "see", "state", "skinPart"];
-            if (arr.indexOf(docName) == 0) {
+
+            if (arr.indexOf(docName) >= 0) {
                 docInfo[docName] = trim.trimAll(item.substring(docName.length) || "");
             }
         }

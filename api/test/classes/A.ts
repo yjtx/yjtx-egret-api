@@ -23,6 +23,16 @@ module yjtx {
      *      }
      * </code>
      *
+     * <code>
+     *      <?xml version="1.0" encoding="utf-8"?>
+     *      <s:Skin xmlns:s="http://ns.egret.com/swan" xmlns:w="http://ns.egret.com/wing">
+     *          <states>
+     *              <!-- Specify the states controlled by this skin. -->
+     *          </states>
+     *          <!-- Define skin. -->
+     *      </s:Skin>
+     * <code/>
+     *
      * @example fffffff
      * <code>
      *  A.fl(sdff);

@@ -4,6 +4,7 @@
 module yjtx {
     export interface IA extends IB {
         /**
+         * @platform Web
          * aaaaa
          */
         a:number;

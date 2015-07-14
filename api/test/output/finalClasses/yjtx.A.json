@@ -7,8 +7,7 @@
 			"memberof": "yjtx.A",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
-			"description": "aaaaa"
+			"pType": "public"
 		},
 		{
 			"kind": "member",

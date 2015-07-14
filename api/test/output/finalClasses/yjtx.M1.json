@@ -8,6 +8,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "yjtxM1m1",
+			"default": "yjtxM1m1",
 			"see": [
 				"http://www.egret.com  yjtxM1m1"
 			],
@@ -21,11 +22,13 @@
 			"scope": "instance",
 			"rwType": 2,
 			"copy": "#m1",
+			"version": "1.0",
 			"pType": "public",
 			"description": "yjtxM1m1",
 			"see": [
 				"http://www.egret.com  yjtxM1m1"
-			]
+			],
+			"default": "yjtxM1m1"
 		},
 		{
 			"kind": "member",
@@ -63,6 +66,7 @@
 			"memberof": "yjtx.M1",
 			"scope": "instance",
 			"description": "yjtxM1m6",
+			"default": "yjtxM1m6",
 			"see": [
 				"http://www.egret.com  yjtxM1m6"
 			],
