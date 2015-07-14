@@ -61,6 +61,9 @@ function change(doc) {
         var first = doc.indexOf("<code>", idx);
         idx = first + 6;
         var last = doc.indexOf("</code>", idx);
+        if (last == -1) {
+            throw Error(doc + '中"<code>" 没有对应的 "</code>"');
+        }
 
         var codeStr = doc.substring(first + 6, last);
         doc = doc.substring(0, first + 6) + doc.substring(last);

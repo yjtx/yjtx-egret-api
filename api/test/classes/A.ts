@@ -31,7 +31,7 @@ module yjtx {
      *          </states>
      *          <!-- Define skin. -->
      *      </s:Skin>
-     * <code/>
+     * </code>
      *
      * @example fffffff
      * <code>
