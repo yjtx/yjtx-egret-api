@@ -186,7 +186,7 @@ exports.analyze = function analyze(doc) {
 
             var content = file.read(path.join(globals.getExampleRootPath(), url));
             content = replaceSpecial(content);
-            docInfo["example"] = content;
+            docInfo["example"] = "<code>" + content + "</code>";
         }
         else if (item.indexOf("return") == 0) {//return(s)
             if (!item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)) {
