@@ -1,0 +1,58 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "c1",
+			"memberof": "yjtx.C",
+			"scope": "static",
+			"pType": "public",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "c2",
+			"memberof": "yjtx.C",
+			"scope": "static",
+			"pType": "public",
+			"default": "1"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "c3",
+			"memberof": "yjtx.C",
+			"scope": "static",
+			"pType": "public",
+			"default": "8"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "c4",
+			"memberof": "yjtx.C",
+			"scope": "static",
+			"pType": "public",
+			"default": "9"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "c5",
+			"memberof": "yjtx.C",
+			"scope": "static",
+			"pType": "public",
+			"default": "10"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "enum",
+		"name": "C",
+		"memberof": "yjtx",
+		"filename": "test/classes/C.ts"
+	}
+}

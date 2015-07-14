@@ -1,0 +1,20 @@
+{
+	"globalMember": [
+		{
+			"kind": "globalMember",
+			"name": "B3",
+			"memberof": "yjtx",
+			"scope": "instance",
+			"description": "yjtxB3",
+			"pType": "public"
+		},
+		{
+			"kind": "globalMember",
+			"name": "m3",
+			"memberof": "yjtx",
+			"scope": "instance",
+			"description": "yjtxm3",
+			"pType": "public"
+		}
+	]
+}

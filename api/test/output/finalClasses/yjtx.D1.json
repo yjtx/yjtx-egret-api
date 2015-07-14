@@ -1,0 +1,42 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "d1",
+			"memberof": "yjtx.D1",
+			"scope": "instance",
+			"description": "yjtxDd1",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f1",
+			"memberof": "yjtx.D1",
+			"scope": "instance",
+			"description": "yjtxDf1",
+			"params": [
+				{
+					"name": "v1",
+					"type": "number",
+					"description": "yjtxDf1v1"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "D1",
+		"memberof": "yjtx",
+		"filename": "test/classes/D.ts",
+		"children": [
+			"yjtx.D2"
+		]
+	}
+}

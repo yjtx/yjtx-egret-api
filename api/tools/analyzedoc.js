@@ -13,14 +13,12 @@ var flags = require("../tools/enumflag").getEnumFlag();
 var splitStr = "@**@@";
 function simplify(doc) {
     var docs = [];
+    //去掉 /*****   ***/
     doc = doc.replace(/^\/(\*)+/, "");
     doc = doc.replace(/(\*)+\/$/, "");
 
-    //根据
-    //
-    //* @type
-    ////////
-    var reg = /(\n\r|\r\n|\n|\r)(\s)*(\*)+(\s)*@/g;
+    //根据@ 取出各个注释的值
+    var reg = /(\n\r|\r\n|\n|\r)(\s)*(\*)(\s)*@/g;
     doc = doc.replace(reg, splitStr);
 
     var docArr = doc.split("@**@");
@@ -51,15 +49,64 @@ function change(doc) {
     }
 
     doc = trim.trimAll(doc);
+
+    //修改换行符
     doc = doc.replace(/(\n\r|\r\n|\n|\r)/g, "\n");
+    doc = doc.replace(/\n[ \f\r\t\v]*\*/g, "\n*");
 
-    doc = doc.replace(/((^(\*)+)|((\n)(\s)*(\*)+))(\s)*/g, "");
 
+    var codeArr = [];
+    var idx = 0;
+    while (doc.indexOf("<code>", idx) >= 0) {
+        var first = doc.indexOf("<code>", idx);
+        idx = first + 6;
+        var last = doc.indexOf("</code>", idx);
+
+        var codeStr = doc.substring(first + 6, last);
+        doc = doc.substring(0, first + 6) + doc.substring(last);
+
+        codeStr = codeStr.replace(/((^\*)|(\n\*))(\s)?/g, "\n");
+        codeStr = replaceSpecial(codeStr);
+        codeArr.push(codeStr);
+    }
+
+    doc = doc.replace(/((^\*)|(\n\*))( )?/g, "");
     doc = doc.replace(/(\n)/g, "");
+
+
+    var idx = 0;
+    while (doc.indexOf("<code>", idx) >= 0) {
+        var first = doc.indexOf("<code>", idx);
+        idx = first + 6;
+        var last = doc.indexOf("</code>", idx);
+
+        var str = codeArr.shift();
+        doc = doc.substring(0, first + 6) + str + doc.substring(last);
+    }
+
 
     doc = trim.trimAll(doc);
     return doc;
 }
+
+function replaceSpecial(value) {
+    var replaceArr = [];
+    replaceArr.push(["&lt;", "<"]);
+    replaceArr.push(["&gt;", ">"]);
+    replaceArr.push(["&amp;", "&"]);
+    replaceArr.push(["&quot;", "\""]);
+    replaceArr.push(["&apos;", "\'"]);
+
+    for (var i = 0; i < replaceArr.length; i++) {
+        var k = replaceArr[i][0];
+        var v = replaceArr[i][1];
+
+        var reg = new RegExp(v, "g");
+        value = value.replace(reg, k);
+    }
+    return value;
+}
+
 
 //处理只能单行书写的注释
 function dealLineParam(doc, docs) {
@@ -127,24 +174,17 @@ exports.analyze = function analyze(doc) {
             docInfo["params"][paramName] = des;
         }
         else if (item.indexOf("example") == 0) {//example
-            docInfo["example"] = {};
             var temp = item.match(/^example(\s)*/)[0];
             var des1 = item.substring(temp.length);
-
-            var reg = /<code>[\s\S]*<\/code>/;
-            if (des1.match(reg)) {
-                var code = des1.match(reg)[0];
-                docInfo["example"]["code"] = des1.substring(des1.indexOf("<code>") + 6, des1.indexOf("</code>"));
-                des1 = des1.replace(code, "");
-            }
-            docInfo["example"]["description"] = trim.trimAll(des1);
+            docInfo["example"] = trim.trimAll(des1);
         }
         else if (item.indexOf("includeExample") == 0) {//example
-            docInfo["example"] = {};
             var tname = item.match(/^includeExample(\s)+/)[0];
             var url = trim.trimAll(item.substring(tname.length));
-            docInfo["example"]["code"] = file.read(path.join(globals.getExampleRootPath(), url));
-            docInfo["example"]["description"] = "";
+
+            var content = file.read(path.join(globals.getExampleRootPath(), url));
+            content = replaceSpecial(content);
+            docInfo["example"] = content;
         }
         else if (item.indexOf("return") == 0) {//return(s)
             if (!item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)) {
@@ -208,7 +248,7 @@ exports.analyze = function analyze(doc) {
                 "return", "returns", "event",
                 "version", "platform", "deprecated",
                 "see", "state", "skinPart"];
-            if (arr.indexOf(docName) >= 0) {
+            if (arr.indexOf(docName) == 0) {
                 docInfo[docName] = trim.trimAll(item.substring(docName.length) || "");
             }
         }

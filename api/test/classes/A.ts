@@ -4,7 +4,37 @@
 module yjtx {
     /**
      * sdfsdfs
+     * 示例：
+     * <code>
+     *   <root value="abc">
+     *          <item value="item0"/>
+     *          <item value="item1"/>
+     *   </root>
+     * </code>
+     * 将解析为:
+     * <code>
+     *     {
+     *          "name": "root",
+     *          "$value": "abc",
+     *          "children": [
+     *              {"name": "item", "$value": "item0"},
+     *              {"name": "item", "$value": "item1"}
+     *          ]
+     *      }
+     * </code>
      *
+     * @example fffffff
+     * <code>
+     *  A.fl(sdff);
+     *  b.fl(dfs);
+     * </code>
+     * sdffdsf
+     *
+     * <code>
+     *  A.fl(sdff);
+     *  b.fl(dfs);
+     * </code>
+     * sdffdsf
      * @event egret.Event.COMPLETE 加载完成时抛出
      */
     export class A implements IA {
