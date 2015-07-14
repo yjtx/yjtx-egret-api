@@ -42,7 +42,6 @@
 			"scope": "instance",
 			"rwType": 2,
 			"copy": "#b1",
-			"version": "1.0",
 			"pType": "public",
 			"description": "yjtxB1b1"
 		},
@@ -53,7 +52,6 @@
 			"memberof": "yjtx.B1",
 			"scope": "instance",
 			"description": "yjtxB1b3",
-			"default": "bbb3",
 			"pType": "public"
 		}
 	],

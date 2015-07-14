@@ -7,7 +7,6 @@
 			"memberof": "yjtx.M2",
 			"scope": "instance",
 			"description": "yjtxM2m1",
-			"default": "yjtxM2m1",
 			"see": [
 				"http://www.egret.com  yjtxM2m1"
 			],
@@ -20,7 +19,6 @@
 			"memberof": "yjtx.M2",
 			"scope": "instance",
 			"copy": "#m1",
-			"default": "yjtxM2m2",
 			"pType": "public",
 			"description": "yjtxM2m1",
 			"see": [
@@ -48,8 +46,7 @@
 			"description": "yjtxM1m1",
 			"see": [
 				"http://www.egret.com  yjtxM1m1"
-			],
-			"default": "yjtxM1m1"
+			]
 		}
 	],
 	"function": [],

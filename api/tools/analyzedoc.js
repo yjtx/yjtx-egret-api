@@ -96,6 +96,8 @@ function replaceSpecial(value) {
     replaceArr.push(["&amp;", "&"]);
     replaceArr.push(["&quot;", "\""]);
     replaceArr.push(["&apos;", "\'"]);
+    replaceArr.push(["<br/>", "\n"]);
+    replaceArr.push(["&nbsp;", " "]);
 
     for (var i = 0; i < replaceArr.length; i++) {
         var k = replaceArr[i][0];

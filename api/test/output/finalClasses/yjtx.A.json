@@ -52,10 +52,8 @@
 		"name": "A",
 		"memberof": "yjtx",
 		"filename": "test/classes/A.ts",
-		"description": "sdfsdfs示例：<code>\n  &amp;lt;root value=&quot;abc&quot;&amp;gt;\n         &amp;lt;item value=&quot;item0&quot;/&amp;gt;\n         &amp;lt;item value=&quot;item1&quot;/&amp;gt;\n  &amp;lt;/root&amp;gt;\n</code>将解析为:<code>\n    {\n         &quot;name&quot;: &quot;root&quot;,\n         &quot;$value&quot;: &quot;abc&quot;,\n         &quot;children&quot;: [\n             {&quot;name&quot;: &quot;item&quot;, &quot;$value&quot;: &quot;item0&quot;},\n             {&quot;name&quot;: &quot;item&quot;, &quot;$value&quot;: &quot;item1&quot;}\n         ]\n     }\n</code>",
-		"example": {
-			"description": "fffffff<code>\n A.fl(sdff);\n b.fl(dfs);\n</code>sdffdsf<code>\n A.fl(sdff);\n b.fl(dfs);\n</code>sdffdsf"
-		},
+		"description": "sdfsdfs示例：<code><br/>&nbsp;&nbsp;&amp;lt;root&nbsp;value=&quot;abc&quot;&amp;gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;lt;item&nbsp;value=&quot;item0&quot;/&amp;gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;lt;item&nbsp;value=&quot;item1&quot;/&amp;gt;<br/>&nbsp;&nbsp;&amp;lt;/root&amp;gt;<br/></code>将解析为:<code><br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;root&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;$value&quot;:&nbsp;&quot;abc&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;children&quot;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;name&quot;:&nbsp;&quot;item&quot;,&nbsp;&quot;$value&quot;:&nbsp;&quot;item0&quot;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&quot;name&quot;:&nbsp;&quot;item&quot;,&nbsp;&quot;$value&quot;:&nbsp;&quot;item1&quot;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/></code>",
+		"example": "fffffff<code><br/>&nbsp;A.fl(sdff);<br/>&nbsp;b.fl(dfs);<br/></code>sdffdsf<code><br/>&nbsp;A.fl(sdff);<br/>&nbsp;b.fl(dfs);<br/></code>sdffdsf",
 		"event": [
 			{
 				"name": "egret.Event.COMPLETE",
