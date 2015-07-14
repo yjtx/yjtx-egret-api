@@ -91,9 +91,9 @@ function change(doc) {
 
 function replaceSpecial(value) {
     var replaceArr = [];
+    replaceArr.push(["&amp;", "&"]);
     replaceArr.push(["&lt;", "<"]);
     replaceArr.push(["&gt;", ">"]);
-    replaceArr.push(["&amp;", "&"]);
     replaceArr.push(["&quot;", "\""]);
     replaceArr.push(["&apos;", "\'"]);
     replaceArr.push(["<br/>", "\n"]);
