@@ -26,4 +26,27 @@ module yjtx {
          */
         b:boolean;
     }
+
+
+    /**
+     * ic
+     */
+    export interface IC {
+        /**
+         * cccc1
+         */
+        c1:boolean;
+        /**
+         * @readOnly
+         * cccc2
+         */
+        c2:boolean;
+        /**
+         * @writeOnly
+         * cccc3
+         */
+        c3:boolean;
+    }
+
+
 }

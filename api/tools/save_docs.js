@@ -117,6 +117,8 @@ function analyze(item, name, parent, filename) {
 
             initDesc(item["docs"], item["parameters"], member);
 
+
+
             if (classesArr[member["memberof"]] == null) {
                 windowArr.push(member);
             }

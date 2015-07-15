@@ -185,6 +185,12 @@ exports.analyze = function analyze(doc) {
         else if (item.indexOf("deprecated") == 0) {//deprecated
             docInfo["deprecated"] = true;
         }
+        else if (item.indexOf("readOnly") == 0) {//readOnly
+            docInfo["rwType"] = 1;
+        }
+        else if (item.indexOf("writeOnly") == 0) {//writeOnly
+            docInfo["rwType"] = 2;
+        }
         else if (item.indexOf("inheritDoc") == 0) {//deprecated
             docInfo["inheritDoc"] = true;
         }
