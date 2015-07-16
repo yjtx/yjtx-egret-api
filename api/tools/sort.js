@@ -27,4 +27,16 @@ exports.sortWithName = function (tempClassObjs) {
             return a["name"] > b["name"] ? 1 : -1;
         });
     }
+
+    //修改构成函数的名称
+    for (var key in tempClassObjs) {
+        var classInfo = tempClassObjs[key];
+
+        if (classInfo["function"] && classInfo["function"].length > 0) {
+            var item = classInfo["function"][0];
+            if (item["name"] == "constructor") {
+                item["name"] = classInfo["class"]["name"];
+            }
+        }
+    }
 };

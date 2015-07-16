@@ -32,7 +32,7 @@
 	"function": [
 		{
 			"kind": "function",
-			"name": "constructor",
+			"name": "D2",
 			"memberof": "yjtx.D2",
 			"scope": "static",
 			"pType": "public"
