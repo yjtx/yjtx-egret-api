@@ -218,6 +218,7 @@ exports.analyze = function analyze(doc) {
             var url = trim.trimAll(item.substring(tname.length));
 
             var content = file.read(path.join(globals.getExampleRootPath(), url));
+            content = content.replace(/\r\n|\n\r|\r/g, "\n");
             content = replaceSpecial(content);
             docInfo["example"] = "<pre>" + content + "</pre>";
         }
