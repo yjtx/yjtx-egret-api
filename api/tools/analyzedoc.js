@@ -219,12 +219,40 @@ exports.analyze = function analyze(doc) {
 
             var content = file.read(path.join(globals.getExampleRootPath(), url));
             content = content.replace(/\r\n|\n\r|\r/g, "\n");
-            content = replaceSpecial(content);
+
+            //去掉language
+            var lang = globals.getLanguage();
+            var langReg = new RegExp(lang, "ig");
+            var first = 0;
+            var end = 0;
+            while (true) {
+                first = content.indexOf("/**", first);
+                if (first < 0) {
+                    break;
+                }
+                end = content.indexOf("*/", first);
+                if (end < 0) {
+                    break;
+                }
+                end = content.indexOf("\n", end) + 1;
+                var comment = content.substring(first, end);
+                if (comment.match(/@language/)) {
+                    if (comment.match(langReg)) {
+                        content = content.replace(/\n(\s)*\* @language.*/, "");
+                    }
+                    else {
+                        content = content.replace(comment, "");
+                    }
+                }
+
+                first = first + 1;
+            }
+
+            //content = replaceSpecial(content);
             docInfo["example"] = "<pre>" + content + "</pre>";
         }
         else if (item.indexOf("return") == 0) {//return(s)
             if (!item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)) {
-                console.log("sdf")
             }
             var temp = item.match(/^return(s)?(\s)*(\{[\s\S]*\})?(\s)*/)[0];
 
