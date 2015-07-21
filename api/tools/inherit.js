@@ -29,7 +29,7 @@ function sort(tempClassObjs) {
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
         if (item.class) {//取出
-            children[key] = item["children"] || [];
+            children[key] = item["class"]["children"] || [];
         }
     }
 
@@ -54,7 +54,7 @@ function sort(tempClassObjs) {
             }
         }
     }
-
+    result.reverse();
     for (var i = 0; i < result.length; i++) {
         var key = result[i];
         var item = tempClassObjs[key];
