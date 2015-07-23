@@ -202,34 +202,53 @@ function addParentDoc(item, interfaces, parents) {
 function inheritOthers(classList) {
     for (var i = 0; i < classList.length; i++) {
         var item = classList[i];
-        var itemEs = item["class"]["event"];
-        if (item.class && item.class.augments && item.class.augments.length > 0) {//拥有父类
-            var parentName = item.class.augments[0];
-            var parent = getClass(parentName);
 
-            //event
-            if (parent["class"]["event"]) {
-                var parentEs = parent["class"]["event"];
-                for (var j = 0; j < parentEs.length; j++) {
-                    item["class"]["event"] = item["class"]["event"] || [];
-                    var itemEs = item["class"]["event"];
-                    for (var k = 0; k < itemEs.length; k++) {
-                        if (itemEs[k]["name"] == parentEs[j]["name"]) {//已重写
-                            break;
+        if (!item.class) {
+            continue;
+        }
+
+        var parentList = (item.class.implements || []).concat(item.class.augments || []);
+        if (parentList.length > 0) {
+            for (var m1 = 0; m1 < parentList.length; m1++) {
+                if (typeof(parentList[m1]) != "string") {
+                    var parentName = parentList[m1]["name"];
+                }
+                else {
+                    parentName = parentList[m1];
+                }
+                var parent = getClass(parentName);
+
+                //event
+                console.log(parentName);
+                if (parent["class"]["event"]) {
+                    var parentEs = parent["class"]["event"];
+                    for (var j = 0; j < parentEs.length; j++) {
+                        item["class"]["event"] = item["class"]["event"] || [];
+                        var itemEs = item["class"]["event"];
+                        for (var k = 0; k < itemEs.length; k++) {
+                            if (itemEs[k]["name"] == parentEs[j]["name"]) {//已重写
+                                break;
+                            }
                         }
-                    }
 
-                    if (k == itemEs.length) {//未重写
-                        var tempE = globals.clone(parentEs[j]);
-                        if (tempE["inherited"] != true) {
-                            tempE["inherited"] = true;
-                            tempE["inherits"] = parentName;
+                        if (k == itemEs.length) {//未重写
+                            var tempE = globals.clone(parentEs[j]);
+                            if (tempE["inherited"] != true) {
+                                tempE["inherited"] = true;
+                                tempE["inherits"] = parentName;
+                            }
+                            itemEs.push(tempE);
                         }
-
-                        itemEs.push(tempE);
                     }
                 }
             }
+        }
+
+
+        if (item.class.augments && item.class.augments.length > 0) {//拥有父类
+
+            var parentName = item.class.augments[0];
+            var parent = getClass(parentName);
 
             //state 子类重写则不继承
             if (!item["class"]["state"] || item["class"]["state"].length == 0) {

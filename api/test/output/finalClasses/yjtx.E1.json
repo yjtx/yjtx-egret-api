@@ -1,0 +1,20 @@
+{
+	"member": [],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "E1",
+		"memberof": "yjtx",
+		"filename": "test/classes/E.ts",
+		"description": "E1",
+		"event": [
+			{
+				"name": "Event.ADD",
+				"description": "add"
+			}
+		],
+		"children": []
+	}
+}
