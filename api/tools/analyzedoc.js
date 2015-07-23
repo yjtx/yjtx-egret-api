@@ -248,7 +248,7 @@ exports.analyze = function analyze(doc) {
                 first = first + 1;
             }
 
-            //content = replaceSpecial(content);
+            content = replaceSpecial(content);
             docInfo["example"] = "<pre>" + content + "</pre>";
         }
         else if (item.indexOf("return") == 0) {//return(s)
