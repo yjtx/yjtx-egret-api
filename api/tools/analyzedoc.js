@@ -239,13 +239,16 @@ exports.analyze = function analyze(doc) {
                 if (comment.match(/@language/)) {
                     if (comment.match(langReg)) {
                         content = content.replace(/\n(\s)*\* @language.*/, "");
+                        first = first + 1;
                     }
                     else {
                         content = content.replace(comment, "");
                     }
                 }
+                else {
+                    first = first + 1;
+                }
 
-                first = first + 1;
             }
 
             content = replaceSpecial(content);

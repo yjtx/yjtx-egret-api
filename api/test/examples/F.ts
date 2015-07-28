@@ -29,6 +29,11 @@ module yjtx {
         }
 
         /**
+         * @language zh_CN
+         * @classdesc
+         * yjtxF1f2
+         */
+        /**
          * @language en_US
          * @classdesc
          * yjtxF1f2
