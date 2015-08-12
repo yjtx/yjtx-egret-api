@@ -19,6 +19,8 @@
 		"memberof": "yjtx",
 		"filename": "test/classes/IA.ts",
 		"description": "dsflafjlsf",
-		"children": []
+		"children": [
+			"yjtx.IA"
+		]
 	}
 }

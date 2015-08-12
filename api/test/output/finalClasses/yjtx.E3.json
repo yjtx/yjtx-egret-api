@@ -26,6 +26,8 @@
 				"name": "yjtx.E1"
 			}
 		],
-		"children": []
+		"children": [
+			"yjtx.E4"
+		]
 	}
 }

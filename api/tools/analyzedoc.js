@@ -307,6 +307,11 @@ exports.analyze = function analyze(doc) {
                 }
             }
         }
+        else if (item.indexOf("defaultProperty") == 0) {
+            var temp = item.match(/^defaultProperty(\s)+/)[0];
+            var des1 = item.substring(temp.length);
+            docInfo["defaultProperty"] = {"name" : des1};
+        }
         else {//其他非特殊的标签  default version platform
             var docName = item.match(/^(\S)+/)[0];
             var arr = [ "copy", "default", "example",

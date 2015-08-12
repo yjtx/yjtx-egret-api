@@ -35,6 +35,8 @@
 		"name": "D1",
 		"memberof": "yjtx",
 		"filename": "test/classes/D.ts",
-		"children": []
+		"children": [
+			"yjtx.D2"
+		]
 	}
 }

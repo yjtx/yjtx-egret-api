@@ -29,7 +29,7 @@ function sort(tempClassObjs) {
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
         if (item.class) {//取出
-            children[key] = item["class"]["children"] || [];
+            children[key] = globals.clone(item["class"]["children"]) || [];
         }
     }
 
@@ -219,7 +219,6 @@ function inheritOthers(classList) {
                 var parent = getClass(parentName);
 
                 //event
-                console.log(parentName);
                 if (parent["class"]["event"]) {
                     var parentEs = parent["class"]["event"];
                     for (var j = 0; j < parentEs.length; j++) {
@@ -241,12 +240,12 @@ function inheritOthers(classList) {
                         }
                     }
                 }
+
             }
         }
 
 
         if (item.class.augments && item.class.augments.length > 0) {//拥有父类
-
             var parentName = item.class.augments[0];
             var parent = getClass(parentName);
 
@@ -265,6 +264,15 @@ function inheritOthers(classList) {
                 }
             }
 
+            //defaultProperty
+            if (!item["class"]["defaultProperty"] && parent["class"]["defaultProperty"]) {
+                var pdy = parent["class"]["defaultProperty"];
+                item["class"]["defaultProperty"] = globals.clone(pdy);
+                if (!pdy["inherited"]) {
+                    item["class"]["defaultProperty"]["inherited"] = true;
+                    item["class"]["defaultProperty"]["inherits"] = parentName;
+                }
+            }
 
             //skinPart  需要合并
             var parentMs = parent["member"];

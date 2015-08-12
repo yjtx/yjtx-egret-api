@@ -6,6 +6,8 @@
  * @param tempClassArr
  */
 
+var globals = require("../core/globals")
+
 //补全 继承以及children
 exports.addClassChildren = function (tempClassArr) {
     var classChildren = {};
@@ -52,7 +54,7 @@ exports.addClassChildren = function (tempClassArr) {
         if (item.class) {//class interface
             if (classChildren[key]) {
                 var classInfo = item.class;
-                classInfo["children"] = classChildren[key];
+                classInfo["children"] = globals.clone(classChildren[key]);
             }
         }
     }

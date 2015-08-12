@@ -64,6 +64,8 @@
 				"name": "yjtx.IA"
 			}
 		],
-		"children": []
+		"children": [
+			"yjtx.B1"
+		]
 	}
 }
