@@ -212,6 +212,13 @@ function formatMember(member, text, parent, isStatic) {
             formatMembers(member.declarations[0]["type"], text, parent[name]["$_tree_"], true);
             return;
         }
+
+        if (member.declarations && member.declarations.length > 0 && member.declarations[0]["type"] && member.declarations[0]["type"]["parameters"]) {
+            member.parameters = member.declarations[0]["type"]["parameters"];
+            member.type = member.declarations[0]["type"]["type"];
+            member.kind = 184 /* FunctionDeclaration */;
+        }
+
     }
     else if (member.kind == 126 /* Constructor */) {
         var name = "constructor";
@@ -323,7 +330,6 @@ function formatMember(member, text, parent, isStatic) {
             parent[name]["pType"] = "public";
         }
     }
-
     if (member.type && !(member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */)) {//类型
         parent[name]["type"] = text.substring(member.type.pos, member.type.end);
     }

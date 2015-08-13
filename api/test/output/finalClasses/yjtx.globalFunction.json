@@ -2,6 +2,14 @@
 	"globalFunction": [
 		{
 			"kind": "globalFunction",
+			"type": "void",
+			"name": "f",
+			"memberof": "yjtx",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "globalFunction",
 			"type": "string",
 			"name": "f3",
 			"memberof": "yjtx",
