@@ -412,7 +412,7 @@ function getComments(text, pos, obj) {
 
     var language = globals.getLanguage();
     var noteIdx = -1;
-    for (var i2 = 0; i2 < noteStringBlocks.length; i2++) {
+    for (var i2 = noteStringBlocks.length - 1; i2 >= 0; i2--) {
         var doc = noteStringBlocks[i2].toLowerCase();
         var reg = new RegExp("@language.*" + language);
 
