@@ -241,7 +241,7 @@ function formatMember(member, text, parent, isStatic) {
         if (parent[name]["bodyType"] == "GetAccessor") {
             parent[name]["bodyType"] = "Property";
 
-            if (parent[name]["noNote"] == false) {//已经有注释，无需继续解析
+            if (parent[name]["noNote"] == true) {//已经有注释，无需继续解析
             }
             else {//只需要再解析注释
                 getComments(text, member.pos, parent[name]);
@@ -257,7 +257,7 @@ function formatMember(member, text, parent, isStatic) {
         if (parent[name]["bodyType"] == "SetAccessor") {
             parent[name]["bodyType"] = "Property";
 
-            if (parent[name]["noNote"] == false) {//已经有注释，无需继续解析
+            if (parent[name]["noNote"] == true) {//已经有注释，无需继续解析
             }
             else {//只需要再解析注释
                 getComments(text, member.pos, parent[name]);
