@@ -10,7 +10,7 @@ exports.run = function run(fileNames, srcPath) {
     if (errors.length > 0) {
         errors.forEach(function (diagnostic) {
             var lineChar = diagnostic.file.getLineAndCharacterFromPosition(diagnostic.start);
-            console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
+            //console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
         });
         return;
     }
@@ -202,7 +202,6 @@ function formatMembers(declaration, text, parent, isStatic) {
 function formatMember(member, text, parent, isStatic) {
     var flags = member.flags;
 
-
     if (member.kind == 164 /* VariableStatement */) {
         var name = member.declarations[0].name.getText();
 
@@ -337,7 +336,10 @@ function formatMember(member, text, parent, isStatic) {
     //默认值
     getDefault(member, parent[name], text);
 
-    if (flags & 128 /* Static */) {
+    if (name == "constructor") {
+        parent[name]["scope"] = "instance";
+    }
+    else if (flags & 128 /* Static */) {
         parent[name]["scope"] = "static";
     }
     else if (member.kind == 200 /* EnumMember */) {
