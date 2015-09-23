@@ -440,7 +440,7 @@ function getComments(text, pos, obj) {
 
             var docInfo = analyzedoc.analyze(doc);
             noteInfoBlocks.push(docInfo);
-            obj["noNote"] = docInfo["description"] == null || docInfo["description"] == "";
+            obj["noNote"] = (docInfo["copy"] == null && docInfo["inheritDoc"] == null) && (docInfo["description"] == null || docInfo["description"] == "");
         }
         else {
             obj["noNote"] = true;
