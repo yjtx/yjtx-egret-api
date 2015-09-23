@@ -241,9 +241,9 @@ function formatMember(member, text, parent, isStatic) {
             parent[name]["bodyType"] = "Property";
 
             if (parent[name]["noNote"] == true) {//已经有注释，无需继续解析
+                getComments(text, member.pos, parent[name]);
             }
             else {//只需要再解析注释
-                getComments(text, member.pos, parent[name]);
             }
             return;
         }
@@ -257,9 +257,9 @@ function formatMember(member, text, parent, isStatic) {
             parent[name]["bodyType"] = "Property";
 
             if (parent[name]["noNote"] == true) {//已经有注释，无需继续解析
+                getComments(text, member.pos, parent[name]);
             }
             else {//只需要再解析注释
-                getComments(text, member.pos, parent[name]);
             }
             return;
         }
@@ -437,8 +437,10 @@ function getComments(text, pos, obj) {
             //    noteInfoBlocks.push(analyzedoc.analyze(doc));
             //}
             var doc = noteStringBlocks[noteStringBlocks.length - 1];
-            noteInfoBlocks.push(analyzedoc.analyze(doc));
-            obj["noNote"] = false;
+
+            var docInfo = analyzedoc.analyze(doc);
+            noteInfoBlocks.push(docInfo);
+            obj["noNote"] = docInfo["description"] == null || docInfo["description"] == "";
         }
         else {
             obj["noNote"] = true;
