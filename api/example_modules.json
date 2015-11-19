@@ -4,7 +4,6 @@
   "gui":"extension/gui",
   "res":"extension/resource",
   "eui":"extension/eui",
-  "socket":"extension/socket",
-  "tween":"extension/tween",
+  "tween":["extension/tween", "extension/socket"],
   "dragonbones":"extension/dragonbones"
 }
