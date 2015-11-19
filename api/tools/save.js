@@ -188,6 +188,6 @@ function saveGzip(dicRoot, module) {
     });
 
     zip.saveAs(path.join(dicRoot, module + ".zip"), function() {
-        console.log("zip written.");
+        console.log(module + ".zip written.");
     });
 }
