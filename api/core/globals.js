@@ -1,4 +1,5 @@
 var params = require("../core/params_analyze.js");
+var file = require("../core/file.js");
 
 function addQuotes(str) {
     return "\"" + str + "\"";
@@ -19,8 +20,16 @@ function getOutputPath() {
     return getOption("--output");
 }
 
+function getSourcePath() {
+    return getOption("--path");
+}
+
 function getLanguage() {
     return getOption("--language") || "zh_cn";
+}
+
+function getType() {
+    return getOption("--type") || null;
 }
 
 
@@ -50,10 +59,17 @@ function clone(frame) {
     return result;
 }
 
+function getApiParserRoot() {
+    return file.getDirectory(process.argv[1]);
+}
+
 exports.clone = clone;
+exports.getApiParserRoot = getApiParserRoot;
 
 exports.getOption = getOption;
 exports.addQuotes = addQuotes;
 exports.getExampleRootPath = getExampleRootPath;
 exports.getOutputPath = getOutputPath;
 exports.getLanguage = getLanguage;
+exports.getSourcePath = getSourcePath;
+exports.getType = getType;

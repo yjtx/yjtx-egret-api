@@ -1,6 +1,7 @@
 {
 	"globalFunction": [
 		{
+			"filename": "test/classes/f/F.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "f",
@@ -9,6 +10,7 @@
 			"pType": "public"
 		},
 		{
+			"filename": "test/classes/f/F.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "f3",

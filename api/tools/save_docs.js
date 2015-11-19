@@ -57,6 +57,9 @@ function analyze(item, name, parent, filename) {
         console.log("asdf")
     }
     var tempParent = parent.concat();
+
+    var member = {};
+
     switch (item.bodyType) {
         case "module":
             var moduleInfo = addClassInfo(name, tempParent);
@@ -93,13 +96,13 @@ function analyze(item, name, parent, filename) {
 
             break;
         case "modulevar"://变量
+        case "modulefunction"://
+            member["filename"] = filename;
         case "GetAccessor"://
         case "SetAccessor"://
         case "Accessor":
         case "Property"://变量
-        case "modulefunction"://
         case "function":
-            var member = {};
             member["kind"] = item["memberKind"];
             member["type"] = item["type"];
             member["name"] = name;

@@ -1,0 +1,109 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "a",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A",
+			"description": "bbbbbbb"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "b1",
+			"memberof": "yjtx.B1",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "yjtxB1b1",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "b2",
+			"memberof": "yjtx.B1",
+			"scope": "instance",
+			"rwType": 2,
+			"copy": "#b1",
+			"version": "1.0",
+			"pType": "public",
+			"description": "yjtxB1b1"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "b3",
+			"memberof": "yjtx.B1",
+			"scope": "instance",
+			"description": "yjtxB1b3",
+			"default": "bbb3",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "f",
+			"memberof": "yjtx.A",
+			"scope": "instance",
+			"inheritDoc": true,
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"description": "f11111"
+				},
+				{
+					"name": "canuse",
+					"type": "boolean",
+					"description": "f22222"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "yjtx.A",
+			"description": "fffffff"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "B1",
+		"memberof": "yjtx",
+		"filename": "test/classes/B.ts",
+		"description": "yjtxB1",
+		"event": [
+			{
+				"name": "egret.Event.CHANGE",
+				"description": "有变化时抛出"
+			},
+			{
+				"name": "egret.Event.COMPLETE",
+				"description": "加载完成时抛出",
+				"inherited": true,
+				"inherits": "yjtx.A"
+			}
+		],
+		"augments": [
+			"yjtx.A"
+		]
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "c1",
+			"memberof": "yjtx.IC",
+			"scope": "instance",
+			"description": "cccc1",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "c2",
+			"memberof": "yjtx.IC",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "c3",
+			"memberof": "yjtx.IC",
+			"scope": "instance",
+			"rwType": 2,
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IC",
+		"memberof": "yjtx",
+		"filename": "test/classes/IA.ts",
+		"description": "ic"
+	}
+}

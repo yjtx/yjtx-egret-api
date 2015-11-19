@@ -1,0 +1,24 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "b2",
+			"memberof": "yjtx.B2",
+			"scope": "instance",
+			"copy": "yjtx.B3",
+			"pType": "public",
+			"description": "yjtxB3"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "B2",
+		"memberof": "yjtx",
+		"filename": "test/classes/B.ts",
+		"description": "yjtxB2"
+	}
+}
