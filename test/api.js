@@ -93,9 +93,6 @@ function initClassList(moduleKey, listData) {
 }
 
 function initHead() {
-    var headerTable = document.getElementById("headerTable");
-
-    //return;
 
     createMembers(apiData.member || apiData.globalMember || []);
     createMethods(apiData.function || apiData.globalFunction || []);
@@ -106,6 +103,21 @@ function initHead() {
     createMethodDetails(apiData.function || apiData.globalFunction || []);
 
     initClassData();
+
+    createExample();
+
+}
+
+function createExample() {
+
+    var exampleNode = document.getElementById("exampleDetailDiv");
+    if (apiData.class && apiData.class.example) {
+
+        var exampleTag = document.getElementById("exampleTag");
+        exampleTag.firstElementChild.setAttribute("id", apiData.class.memberof + "." + apiData.class.name + "__example__");
+
+        initExample(exampleNode, apiData.class.example);
+    }
 }
 
 function initClassData() {
@@ -189,17 +201,17 @@ function createSee() {
             if (des.indexOf("http:") >= 0) {
                 var array = des.split(" ");
                 tempStr = seeItemStr.replace(/\{see_name\}/g, array[0]);
-                tempStr = seeItemStr.replace(/\{see_href\}/g, array[0]);
+                tempStr = tempStr.replace(/\{see_href\}/g, array[0]);
                 tempStr = tempStr.replace(/\{see_description\}/g, array[1]);
             }
             else if (des[0] == "\"") {
                 tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = seeItemStr.replace(/\{see_href\}/g, "#");
+                tempStr = tempStr.replace(/\{see_href\}/g, "#" + des);
                 tempStr = tempStr.replace(/\{see_description\}/g, des);
             }
             else {
                 tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = seeItemStr.replace(/\{see_href\}/g, "#");
+                tempStr = tempStr.replace(/\{see_href\}/g, "#" + des);
                 tempStr = tempStr.replace(/\{see_description\}/g, des);
             }
 
@@ -231,22 +243,22 @@ function createMembers(dataList) {
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
         newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-        newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
 
         var description = getFirstSpan(member["description"]);
         if (member["scope"] == "static") {
-            description = "[常量]" + description;
+            description = "[常量] " + description;
+            newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
         }
+
         if (member["rwType"] == 1) {
-            description = "[只读]" + description;
+            description = "[只读] " + description;
         }
         if (member["rwType"] == 2) {
-            description = "[只写]" + description;
+            description = "[只写] " + description;
         }
 
         newNodestr = newNodestr.replace(/\{description\}/g, description);
         newNodestr = newNodestr.replace(/\{inherited\}/g, member["inherited"] ? "block" : "none");
-
 
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
@@ -259,7 +271,7 @@ function createMembers(dataList) {
             newNode.style.display = "none";
         }
 
-        if (member["default"] == null) {
+        if (member["scope"] != "static") {
             var defNode = newNode.getElementsByClassName("defaultValue")[0];
             defNode.parentNode.removeChild(defNode);
         }
@@ -286,7 +298,7 @@ function createMethods(dataList) {
 
         var description = getFirstSpan(member["description"]);
         if (member["scope"] == "static") {
-            description = "[静态]" + description;
+            description = "[静态] " + description;
         }
 
         newNodestr = newNodestr.replace(/\{description\}/g, description);

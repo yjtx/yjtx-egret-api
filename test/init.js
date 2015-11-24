@@ -54,6 +54,16 @@ function onClick(data, type) {
         console.log(className);
         initModule(module, className);
     }
+    else if (type == "see") {
+        var dataHref = data.getAttribute("data-href");
+        //window.location.href = mainHref + "#" + dataHref;
+
+        var array = dataHref.split("#");
+        className = array[0];
+        var module = getModule(array[0]);
+        console.log(className);
+        initModule(module, className);
+    }
 }
 
 function getModule(className) {

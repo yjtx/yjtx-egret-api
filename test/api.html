@@ -23,9 +23,14 @@
     <link rel="stylesheet"
           href="./resources/github.css">
     <link rel="stylesheet" href="./resources/markdown.css">
+    <link rel="stylesheet" href="./resources/prettify.css">
+
+    <script src="./resources/prettify.min.js"></script>
 
 
     <script src="getData.js"></script>
+    <script src="getExample.js"></script>
+
     <style>        #treelist {
         overflow-x: hidden;
         overflow-y: auto;
@@ -41,9 +46,13 @@
         list-style-type: none;
     }
 
+
+
+    </style>
+    <style>
     </style>
 </head>
-<body class="">
+<body class=""  onload="prettyPrint()">
 <div class="row-fluid row">
     <div class="col-sm-3" style="padding-left: 30px">
         <div id="left-first-box" class="tc-box first-box">
@@ -136,8 +145,8 @@
 
                     <p></p>
 
-                    <span id="example">
-                        <a href="#example" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                    <span id="exampleAr">
+                        <a href="#{memberof}.{name}__example__" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
                     <span id="see">
@@ -180,31 +189,32 @@
                             <th>由以下参数定义</th>
                         </tr>
                         <tbody id="members">
-                            <tr data-inheritedproperty-inherited="" class="hideInheritedProperty" bgcolor="#FFFFFF"
-                                style="display: table-row;">
-                                <td class="summaryTablePaddingCol">&nbsp;</td>
+                        <tr data-inheritedproperty-inherited="" class="hideInheritedProperty" bgcolor="#FFFFFF"
+                            style="display: table-row;">
+                            <td class="summaryTablePaddingCol">&nbsp;</td>
 
-                                <td class="summaryTableInheritanceCol">
-                                    <img src="resources/inheritedSummary.gif"
-                                         alt="Inherited" title="Inherited" class="inheritedSummaryImage"
-                                         style="display: {inherited};">
-                                </td>
-                                <td class="summaryTableSignatureCol">
-                                    <a href="#{memberof}_{name}" onlick="scrollIntoView(this)"
-                                       class="signatureLink Method">
-                                        <span>{name}</span>
-                                    </a>
-                                    : <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
-                                    <span class="defaultValue"> = {default}</span>
-                                    <div class="summaryTableDescription">
-                                        {description}
-                                    </div>
-                                </td>
-                                <td class="summaryTableOwnerCol">
-                                    <a href="#" data-class-name="{memberof}"
-                                       onclick="goto(this)">{memberof}</a>
-                                </td>
-                            </tr>
+                            <td class="summaryTableInheritanceCol">
+                                <img src="resources/inheritedSummary.gif"
+                                     alt="Inherited" title="Inherited" class="inheritedSummaryImage"
+                                     style="display: {inherited};">
+                            </td>
+                            <td class="summaryTableSignatureCol">
+                                <a href="#{memberof}_{name}" onlick="scrollIntoView(this)"
+                                   class="signatureLink Method">
+                                    <span>{name}</span>
+                                </a>
+                                : <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                <span class="defaultValue"> = {default}</span>
+
+                                <div class="summaryTableDescription">
+                                    {description}
+                                </div>
+                            </td>
+                            <td class="summaryTableOwnerCol">
+                                <a href="#" data-class-name="{memberof}"
+                                   onclick="goto(this)">{memberof}</a>
+                            </td>
+                        </tr>
                         </tbody>
 
                     </table>
@@ -238,21 +248,21 @@
                             <th>由以下参数定义</th>
                         </tr>
                         <tbody id="methods">
-                            <tr data-inheritedmethod-inherited="1" class="hideInheritedMethod" bgcolor="#FFFFFF"
-                                style="display: table-row;">
-                                <td class="summaryTablePaddingCol">&nbsp;</td>
+                        <tr data-inheritedmethod-inherited="1" class="hideInheritedMethod" bgcolor="#FFFFFF"
+                            style="display: table-row;">
+                            <td class="summaryTablePaddingCol">&nbsp;</td>
 
-                                <td class="summaryTableInheritanceCol">
-                                    <img src="resources/inheritedSummary.gif"
-                                         alt="Inherited" title="Inherited" class="inheritedSummaryImage"
-                                         style="display: {inherited};">
-                                </td>
-                                <td class="summaryTableSignatureCol">
-                                    <div class="summarySignature">
-                                        <a href="#{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
-                                            <span data-function-name="{name}">{name}</span>
-                                        </a>
-                                        <span>(</span>
+                            <td class="summaryTableInheritanceCol">
+                                <img src="resources/inheritedSummary.gif"
+                                     alt="Inherited" title="Inherited" class="inheritedSummaryImage"
+                                     style="display: {inherited};">
+                            </td>
+                            <td class="summaryTableSignatureCol">
+                                <div class="summarySignature">
+                                    <a href="#{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
+                                        <span data-function-name="{name}">{name}</span>
+                                    </a>
+                                    <span>(</span>
                                         <span class="paramsList1">
                                             <span>
                                                 <span>{param_name}</span>
@@ -261,20 +271,20 @@
                                                 <span>, </span>
                                             </span>
                                         </span>
-                                        <span>)</span>
+                                    <span>)</span>
                                         <span class="functionType1">
                                             :
                                             <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
                                         </span>
-                                    </div>
-                                    <div class="summaryTableDescription">
-                                        {description}
-                                    </div>
-                                </td>
-                                <td class="summaryTableOwnerCol">
-                                    <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
-                                </td>
-                            </tr>
+                                </div>
+                                <div class="summaryTableDescription">
+                                    {description}
+                                </div>
+                            </td>
+                            <td class="summaryTableOwnerCol">
+                                <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                            </td>
+                        </tr>
                         </tbody>
 
                     </table>
@@ -454,8 +464,8 @@
                                                 <span>{param_name}</span>
                                                 <span>:</span>
                                                 <a href="#" data-class-name="{param_type}"
-                                                       onclick="goto(this)">{param_type}</a>
-                                                    —
+                                                   onclick="goto(this)">{param_type}</a>
+                                                —
                                                 <span>{param_description}</span>
                                             </p>
                                         </td>
@@ -467,8 +477,23 @@
                         </div>
                     </span>
                 </div>
+                <!--方法结束-->
+
+                <!--示例-->
+                <div id="exampleTag">
+                    <div id="{memberof}.{name}__example__" class="detailSectionHeader">示例
+                    </div>
+
+                    <span>
+                        <div class="detailBody">
+                            <div class="listing" id="exampleDetailDiv">
+                            </div>
+                        </div>
+                    </span>
+
+                </div>
+                <!--示例-->
             </div>
-            <!--方法结束-->
 
         </div>
     </div>
@@ -478,5 +503,11 @@
 
 <script src="api.js"></script>
 <script src="init.js"></script>
+
+<script>
+
+    prettyPrint();
+</script>
+
 </body>
 </html>
