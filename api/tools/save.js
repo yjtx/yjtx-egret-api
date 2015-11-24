@@ -9,6 +9,7 @@ var path = require("path");
 var file = require("../core/file.js");
 
 
+var allModuleList = {};
 function screen(moduleClassObjs, moduleKey) {
     var outputPath = globals.getOutputPath();
 
@@ -46,8 +47,10 @@ function screen(moduleClassObjs, moduleKey) {
         }
     }
 
+    allModuleList[moduleKey] = [];
     for (var key in tempModulesArr) {
         var mod = tempModulesArr[key];
+
         mod.sort();
 
         if (tempModules[key]) {
@@ -58,8 +61,11 @@ function screen(moduleClassObjs, moduleKey) {
                 mod.unshift("globalMember");
             }
         }
+
+        for (var key2 in mod) {
+            allModuleList[moduleKey].push(key + "." + mod[key2]);
+        }
     }
-    saveFile(path.join(outputPath, "/relation", moduleKey, "egret_list.json"), JSON.stringify(tempModulesArr, null, "\t"));
 
 
     saveGzip(path.join(outputPath,  "finalClasses"), moduleKey);
@@ -100,7 +106,7 @@ exports.save = function (tempClassObjs) {
 
                     var moduleName = getModuleName(filepath);
 
-                    addGlobals(item, key, moduleName, "globalMember");
+                    addGlobals(item["globalMember"][i], key, moduleName, "globalMember");
                 }
             }
 
@@ -110,7 +116,7 @@ exports.save = function (tempClassObjs) {
 
                     var moduleName = getModuleName(filepath);
 
-                    addGlobals(item, key, moduleName, "globalFunction");
+                    addGlobals(item["globalFunction"][i], key, moduleName, "globalFunction");
                 }
             }
         }
@@ -118,8 +124,9 @@ exports.save = function (tempClassObjs) {
 
     for (var tempKey in allModules) {
         screen(allModules[tempKey], tempKey);
-
     }
+    var outputPath = globals.getOutputPath();
+    saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(allModuleList, null, "\t"));
 
     function addClass(item, key, moduleKey) {
         if (allModules[moduleKey] == null) {

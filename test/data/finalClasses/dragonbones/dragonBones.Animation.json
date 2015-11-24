@@ -1,0 +1,384 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ALL",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"all\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "NONE",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"none\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SAME_GROUP",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"sameGroup\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SAME_LAYER",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"sameLayer\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SAME_LAYER_AND_GROUP",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"sameLayerAndGroup\""
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.AnimationData>",
+			"name": "animationDataList",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "包含的所有动画数据列表",
+			"see": [
+				"dragonBones.AnimationData."
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "animationList",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所有动画名称列表.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isComplete",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "最近播放的动画是否播放完成.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isPlaying",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "是否正在播放",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "lastAnimationName",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "最近播放的动画名称.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationState",
+			"name": "lastAnimationState",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "最近播放的 AnimationState 实例。",
+			"see": [
+				"dragonBones.AnimationState"
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "movementID",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "不推荐的API.推荐使用 lastAnimationName.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "movementList",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "不推荐的API.推荐使用 animationList.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "timeScale",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "时间缩放倍数",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "tweenEnabled",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "标记是否开启自动补间。设置为 true时，Animation会根据动画数据的内容，在关键帧之间自动补间。设置为false时，所有动画均不补间默认值：true。",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Animation",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "创建一个新的Animation实例并赋给传入的Armature实例",
+			"params": [
+				{
+					"name": "armature",
+					"type": "dragonBones.Armature",
+					"description": "骨架实例"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "回收Animation实例用到的所有资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationState",
+			"name": "getState",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "获得指定名称的 AnimationState 实例.",
+			"returns": "AnimationState 实例.",
+			"see": [
+				"dragonBones..AnimationState."
+			],
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "layer",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationState",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "开始播放指定名称的动画。要播放的动画将经过指定时间的淡入过程，然后开始播放，同时之前播放的动画会经过相同时间的淡出过程。",
+			"returns": "动画播放状态实例",
+			"see": [
+				"dragonBones.AnimationState."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "指定播放动画的名称."
+				},
+				{
+					"name": "fadeInTime",
+					"type": "number",
+					"default": "-1",
+					"description": "动画淡入时间 (>= 0), 默认值：-1 意味着使用动画数据中的淡入时间."
+				},
+				{
+					"name": "duration",
+					"type": "number",
+					"default": "-1",
+					"description": "动画播放时间。默认值：-1 意味着使用动画数据中的播放时间."
+				},
+				{
+					"name": "playTimes",
+					"type": "number",
+					"default": "NaN",
+					"description": "动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN"
+				},
+				{
+					"name": "layer",
+					"type": "number",
+					"default": "0",
+					"description": "动画所处的层"
+				},
+				{
+					"name": "group",
+					"type": "string",
+					"default": "null",
+					"description": "动画所处的组"
+				},
+				{
+					"name": "fadeOutMode",
+					"type": "string",
+					"default": "Animation.SAME_LAYER_AND_GROUP",
+					"description": "动画淡出模式 (none, sameLayer, sameGroup, sameLayerAndGroup, all).默认值：sameLayerAndGroup"
+				},
+				{
+					"name": "pauseFadeOut",
+					"type": "boolean",
+					"default": "true",
+					"description": "动画淡出时暂停播放"
+				},
+				{
+					"name": "pauseFadeIn",
+					"type": "boolean",
+					"default": "true",
+					"description": "动画淡入时暂停播放"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationState",
+			"name": "gotoAndStop",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "播放指定名称的动画并停止于某个时间点",
+			"returns": "动画播放状态实例",
+			"see": [
+				"dragonBones.AnimationState."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "指定播放的动画名称."
+				},
+				{
+					"name": "time",
+					"type": "number",
+					"description": "动画停止的绝对时间"
+				},
+				{
+					"name": "normalizedTime",
+					"type": "number",
+					"default": "-1",
+					"description": "动画停止的相对动画总时间的系数，这个参数和time参数是互斥的（例如 0.2：动画停止总时间的20%位置） 默认值：-1 意味着使用绝对时间。"
+				},
+				{
+					"name": "fadeInTime",
+					"type": "number",
+					"default": "0",
+					"description": "动画淡入时间 (>= 0), 默认值：0"
+				},
+				{
+					"name": "duration",
+					"type": "number",
+					"default": "-1",
+					"description": "动画播放时间。默认值：-1 意味着使用动画数据中的播放时间."
+				},
+				{
+					"name": "layer",
+					"type": "number",
+					"default": "0",
+					"description": "动画所处的层"
+				},
+				{
+					"name": "group",
+					"type": "string",
+					"default": "null",
+					"description": "动画所处的组"
+				},
+				{
+					"name": "fadeOutMode",
+					"type": "string",
+					"default": "Animation.ALL",
+					"description": "动画淡出模式 (none, sameLayer, sameGroup, sameLayerAndGroup, all).默认值：sameLayerAndGroup"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "hasAnimation",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "检查是否包含指定名称的动画.",
+			"returns": ".",
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "play",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "从当前位置继续播放动画",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stop",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"description": "暂停动画播放",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Animation",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/animation/Animation.ts",
+		"description": "Animation实例隶属于Armature,用于控制Armature的动画播放。",
+		"see": [
+			"dragonBones.Bone",
+			"dragonBones.Armature",
+			"dragonBones.AnimationState",
+			"dragonBones.AnimationData"
+		],
+		"example": "<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取动画数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;skeletonData&nbsp;=&nbsp;RES.getRes(&quot;skeleton&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;textureData&nbsp;=&nbsp;RES.getRes(&quot;textureConfig&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集图片<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture&nbsp;=&nbsp;RES.getRes(&quot;texture&quot;);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建一个工厂，用来创建Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;factory:dragonBones.EgretFactory&nbsp;=&nbsp;new&nbsp;dragonBones.EgretFactory();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把动画数据添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把纹理集数据和图片添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addTextureAtlas(new&nbsp;dragonBones.EgretTextureAtlas(texture,&nbsp;textureData));<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取Armature的名字，dragonBones4.0的数据可以包含多个骨架，这里取第一个Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureName:string&nbsp;=&nbsp;skeletonData.armature[0].name;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//从工厂里创建出Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armature:dragonBones.Armature&nbsp;=&nbsp;factory.buildArmature(armatureName);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取装载Armature的容器<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureDisplay&nbsp;=&nbsp;armature.display;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;armatureDisplay.x&nbsp;=&nbsp;200;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;armatureDisplay.y&nbsp;=&nbsp;500;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把它添加到舞台上<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(armatureDisplay);<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//取得这个Armature动画列表中的第一个动画的名字<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;curAnimationName:string&nbsp;=&nbsp;armature.animation.animationList[0];<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;animation:dragonBones.Animation&nbsp;=&nbsp;armature.animation;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//gotoAndPlay的用法：动画播放，播放一遍<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animation.gotoAndPlay(curAnimationName,0,-1,1);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//gotoAndStop的用法：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//curAnimationName&nbsp;=&nbsp;armature.animation.animationList[1];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//动画停在第二个动画的第0.2秒的位置<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animation.gotoAndStop(curAnimationName,0.2);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//动画停在第二个动画的一半的位置，如果第三个参数大于0，会忽略第二个参数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animation.gotoAndStop(curAnimationName,0,&nbsp;0.5);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//继续播放<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animation.play();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//暂停播放<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animation.stop();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//动画融合<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animation.gotoAndPlay(curAnimationName,0,-1,0,0,&quot;group1&quot;);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//var&nbsp;animationState:dragonBones.AnimationState&nbsp;=&nbsp;armature.animation.getState(curAnimationName);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animationState.addBoneMask(&quot;neck&quot;,true);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//播放第二个动画，&nbsp;放到group&nbsp;&quot;Squat&quot;里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//curAnimationName&nbsp;=&nbsp;armature.animation.animationList[1];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//armature.animation.gotoAndPlay(curAnimationName,0,-1,0,0,&quot;group2&quot;,dragonBones.Animation.SAME_GROUP);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animationState&nbsp;=&nbsp;armature.animation.getState(curAnimationName);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animationState.addBoneMask(&quot;hip&quot;,true);//“hip”是骨架的根骨骼的名字<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//animationState.removeBoneMask(&quot;neck&quot;,true);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把Armature添加到心跳时钟里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.add(armature);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//心跳时钟开启<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(function&nbsp;(advancedTime)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.advanceTime(advancedTime&nbsp;/&nbsp;1000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>"
+	}
+}

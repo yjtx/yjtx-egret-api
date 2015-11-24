@@ -1,0 +1,40 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "NATIVE",
+			"memberof": "egret.RuntimeType",
+			"scope": "static",
+			"description": "运行在NATIVE上",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"native\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "WEB",
+			"memberof": "egret.RuntimeType",
+			"scope": "static",
+			"description": "运行在Web上",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"web\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "RuntimeType",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/system/Capabilities.ts",
+		"description": "运行类型的类型。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

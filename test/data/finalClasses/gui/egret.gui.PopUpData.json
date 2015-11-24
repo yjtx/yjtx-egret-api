@@ -1,0 +1,51 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "modal",
+			"memberof": "egret.gui.PopUpData",
+			"scope": "instance",
+			"pType": "public",
+			"default": "false"
+		},
+		{
+			"kind": "member",
+			"type": "egret.gui.IVisualElement",
+			"name": "popUp",
+			"memberof": "egret.gui.PopUpData",
+			"scope": "instance",
+			"pType": "public",
+			"default": "null"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "PopUpData",
+			"memberof": "egret.gui.PopUpData",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "popUp",
+					"type": "egret.gui.IVisualElement",
+					"description": ""
+				},
+				{
+					"name": "modal",
+					"type": "boolean",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "PopUpData",
+		"memberof": "egret.gui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/impl/PopUpManagerImpl.ts"
+	}
+}

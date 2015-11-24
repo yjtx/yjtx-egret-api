@@ -1,0 +1,93 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "VersionController",
+			"memberof": "RES.VersionController",
+			"scope": "instance",
+			"description": "初始化构造函数",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "fetchVersion",
+			"memberof": "RES.IVersionController",
+			"scope": "instance",
+			"description": "获取版本信息数据。<br/>这个方法的调用需要在应用程序进行任何资源加载之前，建议在应用程序的入口类（Main）的开始最先进行调用处理。此方法只负责获取版本信息，不负责资源的下载。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "callback",
+					"type": "egret.AsyncCallback",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "RES.IVersionController"
+		},
+		{
+			"kind": "function",
+			"type": "Array<{url:string; size:number}>",
+			"name": "getChangeList",
+			"memberof": "RES.IVersionController",
+			"scope": "instance",
+			"description": "获取所有有变化的文件。<br/>主要应用在native场景中。这里的变化包括新增文件、更新文件（文件名相同，但更改过的文件）。<br/>",
+			"returns": "所有有变化的文件列表。在Web端此列表为空。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "RES.IVersionController"
+		},
+		{
+			"kind": "function",
+			"type": "string",
+			"name": "getVirtualUrl",
+			"memberof": "RES.IVersionController",
+			"scope": "instance",
+			"description": "获取资源文件实际的URL地址。<br/>由于版本控制实际已经对原来的资源文件的URL进行了改变，因此想获取指定资源文件实际的URL时需要调用此方法。<br/>在开发调试阶段，这个方法会直接返回传入的参数值。",
+			"returns": "实际加载的url",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "url",
+					"type": "string",
+					"description": "游戏中使用的url"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "RES.IVersionController"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "VersionController",
+		"memberof": "RES",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/version/IVersionController.ts",
+		"description": "管理版本控制的类",
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"event": [
+			{
+				"name": "egret.Event.COMPLETE",
+				"description": "版本控制加载完成时抛出"
+			},
+			{
+				"name": "egret.IOErrorEvent.IO_ERROR",
+				"description": "版本控制加载失败时抛出"
+			}
+		],
+		"example": "<pre></pre>",
+		"augments": [
+			"RES.IVersionController"
+		]
+	}
+}

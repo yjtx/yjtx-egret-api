@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://edn.egret.com/cn/index.php/apidoc/egret243/name/RES.IVersionController -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>RES.IVersionController API</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit"> <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"> <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <![endif]-->
+    <link href="http://edn.egret.com/cn/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="http://edn.egret.com/cn/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon"
+          rel="shortcut icon"> <!-- change to bootstrap3 -->
+    <link href="http://edn.egret.com/cn/statics/simpleboot/bootstrap3/css/bootstrap.min.css?v=20151110"
+          rel="stylesheet"> <!-- change theme to bootstrap3 -->
+    <link href="http://edn.egret.com/cn/statics/simpleboot/themes_bootstrap3/cmf/theme.min.css?v=20151110"
+          rel="stylesheet">
+    <link href="./RES.IVersionController API_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://edn.egret.com/cn/tpl/simplebootx/Public/css/style.css?v=20151112" rel="stylesheet">
+    <link rel="stylesheet" href="http://edn.egret.com/cn/tpl/simplebootx/Public/simpleboot/apidoc/style.css">
+    <link rel="stylesheet"
+          href="http://edn.egret.com/cn/tpl/simplebootx/Public/simpleboot/GoogleCodePrettify/github.css">
+    <link rel="stylesheet" href="http://edn.egret.com/cn/statics/editormd/css/markdown.css">
+
+    <script src="getData.js"></script>
+    <style>        #treelist {
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style-type: none;
+    }
+
+    #treelist ul {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    #treelist ul li {
+        list-style-type: none;
+    }
+
+    </style>
+</head>
+<body class="">
+<div class="row-fluid row">
+    <div class="col-sm-3" style="padding-left: 30px">
+        <div id="left-first-box" class="tc-box first-box">
+            <div class="headtitle">
+                <h2>筛选 </h2>
+                <h6>
+                    <a href="javascript:void" data-toggle="modal"
+                       data-target="#language-content-dialog">
+                    </a>
+                </h6>
+            </div>
+            <div class="bdsharebuttonbox">
+                <select id="selectType" onchange="selectType(this.value)" style="width:100%;max-width: 218px">
+                    <option value="egret" data-update="2015-11-18">Egret Core 2.5</option>
+                    <option value="eui" data-update="2015-11-13">eui</option>
+                    <option value="res" data-update="2015-11-13">res</option>
+                    <option value="dragonbones" data-update="2015-11-13">dragonBones</option>
+                    <option value="gui" data-update="2015-10-10">gui</option>
+                    <option value="game" data-update="2015-09-08">game</option>
+                    <option value="socket" data-update="2015-09-08">socket</option>
+                    <option value="tween" data-update="2015-09-08">tween</option>
+                </select>
+            </div>
+            <h5>更新于
+                <span id="apiupdate">2015-11-18</span>
+                <a href="javascript:updateContentDialog()">详情</a>
+            </h5>
+        </div>
+        <div class="tc-box" id="treelist" style="max-height: 913px; position: inherit; top: 0px;">
+            <div class="headtitle">
+                <h2>类列表</h2>
+            </div>
+            <ul>
+                <li>
+                    <input type="text" id="searchclass" style="width:100%;max-width: 218px" placeholder="输入类名">
+                </li>
+                <ul id="classList" class="classList">
+                    <li data-list-type="9243" style="display: list-item;">
+                        <a href="{class_href}" data-class-name="{class_name}"
+                           onclick="goto(this)">{class_name_desc}</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-9" id="rightcontent" style="padding-right: 30px;">
+        <div class="tc-box first-box" id="contentPage" data-title="egret.Bitmap API">
+            <div class="content">
+
+                <!--头部-->
+                <div class="MainContent" id="classHeader">
+                    <table class="classHeaderTable" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <td class="classHeaderTableLabel">包</td>
+                            <td>{memberof}</td>
+                        </tr>
+                        <tr>
+                            <td class="classHeaderTableLabel">类</td>
+                            <td class="classSignature Class">public class {name}</td>
+                        </tr>
+                        <tr>
+                            <td class="classHeaderTableLabel">继承</td>
+                            <td class="inheritanceList">{memberof}.{name}
+                                <span class="parentsId">
+                                    <span>
+                                        <img class="inheritArrow" title="Inheritance" alt="Inheritance"
+                                             src="resources/inherit-arrow.gif">
+                                        <a href="#" data-class-name="{parent_name}"
+                                           onclick="onClick(this, &quot;children&quot;)">{parent_name}</a>
+                                    </span>
+                                </span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="classHeaderTableLabel">子类</td>
+                            <td class="inheritanceList childrenId">
+                                <span>
+                                    <a href="#" data-class-name="{child_name}"
+                                       onclick="onClick(this, &quot;children&quot;)">{child_name}</a>
+                                    <span>, </span>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p></p>
+                    <span>{description}</span>
+
+                    <p></p>
+
+                    <span id="example">
+                        <a href="#example" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                    </span>
+
+                    <span id="see">
+                        <p>
+                            <span class="classHeaderTableLabel">了解更多</span>
+                        </p>
+                        <span id="seeList1">
+                            <p>
+                                <a href="{see_href}" data-href="{see_name}"
+                                   onclick="onClick(this, &quot;see&quot;)">{see_description}</a>
+                            </p>
+                        </span>
+                    </span>
+                </div>
+
+                <!--公共属性开始-->
+                <div class="summarySection">
+                    <div class="summaryTableTitle">
+                        公共属性
+                    </div>
+                    <div class="showHideLinks">
+                        <div id="hideInheritedProperty" class="showInheritedProperty">
+                            <a class="showHideLink"
+                               href="#propertySummary"
+                               onclick="InheritedProperty()">
+                                <img class="showHideLinkImage"
+                                     src="resources/expanded.gif"> 显示继承的公共属性</a>
+                        </div>
+                        <div id="showInheritedProperty" class="hideInheritedProperty">
+                            <a class="showHideLink" href="#propertySummary" onclick="InheritedProperty()">
+                                <img class="showHideLinkImage"
+                                     src="resources/collapsed.gif"> 隐藏继承的公共属性</a>
+                        </div>
+                    </div>
+
+                    <table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th colspan="2">属性</th>
+                            <th>由以下参数定义</th>
+                        </tr>
+                        <tbody id="members">
+                            <tr data-inheritedproperty-inherited="" class="hideInheritedProperty" bgcolor="#FFFFFF"
+                                style="display: table-row;">
+                                <td class="summaryTablePaddingCol">&nbsp;</td>
+
+                                <td class="summaryTableInheritanceCol">
+                                    <img src="resources/inheritedSummary.gif"
+                                         alt="Inherited" title="Inherited" class="inheritedSummaryImage"
+                                         style="display: {inherited};">
+                                </td>
+                                <td class="summaryTableSignatureCol">
+                                    <a href="#{memberof}_{name}" onlick="scrollIntoView(this)"
+                                       class="signatureLink Method">
+                                        <span>{name}</span>
+                                    </a>
+                                    : <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                    <span class="defaultValue"> = {default}</span>
+                                    <div class="summaryTableDescription">
+                                        {description}
+                                    </div>
+                                </td>
+                                <td class="summaryTableOwnerCol">
+                                    <a href="#" data-class-name="{memberof}"
+                                       onclick="goto(this)">{memberof}</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <!--公共属性结束-->
+
+                <!--公共方法开始-->
+                <div class="summarySection">
+                    <div class="summaryTableTitle">
+                        公共方法
+                    </div>
+                    <div class="showHideLinks">
+                        <div id="hideInheritedMethod" class="showInheritedProperty">
+                            <a class="showHideLink"
+                               href="#propertySummary"
+                               onclick="InheritedMethod()">
+                                <img class="showHideLinkImage"
+                                     src="resources/expanded.gif"> 显示继承的公共方法</a>
+                        </div>
+                        <div id="showInheritedMethod" class="hideInheritedProperty">
+                            <a class="showHideLink" href="#propertySummary" onclick="InheritedMethod()">
+                                <img class="showHideLinkImage"
+                                     src="resources/collapsed.gif"> 隐藏继承的公共方法</a>
+                        </div>
+                    </div>
+
+                    <table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th colspan="2">方法</th>
+                            <th>由以下参数定义</th>
+                        </tr>
+                        <tbody id="methods">
+                            <tr data-inheritedmethod-inherited="1" class="hideInheritedMethod" bgcolor="#FFFFFF"
+                                style="display: table-row;">
+                                <td class="summaryTablePaddingCol">&nbsp;</td>
+
+                                <td class="summaryTableInheritanceCol">
+                                    <img src="resources/inheritedSummary.gif"
+                                         alt="Inherited" title="Inherited" class="inheritedSummaryImage"
+                                         style="display: {inherited};">
+                                </td>
+                                <td class="summaryTableSignatureCol">
+                                    <div class="summarySignature">
+                                        <a href="#{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
+                                            <span data-function-name="{name}">{name}</span>
+                                        </a>
+                                        <span>(</span>
+                                        <span class="paramsList1">
+                                            <span>
+                                                <span>{param_name}</span>
+                                                <span>:</span>
+                                                <a href="#" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                                <span>, </span>
+                                            </span>
+                                        </span>
+                                        <span>)</span>
+                                        <span class="functionType1">
+                                            :
+                                            <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                        </span>
+                                    </div>
+                                    <div class="summaryTableDescription">
+                                        {description}
+                                    </div>
+                                </td>
+                                <td class="summaryTableOwnerCol">
+                                    <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <!--公共方法结束-->
+
+                <!-- 事件开始  -->
+                <div class="summarySection">
+                    <div class="summaryTableTitle">事件</div>
+                    <div class="showHideLinks"><a
+                            href="http://edn.egret.com/cn/index.php?g=&amp;m=article&amp;a=index&amp;id=112&amp;terms1_id=25&amp;terms2_id=29"
+                            target="_blank">单击此处了解有关事件的更多信息</a></div>
+                    <table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th colspan="2">事件</th>
+                            <th> 摘要</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tbody id="events">
+                        <tr bgcolor="#F2F2F2">
+                            <td class="summaryTablePaddingCol">&nbsp;</td>
+                            <td class="summaryTableInheritanceCol">&nbsp;</td>
+                            <td class="summaryTableSignatureCol">
+                                <div class="summarySignature"><span>{name}</span></div>
+                            </td>
+                            <td class="summaryTableDescription summaryTableCol">{description}</td>
+                            <td class="summaryTableOwnerCol"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 事件结束  -->
+
+                <!-- 属性详情  -->
+                <div class="MainContent">
+                    <div class="detailSectionHeader">属性详细信息</div>
+                    <span id="propertyDetails" div_display="table-row">
+                        <div>
+                            <table class="detailHeader" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td class="detailHeaderName">
+                                        <h3 id="{memberof}_{name}">{name}</h3>
+                                    </td>
+                                    <td class="detailHeaderType">属性</td>
+                                    <td class="detailHeaderRule">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="detailBody">
+                                {name} :
+                                <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+
+                                <p></p>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="white-space:nowrap" valign="top">
+                                            <b>语言版本:&nbsp;</b>
+                                        </td>
+                                        <td>{version}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="white-space:nowrap" valign="top">
+                                            <b>运行时版本:&nbsp;</b>
+                                        </td>
+                                        <td>{platform}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p></p>
+                                {description}
+                                <p></p>
+
+                                <p><b>实现</b></p>
+
+                                <p class="getProperty">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;public get {name}():
+                                    <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                </p>
+
+                                <p class="setProperty">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;public set {name}(value:
+                                    <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>) <br>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <!--属性详情结束-->
+
+                <!--方法开始-->
+                <div class="MainContent">
+                    <div class="detailSectionHeader">方法详细信息</div>
+                    <span id="methodDetails" class="hideInheritedMethod" data-inheritedmethod-inherited="1"
+                          style="display: inline;" div_display="table-row">
+                        <div>
+                            <table class="detailHeader" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td class="detailHeaderName">
+                                        <h3 id="{memberof}_{name}">
+                                            <span data-function-name="{name}">{name}</span>
+                                        </h3>
+                                    </td>
+                                    <td class="detailHeaderParens">()</td>
+                                    <td class="detailHeaderType">方法</td>
+                                    <td class="detailHeaderRule">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="detailBody"> public
+                                <span data-function-name="{name}">{name}</span>
+                                <span>(</span>
+                            <span class="paramsList2">
+                                <span>
+                                    <span>{param_name}</span>
+                                    <span>:</span>
+                                    <a href="#" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                    <span>, </span>
+                                </span>
+                            </span>
+                                <span>)</span>
+                            <span class="functionType2">
+                                <span>:</span>
+                                <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                            </span>
+
+                                <p></p>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="white-space:nowrap" valign="top">
+                                            <b>语言版本:&nbsp;</b>
+                                        </td>
+                                        <td>{version}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td style="white-space:nowrap" valign="top">
+                                            <b>运行时版本:&nbsp;</b>
+                                        </td>
+                                        <td>{platform}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p></p>
+
+                                <div class="seeMore">
+                                    <span class="classHeaderTableLabel">了解更多</span>
+
+                                    <div class="seelist">
+                                        <p>
+                                            <a href="#" data-see="{desc}" onclick="see(this)">{desc}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p></p>
+                                {description}
+                                <p></p>
+
+                                <p><b>参数</b></p>
+                                <table cellpadding="0" cellspacing="0" border="0">
+                                    <tbody>
+                                    <tr>
+                                        <td width="20px"></td>
+                                        <td class="paramsList3">
+                                            <p>
+                                                <span>{param_name}</span>
+                                                <span>:</span>
+                                                <a href="#" data-class-name="{param_type}"
+                                                       onclick="goto(this)">{param_type}</a>
+                                                    —
+                                                <span>{param_description}</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p></p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <!--方法结束-->
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="api.js"></script>
+<script src="init.js"></script>
+</body>
+</html>

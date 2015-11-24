@@ -1,0 +1,85 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"description": "皮肤数据的名字",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.SlotData>",
+			"name": "slotDataList",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取所有的插槽数据",
+			"returns": "",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SkinData",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"description": "构造函数，实例化一个SkinData类",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addSlotData",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"description": "添加一个插槽数据",
+			"params": [
+				{
+					"name": "slotData",
+					"type": "dragonBones.SlotData",
+					"description": "slotData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.SlotData",
+			"name": "getSlotData",
+			"memberof": "dragonBones.SkinData",
+			"scope": "instance",
+			"description": "根据插槽的名字获取插槽数据",
+			"returns": "返回的插槽数据",
+			"params": [
+				{
+					"name": "slotName",
+					"type": "string",
+					"description": "想要获取的插槽的名字"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SkinData",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/SkinData.ts",
+		"description": "皮肤数据，皮肤是由一些插槽组成，每个插槽都有一个骨骼控制，骨骼的运动带动插槽的运动形成动画，插槽里可以放置显示对象，目前支持的显示对象有图片和子骨架两种"
+	}
+}

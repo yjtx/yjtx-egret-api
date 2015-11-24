@@ -1,0 +1,253 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "armature",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "The armature this DBObject instance belongs to.",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "blendMode",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "混合模式",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "childArmature",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "当前的子骨架",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "display",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "当前的显示对象(可能是 display 或者 子骨架)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "Array<any>",
+			"name": "displayList",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "显示对象列表(包含 display 或者 子骨架)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "global",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "相对世界坐标的 DBTransform 实例。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritRotation",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"description": "是否继承父亲的旋转属性。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritScale",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"description": "是否继承父亲的缩放属性。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritTranslation",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"description": "是否继承父亲的平移属性。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "offset",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "用于运行时动态调整的 DBTransform 实例。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "origin",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "骨架数据中的原始的相对父亲的 DBTransform 实例。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Bone",
+			"name": "parent",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.DBObject",
+			"scope": "instance",
+			"description": "存储额外的用户数据。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.DBObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "zOrder",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "显示顺序。(支持小数用于实现动态插入slot)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EgretSlot",
+			"memberof": "dragonBones.EgretSlot",
+			"scope": "instance",
+			"description": "创建一个新的 EgretSlot 实例",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.EgretSlot",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getDisplay",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "不推荐的 API. 使用 display 属性代替",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initWithSlotData",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "通过传入 SlotData 初始化Slot",
+			"params": [
+				{
+					"name": "slotData",
+					"type": "dragonBones.SlotData",
+					"description": "slotData"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setDisplay",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "Unrecommended API. Please use .display = instead.",
+			"returns": "",
+			"params": [
+				{
+					"name": "value",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretSlot",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretSlot.ts",
+		"description": "egret引擎使用的插槽",
+		"augments": [
+			"dragonBones.Slot",
+			"dragonBones.DBObject"
+		]
+	}
+}

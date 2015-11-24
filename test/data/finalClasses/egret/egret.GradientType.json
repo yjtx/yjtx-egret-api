@@ -1,0 +1,33 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LINEAR",
+			"memberof": "egret.GradientType",
+			"scope": "static",
+			"description": "用于指定线性渐变填充的值",
+			"pType": "public",
+			"default": "\"linear\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RADIAL",
+			"memberof": "egret.GradientType",
+			"scope": "static",
+			"description": "用于指定放射状渐变填充的值",
+			"pType": "public",
+			"default": "\"radial\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "GradientType",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/GradientType.ts"
+	}
+}

@@ -1,0 +1,295 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.FastArmature",
+			"name": "armature",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"description": "The armature this DBObject instance belongs to.",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "blendMode",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "混合模式",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "childArmature",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "当前的子骨架",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "colorChanged",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ColorTransform",
+			"name": "colorTransform",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "display",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "当前的显示对象(可能是 display 或者 子骨架)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "displayIndex",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "Array<any>",
+			"name": "displayList",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "显示对象列表(包含 display 或者 子骨架)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.FrameCache",
+			"name": "frameCache",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"rwType": 2,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "global",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "This DBObject instance global transform instance.",
+			"see": [
+				"dragonBones.DBTransform"
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Matrix",
+			"name": "globalTransformMatrix",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "hasChildArmature",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritRotation",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritScale",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritTranslation",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "origin",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "This DBObject instance related to parent transform instance.",
+			"see": [
+				"dragonBones.DBTransform"
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.FastBone",
+			"name": "parent",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.FastDBObject",
+			"scope": "instance",
+			"description": "An object that can contain any user extra data.",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastDBObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "zOrder",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "显示顺序。(支持小数用于实现动态插入slot)",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EgretFastSlot",
+			"memberof": "dragonBones.EgretFastSlot",
+			"scope": "instance",
+			"description": "创建一个新的 EgretSlot 实例",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.EgretFastSlot",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initDisplayList",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "newDisplayList",
+					"type": "Array<any>",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initWithSlotData",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "通过传入 SlotData 初始化FastSlot",
+			"params": [
+				{
+					"name": "slotData",
+					"type": "dragonBones.SlotData",
+					"description": "slotData"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretFastSlot",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretFastSlot.ts",
+		"description": "egret引擎使用的插槽",
+		"augments": [
+			"dragonBones.FastSlot",
+			"dragonBones.FastDBObject"
+		]
+	}
+}

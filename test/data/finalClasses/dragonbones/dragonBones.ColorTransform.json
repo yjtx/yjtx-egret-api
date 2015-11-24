@@ -1,0 +1,94 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "alphaMultiplier",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "透明度增幅，计算时用乘法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "alphaOffset",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "透明度偏移，计算时用加法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blueMultiplier",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "蓝色值增幅，计算时用乘法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blueOffset",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "蓝色值偏移，计算时用加法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "greenMultiplier",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "绿色值增幅，计算时用乘法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "greenOffset",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "绿色值偏移，计算时用加法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "redMultiplier",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "红色值增幅，计算时用乘法",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "redOffset",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"description": "红色值偏移，计算时用加法",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "ColorTransform",
+			"memberof": "dragonBones.ColorTransform",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ColorTransform",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/ColorTransform.ts",
+		"description": "表示颜色的transform"
+	}
+}

@@ -1,0 +1,142 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "名字",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "rotatedDic",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "static",
+			"pType": "public",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scale",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "缩放",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "egret.SpriteSheet",
+			"name": "spriteSheet",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "spriteSheet",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EgretTextureAtlas",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "创建一个新的EgretTextureAtlas实例",
+			"params": [
+				{
+					"name": "texture",
+					"type": "egret.Texture",
+					"description": "纹理集"
+				},
+				{
+					"name": "textureAtlasRawData",
+					"type": "any",
+					"description": "纹理集数据"
+				},
+				{
+					"name": "scale",
+					"type": "number",
+					"default": "1",
+					"description": "缩放"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Rectangle",
+			"name": "getFrame",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "根据子纹理的名字获取子纹理所在的真实矩形区域",
+			"returns": "子纹理所在的矩形区域",
+			"params": [
+				{
+					"name": "subTextureName",
+					"type": "string",
+					"description": "子纹理的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Rectangle",
+			"name": "getRegion",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "根据子纹理的名字获取子纹理所在的实际矩形区域",
+			"returns": "子纹理所在的矩形区域",
+			"params": [
+				{
+					"name": "subTextureName",
+					"type": "string",
+					"description": "子纹理的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "getTexture",
+			"memberof": "dragonBones.EgretTextureAtlas",
+			"scope": "instance",
+			"description": "根据名字获取纹理",
+			"returns": "获取到的纹理",
+			"params": [
+				{
+					"name": "fullName",
+					"type": "string",
+					"description": "纹理的名字"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretTextureAtlas",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretTextureAtlas.ts",
+		"description": "egret引擎使用的纹理集",
+		"implements": [
+			{
+				"name": "dragonBones.ITextureAtlas"
+			}
+		]
+	}
+}

@@ -1,0 +1,184 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.ArmatureData>",
+			"name": "armatureDataList",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取所有的骨架数据",
+			"returns": "",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isGlobal",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "数据的类型，是否是全局数据",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "DrabonBones数据的名字",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "DragonBonesData",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "构造函数，实例化一个DragonBonesData类",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addArmatureData",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "添加一个骨架数据",
+			"params": [
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addDisplayData",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "添加一个显示对象数据",
+			"params": [
+				{
+					"name": "displayData",
+					"type": "dragonBones.DisplayData",
+					"description": "需要被添加的显示对象数据"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.ArmatureData",
+			"name": "getArmatureDataByName",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "通过骨架的名字获取骨架的数据",
+			"returns": "骨架数据 ArmatureData",
+			"params": [
+				{
+					"name": "armatureName",
+					"type": "string",
+					"description": "想要获取的骨架的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.DisplayData",
+			"name": "getDisplayDataByName",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "根据名字获取显示对象数据",
+			"returns": "显示对象数据 DisplayData",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "想要获取的显示对象数据的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeAllDisplayData",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "移除所有的显示对象数据",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeArmatureData",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "移除一个骨架数据",
+			"params": [
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeArmatureDataByName",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "根据骨架的名字，移除该骨架的数据",
+			"params": [
+				{
+					"name": "armatureName",
+					"type": "string",
+					"description": "想要移除的骨架的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeDisplayDataByName",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "根据显示对象的名字移除该显示对象数据",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "显示对象的名字"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DragonBonesData",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/DragonBonesData.ts",
+		"description": "DragonBones的数据，包含了骨架数据和显示对象数据"
+	}
+}

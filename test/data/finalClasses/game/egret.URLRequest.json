@@ -1,0 +1,104 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "data",
+			"memberof": "egret.URLRequest",
+			"scope": "instance",
+			"description": "一个对象，它包含将随 URL 请求一起传输的数据。该属性与 method 属性配合使用。当 method 值为 GET 时，将使用 HTTP 查询字符串语法将 data 值追加到 URLRequest.url 值。当 method 值为 POST（或 GET 之外的任何值）时，将在 HTTP 请求体中传输 data 值。URLRequest API 支持二进制 POST，并支持 URL 编码变量和字符串。该数据对象可以是 ByteArray、URLVariables 或 String 对象。该数据的使用方式取决于所用对象的类型：如果该对象是 URLVariables 对象，并且该方法是 POST，则使用 x-www-form-urlencoded 格式对变量进行编码，并且生成的字符串会用作 POST 数据。如果该对象是 URLVariables 对象，并且该方法是 GET，则 URLVariables 对象将定义要随 URLRequest 对象一起发送的变量。否则，该对象会转换为字符串，并且该字符串会用作 POST 或 GET 数据。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "method",
+			"memberof": "egret.URLRequest",
+			"scope": "instance",
+			"description": "请求方式，有效值为URLRequestMethod.GET 或 URLRequestMethod.POST。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "URLRequestMethod.GET"
+		},
+		{
+			"kind": "member",
+			"type": "Array<egret.URLRequestHeader>",
+			"name": "requestHeaders",
+			"memberof": "egret.URLRequest",
+			"scope": "instance",
+			"description": "要追加到 HTTP 请求的 HTTP 请求标头的数组。该数组由 URLRequestHeader 对象组成。数组中的每一对象必须是包含一个名称字符串和一个值字符串的 URLRequestHeader 对象。由于浏览器兼容性原因，该属性在 html5 中并未实现",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "url",
+			"memberof": "egret.URLRequest",
+			"scope": "instance",
+			"description": "所请求的 URL。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"\""
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "URLRequest",
+			"memberof": "egret.URLRequest",
+			"scope": "instance",
+			"description": "创建一个 egret.URLRequest 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "url",
+					"type": "string",
+					"default": "null",
+					"description": "进行网络请求的地址"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "URLRequest",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/net/URLRequest.ts",
+		"description": "URLRequest 类可捕获单个 HTTP 请求中的所有信息。",
+		"see": [
+			"http://docs.egret-labs.org/post/manual/net/createconnect.html 构建通信请求"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;URLLoader&nbsp;加载图片资源。<br/>&nbsp;*/<br/>class&nbsp;URLRequestExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;URLLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;new&nbsp;egret.URLLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置加载方式为纹理<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.dataFormat&nbsp;=&nbsp;egret.URLLoaderDataFormat.TEXTURE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载失败侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.IOErrorEvent.IO_ERROR,&nbsp;this.onLoadError,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url:string&nbsp;=&nbsp;&quot;resource/assets/egret_icon.png&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;request:egret.URLRequest&nbsp;=&nbsp;new&nbsp;egret.URLRequest(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(request);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onLoadComplete&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;&lt;egret.URLLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture:egret.Texture&nbsp;=&nbsp;&lt;egret.Texture&gt;loader.data;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(texture);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadError():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onLoadError&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"augments": [
+			"egret.HashObject"
+		]
+	}
+}

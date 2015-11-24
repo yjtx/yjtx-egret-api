@@ -1,0 +1,81 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "colorChanged",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ColorTransform",
+			"name": "colorTransform",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "displayIndex",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.FrameCache",
+			"name": "frameCache",
+			"memberof": "dragonBones.ICacheUser",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.ICacheUser"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "global",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Matrix",
+			"name": "globalTransformMatrix",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.ICacheUser",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.ICacheUser"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "ISlotCacheGenerator",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/ISlotCacheGenerator.ts",
+		"description": "ICacheUser 接口定义了可以生成Slot帧缓存的接口。目前只有FastSlot实现了该接口。",
+		"see": [
+			"dragonBones.FastSlot",
+			"dragonBones.ICacheUser"
+		],
+		"augments": [
+			"dragonBones.ICacheUser"
+		]
+	}
+}

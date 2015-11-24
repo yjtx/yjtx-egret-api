@@ -1,0 +1,259 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "animationCacheDic",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"pType": "public",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ArmatureData",
+			"name": "armatureData",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ICacheableArmature",
+			"name": "cacheGeneratorArmature",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "frameRate",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "slotFrameCacheDic",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "//\t\tpublic var boneFrameCacheDic:Object = {};",
+			"pType": "public",
+			"default": "{}"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "AnimationCacheManager",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "bindCacheUserArmature",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "绑定制定Armature做为动画缓存的使用者。在为Armature生成动画缓存之前，需要将其绑定为动画缓存的使用者",
+			"see": [
+				"dragonBones.ICacheableArmature."
+			],
+			"params": [
+				{
+					"name": "armature",
+					"type": "dragonBones.FastArmature",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "bindCacheUserArmatures",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "绑定Armature列表做为动画缓存的使用者。在为Armature生成动画缓存之前，需要将其绑定为动画缓存的使用者",
+			"see": [
+				"dragonBones.ICacheableArmature."
+			],
+			"params": [
+				{
+					"name": "armatures",
+					"type": "Array<any>",
+					"description": "骨架列表。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "generateAllAnimationCache",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "生成所有动画缓存数据。生成之后，所有绑定CacheUser的Armature就都能够使用这些缓存了。在为调用这个API生成动画缓存之前，需要：1.调用API initAllAnimationCache 初始化AnimationCache实例2.调用API setCacheGeneratorArmature 设置动画缓存的生成器,3.调用API bindCacheUserArmatures 绑定动画缓存的使用者",
+			"see": [
+				"dragonBones.AnimationCache"
+			],
+			"params": [
+				{
+					"name": "loop",
+					"type": "boolean",
+					"description": "要生成缓存的动画是否需要循环播放。如果该动画在播放时只需要播放一次，则设置为false。如果需要播放大于一次，则设置为true。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "generateAnimationCache",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "生成指定动画缓存数据。生成之后，所有绑定CacheUser的Armature就都能够使用这些缓存了。在为调用这个API生成动画缓存之前，需要：1.调用API initAnimationCache 初始化AnimationCache实例2.调用API setCacheGeneratorArmature 设置动画缓存的生成器,3.调用API bindCacheUserArmatures 绑定动画缓存的使用者",
+			"see": [
+				"dragonBones.AnimationCache"
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "要生成缓存的动画名。"
+				},
+				{
+					"name": "loop",
+					"type": "boolean",
+					"description": "要生成缓存的动画是否需要循环播放。如果该动画在播放时只需要播放一次，则设置为false。如果需要播放大于一次，则设置为true。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationCache",
+			"name": "getAnimationCache",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "获取制定名称的AnimationCache实例。",
+			"see": [
+				"dragonBones.AnimationCache"
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "动画名。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initAllAnimationCache",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "为所有动画初始化AnimationCache实例。在生成动画缓存之前需要调用这个API生成相应的AnimationCache实例",
+			"see": [
+				"dragonBones.AnimationCache."
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initAnimationCache",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "指定动画名，初始化AnimationCache实例。在生成动画缓存之前需要调用这个API生成相应的AnimationCache实例",
+			"see": [
+				"dragonBones.AnimationCache."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "动画名。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationCacheManager",
+			"name": "initWithArmatureData",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "static",
+			"description": "通过ArmatrueData创建并初始化AnimationCacheManager。AnimationCacheManager的创建需要依赖ArmatrueData。",
+			"see": [
+				"dragonBones.ArmatureData."
+			],
+			"params": [
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "骨架数据实例。"
+				},
+				{
+					"name": "frameRate",
+					"type": "number",
+					"default": "0",
+					"description": "帧频。帧频决定生成数据缓存的采样率。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "resetCacheGeneratorArmature",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "将缓存生成器骨架重置，生成动画缓存后调用。",
+			"see": [
+				"dragonBones.ICacheableArmature"
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setCacheGeneratorArmature",
+			"memberof": "dragonBones.AnimationCacheManager",
+			"scope": "instance",
+			"description": "设置指定的Armature做为动画缓存的生成器。（同一个Armature可以既是缓存使用者，也是缓存生成器）在为Armature生成动画缓存之前，需要设置动画缓存的生成器",
+			"see": [
+				"dragonBones.ICacheableArmature."
+			],
+			"params": [
+				{
+					"name": "armature",
+					"type": "dragonBones.FastArmature",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "AnimationCacheManager",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/AnimationCacheManager.ts",
+		"description": "AnimationCacheManager 实例是动画缓存管理器，他可以为一个或多个同类型的Armature生成动画缓存数据，从而提高动画运行效率。目前AnimationCacheManager只支持对FastArmatrue生成缓存，以后会扩展为对任何实现ICacheableArmature接口的Armature生成缓存。",
+		"see": [
+			"dragonBones.ICacheableArmature",
+			"dragonBones.FastArmature",
+			"dragonBones.AnimationCache",
+			"dragonBones.FrameCache"
+		],
+		"example": "<pre><br/>\t&nbsp;&nbsp;&nbsp;&nbsp;//获取动画数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;skeletonData&nbsp;=&nbsp;RES.getRes(&quot;skeleton&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;textureData&nbsp;=&nbsp;RES.getRes(&quot;textureConfig&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集图片<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture&nbsp;=&nbsp;RES.getRes(&quot;texture&quot;);<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建一个工厂，用来创建Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;factory:dragonBones.EgretFactory&nbsp;=&nbsp;new&nbsp;dragonBones.EgretFactory();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把动画数据添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把纹理集数据和图片添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addTextureAtlas(new&nbsp;dragonBones.EgretTextureAtlas(texture,&nbsp;textureData));<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取Armature的名字，dragonBones4.0的数据可以包含多个骨架，这里取第一个Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureName:string&nbsp;=&nbsp;skeletonData.armature[0].name;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//从工厂里创建出Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armature:dragonBones.FastArmature&nbsp;=&nbsp;factory.buildFastArmature(armatureName);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取装载Armature的容器<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureDisplay&nbsp;=&nbsp;armature.display;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把它添加到舞台上<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(armatureDisplay);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//以60fps的帧率开启动画缓存，缓存所有的动画数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;animationCachManager:dragonBones.AnimationCacheManager&nbsp;=&nbsp;armature.enableAnimationCache(60);<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//取得这个Armature动画列表中的第一个动画的名字<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;curAnimationName&nbsp;=&nbsp;armature.animation.animationList[0];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//播放这个动画，gotoAndPlay各个参数说明<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一个参数&nbsp;animationName&nbsp;{string}&nbsp;指定播放动画的名称.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第二个参数&nbsp;fadeInTime&nbsp;{number}&nbsp;动画淡入时间&nbsp;(&gt;=&nbsp;0),&nbsp;默认值：-1&nbsp;意味着使用动画数据中的淡入时间.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第三个参数&nbsp;duration&nbsp;{number}&nbsp;动画播放时间。默认值：-1&nbsp;意味着使用动画数据中的播放时间.<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;//第四个参数&nbsp;layTimes&nbsp;{number}&nbsp;动画播放次数(0:循环播放,&nbsp;&gt;=1:播放次数,&nbsp;NaN:使用动画数据中的播放时间),&nbsp;默认值：NaN<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;armature.animation.gotoAndPlay(curAnimationName,0.3,-1,0);<br/>\t&nbsp;&nbsp;<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;//把Armature添加到心跳时钟里<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.add(armature);<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;//心跳时钟开启<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(function&nbsp;(advancedTime)&nbsp;{<br/>\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.advanceTime(advancedTime&nbsp;/&nbsp;1000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>"
+	}
+}
