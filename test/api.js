@@ -374,8 +374,8 @@ function createPropertyDetails(dataList) {
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
         newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-        newNodestr = newNodestr.replace(/\{version\}/g, member["version"]);
-        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"]);
+        newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
+        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
         newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
@@ -410,8 +410,8 @@ function createMethodDetails(dataList) {
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
         newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-        newNodestr = newNodestr.replace(/\{version\}/g, member["version"]);
-        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"]);
+        newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
+        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
         newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);

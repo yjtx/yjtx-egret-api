@@ -1,0 +1,747 @@
+.bdsharebuttonbox ul
+{
+    overflow: auto;
+    height: 580px;
+    margin: 0 0 10px 10px;
+}
+
+.classHeaderTable {
+
+	margin-top: 20px;
+
+}
+
+.classHeaderTable td {
+
+	vertical-align: top;
+
+	padding-bottom: 4px;
+
+}
+
+.classHeaderTableLabel {
+
+	font-weight: bold;
+
+	padding-right: 15px;
+
+}
+
+tr .classHeaderTableLabel {
+	width: 90px;
+}
+
+.classSignature {
+
+	text-indent: -20px;
+
+	padding-left: 20px;
+
+}
+
+.inheritanceList {
+
+	text-indent: -20px;
+
+	padding-left: 20px;
+
+}
+
+.inheritArrow {
+
+	width: 15px;
+
+	height: 9px;
+
+}
+
+img {
+
+	border:0;
+
+}
+
+.summarySection {
+
+	margin-right: 10px;
+
+}
+
+.summaryTableTitle {
+
+	font-weight: bold;
+
+	font-size: 18px;
+
+	padding-top: 20px;
+
+	padding-bottom: 5px;
+
+}
+
+* .summaryTable {
+
+	margin-top: 10px;
+
+	border: #999999 1px solid;
+
+	width: 100%;
+
+	margin-bottom: 20px;
+
+}
+
+html>body .summaryTable {
+
+	margin-top: 10px;
+
+	border: #999999 1px solid;
+
+	width: 100%;
+
+	margin-bottom: 20px;
+
+	margin-right: 10px;
+
+}
+
+.summaryTable th {
+
+	color: #FFFFFF;
+
+	background-color: #627C9D;
+
+	white-space: nowrap;
+
+}
+
+.summaryTable td {
+
+	border-top: #999999 1px solid;
+
+	vertical-align: top;
+
+}
+
+.summaryTablePaddingCol {
+
+	width: 5px;
+
+}
+
+.summaryTableInheritanceCol {
+
+	width: 14px;
+
+}
+
+.summaryTableSignatureCol {
+
+	padding-right: 10px;
+
+}
+
+.summaryTableOperatorCol {
+
+	padding-left: 10px;
+
+	padding-right: 10px;
+
+	font-weight: bold;
+
+}
+
+.summaryTableStatementCol {
+
+	padding-left: 10px;
+
+	padding-right: 10px;
+
+	font-weight: bold;
+
+	white-space: nowrap;
+
+}
+
+.summarySignature {
+
+	text-indent: -20px;
+
+	padding-left: 20px;
+
+}
+
+.summaryTableOwnerCol {
+
+	padding-right: 10px;
+
+	width: 10px;
+
+}
+
+.summaryTableCol, .summaryTableSecondCol {
+
+}
+
+.signatureLink {
+
+	font-weight: bold;
+
+}
+
+.summaryTableDescription {
+
+	color: #333333;
+
+}
+
+.summaryTableLastCol {
+
+	padding-right: 10px;
+
+}
+
+.inheritedSummaryImage {
+
+	width: 14px;
+
+	height: 14px;
+
+}
+
+
+
+.showHideLink {
+
+}
+
+.showHideLinkImage {
+
+	width: 9px;
+
+	height: 9px;
+
+}
+
+.hideInheritedConstant {
+
+	display: none;
+
+}
+
+.showInheritedConstant {
+
+	display: inline;
+
+}
+
+.hideInheritedProtectedConstant {
+
+	display: none;
+
+}
+
+.showInheritedProtectedConstant {
+
+	display: inline;
+
+}
+
+.hideInheritedProperty {
+
+	display: none;
+
+}
+
+.showInheritedProperty {
+
+	display: inline;
+
+}
+
+.hideInheritedProtectedProperty {
+
+	display: none;
+
+}
+
+.showInheritedProtectedProperty {
+
+	display: inline;
+
+}
+
+.hideInheritedMethod {
+
+	display: none;
+
+}
+
+.showInheritedMethod {
+
+	display: inline;
+
+}
+
+.hideInheritedProtectedMethod {
+
+	display: none;
+
+}
+
+.showInheritedProtectedMethod {
+
+	display: inline;
+
+}
+
+.hideInheritedEvent {
+
+	display: none;
+
+}
+
+.showInheritedEvent {
+
+	display: inline;
+
+}
+
+.hideInheritedcommonStyle {
+
+	display: none;
+
+}
+
+.showInheritedcommonStyle {
+
+	display: inline;
+
+}
+
+.hideInheritedsparkStyle {
+
+	display: none;
+
+}
+
+.showInheritedsparkStyle {
+
+	display: inline;
+
+}
+
+.hideInheritedhaloStyle {
+
+	display: none;
+
+}
+
+.showInheritedhaloStyle {
+
+	display: inline;
+
+}
+
+.hideInheritedmobileStyle {
+
+	display: none;
+
+}
+
+.showInheritedmobileStyle {
+
+	display: inline;
+
+}
+
+.hideInheritedEffect {
+
+	display: none;
+
+}
+
+.showInheritedEffect {
+
+	display: inline;
+
+}
+
+
+
+
+
+.detailSectionHeader {
+
+	color: #434343;
+
+	font-size: 16px;
+
+	padding-left: 10px;
+
+	padding-top: 4px;
+
+	padding-bottom: 4px;
+
+	margin-top: 40px;
+
+	margin-bottom: 3px;
+
+	background-image: url(detailSectionHeader.jpg);
+
+	background-repeat: repeat-x;
+
+}
+
+.detailHeader {
+
+	margin-left: 20px;
+
+	margin-top: 10px;
+
+	margin-bottom: 3px;
+
+}
+
+.detailHeaderName {
+
+	font-weight: bold;
+
+	font-size: 16px;
+
+	vertical-align: baseline;
+
+	white-space: nowrap;
+
+}
+
+.detailHeaderType {
+
+	font-size: 12px;
+
+	vertical-align: baseline;
+
+	padding-right: 10px;
+
+	padding-left: 7px;
+
+	white-space: nowrap;
+
+}
+
+.detailHeaderParens {
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	padding-left: 1px;
+
+	padding-bottom: 2px;
+
+}
+
+.detailHeaderRule {
+
+	background-image: url(detailHeaderRule.jpg);
+
+	background-repeat: repeat-x;
+
+	width: 100%;
+
+	background-position: 50%;
+
+}
+
+.detailBody {
+
+	margin-left: 20px;
+
+	margin-right: 15px;
+
+	margin-bottom: 20px;
+
+}
+
+.content {
+	margin-left: 20px;
+	min-height: 100%;
+}
+
+.MainContent {
+
+	margin-right: 10px;
+
+	margin-bottom: 10px;
+
+}
+
+th	{
+
+	text-align: left;
+
+	font-weight: bold;
+
+	vertical-align: bottom;
+
+}
+
+
+
+table {
+
+	background-color: white;
+
+}
+
+
+
+table.withBorder {
+
+	border-color: #BBBBBB;
+
+	border-width: 1px;
+
+	border-style: solid;
+
+}
+
+.SummaryTableHeader {
+
+    background-color: #CCCCCC;
+
+}
+
+
+
+.InheritedTableHeader {
+
+    background-color: #EEEEEE;
+
+}
+
+
+
+.PackageTableHeader {
+
+    background-color: #EEEEEE;
+
+}
+
+
+a:link {
+
+	color: #0000CC;
+
+	text-decoration: none;
+
+}
+
+
+
+a:visited {
+
+    color: #0000CC;
+
+	text-decoration: none;
+
+}
+
+
+
+a:hover {
+
+	text-decoration: underline;
+
+	color: #0000CC;
+
+}
+
+
+
+a:active {
+
+	text-decoration: none;
+
+	color: #CC0000;
+
+}
+
+
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight:bold;
+  letter-spacing:1px;
+  margin-bottom:3px;
+  margin-top:3px;
+  width:90%;
+}
+
+h1 {
+  font-size:20px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+h2 {
+  font-size:16px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+
+
+h4 {
+
+	font-size: 14px;
+
+	color: #666666;
+
+}
+
+
+
+h5 {
+
+	font-size: 12px;
+
+}
+
+.inheritanceList {
+
+	line-height: 19px;
+
+}
+
+
+.detailHeaderName h3{
+	display:inline;
+}
+
+    
+    .spinner {
+  margin: 100px auto;
+  width: 20px;
+  height: 20px;
+  position:absolute;
+}
+ 
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+ 
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+ 
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+ 
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+ 
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+ 
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+ 
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+ 
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+ 
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+ 
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+ 
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+ 
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid transparent;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border-color: #faebcc;
+	color: #8a6d3b;
+}

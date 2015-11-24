@@ -1,6 +1,6 @@
-node tscdoc.js --path ../../../Egret/egret-core/egret-core/src --output ../../../Egret/api/js/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
+node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
 
-node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ../../../Egret/api/js/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn
+node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
 
 
 node tscdoc.js --path test/classes --output test/output/ --examples test/examples --language zh_cn
