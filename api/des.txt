@@ -4,3 +4,5 @@ node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ..
 
 
 node tscdoc.js --path test/classes --output test/output/ --examples test/examples --language zh_cn
+
+node tscdoc.js --path ../../../Support/Nest/sdk/Nest/libsrc/src/ --output ../test/data/ --examples test/examples --language zh_cn --type nest

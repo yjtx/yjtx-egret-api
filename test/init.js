@@ -29,7 +29,20 @@ function initAll() {
     getData("data/relation/list.json", function (data) {
         listData = JSON.parse(data);
 
+        var selectType = document.getElementById("selectType");
+        while(selectType.hasChildNodes()) //当div下还存在子节点时 循环继续
+        {
+            selectType.removeChild(selectType.firstChild);
+        }
+
         for (var key in listData) {
+            var option = document.createElement("option");
+            option.setAttribute("value", key);
+            option.setAttribute("data-update", new Date());
+            option.innerText = key;
+
+            selectType.appendChild(option);
+
             for (var key2 in listData[key]) {
                 classData[listData[key][key2]] = key;
             }
