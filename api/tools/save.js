@@ -194,7 +194,8 @@ function saveGzip(dicRoot, module) {
     zip.toBuffer(function(buf) {
     });
 
-    zip.saveAs(path.join(dicRoot, module + ".zip"), function() {
+    file.createDirectory(path.join(dicRoot, "../zips"));
+    zip.saveAs(path.join(dicRoot, "../zips", module + ".zip"), function() {
         console.log(module + ".zip written.");
     });
 }
