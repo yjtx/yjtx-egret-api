@@ -517,6 +517,19 @@
 		},
 		{
 			"kind": "member",
+			"type": "string",
+			"name": "textAlign",
+			"memberof": "egret.BitmapText",
+			"scope": "instance",
+			"description": "文本的水平对齐方式。",
+			"version": "Egret 2.5.6",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.BitmapText"
+		},
+		{
+			"kind": "member",
 			"type": "number",
 			"name": "textHeight",
 			"memberof": "egret.BitmapText",
@@ -572,6 +585,19 @@
 			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "verticalAlign",
+			"memberof": "egret.BitmapText",
+			"scope": "instance",
+			"description": "文字的垂直对齐方式。",
+			"version": "Egret 2.5.6",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.BitmapText"
 		},
 		{
 			"kind": "member",

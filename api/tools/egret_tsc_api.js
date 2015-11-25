@@ -16,6 +16,8 @@ exports.run = function run(fileNames, srcPath) {
     }
 
     var apiArr = [];
+    console.log("ts = " + ts);
+    console.log("program = " + program);
     program.getSourceFiles().forEach(function (sourceFile) {
         var filename = sourceFile.filename;
         if (filename.indexOf(srcPath) != 0) {
@@ -26,6 +28,9 @@ exports.run = function run(fileNames, srcPath) {
 
         apiArr.push(root);
     });
+
+    console.log("apiArr = " + apiArr);
+
     return apiArr;
 };
 
