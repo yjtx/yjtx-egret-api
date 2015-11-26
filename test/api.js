@@ -403,6 +403,12 @@ function createPropertyDetails(dataList) {
         }
 
         members.appendChild(newNode);
+
+        if (member.example) {
+            var exampleNode = newNode.getElementsByClassName("exampleDetailDiv")[0];
+            initExample(exampleNode, member.example);
+        }
+
     }
 
     hideFirst(members);
@@ -501,6 +507,11 @@ function createMethodDetails(dataList) {
         paramsList3.removeChild(paramsList3.firstElementChild);
 
         members.appendChild(newNode);
+
+        if (member.example) {
+            var exampleNode = newNode.getElementsByClassName("exampleDetailDiv")[0];
+            initExample(exampleNode, member.example);
+        }
     }
 
     hideFirst(members);
