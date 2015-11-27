@@ -33,7 +33,7 @@ function screen(moduleClassObjs, moduleKey) {
                 saveFile(path.join(outputPath, "finalClasses", moduleKey, key + "." + "globalMember.json"), JSON.stringify({"globalMember": item["globalMember"]}, null, "\t"));
             }
             if (item["globalFunction"] && item["globalFunction"].length) {
-                saveFile(path.join(outputPath,  "finalClasses", moduleKey, key + "." + "globalFunction.json"), JSON.stringify({"globalFunction": item["globalFunction"]}, null, "\t"));
+                saveFile(path.join(outputPath, "finalClasses", moduleKey, key + "." + "globalFunction.json"), JSON.stringify({"globalFunction": item["globalFunction"]}, null, "\t"));
             }
 
             var modeName = key;
@@ -51,22 +51,19 @@ function screen(moduleClassObjs, moduleKey) {
         allModuleList[moduleKey] = [];
     }
 
-
-    for (var key in tempModules) {
-        var mod;
-        if (tempModulesArr[key] == null) {
-            mod = tempModulesArr[key] = [];
-        }
-        else {
-            mod = tempModulesArr[key];
-        }
+    for (var key in tempModulesArr) {
+        var mod = tempModulesArr[key];
         mod.sort();
 
-        if (tempModules[key]["globalFunction"]) {
-            mod.unshift("globalFunction");
-        }
-        if (tempModules[key]["globalMember"]) {
-            mod.unshift("globalMember");
+        if (tempModules[key]) {
+            if (tempModules[key]["globalFunction"]) {
+                mod.unshift("globalFunction");
+                tempModules[key]["globalFunction"] = false;
+            }
+            if (tempModules[key]["globalMember"]) {
+                mod.unshift("globalMember");
+                tempModules[key]["globalMember"] = false;
+            }
         }
 
         for (var key2 in mod) {
@@ -74,7 +71,22 @@ function screen(moduleClassObjs, moduleKey) {
         }
     }
 
-    saveGzip(path.join(outputPath,  "finalClasses"), moduleKey);
+    for (var key in tempModules) {
+        var mod = [];
+        if (tempModules[key]["globalFunction"]) {
+            mod.unshift("globalFunction");
+            tempModules[key]["globalFunction"] = false;
+        }
+        if (tempModules[key]["globalMember"]) {
+            mod.unshift("globalMember");
+            tempModules[key]["globalMember"] = false;
+        }
+        for (var key2 in mod) {
+            allModuleList[moduleKey].push(key + "." + mod[key2]);
+        }
+    }
+
+    saveGzip(path.join(outputPath, "finalClasses"), moduleKey);
 }
 
 exports.save = function (tempClassObjs) {
@@ -197,11 +209,11 @@ function saveGzip(dicRoot, module) {
     for (var tempKey in files) {
         zip.addFile(path.join(module, file.getFileName(files[tempKey]) + ".json"), path.resolve(files[tempKey]));
     }
-    zip.toBuffer(function(buf) {
+    zip.toBuffer(function (buf) {
     });
 
     file.createDirectory(path.join(dicRoot, "../zips"));
-    zip.saveAs(path.join(dicRoot, "../zips", module + ".zip"), function() {
+    zip.saveAs(path.join(dicRoot, "../zips", module + ".zip"), function () {
         console.log(module + ".zip written.");
     });
 }
