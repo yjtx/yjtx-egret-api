@@ -1,98 +1,20 @@
+
 var apiData;
-
-var headerStr = document.getElementById("classHeader").innerHTML;
-
-var apiDebug = false;
-
-var currentModuleKey;
-function resetModuleList(moduleKey, moduleData, className) {
-    if (className == null || className == "") {
-        for (var key in moduleData) {
-            className = moduleData[key];
-            break;
-        }
-    }
-
-    if (currentModuleKey != moduleKey) {
-        currentModuleKey = moduleKey;
-
-        initClassList(moduleKey, moduleData);
-    }
-
-    getData("data/finalClasses/" + moduleKey + "/" + className + ".json", function (data) {
-        apiData = JSON.parse(data);
-        console.log(apiData);
-
-        initHead();
-    });
-
-}
-
-function clearList(list) {
-    while (list.childElementCount > 1) {
-        list.removeChild(list.lastElementChild);
-    }
-
-    if (!list.getAttribute("div_display")) {
-        list.setAttribute("div_display", list.firstElementChild.style.display || "error");
-    }
-    if (!apiDebug) {
-        var display = list.getAttribute("div_display");
-        if (display == "error") {
-            delete list.firstElementChild.style.display;
-        }
-        else {
-            list.firstElementChild.style.display = display;
-        }
-    }
-}
-
-function hideFirst(list) {
-    if (apiDebug) {
-    }
-    else {
-        list.firstElementChild.style.display = "none";
-    }
-}
-
-function goto(node) {
-    var className = node.getAttribute("data-class-name");
-    console.log(className);
-
-    resetModuleList(currentModuleKey, null, className);
-}
 
 var memberHide = true;
 var methodyHide = true;
+var headerStr = document.getElementById("classHeader").innerHTML;
 
-function initClassList(moduleKey, listData) {
-    var list = document.getElementById("classList");
-    clearList(list);
+function changeClass(moduleKey, className) {
+    getData("data/finalClasses/" + moduleKey + "/" + className + ".json", function (data) {
+        apiData = JSON.parse(data);
 
-    var str = list.innerHTML;
-    var href = window.location.href;
-    if (href.indexOf("?") >= 0) {
-        href = href.substr(0, href.indexOf("?"));
-    }
-    else if (href.indexOf("#") >= 0) {
-        href = href.substr(0, href.indexOf("#"));
-    }
-
-    var array = listData;
-    for (var i = 0; i < array.length; i++) {
-        var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
-        tempStr = tempStr.replace(/\{class_href\}/, href + "#" + array[i]);
-        tempStr = tempStr.replace(/\{class_name\}/, array[i]);
-        var node = document.createElement(list.firstElementChild.nodeName);
-        node.innerHTML = tempStr;
-
-        list.appendChild(node);
-    }
-
-    hideFirst(list);
+        initClass();
+    });
 }
 
-function initHead() {
+function initClass() {
+    initClassData();
 
     createMembers(apiData.member || apiData.globalMember || []);
     createMethods(apiData.function || apiData.globalFunction || []);
@@ -102,22 +24,8 @@ function initHead() {
     createPropertyDetails(apiData.member || apiData.globalMember || []);
     createMethodDetails(apiData.function || apiData.globalFunction || []);
 
-    initClassData();
-
     createExample();
 
-}
-
-function createExample() {
-
-    var exampleNode = document.getElementById("exampleDetailDiv");
-    if (apiData.class && apiData.class.example) {
-
-        var exampleTag = document.getElementById("exampleTag");
-        exampleTag.firstElementChild.setAttribute("id", apiData.class.memberof + "." + apiData.class.name + "__example__");
-
-        initExample(exampleNode, apiData.class.example);
-    }
 }
 
 function initClassData() {
@@ -153,6 +61,8 @@ function createExtends(node) {
         var augments = apiData.class.augments;
         for (var i = 0; i < augments.length; i++) {
             var tempStr = str.replace(/\{parent_name\}/g, augments[i]);
+            tempStr = tempStr.replace(/\{parent_href\}/g, "#" + getModule(augments[i]) + "_" + augments[i]);
+
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             parentNode.appendChild(node);
             node.outerHTML = tempStr;
@@ -161,7 +71,6 @@ function createExtends(node) {
 
     hideFirst(parentNode);
 }
-
 
 function createChildren(node) {
     var parentNode = node.getElementsByClassName("childrenId")[0];
@@ -173,6 +82,8 @@ function createChildren(node) {
         var children = apiData.class.children;
         for (var i = 0; i < children.length; i++) {
             var tempStr = str.replace(/\{child_name\}/g, children[i]);
+            tempStr = tempStr.replace(/\{child_href\}/g, "#" + getModule(children[i]) + "_" + children[i]);
+
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             node.innerHTML = tempStr;
             parentNode.appendChild(node);
@@ -241,7 +152,8 @@ function createMembers(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
 
         var description = getFirstSpan(member["description"]);
@@ -293,7 +205,8 @@ function createMethods(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
 
         var description = getFirstSpan(member["description"]);
@@ -325,6 +238,7 @@ function createMethods(dataList) {
 
             var str = paramsListStr.replace(/\{param_name\}/g, param.name);
             str = str.replace(/\{param_type\}/g, param.type);
+            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
 
             var tempNode = document.createElement(paramsList1.firstElementChild.nodeName);
             tempNode.innerHTML = str;
@@ -355,7 +269,6 @@ function createEvents() {
     var node = members;
 
     var nodestr = node.innerHTML;
-    console.log(nodestr);
     for (var i = 0; apiData.class && apiData.class.event && i < apiData.class.event.length; i++) {
         var member = apiData.class.event[i];
 
@@ -371,7 +284,6 @@ function createEvents() {
     hideFirst(members);
 }
 
-
 function createPropertyDetails(dataList) {
     var members = document.getElementById("propertyDetails");
     clearList(members);
@@ -379,12 +291,12 @@ function createPropertyDetails(dataList) {
     var node = members;
 
     var nodestr = node.innerHTML;
-    console.log(nodestr);
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
         newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
         newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
@@ -414,6 +326,17 @@ function createPropertyDetails(dataList) {
     hideFirst(members);
 }
 
+function getMemberof(member) {
+    if (member.kind == "globalFunction") {
+        return member["memberof"] + ".globalFunction";
+    }
+    if (member.kind == "globalMemeber") {
+        return member["memberof"] + ".globalMemeber";
+    }
+
+    return member["memberof"];
+}
+
 function createMethodDetails(dataList) {
     var members = document.getElementById("methodDetails");
     clearList(members);
@@ -426,7 +349,8 @@ function createMethodDetails(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
         newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
         newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
@@ -473,6 +397,7 @@ function createMethodDetails(dataList) {
 
             var str = paramsList2Str.replace(/\{param_name\}/g, param.name);
             str = str.replace(/\{param_type\}/g, param.type);
+            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
 
             var paramsNode2 = document.createElement(paramsList2.firstElementChild.nodeName);
             paramsNode2.innerHTML = str;
@@ -480,6 +405,7 @@ function createMethodDetails(dataList) {
 
             var str = paramsList3Str.replace(/\{param_name\}/g, param.name);
             str = str.replace(/\{param_type\}/g, param.type);
+            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
             str = str.replace(/\{param_description\}/g, param.description);
             var paramsNode3 = document.createElement(paramsList3.firstElementChild.nodeName);
             paramsNode3.innerHTML = str;
@@ -517,25 +443,18 @@ function createMethodDetails(dataList) {
     hideFirst(members);
 }
 
-function getFirstSpan(des) {
-    if (des == null) {
-        return "";
-    }
-    var i1 = des.indexOf("。") < 0 ? des.length : des.indexOf("。");
-    var i2 = des.indexOf("<br/>") < 0 ? des.length : des.indexOf("<br/>");
+function createExample() {
 
-    return des.substr(0, Math.min(i1, i2));
-}
+    var exampleNode = document.getElementById("exampleDetailDiv");
+    if (apiData.class && apiData.class.example) {
 
+        var exampleTag = document.getElementById("exampleTag");
+        exampleTag.firstElementChild.setAttribute("id", apiData.class.memberof + "." + apiData.class.name + "__example__");
 
-function setValue(element, value) {
-    if ("innerText" in element) {
-        element.innerText = value;
-    }
-    else if ("textContent" in element) {
-        element.textContent = value;
+        initExample(exampleNode, apiData.class.example);
     }
 }
+
 
 function InheritedProperty() {
     memberHide = !memberHide;
@@ -549,10 +468,14 @@ function InheritedProperty() {
         }
         else {
             if (node.style.display == "none") {
-                node.style.display = "table-row";
+                if (!apiDebug) {
+                    node.style.display = "table-row";
+                }
             }
         }
     }
+
+    hideFirst(members);
 }
 
 function InheritedMethod() {
@@ -567,8 +490,12 @@ function InheritedMethod() {
         }
         else {
             if (node.style.display == "none") {
-                node.style.display = "table-row";
+                if (!apiDebug) {
+                    node.style.display = "table-row";
+                }
             }
         }
     }
+
+    hideFirst(members);
 }

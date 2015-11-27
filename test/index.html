@@ -28,9 +28,6 @@
     <script src="./resources/prettify.min.js"></script>
 
 
-    <script src="getData.js"></script>
-    <script src="getExample.js"></script>
-
     <style>        #treelist {
         overflow-x: hidden;
         overflow-y: auto;
@@ -121,7 +118,7 @@
                                     <span>
                                         <img class="inheritArrow" title="Inheritance" alt="Inheritance"
                                              src="resources/inherit-arrow.gif">
-                                        <a href="#" data-class-name="{parent_name}"
+                                        <a href="{parent_href}" data-class-name="{parent_name}"
                                            onclick="onClick(this, &quot;children&quot;)">{parent_name}</a>
                                     </span>
                                 </span>
@@ -132,7 +129,7 @@
                             <td class="classHeaderTableLabel">子类</td>
                             <td class="inheritanceList childrenId">
                                 <span>
-                                    <a href="#" data-class-name="{child_name}"
+                                    <a href="{child_href}" data-class-name="{child_name}"
                                        onclick="onClick(this, &quot;children&quot;)">{child_name}</a>
                                     <span>, </span>
                                 </span>
@@ -146,7 +143,7 @@
                     <p></p>
 
                     <span id="exampleAr">
-                        <a href="#{memberof}.{name}__example__" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                        <a href="#{memberof}_{name}_example@@@" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
                     <span id="see">
@@ -170,7 +167,6 @@
                     <div class="showHideLinks">
                         <div id="hideInheritedProperty" class="showInheritedProperty">
                             <a class="showHideLink"
-                               href="#propertySummary"
                                onclick="InheritedProperty()">
                                 <img class="showHideLinkImage"
                                      src="resources/expanded.gif"> 显示继承的公共属性</a>
@@ -199,11 +195,11 @@
                                      style="display: {inherited};">
                             </td>
                             <td class="summaryTableSignatureCol">
-                                <a href="#{memberof}_{name}" onlick="scrollIntoView(this)"
+                                <a href="#{moduleof}_{memberof}" onlick="scrollIntoView(this)"
                                    class="signatureLink Method">
                                     <span>{name}</span>
                                 </a>
-                                : <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                : <a href="#{moduleof}_{memberof}_{name}" data-class-name="{type}" onclick="goto(this)">{type}</a>
                                 <span class="defaultValue"> = {default}</span>
 
                                 <div class="summaryTableDescription">
@@ -211,7 +207,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#" data-class-name="{memberof}"
+                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}"
                                    onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
@@ -229,7 +225,6 @@
                     <div class="showHideLinks">
                         <div id="hideInheritedMethod" class="showInheritedProperty">
                             <a class="showHideLink"
-                               href="#propertySummary"
                                onclick="InheritedMethod()">
                                 <img class="showHideLinkImage"
                                      src="resources/expanded.gif"> 显示继承的公共方法</a>
@@ -259,7 +254,7 @@
                             </td>
                             <td class="summaryTableSignatureCol">
                                 <div class="summarySignature">
-                                    <a href="#{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
+                                    <a href="#{moduleof}_{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
                                         <span data-function-name="{name}">{name}</span>
                                     </a>
                                     <span>(</span>
@@ -267,14 +262,14 @@
                                             <span>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="#" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                                <a href="{param_href}" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
                                                 <span>, </span>
                                             </span>
                                         </span>
                                     <span>)</span>
                                         <span class="functionType1">
                                             :
-                                            <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                            <a href="{param_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
                                         </span>
                                 </div>
                                 <div class="summaryTableDescription">
@@ -282,7 +277,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
                         </tbody>
@@ -328,7 +323,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{memberof}_{name}">{name}</h3>
+                                        <h3 id="{moduleof}_{memberof}_{name}">{name}</h3>
                                     </td>
                                     <td class="detailHeaderType">属性</td>
                                     <td class="detailHeaderRule">&nbsp;</td>
@@ -337,7 +332,7 @@
                             </table>
                             <div class="detailBody">
                                 {name} :
-                                <a href="#" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
 
                                 <p></p>
                                 <table cellpadding="0" cellspacing="0" border="0">
@@ -368,12 +363,12 @@
 
                                 <p class="getProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public get {name}():
-                                    <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                    <a href="{type_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
                                 </p>
 
                                 <p class="setProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public set {name}(value:
-                                    <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>) <br>
+                                    <a href="{type_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>) <br>
                                 </p>
 
                                 <!--示例-->
@@ -403,7 +398,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{memberof}_{name}">
+                                        <h3 id="{moduleof}_{memberof}_{name}">
                                             <span data-function-name="{name}">{name}</span>
                                         </h3>
                                     </td>
@@ -420,14 +415,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="#" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                    <a href="{param_href}" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="#" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                <a href="{param_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
                             </span>
 
                                 <p></p>
@@ -458,7 +453,7 @@
 
                                     <div class="seelist">
                                         <p>
-                                            <a href="#" data-see="{desc}" onclick="see(this)">{desc}</a>
+                                            <a href="{see_href}" data-see="{desc}" onclick="see(this)">{desc}</a>
                                         </p>
                                     </div>
                                 </div>
@@ -475,7 +470,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="#" data-class-name="{param_type}"
+                                                <a href="{param_href}" data-class-name="{param_type}"
                                                    onclick="goto(this)">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
@@ -506,7 +501,7 @@
 
                 <!--示例-->
                 <div id="exampleTag">
-                    <div id="{memberof}.{name}__example__" class="detailSectionHeader">示例
+                    <div id="{memberof}_{name}_example@@@" class="detailSectionHeader">示例
                     </div>
 
                     <span>
@@ -526,10 +521,18 @@
 </div>
 
 
-<script src="api.js"></script>
-<script src="init.js"></script>
+
+<script src="getOptions.js"></script>
+<script src="getData.js"></script>
+<script src="utils.js"></script>
+<script src="getExample.js"></script>
+<script src="moduleCtr.js"></script>
+<script src="classCtr.js"></script>
+
+<!--<script src="init.js"></script>-->
 
 <script>
+    initAll();
 
     prettyPrint();
 </script>
