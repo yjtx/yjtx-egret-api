@@ -50,25 +50,29 @@ function screen(moduleClassObjs, moduleKey) {
     if (allModuleList[moduleKey] == null) {
         allModuleList[moduleKey] = [];
     }
-    for (var key in tempModulesArr) {
-        var mod = tempModulesArr[key];
 
+
+    for (var key in tempModules) {
+        var mod;
+        if (tempModulesArr[key] == null) {
+            mod = tempModulesArr[key] = [];
+        }
+        else {
+            mod = tempModulesArr[key];
+        }
         mod.sort();
 
-        if (tempModules[key]) {
-            if (tempModules[key]["globalFunction"]) {
-                mod.unshift("globalFunction");
-            }
-            if (tempModules[key]["globalMember"]) {
-                mod.unshift("globalMember");
-            }
+        if (tempModules[key]["globalFunction"]) {
+            mod.unshift("globalFunction");
+        }
+        if (tempModules[key]["globalMember"]) {
+            mod.unshift("globalMember");
         }
 
         for (var key2 in mod) {
             allModuleList[moduleKey].push(key + "." + mod[key2]);
         }
     }
-
 
     saveGzip(path.join(outputPath,  "finalClasses"), moduleKey);
 }
