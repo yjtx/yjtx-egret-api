@@ -156,28 +156,7 @@ function createMembers(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
-        var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
-        newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
-        newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-
-        var description = getFirstSpan(member["description"]);
-        if (member["scope"] == "static") {
-            description = "[常量] " + description;
-            newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
-        }
-
-        if (member["rwType"] == 1) {
-            description = "[只读] " + description;
-        }
-        if (member["rwType"] == 2) {
-            description = "[只写] " + description;
-        }
-
-        newNodestr = newNodestr.replace(/\{description\}/g, description);
-        newNodestr = newNodestr.replace(/\{inherited\}/g, member["inherited"] ? "block" : "none");
-
+        var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
         newNode.innerHTML = newNodestr;
@@ -210,19 +189,7 @@ function createMethods(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
-        var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
-        newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
-        newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-
-        var description = getFirstSpan(member["description"]);
-        if (member["scope"] == "static") {
-            description = "[静态] " + description;
-        }
-
-        newNodestr = newNodestr.replace(/\{description\}/g, description);
-        newNodestr = newNodestr.replace(/\{inherited\}/g, getFirstSpan(member["inherited"] ? "block" : "none"));
+        var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
         newNode.innerHTML = newNodestr;
@@ -244,8 +211,9 @@ function createMethods(dataList) {
             var param = member.params[j];
 
             var str = paramsListStr.replace(/\{param_name\}/g, param.name);
+            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
             str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
+            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param.type)));
 
             var tempNode = document.createElement(paramsList1.firstElementChild.nodeName);
             tempNode.innerHTML = str;
@@ -301,13 +269,8 @@ function createPropertyDetails(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
-        var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
-        newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-        newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
-        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
-        newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
+
+        var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
         newNode.innerHTML = newNodestr;
@@ -344,25 +307,20 @@ function createMethodDetails(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
-        var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
-        newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
-        newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
-        newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
-        newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
+
+        var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
         newNode.innerHTML = newNodestr;
 
-        var functionType = newNode.getElementsByClassName("functionType2")[0]
+        var functionType = newNode.getElementsByClassName("functionType2")[0];
         if (member["type"] == null) {
             functionType.parentNode.removeChild(functionType);
         }
 
-        var seeMore = newNode.getElementsByClassName("seeMore")[0]
+        var seeMore = newNode.getElementsByClassName("seeMore")[0];
         if (member.see) {
-            var seelist = newNode.getElementsByClassName("seelist")[0]
+            var seelist = newNode.getElementsByClassName("seelist")[0];
             var seeElementStr = seelist.innerHTML;
             for (var j = 0; j < member.see.length; j++) {
                 var seeStr = member.see[j];
@@ -392,16 +350,18 @@ function createMethodDetails(dataList) {
             var param = member.params[j];
 
             var str = paramsList2Str.replace(/\{param_name\}/g, param.name);
+            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param["type"]));
             str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
+            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param["type"])));
 
             var paramsNode2 = document.createElement(paramsList2.firstElementChild.nodeName);
             paramsNode2.innerHTML = str;
             paramsList2.appendChild(paramsNode2);
 
             var str = paramsList3Str.replace(/\{param_name\}/g, param.name);
+            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param["type"]));
             str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(param.type));
+            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param["type"])));
             str = str.replace(/\{param_description\}/g, param.description);
             var paramsNode3 = document.createElement(paramsList3.firstElementChild.nodeName);
             paramsNode3.innerHTML = str;
@@ -504,6 +464,11 @@ function getFullMemberof(member) {
         return member["memberof"] + ".globalMemeber";
     }
 
+    var memberof = member["memberof"];
+    if (getModule(memberof) == null) {
+        return "global.Types";
+    }
+
     return member["memberof"];
 }
 
@@ -515,5 +480,55 @@ function getModuleof(memberof, kind) {
         return currentClassModule;
     }
 
+    if (getModule(memberof) == null) {
+        memberof = "global.Types";
+    }
+
     return getModule(memberof);
+}
+
+function getTypeClassName(type) {
+    if (getModule(type) == null) {
+        type = "global.Types";
+    }
+
+    return type;
+}
+
+function getReplacedStr(newNodestr, member) {
+    newNodestr = newNodestr.replace(/\{name\}/g, member["name"]);
+
+    newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+    newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
+
+
+    newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
+    newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
+    newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
+    newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
+    newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
+
+
+    var typeclass= getTypeClassName(member["type"]);
+    newNodestr = newNodestr.replace(/\{type_class\}/g, typeclass);
+    newNodestr = newNodestr.replace(/\{type_href\}/g, getModuleof(typeclass, "") + "_" + typeclass);
+
+    var description = getFirstSpan(member["description"]);
+    if (member["scope"] == "static") {
+        description = "[常量] " + description;
+        newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
+    }
+
+    if (member["rwType"] == 1) {
+        description = "[只读] " + description;
+    }
+    if (member["rwType"] == 2) {
+        description = "[只写] " + description;
+    }
+
+    newNodestr = newNodestr.replace(/\{description\}/g, description);
+    newNodestr = newNodestr.replace(/\{inherited\}/g, member["inherited"] ? "block" : "none");
+
+
+    return newNodestr;
 }

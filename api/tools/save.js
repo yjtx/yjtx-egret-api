@@ -143,7 +143,12 @@ exports.save = function (tempClassObjs) {
     for (var tempKey in allModules) {
         screen(allModules[tempKey], tempKey);
     }
+
     var outputPath = globals.getOutputPath();
+    file.copy(path.join(globals.getApiParserRoot(), "normalJsons/global.Types.json"), path.join(outputPath, "finalClasses", "other", "global.Types.json"));
+
+    allModuleList["other"] = ["global.Types"];
+
     saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(allModuleList, null, "\t"));
 
     function addClass(item, key, moduleKey) {

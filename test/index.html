@@ -195,11 +195,11 @@
                                      style="display: {inherited};">
                             </td>
                             <td class="summaryTableSignatureCol">
-                                <a href="#{moduleof}_{memberof_full}" onlick="scrollIntoView(this)"
+                                <a href="#{moduleof}_{memberof_full}_{name}" onlick="scrollIntoView(this)"
                                    class="signatureLink Method">
                                     <span>{name}</span>
                                 </a>
-                                : <a href="#{moduleof}_{memberof_full}_{name}" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                : <a href="#{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                                 <span class="defaultValue"> = {default}</span>
 
                                 <div class="summaryTableDescription">
@@ -262,14 +262,14 @@
                                             <span>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_href}" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                                <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                                 <span>, </span>
                                             </span>
                                         </span>
                                     <span>)</span>
                                         <span class="functionType1">
                                             :
-                                            <a href="{param_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                            <a href="{param_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                                         </span>
                                 </div>
                                 <div class="summaryTableDescription">
@@ -363,12 +363,12 @@
 
                                 <p class="getProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public get {name}():
-                                    <a href="{type_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                    <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                                 </p>
 
                                 <p class="setProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public set {name}(value:
-                                    <a href="{type_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>) <br>
+                                    <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>) <br>
                                 </p>
 
                                 <!--示例-->
@@ -415,14 +415,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="{param_href}" data-class-name="{param_type}" onclick="goto(this)">{param_type}</a>
+                                    <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="{param_href}" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                <a href="{param_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                             </span>
 
                                 <p></p>
@@ -470,7 +470,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_href}" data-class-name="{param_type}"
+                                                <a href="{param_href}" data-class-name="{param_type_class}"
                                                    onclick="goto(this)">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
