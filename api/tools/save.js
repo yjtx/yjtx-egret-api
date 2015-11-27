@@ -47,7 +47,9 @@ function screen(moduleClassObjs, moduleKey) {
         }
     }
 
-    allModuleList[moduleKey] = [];
+    if (allModuleList[moduleKey] != null) {
+        allModuleList[moduleKey] = [];
+    }
     for (var key in tempModulesArr) {
         var mod = tempModulesArr[key];
 
