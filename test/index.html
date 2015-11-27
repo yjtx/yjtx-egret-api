@@ -195,11 +195,11 @@
                                      style="display: {inherited};">
                             </td>
                             <td class="summaryTableSignatureCol">
-                                <a href="#{moduleof}_{memberof}" onlick="scrollIntoView(this)"
+                                <a href="#{moduleof}_{memberof_full}" onlick="scrollIntoView(this)"
                                    class="signatureLink Method">
                                     <span>{name}</span>
                                 </a>
-                                : <a href="#{moduleof}_{memberof}_{name}" data-class-name="{type}" onclick="goto(this)">{type}</a>
+                                : <a href="#{moduleof}_{memberof_full}_{name}" data-class-name="{type}" onclick="goto(this)">{type}</a>
                                 <span class="defaultValue"> = {default}</span>
 
                                 <div class="summaryTableDescription">
@@ -207,7 +207,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}"
+                                <a href="#{moduleof}_{memberof_full}" data-class-name="{memberof_full}"
                                    onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
@@ -254,7 +254,7 @@
                             </td>
                             <td class="summaryTableSignatureCol">
                                 <div class="summarySignature">
-                                    <a href="#{moduleof}_{memberof}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
+                                    <a href="#{moduleof}_{memberof_full}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
                                         <span data-function-name="{name}">{name}</span>
                                     </a>
                                     <span>(</span>
@@ -277,7 +277,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                                <a href="#{moduleof}_{memberof_full}" data-class-name="{memberof_full}" onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
                         </tbody>
@@ -323,7 +323,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{moduleof}_{memberof}_{name}">{name}</h3>
+                                        <h3 id="{moduleof}_{memberof_full}_{name}">{name}</h3>
                                     </td>
                                     <td class="detailHeaderType">属性</td>
                                     <td class="detailHeaderRule">&nbsp;</td>
@@ -332,7 +332,7 @@
                             </table>
                             <div class="detailBody">
                                 {name} :
-                                <a href="#{moduleof}_{memberof}" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
+                                <a href="#{moduleof}_{memberof_full}" data-class-name="{memberof}" onclick="goto(this)">{memberof}</a>
 
                                 <p></p>
                                 <table cellpadding="0" cellspacing="0" border="0">
@@ -398,7 +398,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{moduleof}_{memberof}_{name}">
+                                        <h3 id="{moduleof}_{memberof_full}_{name}">
                                             <span data-function-name="{name}">{name}</span>
                                         </h3>
                                     </td>

@@ -5,7 +5,12 @@ var memberHide = true;
 var methodyHide = true;
 var headerStr = document.getElementById("classHeader").innerHTML;
 
+var currentClassModule;
+var currentClassName;
 function changeClass(moduleKey, className) {
+    currentClassModule = moduleKey;
+    currentClassName = className;
+
     getData("data/finalClasses/" + moduleKey + "/" + className + ".json", function (data) {
         apiData = JSON.parse(data);
 
@@ -152,8 +157,9 @@ function createMembers(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
+        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
 
         var description = getFirstSpan(member["description"]);
@@ -205,8 +211,9 @@ function createMethods(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
+        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
 
         var description = getFirstSpan(member["description"]);
@@ -295,8 +302,8 @@ function createPropertyDetails(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
+        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
         newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
         newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
@@ -326,17 +333,6 @@ function createPropertyDetails(dataList) {
     hideFirst(members);
 }
 
-function getMemberof(member) {
-    if (member.kind == "globalFunction") {
-        return member["memberof"] + ".globalFunction";
-    }
-    if (member.kind == "globalMemeber") {
-        return member["memberof"] + ".globalMemeber";
-    }
-
-    return member["memberof"];
-}
-
 function createMethodDetails(dataList) {
     var members = document.getElementById("methodDetails");
     clearList(members);
@@ -349,8 +345,8 @@ function createMethodDetails(dataList) {
         var member = dataList[i];
 
         var newNodestr = nodestr.replace(/\{name\}/g, member["name"]);
-        newNodestr = newNodestr.replace(/\{memberof\}/g, getMemberof(member));
-        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModule(getMemberof(member)));
+        newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
+        newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
         newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
         newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
         newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
@@ -498,4 +494,26 @@ function InheritedMethod() {
     }
 
     hideFirst(members);
+}
+
+function getFullMemberof(member) {
+    if (member.kind == "globalFunction") {
+        return member["memberof"] + ".globalFunction";
+    }
+    if (member.kind == "globalMemeber") {
+        return member["memberof"] + ".globalMemeber";
+    }
+
+    return member["memberof"];
+}
+
+function getModuleof(memberof, kind) {
+    if (kind == "globalFunction") {
+        return currentClassModule;
+    }
+    if (kind == "globalMemeber") {
+        return currentClassModule;
+    }
+
+    return getModule(memberof);
 }
