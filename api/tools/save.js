@@ -47,7 +47,7 @@ function screen(moduleClassObjs, moduleKey) {
         }
     }
 
-    if (allModuleList[moduleKey] != null) {
+    if (allModuleList[moduleKey] == null) {
         allModuleList[moduleKey] = [];
     }
     for (var key in tempModulesArr) {
