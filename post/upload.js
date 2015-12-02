@@ -49,8 +49,11 @@ if (method && port && host && path) {
         host: host,
         path: path
     };
+
+    console.log(options);
 }
 
+return;
 function onResponse(value) {
     console.log(value);
     count++;
