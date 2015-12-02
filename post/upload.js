@@ -53,7 +53,6 @@ if (method && port && host && path) {
     console.log(options);
 }
 
-return;
 function onResponse(value) {
     console.log(value);
     count++;
