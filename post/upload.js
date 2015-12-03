@@ -10,24 +10,24 @@ function getOption(type) {
 }
 
 var files = [
-    {urlKey: "file1", urlValue: "resource/bg1.jpg"},
-    {urlKey: "file2", urlValue: "resource/bg2.png"},
-    {urlKey: "file3", urlValue: "resource/effect.mp3"},
-    {urlKey: "filezip", urlValue: "resource/zips.zip"}
+    {urlKey: "file1", urlValue: "resource/bg1.jpg", params:{}},
+    {urlKey: "file2", urlValue: "resource/bg2.png", params:{}},
+    {urlKey: "file3", urlValue: "resource/effect.mp3", params:{}},
+    {urlKey: "filezip", urlValue: "resource/zips.zip", params:{}}
 ];
 
-//node ssss.js --files file1=bg1.jpg,file2=bg2.png,file3=effect.mp3,filezip=dragonbones.zip
+//node ssss.js --files [["file1", "resource/bg1.jpg", {type:1212,version2323}]]
 var fileStr = getOption("--files");
+console.log(fileStr);
 if (fileStr) {
-    var array = fileStr.split(",");
-    if (array.length) {
-        files = [];
-        for (var i = 0; i < array.length; i++) {
-            var item = array[i];
-            var tempA = item.split("=");
-            files.push({urlKey: tempA[0], urlValue: tempA[1]});
-        }
+    var infoArr = JSON.parse(fileStr);
+    files = [];
+    for (var key in infoArr) {
+        var info = infoArr[key];
+
+        files.push({urlKey: info[0], urlValue: info[1], params:info[2]});
     }
+
     console.log(files);
 }
 
@@ -53,6 +53,7 @@ if (method && port && host && path) {
     console.log(options);
 }
 
+
 function onResponse(value) {
     console.log(value);
     count++;
@@ -61,9 +62,8 @@ function onResponse(value) {
         return;
     }
     upload.init(options, onResponse);
-    upload.upload(files[count]["urlKey"], files[count]["urlValue"]);
+    upload.upload(files[count]["urlKey"], files[count]["urlValue"], files[count]["params"]);
 }
 
-var count = 0;
-upload.init(options, onResponse);
-upload.upload(files[count]["urlKey"], files[count]["urlValue"]);
+var count = -1;
+onResponse({});
