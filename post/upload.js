@@ -18,7 +18,7 @@ var files = [
 
 //node ssss.js --files [["file1", "resource/bg1.jpg", {type:1212,version2323}]]
 var fileStr = getOption("--files");
-console.log(fileStr);
+console.log("fileStr   " + fileStr);
 if (fileStr) {
     var infoArr = JSON.parse(fileStr);
     files = [];

@@ -12,7 +12,7 @@ function postFile(urlKey, urlValue, params, req) {
             content = content
                 + "\r\n----" + boundaryKey + "\r\n"
                 + "Content-Disposition: form-data; name=\"" + key + "\"\r\n\r\n"
-                + "" + params[key] + "\r\n";
+                + "" + params[key] + "";
         }
     }
 
