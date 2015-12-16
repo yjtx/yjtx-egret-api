@@ -1,0 +1,41 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "egret.gui.IItemRenderer",
+			"name": "updateRenderer",
+			"memberof": "egret.gui.IItemRendererOwner",
+			"scope": "instance",
+			"description": "更新项呈示器数据",
+			"returns": "",
+			"params": [
+				{
+					"name": "renderer",
+					"type": "egret.gui.IItemRenderer",
+					"description": ""
+				},
+				{
+					"name": "itemIndex",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "data",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IItemRendererOwner",
+		"memberof": "egret.gui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/IItemRendererOwner.ts",
+		"description": "项呈示器的主机组件接口"
+	}
+}

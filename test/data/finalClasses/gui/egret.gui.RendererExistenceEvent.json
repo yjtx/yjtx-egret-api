@@ -1,0 +1,714 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ACTIVATE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "游戏激活",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"activate\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ADDED",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "将显示对象添加到显示列表中时调度。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"added\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ADDED_TO_STAGE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "在将显示对象直接添加到舞台显示列表或将包含显示对象的子树添加至舞台显示列表中时调度。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"addedToStage\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CHANGE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "属性值或状态发生改变。通常是按钮的选中状态，或者列表的选中项索引改变。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"change\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CHANGING",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "属性值或状态即将发生改变,通常是按钮的选中状态，或者列表的选中项索引改变。可以通过调用 preventDefault() 方法阻止索引发生更改。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"changing\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CLOSE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "Event.CLOSE 常量定义 close 事件对象的 type 属性的值。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"close\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "COMPLETE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "网络请求加载完成",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"complete\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CONNECT",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "Event.CONNECT 常量定义 connect 事件对象的 type 属性的值。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"connect\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "DEACTIVATE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "取消激活",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"deactivate\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ENDED",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "动画声音等播放完成",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"ended\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ENTER_FRAME",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "[广播事件] 进入新的一帧,监听此事件将会在下一帧开始时触发一次回调。这是一个广播事件，可以在任何一个显示对象上监听，无论它是否在显示列表中。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"enterFrame\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FOCUS_IN",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "TextInput实例获得焦点",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"focusIn\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FOCUS_OUT",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "TextInput实例失去焦点",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"focusOut\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LEAVE_STAGE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "Event.LEAVE_STAGE 常量定义 leaveStage 事件对象的 type 属性的值。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"leaveStage\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LOOP_COMPLETE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "循环完成",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"loopComplete\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REMOVED",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "将要从显示列表中删除显示对象时调度。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"removed\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REMOVED_FROM_STAGE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "在从显示列表中直接删除显示对象或删除包含显示对象的子树时调度。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"removedFromStage\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RENDER",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "渲染事件，监听此事件将会在本帧末即将开始渲染的前一刻触发回调，这是一个广播事件，可以在任何一个显示对象上监听，无论它是否在显示列表中。注意：每次您希望 Egret 发送 Event.RENDER 事件时，都必须调用 stage.invalidate() 方法，由于每帧只会触发一次屏幕刷新，若在 Event.RENDER 回调函数执行期间再次调用stage.invalidate()，将会被忽略。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"render\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RENDERER_ADD",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "static",
+			"description": "添加了项呈示器",
+			"pType": "public",
+			"default": "\"rendererAdd\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RENDERER_REMOVE",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "static",
+			"description": "移除了项呈示器",
+			"pType": "public",
+			"default": "\"rendererRemove\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RESIZE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "舞台尺寸或UI组件尺寸发生改变",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"resize\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SOUND_COMPLETE",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "Event.SOUND_COMPLETE 常量定义 在声音完成播放后调度。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"soundComplete\"",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "bubbles",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "表示事件是否为冒泡事件。如果事件可以冒泡，则此值为 true；否则为 false。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "cancelable",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "表示是否可以阻止与事件相关联的行为。如果可以取消该行为，则此值为 true；否则为 false。",
+			"see": [
+				"#preventDefault()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "currentTarget",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前正在使用某个事件侦听器处理 Event 对象的对象。例如，如果用户单击“确定”按钮，则当前目标可以是包含该按钮的节点，也可以是它的已为该事件注册了事件侦听器的始祖之一。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "data",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "instance",
+			"description": "呈示器的数据项目。",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "eventPhase",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "事件流中的当前阶段。此属性可以包含以下数值：捕获阶段 (EventPhase.CAPTURING_PHASE)。目标阶段 (EventPhase.AT_TARGET)。冒泡阶段 (EventPhase.BUBBLING_PHASE)。",
+			"see": [
+				"egret.EventPhase"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "index",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "instance",
+			"description": "指向已添加或删除项呈示器的位置的索引。",
+			"pType": "public",
+			"default": "NaN"
+		},
+		{
+			"kind": "member",
+			"type": "egret.gui.IItemRenderer",
+			"name": "renderer",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "instance",
+			"description": "对已添加或删除的项呈示器的引用。",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "target",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "事件目标。此属性包含目标节点。例如，如果用户单击“确定”按钮，则目标节点就是包含该按钮的显示列表节点。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "type",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "事件的类型。类型区分大小写。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "RendererExistenceEvent",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "type",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "bubbles",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				},
+				{
+					"name": "cancelable",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				},
+				{
+					"name": "renderer",
+					"type": "egret.gui.IItemRenderer",
+					"default": "null",
+					"description": ""
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"default": "-1",
+					"description": ""
+				},
+				{
+					"name": "data",
+					"type": "any",
+					"default": "null",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clean",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "create",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "从对象池中取出或创建一个新的事件实例。我们建议您尽可能使用Event.create()和Event.release() 这一对方法来创建和释放事件对象，这一对方法会将事件实例在内部缓存下来供下次循环使用，减少对象的创建次数,从而获得更高的代码运行性能。<br/>注意：若使用此方法来创建自定义事件的实例，自定义的构造函数参数列表必须跟Event类一致。",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;var&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
+			"see": [
+				"#clean()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "EventClass",
+					"type": "{new (type:string, bubbles?:boolean, cancelable?:boolean): T;eventPool?:Event[]}",
+					"description": "Event类名。"
+				},
+				{
+					"name": "type",
+					"type": "string",
+					"description": "事件的类型，可以作为 Event.type 访问。"
+				},
+				{
+					"name": "bubbles",
+					"question": true,
+					"type": "boolean",
+					"description": "确定 Event 对象是否参与事件流的冒泡阶段。默认值为 false。"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "dispatchEvent",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "使用指定的 EventDispatcher 对象来抛出 Event 事件对象。抛出的对象将会缓存在对象池上，供下次循环复用。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "target",
+					"type": "egret.IEventDispatcher",
+					"description": "派发事件目标"
+				},
+				{
+					"name": "type",
+					"type": "string",
+					"description": "事件类型"
+				},
+				{
+					"name": "bubbles",
+					"type": "boolean",
+					"default": "false",
+					"description": "确定 Event 对象是否参与事件流的冒泡阶段。默认值为 false。"
+				},
+				{
+					"name": "data",
+					"question": true,
+					"type": "any",
+					"description": "事件data"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "dispatchRendererExistenceEvent",
+			"memberof": "egret.gui.RendererExistenceEvent",
+			"scope": "static",
+			"description": "使用指定的EventDispatcher对象来抛出事件对象。抛出的对象将会缓存在对象池上，供下次循环复用。",
+			"params": [
+				{
+					"name": "target",
+					"type": "egret.IEventDispatcher",
+					"description": ""
+				},
+				{
+					"name": "type",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "renderer",
+					"type": "egret.gui.IItemRenderer",
+					"default": "null",
+					"description": ""
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"default": "-1",
+					"description": ""
+				},
+				{
+					"name": "data",
+					"type": "any",
+					"default": "null",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "isDefaultPrevented",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"description": "检查是否已对事件调用 preventDefault() 方法。",
+			"returns": "如果已调用 preventDefault() 方法，则返回 true；否则返回 false。",
+			"see": [
+				"#preventDefault()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "preventDefault",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"description": "如果可以取消事件的默认行为，则取消该行为。许多事件都有默认执行的关联行为。例如，如果用户在文本字段中键入一个字符，则默认行为就是在文本字段中显示该字符。由于可以取消 TextEvent.TEXT_INPUT 事件的默认行为，因此您可以使用 preventDefault() 方法来防止显示该字符。您可以使用 Event.cancelable 属性来检查是否可以防止与特定事件关联的默认行为。如果 Event.cancelable 的值为 true，则可以使用 preventDefault() 来取消事件；否则，preventDefault() 无效。",
+			"see": [
+				"#cancelable",
+				"#isDefaultPrevented"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "release",
+			"memberof": "egret.Event",
+			"scope": "static",
+			"description": "释放一个事件对象，并缓存到对象池。我们建议您尽可能使用Event.create()和Event.release() 这一对方法来创建和释放事件对象，这一对方法会将事件实例在内部缓存下来供下次循环使用，减少对象的创建次数,从而获得更高的代码运行性能。<br/>注意：此方法只能传入由Event.create()创建的事件实例，传入非法对象实例可能会导致报错。",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;var&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
+			"see": [
+				"#clean()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "event",
+					"type": "egret.Event",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stopImmediatePropagation",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"description": "防止对事件流中当前节点中和所有后续节点中的事件侦听器进行处理。此方法会立即生效，并且会影响当前节点中的事件侦听器。相比之下，在当前节点中的所有事件侦听器都完成处理之前，stopPropagation() 方法不会生效。<br/>注意：此方法不会取消与此事件相关联的行为；有关此功能的信息，请参阅 preventDefault()。",
+			"see": [
+				"#stopPropagation()",
+				"#preventDefault()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stopPropagation",
+			"memberof": "egret.Event",
+			"scope": "instance",
+			"description": "防止对事件流中当前节点的后续节点中的所有事件侦听器进行处理。此方法不会影响当前节点 currentTarget 中的任何事件侦听器。相比之下，stopImmediatePropagation() 方法可以防止对当前节点中和后续节点中的事件侦听器进行处理。对此方法的其它调用没有任何效果。可以在事件流的任何阶段中调用此方法。<br/>注意：此方法不会取消与此事件相关联的行为；有关此功能的信息，请参阅 preventDefault()。",
+			"see": [
+				"#stopImmediatePropagation()",
+				"#preventDefault()"
+			],
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.Event"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "RendererExistenceEvent",
+		"memberof": "egret.gui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/RendererExistenceEvent.ts",
+		"description": "在DataGroup添加或删除项呈示器时分派的事件。",
+		"augments": [
+			"egret.Event",
+			"egret.HashObject"
+		]
+	}
+}

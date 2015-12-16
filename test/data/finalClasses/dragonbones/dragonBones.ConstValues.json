@@ -1,0 +1,752 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "ANGLE_TO_RADIAN",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "角度转换为弧度",
+			"pType": "public",
+			"default": "Math.PI / 180"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ANIMATION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "动画",
+			"pType": "public",
+			"default": "\"animation\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ARMATURE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "骨架",
+			"pType": "public",
+			"default": "\"armature\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_ACTION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "动作",
+			"pType": "public",
+			"default": "\"action\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_ALPHA_MULTIPLIER",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "透明度的倍数",
+			"pType": "public",
+			"default": "\"aM\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_ALPHA_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "透明度的偏移",
+			"pType": "public",
+			"default": "\"aO\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_AUTO_TWEEN",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "自动补间",
+			"pType": "public",
+			"default": "\"autoTween\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_BLENDMODE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "混合模式",
+			"pType": "public",
+			"default": "\"blendMode\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_BLUE_MULTIPLIER",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "蓝色的倍数",
+			"pType": "public",
+			"default": "\"bM\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_BLUE_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "蓝色的偏移",
+			"pType": "public",
+			"default": "\"bO\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_CURVE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "动画曲线",
+			"pType": "public",
+			"default": "\"curve\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_DISPLAY_INDEX",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "显示对象序号",
+			"pType": "public",
+			"default": "\"displayIndex\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_DURATION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "持续时长",
+			"pType": "public",
+			"default": "\"duration\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_EVENT",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "事件",
+			"pType": "public",
+			"default": "\"event\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_EVENT_PARAMETERS",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "事件参数",
+			"pType": "public",
+			"default": "\"eventParameters\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FADE_IN_TIME",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "缓入事件",
+			"pType": "public",
+			"default": "\"fadeInTime\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FIXED_ROTATION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "旋转修正",
+			"pType": "public",
+			"default": "\"fixedRotation\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FRAME_HEIGHT",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧的高度",
+			"pType": "public",
+			"default": "\"frameHeight\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FRAME_RATE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧速率",
+			"pType": "public",
+			"default": "\"frameRate\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FRAME_WIDTH",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧的宽度",
+			"pType": "public",
+			"default": "\"frameWidth\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FRAME_X",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧的x坐标",
+			"pType": "public",
+			"default": "\"frameX\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_FRAME_Y",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧的y坐标",
+			"pType": "public",
+			"default": "\"frameY\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_GREEN_MULTIPLIER",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "绿色的倍数",
+			"pType": "public",
+			"default": "\"gM\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_GREEN_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "绿色的偏移",
+			"pType": "public",
+			"default": "\"gO\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_HEIGHT",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "高度",
+			"pType": "public",
+			"default": "\"height\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_HIDE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "隐藏",
+			"pType": "public",
+			"default": "\"hide\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_IMAGE_PATH",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "图片路径",
+			"pType": "public",
+			"default": "\"imagePath\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_INHERIT_ROTATION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "继承旋转",
+			"pType": "public",
+			"default": "\"inheritRotation\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_INHERIT_SCALE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "继承缩放",
+			"pType": "public",
+			"default": "\"inheritScale\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_IS_GLOBAL",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "是否是全局",
+			"pType": "public",
+			"default": "\"isGlobal\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_LENGTH",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "长度",
+			"pType": "public",
+			"default": "\"length\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_LOOP",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "循环",
+			"pType": "public",
+			"default": "\"loop\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_NAME",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "名字",
+			"pType": "public",
+			"default": "\"name\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "偏移",
+			"pType": "public",
+			"default": "\"offset\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_PARENT",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "父亲",
+			"pType": "public",
+			"default": "\"parent\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_PIVOT_X",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "轴点的x坐标",
+			"pType": "public",
+			"default": "\"pX\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_PIVOT_Y",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "轴点的y坐标",
+			"pType": "public",
+			"default": "\"pY\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_PLAY_TIMES",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"playTimes\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_RED_MULTIPLIER",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "红色的倍数",
+			"pType": "public",
+			"default": "\"rM\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_RED_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "红色的偏移",
+			"pType": "public",
+			"default": "\"rO\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_ROTATED",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "旋转",
+			"pType": "public",
+			"default": "\"rotated\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "缩放",
+			"pType": "public",
+			"default": "\"scale\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE_MODE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "缩放模式",
+			"pType": "public",
+			"default": "\"scaleMode\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE_X",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "x方向缩放",
+			"pType": "public",
+			"default": "\"scX\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE_X_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "x方向缩放的偏移",
+			"pType": "public",
+			"default": "\"scXOffset\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE_Y",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "y方向缩放",
+			"pType": "public",
+			"default": "\"scY\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SCALE_Y_OFFSET",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "y方向的偏移",
+			"pType": "public",
+			"default": "\"scYOffset\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SKEW_X",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "x方向斜切",
+			"pType": "public",
+			"default": "\"skX\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SKEW_Y",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "y方向斜切",
+			"pType": "public",
+			"default": "\"skY\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_SOUND",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "声音",
+			"pType": "public",
+			"default": "\"sound\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_TWEEN_EASING",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "补间缓动",
+			"pType": "public",
+			"default": "\"tweenEasing\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_TWEEN_ROTATE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "补间旋转",
+			"pType": "public",
+			"default": "\"tweenRotate\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_TWEEN_SCALE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "补间缩放",
+			"pType": "public",
+			"default": "\"tweenScale\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_TYPE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "类型",
+			"pType": "public",
+			"default": "\"type\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_VERSION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "版本",
+			"pType": "public",
+			"default": "\"version\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_WIDTH",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "宽度",
+			"pType": "public",
+			"default": "\"width\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_X",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "x轴",
+			"pType": "public",
+			"default": "\"x\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_Y",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "y轴",
+			"pType": "public",
+			"default": "\"y\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_Z_ORDER",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "z轴",
+			"pType": "public",
+			"default": "\"z\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BONE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "骨骼",
+			"pType": "public",
+			"default": "\"bone\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "COLOR",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"color\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "COLOR_TRANSFORM",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "颜色变换",
+			"pType": "public",
+			"default": "\"colorTransform\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "DISPLAY",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "显示对象",
+			"pType": "public",
+			"default": "\"display\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "DRAGON_BONES",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "龙骨",
+			"pType": "public",
+			"default": "\"dragonBones\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ELLIPSE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "椭圆",
+			"pType": "public",
+			"default": "\"ellipse\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FRAME",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "帧",
+			"pType": "public",
+			"default": "\"frame\""
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "RADIAN_TO_ANGLE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "弧度转换为角度",
+			"pType": "public",
+			"default": "180 / Math.PI"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RECTANGLE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "矩形",
+			"pType": "public",
+			"default": "\"rectangle\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SKIN",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "皮肤",
+			"pType": "public",
+			"default": "\"skin\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SLOT",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "插槽",
+			"pType": "public",
+			"default": "\"slot\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SUB_TEXTURE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "子纹理",
+			"pType": "public",
+			"default": "\"SubTexture\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TEXTURE_ATLAS",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "纹理集",
+			"pType": "public",
+			"default": "\"TextureAtlas\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TIMELINE",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "时间轴",
+			"pType": "public",
+			"default": "\"timeline\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TRANSFORM",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "变换",
+			"pType": "public",
+			"default": "\"transform\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ConstValues",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/ConstValues.ts",
+		"description": "定义了常用的常量"
+	}
+}

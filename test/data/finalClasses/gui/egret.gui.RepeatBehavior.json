@@ -1,0 +1,34 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LOOP",
+			"memberof": "egret.gui.RepeatBehavior",
+			"scope": "static",
+			"description": "指定在每个迭代上重复的动画在前进方向上的进度。",
+			"pType": "public",
+			"default": "\"loop\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REVERSE",
+			"memberof": "egret.gui.RepeatBehavior",
+			"scope": "static",
+			"description": "指定重复动画应该在每个迭代上倒转方向。例如，反向动画在偶数迭代上向前播放，而在奇数迭代上反向播放。",
+			"pType": "public",
+			"default": "\"reverse\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "RepeatBehavior",
+		"memberof": "egret.gui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/RepeatBehavior.ts",
+		"description": "RepeatBehavior类用于定义效果的重复行为的常量"
+	}
+}

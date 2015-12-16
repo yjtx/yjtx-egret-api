@@ -1,0 +1,49 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "alpha",
+			"memberof": "egret.DeviceRotationRate",
+			"scope": "instance",
+			"description": "设备绕 Z 轴旋转的角速度信息，单位是 度/秒",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "beta",
+			"memberof": "egret.DeviceRotationRate",
+			"scope": "instance",
+			"description": "设备绕 X 轴旋转的角速度信息，单位是 度/秒",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "gamma",
+			"memberof": "egret.DeviceRotationRate",
+			"scope": "instance",
+			"description": "设备绕 Y 轴旋转的角速度信息，单位是 度/秒",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "DeviceRotationRate",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/Motion.ts",
+		"description": "DeviceRotationRate 提供设备围绕三个轴旋转的角速度信息，单位是 角度/秒",
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

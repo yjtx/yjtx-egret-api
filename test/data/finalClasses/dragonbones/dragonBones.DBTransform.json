@@ -1,0 +1,142 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "rotation",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "旋转，用弧度表示",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scaleX",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "x方向的缩放",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scaleY",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "y方向的缩放",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "skewX",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "x方向的斜切，一般和skewY一起变化，可以表示旋转",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "skewY",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "y方向的斜切，一般和skewX一起变化，可以表示旋转",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "x",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "x坐标值",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "y",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "y坐标值",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "DBTransform",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "创建一个 DBTransform 实例.",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "add",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "transform加法",
+			"params": [
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "copy",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "拷贝传入的transfrom实例的所有属性",
+			"params": [
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "minus",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"description": "transform减法",
+			"params": [
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "normalizeRotation",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DBTransform",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/DBTransform.ts",
+		"description": "Dragonbones中使用的transform可以表示位移，旋转，缩放三种属性"
+	}
+}

@@ -1,0 +1,116 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "纹理集的名称",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scale",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "纹理集的缩放",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "egret.SpriteSheet",
+			"name": "spriteSheet",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "spriteSheet",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EgretSheetAtlas",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "创建一个新的EgretSheetAltas 实例",
+			"params": [
+				{
+					"name": "texture",
+					"type": "egret.Texture",
+					"description": "纹理"
+				},
+				{
+					"name": "textureData",
+					"type": "any",
+					"description": "纹理数据"
+				},
+				{
+					"name": "scale",
+					"type": "number",
+					"default": "1",
+					"description": "缩放"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Rectangle",
+			"name": "getRegion",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "根据子纹理的名字获取子纹理的矩形区域",
+			"returns": "获取到的矩形区域",
+			"params": [
+				{
+					"name": "subTextureName",
+					"type": "string",
+					"description": "子纹理的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "getTexture",
+			"memberof": "dragonBones.EgretSheetAtlas",
+			"scope": "instance",
+			"description": "通过纹理的名字来获取纹理",
+			"returns": "获取到的纹理",
+			"params": [
+				{
+					"name": "fullName",
+					"type": "string",
+					"description": "纹理的名字"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretSheetAtlas",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretSheetAtlas.ts",
+		"description": "Egret 引擎使用的sheet纹理集",
+		"implements": [
+			{
+				"name": "dragonBones.ITextureAtlas"
+			}
+		]
+	}
+}

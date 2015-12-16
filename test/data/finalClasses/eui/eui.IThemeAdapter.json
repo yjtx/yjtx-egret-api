@@ -1,0 +1,49 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "getTheme",
+			"memberof": "eui.IThemeAdapter",
+			"scope": "instance",
+			"description": "解析主题",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "url",
+					"type": "string",
+					"description": "待解析的主题url"
+				},
+				{
+					"name": "compFunc",
+					"type": "Function",
+					"description": "解析完成回调函数，示例：compFunc(e:egret.Event):void;"
+				},
+				{
+					"name": "errorFunc",
+					"type": "Function",
+					"description": "解析失败回调函数，示例：errorFunc():void;"
+				},
+				{
+					"name": "thisObject",
+					"type": "any",
+					"description": "回调的this引用"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IThemeAdapter",
+		"memberof": "eui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/IThemeAdapter.ts",
+		"description": "主题适配器接口。若项目需要自定义主题需要实现这个接口，然后调用如下代码注入自定义实现到框架即可：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;themeAdapter&nbsp;=&nbsp;new&nbsp;YourThemeAdapter();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stage.registerImplementation(&quot;eui.IThemeAdapter&quot;,themeAdapter);<br/></pre>",
+		"version": "eui 1.0",
+		"platform": "Web,Native"
+	}
+}

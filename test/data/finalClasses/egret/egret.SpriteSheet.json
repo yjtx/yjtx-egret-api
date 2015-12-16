@@ -1,0 +1,151 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SpriteSheet",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "创建一个 egret.SpriteSheet 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "texture",
+					"type": "egret.Texture",
+					"description": "纹理"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "createTexture",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "为 SpriteSheet 上的指定区域创建一个新的 Texture 对象并缓存它",
+			"returns": "创建的 Texture 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "缓存这个 Texture 对象所使用的名称，如果名称已存在，将会覆盖之前的 Texture 对象"
+				},
+				{
+					"name": "bitmapX",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的起始坐标x"
+				},
+				{
+					"name": "bitmapY",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的起始坐标y"
+				},
+				{
+					"name": "bitmapWidth",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的宽度"
+				},
+				{
+					"name": "bitmapHeight",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的高度"
+				},
+				{
+					"name": "offsetX",
+					"type": "number",
+					"default": "0",
+					"description": "原始位图的非透明区域 x 起始点"
+				},
+				{
+					"name": "offsetY",
+					"type": "number",
+					"default": "0",
+					"description": "原始位图的非透明区域 y 起始点"
+				},
+				{
+					"name": "textureWidth",
+					"question": true,
+					"type": "number",
+					"description": "原始位图的高度，若不传入，则使用 bitmapWidth 的值。"
+				},
+				{
+					"name": "textureHeight",
+					"question": true,
+					"type": "number",
+					"description": "原始位图的宽度，若不传入，则使用 bitmapHeight 的值。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "释放纹理",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "getTexture",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "根据指定纹理名称获取一个缓存的 Texture 对象",
+			"returns": "Texture 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "缓存这个 Texture 对象所使用的名称"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SpriteSheet",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/SpriteSheet.ts",
+		"description": "SpriteSheet 是一张由多个子位图拼接而成的集合位图，它包含多个 Texture 对象。每一个 Texture 都共享 SpriteSheet 的集合位图，但是指向它的不同的区域。在WebGL / OpenGL上，这种做法可以显著提升性能同时，SpriteSheet可以很方便的进行素材整合，降低HTTP请求数量SpriteSheet 格式的具体规范可以参见此文档  https://github.com/egret-labs/egret-core/wiki/Egret-SpriteSheet-Specification",
+		"see": [
+			"http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;SpriteSheet&nbsp;处理合并后的大图。<br/>&nbsp;*&nbsp;可以配合&nbsp;RES&nbsp;模块进行加载，RES模块封装了对&nbsp;SpriteSheet&nbsp;的使用。<br/>&nbsp;*/<br/>class&nbsp;SpriteSheetExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;URLLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;new&nbsp;egret.URLLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置加载方式为纹理<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.dataFormat&nbsp;=&nbsp;egret.URLLoaderDataFormat.TEXTURE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url:string&nbsp;=&nbsp;&quot;resource/assets/egret_icon.png&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;request:egret.URLRequest&nbsp;=&nbsp;new&nbsp;egret.URLRequest(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(request);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;&lt;egret.URLLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture:egret.Texture&nbsp;=&nbsp;&lt;egret.Texture&gt;loader.data;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;SpriteSheet&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;spriteSheet:egret.SpriteSheet&nbsp;=&nbsp;new&nbsp;egret.SpriteSheet(texture);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(spriteSheet.getTexture(&quot;part1&quot;));//null<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建一个新的&nbsp;Texture&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spriteSheet.createTexture(&quot;part1&quot;,&nbsp;0,&nbsp;0,&nbsp;100,&nbsp;100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(spriteSheet.getTexture(&quot;part1&quot;));//egret.Texture<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"augments": [
+			"egret.HashObject"
+		],
+		"children": [
+			"egret.BitmapFont"
+		]
+	}
+}

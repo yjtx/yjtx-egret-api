@@ -1,0 +1,126 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "formatRadian",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"description": "标准化弧度值，把弧度制换算到[-PI，PI]之间",
+			"returns": "输出标准化后的弧度制",
+			"params": [
+				{
+					"name": "radian",
+					"type": "number",
+					"description": "输入一个弧度值"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "globalToLocal",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"description": "全局坐标系转成成局部坐标系",
+			"params": [
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": "全局坐标系下的变换"
+				},
+				{
+					"name": "parent",
+					"type": "dragonBones.DBTransform",
+					"description": "父亲的坐标变换"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "matrixToTransform",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"description": "把 矩阵数据转成成transform数据",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": "需要转换的矩阵数据"
+				},
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": "转换后的transform数据"
+				},
+				{
+					"name": "scaleXF",
+					"type": "Boolean",
+					"description": "x方向的缩放"
+				},
+				{
+					"name": "scaleYF",
+					"type": "Boolean",
+					"description": "y方向的缩放"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "normalizeRotation",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"description": "确保角度在-180到180之间",
+			"params": [
+				{
+					"name": "rotation",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformToMatrix",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"description": "把transform数据转成成矩阵数据",
+			"params": [
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": "需要转换的transform数据"
+				},
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": "转换后的矩阵数据"
+				},
+				{
+					"name": "keepScale",
+					"type": "boolean",
+					"default": "false",
+					"description": "是否保持缩放"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "TransformUtil",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/TransformUtil.ts",
+		"description": "提供了一些常用的转换的静态方法"
+	}
+}

@@ -1,0 +1,281 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.AnimationData>",
+			"name": "animationDataList",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获得动画数据列表",
+			"returns": "",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.BoneData>",
+			"name": "boneDataList",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取骨骼数据列表",
+			"returns": "",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "armature数据的名字",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.SkinData>",
+			"name": "skinDataList",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取皮肤数据列表",
+			"returns": "",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.SlotData>",
+			"name": "slotDataList",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "ArmatureData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "创建一个ArmatureData实例",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addAnimationData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "添加一个动画数据",
+			"params": [
+				{
+					"name": "animationData",
+					"type": "dragonBones.AnimationData",
+					"description": "animationData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addBoneData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "添加一个骨骼数据",
+			"params": [
+				{
+					"name": "boneData",
+					"type": "dragonBones.BoneData",
+					"description": "boneData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addSkinData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "添加一个皮肤数据",
+			"params": [
+				{
+					"name": "skinData",
+					"type": "dragonBones.SkinData",
+					"description": "skinData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addSlotData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "slotData",
+					"type": "dragonBones.SlotData",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationData",
+			"name": "getAnimationData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "根据动画的名字获取动画数据",
+			"returns": "动画数据",
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "动画的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.BoneData",
+			"name": "getBoneData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "根据骨骼的名字获取到骨骼数据",
+			"returns": "骨骼数据",
+			"params": [
+				{
+					"name": "boneName",
+					"type": "string",
+					"description": "骨骼的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.SkinData",
+			"name": "getSkinData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "根据皮肤的名字获取到皮肤数据",
+			"returns": "皮肤数据",
+			"params": [
+				{
+					"name": "skinName",
+					"type": "string",
+					"description": "皮肤的名字"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.SlotData",
+			"name": "getSlotData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "slotName",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setSkinData",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "skinName",
+					"type": "String",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sortBoneDataHelpArray",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "static",
+			"params": [
+				{
+					"name": "object1",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "object2",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sortBoneDataHelpArrayDescending",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "static",
+			"params": [
+				{
+					"name": "object1",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "object2",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "sortBoneDataList",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "对骨骼按照骨骼数的层级关系排序",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ArmatureData",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/ArmatureData.ts",
+		"description": "armature数据 一个armature数据包含一个角色的骨骼，皮肤，动画的数据",
+		"see": [
+			"dragonBones.BoneData",
+			"dragonBones.SkinData",
+			"dragonBones.AnimationData"
+		]
+	}
+}

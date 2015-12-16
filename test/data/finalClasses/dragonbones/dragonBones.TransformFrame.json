@@ -1,0 +1,203 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "action",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"description": "帧标签",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ColorTransform",
+			"name": "color",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "绑定到骨骼的插槽的颜色transform，颜色的transform可以表示颜色在红蓝绿透明四个通道的变化",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.CurveData",
+			"name": "curve",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "displayIndex",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "绑定到该骨骼的插槽的显示序号，当插槽有多个显示对象时，指定显示哪一个显示对象",
+			"pType": "public",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "duration",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"description": "持续时间",
+			"pType": "public",
+			"default": "0",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "event",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"description": "帧事件",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "global",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "全局的transform",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Point",
+			"name": "pivot",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "注册点，骨骼的旋转中心",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "position",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"description": "位置",
+			"pType": "public",
+			"default": "0",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Point",
+			"name": "scaleOffset",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "缩放的偏移",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "sound",
+			"memberof": "dragonBones.Frame",
+			"scope": "instance",
+			"description": "帧声音",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Frame"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DBTransform",
+			"name": "transform",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "骨骼的transform，transform可以表示位移，旋转，缩放三种属性",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "tweenEasing",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "NaN:no tween, 10:auto tween, [-1, 0):ease in, 0:line easing, (0, 1]:ease out, (1, 2]:ease in out缓动值，当值为NaN时，没有缓动当值为10时，为自动当值为[-1,0)时，为缓进当值为0时，为线性缓动当值为(0, 1]时，为缓出当值为(1, 2]时，为缓进缓出",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "tweenRotate",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "旋转几圈",
+			"pType": "public",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "tweenScale",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "补间是否对Scale起作用",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "visible",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "是否可见",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "zOrder",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "绑定到该骨骼的插槽的zOrder值",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "TransformFrame",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "构造函数，实例化一个TransformFrame",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.TransformFrame",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "TransformFrame",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/TransformFrame.ts",
+		"description": "骨骼的关键帧数据，包含骨骼的缓动，旋转，transform数据和插槽的显示序号，可见度，zOrder，colorTransform数据",
+		"augments": [
+			"dragonBones.Frame"
+		]
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BTT",
+			"memberof": "eui.Direction",
+			"scope": "static",
+			"description": "竖直从下到上增长",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"btt\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LTR",
+			"memberof": "eui.Direction",
+			"scope": "static",
+			"description": "水平从左到右增长",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"ltr\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RTL",
+			"memberof": "eui.Direction",
+			"scope": "static",
+			"description": "水平从右到左增长",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"rtl\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TTB",
+			"memberof": "eui.Direction",
+			"scope": "static",
+			"description": "竖直从上到下增长",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"ttb\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Direction",
+		"memberof": "eui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/Direction.ts",
+		"description": "定义进度条等控件增长方向的常量",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例使用&nbsp;DirectionExample&nbsp;类来控制进度条增长方向<br/>&nbsp;*/<br/>class&nbsp;DirectionExample&nbsp;extends&nbsp;egret.Sprite&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.once(egret.Event.ADDED_TO_STAGE,&nbsp;this.init,&nbsp;this);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;progress_LTR:&nbsp;eui.ProgressBar;<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;progress_RTL:&nbsp;eui.ProgressBar;<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;progress_TTB:&nbsp;eui.ProgressBar;<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;progress_BTT:&nbsp;eui.ProgressBar;<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;init():&nbsp;void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_LTR&nbsp;=&nbsp;this.getProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_LTR.direction&nbsp;=&nbsp;eui.Direction.LTR;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_LTR.width&nbsp;=&nbsp;200;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.progress_LTR);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_RTL&nbsp;=&nbsp;this.getProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_RTL.y&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_RTL.direction&nbsp;=&nbsp;eui.Direction.RTL;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_RTL.width&nbsp;=&nbsp;200;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.progress_RTL);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB&nbsp;=&nbsp;this.getProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB.width&nbsp;=&nbsp;60;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB.direction&nbsp;=&nbsp;eui.Direction.TTB;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB.height&nbsp;=&nbsp;200;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.progress_TTB);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT&nbsp;=&nbsp;this.getProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.width&nbsp;=&nbsp;60;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.x&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.direction&nbsp;=&nbsp;eui.Direction.BTT;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.height&nbsp;=&nbsp;200;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.progress_BTT);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addEventListener(egret.Event.ENTER_FRAME,&nbsp;this.onEF,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onEF():&nbsp;void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_LTR.value&nbsp;+=&nbsp;1;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.progress_LTR.value&nbsp;&gt;=&nbsp;100)&nbsp;this.progress_LTR.value&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_RTL.value&nbsp;+=&nbsp;1;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.progress_RTL.value&nbsp;&gt;=&nbsp;100)&nbsp;this.progress_RTL.value&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_TTB.value&nbsp;+=&nbsp;1;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.progress_TTB.value&nbsp;&gt;=&nbsp;100)&nbsp;this.progress_TTB.value&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.progress_BTT.value&nbsp;+=&nbsp;1;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.progress_BTT.value&nbsp;&gt;=&nbsp;100)&nbsp;this.progress_BTT.value&nbsp;=&nbsp;0;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//this.getProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;getProgressBar():&nbsp;eui.ProgressBar&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;exml&nbsp;=<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`&lt;s:Skin&nbsp;class=&quot;skins.ProgressBarSkin&quot;&nbsp;xmlns:s=&quot;http://ns.egret.com/eui&quot;&nbsp;minWidth=&quot;30&quot;&nbsp;minHeight=&quot;18&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Image&nbsp;source=&quot;resource/track.png&quot;&nbsp;scale9Grid=&quot;1,1,4,4&quot;&nbsp;width=&quot;100%&quot;&nbsp;height=&quot;100%&quot;&nbsp;verticalCenter=&quot;0&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Image&nbsp;id=&quot;thumb&quot;&nbsp;height=&quot;100%&quot;&nbsp;width=&quot;100%&quot;&nbsp;source=&quot;resource/thumb.png&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Label&nbsp;id=&quot;labelDisplay&quot;&nbsp;textAlign=&quot;center&quot;&nbsp;verticalAlign=&quot;middle&quot;&nbsp;size=&quot;15&quot;&nbsp;fontFamily=&quot;Tahoma&quot;&nbsp;textColor=&quot;0x707070&quot;&nbsp;horizontalCenter=&quot;0&quot;&nbsp;verticalCenter=&quot;0&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/s:Skin&gt;`;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;clazz&nbsp;=&nbsp;EXML.parse(exml);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;bar&nbsp;=&nbsp;new&nbsp;eui.ProgressBar();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar.skinName&nbsp;=&nbsp;&quot;skins.ProgressBarSkin&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;bar;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>"
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "height",
+			"memberof": "egret.BitmapData",
+			"scope": "instance",
+			"description": "位图图像的高度，以像素为单位。",
+			"rwType": 1,
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "width",
+			"memberof": "egret.BitmapData",
+			"scope": "instance",
+			"description": "位图图像的宽度，以像素为单位。",
+			"rwType": 1,
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "BitmapData",
+		"memberof": "egret",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/BitmapData.ts",
+		"description": "BitmapData 对象是一个包含像素数据的数组。此数据可以表示完全不透明的位图，或表示包含 Alpha 通道数据的透明位图。以上任一类型的 BitmapData 对象都作为 32 位整数的缓冲区进行存储。每个 32 位整数确定位图中单个像素的属性。<br/>每个 32 位整数都是四个 8 位通道值（从 0 到 255）的组合，这些值描述像素的 Alpha 透明度以及红色、绿色、蓝色 (ARGB) 值。（对于 ARGB 值，最高有效字节代表 Alpha 通道值，其后的有效字节分别代表红色、绿色和蓝色通道值。）",
+		"see": [
+			"egret.Bitmap"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"augments": [
+			"egret.HashObject"
+		],
+		"children": []
+	}
+}

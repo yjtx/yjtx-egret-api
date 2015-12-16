@@ -1,0 +1,119 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "duration",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "持续时间，单位是帧",
+			"pType": "public",
+			"default": "0",
+			"inherited": true,
+			"inherits": "dragonBones.Timeline"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.Frame>",
+			"name": "frameList",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取关键帧列表",
+			"returns": "",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Timeline"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.SlotTimeline",
+			"scope": "instance",
+			"description": "时间轴的名称",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "offset",
+			"memberof": "dragonBones.SlotTimeline",
+			"scope": "instance",
+			"description": "偏移量",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scale",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Timeline"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "transformed",
+			"memberof": "dragonBones.SlotTimeline",
+			"scope": "instance",
+			"description": "是否有动画",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SlotTimeline",
+			"memberof": "dragonBones.SlotTimeline",
+			"scope": "instance",
+			"description": "构造函数，实例化一个SlotTimeline",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addFrame",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "添加一个关键帧数据",
+			"see": [
+				"extension.dragonbones.model.Frame"
+			],
+			"params": [
+				{
+					"name": "frame",
+					"type": "dragonBones.Frame",
+					"description": "关键帧数据"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.Timeline"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.SlotTimeline",
+			"scope": "instance",
+			"description": "释放资源",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SlotTimeline",
+		"memberof": "dragonBones",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/SlotTimeline.ts",
+		"description": "插槽的时间轴数据，包含一个和多个关键帧数据",
+		"augments": [
+			"dragonBones.Timeline"
+		]
+	}
+}

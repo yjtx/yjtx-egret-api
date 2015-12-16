@@ -1,0 +1,63 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "easeInFraction",
+			"memberof": "egret.gui.EaseInOutBase",
+			"scope": "instance",
+			"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。有效值为 0.0 到 1.0。",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EaseInOutBase",
+			"memberof": "egret.gui.EaseInOutBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "easeInFraction",
+					"type": "number",
+					"default": "0.5",
+					"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。默认值为 EasingFraction.IN_OUT，它会缓入前一半时间，并缓出剩余的一半时间。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "ease",
+			"memberof": "egret.gui.EaseInOutBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "fraction",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EaseInOutBase",
+		"memberof": "egret.gui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/EaseInOutBase.ts",
+		"description": "EaseInOutBase 类是提供缓动功能的基类。",
+		"implements": [
+			{
+				"name": "egret.gui.IEaser"
+			}
+		],
+		"children": [
+			"egret.gui.Sine",
+			"egret.gui.Power"
+		]
+	}
+}
