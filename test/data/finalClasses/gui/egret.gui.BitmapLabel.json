@@ -610,6 +610,15 @@
 		},
 		{
 			"kind": "member",
+			"type": "boolean",
+			"name": "smoothing",
+			"memberof": "egret.gui.BitmapLabel",
+			"scope": "instance",
+			"description": "字符之间的距离",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
 			"type": "egret.Stage",
 			"name": "stage",
 			"memberof": "egret.DisplayObject",

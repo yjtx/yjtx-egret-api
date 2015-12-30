@@ -581,7 +581,6 @@
 			"memberof": "egret.gui.UIAsset",
 			"scope": "instance",
 			"description": "控制在缩放时是否对位图进行平滑处理。",
-			"default": "true。",
 			"version": "Egret 2.4",
 			"platform": "Web",
 			"pType": "public"

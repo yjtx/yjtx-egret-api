@@ -327,6 +327,20 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "TOUCH_CANCEL",
+			"memberof": "egret.TouchEvent",
+			"scope": "static",
+			"description": "由于某个事件取消了触摸时触发。比如 eui.Scroller 在开始滚动后会触发 'TOUCH_CANCEL' 事件，不再触发后续的 'TOUCH_END' 和 'TOUCH_TAP' 事件",
+			"version": "Egret 3.0.1",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"touchcancel\"",
+			"inherited": true,
+			"inherits": "egret.TouchEvent"
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "TOUCH_END",
 			"memberof": "egret.TouchEvent",
 			"scope": "static",

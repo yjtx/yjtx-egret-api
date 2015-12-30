@@ -5,9 +5,9 @@
 			"type": "string",
 			"name": "crossOrigin",
 			"memberof": "egret.ImageLoader",
-			"scope": "instance",
-			"description": "当从其他站点加载一个图片时，指定是否启用跨域资源共享(CORS)，默认值为null。<br/>可以设置为\"anonymous\",\"use-credentials\"或null,设置为其他值将等同于\"anonymous\"。",
-			"version": "Egret 2.4",
+			"scope": "static",
+			"description": "指定是否启用跨域资源共享,如果ImageLoader实例有设置过crossOrigin属性将使用设置的属性",
+			"version": "Egret 2.5.7",
 			"platform": "Web,Native",
 			"pType": "public"
 		},

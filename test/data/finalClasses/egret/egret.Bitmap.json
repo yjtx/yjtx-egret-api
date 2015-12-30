@@ -86,6 +86,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "boolean",
+			"name": "defaultSmoothing",
+			"memberof": "egret.Bitmap",
+			"scope": "static",
+			"description": "控制在缩放时是否进行平滑处理的默认值。在 Bitmap 等对象创建时,smoothing 属性会被设置为该值。",
+			"default": "true。",
+			"version": "Egret 3.0",
+			"platform": "Web",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
 			"type": "string",
 			"name": "fillMode",
 			"memberof": "egret.Bitmap",
@@ -322,7 +334,6 @@
 			"memberof": "egret.Bitmap",
 			"scope": "instance",
 			"description": "控制在缩放时是否对位图进行平滑处理。",
-			"default": "true。",
 			"version": "Egret 2.4",
 			"platform": "Web",
 			"pType": "public"

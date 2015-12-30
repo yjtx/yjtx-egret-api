@@ -8,5 +8,8 @@
         "socket": "extension/socket",
         "tween": "extension/tween",
         "dragonbones": "extension/dragonbones"
-    }
+    },
+    "exclude" : [
+        "jslib"
+    ]
 }

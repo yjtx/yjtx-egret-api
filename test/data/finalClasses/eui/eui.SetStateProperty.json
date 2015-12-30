@@ -1,0 +1,101 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SetStateProperty",
+			"memberof": "eui.SetStateProperty",
+			"scope": "instance",
+			"description": "创建一个SetProperty实例。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "host",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "chain",
+					"type": "string[]",
+					"description": ""
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": "要设置其属性的对象。默认情况下，EUI 使用 State 对象的直接父级。"
+				},
+				{
+					"name": "prop",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "apply",
+			"memberof": "eui.SetStateProperty",
+			"scope": "instance",
+			"inheritDoc": true,
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "host",
+					"type": "any",
+					"description": "含有视图状态的组件。"
+				},
+				{
+					"name": "parent",
+					"type": "egret.DisplayObjectContainer",
+					"description": "子项添加到的父级容器。"
+				}
+			],
+			"pType": "public",
+			"description": "应用覆盖。将保留原始值，以便以后可以在 remove() 方法中恢复该值。<p/>该方法是当进入状态的时候自动调用的，请不要直接调用此方法。"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "remove",
+			"memberof": "eui.SetStateProperty",
+			"scope": "instance",
+			"inheritDoc": true,
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "host",
+					"type": "any",
+					"description": "含有视图状态的组件。"
+				},
+				{
+					"name": "parent",
+					"type": "egret.DisplayObjectContainer",
+					"description": "子项添加到的父级容器。"
+				}
+			],
+			"pType": "public",
+			"description": "删除覆盖。在 apply() 方法中记住的值将被恢复。"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SetStateProperty",
+		"memberof": "eui",
+		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/states/SetStateProperty.ts",
+		"description": "SetProperty 类指定只在父视图状态期间有效的属性值。可以在 State 类的 overrides 属性中使用该类。",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"implements": [
+			{
+				"name": "eui.IOverride"
+			}
+		]
+	}
+}

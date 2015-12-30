@@ -33,7 +33,7 @@
 			"memberof": "egret.Texture",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "纹理高度",
+			"description": "纹理高度，只读属性，不可以设置",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"pType": "public"
@@ -45,7 +45,7 @@
 			"memberof": "egret.Texture",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "纹理宽度",
+			"description": "纹理宽度，只读属性，不可以设置",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"pType": "public"

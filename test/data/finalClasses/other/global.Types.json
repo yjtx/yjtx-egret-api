@@ -2,13 +2,63 @@
 	"member": [
 		{
 			"kind": "member",
+			"type": "Date",
+			"name": "Date",
+			"memberof": "global.Types",
+			"version": "all",
+			"platform": "all",
+			"description": "定义日期时间类型",
+			"example": "返回当前时间毫秒数：<br /><pre>var date: Date = new Date();<br />console.log(date.getTime());</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"memberof": "global.Types",
+			"name": "Function",
+			"version": "all",
+			"platform": "all",
+			"description": "",
+			"example": "函数无任何返回类型：<br /><pre>var f:Function</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "any",
+			"memberof": "global.Types",
+			"version": "all",
+			"platform": "all",
+			"description": "特殊类型或动态类型。如果想要将类型检查推迟到运行时进行，可以使用any。",
+			"example": "any定义：<br /><pre>var test:any=1;<br/>text=&quot;str&quot;;<br/>text=true<br/>//定义复杂类型数组<br/>var arr:any[] = [1, true, &quot;str&quot;];</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "array",
+			"name": "array",
+			"memberof": "global.Types",
+			"version": "all",
+			"platform": "all",
+			"description": "定义数组，需给定数组类型。",
+			"example": "定义数组的两种方式：<br /><pre>var arr:number[] = [1, 2, 3]; <p>var arr:Array<number> = [1, 2, 3];</p>var array:number[] = [1,2,3];<br />//获取数组长度 (3)<br />console.log(array.length);<br />//字符串形式表现 (1,2,3)<br />console.log(array.toString());<br />//添加对象到数组,返回添加对象(4)<br />console.log(array.push(4));<br />//删除数组最后一个元素,返回删除对象(4)<br />console.log(array.pop());<br />//连接两个数组<br />console.log(array.concat(5,6));<br />//已字符串形式输出数组,可以加入分隔符(1,2,3)<br />console.log(array.join());<br />//反转数组(3,2,1)<br />console.log(array.reverse());<br />//删除数组第一个元素，返回删除对象(3)<br />console.log(array.shift());<br />//截取从索引开始到结束的对象<br />console.log(array.slice(1,2));<br />//数组排序,不传入参数按字符排序，需要根据类型实现排序规则<br />array.sort(function(a: number,b: number): number { return b;});<br />//从数组中添加、删除项目，然后返回被删除的项目,会改变原始数组。参数1要删除起始位置，参数2要删除个数，参数3添加新项目对象<br />array.splice(1);<br />//向数组的开头添加一个或更多元素，并返回新的长度<br />array.unshift(1,2,3);<br />//查找数组中的元素，返回要查找的元素索引，第二个参数可以指定起始位置<br />array.indexOf(2);<br />//从右开始查找数组中的元素<br />array.lastIndexOf(1);<br />//判断数组中元素是否满足传入的条件，只有全部满足返回true<br />array.every;<br />//判断数组中元素是否满足传入的条件，有元素满足返回true<br />array.some;<br />//数组遍历<br />array.forEach;<br />//泛型,按特定规则生成新的数组,还可以参考array.reduce;array.reduceRight<br />var a = [&quot;hello&quot;, &quot;world&quot;];<br />var n = a.map(s => s.length);<br />console.log(n);<br />//返回所有符合条件的元素<br />array.filter;</pre>"
+		},
+		{
+			"kind": "member",
 			"type": "boolean",
 			"name": "boolean",
 			"memberof": "global.Types",
 			"version": "all",
 			"platform": "all",
 			"description": "定义布尔值类型，取值范围true或false，首字母注意是小写。",
-			"example":"定义布尔值类型：<br /><pre>var isDone: boolean = false;</pre>"
+			"example": "定义布尔值类型：<br /><pre>var isDone: boolean = false;</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "enum",
+			"name": "enum",
+			"memberof": "global.Types",
+			"version": "all",
+			"platform": "all",
+			"description": "枚举、集合数据类型，枚举是一组数值类型更加友好的名称。",
+			"example": "枚举定义与使用：<br /><pre>enum Color {Red, Green, Blue};<p>var c: Color = Color.Green;</p></pre>"
 		},
 		{
 			"kind": "member",
@@ -32,46 +82,6 @@
 		},
 		{
 			"kind": "member",
-			"type": "array",
-			"name": "array[]",
-			"memberof": "global.Types",
-			"version": "all",
-			"platform": "all",
-			"description": "定义数组，需给定数组类型。",
-			"example": "定义数组的两种方式：<br /><pre>var arr:number[] = [1, 2, 3]; <p>var arr:Array<number> = [1, 2, 3];</p>var array:number[] = [1,2,3];<br />//获取数组长度 (3)<br />console.log(array.length);<br />//字符串形式表现 (1,2,3)<br />console.log(array.toString());<br />//添加对象到数组,返回添加对象(4)<br />console.log(array.push(4));<br />//删除数组最后一个元素,返回删除对象(4)<br />console.log(array.pop());<br />//连接两个数组<br />console.log(array.concat(5,6));<br />//已字符串形式输出数组,可以加入分隔符(1,2,3)<br />console.log(array.join());<br />//反转数组(3,2,1)<br />console.log(array.reverse());<br />//删除数组第一个元素，返回删除对象(3)<br />console.log(array.shift());<br />//截取从索引开始到结束的对象<br />console.log(array.slice(1,2));<br />//数组排序,不传入参数按字符排序，需要根据类型实现排序规则<br />array.sort(function(a: number,b: number): number { return b;});<br />//从数组中添加、删除项目，然后返回被删除的项目,会改变原始数组。参数1要删除起始位置，参数2要删除个数，参数3添加新项目对象<br />array.splice(1);<br />//向数组的开头添加一个或更多元素，并返回新的长度<br />array.unshift(1,2,3);<br />//查找数组中的元素，返回要查找的元素索引，第二个参数可以指定起始位置<br />array.indexOf(2);<br />//从右开始查找数组中的元素<br />array.lastIndexOf(1);<br />//判断数组中元素是否满足传入的条件，只有全部满足返回true<br />array.every;<br />//判断数组中元素是否满足传入的条件，有元素满足返回true<br />array.some;<br />//数组遍历<br />array.forEach;<br />//泛型,按特定规则生成新的数组,还可以参考array.reduce;array.reduceRight<br />var a = [&quot;hello&quot;, &quot;world&quot;];<br />var n = a.map(s => s.length);<br />console.log(n);<br />//返回所有符合条件的元素<br />array.filter;</pre>"
-		},
-		{
-			"kind": "member",
-			"type": "enum",
-			"name": "enum",
-			"memberof": "global.Types",
-			"version": "all",
-			"platform": "all",
-			"description": "枚举、集合数据类型，枚举是一组数值类型更加友好的名称。",
-			"example": "枚举定义与使用：<br /><pre>enum Color {Red, Green, Blue};<p>var c: Color = Color.Green;</p></pre>"
-		},
-		{
-			"kind": "member",
-			"type": "any",
-			"name": "any",
-			"memberof": "global.Types",
-			"version": "all",
-			"platform": "all",
-			"description": "特殊类型或动态类型。如果想要将类型检查推迟到运行时进行，可以使用any。",
-			"example": "any定义：<br /><pre>var test:any=1;<br/>text=&quot;str&quot;;<br/>text=true<br/>//定义复杂类型数组<br/>var arr:any[] = [1, true, &quot;str&quot;];</pre>"
-		},
-		{
-			"kind": "member",
-			"type": "Date",
-			"name": "Date",
-			"memberof": "global.Types",
-			"version": "all",
-			"platform": "all",
-			"description": "定义日期时间类型",
-			"example": "返回当前时间毫秒数：<br /><pre>var date: Date = new Date();<br />console.log(date.getTime());</pre>"
-		},
-		{
-			"kind": "member",
 			"type": "",
 			"memberof": "global.Types",
 			"name": "void",
@@ -81,6 +91,9 @@
 			"example": "函数无任何返回类型：<br /><pre>function test():void{ }</pre>"
 		}
 	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
 	"class": {
 		"kind": "class",
 		"name": "Types",

@@ -319,6 +319,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "boolean",
+			"name": "smoothing",
+			"memberof": "egret.BitmapText",
+			"scope": "instance",
+			"description": "控制在缩放时是否进行平滑处理。",
+			"default": "true。",
+			"version": "Egret 3.0",
+			"platform": "Web",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
 			"type": "egret.Stage",
 			"name": "stage",
 			"memberof": "egret.DisplayObject",

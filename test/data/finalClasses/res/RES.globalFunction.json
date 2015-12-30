@@ -226,6 +226,18 @@
 		{
 			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
 			"kind": "globalFunction",
+			"type": "RES.VersionController",
+			"name": "getVersionController",
+			"memberof": "RES",
+			"scope": "instance",
+			"description": "获得版本控制器.",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "hasRes",
 			"memberof": "RES",
@@ -388,12 +400,14 @@
 			"name": "registerVersionController",
 			"memberof": "RES",
 			"scope": "instance",
-			"description": "根据url返回实际加载url地址",
+			"description": "注册版本控制器,通过RES模块加载资源时会从版本控制器获取真实url",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "vcs",
 					"type": "RES.VersionController",
-					"description": ""
+					"description": "注入的版本控制器。"
 				}
 			],
 			"pType": "public"
