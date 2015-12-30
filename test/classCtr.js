@@ -38,9 +38,19 @@ function initClassData() {
 
     if (apiData.class) {
         var str = headerStr;
+        if (apiData.class.memberof && apiData.class.memberof != "") {
+            str = str.replace(/\{memberof_name\}/g, currentClassName);
+        }
+        else  {
+            str = str.replace(/\{memberof_name\}/g, currentClassName);
+        }
+        str = str.replace(/\{example_href\}/g, currentClassModule + gapChar() + currentClassName + gapChar() + "example@@@");
+
         str = str.replace(/\{memberof\}/g, apiData.class.memberof);
         str = str.replace(/\{name\}/g, apiData.class.name);
         str = str.replace(/\{description\}/g, apiData.class.description);
+
+
 
         node.innerHTML = str;
 
@@ -66,7 +76,7 @@ function createExtends(node) {
         var augments = apiData.class.augments;
         for (var i = 0; i < augments.length; i++) {
             var tempStr = str.replace(/\{parent_name\}/g, augments[i]);
-            tempStr = tempStr.replace(/\{parent_href\}/g, "#" + getModule(augments[i]) + "_" + augments[i]);
+            tempStr = tempStr.replace(/\{parent_href\}/g, "#" + getClassHref(augments[i]));
 
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             parentNode.appendChild(node);
@@ -75,6 +85,15 @@ function createExtends(node) {
     }
 
     hideFirst(parentNode);
+}
+
+function getClassHref(className) {
+    if (getModule(className) == null) {
+        return "";
+    }
+    else {
+        return getModule(className) + gapChar() + className;
+    }
 }
 
 function createChildren(node) {
@@ -87,7 +106,7 @@ function createChildren(node) {
         var children = apiData.class.children;
         for (var i = 0; i < children.length; i++) {
             var tempStr = str.replace(/\{child_name\}/g, children[i]);
-            tempStr = tempStr.replace(/\{child_href\}/g, "#" + getModule(children[i]) + "_" + children[i]);
+            tempStr = tempStr.replace(/\{child_href\}/g, "#" + getClassHref(children[i]));
 
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             node.innerHTML = tempStr;
@@ -156,6 +175,9 @@ function createMembers(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
+        if (member.type == "egret.TextField") {
+var d;
+        }
         var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
@@ -210,10 +232,7 @@ function createMethods(dataList) {
         for (var j = 0; member.params && j < member.params.length; j++) {
             var param = member.params[j];
 
-            var str = paramsListStr.replace(/\{param_name\}/g, param.name);
-            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
-            str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param.type)));
+            var str = replaceParam(paramsListStr, param);
 
             var tempNode = document.createElement(paramsList1.firstElementChild.nodeName);
             tempNode.innerHTML = str;
@@ -234,7 +253,6 @@ function createMethods(dataList) {
 
     hideFirst(members);
 }
-
 
 function createEvents() {
 
@@ -349,20 +367,14 @@ function createMethodDetails(dataList) {
         for (var j = 0; member.params && j < member.params.length; j++) {
             var param = member.params[j];
 
-            var str = paramsList2Str.replace(/\{param_name\}/g, param.name);
-            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param["type"]));
-            str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param["type"])));
+            var str = replaceParam(paramsList2Str, param);
 
             var paramsNode2 = document.createElement(paramsList2.firstElementChild.nodeName);
             paramsNode2.innerHTML = str;
             paramsList2.appendChild(paramsNode2);
 
-            var str = paramsList3Str.replace(/\{param_name\}/g, param.name);
-            str = str.replace(/\{param_type_class\}/g, getTypeClassName(param["type"]));
-            str = str.replace(/\{param_type\}/g, param.type);
-            str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param["type"])));
-            str = str.replace(/\{param_description\}/g, param.description);
+            var str = replaceParam(paramsList2Str, param);
+
             var paramsNode3 = document.createElement(paramsList3.firstElementChild.nodeName);
             paramsNode3.innerHTML = str;
             paramsList3.appendChild(paramsNode3);
@@ -402,12 +414,13 @@ function createMethodDetails(dataList) {
 function createExample() {
 
     var exampleNode = document.getElementById("exampleDetailDiv");
-    if (apiData.class && apiData.class.example) {
-
+    if (apiData.class) {
         var exampleTag = document.getElementById("exampleTag");
-        exampleTag.firstElementChild.setAttribute("id", apiData.class.memberof + "." + apiData.class.name + "__example__");
+        exampleTag.firstElementChild.setAttribute("id", currentClassModule + gapChar() + currentClassName + gapChar() +"example@@@");
 
-        initExample(exampleNode, apiData.class.example);
+        if (apiData.class.example) {
+            initExample(exampleNode, apiData.class.example);
+        }
     }
 }
 
@@ -466,7 +479,7 @@ function getFullMemberof(member) {
 
     var memberof = member["memberof"];
     if (getModule(memberof) == null) {
-        return "global.Types";
+        return "";
     }
 
     return member["memberof"];
@@ -481,37 +494,68 @@ function getModuleof(memberof, kind) {
     }
 
     if (getModule(memberof) == null) {
-        memberof = "global.Types";
+        return null;
     }
 
     return getModule(memberof);
 }
 
 function getTypeClassName(type) {
-    if (getModule(type) == null) {
-        type = "global.Types";
+    if (isNormalType(type)) {
+        return getGlobalTypeClass();
     }
 
     return type;
+}
+
+function replaceParam(paramsListStr, param) {
+    var str = paramsListStr.replace(/\{param_name\}/g, param.name);
+
+    str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
+    str = str.replace(/\{param_type\}/g, param.type);
+
+    var typeclass= getTypeClassName(param["type"]);
+    if (typeclass == null) {
+        str = str.replace(/\{param_href\}/g, "");
+    }
+    else {
+        str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param.type)));
+    }
+
+    str = str.replace(/\{param_description\}/g, param.description);
+    return str;
 }
 
 function getReplacedStr(newNodestr, member) {
     newNodestr = newNodestr.replace(/\{name\}/g, member["name"]);
 
     newNodestr = newNodestr.replace(/\{memberof\}/g, member["memberof"]);
-    newNodestr = newNodestr.replace(/\{memberof_full\}/g, getFullMemberof(member));
 
+    var memberofFull = getFullMemberof(member);
+    newNodestr = newNodestr.replace(/\{memberof_full\}/g, memberofFull);
 
-    newNodestr = newNodestr.replace(/\{moduleof\}/g, getModuleof(member["memberof"], member["kind"]));
+    var moduleof = getModuleof(member["memberof"], member["kind"]);
+    newNodestr = newNodestr.replace(/\{moduleof\}/g, moduleof);
     newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
     newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
     newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
-    newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
 
 
     var typeclass= getTypeClassName(member["type"]);
     newNodestr = newNodestr.replace(/\{type_class\}/g, typeclass);
-    newNodestr = newNodestr.replace(/\{type_href\}/g, getModuleof(typeclass, "") + "_" + typeclass);
+
+    if (isNormalType(member["type"])) {
+        newNodestr = newNodestr.replace(/\{type_href\}/g, getModuleof(typeclass, "") + gapChar() + typeclass + gapChar() + member["type"]);
+    }
+    else {
+        var typeModuleof = getModuleof(member["type"]);
+        if (typeModuleof == null) {
+            newNodestr = newNodestr.replace(/\{type_href\}/g, "");
+        }
+        else {
+            newNodestr = newNodestr.replace(/\{type_href\}/g, typeModuleof + gapChar() + typeclass);
+        }
+    }
 
     var description = getFirstSpan(member["description"]);
     if (member["scope"] == "static") {
@@ -529,6 +573,15 @@ function getReplacedStr(newNodestr, member) {
     newNodestr = newNodestr.replace(/\{description\}/g, description);
     newNodestr = newNodestr.replace(/\{inherited\}/g, member["inherited"] ? "block" : "none");
 
+    if (moduleof == null) {
+        newNodestr = newNodestr.replace(/\{moduleof_memberof_full\}/g, "");
+    }
+    else {
+        newNodestr = newNodestr.replace(/\{moduleof_memberof_full\}/g, moduleof + gapChar() + memberofFull);
+    }
+
+
+    newNodestr = newNodestr.replace(/\{classModule_className_name\}/g, currentModule + gapChar() + currentClassName + gapChar() + member["name"]);
 
     return newNodestr;
 }

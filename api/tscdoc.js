@@ -20,6 +20,15 @@ function run(opts) {
 
     var tempClassArr = require("./tools/save_docs").screening(apiArr);
 
+
+    var typesClasses = ["global.Types"];
+    for (var i = 0; i < typesClasses.length; i++) {
+        var typeClass = typesClasses[i];
+        var types = file.read(path.join(globals.getApiParserRoot(), "normalJsons/" + typeClass + ".json"));
+        var typeJson = JSON.parse(types);
+        tempClassArr[typeJson["class"]["memberof"]+"."+typeJson["class"]["name"]] = typeJson;
+    }
+
     //补全类名路径
     require("./tools/fillname").fillname(tempClassArr);
 
@@ -34,7 +43,7 @@ function run(opts) {
     require("./tools/inherit").dealWithInherite(tempClassArr);
     //处理copy相关信息
     require("./tools/copy").dealWithCopy(tempClassArr);
-    //对文件内membe等按字母排序
+    //对文件内member等按字母排序
     require("./tools/sort").sortWithName(tempClassArr);
 
     require("./tools/screening").screening(tempClassArr);

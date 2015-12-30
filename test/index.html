@@ -3,7 +3,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>RES.IVersionController API</title>
+    <title>api</title>
+    <link rel="shortcut icon" href="resources/favicon.ico">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta charset="utf-8">
@@ -73,10 +74,6 @@
                     <option value="tween" data-update="2015-09-08">tween</option>
                 </select>
             </div>
-            <h5>更新于
-                <span id="apiupdate">2015-11-18</span>
-                <a href="javascript:updateContentDialog()">详情</a>
-            </h5>
         </div>
         <div class="tc-box" id="treelist" style="max-height: 913px; position: inherit; top: 0px;">
             <div class="headtitle">
@@ -112,14 +109,18 @@
                             <td class="classSignature Class">public class {name}</td>
                         </tr>
                         <tr>
+                            <td class="classHeaderTableLabel">接口</td>
+                            <td class="classSignature Class">public interface {name}</td>
+                        </tr>
+                        <tr>
                             <td class="classHeaderTableLabel">继承</td>
-                            <td class="inheritanceList">{memberof}.{name}
+                            <td class="inheritanceList">{memberof_name}
                                 <span class="parentsId">
                                     <span>
                                         <img class="inheritArrow" title="Inheritance" alt="Inheritance"
                                              src="resources/inherit-arrow.gif">
                                         <a href="{parent_href}" data-class-name="{parent_name}"
-                                           onclick="onClick(this, &quot;children&quot;)">{parent_name}</a>
+                                           onclick="goto(this)">{parent_name}</a>
                                     </span>
                                 </span>
 
@@ -130,7 +131,7 @@
                             <td class="inheritanceList childrenId">
                                 <span>
                                     <a href="{child_href}" data-class-name="{child_name}"
-                                       onclick="onClick(this, &quot;children&quot;)">{child_name}</a>
+                                       onclick="goto(this)">{child_name}</a>
                                     <span>, </span>
                                 </span>
                             </td>
@@ -142,8 +143,9 @@
 
                     <p></p>
 
+                    <!--示例-->
                     <span id="exampleAr">
-                        <a href="#{memberof}_{name}_example@@@" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                        <a href="#{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
                     <span id="see">
@@ -195,7 +197,7 @@
                                      style="display: {inherited};">
                             </td>
                             <td class="summaryTableSignatureCol">
-                                <a href="#{moduleof}_{memberof_full}_{name}" onlick="scrollIntoView(this)"
+                                <a href="#{classModule_className_name}" onlick="scrollIntoView(this)"
                                    class="signatureLink Method">
                                     <span>{name}</span>
                                 </a>
@@ -207,7 +209,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#{moduleof}_{memberof_full}" data-class-name="{memberof_full}"
+                                <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}"
                                    onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
@@ -254,7 +256,7 @@
                             </td>
                             <td class="summaryTableSignatureCol">
                                 <div class="summarySignature">
-                                    <a href="#{moduleof}_{memberof_full}_{name}" class="signatureLink" onclick="scrollIntoView(this)">
+                                    <a href="#{classModule_className_name}" class="signatureLink" onclick="scrollIntoView(this)">
                                         <span data-function-name="{name}">{name}</span>
                                     </a>
                                     <span>(</span>
@@ -277,7 +279,7 @@
                                 </div>
                             </td>
                             <td class="summaryTableOwnerCol">
-                                <a href="#{moduleof}_{memberof_full}" data-class-name="{memberof_full}" onclick="goto(this)">{memberof}</a>
+                                <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}" onclick="goto(this)">{memberof}</a>
                             </td>
                         </tr>
                         </tbody>
@@ -323,7 +325,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{moduleof}_{memberof_full}_{name}">{name}</h3>
+                                        <h3 id="{classModule_className_name}">{name}</h3>
                                     </td>
                                     <td class="detailHeaderType">属性</td>
                                     <td class="detailHeaderRule">&nbsp;</td>
@@ -398,7 +400,7 @@
                                 <tbody>
                                 <tr>
                                     <td class="detailHeaderName">
-                                        <h3 id="{moduleof}_{memberof_full}_{name}">
+                                        <h3 id="{classModule_className_name}">
                                             <span data-function-name="{name}">{name}</span>
                                         </h3>
                                     </td>
@@ -415,14 +417,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
+                                    <a href="#{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="{param_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                <a href="#{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                             </span>
 
                                 <p></p>
@@ -470,7 +472,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_href}" data-class-name="{param_type_class}"
+                                                <a href="#{param_href}" data-class-name="{param_type_class}"
                                                    onclick="goto(this)">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
@@ -501,7 +503,7 @@
 
                 <!--示例-->
                 <div id="exampleTag">
-                    <div id="{memberof}_{name}_example@@@" class="detailSectionHeader">示例
+                    <div id="#{example_href}" class="detailSectionHeader">示例
                     </div>
 
                     <span>

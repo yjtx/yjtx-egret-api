@@ -125,9 +125,14 @@ exports.save = function (tempClassObjs) {
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
         if (item.class) {
-            var filepath = path.join(item.class.filename);
+            if (item.class.filename) {
+                var filepath = path.join(item.class.filename);
 
-            var moduleName = getModuleName(filepath);
+                var moduleName = getModuleName(filepath);
+            }
+            else {
+                moduleName = "other";
+            }
 
             if (!isInDependence(item.class)) {
                 addClass(item, key, moduleName);
@@ -166,9 +171,8 @@ exports.save = function (tempClassObjs) {
     }
 
     var outputPath = globals.getOutputPath();
-    file.copy(path.join(globals.getApiParserRoot(), "normalJsons/global.Types.json"), path.join(outputPath, "finalClasses", "other", "global.Types.json"));
-
-    allModuleList["other"] = ["global.Types"];
+    //file.copy(path.join(globals.getApiParserRoot(), "normalJsons/global.Types.json"), path.join(outputPath, "finalClasses", "other", "global.Types.json"));
+    //allModuleList["other"] = ["global.Types"];
 
     saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(allModuleList, null, "\t"));
 

@@ -81,6 +81,9 @@
 			"example": "函数无任何返回类型：<br /><pre>function test():void{ }</pre>"
 		}
 	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
 	"class": {
 		"kind": "class",
 		"name": "Types",

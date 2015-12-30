@@ -2,12 +2,22 @@ var listAllData;
 
 var classData = {};
 
+var globalTypes = ["number", "string"];
+
+function getGlobalTypeClass () {
+    return "global.Types";
+}
+
+function isNormalType(type) {
+    return globalTypes.indexOf(type) >= 0;
+}
+
 function getModule(className) {
     return classData[className];
 }
 
 function getClassHref(className) {
-    return "#" + classData[className] + "_" + className;
+    return "#" + classData[className] + gapChar() + className;
 }
 
 function initAll() {
@@ -49,6 +59,13 @@ function initModuleList() {
     changeModule(currentModule);
 }
 
+
+function selectType(module) {
+    console.log(module);
+
+    setHref(module);
+}
+
 function onClick(data, type) {
     console.log(type);
     if (type == "children") {
@@ -59,7 +76,6 @@ function onClick(data, type) {
     }
     else if (type == "see") {
         var dataHref = data.getAttribute("data-href");
-        //window.location.href = mainHref + "#" + dataHref;
 
         var array = dataHref.split("#");
         className = array[0];
@@ -69,19 +85,16 @@ function onClick(data, type) {
     }
 }
 
-
-function selectType(module) {
-    console.log(module);
-
-    setHref(module);
-}
-
 function goto(node) {
     var className = node.getAttribute("data-class-name");
     var moduleKey = getModule(className);
+    if (moduleKey == null) {
+        console.warn("no " + className);
+        return;
+    }
     console.log(className);
 
-    setHref(moduleKey, className);
+    //setHref(moduleKey, className);
 }
 
 
@@ -106,7 +119,7 @@ function changeClassList(moduleKey) {
     var array = listAllData[moduleKey];
     for (var i = 0; i < array.length; i++) {
         var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
-        tempStr = tempStr.replace(/\{class_href\}/, "#" + moduleKey + "_" + array[i]);
+        tempStr = tempStr.replace(/\{class_href\}/, "#" + moduleKey + gapChar() + array[i]);
         tempStr = tempStr.replace(/\{class_name\}/, array[i]);
         var node = document.createElement(list.firstElementChild.nodeName);
         node.innerHTML = tempStr;

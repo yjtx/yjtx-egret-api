@@ -1,4 +1,7 @@
 
+function gapChar(){
+    return "￥";
+}
 
 window.onhashchange = function (e) {
     console.dir(e.newURL);
@@ -14,7 +17,7 @@ function setHref(module, classname) {
         href = mainHref + "#" + module;
 
         if (classname) {
-            href += "_" + classname;
+            href += gapChar() + classname;
         }
     }
     window.location.href = href;
@@ -26,17 +29,15 @@ var mainHref;
 function initHashChange(href) {
     urlModule = "";
     urlClass = "";
-    //#m-module_c-classname_m-member/f-method/e-example
+    //#m-module_c-classname_m-member|f-method|e-example
     if (href.indexOf("#") >= 0) {
         var optionsStr = href.substr(href.indexOf("#") + 1, href.length);
 
-        var moduleKey=null;
-        var array = optionsStr.split("_");
+        var array = optionsStr.split(gapChar());
         if (array.length > 0 && array[0].length > 0) {
             urlModule = array[0];
         }
 
-        var classKey=null;
         if (array.length > 1 && array[1].length > 0) {
             urlClass = array[1];
         }
