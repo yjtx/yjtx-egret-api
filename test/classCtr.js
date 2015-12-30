@@ -140,15 +140,16 @@ function createSee() {
                 tempStr = tempStr.replace(/\{see_href\}/g, array[0]);
                 tempStr = tempStr.replace(/\{see_description\}/g, array[1]);
             }
-            else if (des[0] == "\"") {
-                tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = tempStr.replace(/\{see_href\}/g, getLink(des));
-                tempStr = tempStr.replace(/\{see_description\}/g, des);
-            }
             else {
                 tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = tempStr.replace(/\{see_href\}/g, getLink(des));
                 tempStr = tempStr.replace(/\{see_description\}/g, des);
+
+                if (getModule(des)) {
+                    tempStr = tempStr.replace(/\{see_href\}/g, getLink(getModule(des) + gapChar() + des));
+                }
+                else {
+                    tempStr = tempStr.replace(/\{see_href\}/g, getLink(des));
+                }
             }
 
             var node = document.createElement(seeListElement.firstElementChild.nodeName);
