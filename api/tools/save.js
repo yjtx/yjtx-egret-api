@@ -7,6 +7,7 @@ var globals = require("../core/globals");
 
 var path = require("path");
 var file = require("../core/file.js");
+var property = require("../tools/apiProperty");
 
 
 var allModuleList = {};
@@ -23,10 +24,12 @@ function screen(moduleClassObjs, moduleKey) {
 
             saveFile(path.join(outputPath, "finalClasses", moduleKey, key + ".json"), JSON.stringify(item, null, "\t"));
 
-            if (tempModulesArr[item.class.memberof] == null) {
-                tempModulesArr[item.class.memberof] = [];
+            var memberof = item.class.memberof;
+
+            if (tempModulesArr[memberof] == null) {
+                tempModulesArr[memberof] = [];
             }
-            tempModulesArr[item.class.memberof].push(item.class.name);
+            tempModulesArr[memberof].push(item.class.name);
         }
         else {
             if (item["globalMember"] && item["globalMember"].length) {
@@ -67,7 +70,12 @@ function screen(moduleClassObjs, moduleKey) {
         }
 
         for (var key2 in mod) {
-            allModuleList[moduleKey].push(key + "." + mod[key2]);
+            if (key == "") {
+                allModuleList[moduleKey].push(mod[key2]);
+            }
+            else {
+                allModuleList[moduleKey].push(key + "." + mod[key2]);
+            }
         }
     }
 
@@ -89,19 +97,26 @@ function screen(moduleClassObjs, moduleKey) {
     saveGzip(path.join(outputPath, "finalClasses"), moduleKey);
 }
 
+function isInDependence(item) {
+    var dependences = globals.getDependence();
+
+    if (item.filename) {
+        for (var i = 0; i < dependences.length; i++) {
+            var temppath = file.escapePath(dependences[i]);
+            if (item.filename.indexOf(temppath) >= 0) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 exports.save = function (tempClassObjs) {
     var allModules = {};
     var sourcePath = globals.getSourcePath();
-    var type = globals.getType();
 
-    var configPath = path.join(globals.getApiParserRoot(), type + "_modules.json");
-    if (file.exists(configPath)) {
-        var content = file.read(configPath);
-        var modules = JSON.parse(content);
-    }
-    else {
-        modules = {};
-    }
+    var modules = property.getModules();
 
     //for (var tempKey in modules) {
     //    modules[tempKey] = path.join(sourcePath, modules[tempKey]);
@@ -114,7 +129,9 @@ exports.save = function (tempClassObjs) {
 
             var moduleName = getModuleName(filepath);
 
-            addClass(item, key, moduleName);
+            if (!isInDependence(item.class)) {
+                addClass(item, key, moduleName);
+            }
         }
         else {
 
@@ -124,7 +141,9 @@ exports.save = function (tempClassObjs) {
 
                     var moduleName = getModuleName(filepath);
 
-                    addGlobals(item["globalMember"][i], key, moduleName, "globalMember");
+                    if (!isInDependence(item["globalMember"][i])) {
+                        addGlobals(item["globalMember"][i], key, moduleName, "globalMember");
+                    }
                 }
             }
 
@@ -134,7 +153,9 @@ exports.save = function (tempClassObjs) {
 
                     var moduleName = getModuleName(filepath);
 
-                    addGlobals(item["globalFunction"][i], key, moduleName, "globalFunction");
+                    if (!isInDependence(item["globalFunction"][i])) {
+                        addGlobals(item["globalFunction"][i], key, moduleName, "globalFunction");
+                    }
                 }
             }
         }
@@ -196,9 +217,8 @@ exports.save = function (tempClassObjs) {
                 }
             }
         }
-        return "yjtx_empty";
+        return "yjtx";
     }
-
 };
 
 function saveFile(filepath, value) {

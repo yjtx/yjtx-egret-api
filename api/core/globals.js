@@ -63,6 +63,14 @@ function getApiParserRoot() {
     return file.getDirectory(process.argv[1]);
 }
 
+exports.getDependence = function () {
+    var dependencePathStr = getOption(["--dependence"]);
+    if (dependencePathStr) {
+        return dependencePathStr.split(",");
+    }
+    return [];
+};
+
 exports.clone = clone;
 exports.getApiParserRoot = getApiParserRoot;
 

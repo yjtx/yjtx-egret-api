@@ -11,24 +11,12 @@ function run(opts) {
         console.log("请设置输出api地址  egret tscdoc --output path");
         return;
     }
-    var outputPath = opts["--output"][0];
-    var egretPath = opts["--path"][0];
 
-    var ignoreList = [/oldVersion.*NativeVersionController.ts/];
-    var tsList = file.getDirectoryAllListing(path.join(egretPath));
-    tsList = tsList.filter(function (item) {
-        for (var i = 0; i < ignoreList.length; i++) {
-            if (item.match(ignoreList[i])) {
-                return false;
-            }
-            else if (!item.match(/\.ts$/)) {
-                return false
-            }
-        }
-        return true;
-    });
+    require("./tools/apiProperty").init();
 
-    var apiArr = require("./tools/egret_tsc_api").run(tsList, egretPath);
+    var tsList = require("./tools/filesScreening").screening();
+
+    var apiArr = require("./tools/egret_tsc_api").run(tsList);
 
     var tempClassArr = require("./tools/save_docs").screening(apiArr);
 
@@ -51,26 +39,12 @@ function run(opts) {
 
     require("./tools/screening").screening(tempClassArr);
 
+    var outputPath = globals.getOutputPath();
     file.remove(outputPath);
+
     require("./tools/save").save(tempClassArr);
 
     file.remove("tsc_config_temp.txt");
-}
-
-function getModuleList(moduleName, egretPath) {
-    var modulePath = path.join(egretPath, "tools/lib/manifest", moduleName + ".json");
-
-    var moduleConfig = JSON.parse(file.read(modulePath));
-
-    //获取源文件地址
-    var tsList = moduleConfig.file_list;
-    tsList = tsList.map(function (item) {
-        return globals.addQuotes(path.join(egretPath, moduleConfig.source, item));
-    }).filter(function (item) {
-        return item.indexOf(".js") == -1;
-    });
-
-    return tsList;
 }
 
 var option = params.getArgv();

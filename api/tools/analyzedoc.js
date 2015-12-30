@@ -217,8 +217,14 @@ exports.analyze = function analyze(doc) {
             var tname = item.match(/^includeExample(\s)+/)[0];
             var url = trim.trimAll(item.substring(tname.length));
 
-            var content = file.read(path.join(globals.getExampleRootPath(), url));
-            content = content.replace(/\r\n|\n\r|\r/g, "\n");
+            var expath = globals.getExampleRootPath();
+            if (expath != null) {
+                var content = file.read(path.join(expath, url));
+                content = content.replace(/\r\n|\n\r|\r/g, "\n");
+            }
+            else {
+                content = "";
+            }
 
             //去掉language
             var lang = globals.getLanguage();

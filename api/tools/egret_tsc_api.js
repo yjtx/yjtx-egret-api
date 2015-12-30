@@ -2,10 +2,11 @@ var ts = require("typescript");
 var trim = require("../core/trim");
 var globals = require("../core/globals");
 
-exports.run = function run(fileNames, srcPath) {
+exports.run = function run(fileNames) {
     var options = {target: 2 /* ES6 */, module: 0 /* None */};
     var host = ts.createCompilerHost(options);
     var program = ts.createProgram(fileNames, options, host);
+    //console.log(fileNames);
     var errors = program.getDiagnostics();
     if (errors.length > 0) {
         errors.forEach(function (diagnostic) {
@@ -16,11 +17,17 @@ exports.run = function run(fileNames, srcPath) {
     }
 
     var apiArr = [];
+
+    var libsNames = ["tools/node_modules/typescript/bin", "core/typescript/lib.d.ts"];
     program.getSourceFiles().forEach(function (sourceFile) {
         var filename = sourceFile.filename;
-        if (filename.indexOf(srcPath) != 0) {
-            return;
+
+        for (var i = 0; i < libsNames.length; i++) {
+            if (filename.match(libsNames[i])) {
+                return;
+            }
         }
+
         var root = {"filename": filename, "$_tree_": {}};
         formatFile(sourceFile, root["$_tree_"]);
 
@@ -36,13 +43,31 @@ function formatFile(sourceFile, parent) {
     var length = statements.length;
     for (var i = 0; i < length; i++) {
         var statement = statements[i];
-        formatModule(statement, text, parent);
+
+        if (statement.flags & 2 /* Ambient */) {
+        }
+        //else
+        if (statement.kind == 189 /* ModuleDeclaration */) {
+            formatModule(statement, text, parent);
+        }
+        else if (statement.kind == 164 /* VariableStatement */) {
+            formatMember(statement, text, parent);
+        }
+        else if (statement.kind == 184 /* FunctionDeclaration */) {
+            formatMember(statement, text, parent);
+
+        }
+        else if (statement.kind == 186 /* InterfaceDeclaration */
+            || (statement.kind == 185 /* ClassDeclaration */)
+            || (statement.kind == 188 /* EnumDeclaration */)) {
+            formatClass(statement, text, parent);
+        }
     }
 }
 
 function formatModule(statement, text, parent) {
     if (statement.flags & 2 /* Ambient */) {
-        return;
+        //return;
     }
 
     if (statement.kind == 189 /* ModuleDeclaration */) {
@@ -227,15 +252,18 @@ function formatMember(member, text, parent, isStatic) {
         var name = "constructor";
     }
     else {
+        if (member.name == null) {
+            console.log(member);
+        }
         var name = member.name.getText();
     }
     if (parent[name] == null || member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */) {
         parent[name] = {};
     }
 
-    if (name == "f2") {
-        console.log("sdf")
-    }
+    //if (name == "f2") {
+    //    console.log("sdf")
+    //}
 
     if (member.kind == 128 /* SetAccessor */) {
         if (parent[name]["bodyType"] == "GetAccessor") {
@@ -428,6 +456,9 @@ function getComments(text, pos, obj) {
     var noteInfoBlocks = [];
     if (noteIdx != -1) {//当前语言的注释
         var doc = noteStringBlocks[noteIdx];
+        if (doc == null) {
+            console.log("sss")
+        }
         noteInfoBlocks.push(analyzedoc.analyze(doc));
         obj["noNote"] = false;
     }

@@ -83,6 +83,9 @@ function inheriteMembersAndFunctions(classList) {
             if (item.class.augments && item.class.augments.length > 0) {//拥有父类
                 var parentName = item.class.augments[0];
                 var parent = getClass(parentName);
+                if (parent == null) {
+                    continue;
+                }
                 //方法继承
                 var parentFs = parent["function"];
                 for (var f = 0; f < parentFs.length; f++) {
@@ -162,6 +165,9 @@ function addParentDoc(item, interfaces, parents) {
     for (var i = 0; i < list.length; i++) {
         var parentName = list[i]["name"];
         var parent = getClass(parentName);
+        if (parent == null) {
+            continue;
+        }
 
         var parentKindList = parent[item.kind];
         for (var j = 0; j < parentKindList.length; j++) {
@@ -217,6 +223,9 @@ function inheritOthers(classList) {
                     parentName = parentList[m1];
                 }
                 var parent = getClass(parentName);
+                if (parent == null) {
+                    continue;
+                }
 
                 //event
                 if (parent["class"]["event"]) {
@@ -248,67 +257,70 @@ function inheritOthers(classList) {
         if (item.class.augments && item.class.augments.length > 0) {//拥有父类
             var parentName = item.class.augments[0];
             var parent = getClass(parentName);
+            if (parent != null) {
+                //state 子类重写则不继承
+                if (!item["class"]["state"] || item["class"]["state"].length == 0) {
+                    if (parent["class"]["state"]) {
+                        var parentSts = parent["class"]["state"];
+                        var tempSts = globals.clone(parentSts);
+                        item["class"]["state"] = tempSts;
+                        for (var j = 0; j < tempSts.length; j++) {
+                            if (tempSts[j]["inherited"] != true) {
+                                tempSts[j]["inherited"] = true;
+                                tempSts[j]["inherits"] = parentName;
+                            }
+                        }
+                    }
+                }
 
-            //state 子类重写则不继承
-            if (!item["class"]["state"] || item["class"]["state"].length == 0) {
-                if (parent["class"]["state"]) {
-                    var parentSts = parent["class"]["state"];
-                    var tempSts = globals.clone(parentSts);
-                    item["class"]["state"] = tempSts;
-                    for (var j = 0; j < tempSts.length; j++) {
-                        if (tempSts[j]["inherited"] != true) {
-                            tempSts[j]["inherited"] = true;
-                            tempSts[j]["inherits"] = parentName;
+                //defaultProperty
+                if (!item["class"]["defaultProperty"] && parent["class"]["defaultProperty"]) {
+                    var pdy = parent["class"]["defaultProperty"];
+                    item["class"]["defaultProperty"] = globals.clone(pdy);
+                    if (!pdy["inherited"]) {
+                        item["class"]["defaultProperty"]["inherited"] = true;
+                        item["class"]["defaultProperty"]["inherits"] = parentName;
+                    }
+                }
+
+                //skinPart  需要合并
+                var parentMs = parent["member"];
+                for (var m = 0; m < parentMs.length; m++) {
+                    if (parentMs[m]["skinPart"] && parentMs[m]["skinPart"].length > 0) {//父类拥有skinPart
+                        var itemMs = item["member"];
+                        for (var j = 0; j < itemMs.length; j++) {
+                            if (itemMs[j]["name"] == parentMs[m]["name"]) {//需要合并
+                                if (itemMs[j]["inherits"] != parentName) {
+                                    var tempSps = globals.clone(parentMs[m]["skinPart"]);
+                                    if (itemMs[j]["skinPart"] == null) {
+                                        itemMs[j]["skinPart"] = [];
+                                    }
+                                    for (var t1 = 0; t1 < tempSps.length; t1++) {
+                                        if (tempSps[t1]["inherited"] != true) {
+                                            tempSps[t1]["inherited"] = true;
+                                            tempSps[t1]["inherits"] = parentName;
+                                        }
+                                    }
+                                    itemMs[j]["skinPart"] = itemMs[j]["skinPart"].concat(tempSps);
+                                }
+                                else if (itemMs[j]["inherited"]) {//为继承属性
+                                    var tempSps = itemMs[j]["skinPart"] || [];
+                                    for (var t1 = 0; t1 < tempSps.length; t1++) {
+                                        if (tempSps[t1]["inherited"] != true) {
+                                            tempSps[t1]["inherited"] = true;
+                                            tempSps[t1]["inherits"] = itemMs[j]["inherits"];
+                                        }
+                                    }
+                                }
+
+                                break;
+                            }
                         }
                     }
                 }
             }
 
-            //defaultProperty
-            if (!item["class"]["defaultProperty"] && parent["class"]["defaultProperty"]) {
-                var pdy = parent["class"]["defaultProperty"];
-                item["class"]["defaultProperty"] = globals.clone(pdy);
-                if (!pdy["inherited"]) {
-                    item["class"]["defaultProperty"]["inherited"] = true;
-                    item["class"]["defaultProperty"]["inherits"] = parentName;
-                }
-            }
 
-            //skinPart  需要合并
-            var parentMs = parent["member"];
-            for (var m = 0; m < parentMs.length; m++) {
-                if (parentMs[m]["skinPart"] && parentMs[m]["skinPart"].length > 0) {//父类拥有skinPart
-                    var itemMs = item["member"];
-                    for (var j = 0; j < itemMs.length; j++) {
-                        if (itemMs[j]["name"] == parentMs[m]["name"]) {//需要合并
-                            if (itemMs[j]["inherits"] != parentName) {
-                                var tempSps = globals.clone(parentMs[m]["skinPart"]);
-                                if (itemMs[j]["skinPart"] == null) {
-                                    itemMs[j]["skinPart"] = [];
-                                }
-                                for (var t1 = 0; t1 < tempSps.length; t1++) {
-                                    if (tempSps[t1]["inherited"] != true) {
-                                        tempSps[t1]["inherited"] = true;
-                                        tempSps[t1]["inherits"] = parentName;
-                                    }
-                                }
-                                itemMs[j]["skinPart"] = itemMs[j]["skinPart"].concat(tempSps);
-                            }
-                            else if (itemMs[j]["inherited"]) {//为继承属性
-                                var tempSps = itemMs[j]["skinPart"] || [];
-                                for (var t1 = 0; t1 < tempSps.length; t1++) {
-                                    if (tempSps[t1]["inherited"] != true) {
-                                        tempSps[t1]["inherited"] = true;
-                                        tempSps[t1]["inherits"] = itemMs[j]["inherits"];
-                                    }
-                                }
-                            }
-
-                            break;
-                        }
-                    }
-                }
-            }
         }
     }
 }

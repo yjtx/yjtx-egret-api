@@ -1,10 +1,12 @@
 {
-  "egret":"egret",
-  "game":"extension/game",
-  "gui":"extension/gui",
-  "res":"extension/resource",
-  "eui":"extension/eui",
-  "socket":"extension/socket",
-  "tween":"extension/tween",
-  "dragonbones":"extension/dragonbones"
+    "modules": {
+        "egret": "egret",
+        "game": "extension/game",
+        "gui": "extension/gui",
+        "res": "extension/resource",
+        "eui": "extension/eui",
+        "socket": "extension/socket",
+        "tween": "extension/tween",
+        "dragonbones": "extension/dragonbones"
+    }
 }
