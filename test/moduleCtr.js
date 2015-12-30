@@ -2,7 +2,7 @@ var listAllData;
 
 var classData = {};
 
-var globalTypes = ["number", "string"];
+var globalTypes = ["number", "string", "Date", "any", "array", "boolean", "enum", "void", "Function"];
 
 function getGlobalTypeClass () {
     return "global.Types";
@@ -67,6 +67,7 @@ function selectType(module) {
 }
 
 function onClick(data, type) {
+    return;
     console.log(type);
     if (type == "children") {
         var className = data.getAttribute("data-class-name");
@@ -86,6 +87,7 @@ function onClick(data, type) {
 }
 
 function goto(node) {
+    return;
     var className = node.getAttribute("data-class-name");
     var moduleKey = getModule(className);
     if (moduleKey == null) {

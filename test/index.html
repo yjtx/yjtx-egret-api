@@ -95,6 +95,7 @@
     <div class="col-sm-9" id="rightcontent" style="padding-right: 30px;">
         <div class="tc-box first-box" id="contentPage" data-title="egret.Bitmap API">
             <div class="content">
+                <div class="classTop">
 
                 <!--头部-->
                 <div class="MainContent" id="classHeader">
@@ -145,7 +146,7 @@
 
                     <!--示例-->
                     <span id="exampleAr">
-                        <a href="#{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                        <a href="{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
                     <span id="see">
@@ -201,7 +202,7 @@
                                    class="signatureLink Method">
                                     <span>{name}</span>
                                 </a>
-                                : <a href="#{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                : <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                                 <span class="defaultValue"> = {default}</span>
 
                                 <div class="summaryTableDescription">
@@ -271,7 +272,7 @@
                                     <span>)</span>
                                         <span class="functionType1">
                                             :
-                                            <a href="{param_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                            <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                                         </span>
                                 </div>
                                 <div class="summaryTableDescription">
@@ -334,7 +335,7 @@
                             </table>
                             <div class="detailBody">
                                 {name} :
-                                <a href="#{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
 
                                 <p></p>
                                 <table cellpadding="0" cellspacing="0" border="0">
@@ -417,14 +418,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="#{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
+                                    <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="#{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
                             </span>
 
                                 <p></p>
@@ -472,7 +473,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="#{param_href}" data-class-name="{param_type_class}"
+                                                <a href="{param_href}" data-class-name="{param_type_class}"
                                                    onclick="goto(this)">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
@@ -503,7 +504,7 @@
 
                 <!--示例-->
                 <div id="exampleTag">
-                    <div id="#{example_href}" class="detailSectionHeader">示例
+                    <div id="{example_href}" class="detailSectionHeader">示例
                     </div>
 
                     <span>

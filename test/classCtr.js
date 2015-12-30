@@ -15,6 +15,8 @@ function changeClass(moduleKey, className) {
         apiData = JSON.parse(data);
 
         initClass();
+
+        window.location.href = window.location.href;
     });
 }
 
@@ -34,6 +36,10 @@ function initClass() {
 }
 
 function initClassData() {
+    var node = document.getElementsByClassName("classTop")[0];
+    node.setAttribute("id", currentModule + gapChar() + currentClassName);
+
+
     var node = document.getElementById("classHeader");
 
     if (apiData.class) {
@@ -44,7 +50,7 @@ function initClassData() {
         else  {
             str = str.replace(/\{memberof_name\}/g, currentClassName);
         }
-        str = str.replace(/\{example_href\}/g, currentClassModule + gapChar() + currentClassName + gapChar() + "example@@@");
+        str = str.replace(/\{example_href\}/g, getLink(currentClassModule + gapChar() + currentClassName + gapChar() + "example@@@"));
 
         str = str.replace(/\{memberof\}/g, apiData.class.memberof);
         str = str.replace(/\{name\}/g, apiData.class.name);
@@ -63,7 +69,10 @@ function initClassData() {
     else {
         node.style.display = "none";
     }
+}
 
+function getLink(link) {
+    return "#" + link;
 }
 
 function createExtends(node) {
@@ -76,7 +85,8 @@ function createExtends(node) {
         var augments = apiData.class.augments;
         for (var i = 0; i < augments.length; i++) {
             var tempStr = str.replace(/\{parent_name\}/g, augments[i]);
-            tempStr = tempStr.replace(/\{parent_href\}/g, "#" + getClassHref(augments[i]));
+
+            tempStr = tempStr.replace(/\{parent_href\}/g, getClassHref(augments[i]));
 
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             parentNode.appendChild(node);
@@ -85,15 +95,6 @@ function createExtends(node) {
     }
 
     hideFirst(parentNode);
-}
-
-function getClassHref(className) {
-    if (getModule(className) == null) {
-        return "";
-    }
-    else {
-        return getModule(className) + gapChar() + className;
-    }
 }
 
 function createChildren(node) {
@@ -106,7 +107,7 @@ function createChildren(node) {
         var children = apiData.class.children;
         for (var i = 0; i < children.length; i++) {
             var tempStr = str.replace(/\{child_name\}/g, children[i]);
-            tempStr = tempStr.replace(/\{child_href\}/g, "#" + getClassHref(children[i]));
+            tempStr = tempStr.replace(/\{child_href\}/g, getClassHref(children[i]));
 
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             node.innerHTML = tempStr;
@@ -141,12 +142,12 @@ function createSee() {
             }
             else if (des[0] == "\"") {
                 tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = tempStr.replace(/\{see_href\}/g, "#" + des);
+                tempStr = tempStr.replace(/\{see_href\}/g, getLink(des));
                 tempStr = tempStr.replace(/\{see_description\}/g, des);
             }
             else {
                 tempStr = seeItemStr.replace(/\{see_name\}/g, des);
-                tempStr = tempStr.replace(/\{see_href\}/g, "#" + des);
+                tempStr = tempStr.replace(/\{see_href\}/g, getLink(des));
                 tempStr = tempStr.replace(/\{see_description\}/g, des);
             }
 
@@ -508,6 +509,19 @@ function getTypeClassName(type) {
     return type;
 }
 
+function getClassHref(className) {
+    if (getModule(className) == null) {
+        return "javascript:void";
+    }
+    else {
+        return getLink(getModule(className) + gapChar() + className);
+    }
+}
+
+function changeEmptyLink(str, reg) {
+    return str.replace(reg, "javascript:void");
+}
+
 function replaceParam(paramsListStr, param) {
     var str = paramsListStr.replace(/\{param_name\}/g, param.name);
 
@@ -516,7 +530,7 @@ function replaceParam(paramsListStr, param) {
 
     var typeclass= getTypeClassName(param["type"]);
     if (typeclass == null) {
-        str = str.replace(/\{param_href\}/g, "");
+        str = changeEmptyLink(str, /\{param_href\}/g);
     }
     else {
         str = str.replace(/\{param_href\}/g, getClassHref(getTypeClassName(param.type)));
@@ -545,15 +559,16 @@ function getReplacedStr(newNodestr, member) {
     newNodestr = newNodestr.replace(/\{type_class\}/g, typeclass);
 
     if (isNormalType(member["type"])) {
-        newNodestr = newNodestr.replace(/\{type_href\}/g, getModuleof(typeclass, "") + gapChar() + typeclass + gapChar() + member["type"]);
+        newNodestr = newNodestr.replace(/\{type_href\}/g, getLink(getModuleof(typeclass, "") + gapChar() + typeclass + gapChar() + member["type"]));
     }
     else {
         var typeModuleof = getModuleof(member["type"]);
         if (typeModuleof == null) {
-            newNodestr = newNodestr.replace(/\{type_href\}/g, "");
+            newNodestr = changeEmptyLink(newNodestr, /\{type_href\}/g);
+
         }
         else {
-            newNodestr = newNodestr.replace(/\{type_href\}/g, typeModuleof + gapChar() + typeclass);
+            newNodestr = newNodestr.replace(/\{type_href\}/g, getLink(typeModuleof + gapChar() + typeclass));
         }
     }
 

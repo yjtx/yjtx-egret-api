@@ -33,7 +33,7 @@
 		{
 			"kind": "member",
 			"type": "array",
-			"name": "array[]",
+			"name": "array",
 			"memberof": "global.Types",
 			"version": "all",
 			"platform": "all",
@@ -79,6 +79,16 @@
 			"platform": "all",
 			"description": "指定函数无法返回任何值。",
 			"example": "函数无任何返回类型：<br /><pre>function test():void{ }</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"memberof": "global.Types",
+			"name": "Function",
+			"version": "all",
+			"platform": "all",
+			"description": "",
+			"example": "函数无任何返回类型：<br /><pre>var f:Function</pre>"
 		}
 	],
 	"function": [],
