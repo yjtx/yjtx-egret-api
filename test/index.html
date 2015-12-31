@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0077)http://edn.egret.com/cn/index.php/apidoc/egret243/name/RES.IVersionController -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -44,26 +43,16 @@
         list-style-type: none;
     }
 
-
-
-    </style>
-    <style>
     </style>
 </head>
 <body class=""  onload="prettyPrint()">
 <div class="row-fluid row">
+    <!--左侧列表-->
     <div class="col-sm-3" style="padding-left: 30px;">
-        <div id="left-first-box" class="tc-box first-box">
-            <div class="headtitle">
-                <h2>筛选 </h2>
-                <h6>
-                    <a href="javascript:void" data-toggle="modal"
-                       data-target="#language-content-dialog">
-                    </a>
-                </h6>
-            </div>
-            <div class="bdsharebuttonbox">
-                <select id="selectType" onchange="selectType(this.value)" style="width:100%;max-width: 218px">
+        <div style=" position: fixed;width: 22%; max-width: 300px; ">
+            <div id="left-first-box" class="tc-box first-box">
+                <input type="text" id="searchclass" style="width:50%;" placeholder="输入类名">
+                <select id="selectType" onchange="selectType(this.value)" style="width:47%;">
                     <option value="egret" data-update="2015-11-18">Egret Core 2.5</option>
                     <option value="eui" data-update="2015-11-13">eui</option>
                     <option value="res" data-update="2015-11-13">res</option>
@@ -74,46 +63,40 @@
                     <option value="tween" data-update="2015-09-08">tween</option>
                 </select>
             </div>
-        </div>
-        <div class="tc-box" id="treelist" style="max-height: 913px; position: inherit; top: 0px;">
-            <div class="headtitle">
-                <h2>类列表</h2>
-            </div>
-            <ul>
-                <li>
-                    <input type="text" id="searchclass" style="width:100%;max-width: 218px" placeholder="输入类名">
-                </li>
-                <ul id="classList" class="classList">
-                    <li data-list-type="9243" style="display: list-item;">
-                        <a href="{class_href}" data-class-name="{class_name}"
-                           onclick="goto(this)">{class_name_desc}</a>
-                    </li>
+            <div class="tc-box" id="treelist" style="top: 0px;">
+                <ul>
+                    <ul id="classList" class="classList">
+                        <li data-list-type="9243" style="display: list-item;">
+                            <a href="{class_href}" data-class-name="{class_name}"
+                               onclick="goto(this)">{class_name_desc}</a>
+                        </li>
+                    </ul>
                 </ul>
-            </ul>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-9" id="rightcontent" style="padding-right: 30px;">
-        <div class="tc-box first-box" id="contentPage" data-title="egret.Bitmap API">
-            <div class="content">
-                <div class="classTop">
 
+    </div>
+
+    <!--右侧信息-->
+    <div class="col-sm-9 classTop" id="rightcontent" style="padding-right: 30px;">
+            <div class="content tc-box first-box">
                 <!--头部-->
                 <div class="MainContent" id="classHeader">
+                    <!--类、接口信息-->
                     <table class="classHeaderTable" cellpadding="0" cellspacing="0">
-                        <tbody>
                         <tr>
                             <td class="classHeaderTableLabel">包</td>
                             <td>{memberof}</td>
                         </tr>
-                        <tr>
+                        <tr class="detailClass">
                             <td class="classHeaderTableLabel">类</td>
                             <td class="classSignature Class">public class {name}</td>
                         </tr>
-                        <tr>
+                        <tr class="detailInterface">
                             <td class="classHeaderTableLabel">接口</td>
                             <td class="classSignature Class">public interface {name}</td>
                         </tr>
-                        <tr>
+                        <tr class="detailAugments">
                             <td class="classHeaderTableLabel">继承</td>
                             <td class="inheritanceList">{memberof_name}
                                 <span class="parentsId">
@@ -127,7 +110,7 @@
 
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="detailChildren">
                             <td class="classHeaderTableLabel">子类</td>
                             <td class="inheritanceList childrenId">
                                 <span>
@@ -137,18 +120,19 @@
                                 </span>
                             </td>
                         </tr>
-                        </tbody>
                     </table>
+
                     <p></p>
+                    <!--类注释-->
                     <span>{description}</span>
 
                     <p></p>
-
                     <!--示例-->
                     <span id="exampleAr">
                         <a href="{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
+                    <!--参考-->
                     <span id="see">
                         <p>
                             <span class="classHeaderTableLabel">了解更多</span>
@@ -265,7 +249,7 @@
                                             <span>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
+                                                <a href="{param_type_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                                 <span>, </span>
                                             </span>
                                         </span>
@@ -418,7 +402,7 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="{param_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
+                                    <a href="{param_type_href}" data-class-name="{param_type_class}" onclick="goto(this)">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
@@ -473,7 +457,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_href}" data-class-name="{param_type_class}"
+                                                <a href="{param_type_href}" data-class-name="{param_type_class}"
                                                    onclick="goto(this)">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
@@ -517,13 +501,8 @@
                 </div>
                 <!--示例-->
             </div>
-
-        </div>
     </div>
 </div>
-</div>
-
-
 
 <script src="getOptions.js"></script>
 <script src="getData.js"></script>
@@ -538,6 +517,15 @@
     initAll();
 
     prettyPrint();
+
+    window.addEventListener("resize", function () {
+        var treelist = document.getElementById("treelist");
+        treelist.style.height = (document.documentElement.clientHeight - 74) + "px";
+    });
+    window.addEventListener("load", function () {
+        var treelist = document.getElementById("treelist");
+        treelist.style.height = (document.documentElement.clientHeight - 74) + "px";
+    });
 </script>
 
 </body>
