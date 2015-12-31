@@ -110,6 +110,32 @@ function changeModule(moduleKey) {
     changeClass(currentModule, className);
 }
 
+
+function trimLeft(str) {
+    return str.replace(/^(\s)*/, "");
+}
+
+function trimRight(str) {
+    return str.replace(/(\s)*$/, "");
+}
+
+function trimAll(str) {
+    return trimRight(trimLeft(str));
+}
+
+function searchClass() {
+
+    changeClassList(currentModule);
+}
+
+function getSearchText() {
+    var searchInput = document.getElementById("searchInput");
+    var text = searchInput.value;
+
+    text = trimAll(text);
+    return text;
+}
+
 //刷新 class 列表
 function changeClassList(moduleKey) {
     var list = document.getElementById("classList");
@@ -118,16 +144,39 @@ function changeClassList(moduleKey) {
     var str = list.innerHTML;
     href = getMainHref() + "?m=" + moduleKey;
 
+    var searchTxt = getSearchText();
+
     var array = listAllData[moduleKey];
     for (var i = 0; i < array.length; i++) {
-        var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
-        tempStr = tempStr.replace(/\{class_href\}/, "#" + moduleKey + gapChar() + array[i]);
-        tempStr = tempStr.replace(/\{class_name\}/, array[i]);
-        var node = document.createElement(list.firstElementChild.nodeName);
-        node.innerHTML = tempStr;
+        var classname = array[i];
 
-        list.appendChild(node);
+        if (searchTxt.length <= 1 || isIn(searchTxt, classname)) {
+            var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
+            tempStr = tempStr.replace(/\{class_href\}/, "#" + moduleKey + gapChar() + array[i]);
+            tempStr = tempStr.replace(/\{class_name\}/, array[i]);
+            var node = document.createElement(list.firstElementChild.nodeName);
+            node.innerHTML = tempStr;
+
+            list.appendChild(node);
+        }
     }
 
     hideFirst(list);
+}
+
+function isIn(search, str) {
+    search = search.toLowerCase();
+    str = str.toLowerCase();
+    var idx = 0;
+    for (var i = 0; i < search.length; i++) {
+        var c = search[i];
+
+        idx = str.indexOf(c, idx);
+        if (idx < 0) {
+            return false;
+        }
+        idx++;
+    }
+
+    return true;
 }
