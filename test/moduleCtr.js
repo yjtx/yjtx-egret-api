@@ -104,9 +104,9 @@ var currentModule;
 function changeModule(moduleKey) {
     currentModule = moduleKey;
 
-    changeClassList(currentModule);
+    var defaultFirstName = changeClassList(currentModule);
 
-    var className = getUrlClassName() || listAllData[moduleKey][0];
+    var className = getUrlClassName() || defaultFirstName || listAllData[moduleKey][0];
     changeClass(currentModule, className);
 }
 
@@ -146,11 +146,16 @@ function changeClassList(moduleKey) {
 
     var searchTxt = getSearchText();
 
+    var defaultFirstName = "";
+
     var array = listAllData[moduleKey];
     for (var i = 0; i < array.length; i++) {
         var classname = array[i];
 
         if (searchTxt.length <= 1 || isIn(searchTxt, classname)) {
+            if (defaultFirstName == "") {
+                defaultFirstName = classname;
+            }
             var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
             tempStr = tempStr.replace(/\{class_href\}/, "#" + moduleKey + gapChar() + array[i]);
             tempStr = tempStr.replace(/\{class_name\}/, array[i]);
@@ -162,6 +167,8 @@ function changeClassList(moduleKey) {
     }
 
     hideFirst(list);
+
+    return defaultFirstName;
 }
 
 function isIn(search, str) {
