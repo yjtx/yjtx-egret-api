@@ -530,6 +530,10 @@ function getTypeClassName(type) {
         return getGlobalTypeClass();
     }
 
+    if (type == undefined) {
+        return "any";
+    }
+
     return type;
 }
 
@@ -542,9 +546,6 @@ function getClassHref(className) {
     }
 }
 
-function changeEmptyLink(str, reg) {
-    return str.replace(reg, "javascript:void");
-}
 
 function replaceParam(paramsListStr, param) {
     var str = paramsListStr.replace(/\{param_name\}/g, param.name);

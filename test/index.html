@@ -48,8 +48,8 @@
 <body class=""  onload="prettyPrint()">
 <div class="row-fluid row">
     <!--左侧列表-->
-    <div class="col-sm-3" style="padding-left: 30px;">
-        <div style=" position: fixed;width: 22%; max-width: 300px; ">
+    <div class="col-sm-3" style="padding-left: 50px;">
+        <div id="leftDiv" style=" position: fixed;width: 20%; max-width: 300px; ">
             <div id="left-first-box" class="tc-box first-box">
                 <input type="text" id="searchclass" style="width:50%;" placeholder="输入类名">
                 <select id="selectType" onchange="selectType(this.value)" style="width:47%;">
@@ -64,13 +64,11 @@
                 </select>
             </div>
             <div class="tc-box" id="treelist" style="top: 0px;">
-                <ul>
-                    <ul id="classList" class="classList">
-                        <li data-list-type="9243" style="display: list-item;">
-                            <a href="{class_href}" data-class-name="{class_name}"
-                               onclick="goto(this)">{class_name_desc}</a>
-                        </li>
-                    </ul>
+                <ul id="classList" class="classList">
+                    <li data-list-type="9243" style="display: list-item;">
+                        <a href="{class_href}" data-class-name="{class_name}"
+                           onclick="goto(this)">{class_name_desc}</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -526,6 +524,32 @@
         var treelist = document.getElementById("treelist");
         treelist.style.height = (document.documentElement.clientHeight - 74) + "px";
     });
+
+    var leftDiv = document.getElementById("classList");
+    var parentDiv = document.getElementById("treelist");
+    leftDiv.addEventListener("mousewheel", function (e) {
+        var y = parentDiv.scrollTop;
+        var h = parentDiv.scrollHeight;
+
+        var w = +parentDiv.style.height.split("px")[0];
+
+        var isPre = false;
+        if (e.deltaY > 0) {
+            if (y + w > h - 2) {
+                isPre = true;
+            }
+        }
+        else if (e.deltaY < 0) {
+            if (y <= 0) {
+                isPre = true;
+            }
+        }
+
+        if (isPre) {
+            e.preventDefault();
+        }
+    });
+
 </script>
 
 </body>
