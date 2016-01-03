@@ -26,7 +26,30 @@ function initClass() {
     initClassData();
 
     createMembers(apiData.member || apiData.globalMember || []);
+
+    var title1 = document.getElementsByClassName("memberPublic")[0];
+    var title2 = document.getElementsByClassName("memberDetail")[0];
+    if (apiData.member) {
+        title1.innerHTML = "公共属性";
+        title2.innerHTML = "属性详细信息";
+    }
+    else {
+        title1.innerHTML = "全局变量";
+        title2.innerHTML = "变量详细信息";
+    }
+
     createMethods(apiData.function || apiData.globalFunction || []);
+
+    var title1 = document.getElementsByClassName("methodPublic")[0];
+    var title2 = document.getElementsByClassName("methodDetail")[0];
+    if (apiData.member) {
+        title1.innerHTML = "公共方法";
+        title2.innerHTML = "方法详细信息";
+    }
+    else {
+        title1.innerHTML = "全局函数";
+        title2.innerHTML = "函数详细信息";
+    }
 
     createEvents();
 
@@ -200,9 +223,6 @@ function createMembers(dataList) {
     for (var i = 0; i < dataList.length; i++) {
         var member = dataList[i];
 
-        if (member.type == "egret.TextField") {
-var d;
-        }
         var newNodestr = getReplacedStr(nodestr, member);
 
         var newNode = document.createElement(node.firstElementChild.nodeName);
@@ -551,7 +571,7 @@ function replaceParam(paramsListStr, param) {
     var str = paramsListStr.replace(/\{param_name\}/g, param.name);
 
     str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
-    str = str.replace(/\{param_type\}/g, param.type);
+    str = str.replace(/\{param_type\}/g, param.type || "any");
 
     var typeclass= getTypeClassName(param["type"]);
 
@@ -571,7 +591,7 @@ function getReplacedStr(newNodestr, member) {
 
     var moduleof = getModuleof(member["memberof"], member["kind"]);
     newNodestr = newNodestr.replace(/\{moduleof\}/g, moduleof);
-    newNodestr = newNodestr.replace(/\{type\}/g, member["type"]);
+    newNodestr = newNodestr.replace(/\{type\}/g, member["type"] || "any");
     newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
     newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
 
