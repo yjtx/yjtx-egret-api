@@ -84,19 +84,19 @@
             <div class="MainContent" id="classHeader">
                 <!--类、接口信息-->
                 <table class="classHeaderTable" cellpadding="0" cellspacing="0">
-                    <tr>
+                    <tr class="moduleBlock">
                         <td class="classHeaderTableLabel">包</td>
                         <td>{memberof}</td>
                     </tr>
-                    <tr class="detailClass">
+                    <tr class="detailClass classBlock">
                         <td class="classHeaderTableLabel">类</td>
-                        <td class="classSignature Class">public class {name}</td>
+                        <td class="classSignature">public class {name}</td>
                     </tr>
-                    <tr class="detailInterface">
+                    <tr class="detailInterface interfaceBlock">
                         <td class="classHeaderTableLabel">接口</td>
-                        <td class="classSignature Class">public interface {name}</td>
+                        <td class="classSignature">public interface {name}</td>
                     </tr>
-                    <tr class="detailAugments">
+                    <tr class="detailAugments extendsBlock">
                         <td class="classHeaderTableLabel">继承</td>
                         <td class="inheritanceList">{memberof_name}
                                 <span class="parentsId">
@@ -110,12 +110,22 @@
 
                         </td>
                     </tr>
-                    <tr class="detailChildren">
+                    <tr class="detailChildren childrenBlock">
                         <td class="classHeaderTableLabel">子类</td>
                         <td class="inheritanceList childrenId">
                                 <span>
                                     <a href="{child_href}" data-class-name="{child_name}"
                                        onclick="goto(this)">{child_name}</a>
+                                    <span>, </span>
+                                </span>
+                        </td>
+                    </tr>
+                    <tr class="detailImplements implementsBlock">
+                        <td class="classHeaderTableLabel">实现</td>
+                        <td class="inheritanceList implementsId">
+                                <span>
+                                    <a href="{implement_href}" data-class-name="{implement_name}"
+                                       onclick="goto(this)">{implement_name}</a>
                                     <span>, </span>
                                 </span>
                         </td>
@@ -128,12 +138,12 @@
 
                 <p></p>
                 <!--示例-->
-                    <span id="exampleAr">
+                    <span class="exampleBlock">
                         <a href="{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
                     </span>
 
                 <!--参考-->
-                    <span id="see">
+                    <span class="seeBlock" id="see">
                         <p>
                             <span class="classHeaderTableLabel">了解更多</span>
                         </p>
@@ -147,7 +157,7 @@
             </div>
 
             <!--公共属性开始-->
-            <div class="summarySection">
+            <div class="summarySection memberBlock">
                 <div class="summaryTableTitle memberPublic">
                     公共属性
                 </div>
@@ -205,7 +215,7 @@
             <!--公共属性结束-->
 
             <!--公共方法开始-->
-            <div class="summarySection">
+            <div class="summarySection methodBlock">
                 <div class="summaryTableTitle methodPublic">
                     公共方法
                 </div>
@@ -276,7 +286,7 @@
             <!--公共方法结束-->
 
             <!-- 事件开始  -->
-            <div class="summarySection">
+            <div class="summarySection eventsBlock">
                 <div class="summaryTableTitle">事件</div>
                 <div class="showHideLinks"><a
                         href="http://edn.egret.com/cn/index.php?g=&amp;m=article&amp;a=index&amp;id=112&amp;terms1_id=25&amp;terms2_id=29"
@@ -304,7 +314,7 @@
             <!-- 事件结束  -->
 
             <!-- 属性详情  -->
-            <div class="MainContent">
+            <div class="MainContent memberBlock">
                 <div class="detailSectionHeader memberDetail">属性详细信息</div>
                     <span id="propertyDetails" div_display="table-row">
                         <div>
@@ -362,12 +372,10 @@
                                 </p>
 
                                 <!--示例-->
-                                <div>
+                                <div class="memberExample">
                                     <p><b>示例</b></p>
                                     <span>
                                         <div class="listing exampleDetailDiv">
-                                            <div class="listing">
-                                            </div>
                                         </div>
                                     </span>
                                 </div>
@@ -379,7 +387,7 @@
             <!--属性详情结束-->
 
             <!--方法开始-->
-            <div class="MainContent">
+            <div class="MainContent methodBlock">
                 <div class="detailSectionHeader methodDetail">方法详细信息</div>
                     <span id="methodDetails" class="hideInheritedMethod" data-inheritedmethod-inherited="1"
                           style="display: inline;" div_display="table-row">
@@ -473,12 +481,10 @@
                                 <p></p>
 
                                 <!--示例-->
-                                <div>
+                                <div class="methodExample">
                                     <p><b>示例</b></p>
                                     <span>
                                         <div class="listing exampleDetailDiv">
-                                            <div class="listing">
-                                            </div>
                                         </div>
                                     </span>
                                 </div>
@@ -491,13 +497,13 @@
             <!--方法结束-->
 
             <!--示例-->
-            <div id="exampleTag">
+            <div class="exampleBlock" id="exampleTag">
                 <div id="{example_href}" class="detailSectionHeader">示例
                 </div>
 
                     <span>
                         <div class="detailBody">
-                            <div class="listing" id="exampleDetailDiv">
+                            <div class="listing exampleDetailDiv">
                             </div>
                         </div>
                     </span>

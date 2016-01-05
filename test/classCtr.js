@@ -28,6 +28,8 @@ function changeClass(moduleKey, className) {
 
             if (urlModule != null && urlModule != "") {
                 window.location.href = window.location.href;
+                setTimeout(function () {
+                }, 10);
             }
         });
     }
@@ -36,20 +38,59 @@ function changeClass(moduleKey, className) {
 function initClass() {
     initClassData();
 
-    createMembers(apiData.member || apiData.globalMember || []);
+    initMethods();
+    initMembers();
 
-    var title1 = document.getElementsByClassName("memberPublic")[0];
-    var title2 = document.getElementsByClassName("memberDetail")[0];
-    if (apiData.member) {
-        title1.innerHTML = "公共属性";
-        title2.innerHTML = "属性详细信息";
+    initExamples();
+
+    initEvents();
+}
+
+function setDisplays(classname, isShow, display, parentNode) {
+    return;
+    var divs = (parentNode || document).getElementsByClassName(classname);
+    for (var i = 0; i < divs.length; i++) {
+        var item = divs[i];
+
+        if (!isShow) {
+            item.style["innner-display"] = item.style.display;
+            item.style.display = "none";
+        }
+        else {
+            if (item.style["innner-display"]) {
+                item.style.display = item.style["innner-display"];
+            }
+            else if (item.style.display == "none") {
+                item.style.display = item.style["innner-display"] || "block";
+            }
+        }
     }
-    else {
-        title1.innerHTML = "全局变量";
-        title2.innerHTML = "变量详细信息";
+}
+
+function initEvents() {
+    setDisplays("eventsBlock", apiData.class && apiData.class.event && apiData.class.event.length);
+
+    createEvents();
+}
+
+function initExamples() {
+    setDisplays("exampleBlock", apiData.class && apiData.class.example);
+
+    if (apiData.class && apiData.class.example) {
+        createExample();
+    }
+}
+
+function initMethods() {
+    var list = apiData.function || apiData.globalFunction || [];
+
+    setDisplays("methodBlock", list.length > 0);
+
+    if (list.length <= 0) {
+        return;
     }
 
-    createMethods(apiData.function || apiData.globalFunction || []);
+    createMethods(list);
 
     var title1 = document.getElementsByClassName("methodPublic")[0];
     var title2 = document.getElementsByClassName("methodDetail")[0];
@@ -62,19 +103,40 @@ function initClass() {
         title2.innerHTML = "函数详细信息";
     }
 
-    createEvents();
+    createMethodDetails(list);
+}
 
-    createPropertyDetails(apiData.member || apiData.globalMember || []);
-    createMethodDetails(apiData.function || apiData.globalFunction || []);
+function initMembers() {
+    var list = apiData.member || apiData.globalMember || [];
 
-    createExample();
+    setDisplays("memberBlock", list.length > 0);
+
+    if (list.length <= 0) {
+        return;
+    }
+
+    createMembers(list);
+
+    var title1 = document.getElementsByClassName("memberPublic")[0];
+    var title2 = document.getElementsByClassName("memberDetail")[0];
+    if (apiData.member) {
+        title1.innerHTML = "公共属性";
+        title2.innerHTML = "属性详细信息";
+    }
+    else {
+        title1.innerHTML = "全局变量";
+        title2.innerHTML = "变量详细信息";
+    }
+
+    createPropertyDetails(list);
 
 }
+
+
 
 function initClassData() {
     var node = document.getElementsByClassName("classTop")[0];
     node.setAttribute("id", currentModule + gapChar() + currentClassName);
-
 
     var node = document.getElementById("classHeader");
 
@@ -94,30 +156,22 @@ function initClassData() {
 
         node.innerHTML = str;
 
-
         var tempClassNode = node.getElementsByClassName("detailClass")[0];
-        if (apiData.class.kind != "class") {
-            tempClassNode.style.display = "none";
-        }
 
-        var tempNode = node.getElementsByClassName("detailInterface")[0];
-        if (apiData.class.kind != "interface") {
-            tempNode.style.display = "none";
-        }
-        var tempNode = node.getElementsByClassName("detailAugments")[0];
-        if (apiData.class.augments == null || apiData.class.augments.length == 0) {
-            tempNode.style.display = "none";
-        }
-        var tempNode = node.getElementsByClassName("detailAugments")[0];
-        if (apiData.class.augments == null || apiData.class.augments.length == 0) {
-            tempNode.style.display = "none";
-        }
-        var tempNode = node.getElementsByClassName("detailChildren")[0];
-        if (apiData.class.children == null || apiData.class.children.length == 0) {
-            tempNode.style.display = "none";
-        }
+        setDisplays("classBlock", apiData.class.kind == "class", "table-row");
+
+        setDisplays("interfaceBlock", apiData.class.kind == "interface", "table-row");
+
+        setDisplays("extendsBlock", !(apiData.class.augments == null || apiData.class.augments.length == 0), "table-row");
+
+        setDisplays("implementsBlock", !(apiData.class.implements == null || apiData.class.implements.length == 0), "table-row");
+
+        setDisplays("childrenBlock", !(apiData.class.children == null || apiData.class.children.length == 0), "table-row");
+
+        setDisplays("seeBlock", !(apiData.class.see == null || apiData.class.see.length == 0));
 
         createExtends(node);
+        createImplements(node);
         createChildren(node);
         createSee();
 
@@ -148,6 +202,32 @@ function createExtends(node) {
             var node = document.createElement(parentNode.firstElementChild.nodeName);
             parentNode.appendChild(node);
             node.outerHTML = tempStr;
+        }
+    }
+
+    hideFirst(parentNode);
+}
+
+function createImplements(node) {
+    var parentNode = node.getElementsByClassName("implementsId")[0];
+    clearList(parentNode);
+
+    if (apiData.class && apiData.class.implements && apiData.class.implements.length > 0) {
+        var str = parentNode.innerHTML;
+
+        var implements = apiData.class.implements;
+        for (var i = 0; i < implements.length; i++) {
+
+            var tempStr = str.replace(/\{implement_name\}/g, implements[i]["name"]);
+            tempStr = tempStr.replace(/\{implement_href\}/g, getClassHref(implements[i]["name"]));
+
+            var node = document.createElement(parentNode.firstElementChild.nodeName);
+            node.innerHTML = tempStr;
+            parentNode.appendChild(node);
+
+            if (i == implements.length - 1) {
+                node.lastElementChild.removeChild(node.lastElementChild.lastElementChild);
+            }
         }
     }
 
@@ -360,11 +440,11 @@ function createPropertyDetails(dataList) {
 
         members.appendChild(newNode);
 
+        setDisplays("memberExample", member.example, null, newNode);
         if (member.example) {
             var exampleNode = newNode.getElementsByClassName("exampleDetailDiv")[0];
             initExample(exampleNode, member.example);
         }
-
     }
 
     hideFirst(members);
@@ -457,6 +537,7 @@ function createMethodDetails(dataList) {
 
         members.appendChild(newNode);
 
+        setDisplays("methodExample", member.example, null, newNode);
         if (member.example) {
             var exampleNode = newNode.getElementsByClassName("exampleDetailDiv")[0];
             initExample(exampleNode, member.example);
@@ -468,10 +549,11 @@ function createMethodDetails(dataList) {
 
 function createExample() {
 
-    var exampleNode = document.getElementById("exampleDetailDiv");
     if (apiData.class) {
         var exampleTag = document.getElementById("exampleTag");
         exampleTag.firstElementChild.setAttribute("id", currentClassModule + gapChar() + currentClassName + gapChar() +"example@@@");
+
+        var exampleNode = exampleTag.getElementsByClassName("exampleDetailDiv")[0];
 
         if (apiData.class.example) {
             initExample(exampleNode, apiData.class.example);
@@ -581,9 +663,7 @@ function replaceParam(paramsListStr, param) {
     var str = paramsListStr.replace(/\{param_name\}/g, param.name);
 
     str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
-    str = str.replace(/\{param_type\}/g, param.type || "any");
-
-    var typeclass= getTypeClassName(param["type"]);
+    str = str.replace(/\{param_type\}/g, replaceChars(param.type || "any"));
 
     str = str.replace(/\{param_type_href\}/g, getTypeHref(param.type));
 
@@ -601,7 +681,7 @@ function getReplacedStr(newNodestr, member) {
 
     var moduleof = getModuleof(member["memberof"], member["kind"]);
     newNodestr = newNodestr.replace(/\{moduleof\}/g, moduleof);
-    newNodestr = newNodestr.replace(/\{type\}/g, member["type"] || "any");
+    newNodestr = newNodestr.replace(/\{type\}/g, replaceChars(member["type"] || "any"));
     newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
     newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
 
@@ -638,6 +718,12 @@ function getReplacedStr(newNodestr, member) {
     newNodestr = newNodestr.replace(/\{classModule_className_name\}/g, currentModule + gapChar() + currentClassName + gapChar() + member["name"]);
 
     return newNodestr;
+}
+
+function replaceChars(str) {
+    str = str.replace("<", "&lt;");
+    str = str.replace(">", "&gt;");
+    return str;
 }
 
 function getTypeHref(type) {

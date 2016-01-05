@@ -231,6 +231,7 @@
 		"eui.VerticalLayout",
 		"eui.ViewStack",
 		"eui.Watcher",
+		"EXML.globalMember",
 		"EXML.globalFunction"
 	],
 	"gui": [
