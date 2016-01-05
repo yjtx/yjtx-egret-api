@@ -7,19 +7,30 @@ var headerStr = document.getElementById("classHeader").innerHTML;
 
 var currentClassModule;
 var currentClassName;
+
+var classJsons = {};
+
 function changeClass(moduleKey, className) {
     currentClassModule = moduleKey;
     currentClassName = className;
 
-    getData("data/finalClasses/" + moduleKey + "/" + className + ".json", function (data) {
-        apiData = JSON.parse(data);
-
+    if (classJsons[moduleKey + "/" + className]) {
+        apiData = classJsons[moduleKey + "/" + className];
         initClass();
+    }
+    else {
+        getData("data/finalClasses/" + moduleKey + "/" + className + ".json", function (data) {
+            apiData = JSON.parse(data);
 
-        if (urlModule != null && urlModule != "") {
-            window.location.href = window.location.href;
-        }
-    });
+            classJsons[moduleKey + "/" + className] = apiData;
+
+            initClass();
+
+            if (urlModule != null && urlModule != "") {
+                window.location.href = window.location.href;
+            }
+        });
+    }
 }
 
 function initClass() {
