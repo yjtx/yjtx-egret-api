@@ -1725,6 +1725,12 @@
 				"inherits": "eui.ToggleButton"
 			},
 			{
+				"name": "egret.TouchEvent.TOUCH_CANCEL",
+				"description": "取消触摸事件",
+				"inherited": true,
+				"inherits": "eui.Button"
+			},
+			{
 				"name": "egret.Event.COMPLETE",
 				"description": "当设置skinName为外部exml文件路径时，加载并完成EXML解析后调度。",
 				"inherited": true,

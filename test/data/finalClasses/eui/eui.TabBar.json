@@ -1967,6 +1967,12 @@
 				"inherits": "eui.ListBase"
 			},
 			{
+				"name": "egret.TouchEvent.TOUCH_CANCEL",
+				"description": "取消触摸事件",
+				"inherited": true,
+				"inherits": "eui.ListBase"
+			},
+			{
 				"name": "egret.Event.RESIZE",
 				"description": "当UI组件的尺寸发生改变时调度",
 				"inherited": true,

@@ -419,7 +419,6 @@ function createMethodDetails(dataList) {
             paramsList2.appendChild(paramsNode2);
 
             var str = replaceParam(paramsList3Str, param);
-
             var paramsNode3 = document.createElement(paramsList3.firstElementChild.nodeName);
             paramsNode3.innerHTML = str;
             paramsList3.appendChild(paramsNode3);

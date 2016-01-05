@@ -1728,25 +1728,19 @@
 		"memberof": "eui",
 		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/SliderBase.ts",
 		"description": "滑块控件基类，通过使用 SliderBase 类，用户可以在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。SliderBase 类是 HSlider 和 VSlider 的基类。",
-		"see": [
-			"eui.HSlider",
-			"eui.VSlider"
-		],
-		"version": "eui 1.0",
-		"platform": "Web,Native",
-		"augments": [
-			"eui.Range",
-			"eui.Component",
-			"egret.DisplayObjectContainer",
-			"egret.DisplayObject",
-			"egret.EventDispatcher",
-			"egret.HashObject"
-		],
-		"children": [
-			"eui.HSlider",
-			"eui.VSlider"
-		],
 		"event": [
+			{
+				"name": "eui.UIEvent.CHANGE_START",
+				"description": "滚动位置改变开始"
+			},
+			{
+				"name": "eui.UIEvent.CHANGE_END",
+				"description": "滚动位置改变结束"
+			},
+			{
+				"name": "egret.Event.CHANGE",
+				"description": "滚动位置改变的时候"
+			},
 			{
 				"name": "egret.Event.COMPLETE",
 				"description": "当设置skinName为外部exml文件路径时，加载并完成EXML解析后调度。",
@@ -1837,6 +1831,24 @@
 				"inherited": true,
 				"inherits": "egret.DisplayObject"
 			}
+		],
+		"see": [
+			"eui.HSlider",
+			"eui.VSlider"
+		],
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"augments": [
+			"eui.Range",
+			"eui.Component",
+			"egret.DisplayObjectContainer",
+			"egret.DisplayObject",
+			"egret.EventDispatcher",
+			"egret.HashObject"
+		],
+		"children": [
+			"eui.HSlider",
+			"eui.VSlider"
 		]
 	}
 }

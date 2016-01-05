@@ -1661,6 +1661,12 @@
 				"description": "ToggleButtonBase 控件的 <code>selected</code> 属性更改时分派。仅当用户通过触摸与控件交互时，才分派此事件。"
 			},
 			{
+				"name": "egret.TouchEvent.TOUCH_CANCEL",
+				"description": "取消触摸事件",
+				"inherited": true,
+				"inherits": "eui.Button"
+			},
+			{
 				"name": "egret.Event.COMPLETE",
 				"description": "当设置skinName为外部exml文件路径时，加载并完成EXML解析后调度。",
 				"inherited": true,

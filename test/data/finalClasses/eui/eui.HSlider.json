@@ -1754,6 +1754,24 @@
 		],
 		"event": [
 			{
+				"name": "eui.UIEvent.CHANGE_START",
+				"description": "滚动位置改变开始",
+				"inherited": true,
+				"inherits": "eui.SliderBase"
+			},
+			{
+				"name": "eui.UIEvent.CHANGE_END",
+				"description": "滚动位置改变结束",
+				"inherited": true,
+				"inherits": "eui.SliderBase"
+			},
+			{
+				"name": "egret.Event.CHANGE",
+				"description": "滚动位置改变的时候",
+				"inherited": true,
+				"inherits": "eui.SliderBase"
+			},
+			{
 				"name": "egret.Event.COMPLETE",
 				"description": "当设置skinName为外部exml文件路径时，加载并完成EXML解析后调度。",
 				"inherited": true,
