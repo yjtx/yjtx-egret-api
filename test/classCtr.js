@@ -704,7 +704,9 @@ function getReplacedStr(newNodestr, member) {
         description = "[只写] " + description;
     }
 
-    newNodestr = newNodestr.replace(/\{description\}/g, description);
+    newNodestr = newNodestr.replace(/\{description_1\}/g, description);
+    newNodestr = newNodestr.replace(/\{description\}/g, member["description"]);
+
     newNodestr = newNodestr.replace(/\{inherited\}/g, member["inherited"] ? "block" : "none");
 
     if (moduleof == null) {

@@ -36,7 +36,7 @@ function run(opts) {
     var classChildren = require("./tools/addClassChildren");
     classChildren.addClassChildren(tempClassArr);
 
-    //对 3个“_”的名字改成2个_
+    //对 3个“_”的名字改成2个_，去掉 static 的名称的 _#static
     require("./tools/dealName").dealName(tempClassArr);
 
     //处理继承相关信息

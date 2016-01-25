@@ -256,7 +256,14 @@ function formatMember(member, text, parent, isStatic) {
             console.log(member);
         }
         var name = member.name.getText();
+
+        //解决静态变量和属性重名后被替换的问题
+        if (isStatic || flags & 128 /* Static */) {
+            name += "_#static";
+        }
     }
+
+
     if (parent[name] == null || member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */) {
         parent[name] = {};
     }

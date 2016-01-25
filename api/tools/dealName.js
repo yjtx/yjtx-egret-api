@@ -21,5 +21,9 @@ function changeName(list) {
         if (item.name.indexOf("___") >= 0) {
             item.name = item.name.substr(1);
         }
+
+        if (item.name.match(/_#static$/)) {
+            item.name = item.name.replace(/_#static$/, "");
+        }
     }
 }
