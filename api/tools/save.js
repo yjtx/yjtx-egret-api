@@ -203,9 +203,7 @@ exports.save = function (tempClassObjs) {
         for (var tempKey in modules) {
             var item = modules[tempKey];
             if (typeof item == "string") {
-                var modulespath = path.join(sourcePath, item);
-
-                if (filepath.indexOf(modulespath) == 0) {
+                if (filepath.indexOf(item) == 0) {
                     return tempKey;
                 }
             }
@@ -213,9 +211,7 @@ exports.save = function (tempClassObjs) {
                 var items = modules[tempKey];
                 for (var i = 0; i < items.length; i++) {
                     var item = items[i];
-
-                    var modulespath = path.join(sourcePath, item);
-                    if (filepath.indexOf(modulespath) == 0) {
+                    if (filepath.indexOf(item) == 0) {
                         return tempKey;
                     }
                 }

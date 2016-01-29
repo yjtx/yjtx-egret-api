@@ -1,6 +1,7 @@
 var ts = require("typescript");
 var trim = require("../core/trim");
 var globals = require("../core/globals");
+var path = require("path");
 
 exports.run = function run(fileNames) {
     var options = {target: 2 /* ES6 */, module: 0 /* None */};
@@ -21,7 +22,7 @@ exports.run = function run(fileNames) {
     var libsNames = ["tools/node_modules/typescript/bin", "core/typescript/lib.d.ts"];
     program.getSourceFiles().forEach(function (sourceFile) {
         var filename = sourceFile.filename;
-
+        filename = path.relative(globals.getSourcePath(), filename);
         for (var i = 0; i < libsNames.length; i++) {
             if (filename.match(libsNames[i])) {
                 return;
