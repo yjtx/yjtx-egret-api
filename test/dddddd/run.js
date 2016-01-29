@@ -1,6 +1,18 @@
 function run() {
+    var content = document.getElementById("content");
+    content.style.display = "none";
+
+    window.addEventListener("firstInit", function () {
+        content.style.display = "block";
+
+        window.dispatchEvent(new Event("resize"));
+    })
+
     //取list 数据
-    loadListData(r_1);
+    loadListData(function () {
+        r_1();
+
+    });
 }
 
 function r_1() {
@@ -38,6 +50,7 @@ function r_initClass() {
 
             r_rClass();
 
+            window.dispatchEvent(new Event("firstInit"));
         });
     }
 }
