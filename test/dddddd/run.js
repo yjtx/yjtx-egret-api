@@ -31,25 +31,30 @@ function r_initClass() {
     var c = getCurrentClass();
 
     if (isClassDataLoaded(m, c)) {
-        v_initClass();
+        r_rClass();
     }
     else {
         loadClassData(m, c, function () {
 
-            v_initClass();
+            r_rClass();
 
-            var href = window.location.href;
-            if (href.indexOf("#") > 0) {
-                window.location.href = window.location.href
-            }
         });
     }
 }
 
+function r_rClass() {
+    v_initClass();
+
+    setTimeout(function () {
+        var href = window.location.href;
+        if (href.indexOf("#") > 0) {
+            window.location.href = window.location.href;
+        }
+    }, 100);
+}
+
 
 window.onhashchange = function (e) {
-    console.dir(e.newURL);
-
     r_1();
 };
 
