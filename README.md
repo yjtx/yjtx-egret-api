@@ -40,6 +40,11 @@ node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output 
 }
 ~~~
 
+* modules 生成的对应组，可以同时包含多个
+
+* exclude 不希望加入到生成列表的文件
+
+
 ### 运行
 
 在 test 文件夹中，通过 server 运行 index.html，可以直接查看显示的结果。
