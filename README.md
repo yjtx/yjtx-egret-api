@@ -1,5 +1,4 @@
-## TS api
-
+## TS api 生成器
 
 生成出 ts 对应的 api 数据以及显示
 
@@ -48,3 +47,5 @@ node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output 
 ### 运行
 
 在 test 文件夹中，通过 server 运行 index.html，可以直接查看显示的结果。
+
+<http://yjtxlib.com/yjtx-egret-api/test/>
