@@ -522,7 +522,7 @@
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
 			"rwType": 1,
-			"inheritDoc": true,
+			"description": "返回此对象的子项数目。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"pType": "public",
@@ -859,7 +859,8 @@
 			"name": "touchChildren",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "确定对象的子级是否支持触摸或用户输入设备。如果对象支持触摸或用户输入设备，用户可以通过使用触摸或用户输入设备与之交互。",
+			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"pType": "public",
@@ -1143,14 +1144,15 @@
 			"name": "contains",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "确定指定显示对象是 DisplayObjectContainer 实例的子项还是该实例本身。搜索包括整个显示列表（其中包括此 DisplayObjectContainer 实例）。孙项、曾孙项等，每项都返回 true。",
+			"returns": "如果指定的显示对象为 DisplayObjectContainer 该实例本身，则返回true，如果指定的显示对象为当前实例子项，则返回false。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "child",
 					"type": "egret.DisplayObject",
-					"description": ""
+					"description": "要测试的子对象。"
 				}
 			],
 			"pType": "public",
@@ -1256,14 +1258,18 @@
 			"name": "getChildAt",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "返回位于指定索引处的子显示对象实例。",
+			"returns": "位于指定索引位置处的子显示对象。",
+			"see": [
+				"#getChildByName()"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "index",
 					"type": "number",
-					"description": ""
+					"description": "子对象的索引位置。"
 				}
 			],
 			"pType": "public",
@@ -1276,14 +1282,19 @@
 			"name": "getChildByName",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "返回具有指定名称的子显示对象。如果多个子显示对象具有指定名称，则该方法会返回子级列表中的第一个对象。getChildAt() 方法比 getChildByName() 方法快。getChildAt() 方法从缓存数组中访问子项，而 getChildByName() 方法则必须遍历链接的列表来访问子项。",
+			"returns": "具有指定名称的子显示对象。",
+			"see": [
+				"#getChildAt()",
+				"egret.DisplayObject#name"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "name",
 					"type": "string",
-					"description": ""
+					"description": "要返回的子项的名称。"
 				}
 			],
 			"pType": "public",
@@ -1296,14 +1307,15 @@
 			"name": "getChildIndex",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "返回 DisplayObject 的 child 实例的索引位置。",
+			"returns": "要查找的子显示对象的索引位置。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "child",
 					"type": "egret.DisplayObject",
-					"description": ""
+					"description": "要测试的子对象。"
 				}
 			],
 			"pType": "public",
@@ -1729,7 +1741,11 @@
 			"name": "removeChildren",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "从 DisplayObjectContainer 实例的子级列表中删除所有 child DisplayObject 实例。",
+			"see": [
+				"#removeChild()",
+				"#removeChildAt()"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"pType": "public",
@@ -1811,19 +1827,23 @@
 			"name": "setChildIndex",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "更改现有子项在显示对象容器中的位置。这会影响子对象的分层。",
+			"see": [
+				"#addChildAt()",
+				"#getChildAt()"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "child",
 					"type": "egret.DisplayObject",
-					"description": ""
+					"description": "要为其更改索引编号的 DisplayObject 子实例。"
 				},
 				{
 					"name": "index",
 					"type": "number",
-					"description": ""
+					"description": "生成的 child 显示对象的索引编号。当新的索引编号小于0或大于已有子元件数量时，新加入的DisplayObject对象将会放置于最上层。"
 				}
 			],
 			"pType": "public",
@@ -1952,19 +1972,22 @@
 			"name": "swapChildren",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "交换两个指定子对象的 Z 轴顺序（从前到后顺序）。显示对象容器中所有其他子对象的索引位置保持不变。",
+			"see": [
+				"#swapChildrenAt()"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "child1",
 					"type": "egret.DisplayObject",
-					"description": ""
+					"description": "第一个子对象。"
 				},
 				{
 					"name": "child2",
 					"type": "egret.DisplayObject",
-					"description": ""
+					"description": "第二个子对象。"
 				}
 			],
 			"pType": "public",
@@ -1977,19 +2000,22 @@
 			"name": "swapChildrenAt",
 			"memberof": "egret.DisplayObjectContainer",
 			"scope": "instance",
-			"inheritDoc": true,
+			"description": "在子级列表中两个指定的索引位置，交换子对象的 Z 轴顺序（前后顺序）。显示对象容器中所有其他子对象的索引位置保持不变。",
+			"see": [
+				"#swapChildren()"
+			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "index1",
 					"type": "number",
-					"description": ""
+					"description": "第一个子对象的索引位置。"
 				},
 				{
 					"name": "index2",
 					"type": "number",
-					"description": ""
+					"description": "第二个子对象的索引位置。"
 				}
 			],
 			"pType": "public",

@@ -47,7 +47,7 @@ function initClass() {
 }
 
 function setDisplays(classname, isShow, display, parentNode) {
-    return;
+    //return;
     var divs = (parentNode || document).getElementsByClassName(classname);
     for (var i = 0; i < divs.length; i++) {
         var item = divs[i];
@@ -575,7 +575,7 @@ function InheritedProperty() {
         else {
             if (node.style.display == "none") {
                 if (!apiDebug) {
-                    node.style.display = "table-row";
+                    node.style.display = "block";
                 }
             }
         }
@@ -597,7 +597,7 @@ function InheritedMethod() {
         else {
             if (node.style.display == "none") {
                 if (!apiDebug) {
-                    node.style.display = "table-row";
+                    node.style.display = "block";
                 }
             }
         }
@@ -693,7 +693,12 @@ function getReplacedStr(newNodestr, member) {
 
     var description = getFirstSpan(member["description"]);
     if (member["scope"] == "static") {
-        description = "[常量] " + description;
+        if (member["kind"] == "member") {
+            description = "[常量] " + description;
+        }
+        else {
+            description = "[静态] " + description;
+        }
         newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
     }
 

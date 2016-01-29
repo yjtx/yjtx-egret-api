@@ -26,60 +26,76 @@
     <script src="./resources/prettify.min.js"></script>
 
 
-    <style>        #treelist {
-        overflow-x: hidden;
-        overflow-y: auto;
-        list-style-type: none;
-    }
+    <style>
+        #treelist {
+            overflow-x: hidden;
+            overflow-y: auto;
+            list-style-type: none;
+        }
 
-    #treelist ul {
-        padding-left: 0px;
-        margin-left: 0px;
-    }
+        #treelist ul {
+            padding-left: 0px;
+            margin-left: 0px;
+        }
 
-    #treelist ul li {
-        list-style-type: none;
-    }
+        #treelist ul li {
+            list-style-type: none;
+        }
 
-    input {
-        height:35px;
-    }
+        input {
+            height: 35px;
+        }
+
+        #leftDiv  {
+            transition: left 1s;
+            -moz-transition: left 1s; /* Firefox 4 */
+            -webkit-transition: left 1s; /* Safari 和 Chrome */
+            -o-transition: left 1s; /* Opera */
+        }
+        #arraw_move  {
+            transition: left 1s;
+            -moz-transition: left 1s; /* Firefox 4 */
+            -webkit-transition: left 1s; /* Safari 和 Chrome */
+            -o-transition: left 1s; /* Opera */
+        }
+
+        .class_selected {
+            color:#ff0039;
+        }
+
+        .class_unselected {
+            color:000039;
+        }
 
     </style>
 </head>
 <body class="" onload="prettyPrint()">
-<div class="row-fluid row">
+<img id="arraw_move" src="resources/1.png" style="top: 40%;position: fixed;z-index:10">
+
+<div class="">
     <!--左侧列表-->
-    <div class="col-sm-3" style="padding-left: 50px;z-index: 1">
-        <div id="leftDiv" style=" position: fixed;width: 20%; max-width: 300px; ">
-            <div id="left-first-box" class="tc-box first-box">
+    <div id="leftDiv" class="col-sm-3" style="padding-left: 0px;z-index: 9;position: fixed">
+        <div style="padding-left: 15px">
+            <div id="left-first-box" class="tc-box first-box" style="padding-bottom: 0;margin-bottom: 0">
                 <input type="text" id="searchInput" style="width:50%;" placeholder="输入类名" oninput="searchClass()">
                 <select id="selectType" onchange="selectType(this.value)" style="width:47%;">
-                    <option value="egret" data-update="2015-11-18">Egret Core 2.5</option>
-                    <option value="eui" data-update="2015-11-13">eui</option>
-                    <option value="res" data-update="2015-11-13">res</option>
-                    <option value="dragonbones" data-update="2015-11-13">dragonBones</option>
-                    <option value="gui" data-update="2015-10-10">gui</option>
-                    <option value="game" data-update="2015-09-08">game</option>
-                    <option value="socket" data-update="2015-09-08">socket</option>
-                    <option value="tween" data-update="2015-09-08">tween</option>
+                    <option value="{module_key}" data-update="{date_now}">{module_key}</option>
                 </select>
             </div>
-            <div class="tc-box" id="treelist" style="top: 0px;">
+            <div class="tc-box" id="treelist" style="top: 0px;margin: 0;border: 0;padding-left: 15px">
                 <ul id="classList" class="classList">
                     <li data-list-type="9243" style="display: list-item;">
-                        <a href="{class_href}" data-class-name="{class_name}"
-                           onclick="goto(this)">{class_name_desc}</a>
+                        <a href="{class_href}" data-index="{data-index}" data-class-name="{class_name}" class="{class_selected}" onclick="listSelected(this)"
+                        >{class_name_desc}</a>
                     </li>
                 </ul>
             </div>
         </div>
-
     </div>
 
     <!--右侧信息-->
-    <div class="col-sm-9 classTop" id="rightcontent" style="padding-right: 30px;">
-        <div class="content tc-box first-box">
+    <div class="col-sm-9" id="rightcontent" style="padding-right: 10px; padding-left:0px">
+        <div class="content tc-box first-box classTop">
             <!--头部-->
             <div class="MainContent" id="classHeader">
                 <!--类、接口信息-->
@@ -104,7 +120,7 @@
                                         <img class="inheritArrow" title="Inheritance" alt="Inheritance"
                                              src="resources/inherit-arrow.gif">
                                         <a href="{parent_href}" data-class-name="{parent_name}"
-                                           onclick="goto(this)">{parent_name}</a>
+                                        >{parent_name}</a>
                                     </span>
                                 </span>
 
@@ -115,7 +131,7 @@
                         <td class="inheritanceList childrenId">
                                 <span>
                                     <a href="{child_href}" data-class-name="{child_name}"
-                                       onclick="goto(this)">{child_name}</a>
+                                    >{child_name}</a>
                                     <span>, </span>
                                 </span>
                         </td>
@@ -125,7 +141,7 @@
                         <td class="inheritanceList implementsId">
                                 <span>
                                     <a href="{implement_href}" data-class-name="{implement_name}"
-                                       onclick="goto(this)">{implement_name}</a>
+                                    >{implement_name}</a>
                                     <span>, </span>
                                 </span>
                         </td>
@@ -139,7 +155,7 @@
                 <p></p>
                 <!--示例-->
                     <span class="exampleBlock">
-                        <a href="{example_href}" onclick="onClick(apiData, &quot;example&quot;)">查看示例</a>
+                        <a href="{example_href}">查看示例</a>
                     </span>
 
                 <!--参考-->
@@ -149,8 +165,7 @@
                         </p>
                         <span id="seeList1">
                             <p>
-                                <a href="{see_href}" data-href="{see_name}"
-                                   onclick="onClick(this, &quot;see&quot;)">{see_description}</a>
+                                <a href="{see_href}" data-href="{see_name}">{see_description}</a>
                             </p>
                         </span>
                     </span>
@@ -196,7 +211,7 @@
                                class="signatureLink Method">
                                 <span>{name}</span>
                             </a>
-                            : <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                            : <a href="{type_href}" data-class-name="{type_class}">{type}</a>
                             <span class="defaultValue"> = {default}</span>
 
                             <div class="summaryTableDescription">
@@ -204,8 +219,7 @@
                             </div>
                         </td>
                         <td class="summaryTableOwnerCol">
-                            <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}"
-                               onclick="goto(this)">{memberof}</a>
+                            <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}">{memberof}</a>
                         </td>
                     </tr>
                     </tbody>
@@ -260,15 +274,14 @@
                                             <span>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_type_href}" data-class-name="{param_type_class}"
-                                                   onclick="goto(this)">{param_type}</a>
+                                                <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
                                                 <span>, </span>
                                             </span>
                                         </span>
                                 <span>)</span>
                                         <span class="functionType1">
                                             :
-                                            <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                            <a href="{type_href}" data-class-name="{type_class}">{type}</a>
                                         </span>
                             </div>
                             <div class="summaryTableDescription">
@@ -276,7 +289,7 @@
                             </div>
                         </td>
                         <td class="summaryTableOwnerCol">
-                            <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}" onclick="goto(this)">{memberof}</a>
+                            <a href="#{moduleof_memberof_full}" data-class-name="{memberof_full}">{memberof}</a>
                         </td>
                     </tr>
                     </tbody>
@@ -316,7 +329,7 @@
             <!-- 属性详情  -->
             <div class="MainContent memberBlock">
                 <div class="detailSectionHeader memberDetail">属性详细信息</div>
-                    <span id="propertyDetails" div_display="table-row">
+                    <span id="propertyDetails" div_display="block">
                         <div>
                             <table class="detailHeader" cellpadding="0" cellspacing="0">
                                 <tbody>
@@ -331,7 +344,7 @@
                             </table>
                             <div class="detailBody">
                                 {name} :
-                                <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                <a href="{type_href}" data-class-name="{type_class}">{type}</a>
 
                                 <p></p>
                                 <table cellpadding="0" cellspacing="0" border="0">
@@ -362,12 +375,12 @@
 
                                 <p class="getProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public get {name}():
-                                    <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                    <a href="{type_href}" data-class-name="{type_class}">{type}</a>
                                 </p>
 
                                 <p class="setProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public set {name}(value:
-                                    <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>)
+                                    <a href="{type_href}" data-class-name="{type_class}">{type}</a>)
                                     <br>
                                 </p>
 
@@ -390,7 +403,7 @@
             <div class="MainContent methodBlock">
                 <div class="detailSectionHeader methodDetail">方法详细信息</div>
                     <span id="methodDetails" class="hideInheritedMethod" data-inheritedmethod-inherited="1"
-                          style="display: inline;" div_display="table-row">
+                          style="display: inline;" div_display="block">
                         <div>
                             <table class="detailHeader" cellpadding="0" cellspacing="0">
                                 <tbody>
@@ -413,15 +426,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="{param_type_href}" data-class-name="{param_type_class}"
-                                       onclick="goto(this)">{param_type}</a>
+                                    <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="{type_href}" data-class-name="{type_class}" onclick="goto(this)">{type}</a>
+                                <a href="{type_href}" data-class-name="{type_class}">{type}</a>
                             </span>
 
                                 <p></p>
@@ -469,8 +481,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_type_href}" data-class-name="{param_type_class}"
-                                                   onclick="goto(this)">{param_type}</a>
+                                                <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
                                                 —
                                                 <span>{param_description}</span>
                                             </p>
@@ -514,35 +525,72 @@
     </div>
 </div>
 
-<script src="getOptions.js"></script>
-<script src="getData.js"></script>
-<script src="utils.js"></script>
-<script src="getExample.js"></script>
-<script src="moduleCtr.js"></script>
-<script src="classCtr.js"></script>
+<script src="dddddd/utils.js"></script>
 
-<!--<script src="init.js"></script>-->
+<script src="dddddd/getData.js"></script>
+<script src="dddddd/getExample.js"></script>
+<script src="dddddd/apiData.js"></script>
+<script src="dddddd/currentData.js"></script>
+<script src="dddddd/templateNode.js"></script>
+<script src="dddddd/keys.js"></script>
+
+<script src="dddddd/list.js"></script>
+<script src="dddddd/classCtr.js"></script>
+<script src="dddddd/members.js"></script>
+
+<script src="dddddd/run.js"></script>
 
 <script>
-    initAll();
+    run();
 
     prettyPrint();
 
     var leftDiv = document.getElementById("leftDiv");
     var treelist = document.getElementById("treelist");
+    var rightcontent = document.getElementById("rightcontent");
+    var arraw_move = document.getElementById("arraw_move");
 
     function setDiv() {
-        treelist.style.height = (document.documentElement.clientHeight - 74) + "px";
+        treelist.style.height = (document.documentElement.clientHeight - 50) + "px";
 
-        if (document.documentElement.clientWidth < 780) {
-//            leftDiv.style.position = "relative";
-            leftDiv.style.width = "400px";
+        var cw = document.documentElement.clientWidth;
+        if (document.documentElement.clientWidth < 800) {
+            leftDiv.style.left = "-350px";
+            arraw_move.style.left = "-90px";
+
+            leftDiv.style.minWidth = Math.min(document.documentElement.clientWidth - 30, 200) + "px";
+
+            rightcontent.style.left = (10) + "px";
+            rightcontent.style.width = (cw - 10) + "px";
+
+            arraw_move.style.display = "block";
         }
         else {
-//            leftDiv.style.position = "fixed";
-            leftDiv.style.width = "20%";
+            leftDiv.style.minWidth = "300px";
+
+            leftDiv.style.left = "0px";
+
+            var w = leftDiv.getBoundingClientRect().width;
+
+            rightcontent.style.left = (w) + "px";
+            rightcontent.style.width = (cw - w) + "px";
+
+            arraw_move.style.display = "none";
         }
     }
+
+    arraw_move.addEventListener("click", function () {
+        if (document.documentElement.clientWidth < 800) {
+            if (leftDiv.style.left == "0px") {
+                leftDiv.style.left = "-350px";
+                arraw_move.style.left = "-90px";
+            }
+            else {
+                leftDiv.style.left = "0px";
+                arraw_move.style.left = "260px";
+            }
+        }
+    });
 
     window.addEventListener("resize", function () {
         setDiv();
@@ -551,7 +599,7 @@
         setDiv();
     });
 
-    treelist.addEventListener("mousewheel", function (e) {
+    leftDiv.addEventListener("mousewheel", function (e) {
         var y = treelist.scrollTop;
         var h = treelist.scrollHeight;
 
@@ -575,6 +623,12 @@
         }
     });
 
+
+    window.onerror = function (err, surl, sline) {
+        alert(err);
+        alert(surl);
+        alert(sline);
+    }
 </script>
 
 </body>

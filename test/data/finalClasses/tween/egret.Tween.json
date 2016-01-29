@@ -73,6 +73,7 @@
 			"returns": "Tween对象本身",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
+			"example": "<pre><br/>&nbsp;egret.Tween.get(display).call(function&nbsp;(a:number,&nbsp;b:string)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;a:&nbsp;&quot;&nbsp;+&nbsp;a);&nbsp;//对应传入的第一个参数&nbsp;233<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;b:&nbsp;&quot;&nbsp;+&nbsp;b);&nbsp;//对应传入的第二个参数&nbsp;“hello”<br/>&nbsp;},&nbsp;this,&nbsp;[233,&nbsp;&quot;hello&quot;]);<br/></pre>",
 			"params": [
 				{
 					"name": "callback",
@@ -179,7 +180,7 @@
 					"name": "override",
 					"type": "boolean",
 					"default": "false",
-					"description": "是否移除对象之前添加的tween，默认值false"
+					"description": "是否移除对象之前添加的tween，默认值false。不建议使用，可使用 Tween.removeTweens(target) 代替。"
 				}
 			],
 			"pType": "public"
