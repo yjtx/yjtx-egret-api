@@ -39,6 +39,9 @@ function r_initList() {
 }
 
 function r_initClass() {
+    memberHide = true;
+    methodyHide = true;
+
     var m = getCurrentModule();
     var c = getCurrentClass();
 
