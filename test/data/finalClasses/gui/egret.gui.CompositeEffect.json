@@ -595,7 +595,7 @@
 		"kind": "class",
 		"name": "CompositeEffect",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/CompositeEffect.ts",
+		"filename": "extension/gui/effect/CompositeEffect.ts",
 		"description": "复合效果的基类",
 		"augments": [
 			"egret.gui.Effect",

@@ -547,7 +547,7 @@
 		"kind": "class",
 		"name": "TileLayout",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/TileLayout.ts",
+		"filename": "extension/gui/layouts/TileLayout.ts",
 		"description": "格子布局",
 		"augments": [
 			"egret.gui.LayoutBase",

@@ -1792,7 +1792,7 @@
 		"kind": "class",
 		"name": "VSlider",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/VSlider.ts",
+		"filename": "extension/eui/components/VSlider.ts",
 		"description": "使用 VSlider（垂直滑块）控件，用户可通过在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

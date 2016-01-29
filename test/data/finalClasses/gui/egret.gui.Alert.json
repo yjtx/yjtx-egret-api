@@ -2432,7 +2432,7 @@
 		"kind": "class",
 		"name": "Alert",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Alert.ts",
+		"filename": "extension/gui/components/Alert.ts",
 		"description": "弹出对话框，可能包含消息、标题、按钮（“确定”、“取消”、“是”和“否”的任意组合)。",
 		"augments": [
 			"egret.gui.TitleWindow",

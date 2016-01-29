@@ -1058,7 +1058,7 @@
 		"kind": "class",
 		"name": "DisplayObjectContainer",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/DisplayObjectContainer.ts",
+		"filename": "egret/display/DisplayObjectContainer.ts",
 		"description": "DisplayObjectContainer 类是基本显示列表构造块：一个可包含子项的显示列表节点。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

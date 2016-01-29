@@ -521,7 +521,7 @@
 		"kind": "class",
 		"name": "CompositeEffectInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/CompositeEffectInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/CompositeEffectInstance.ts",
 		"description": "CompositeEffectInstance 类用于实现 CompositeEffect 类的实例类",
 		"augments": [
 			"egret.gui.EffectInstance",

@@ -63,6 +63,9 @@
 			"name": "RenderTexture",
 			"memberof": "egret.RenderTexture",
 			"scope": "instance",
+			"description": "创建一个 egret.RenderTexture 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
 			"pType": "public"
 		},
 		{
@@ -71,7 +74,11 @@
 			"name": "dispose",
 			"memberof": "egret.RenderTexture",
 			"scope": "instance",
-			"pType": "public"
+			"inheritDoc": true,
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"description": "释放纹理"
 		},
 		{
 			"kind": "function",
@@ -193,7 +200,7 @@
 		"kind": "class",
 		"name": "RenderTexture",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/RenderTexture.ts",
+		"filename": "egret/display/RenderTexture.ts",
 		"description": "RenderTexture 是动态纹理类，他实现了将显示对象及其子对象绘制成为一个纹理的功能",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

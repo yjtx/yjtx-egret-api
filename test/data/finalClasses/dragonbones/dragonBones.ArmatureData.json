@@ -270,7 +270,7 @@
 		"kind": "class",
 		"name": "ArmatureData",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/ArmatureData.ts",
+		"filename": "extension/dragonbones/core/model/ArmatureData.ts",
 		"description": "armature数据 一个armature数据包含一个角色的骨骼，皮肤，动画的数据",
 		"see": [
 			"dragonBones.BoneData",

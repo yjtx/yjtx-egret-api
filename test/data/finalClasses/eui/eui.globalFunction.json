@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/utils/registerbindable.ts",
+			"filename": "extension/eui/utils/registerbindable.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerBindable",
@@ -25,7 +25,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/utils/registerproperty.ts",
+			"filename": "extension/eui/utils/registerproperty.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerProperty",

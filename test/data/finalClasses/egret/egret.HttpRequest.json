@@ -410,7 +410,7 @@
 		"kind": "class",
 		"name": "HttpRequest",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/net/HttpRequest.ts",
+		"filename": "egret/net/HttpRequest.ts",
 		"description": "HttpRequest 类以文本或二进制数据的形式从 URL 下载数据。HttpRequest 对象会先从 URL 中下载所有数据，然后才将数据用于应用程序中的代码。它会发出有关下载进度的通知，通过 bytesLoaded 和 bytesTotal 属性以及已调度的事件，可以监视下载进度。",
 		"event": [
 			{

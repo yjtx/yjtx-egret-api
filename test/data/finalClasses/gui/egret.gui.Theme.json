@@ -53,6 +53,6 @@
 		"kind": "class",
 		"name": "Theme",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/Theme.ts"
+		"filename": "extension/gui/components/supportClasses/Theme.ts"
 	}
 }

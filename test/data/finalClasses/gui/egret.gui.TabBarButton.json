@@ -2073,7 +2073,7 @@
 		"kind": "class",
 		"name": "TabBarButton",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/TabBarButton.ts",
+		"filename": "extension/gui/components/TabBarButton.ts",
 		"description": "选项卡组件的按钮条目",
 		"augments": [
 			"egret.gui.ToggleButtonBase",

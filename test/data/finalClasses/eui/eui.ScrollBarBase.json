@@ -44,6 +44,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "boolean",
+			"name": "autoVisibility",
+			"memberof": "eui.ScrollBarBase",
+			"scope": "instance",
+			"description": "是否自动隐藏 scrollbar",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "true"
+		},
+		{
+			"kind": "member",
 			"type": "string",
 			"name": "blendMode",
 			"memberof": "egret.DisplayObject",
@@ -1668,7 +1680,7 @@
 		"kind": "class",
 		"name": "ScrollBarBase",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/ScrollBarBase.ts",
+		"filename": "extension/eui/components/supportClasses/ScrollBarBase.ts",
 		"description": "<code>ScrollBarBase</code> 滚动条基类，该类帮助在因数据太多而不能在显示区域完全显示时定位显示的数据部分。ScrollBarBase 类显示视区的一部分和一个指示滑块。视区是一个IViewport接口实现的实例。",
 		"see": [
 			"eui.IViewport"

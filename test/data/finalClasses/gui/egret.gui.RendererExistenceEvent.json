@@ -704,7 +704,7 @@
 		"kind": "class",
 		"name": "RendererExistenceEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/RendererExistenceEvent.ts",
+		"filename": "extension/gui/events/RendererExistenceEvent.ts",
 		"description": "在DataGroup添加或删除项呈示器时分派的事件。",
 		"augments": [
 			"egret.Event",

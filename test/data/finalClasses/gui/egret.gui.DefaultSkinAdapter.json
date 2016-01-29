@@ -38,7 +38,7 @@
 		"kind": "class",
 		"name": "DefaultSkinAdapter",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/DefaultSkinAdapter.ts",
+		"filename": "extension/gui/components/supportClasses/DefaultSkinAdapter.ts",
 		"description": "默认的ISkinAdapter接口实现",
 		"implements": [
 			{

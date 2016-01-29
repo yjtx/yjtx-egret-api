@@ -2131,7 +2131,7 @@
 		"kind": "class",
 		"name": "EditableText",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/EditableText.ts",
+		"filename": "extension/gui/components/EditableText.ts",
 		"augments": [
 			"egret.gui.TextBase",
 			"egret.gui.UIComponent",

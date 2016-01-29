@@ -2459,7 +2459,7 @@
 		"kind": "class",
 		"name": "DropDownList",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/DropDownList.ts",
+		"filename": "extension/gui/components/DropDownList.ts",
 		"description": "不可输入的下拉列表控件。带输入功能的下拉列表控件，请使用ComboBox。",
 		"augments": [
 			"egret.gui.DropDownListBase",

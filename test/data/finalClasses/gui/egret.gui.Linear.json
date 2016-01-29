@@ -63,7 +63,7 @@
 		"kind": "class",
 		"name": "Linear",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/Linear.ts",
+		"filename": "extension/gui/effect/easing/Linear.ts",
 		"description": "Linear 类使用三个阶段定义缓动：加速、匀速运动和减速。",
 		"implements": [
 			{

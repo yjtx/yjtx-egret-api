@@ -178,7 +178,7 @@
 		"kind": "class",
 		"name": "DragonBonesData",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/DragonBonesData.ts",
+		"filename": "extension/dragonbones/core/model/DragonBonesData.ts",
 		"description": "DragonBones的数据，包含了骨架数据和显示对象数据"
 	}
 }

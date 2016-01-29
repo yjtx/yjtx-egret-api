@@ -24,7 +24,7 @@
 		"kind": "class",
 		"name": "FastSlotTimelineState",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/animation/FastSlotTimelineState.ts",
+		"filename": "extension/dragonbones/core/fast/animation/FastSlotTimelineState.ts",
 		"description": "FastSlotTimelineState 负责计算 Slot 的时间轴动画。FastSlotTimelineState 实例隶属于 FastAnimationState. FastAnimationState在创建时会为每个包含动作的 Slot生成一个 FastSlotTimelineState 实例.",
 		"see": [
 			"dragonBones.FastAnimation",

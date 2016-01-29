@@ -1884,7 +1884,7 @@
 		"kind": "class",
 		"name": "DataGroup",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/DataGroup.ts",
+		"filename": "extension/eui/components/DataGroup.ts",
 		"description": "DataGroup 类将数据项目转换为可视元素以进行显示。尽管此容器可以包含可视元素，但它通常仅用于包含作为子项的数据项目。",
 		"see": [
 			"eui.Group",

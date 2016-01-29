@@ -695,7 +695,7 @@
 		"kind": "class",
 		"name": "ElementExistenceEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/ElementExistenceEvent.ts",
+		"filename": "extension/gui/events/ElementExistenceEvent.ts",
 		"description": "Group添加或移除元素时分派的事件。",
 		"augments": [
 			"egret.Event",

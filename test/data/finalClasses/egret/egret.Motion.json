@@ -242,7 +242,7 @@
 		"kind": "interface",
 		"name": "Motion",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/Motion.ts",
+		"filename": "egret/sensor/Motion.ts",
 		"description": "Motion 类从用户设备读取运动状态信息并派发 CHANGE 事件。当设备移动时，传感器会检测到此移动并返回设备加速度，重力和旋转数据。@see egret.MotionEventMotion 类提供了 start 和 stop 方法，来启动和停止运动信息检查",
 		"event": [
 			{

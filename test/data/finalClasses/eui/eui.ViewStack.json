@@ -1873,7 +1873,7 @@
 		"kind": "class",
 		"name": "ViewStack",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/ViewStack.ts",
+		"filename": "extension/eui/components/ViewStack.ts",
 		"description": "ViewStack 导航器容器由一组彼此上下堆叠的子容器组成，其中一次只可以显示一个子容器。选择另一个子容器后，它将显示在原来子容器的位置处，所以看起来好像此子容器替换了原来的子容器。但是，原来的子容器仍然存在，只不过它现在处于不可见状态。",
 		"event": [
 			{

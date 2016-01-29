@@ -1688,7 +1688,7 @@
 		"kind": "class",
 		"name": "Range",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/Range.ts",
+		"filename": "extension/eui/components/supportClasses/Range.ts",
 		"description": "范围选取组件,该组件包含一个值和这个值所允许的最大最小约束范围。<code>value</code>属性的值永远被限制于当前的<code>minimum</code>和<code>maximum</code>之间，并且<code>minimum</code>和 <code>maximum</code>永远按照固定的顺序排列，即<code>(minimum&nbsp;&lt;=&nbsp;value&nbsp;&lt;=&nbsp;maximum)</code> 为真。如果<code>snapInterval</code>属性的值不是0，那么<code>value</code>的值也会被<code>snapInterval</code>所约束。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

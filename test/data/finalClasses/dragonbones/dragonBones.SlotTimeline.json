@@ -110,7 +110,7 @@
 		"kind": "class",
 		"name": "SlotTimeline",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/SlotTimeline.ts",
+		"filename": "extension/dragonbones/core/model/SlotTimeline.ts",
 		"description": "插槽的时间轴数据，包含一个和多个关键帧数据",
 		"augments": [
 			"dragonBones.Timeline"

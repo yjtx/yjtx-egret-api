@@ -602,7 +602,7 @@
 		"kind": "class",
 		"name": "Parallel",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Parallel.ts",
+		"filename": "extension/gui/effect/Parallel.ts",
 		"description": "Parallel 效果同时播放多个子效果。",
 		"augments": [
 			"egret.gui.CompositeEffect",

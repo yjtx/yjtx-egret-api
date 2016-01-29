@@ -68,7 +68,7 @@
 		"kind": "interface",
 		"name": "ISlotCacheGenerator",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/ISlotCacheGenerator.ts",
+		"filename": "extension/dragonbones/core/cache/ISlotCacheGenerator.ts",
 		"description": "ICacheUser 接口定义了可以生成Slot帧缓存的接口。目前只有FastSlot实现了该接口。",
 		"see": [
 			"dragonBones.FastSlot",

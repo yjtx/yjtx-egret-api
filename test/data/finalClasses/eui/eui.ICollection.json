@@ -270,7 +270,7 @@
 		"kind": "interface",
 		"name": "ICollection",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/collections/ICollection.ts",
+		"filename": "extension/eui/collections/ICollection.ts",
 		"description": "<code>ICollection</code>是一个列表的集合类数据源对象的查看接口。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

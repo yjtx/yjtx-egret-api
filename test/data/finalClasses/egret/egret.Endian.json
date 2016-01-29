@@ -32,7 +32,7 @@
 		"kind": "class",
 		"name": "Endian",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/ByteArray.ts",
+		"filename": "egret/utils/ByteArray.ts",
 		"description": "Endian 类中包含一些值，它们表示用于表示多字节数字的字节顺序。字节顺序为 bigEndian（最高有效字节位于最前）或 littleEndian（最低有效字节位于最前）。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native"

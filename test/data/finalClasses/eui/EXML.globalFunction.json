@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/exml/EXML.ts",
+			"filename": "extension/eui/exml/EXML.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "load",
@@ -37,7 +37,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/exml/EXML.ts",
+			"filename": "extension/eui/exml/EXML.ts",
 			"kind": "globalFunction",
 			"type": "{new():any}",
 			"name": "parse",

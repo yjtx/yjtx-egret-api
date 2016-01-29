@@ -40,6 +40,6 @@
 		"kind": "class",
 		"name": "BuildArmatureDataPackage",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/factories/BaseFactory.ts"
+		"filename": "extension/dragonbones/core/factories/BaseFactory.ts"
 	}
 }

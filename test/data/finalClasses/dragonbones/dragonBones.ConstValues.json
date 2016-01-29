@@ -746,7 +746,7 @@
 		"kind": "class",
 		"name": "ConstValues",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/ConstValues.ts",
+		"filename": "extension/dragonbones/core/utils/ConstValues.ts",
 		"description": "定义了常用的常量"
 	}
 }

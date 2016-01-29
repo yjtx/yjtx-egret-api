@@ -65,6 +65,6 @@
 		"kind": "class",
 		"name": "Transition",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/Transition.ts"
+		"filename": "extension/gui/states/Transition.ts"
 	}
 }

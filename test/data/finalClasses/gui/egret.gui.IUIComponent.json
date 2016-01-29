@@ -675,7 +675,7 @@
 		"kind": "interface",
 		"name": "IUIComponent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IUIComponent.ts",
+		"filename": "extension/gui/core/IUIComponent.ts",
 		"description": "UI组件接口",
 		"augments": [
 			"egret.gui.IVisualElement",

@@ -273,7 +273,7 @@
 		"kind": "class",
 		"name": "EventDispatcher",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/events/EventDispatcher.ts",
+		"filename": "extension/dragonbones/core/events/EventDispatcher.ts",
 		"description": "事件派发者",
 		"augments": [
 			"egret.EventDispatcher",

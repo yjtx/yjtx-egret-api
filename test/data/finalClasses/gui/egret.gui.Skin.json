@@ -618,7 +618,7 @@
 		"kind": "class",
 		"name": "Skin",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Skin.ts",
+		"filename": "extension/gui/components/Skin.ts",
 		"description": "含有视图状态功能的皮肤基类。",
 		"augments": [
 			"egret.EventDispatcher",

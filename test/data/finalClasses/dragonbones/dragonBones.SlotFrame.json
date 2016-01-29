@@ -139,7 +139,7 @@
 		"kind": "class",
 		"name": "SlotFrame",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/SlotFrame.ts",
+		"filename": "extension/dragonbones/core/model/SlotFrame.ts",
 		"description": "插槽的关键帧数据，包含插槽的显示序号，可见度，zOrder，colorTransform数据",
 		"augments": [
 			"dragonBones.Frame"

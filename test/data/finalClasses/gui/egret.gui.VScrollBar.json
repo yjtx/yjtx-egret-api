@@ -2234,7 +2234,7 @@
 		"kind": "class",
 		"name": "VScrollBar",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/VScrollBar.ts",
+		"filename": "extension/gui/components/VScrollBar.ts",
 		"description": "VScrollBar（垂直 ScrollBar）控件可以在因数据太多而不能在显示区域中以垂直方向完全显示时控制显示的数据部分",
 		"augments": [
 			"egret.gui.VSlider",

@@ -2052,7 +2052,7 @@
 		"kind": "class",
 		"name": "CheckBox",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/CheckBox.ts",
+		"filename": "extension/gui/components/CheckBox.ts",
 		"description": "复选框",
 		"augments": [
 			"egret.gui.ToggleButtonBase",

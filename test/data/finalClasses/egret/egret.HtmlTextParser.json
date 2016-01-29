@@ -36,7 +36,7 @@
 		"kind": "class",
 		"name": "HtmlTextParser",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/HtmlTextParser.ts",
+		"filename": "egret/text/HtmlTextParser.ts",
 		"description": "将html格式文本转换为可赋值给 egret.TextField#textFlow 属性的对象",
 		"see": [
 			"http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html 多种样式文本混合"

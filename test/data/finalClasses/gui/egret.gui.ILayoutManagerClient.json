@@ -291,7 +291,7 @@
 		"kind": "interface",
 		"name": "ILayoutManagerClient",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/ILayoutManagerClient.ts",
+		"filename": "extension/gui/managers/ILayoutManagerClient.ts",
 		"description": "使用布局管理器的组件接口",
 		"augments": [
 			"egret.IEventDispatcher",

@@ -2084,7 +2084,7 @@
 		"kind": "class",
 		"name": "ProgressBar",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ProgressBar.ts",
+		"filename": "extension/gui/components/ProgressBar.ts",
 		"description": "进度条控件。",
 		"augments": [
 			"egret.gui.Range",

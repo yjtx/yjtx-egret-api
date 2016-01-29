@@ -524,7 +524,7 @@
 		"kind": "class",
 		"name": "Effect",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Effect.ts",
+		"filename": "extension/gui/effect/Effect.ts",
 		"description": "定义所有效果的基类",
 		"augments": [
 			"egret.EventDispatcher",

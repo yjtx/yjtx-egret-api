@@ -1980,7 +1980,7 @@
 		"kind": "class",
 		"name": "Label",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Label.ts",
+		"filename": "extension/gui/components/Label.ts",
 		"description": "一行或多行不可编辑的文本控件",
 		"augments": [
 			"egret.gui.TextBase",

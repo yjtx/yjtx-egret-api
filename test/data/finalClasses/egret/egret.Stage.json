@@ -1240,7 +1240,7 @@
 		"kind": "class",
 		"name": "Stage",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/Stage.ts",
+		"filename": "egret/display/Stage.ts",
 		"description": "Stage 类代表主绘图区。可以利用 DisplayObject 实例的 stage 属性进行访问。<br/>Stage 类具有多个祖代类: Sprite、DisplayObject 和 EventDispatcher，属性和方法便是从这些类继承而来的。从这些继承的许多属性和方法不适用于 Stage 对象。",
 		"event": [
 			{

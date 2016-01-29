@@ -659,7 +659,7 @@
 		"kind": "class",
 		"name": "MoveEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/MoveEvent.ts",
+		"filename": "extension/gui/events/MoveEvent.ts",
 		"description": "移动事件",
 		"augments": [
 			"egret.Event",

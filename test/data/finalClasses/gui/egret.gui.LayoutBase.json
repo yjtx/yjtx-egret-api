@@ -372,7 +372,7 @@
 		"kind": "class",
 		"name": "LayoutBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/supportClasses/LayoutBase.ts",
+		"filename": "extension/gui/layouts/supportClasses/LayoutBase.ts",
 		"description": "容器布局基类",
 		"augments": [
 			"egret.EventDispatcher",

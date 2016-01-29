@@ -35,7 +35,7 @@
 		"kind": "interface",
 		"name": "IItemRendererOwner",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/IItemRendererOwner.ts",
+		"filename": "extension/gui/components/IItemRendererOwner.ts",
 		"description": "项呈示器的主机组件接口"
 	}
 }

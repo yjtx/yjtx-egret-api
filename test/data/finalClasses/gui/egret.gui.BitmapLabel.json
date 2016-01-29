@@ -1818,7 +1818,7 @@
 		"kind": "class",
 		"name": "BitmapLabel",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/BitmapLabel.ts",
+		"filename": "extension/gui/components/BitmapLabel.ts",
 		"description": "一行或多行不可编辑的位图文本控件",
 		"augments": [
 			"egret.gui.UIComponent",

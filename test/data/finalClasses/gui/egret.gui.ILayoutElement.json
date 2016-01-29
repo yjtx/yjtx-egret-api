@@ -469,7 +469,7 @@
 		"kind": "interface",
 		"name": "ILayoutElement",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ILayoutElement.ts",
+		"filename": "extension/gui/core/ILayoutElement.ts",
 		"description": "可布局元素接口",
 		"augments": [
 			"egret.IEventDispatcher",

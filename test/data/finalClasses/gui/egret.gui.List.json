@@ -2296,7 +2296,7 @@
 		"kind": "class",
 		"name": "List",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/List.ts",
+		"filename": "extension/gui/components/List.ts",
 		"description": "列表组件",
 		"augments": [
 			"egret.gui.ListBase",

@@ -609,7 +609,7 @@
 		"kind": "class",
 		"name": "OrientationEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/OrientationEvent.ts",
+		"filename": "egret/events/OrientationEvent.ts",
 		"description": "OrientationEvent 提供设备的方向信息注意: 目前各个浏览器和操作系统处理方向的方式不完全相同，请根据使用场景做相应的校正，比如使用两次方向数据的变化而不是直接使用方向的值",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

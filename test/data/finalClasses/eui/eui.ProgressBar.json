@@ -1755,7 +1755,7 @@
 		"kind": "class",
 		"name": "ProgressBar",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/ProgressBar.ts",
+		"filename": "extension/eui/components/ProgressBar.ts",
 		"description": "ProgressBar 控件为随时间而变的任务进度提供了形象化的表示。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

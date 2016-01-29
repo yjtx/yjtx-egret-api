@@ -98,6 +98,6 @@
 		"kind": "class",
 		"name": "NavigationUnit",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/NavigationUnit.ts"
+		"filename": "extension/gui/core/NavigationUnit.ts"
 	}
 }

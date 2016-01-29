@@ -690,7 +690,7 @@
 		"kind": "class",
 		"name": "Move",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Move.ts",
+		"filename": "extension/gui/effect/Move.ts",
 		"description": "Move 效果按 x 和 y 方向移动目标对象。",
 		"augments": [
 			"egret.gui.AnimateTransform",

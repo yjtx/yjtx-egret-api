@@ -200,7 +200,7 @@
 		"kind": "class",
 		"name": "ResourceItem",
 		"memberof": "RES",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/core/ResourceItem.ts",
+		"filename": "extension/resource/core/ResourceItem.ts",
 		"description": "资源项。对应 resource.json 中 resources 数组中的一项。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native"

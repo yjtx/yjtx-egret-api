@@ -86,7 +86,7 @@
 		"kind": "class",
 		"name": "State",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/State.ts",
+		"filename": "extension/gui/states/State.ts",
 		"description": "State 类定义视图状态，即组件的特定视图。",
 		"augments": [
 			"egret.HashObject"

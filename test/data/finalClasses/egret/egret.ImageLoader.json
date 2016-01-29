@@ -320,7 +320,7 @@
 		"kind": "class",
 		"name": "ImageLoader",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/net/ImageLoader.ts",
+		"filename": "egret/net/ImageLoader.ts",
 		"description": "ImageLoader 类可用于加载图像（JPG、PNG 或 GIF）文件。使用 load() 方法来启动加载。被加载的图像对象数据将存储在 ImageLoader.data 属性上 。",
 		"event": [
 			{

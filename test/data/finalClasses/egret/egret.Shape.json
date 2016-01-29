@@ -776,7 +776,7 @@
 		"kind": "class",
 		"name": "Shape",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/Shape.ts",
+		"filename": "egret/display/Shape.ts",
 		"description": "此类用于使用绘图应用程序编程接口 (API) 创建简单形状。Shape 类含有 graphics 属性，通过该属性您可以访问各种矢量绘图方法。",
 		"see": [
 			"egret.Graphics"

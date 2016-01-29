@@ -2057,7 +2057,7 @@
 		"kind": "class",
 		"name": "Button",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Button.ts",
+		"filename": "extension/gui/components/Button.ts",
 		"description": "按钮控件",
 		"augments": [
 			"egret.gui.ButtonBase",

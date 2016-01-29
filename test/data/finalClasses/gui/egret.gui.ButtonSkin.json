@@ -717,7 +717,7 @@
 		"kind": "class",
 		"name": "ButtonSkin",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ButtonSkin.ts",
+		"filename": "extension/gui/components/ButtonSkin.ts",
 		"description": "按钮组件的快速皮肤模板，能够快速制定哪个状态显示那个资源，实例化一次性专用的按钮皮肤。",
 		"augments": [
 			"egret.gui.Skin",

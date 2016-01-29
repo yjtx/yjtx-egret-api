@@ -1743,7 +1743,7 @@
 		"kind": "class",
 		"name": "Rect",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/Rect.ts",
+		"filename": "extension/eui/components/Rect.ts",
 		"description": "Rect 组件矩形绘图元素。此组件可响应鼠标事件。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

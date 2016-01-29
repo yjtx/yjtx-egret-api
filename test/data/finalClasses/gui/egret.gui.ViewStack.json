@@ -2145,7 +2145,7 @@
 		"kind": "class",
 		"name": "ViewStack",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ViewStack.ts",
+		"filename": "extension/gui/components/ViewStack.ts",
 		"description": "层级堆叠容器,一次只显示一个子对象。",
 		"augments": [
 			"egret.gui.Group",

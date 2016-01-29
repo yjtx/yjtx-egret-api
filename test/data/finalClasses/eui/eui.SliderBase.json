@@ -1768,7 +1768,7 @@
 		"kind": "class",
 		"name": "SliderBase",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/SliderBase.ts",
+		"filename": "extension/eui/components/supportClasses/SliderBase.ts",
 		"description": "滑块控件基类，通过使用 SliderBase 类，用户可以在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。SliderBase 类是 HSlider 和 VSlider 的基类。",
 		"event": [
 			{

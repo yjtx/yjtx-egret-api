@@ -24,7 +24,7 @@
 		"kind": "interface",
 		"name": "IAnimatable",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/animation/IAnimatable.ts",
+		"filename": "extension/dragonbones/core/animation/IAnimatable.ts",
 		"description": "可播放动画组件接口，Armature 和 WordClock都实现了该接口实现该接口的实例可以加到WorldClock时钟中统一由时钟控制动画的播放",
 		"see": [
 			"dragonBones.WorldClock",

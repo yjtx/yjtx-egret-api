@@ -1297,7 +1297,7 @@
 		"kind": "class",
 		"name": "BitmapLabel",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/BitmapLabel.ts",
+		"filename": "extension/eui/components/BitmapLabel.ts",
 		"description": "BitmapLabel 组件是一行或多行不可编辑的位图文本",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

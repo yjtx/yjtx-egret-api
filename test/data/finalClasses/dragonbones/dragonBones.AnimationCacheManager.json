@@ -246,7 +246,7 @@
 		"kind": "class",
 		"name": "AnimationCacheManager",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/AnimationCacheManager.ts",
+		"filename": "extension/dragonbones/core/cache/AnimationCacheManager.ts",
 		"description": "AnimationCacheManager 实例是动画缓存管理器，他可以为一个或多个同类型的Armature生成动画缓存数据，从而提高动画运行效率。目前AnimationCacheManager只支持对FastArmatrue生成缓存，以后会扩展为对任何实现ICacheableArmature接口的Armature生成缓存。",
 		"see": [
 			"dragonBones.ICacheableArmature",

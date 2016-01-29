@@ -68,7 +68,7 @@
 		"kind": "class",
 		"name": "HorizontalAlign",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/HorizontalAlign.ts",
+		"filename": "egret/text/HorizontalAlign.ts",
 		"description": "HorizontalAlign 类为水平对齐方式定义可能的值。",
 		"see": [
 			"egret.TextField#textAlign"

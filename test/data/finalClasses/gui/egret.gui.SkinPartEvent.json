@@ -695,7 +695,7 @@
 		"kind": "class",
 		"name": "SkinPartEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/SkinPartEvent.ts",
+		"filename": "extension/gui/events/SkinPartEvent.ts",
 		"description": "皮肤组件附加移除事件",
 		"augments": [
 			"egret.Event",

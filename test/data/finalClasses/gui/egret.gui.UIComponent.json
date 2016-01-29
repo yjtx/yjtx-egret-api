@@ -1613,7 +1613,7 @@
 		"kind": "class",
 		"name": "UIComponent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/UIComponent.ts",
+		"filename": "extension/gui/core/UIComponent.ts",
 		"description": "显示对象基类",
 		"augments": [
 			"egret.DisplayObjectContainer",

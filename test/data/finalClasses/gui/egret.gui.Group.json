@@ -2039,7 +2039,7 @@
 		"kind": "class",
 		"name": "Group",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Group.ts",
+		"filename": "extension/gui/components/Group.ts",
 		"description": "自动布局容器",
 		"augments": [
 			"egret.gui.GroupBase",

@@ -662,7 +662,7 @@
 		"kind": "class",
 		"name": "TextEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/TextEvent.ts",
+		"filename": "egret/events/TextEvent.ts",
 		"description": "用户在富文本中单击超链接时，对象将调度 TextEvent 对象。文本事件类型：TextEvent.LINK。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

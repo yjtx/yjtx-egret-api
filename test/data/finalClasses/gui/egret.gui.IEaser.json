@@ -24,6 +24,6 @@
 		"kind": "interface",
 		"name": "IEaser",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/IEaser.ts"
+		"filename": "extension/gui/effect/easing/IEaser.ts"
 	}
 }

@@ -48,7 +48,7 @@
 		"kind": "class",
 		"name": "EaseInOutBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/EaseInOutBase.ts",
+		"filename": "extension/gui/effect/easing/EaseInOutBase.ts",
 		"description": "EaseInOutBase 类是提供缓动功能的基类。",
 		"implements": [
 			{

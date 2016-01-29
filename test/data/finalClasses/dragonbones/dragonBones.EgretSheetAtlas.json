@@ -105,7 +105,7 @@
 		"kind": "class",
 		"name": "EgretSheetAtlas",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretSheetAtlas.ts",
+		"filename": "extension/dragonbones/egret/EgretSheetAtlas.ts",
 		"description": "Egret 引擎使用的sheet纹理集",
 		"implements": [
 			{

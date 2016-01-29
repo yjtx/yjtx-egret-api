@@ -44,7 +44,7 @@
 		"kind": "class",
 		"name": "DragonBones",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/DragonBones.ts",
+		"filename": "extension/dragonbones/core/DragonBones.ts",
 		"description": "DragonBones"
 	}
 }

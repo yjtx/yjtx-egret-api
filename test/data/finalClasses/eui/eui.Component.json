@@ -1572,7 +1572,7 @@
 		"kind": "class",
 		"name": "Component",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/Component.ts",
+		"filename": "extension/eui/components/Component.ts",
 		"copy": "eui.UIComponents",
 		"event": [
 			{

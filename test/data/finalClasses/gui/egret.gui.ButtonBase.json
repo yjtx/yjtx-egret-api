@@ -2013,7 +2013,7 @@
 		"kind": "class",
 		"name": "ButtonBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/ButtonBase.ts",
+		"filename": "extension/gui/components/supportClasses/ButtonBase.ts",
 		"description": "按钮组件基类",
 		"augments": [
 			"egret.gui.SkinnableComponent",

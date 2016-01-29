@@ -81,7 +81,7 @@
 		"kind": "class",
 		"name": "Keyframe",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/Keyframe.ts",
+		"filename": "extension/gui/effect/animation/Keyframe.ts",
 		"description": "Keyframe 类用于定义位于效果过程中某个特定时间的属性的值。"
 	}
 }

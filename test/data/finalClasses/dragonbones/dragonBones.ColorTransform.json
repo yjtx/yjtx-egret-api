@@ -88,7 +88,7 @@
 		"kind": "class",
 		"name": "ColorTransform",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/ColorTransform.ts",
+		"filename": "extension/dragonbones/core/model/ColorTransform.ts",
 		"description": "表示颜色的transform"
 	}
 }

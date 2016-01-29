@@ -32,7 +32,7 @@
 		"kind": "class",
 		"name": "JustifyAlign",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/layouts/JustifyAlign.ts",
+		"filename": "extension/eui/layouts/JustifyAlign.ts",
 		"description": "JustifyAlign 定义布局类中 horizontalAlign 与 verticalAlign 属性需要的两端对齐常量值。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

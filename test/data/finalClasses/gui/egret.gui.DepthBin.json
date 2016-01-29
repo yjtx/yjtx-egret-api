@@ -26,7 +26,7 @@
 		"kind": "class",
 		"name": "DepthBin",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/layoutClass/DepthQueue.ts",
+		"filename": "extension/gui/managers/layoutClass/DepthQueue.ts",
 		"description": "列表项"
 	}
 }

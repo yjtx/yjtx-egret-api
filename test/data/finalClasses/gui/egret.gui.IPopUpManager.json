@@ -323,7 +323,7 @@
 		"kind": "interface",
 		"name": "IPopUpManager",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/IPopUpManager.ts",
+		"filename": "extension/gui/managers/IPopUpManager.ts",
 		"description": "窗口弹出管理器接口。若项目需要自定义弹出框管理器，请实现此接口",
 		"augments": [
 			"egret.IEventDispatcher",

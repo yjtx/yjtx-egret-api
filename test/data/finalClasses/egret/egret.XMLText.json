@@ -45,7 +45,7 @@
 		"kind": "interface",
 		"name": "XMLText",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/XML.ts",
+		"filename": "egret/utils/XML.ts",
 		"description": "XMLText 类表示在XML中的文本节点",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

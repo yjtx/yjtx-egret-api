@@ -664,7 +664,7 @@
 		"kind": "class",
 		"name": "MovieClipEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/display/MovieClipEvent.ts",
+		"filename": "extension/game/display/MovieClipEvent.ts",
 		"description": "当动画的当前帧有事件，将调度 MovieClipEvent 对象。帧事件类型 MovieClipEvent.FRAME_LABEL.",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

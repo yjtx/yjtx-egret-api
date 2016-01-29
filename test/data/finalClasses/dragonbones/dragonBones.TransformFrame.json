@@ -194,7 +194,7 @@
 		"kind": "class",
 		"name": "TransformFrame",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/TransformFrame.ts",
+		"filename": "extension/dragonbones/core/model/TransformFrame.ts",
 		"description": "骨骼的关键帧数据，包含骨骼的缓动，旋转，transform数据和插槽的显示序号，可见度，zOrder，colorTransform数据",
 		"augments": [
 			"dragonBones.Frame"

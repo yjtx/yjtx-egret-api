@@ -28,6 +28,6 @@
 		"kind": "class",
 		"name": "UIGlobals",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/UIGlobals.ts"
+		"filename": "extension/gui/core/UIGlobals.ts"
 	}
 }

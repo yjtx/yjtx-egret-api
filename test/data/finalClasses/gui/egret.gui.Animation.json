@@ -263,7 +263,7 @@
 		"kind": "class",
 		"name": "Animation",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/Animation.ts",
+		"filename": "extension/gui/effect/animation/Animation.ts",
 		"description": "Animation 类定义在指定的时间段上在属性的开始值和结束值之间发生的动画。"
 	}
 }

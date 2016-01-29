@@ -133,7 +133,7 @@
 		"kind": "class",
 		"name": "AddItems",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/states/AddItems.ts",
+		"filename": "extension/eui/states/AddItems.ts",
 		"description": "视图添加状态显示元素操作",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

@@ -700,7 +700,7 @@
 		"kind": "class",
 		"name": "ProgressEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/ProgressEvent.ts",
+		"filename": "egret/events/ProgressEvent.ts",
 		"description": "当加载操作已开始或套接字已接收到数据时，将调度 ProgressEvent 对象。有两种类型的进程事件：ProgressEvent.PROGRESS 和 ProgressEvent.SOCKET_DATA。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

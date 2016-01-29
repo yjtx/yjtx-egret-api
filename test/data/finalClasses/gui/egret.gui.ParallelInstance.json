@@ -531,7 +531,7 @@
 		"kind": "class",
 		"name": "ParallelInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/ParallelInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/ParallelInstance.ts",
 		"description": "ParallelInstance 类用于实现 Parallel 效果的实例类",
 		"augments": [
 			"egret.gui.CompositeEffectInstance",

@@ -171,7 +171,7 @@
 		"kind": "class",
 		"name": "UILayer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/UILayer.ts",
+		"filename": "extension/gui/core/UILayer.ts",
 		"description": "UIStage的虚拟子容器",
 		"implements": [
 			{

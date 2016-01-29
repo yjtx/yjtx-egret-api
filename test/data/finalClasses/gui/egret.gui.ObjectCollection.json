@@ -486,7 +486,7 @@
 		"kind": "class",
 		"name": "ObjectCollection",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/collections/ObjectCollection.ts",
+		"filename": "extension/gui/collections/ObjectCollection.ts",
 		"description": "Object的集合类数据结构包装器,通常作为Tree组件的数据源。",
 		"augments": [
 			"egret.EventDispatcher",

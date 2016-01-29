@@ -171,7 +171,7 @@
 		"kind": "class",
 		"name": "FastAnimationState",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/animation/FastAnimationState.ts",
+		"filename": "extension/dragonbones/core/fast/animation/FastAnimationState.ts",
 		"description": "FastAnimationState 实例代表播放的动画， 可以对单个动画的播放进行最细致的调节。",
 		"see": [
 			"dragonBones.Animation",

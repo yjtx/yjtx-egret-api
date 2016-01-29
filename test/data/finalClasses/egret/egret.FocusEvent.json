@@ -601,7 +601,7 @@
 		"kind": "class",
 		"name": "FocusEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/FocusEvent.ts",
+		"filename": "egret/events/FocusEvent.ts",
 		"description": "用户将焦点从显示列表中的一个对象更改到另一个对象时，对象将调度 FocusEvent 对象。目前只支持输入文本。焦点事件：FocusEvent.FOCUS_IN FocusEvent.FOCUS_OUT",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

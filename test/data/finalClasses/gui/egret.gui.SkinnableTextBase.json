@@ -2060,7 +2060,7 @@
 		"kind": "class",
 		"name": "SkinnableTextBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/SkinnableTextBase.ts",
+		"filename": "extension/gui/components/supportClasses/SkinnableTextBase.ts",
 		"augments": [
 			"egret.gui.SkinnableComponent",
 			"egret.gui.UIComponent",

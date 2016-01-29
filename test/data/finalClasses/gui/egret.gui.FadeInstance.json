@@ -695,7 +695,7 @@
 		"kind": "class",
 		"name": "FadeInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/FadeInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/FadeInstance.ts",
 		"description": "FadeInstance 类用于实现 Fade 效果的实例类",
 		"augments": [
 			"egret.gui.AnimateInstance",

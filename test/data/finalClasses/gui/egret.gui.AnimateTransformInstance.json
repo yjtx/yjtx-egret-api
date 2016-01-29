@@ -715,7 +715,7 @@
 		"kind": "class",
 		"name": "AnimateTransformInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/AnimateTransformInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/AnimateTransformInstance.ts",
 		"description": "AnimateTransformInstance 类用于实现 AnimateTransform 效果的实例类",
 		"augments": [
 			"egret.gui.AnimateInstance",

@@ -624,7 +624,7 @@
 		"kind": "class",
 		"name": "Fade",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Fade.ts",
+		"filename": "extension/gui/effect/Fade.ts",
 		"description": "淡入淡出效果",
 		"augments": [
 			"egret.gui.Animate",

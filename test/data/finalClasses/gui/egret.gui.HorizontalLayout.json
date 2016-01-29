@@ -479,7 +479,7 @@
 		"kind": "class",
 		"name": "HorizontalLayout",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/HorizontalLayout.ts",
+		"filename": "extension/gui/layouts/HorizontalLayout.ts",
 		"description": "水平布局",
 		"augments": [
 			"egret.gui.LayoutBase",

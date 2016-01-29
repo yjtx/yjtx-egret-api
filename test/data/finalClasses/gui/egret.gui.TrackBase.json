@@ -2125,7 +2125,7 @@
 		"kind": "class",
 		"name": "TrackBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/TrackBase.ts",
+		"filename": "extension/gui/components/supportClasses/TrackBase.ts",
 		"description": "TrackBase类是具有一个轨道和一个或多个滑块按钮的组件的一个基类，如 Slider 和 ScrollBar。",
 		"augments": [
 			"egret.gui.Range",

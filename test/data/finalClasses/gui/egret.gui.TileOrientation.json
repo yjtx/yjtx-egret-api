@@ -28,7 +28,7 @@
 		"kind": "class",
 		"name": "TileOrientation",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/TileOrientation.ts",
+		"filename": "extension/gui/layouts/TileOrientation.ts",
 		"description": "TileOrientation 类为 TileLayout 类的 orientation 属性定义可能的值。"
 	}
 }

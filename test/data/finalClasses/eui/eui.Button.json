@@ -1686,7 +1686,7 @@
 		"kind": "class",
 		"name": "Button",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/Button.ts",
+		"filename": "extension/eui/components/Button.ts",
 		"description": "Button 组件是常用的矩形按钮。Button 组件看起来可以按压。默认外观具有一个文本标签和图标显示对象。",
 		"event": [
 			{

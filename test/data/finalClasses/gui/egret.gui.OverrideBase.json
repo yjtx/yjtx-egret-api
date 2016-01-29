@@ -92,7 +92,7 @@
 		"kind": "class",
 		"name": "OverrideBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/OverrideBase.ts",
+		"filename": "extension/gui/states/OverrideBase.ts",
 		"description": "OverrideBase 类是视图状态所用的 override 类的基类。",
 		"augments": [
 			"egret.HashObject"

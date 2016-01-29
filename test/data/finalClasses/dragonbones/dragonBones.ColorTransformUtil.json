@@ -85,6 +85,6 @@
 		"kind": "class",
 		"name": "ColorTransformUtil",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/ColorTransformUtil.ts"
+		"filename": "extension/dragonbones/core/utils/ColorTransformUtil.ts"
 	}
 }

@@ -42,7 +42,7 @@
 		"kind": "interface",
 		"name": "IArmature",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/armature/IArmature.ts",
+		"filename": "extension/dragonbones/core/armature/IArmature.ts",
 		"description": "纹理集的接口",
 		"augments": [
 			"dragonBones.IAnimatable"

@@ -2230,7 +2230,7 @@
 		"kind": "class",
 		"name": "Scroller",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Scroller.ts",
+		"filename": "extension/gui/components/Scroller.ts",
 		"description": "滚动条组件",
 		"augments": [
 			"egret.gui.SkinnableComponent",

@@ -654,7 +654,7 @@
 		"kind": "class",
 		"name": "TrackBaseEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/TrackBaseEvent.ts",
+		"filename": "extension/gui/events/TrackBaseEvent.ts",
 		"description": "从TrackBase组件分派的事件。",
 		"augments": [
 			"egret.Event",

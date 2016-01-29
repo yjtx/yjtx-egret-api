@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/localStorage/localStorage.ts",
+			"filename": "egret/localStorage/localStorage.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "clear",
@@ -13,7 +13,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/localStorage/localStorage.ts",
+			"filename": "egret/localStorage/localStorage.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "getItem",
@@ -32,7 +32,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/localStorage/localStorage.ts",
+			"filename": "egret/localStorage/localStorage.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "removeItem",
@@ -51,7 +51,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/localStorage/localStorage.ts",
+			"filename": "egret/localStorage/localStorage.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "setItem",

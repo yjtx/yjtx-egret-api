@@ -2116,7 +2116,7 @@
 		"kind": "class",
 		"name": "SkinnableContainer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/SkinnableContainer.ts",
+		"filename": "extension/gui/components/SkinnableContainer.ts",
 		"description": "可设置外观的容器的基类",
 		"augments": [
 			"egret.gui.SkinnableComponent",

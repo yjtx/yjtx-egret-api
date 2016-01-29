@@ -44,7 +44,7 @@
 		"kind": "class",
 		"name": "BlendMode",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/BlendMode.ts",
+		"filename": "egret/display/BlendMode.ts",
 		"description": "提供混合模式可视效果的常量值的类,通常用于 DisplayObject 的 blendMode 属性上。",
 		"see": [
 			"egret.DisplayObject#blendMode"

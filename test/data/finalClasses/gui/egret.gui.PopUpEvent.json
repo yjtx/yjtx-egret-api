@@ -706,7 +706,7 @@
 		"kind": "class",
 		"name": "PopUpEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/PopUpEvent.ts",
+		"filename": "extension/gui/events/PopUpEvent.ts",
 		"description": "弹出管理器事件",
 		"augments": [
 			"egret.Event",

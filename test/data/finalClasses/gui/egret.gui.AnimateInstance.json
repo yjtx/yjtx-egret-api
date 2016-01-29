@@ -633,7 +633,7 @@
 		"kind": "class",
 		"name": "AnimateInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/AnimateInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/AnimateInstance.ts",
 		"description": "AnimateInstance 类用于实现 Animate 效果的实例类",
 		"augments": [
 			"egret.gui.EffectInstance",

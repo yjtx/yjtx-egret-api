@@ -24,7 +24,7 @@
 		"kind": "class",
 		"name": "TimelineState",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/animation/TimelineState.ts",
+		"filename": "extension/dragonbones/core/animation/TimelineState.ts",
 		"description": "TimelineState 负责计算 Bone 的时间轴动画。TimelineState 实例隶属于 AnimationState. AnimationState在创建时会为每个包含动作的 Bone生成一个 TimelineState 实例.",
 		"see": [
 			"dragonBones.Animation",

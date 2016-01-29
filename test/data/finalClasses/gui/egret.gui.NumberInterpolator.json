@@ -88,7 +88,7 @@
 		"kind": "class",
 		"name": "NumberInterpolator",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/interpolation/NumberInterpolator.ts",
+		"filename": "extension/gui/effect/interpolation/NumberInterpolator.ts",
 		"description": "NumberInterpolator 类在表示为 number 实例的开始值和结束值之间提供插值。",
 		"implements": [
 			{

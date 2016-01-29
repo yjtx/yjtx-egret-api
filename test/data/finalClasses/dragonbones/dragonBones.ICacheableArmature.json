@@ -63,7 +63,7 @@
 		"kind": "interface",
 		"name": "ICacheableArmature",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/ICacheableArmature.ts",
+		"filename": "extension/dragonbones/core/cache/ICacheableArmature.ts",
 		"description": "ICacheableArmature 接口定义了可以使用缓存的Armature的接口。目前只有FastArmature实现了该接口。",
 		"see": [
 			"dragonBones.FastArmature",

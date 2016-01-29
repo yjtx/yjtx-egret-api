@@ -41,7 +41,7 @@
 		"kind": "interface",
 		"name": "DeviceAcceleration",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/Motion.ts",
+		"filename": "egret/sensor/Motion.ts",
 		"description": "DeviceAcceleration 提供设备在三个维度的加速度信息，加速度值的单位是 m/s2",
 		"version": "Egret 2.4",
 		"platform": "Web,Native"

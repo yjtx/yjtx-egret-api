@@ -649,7 +649,7 @@
 		"kind": "class",
 		"name": "CloseEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/CloseEvent.ts",
+		"filename": "extension/gui/events/CloseEvent.ts",
 		"description": "窗口关闭事件",
 		"augments": [
 			"egret.Event",

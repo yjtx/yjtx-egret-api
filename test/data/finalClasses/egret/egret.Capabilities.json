@@ -68,7 +68,7 @@
 		"kind": "class",
 		"name": "Capabilities",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/system/Capabilities.ts",
+		"filename": "egret/system/Capabilities.ts",
 		"description": "Capabilities 类提供一些属性，这些属性描述了承载应用程序的系统和运行时。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

@@ -115,7 +115,7 @@
 		"kind": "class",
 		"name": "SlotData",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/SlotData.ts",
+		"filename": "extension/dragonbones/core/model/SlotData.ts",
 		"description": "插槽数据，插槽是由骨骼控制的，可以装入显示对象的容器，显示对象可以是图片或者子骨架插槽可插入一个或者多个显示对象，但是同一时刻只能显示一个显示对象插槽支持关键帧动画，如果有多个显示对象，可以指定哪一帧显示哪一个显示对象"
 	}
 }

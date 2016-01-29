@@ -2270,7 +2270,7 @@
 		"kind": "class",
 		"name": "TitleWindow",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/TitleWindow.ts",
+		"filename": "extension/gui/components/TitleWindow.ts",
 		"description": "可移动窗口组件。注意，此窗口必须使用PopUpManager.addPopUp()弹出之后才能移动。",
 		"augments": [
 			"egret.gui.Panel",

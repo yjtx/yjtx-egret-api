@@ -54,7 +54,7 @@
 		"kind": "interface",
 		"name": "IOverride",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/states/IOverride.ts",
+		"filename": "extension/eui/states/IOverride.ts",
 		"description": "IOverride 接口定义视图状态的覆盖操作。State 类 overrides 属性数组中的所有条目均必须实现此接口。",
 		"version": "eui 1.0",
 		"platform": "Web,Native"

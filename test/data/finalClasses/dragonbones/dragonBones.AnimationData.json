@@ -248,7 +248,7 @@
 		"kind": "class",
 		"name": "AnimationData",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/AnimationData.ts",
+		"filename": "extension/dragonbones/core/model/AnimationData.ts",
 		"description": "保存动画数据",
 		"augments": [
 			"dragonBones.Timeline"

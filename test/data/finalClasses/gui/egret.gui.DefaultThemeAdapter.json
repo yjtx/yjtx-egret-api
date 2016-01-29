@@ -47,7 +47,7 @@
 		"kind": "class",
 		"name": "DefaultThemeAdapter",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/DefaultThemeAdapter.ts",
+		"filename": "extension/gui/components/supportClasses/DefaultThemeAdapter.ts",
 		"description": "默认的IThemeAdapter接口实现",
 		"implements": [
 			{

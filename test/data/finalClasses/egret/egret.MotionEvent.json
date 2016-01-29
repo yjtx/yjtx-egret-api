@@ -609,7 +609,7 @@
 		"kind": "class",
 		"name": "MotionEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/MotionEvent.ts",
+		"filename": "egret/events/MotionEvent.ts",
 		"description": "MotionEvent 类呈现设备运动的具体信息Acceleration 和 accelerationIncludingGravity 呈现设备三个维度的加速度信息RotationRate 呈现设备的旋转状态信息",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

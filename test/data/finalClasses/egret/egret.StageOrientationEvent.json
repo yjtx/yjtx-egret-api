@@ -640,7 +640,7 @@
 		"kind": "class",
 		"name": "StageOrientationEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/StageOrientationEvent.ts",
+		"filename": "egret/events/StageOrientationEvent.ts",
 		"description": "当舞台的方向更改时，Stage 对象将调度 StageOrientationEvent 对象。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

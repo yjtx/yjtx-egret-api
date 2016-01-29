@@ -687,7 +687,7 @@
 		"kind": "interface",
 		"name": "IVisualElementContainer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IVisualElementContainer.ts",
+		"filename": "extension/gui/core/IVisualElementContainer.ts",
 		"description": "具有管理IVisualElement子显示对象的容器接口",
 		"augments": [
 			"egret.gui.IVisualElement",

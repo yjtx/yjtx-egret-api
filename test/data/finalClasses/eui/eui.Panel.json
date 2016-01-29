@@ -1711,7 +1711,7 @@
 		"kind": "class",
 		"name": "Panel",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/Panel.ts",
+		"filename": "extension/eui/components/Panel.ts",
 		"description": "Panel 类定义一个容器，该容器为其子代提供标题栏、关闭按钮、可移动区域和内容区域。",
 		"event": [
 			{

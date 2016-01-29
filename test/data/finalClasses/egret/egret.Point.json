@@ -350,7 +350,7 @@
 		"kind": "class",
 		"name": "Point",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/geom/point.ts",
+		"filename": "egret/geom/point.ts",
 		"description": "Point 对象表示二维坐标系统中的某个位置，其中 x 表示水平轴，y 表示垂直轴。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

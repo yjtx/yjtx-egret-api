@@ -74,7 +74,7 @@
 		"kind": "class",
 		"name": "Timeline",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/Timeline.ts",
+		"filename": "extension/dragonbones/core/model/Timeline.ts",
 		"description": "保存时间轴相关的数据，包括关键帧，持续时间，时间缩放",
 		"children": [
 			"dragonBones.AnimationData",

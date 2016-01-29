@@ -46,6 +46,6 @@
 		"kind": "class",
 		"name": "PopUpData",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/impl/PopUpManagerImpl.ts"
+		"filename": "extension/gui/managers/impl/PopUpManagerImpl.ts"
 	}
 }

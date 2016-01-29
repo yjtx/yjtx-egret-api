@@ -371,7 +371,7 @@
 		"kind": "class",
 		"name": "Animation",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/animation/Animation.ts",
+		"filename": "extension/dragonbones/core/animation/Animation.ts",
 		"description": "Animation实例隶属于Armature,用于控制Armature的动画播放。",
 		"see": [
 			"dragonBones.Bone",

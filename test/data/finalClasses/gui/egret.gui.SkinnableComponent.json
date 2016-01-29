@@ -1842,7 +1842,7 @@
 		"kind": "class",
 		"name": "SkinnableComponent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/SkinnableComponent.ts",
+		"filename": "extension/gui/components/SkinnableComponent.ts",
 		"description": "复杂可设置外观组件的基类，接受ISkin类或任何显示对象作为皮肤。当皮肤为ISkin时，将自动匹配两个实例内同名的公开属性(显示对象)，并将皮肤的属性引用赋值到此类定义的同名属性(必须没有默认值)上,如果要对公共属性添加事件监听或其他操作，请覆盖partAdded()和partRemoved()方法",
 		"augments": [
 			"egret.gui.UIComponent",

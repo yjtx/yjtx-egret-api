@@ -747,7 +747,7 @@
 		"kind": "class",
 		"name": "PropertyChangeEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/PropertyChangeEvent.ts",
+		"filename": "extension/gui/events/PropertyChangeEvent.ts",
 		"description": "对象的一个属性发生更改时传递到事件侦听器的事件",
 		"augments": [
 			"egret.Event",

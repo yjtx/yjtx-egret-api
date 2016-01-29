@@ -36,7 +36,7 @@
 		"kind": "class",
 		"name": "DefaultAssetAdapter",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/DefaultAssetAdapter.ts",
+		"filename": "extension/eui/components/supportClasses/DefaultAssetAdapter.ts",
 		"description": "默认的IAssetAdapter接口实现。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

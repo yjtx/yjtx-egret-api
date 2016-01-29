@@ -2071,7 +2071,7 @@
 		"kind": "class",
 		"name": "RadioButton",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/RadioButton.ts",
+		"filename": "extension/gui/components/RadioButton.ts",
 		"description": "RadioButton 组件使用户可在一组互相排斥的选择中做出一种选择",
 		"augments": [
 			"egret.gui.ToggleButtonBase",

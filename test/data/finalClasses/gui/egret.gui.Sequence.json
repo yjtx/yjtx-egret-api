@@ -602,7 +602,7 @@
 		"kind": "class",
 		"name": "Sequence",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Sequence.ts",
+		"filename": "extension/gui/effect/Sequence.ts",
 		"description": "Sequence 效果以子效果的添加顺序依次播放多个子效果。",
 		"augments": [
 			"egret.gui.CompositeEffect",

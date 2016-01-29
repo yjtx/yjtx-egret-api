@@ -1071,7 +1071,7 @@
 		"kind": "class",
 		"name": "TextField",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/TextField.ts",
+		"filename": "egret/text/TextField.ts",
 		"description": "TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异如果开发者希望所有平台完全无差异，请使用BitmapText",
 		"see": [
 			"http://docs.egret-labs.org/post/manual/text/createtext.html 创建文本"

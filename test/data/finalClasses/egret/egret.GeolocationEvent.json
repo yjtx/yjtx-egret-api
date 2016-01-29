@@ -703,7 +703,7 @@
 		"kind": "class",
 		"name": "GeolocationEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/GeolocationEvent.ts",
+		"filename": "egret/events/GeolocationEvent.ts",
 		"description": "GeolocationEvent 提供设备的地理位置信息和获取位置时发生的错误信息",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

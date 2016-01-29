@@ -2011,7 +2011,7 @@
 		"kind": "class",
 		"name": "List",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/List.ts",
+		"filename": "extension/eui/components/List.ts",
 		"description": "List 控件可显示垂直或水平的项目列表。用户可以根据 <code>allowMultipleSelection</code> 属性的值从列表中选择一个或多个项目。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

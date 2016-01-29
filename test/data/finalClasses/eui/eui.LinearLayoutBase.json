@@ -507,7 +507,7 @@
 		"kind": "class",
 		"name": "LinearLayoutBase",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/layouts/supportClasses/LinearLayoutBase.ts",
+		"filename": "extension/eui/layouts/supportClasses/LinearLayoutBase.ts",
 		"description": "线性布局基类，通常作为 <code>HorizontalLayout</code> 和 <code>VerticalLayout</code> 的父类。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

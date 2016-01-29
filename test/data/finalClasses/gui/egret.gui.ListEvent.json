@@ -1006,7 +1006,7 @@
 		"kind": "class",
 		"name": "ListEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/ListEvent.ts",
+		"filename": "extension/gui/events/ListEvent.ts",
 		"description": "列表事件",
 		"augments": [
 			"egret.TouchEvent",

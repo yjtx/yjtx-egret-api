@@ -755,7 +755,7 @@
 		"kind": "class",
 		"name": "CollectionEvent",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/events/CollectionEvent.ts",
+		"filename": "extension/eui/events/CollectionEvent.ts",
 		"description": "集合类型数据改变事件",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

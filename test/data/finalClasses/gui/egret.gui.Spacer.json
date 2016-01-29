@@ -1735,7 +1735,7 @@
 		"kind": "class",
 		"name": "Spacer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Spacer.ts",
+		"filename": "extension/gui/components/Spacer.ts",
 		"description": "占位组件,一个布局辅助类。自身完全不可见，但可以在父级容器的布局中分配空间，通常用于垂直和水平布局中，推挤其他组件。",
 		"augments": [
 			"egret.gui.UIComponent",

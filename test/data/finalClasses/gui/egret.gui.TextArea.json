@@ -2155,7 +2155,7 @@
 		"kind": "class",
 		"name": "TextArea",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/TextArea.ts",
+		"filename": "extension/gui/components/TextArea.ts",
 		"augments": [
 			"egret.gui.SkinnableTextBase",
 			"egret.gui.SkinnableComponent",

@@ -426,7 +426,7 @@
 		"kind": "class",
 		"name": "DropDownController",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/DropDownController.ts",
+		"filename": "extension/gui/components/supportClasses/DropDownController.ts",
 		"description": "用于处理因用户交互而打开和关闭下拉列表的操作的控制器",
 		"augments": [
 			"egret.EventDispatcher",

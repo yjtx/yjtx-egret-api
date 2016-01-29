@@ -342,7 +342,7 @@
 		"kind": "interface",
 		"name": "ITreeCollection",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/collections/ITreeCollection.ts",
+		"filename": "extension/gui/collections/ITreeCollection.ts",
 		"description": "Tree组件的集合类数据源对象接口",
 		"augments": [
 			"egret.gui.ICollection",

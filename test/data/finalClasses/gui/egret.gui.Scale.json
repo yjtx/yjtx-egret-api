@@ -690,7 +690,7 @@
 		"kind": "class",
 		"name": "Scale",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Scale.ts",
+		"filename": "extension/gui/effect/Scale.ts",
 		"description": "Scale 效果围绕转换中心在 x 和 y 方向上缩放目标对象",
 		"augments": [
 			"egret.gui.AnimateTransform",

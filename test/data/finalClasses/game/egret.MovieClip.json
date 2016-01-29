@@ -957,7 +957,7 @@
 		"kind": "class",
 		"name": "MovieClip",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/display/MovieClip.ts",
+		"filename": "extension/game/display/MovieClip.ts",
 		"description": "影片剪辑，可以通过影片剪辑播放序列帧动画。MovieClip 类从以下类继承而来：DisplayObject 和 EventDispatcher。不同于 DisplayObject 对象，MovieClip 对象拥有一个时间轴。",
 		"event": [
 			{

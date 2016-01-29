@@ -82,6 +82,6 @@
 		"kind": "class",
 		"name": "CurveData",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/CurveData.ts"
+		"filename": "extension/dragonbones/core/model/CurveData.ts"
 	}
 }

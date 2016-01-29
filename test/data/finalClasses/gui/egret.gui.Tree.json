@@ -2391,7 +2391,7 @@
 		"kind": "class",
 		"name": "Tree",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Tree.ts",
+		"filename": "extension/gui/components/Tree.ts",
 		"description": "树状列表组件",
 		"augments": [
 			"egret.gui.List",

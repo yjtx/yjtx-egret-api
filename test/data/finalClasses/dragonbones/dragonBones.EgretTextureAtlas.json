@@ -131,7 +131,7 @@
 		"kind": "class",
 		"name": "EgretTextureAtlas",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretTextureAtlas.ts",
+		"filename": "extension/dragonbones/egret/EgretTextureAtlas.ts",
 		"description": "egret引擎使用的纹理集",
 		"implements": [
 			{

@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/utils/setInterval.ts",
+			"filename": "extension/game/utils/setInterval.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "clearInterval",
@@ -21,7 +21,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/utils/setTimeout.ts",
+			"filename": "extension/game/utils/setTimeout.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "clearTimeout",
@@ -40,7 +40,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/utils/setInterval.ts",
+			"filename": "extension/game/utils/setInterval.ts",
 			"kind": "globalFunction",
 			"type": "number",
 			"name": "setInterval",
@@ -75,7 +75,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/utils/setTimeout.ts",
+			"filename": "extension/game/utils/setTimeout.ts",
 			"kind": "globalFunction",
 			"type": "number",
 			"name": "setTimeout",

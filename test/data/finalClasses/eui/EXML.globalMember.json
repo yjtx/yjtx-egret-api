@@ -1,7 +1,7 @@
 {
 	"globalMember": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/exml/EXML.ts",
+			"filename": "extension/eui/exml/EXML.ts",
 			"kind": "globalMember",
 			"name": "prefixURL",
 			"memberof": "EXML",

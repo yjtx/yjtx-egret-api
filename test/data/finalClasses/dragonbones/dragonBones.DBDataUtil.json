@@ -113,7 +113,7 @@
 		"kind": "class",
 		"name": "DBDataUtil",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/DBDataUtil.ts",
+		"filename": "extension/dragonbones/core/utils/DBDataUtil.ts",
 		"description": "DragonBons的数据工具类，提供一些对数据处理的静态方法"
 	}
 }

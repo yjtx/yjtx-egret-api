@@ -32,7 +32,7 @@
 		"kind": "class",
 		"name": "HttpMethod",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/net/HttpMethod.ts",
+		"filename": "egret/net/HttpMethod.ts",
 		"description": "HttpRequestMethod 类提供了一些值，这些值可指定在将数据发送到服务器时，HttpRequest 对象应使用 POST 方法还是 GET 方法。",
 		"see": [
 			"egret.HttpRequest"

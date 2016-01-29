@@ -482,7 +482,7 @@
 		"kind": "class",
 		"name": "ArrayCollection",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/collections/ArrayCollection.ts",
+		"filename": "extension/eui/collections/ArrayCollection.ts",
 		"description": "ArrayCollection 类是数组的集合类数据结构包装器，可使用<code>ICollection</code>接口的方法和属性对其进行访问和处理。使用这种数据结构包装普通数组，能在数据源发生改变的时候主动通知视图刷新变更数据项。",
 		"event": [
 			{

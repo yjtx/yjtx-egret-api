@@ -56,7 +56,7 @@
 		"kind": "class",
 		"name": "Direction",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/Direction.ts",
+		"filename": "extension/eui/core/Direction.ts",
 		"description": "定义进度条等控件增长方向的常量",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

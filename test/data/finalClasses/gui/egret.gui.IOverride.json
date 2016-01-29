@@ -56,7 +56,7 @@
 		"kind": "interface",
 		"name": "IOverride",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/IOverride.ts",
+		"filename": "extension/gui/states/IOverride.ts",
 		"description": "IOverride 接口用于视图状态覆盖。State 类 overrides 属性数组中的所有条目均必须实现此接口。"
 	}
 }

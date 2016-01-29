@@ -530,7 +530,7 @@
 		"kind": "class",
 		"name": "SequenceInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/SequenceInstance.ts",
+		"filename": "extension/gui/effect/effectClasses/SequenceInstance.ts",
 		"description": "SequenceInstance 类用于实现 Sequence 效果的实例类",
 		"augments": [
 			"egret.gui.CompositeEffectInstance",

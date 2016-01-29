@@ -755,7 +755,7 @@
 		"kind": "class",
 		"name": "TreeEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/TreeEvent.ts",
+		"filename": "extension/gui/events/TreeEvent.ts",
 		"description": "Tree事件",
 		"augments": [
 			"egret.Event",

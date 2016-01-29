@@ -30,7 +30,7 @@
 		"kind": "interface",
 		"name": "ISkinAdapter",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ISkinAdapter.ts",
+		"filename": "extension/gui/core/ISkinAdapter.ts",
 		"description": "皮肤适配器接口。若项目需要自定义可设置外观组件的skinName属性的解析规则，需要实现这个接口，"
 	}
 }

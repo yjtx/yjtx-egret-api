@@ -285,7 +285,7 @@
 		"kind": "class",
 		"name": "EgretFastSlot",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretFastSlot.ts",
+		"filename": "extension/dragonbones/egret/EgretFastSlot.ts",
 		"description": "egret引擎使用的插槽",
 		"augments": [
 			"dragonBones.FastSlot",

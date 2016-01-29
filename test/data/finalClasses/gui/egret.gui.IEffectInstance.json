@@ -153,6 +153,6 @@
 		"kind": "interface",
 		"name": "IEffectInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/IEffectInstance.ts"
+		"filename": "extension/gui/effect/IEffectInstance.ts"
 	}
 }

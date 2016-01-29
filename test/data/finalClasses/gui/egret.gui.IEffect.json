@@ -403,7 +403,7 @@
 		"kind": "interface",
 		"name": "IEffect",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/IEffect.ts",
+		"filename": "extension/gui/effect/IEffect.ts",
 		"augments": [
 			"egret.IEventDispatcher",
 			"egret.HashObject"

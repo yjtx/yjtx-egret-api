@@ -1884,7 +1884,7 @@
 		"kind": "class",
 		"name": "GroupBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/GroupBase.ts",
+		"filename": "extension/gui/components/supportClasses/GroupBase.ts",
 		"description": "自动布局容器基类",
 		"augments": [
 			"egret.gui.UIComponent",

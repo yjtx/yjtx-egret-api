@@ -70,7 +70,7 @@
 		"kind": "class",
 		"name": "SkinBasicLayout",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/SkinBasicLayout.ts",
+		"filename": "extension/gui/components/supportClasses/SkinBasicLayout.ts",
 		"description": "皮肤简单布局类。",
 		"augments": [
 			"egret.HashObject"

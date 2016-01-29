@@ -26,7 +26,7 @@
 		"kind": "interface",
 		"name": "IViewStack",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IViewStack.ts",
+		"filename": "extension/gui/core/IViewStack.ts",
 		"description": "层级堆叠容器接口"
 	}
 }

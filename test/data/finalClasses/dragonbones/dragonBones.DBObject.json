@@ -119,7 +119,7 @@
 		"kind": "class",
 		"name": "DBObject",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/armature/DBObject.ts",
+		"filename": "extension/dragonbones/core/armature/DBObject.ts",
 		"description": "DBObject 是 Bone 和 Slot 的基类",
 		"see": [
 			"dragonBones.Bone",

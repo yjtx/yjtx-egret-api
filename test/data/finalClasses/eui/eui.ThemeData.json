@@ -30,6 +30,6 @@
 		"kind": "interface",
 		"name": "ThemeData",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/Theme.ts"
+		"filename": "extension/eui/core/Theme.ts"
 	}
 }

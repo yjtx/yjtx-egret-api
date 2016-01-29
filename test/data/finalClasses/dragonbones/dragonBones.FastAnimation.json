@@ -258,7 +258,7 @@
 		"kind": "class",
 		"name": "FastAnimation",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/animation/FastAnimation.ts",
+		"filename": "extension/dragonbones/core/fast/animation/FastAnimation.ts",
 		"description": "FastAnimation实例隶属于FastArmature,用于控制FastArmature的动画播放。和Animation相比，FastAnimation为了优化性能，不支持动画融合，在开启缓存的情况下，不支持无极的平滑补间",
 		"see": [
 			"dragonBones.FastBone",

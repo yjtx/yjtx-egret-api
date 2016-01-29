@@ -1799,7 +1799,7 @@
 		"kind": "class",
 		"name": "UILayer",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/UILayer.ts",
+		"filename": "extension/eui/components/UILayer.ts",
 		"description": "UILayer 是 Group 的子类，它除了具有容器的所有标准功能，还能够自动保持自身尺寸始终与舞台尺寸相同（Stage.stageWidth,Stage.stageHeight）。当舞台尺寸发生改变时，它会跟随舞台尺寸改变。UILayer 跟普通容器一样，允许创建多个实例，但通常都将它作为UI显示列表的根节点使用。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

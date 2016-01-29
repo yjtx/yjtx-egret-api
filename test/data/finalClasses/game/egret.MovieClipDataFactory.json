@@ -358,7 +358,7 @@
 		"kind": "class",
 		"name": "MovieClipDataFactory",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/display/MovieClipDataFactory.ts",
+		"filename": "extension/game/display/MovieClipDataFactory.ts",
 		"description": "使用 MovieClipDataFactory 类，可以生成 MovieClipData 对象用于创建MovieClip",
 		"see": [
 			"http://docs.egret-labs.org/post/manual/displaycon/movieclip.html MovieClip序列帧动画"

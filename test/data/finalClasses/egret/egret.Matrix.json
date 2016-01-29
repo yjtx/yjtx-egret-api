@@ -586,7 +586,7 @@
 		"kind": "class",
 		"name": "Matrix",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/geom/Matrix.ts",
+		"filename": "egret/geom/Matrix.ts",
 		"description": "Matrix 类表示一个转换矩阵，它确定如何将点从一个坐标空间映射到另一个坐标空间。您可以对一个显示对象执行不同的图形转换，方法是设置 Matrix 对象的属性，将该 Matrix对象应用于显示对象的 matrix 属性。这些转换函数包括平移（x 和 y 重新定位）、旋转、缩放和倾斜。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

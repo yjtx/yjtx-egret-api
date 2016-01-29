@@ -653,7 +653,7 @@
 		"kind": "class",
 		"name": "ItemTapEvent",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/events/ItemTapEvent.ts",
+		"filename": "extension/eui/events/ItemTapEvent.ts",
 		"description": "列表项触碰事件",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

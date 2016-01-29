@@ -255,7 +255,7 @@
 		"kind": "interface",
 		"name": "IStateClient",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IStateClient.ts",
+		"filename": "extension/gui/core/IStateClient.ts",
 		"description": "具有视图状态的组件接口",
 		"augments": [
 			"egret.IEventDispatcher",

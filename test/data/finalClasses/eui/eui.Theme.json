@@ -321,7 +321,7 @@
 		"kind": "class",
 		"name": "Theme",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/Theme.ts",
+		"filename": "extension/eui/core/Theme.ts",
 		"description": "皮肤主题。注意：皮肤主题是一次性设置的默认值,并不能运行时切换所有组件默认皮肤。切换单个皮肤您可以自行对Component.skinName赋值来修改。",
 		"event": [
 			{

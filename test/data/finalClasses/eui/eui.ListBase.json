@@ -1963,7 +1963,7 @@
 		"kind": "class",
 		"name": "ListBase",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/supportClasses/ListBase.ts",
+		"filename": "extension/eui/components/supportClasses/ListBase.ts",
 		"description": "ListBase 是列表控件基类。可显示垂直或水平的项目列表。其功能与 HTML 中的 SELECT 表单元素的功能相似。",
 		"event": [
 			{

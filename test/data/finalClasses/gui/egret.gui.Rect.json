@@ -1787,7 +1787,7 @@
 		"kind": "class",
 		"name": "Rect",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Rect.ts",
+		"filename": "extension/gui/components/Rect.ts",
 		"description": "矩形绘图元素。此组件可响应鼠标事件。",
 		"augments": [
 			"egret.gui.UIComponent",

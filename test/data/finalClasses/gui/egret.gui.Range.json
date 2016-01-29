@@ -1992,7 +1992,7 @@
 		"kind": "class",
 		"name": "Range",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/Range.ts",
+		"filename": "extension/gui/components/supportClasses/Range.ts",
 		"description": "范围选取组件,该组件包含一个值和这个值所允许的最大最小约束范围。",
 		"augments": [
 			"egret.gui.SkinnableComponent",

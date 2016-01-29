@@ -673,7 +673,7 @@
 		"kind": "class",
 		"name": "IndexChangeEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/IndexChangeEvent.ts",
+		"filename": "extension/gui/events/IndexChangeEvent.ts",
 		"description": "索引改变事件",
 		"augments": [
 			"egret.Event",

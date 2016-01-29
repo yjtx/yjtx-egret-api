@@ -663,7 +663,7 @@
 		"kind": "class",
 		"name": "Rotate",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Rotate.ts",
+		"filename": "extension/gui/effect/Rotate.ts",
 		"description": "Rotate 效果围绕转换中心旋转目标对象。",
 		"augments": [
 			"egret.gui.AnimateTransform",

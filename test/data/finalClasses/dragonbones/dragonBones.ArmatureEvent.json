@@ -601,7 +601,7 @@
 		"kind": "class",
 		"name": "ArmatureEvent",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/events/ArmatureEvent.ts",
+		"filename": "extension/dragonbones/core/events/ArmatureEvent.ts",
 		"description": "骨架事件",
 		"augments": [
 			"dragonBones.Event",

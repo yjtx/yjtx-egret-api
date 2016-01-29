@@ -41,7 +41,7 @@
 		"kind": "interface",
 		"name": "DeviceRotationRate",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/Motion.ts",
+		"filename": "egret/sensor/Motion.ts",
 		"description": "DeviceRotationRate 提供设备围绕三个轴旋转的角速度信息，单位是 角度/秒",
 		"version": "Egret 2.4",
 		"platform": "Web,Native"

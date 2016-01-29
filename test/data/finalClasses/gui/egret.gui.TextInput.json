@@ -2119,7 +2119,7 @@
 		"kind": "class",
 		"name": "TextInput",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/TextInput.ts",
+		"filename": "extension/gui/components/TextInput.ts",
 		"description": "TextInput 是一个文本输入控件，供用户输入和编辑单行统一格式文本",
 		"augments": [
 			"egret.gui.SkinnableTextBase",

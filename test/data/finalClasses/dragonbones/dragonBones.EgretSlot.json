@@ -243,7 +243,7 @@
 		"kind": "class",
 		"name": "EgretSlot",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretSlot.ts",
+		"filename": "extension/dragonbones/egret/EgretSlot.ts",
 		"description": "egret引擎使用的插槽",
 		"augments": [
 			"dragonBones.Slot",

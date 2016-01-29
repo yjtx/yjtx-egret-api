@@ -1975,7 +1975,7 @@
 		"kind": "class",
 		"name": "TabBar",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/TabBar.ts",
+		"filename": "extension/eui/components/TabBar.ts",
 		"description": "TabBar 类显示一组相同的选项卡。一次可以选择一个选项卡，且默认情况下选择第一个选项卡。<p>该组选项卡由 <code>dataProvider</code> 属性定义。每个选项卡的外观由 <code>ItemRenderer</code> 定义。</p><p>可以使用 TabBar 控件设置 ViewStack 容器的活动子代，如下例所示：</p><pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:TabBar&nbsp;dataProvider=&quot;{viewStack}&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:ViewStack&nbsp;id=&quot;viewStack&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab1&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab2&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab3&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/s:ViewStack&gt;<br/></pre>",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

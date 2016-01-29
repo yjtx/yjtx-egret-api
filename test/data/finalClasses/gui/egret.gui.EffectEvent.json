@@ -668,7 +668,7 @@
 		"kind": "class",
 		"name": "EffectEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/EffectEvent.ts",
+		"filename": "extension/gui/events/EffectEvent.ts",
 		"augments": [
 			"egret.Event",
 			"egret.HashObject"

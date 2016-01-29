@@ -1707,7 +1707,7 @@
 		"kind": "class",
 		"name": "ToggleSwitch",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/ToggleSwitch.ts",
+		"filename": "extension/eui/components/ToggleSwitch.ts",
 		"description": "ToggleSwitch 表示一个开关组件。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

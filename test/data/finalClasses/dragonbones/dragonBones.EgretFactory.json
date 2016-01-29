@@ -683,7 +683,7 @@
 		"kind": "class",
 		"name": "EgretFactory",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/egret/EgretFactory.ts",
+		"filename": "extension/dragonbones/egret/EgretFactory.ts",
 		"description": "Egret引擎中DragonBones工厂的基类实现",
 		"augments": [
 			"dragonBones.BaseFactory",

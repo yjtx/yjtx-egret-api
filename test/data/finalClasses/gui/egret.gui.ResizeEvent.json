@@ -645,7 +645,7 @@
 		"kind": "class",
 		"name": "ResizeEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/ResizeEvent.ts",
+		"filename": "extension/gui/events/ResizeEvent.ts",
 		"description": "尺寸改变事件",
 		"augments": [
 			"egret.Event",

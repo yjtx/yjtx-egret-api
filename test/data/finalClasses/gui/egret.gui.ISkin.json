@@ -17,7 +17,7 @@
 		"kind": "interface",
 		"name": "ISkin",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ISkin.ts",
+		"filename": "extension/gui/core/ISkin.ts",
 		"description": "皮肤对象接口。只有实现此接口的皮肤会被匹配公开同名变量,并注入到主机组件上。"
 	}
 }

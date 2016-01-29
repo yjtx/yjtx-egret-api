@@ -479,7 +479,7 @@
 		"kind": "class",
 		"name": "VerticalLayout",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/VerticalLayout.ts",
+		"filename": "extension/gui/layouts/VerticalLayout.ts",
 		"description": "垂直布局",
 		"augments": [
 			"egret.gui.LayoutBase",

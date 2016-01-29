@@ -592,7 +592,7 @@
 		"kind": "class",
 		"name": "Animate",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/Animate.ts",
+		"filename": "extension/gui/effect/Animate.ts",
 		"description": "Animate 效果可设置各个值之间的任意属性集的动画。通过设置 motionPaths 属性，指定要设置动画的属性和值。",
 		"augments": [
 			"egret.gui.Effect",

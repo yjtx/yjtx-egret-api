@@ -599,7 +599,7 @@
 		"kind": "interface",
 		"name": "ITreeItemRenderer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ITreeItemRenderer.ts",
+		"filename": "extension/gui/components/ITreeItemRenderer.ts",
 		"description": "树状列表组件的项呈示器接口",
 		"augments": [
 			"egret.gui.IItemRenderer",

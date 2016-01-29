@@ -344,7 +344,7 @@
 		"kind": "class",
 		"name": "LayoutManager",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/LayoutManager.ts",
+		"filename": "extension/gui/managers/LayoutManager.ts",
 		"description": "布局管理器",
 		"augments": [
 			"egret.EventDispatcher",

@@ -603,7 +603,7 @@
 		"kind": "class",
 		"name": "Event",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/events/Event.ts",
+		"filename": "extension/dragonbones/core/events/Event.ts",
 		"description": "事件",
 		"augments": [
 			"egret.Event",

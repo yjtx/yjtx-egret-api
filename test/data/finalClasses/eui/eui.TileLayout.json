@@ -643,7 +643,7 @@
 		"kind": "class",
 		"name": "TileLayout",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/layouts/TileLayout.ts",
+		"filename": "extension/eui/layouts/TileLayout.ts",
 		"description": "TileLayout 类在单元格大小相等的列和行中排列布局元素。TileLayout 类使用许多属性来控制列和行的方向、计数、大小、间隙和两端对齐以及单元格内的元素对齐。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

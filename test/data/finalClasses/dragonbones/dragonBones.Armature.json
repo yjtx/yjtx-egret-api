@@ -626,7 +626,7 @@
 		"kind": "class",
 		"name": "Armature",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/armature/Armature.ts",
+		"filename": "extension/dragonbones/core/armature/Armature.ts",
 		"description": "Armature 是 DragonBones 骨骼动画系统的核心。他包含需要加到场景的显示对象，所有的骨骼逻辑和动画系统A Armature instance is the core of the skeleton animation system. It contains the object to display, all sub-bones and the object animation(s).",
 		"see": [
 			"dragonBones.ArmatureData"

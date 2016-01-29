@@ -1034,7 +1034,7 @@
 		"kind": "interface",
 		"name": "IItemRenderer",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/IItemRenderer.ts",
+		"filename": "extension/eui/core/IItemRenderer.ts",
 		"description": "列表类组件的项呈示器接口。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

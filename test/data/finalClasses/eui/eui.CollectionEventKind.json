@@ -80,7 +80,7 @@
 		"kind": "class",
 		"name": "CollectionEventKind",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/events/CollectionEventKind.ts",
+		"filename": "extension/eui/events/CollectionEventKind.ts",
 		"description": "定义 <code>CollectionEvent</code> 类 <code>kind</code> 属性的有效值的常量。这些常量指示对集合进行的更改类型。",
 		"version": "eui 1.0",
 		"platform": "Web,Native"

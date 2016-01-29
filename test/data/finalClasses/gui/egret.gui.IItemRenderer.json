@@ -555,7 +555,7 @@
 		"kind": "interface",
 		"name": "IItemRenderer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/IItemRenderer.ts",
+		"filename": "extension/gui/components/IItemRenderer.ts",
 		"description": "列表类组件的项呈示器接口",
 		"augments": [
 			"egret.gui.ILayoutElement",

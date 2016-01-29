@@ -30,7 +30,7 @@
 		"kind": "interface",
 		"name": "XMLNode",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/XML.ts",
+		"filename": "egret/utils/XML.ts",
 		"description": "XML节点基类",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

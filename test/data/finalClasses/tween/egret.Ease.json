@@ -569,7 +569,7 @@
 		"kind": "class",
 		"name": "Ease",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/tween/Ease.ts",
+		"filename": "extension/tween/Ease.ts",
 		"description": "缓动函数集合，使用不同的缓动函数使得动画按照对应的方程进行",
 		"see": [
 			"http://edn.egret.com/cn/index.php/article/index/id/53 缓动效果演示"

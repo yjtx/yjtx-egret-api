@@ -80,7 +80,7 @@
 		"kind": "class",
 		"name": "SlotFrameCache",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/SlotFrameCache.ts",
+		"filename": "extension/dragonbones/core/cache/SlotFrameCache.ts",
 		"description": "SlotFrameCache 存储了Slot的帧缓存数据。",
 		"see": [
 			"dragonBones.FastSlot",

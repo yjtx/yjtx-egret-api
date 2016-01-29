@@ -339,7 +339,7 @@
 		"kind": "class",
 		"name": "RadioButtonGroup",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/RadioButtonGroup.ts",
+		"filename": "extension/eui/components/RadioButtonGroup.ts",
 		"description": "RadioButtonGroup 组件定义一组 RadioButton 组件，这些组件相互排斥；因此，用户每次只能选择一个 RadioButton 组件",
 		"event": [
 			{

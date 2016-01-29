@@ -133,7 +133,7 @@
 		"kind": "class",
 		"name": "AnimationCache",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/AnimationCache.ts",
+		"filename": "extension/dragonbones/core/cache/AnimationCache.ts",
 		"description": "AnimationCache 实例是动画缓存的实体，包含一个动画的所有缓存数据。每个Slot的缓存数据存在各个SlotTimelineCache中。一般来说 AnimationCache 不需要开发者直接操控，而是由AnimationCacheManager代为管理。",
 		"see": [
 			"dragonBones.AnimationCacheManager",

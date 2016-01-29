@@ -118,7 +118,7 @@
 		"kind": "class",
 		"name": "SetProperty",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/states/SetProperty.ts",
+		"filename": "extension/eui/states/SetProperty.ts",
 		"description": "SetProperty 类指定只在父视图状态期间有效的属性值。可以在 State 类的 overrides 属性中使用该类。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

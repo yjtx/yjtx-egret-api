@@ -146,7 +146,7 @@
 		"kind": "interface",
 		"name": "IContainer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IContainer.ts",
+		"filename": "extension/gui/core/IContainer.ts",
 		"description": "容器接口"
 	}
 }

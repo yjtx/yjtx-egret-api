@@ -67,7 +67,7 @@
 		"kind": "class",
 		"name": "Power",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/Power.ts",
+		"filename": "extension/gui/effect/easing/Power.ts",
 		"description": "Power 类通过使用多项式表达式定义缓动功能。",
 		"augments": [
 			"egret.gui.EaseInOutBase"

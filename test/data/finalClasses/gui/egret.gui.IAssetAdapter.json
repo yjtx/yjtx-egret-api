@@ -39,7 +39,7 @@
 		"kind": "interface",
 		"name": "IAssetAdapter",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IAssetAdapter.ts",
+		"filename": "extension/gui/core/IAssetAdapter.ts",
 		"description": "素材适配器接口。若项目需要自定义UIAsset.source的解析规则，需要实现这个接口，"
 	}
 }

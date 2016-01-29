@@ -36,6 +36,6 @@
 		"kind": "class",
 		"name": "InterruptionBehavior",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/InterruptionBehavior.ts"
+		"filename": "extension/gui/states/InterruptionBehavior.ts"
 	}
 }

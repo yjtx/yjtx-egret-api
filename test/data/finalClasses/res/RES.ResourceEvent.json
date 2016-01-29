@@ -696,7 +696,7 @@
 		"kind": "class",
 		"name": "ResourceEvent",
 		"memberof": "RES",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/events/ResourceEvent.ts",
+		"filename": "extension/resource/events/ResourceEvent.ts",
 		"description": "资源加载事件。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

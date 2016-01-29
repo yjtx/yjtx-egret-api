@@ -1745,7 +1745,7 @@
 		"kind": "class",
 		"name": "RadioButton",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/RadioButton.ts",
+		"filename": "extension/eui/components/RadioButton.ts",
 		"description": "RadioButton 组件使用户可在一组互相排斥的选择中做出一种选择",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

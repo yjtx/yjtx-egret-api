@@ -74,6 +74,6 @@
 		"kind": "class",
 		"name": "TransformUtil",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/effectClasses/TransformUtil.ts"
+		"filename": "extension/gui/effect/effectClasses/TransformUtil.ts"
 	}
 }

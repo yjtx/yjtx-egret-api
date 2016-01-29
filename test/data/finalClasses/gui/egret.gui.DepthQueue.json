@@ -127,7 +127,7 @@
 		"kind": "class",
 		"name": "DepthQueue",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/managers/layoutClass/DepthQueue.ts",
+		"filename": "extension/gui/managers/layoutClass/DepthQueue.ts",
 		"description": "显示列表嵌套深度排序队列"
 	}
 }

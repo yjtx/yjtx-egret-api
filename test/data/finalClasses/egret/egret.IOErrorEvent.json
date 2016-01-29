@@ -635,7 +635,7 @@
 		"kind": "class",
 		"name": "IOErrorEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/IOErrorEvent.ts",
+		"filename": "egret/events/IOErrorEvent.ts",
 		"description": "IO流事件，当错误导致输入或输出操作失败时调度 IOErrorEvent 对象。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

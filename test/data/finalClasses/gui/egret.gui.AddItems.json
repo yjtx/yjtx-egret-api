@@ -197,7 +197,7 @@
 		"kind": "class",
 		"name": "AddItems",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/states/AddItems.ts",
+		"filename": "extension/gui/states/AddItems.ts",
 		"description": "添加显示元素",
 		"augments": [
 			"egret.gui.OverrideBase",

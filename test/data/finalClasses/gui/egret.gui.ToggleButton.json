@@ -2069,7 +2069,7 @@
 		"kind": "class",
 		"name": "ToggleButton",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ToggleButton.ts",
+		"filename": "extension/gui/components/ToggleButton.ts",
 		"description": "切换按钮",
 		"augments": [
 			"egret.gui.ToggleButtonBase",

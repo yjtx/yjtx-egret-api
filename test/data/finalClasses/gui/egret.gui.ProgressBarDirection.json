@@ -48,7 +48,7 @@
 		"kind": "class",
 		"name": "ProgressBarDirection",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/ProgressBarDirection.ts",
+		"filename": "extension/gui/components/ProgressBarDirection.ts",
 		"description": "定义进度条控件增长方向的常量"
 	}
 }

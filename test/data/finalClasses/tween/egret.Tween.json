@@ -530,7 +530,7 @@
 		"kind": "class",
 		"name": "Tween",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/tween/Tween.ts",
+		"filename": "extension/tween/Tween.ts",
 		"description": "Tween是Egret的动画缓动类",
 		"see": [
 			"http://docs.egret-labs.org/post/manual/anim/tween.html Tween ease animation"

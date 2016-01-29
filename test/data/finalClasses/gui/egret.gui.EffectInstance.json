@@ -444,7 +444,7 @@
 		"kind": "class",
 		"name": "EffectInstance",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/EffectInstance.ts",
+		"filename": "extension/gui/effect/EffectInstance.ts",
 		"description": "定义所有效果实例的基类",
 		"augments": [
 			"egret.EventDispatcher",

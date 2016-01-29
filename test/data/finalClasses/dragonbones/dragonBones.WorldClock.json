@@ -134,7 +134,7 @@
 		"kind": "class",
 		"name": "WorldClock",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/animation/WorldClock.ts",
+		"filename": "extension/dragonbones/core/animation/WorldClock.ts",
 		"description": "WorldClock 提供时钟的支持，为控制每个加入时钟的 IAnimatable 对象正确的播放动画。一般来说，每当 Armature 被创建出来后，只需要将之加入 WorldClock,之后只需要控制 WorldClock 的前进，就可以实现所有 Armature 的动画前进了",
 		"see": [
 			"dragonBones.IAnimatable",

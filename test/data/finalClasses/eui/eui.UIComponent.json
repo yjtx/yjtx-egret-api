@@ -947,7 +947,7 @@
 		"kind": "interface",
 		"name": "UIComponent",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/uicomponent.ts",
+		"filename": "extension/eui/core/uicomponent.ts",
 		"description": "Component 类定义可设置外观的组件的基类。Component 类所使用的外观通常是 Skin 类的子类。<p/>通过设置 component 类的 skinClass 样式属性，将 skin 类与 component 类相关联。",
 		"event": [
 			{

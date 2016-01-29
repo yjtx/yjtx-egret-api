@@ -354,7 +354,7 @@
 		"kind": "class",
 		"name": "Ticker",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/game/player/Ticker.ts",
+		"filename": "extension/game/player/Ticker.ts",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
 		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;Ticker&nbsp;注册和删除帧函数。<br/>&nbsp;*/<br/>class&nbsp;TickerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//注册事件侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;register&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;passTime:number&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onTick(dt:number):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//累加时间，dt是帧时间间隔以毫秒为单位<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.passTime&nbsp;+=&nbsp;dt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onTick&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//经过5秒后删除帧函数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.passTime&nbsp;&gt;&nbsp;5000)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().unregister(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;unregister&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",

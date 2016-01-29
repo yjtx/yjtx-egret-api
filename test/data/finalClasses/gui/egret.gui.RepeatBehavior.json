@@ -28,7 +28,7 @@
 		"kind": "class",
 		"name": "RepeatBehavior",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/RepeatBehavior.ts",
+		"filename": "extension/gui/effect/animation/RepeatBehavior.ts",
 		"description": "RepeatBehavior类用于定义效果的重复行为的常量"
 	}
 }

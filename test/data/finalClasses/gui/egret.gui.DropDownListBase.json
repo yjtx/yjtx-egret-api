@@ -2414,7 +2414,7 @@
 		"kind": "class",
 		"name": "DropDownListBase",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/supportClasses/DropDownListBase.ts",
+		"filename": "extension/gui/components/supportClasses/DropDownListBase.ts",
 		"description": "下拉列表控件基类",
 		"augments": [
 			"egret.gui.List",

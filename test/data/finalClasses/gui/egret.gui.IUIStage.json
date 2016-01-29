@@ -256,7 +256,7 @@
 		"kind": "interface",
 		"name": "IUIStage",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IUIStage.ts",
+		"filename": "extension/gui/core/IUIStage.ts",
 		"augments": [
 			"egret.IEventDispatcher",
 			"egret.HashObject"

@@ -480,7 +480,7 @@
 		"kind": "class",
 		"name": "ByteArray",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/ByteArray.ts",
+		"filename": "egret/utils/ByteArray.ts",
 		"description": "ByteArray 类提供用于优化读取、写入以及处理二进制数据的方法和属性。注意：ByteArray 类适用于需要在字节层访问数据的高级开发人员。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

@@ -117,7 +117,7 @@
 		"kind": "class",
 		"name": "XML",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/XML.ts",
+		"filename": "egret/utils/XML.ts",
 		"description": "XML 类包含用于处理 XML 对象的属性。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

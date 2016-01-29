@@ -30,7 +30,7 @@
 		"kind": "interface",
 		"name": "ITextElement",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/ITextElement.ts",
+		"filename": "egret/text/ITextElement.ts",
 		"description": "用于建立多种样式混合文本的基本结构，主要用于设置 textFlow 属性",
 		"see": [
 			"http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html 多种样式文本混合"

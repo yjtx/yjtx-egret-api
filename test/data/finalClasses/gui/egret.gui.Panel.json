@@ -2168,7 +2168,7 @@
 		"kind": "class",
 		"name": "Panel",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/Panel.ts",
+		"filename": "extension/gui/components/Panel.ts",
 		"description": "带有标题，内容区域的面板组件",
 		"augments": [
 			"egret.gui.SkinnableContainer",

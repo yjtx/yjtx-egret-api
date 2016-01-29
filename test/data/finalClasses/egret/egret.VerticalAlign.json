@@ -68,7 +68,7 @@
 		"kind": "class",
 		"name": "VerticalAlign",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/VerticalAlign.ts",
+		"filename": "egret/text/VerticalAlign.ts",
 		"description": "VerticalAlign 类为垂直对齐方式定义可能的值。",
 		"see": [
 			"egret.TextField#verticalAlign"

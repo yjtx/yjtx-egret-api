@@ -700,7 +700,7 @@
 		"kind": "class",
 		"name": "UIEvent",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/events/UIEvent.ts",
+		"filename": "extension/eui/events/UIEvent.ts",
 		"description": "UI事件",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

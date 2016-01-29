@@ -630,7 +630,7 @@
 		"kind": "class",
 		"name": "AnimateTransform",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/AnimateTransform.ts",
+		"filename": "extension/gui/effect/AnimateTransform.ts",
 		"description": "AnimateTransform 效果控制目标对象上所有与转换相关的动画。",
 		"augments": [
 			"egret.gui.Animate",

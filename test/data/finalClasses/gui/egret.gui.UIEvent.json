@@ -725,7 +725,7 @@
 		"kind": "class",
 		"name": "UIEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/UIEvent.ts",
+		"filename": "extension/gui/events/UIEvent.ts",
 		"description": "UI事件",
 		"augments": [
 			"egret.Event",

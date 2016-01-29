@@ -60,7 +60,7 @@
 		"kind": "class",
 		"name": "Bounce",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/easing/Bounce.ts",
+		"filename": "extension/gui/effect/easing/Bounce.ts",
 		"description": "Bounce 类实现缓动功能，该功能模拟目标对象上的重力牵引和回弹目标对象。",
 		"implements": [
 			{

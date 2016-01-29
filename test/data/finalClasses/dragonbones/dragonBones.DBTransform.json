@@ -136,7 +136,7 @@
 		"kind": "class",
 		"name": "DBTransform",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/model/DBTransform.ts",
+		"filename": "extension/dragonbones/core/model/DBTransform.ts",
 		"description": "Dragonbones中使用的transform可以表示位移，旋转，缩放三种属性"
 	}
 }

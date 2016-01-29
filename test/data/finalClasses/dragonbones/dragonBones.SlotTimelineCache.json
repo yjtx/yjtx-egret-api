@@ -98,7 +98,7 @@
 		"kind": "class",
 		"name": "SlotTimelineCache",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/cache/SlotTimelineCache.ts",
+		"filename": "extension/dragonbones/core/cache/SlotTimelineCache.ts",
 		"description": "SlotTimelineCache 存储了Slot的时间轴缓存数据。",
 		"see": [
 			"dragonBones.TimelineCache",

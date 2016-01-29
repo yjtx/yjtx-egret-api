@@ -1731,7 +1731,7 @@
 		"kind": "class",
 		"name": "TextInput",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/TextInput.ts",
+		"filename": "extension/eui/components/TextInput.ts",
 		"description": "TextInput 是一个文本输入控件，供用户输入和编辑统一格式文本",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

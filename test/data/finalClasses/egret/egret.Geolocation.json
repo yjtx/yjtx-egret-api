@@ -292,7 +292,7 @@
 		"kind": "class",
 		"name": "Geolocation",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/Geolocation.ts",
+		"filename": "egret/sensor/Geolocation.ts",
 		"description": "Geolocation 能够从设备的定位服务获取设备的当前位置。当设备的位置发生改变时 Geolocation 会派发 CHANGE 事件。当定位请求被拒绝或该设备没有定位服务时 Geolocation 会派发 IO_ERROR 事件。",
 		"event": [
 			{

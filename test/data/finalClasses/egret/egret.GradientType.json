@@ -28,6 +28,6 @@
 		"kind": "class",
 		"name": "GradientType",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/GradientType.ts"
+		"filename": "egret/display/GradientType.ts"
 	}
 }

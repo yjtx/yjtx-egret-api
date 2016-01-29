@@ -663,7 +663,7 @@
 		"kind": "class",
 		"name": "PropertyEvent",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/events/PropertyEvent.ts",
+		"filename": "extension/eui/events/PropertyEvent.ts",
 		"description": "对象的一个属性发生更改时传递到事件侦听器的事件。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

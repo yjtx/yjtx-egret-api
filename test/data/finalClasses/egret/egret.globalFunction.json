@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/callLater.ts",
+			"filename": "egret/utils/callLater.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "callLater",
@@ -30,7 +30,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/getDefinitionByName.ts",
+			"filename": "egret/utils/getDefinitionByName.ts",
 			"kind": "globalFunction",
 			"type": "any",
 			"name": "getDefinitionByName",
@@ -50,7 +50,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/getOption.ts",
+			"filename": "egret/utils/getOption.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "getOption",
@@ -69,7 +69,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/getQualifiedClassName.ts",
+			"filename": "egret/utils/getQualifiedClassName.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "getQualifiedClassName",
@@ -90,7 +90,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/getQualifiedSuperclassName.ts",
+			"filename": "egret/utils/getQualifiedSuperclassName.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "getQualifiedSuperclassName",
@@ -111,7 +111,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/getTimer.ts",
+			"filename": "egret/utils/getTimer.ts",
 			"kind": "globalFunction",
 			"type": "number",
 			"name": "getTimer",
@@ -125,7 +125,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/hasDefinition.ts",
+			"filename": "egret/utils/hasDefinition.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "hasDefinition",
@@ -146,7 +146,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/is.ts",
+			"filename": "egret/utils/is.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "is",
@@ -175,7 +175,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/registerclass.ts",
+			"filename": "egret/utils/registerclass.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerClass",
@@ -206,7 +206,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/startTick.ts",
+			"filename": "egret/utils/startTick.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "startTick",
@@ -230,7 +230,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/stopTick.ts",
+			"filename": "egret/utils/stopTick.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "stopTick",
@@ -254,7 +254,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/extends.ts",
+			"filename": "egret/utils/extends.ts",
 			"kind": "globalFunction",
 			"type": "any",
 			"name": "superGetter",
@@ -282,7 +282,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/extends.ts",
+			"filename": "egret/utils/extends.ts",
 			"kind": "globalFunction",
 			"name": "superSetter",
 			"memberof": "egret",
@@ -312,7 +312,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/egret/utils/toColorString.ts",
+			"filename": "egret/utils/toColorString.ts",
 			"kind": "globalFunction",
 			"type": "string",
 			"name": "toColorString",

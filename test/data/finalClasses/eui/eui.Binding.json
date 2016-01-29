@@ -76,7 +76,7 @@
 		"kind": "class",
 		"name": "Binding",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/binding/Binding.ts",
+		"filename": "extension/eui/binding/Binding.ts",
 		"description": "绑定工具类，用于执行数据绑定用的方法集。您可以使用此类中定义的方法来配置数据绑定。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

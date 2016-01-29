@@ -1775,7 +1775,7 @@
 		"kind": "class",
 		"name": "UIAsset",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/UIAsset.ts",
+		"filename": "extension/gui/components/UIAsset.ts",
 		"description": "素材和非GUI显示对象包装器。<p/>",
 		"augments": [
 			"egret.gui.UIComponent",

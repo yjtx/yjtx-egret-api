@@ -838,7 +838,7 @@
 		"kind": "interface",
 		"name": "IEditableText",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IEditableText.ts",
+		"filename": "extension/gui/core/IEditableText.ts",
 		"description": "可编辑文本控件接口",
 		"augments": [
 			"egret.gui.IDisplayText",

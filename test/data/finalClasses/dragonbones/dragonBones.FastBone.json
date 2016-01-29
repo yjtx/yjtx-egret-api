@@ -259,7 +259,7 @@
 		"kind": "class",
 		"name": "FastBone",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/FastBone.ts",
+		"filename": "extension/dragonbones/core/fast/FastBone.ts",
 		"description": "FastBone 实例代表 FastArmature 中的一个骨头。一个FastArmature实例可以由很多 FastBone组成。FastBone 在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现和Bone相比，FastBone不能动态添加子骨骼和子插槽",
 		"see": [
 			"dragonBones.FastArmature",

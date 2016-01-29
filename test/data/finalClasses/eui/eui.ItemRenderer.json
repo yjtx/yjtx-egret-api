@@ -1674,7 +1674,7 @@
 		"kind": "class",
 		"name": "ItemRenderer",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/components/ItemRenderer.ts",
+		"filename": "extension/eui/components/ItemRenderer.ts",
 		"description": "ItemRenderer 类是项呈示器的基类。",
 		"state": [
 			{

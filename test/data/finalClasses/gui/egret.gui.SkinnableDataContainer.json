@@ -1985,7 +1985,7 @@
 		"kind": "class",
 		"name": "SkinnableDataContainer",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/SkinnableDataContainer.ts",
+		"filename": "extension/gui/components/SkinnableDataContainer.ts",
 		"description": "可设置外观的数据项目容器基类",
 		"augments": [
 			"egret.gui.SkinnableComponent",

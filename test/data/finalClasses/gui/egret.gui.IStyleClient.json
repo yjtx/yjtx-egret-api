@@ -109,7 +109,7 @@
 		"kind": "interface",
 		"name": "IStyleClient",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IStyleClient.ts",
+		"filename": "extension/gui/core/IStyleClient.ts",
 		"description": "能够设置样式的组件接口"
 	}
 }

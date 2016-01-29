@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "addEventListener",
@@ -46,7 +46,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "createGroup",
@@ -80,7 +80,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "destroyRes",
@@ -109,7 +109,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "Array<RES.ResourceItem>",
 			"name": "getGroupByName",
@@ -133,7 +133,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "any",
 			"name": "getRes",
@@ -156,7 +156,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "getResAsync",
@@ -188,7 +188,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "getResByUrl",
@@ -224,7 +224,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "RES.VersionController",
 			"name": "getVersionController",
@@ -236,7 +236,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "hasRes",
@@ -258,7 +258,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "isGroupLoaded",
@@ -281,7 +281,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "loadConfig",
@@ -314,7 +314,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "loadGroup",
@@ -342,7 +342,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "parseConfig",
@@ -370,7 +370,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"name": "registerAnalyzer",
 			"memberof": "RES",
@@ -394,7 +394,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerVersionController",
@@ -413,7 +413,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "removeEventListener",
@@ -448,7 +448,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "setMaxLoadingThread",
@@ -470,7 +470,7 @@
 			"pType": "public"
 		},
 		{
-			"filename": "../../../Egret/egret-core/egret-core-master/src/extension/resource/Resource.ts",
+			"filename": "extension/resource/Resource.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "setMaxRetryTimes",

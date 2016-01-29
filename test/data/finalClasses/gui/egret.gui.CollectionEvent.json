@@ -749,7 +749,7 @@
 		"kind": "class",
 		"name": "CollectionEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/CollectionEvent.ts",
+		"filename": "extension/gui/events/CollectionEvent.ts",
 		"description": "集合类型数据改变事件",
 		"augments": [
 			"egret.Event",

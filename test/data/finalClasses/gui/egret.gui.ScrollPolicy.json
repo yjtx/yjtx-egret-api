@@ -38,7 +38,7 @@
 		"kind": "class",
 		"name": "ScrollPolicy",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ScrollPolicy.ts",
+		"filename": "extension/gui/core/ScrollPolicy.ts",
 		"description": "滚动条显示策略常量"
 	}
 }

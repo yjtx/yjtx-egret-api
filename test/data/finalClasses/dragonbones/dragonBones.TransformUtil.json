@@ -120,7 +120,7 @@
 		"kind": "class",
 		"name": "TransformUtil",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/utils/TransformUtil.ts",
+		"filename": "extension/dragonbones/core/utils/TransformUtil.ts",
 		"description": "提供了一些常用的转换的静态方法"
 	}
 }

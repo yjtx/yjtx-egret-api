@@ -1804,7 +1804,7 @@
 		"kind": "class",
 		"name": "PopUpAnchor",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/PopUpAnchor.ts",
+		"filename": "extension/gui/components/PopUpAnchor.ts",
 		"description": "PopUpAnchor组件用于定位布局中的弹出控件或下拉控件",
 		"augments": [
 			"egret.gui.UIComponent",

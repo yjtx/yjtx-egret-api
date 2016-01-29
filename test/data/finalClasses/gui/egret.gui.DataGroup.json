@@ -1947,7 +1947,7 @@
 		"kind": "class",
 		"name": "DataGroup",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/DataGroup.ts",
+		"filename": "extension/gui/components/DataGroup.ts",
 		"description": "数据项目的容器基类将数据项目转换为可视元素以进行显示。",
 		"augments": [
 			"egret.gui.GroupBase",

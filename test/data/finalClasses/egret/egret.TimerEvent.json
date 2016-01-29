@@ -680,7 +680,7 @@
 		"kind": "class",
 		"name": "TimerEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/TimerEvent.ts",
+		"filename": "egret/events/TimerEvent.ts",
 		"description": "每当 Timer 对象达到由 Timer.delay 属性指定的间隔时，Timer 对象即会调度 TimerEvent 对象。",
 		"see": [
 			"egret.Timer"

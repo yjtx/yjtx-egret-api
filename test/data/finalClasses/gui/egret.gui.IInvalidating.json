@@ -52,7 +52,7 @@
 		"kind": "interface",
 		"name": "IInvalidating",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IInvalidating.ts",
+		"filename": "extension/gui/core/IInvalidating.ts",
 		"description": "拥有失效验证机制组件接口"
 	}
 }

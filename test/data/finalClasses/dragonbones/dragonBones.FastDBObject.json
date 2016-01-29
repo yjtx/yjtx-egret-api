@@ -137,7 +137,7 @@
 		"kind": "class",
 		"name": "FastDBObject",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/FastDBObject.ts",
+		"filename": "extension/dragonbones/core/fast/FastDBObject.ts",
 		"description": "FastDBObject 是 FastBone 和 FastSlot 的基类",
 		"see": [
 			"dragonBones.FastBone",

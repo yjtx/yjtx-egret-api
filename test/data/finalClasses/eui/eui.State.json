@@ -102,7 +102,7 @@
 		"kind": "class",
 		"name": "State",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/states/State.ts",
+		"filename": "extension/eui/states/State.ts",
 		"description": "State 类定义视图状态，即组件的特定视图。例如，产品缩略图可以有两个视图状态，包含最少信息的基本视图状态和包含附加信息的丰富视图状态。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

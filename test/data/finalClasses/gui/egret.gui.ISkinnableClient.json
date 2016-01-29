@@ -645,7 +645,7 @@
 		"kind": "interface",
 		"name": "ISkinnableClient",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ISkinnableClient.ts",
+		"filename": "extension/gui/core/ISkinnableClient.ts",
 		"description": "可设置外观的组件接口",
 		"augments": [
 			"egret.gui.IVisualElement",

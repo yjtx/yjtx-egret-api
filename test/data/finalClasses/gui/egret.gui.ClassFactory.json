@@ -58,7 +58,7 @@
 		"kind": "class",
 		"name": "ClassFactory",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/ClassFactory.ts",
+		"filename": "extension/gui/core/ClassFactory.ts",
 		"description": "ClassFactory 实例是一个“工厂对象”，Egret 可用其生成其他类的实例，每个实例拥有相同的属性。",
 		"augments": [
 			"egret.HashObject"

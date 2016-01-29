@@ -78,7 +78,7 @@
 		"kind": "class",
 		"name": "PopUpPosition",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/PopUpPosition.ts",
+		"filename": "extension/gui/core/PopUpPosition.ts",
 		"description": "定义弹出位置的常量值。该常量决定目标对象相对于父级组件的弹出位置。"
 	}
 }

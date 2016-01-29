@@ -263,7 +263,7 @@
 		"kind": "interface",
 		"name": "ICollection",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/collections/ICollection.ts",
+		"filename": "extension/gui/collections/ICollection.ts",
 		"description": "列表的集合类数据源对象接口",
 		"augments": [
 			"egret.IEventDispatcher",

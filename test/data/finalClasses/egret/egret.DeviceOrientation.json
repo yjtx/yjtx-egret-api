@@ -287,7 +287,7 @@
 		"kind": "class",
 		"name": "DeviceOrientation",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/sensor/DeviceOrientation.ts",
+		"filename": "egret/sensor/DeviceOrientation.ts",
 		"description": "Orientation 监听设备方向的变化，当方向变化时派发 CHANGE 事件",
 		"event": [
 			{

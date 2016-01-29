@@ -39,7 +39,7 @@
 		"kind": "interface",
 		"name": "IThemeAdapter",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/core/IThemeAdapter.ts",
+		"filename": "extension/gui/core/IThemeAdapter.ts",
 		"description": "主题适配器接口。"
 	}
 }

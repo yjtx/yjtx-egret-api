@@ -142,7 +142,7 @@
 		"kind": "class",
 		"name": "BitmapFont",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/text/BitmapFont.ts",
+		"filename": "egret/text/BitmapFont.ts",
 		"description": "位图字体,是一个字体的纹理集，通常作为BitmapText.font属性的值。",
 		"see": [
 			"http://bbs.egret-labs.org/thread-918-1-1.html TextureMerger",

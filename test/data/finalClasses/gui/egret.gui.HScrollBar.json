@@ -2228,7 +2228,7 @@
 		"kind": "class",
 		"name": "HScrollBar",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/components/HScrollBar.ts",
+		"filename": "extension/gui/components/HScrollBar.ts",
 		"description": "HScrollBar（水平 ScrollBar）控件可以在因数据太多而不能在显示区域中以水平方向完全显示时控制显示的数据部分。     尽管可以使用 HScrollBar 控件作为独立控件，但通常将其结合作为另一组组件的一部分来提供滚动功能",
 		"augments": [
 			"egret.gui.HSlider",

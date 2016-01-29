@@ -133,7 +133,7 @@
 		"kind": "class",
 		"name": "SimpleMotionPath",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/SimpleMotionPath.ts",
+		"filename": "extension/gui/effect/animation/SimpleMotionPath.ts",
 		"description": "SimpleMotionPath 类是只有两个关键帧的MotionPath的简单实现",
 		"augments": [
 			"egret.gui.MotionPath"

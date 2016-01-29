@@ -589,7 +589,7 @@
 		"kind": "class",
 		"name": "FastArmature",
 		"memberof": "dragonBones",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/dragonbones/core/fast/FastArmature.ts",
+		"filename": "extension/dragonbones/core/fast/FastArmature.ts",
 		"description": "FastArmature 是 DragonBones 高效率的骨骼动画系统。他能缓存动画数据，大大减少动画播放的计算不支持动态添加Bone和Slot，换装请通过更换Slot的dispaly或子骨架childArmature来实现",
 		"see": [
 			"dragonBones.ArmatureData"

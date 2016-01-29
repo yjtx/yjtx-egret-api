@@ -54,7 +54,7 @@
 		"kind": "class",
 		"name": "ExternalInterface",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/external/ExternalInterface.ts",
+		"filename": "egret/external/ExternalInterface.ts",
 		"description": "h5与native交互。",
 		"see": [
 			"http://edn.egret.com/cn/index.php?g=&m=article&a=index&id=167&terms1_id=25&terms2_id=39 Android项目内的语言间通讯"

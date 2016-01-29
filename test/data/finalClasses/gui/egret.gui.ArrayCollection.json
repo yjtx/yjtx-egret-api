@@ -491,7 +491,7 @@
 		"kind": "class",
 		"name": "ArrayCollection",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/collections/ArrayCollection.ts",
+		"filename": "extension/gui/collections/ArrayCollection.ts",
 		"description": "数组的集合类数据结构包装器通常作为列表组件的数据源，使用这种数据结构包装普通数组，能在数据源发生改变的时候主动通知视图刷新变更的数据项",
 		"augments": [
 			"egret.EventDispatcher",

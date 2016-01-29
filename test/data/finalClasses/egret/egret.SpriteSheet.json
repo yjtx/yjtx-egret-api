@@ -133,7 +133,7 @@
 		"kind": "class",
 		"name": "SpriteSheet",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/display/SpriteSheet.ts",
+		"filename": "egret/display/SpriteSheet.ts",
 		"description": "SpriteSheet 是一张由多个子位图拼接而成的集合位图，它包含多个 Texture 对象。每一个 Texture 都共享 SpriteSheet 的集合位图，但是指向它的不同的区域。在WebGL / OpenGL上，这种做法可以显著提升性能同时，SpriteSheet可以很方便的进行素材整合，降低HTTP请求数量SpriteSheet 格式的具体规范可以参见此文档  https://github.com/egret-labs/egret-core/wiki/Egret-SpriteSheet-Specification",
 		"see": [
 			"http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用"

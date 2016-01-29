@@ -98,7 +98,7 @@
 		"kind": "class",
 		"name": "CollectionEventKind",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/CollectionEventKind.ts",
+		"filename": "extension/gui/events/CollectionEventKind.ts",
 		"description": "定义  CollectionEvent 类 kind 属性的有效值的常量。这些常量指示对集合进行的更改类型。"
 	}
 }

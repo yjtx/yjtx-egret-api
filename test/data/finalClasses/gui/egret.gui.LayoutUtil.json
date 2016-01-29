@@ -30,7 +30,7 @@
 		"kind": "class",
 		"name": "LayoutUtil",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/utils/LayoutUtil.ts",
+		"filename": "extension/gui/utils/LayoutUtil.ts",
 		"description": "布局工具类"
 	}
 }

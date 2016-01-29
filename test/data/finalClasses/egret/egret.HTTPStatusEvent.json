@@ -652,7 +652,7 @@
 		"kind": "class",
 		"name": "HTTPStatusEvent",
 		"memberof": "egret",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/egret/events/HTTPStatusEvent.ts",
+		"filename": "egret/events/HTTPStatusEvent.ts",
 		"description": "在网络请求返回 HTTP 状态代码时，应用程序将调度 HTTPStatusEvent 对象。在错误或完成事件之前，将始终发送 HTTPStatusEvent 对象。HTTPStatusEvent 对象不一定表示错误条件；它仅反映网络堆栈提供的 HTTP 状态代码（如果有的话）。",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

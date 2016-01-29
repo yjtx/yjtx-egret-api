@@ -79,6 +79,6 @@
 		"kind": "interface",
 		"name": "IInterpolator",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/interpolation/IInterpolator.ts"
+		"filename": "extension/gui/effect/interpolation/IInterpolator.ts"
 	}
 }

@@ -44,7 +44,7 @@
 		"kind": "class",
 		"name": "ScrollPolicy",
 		"memberof": "eui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/eui/core/ScrollPolicy.ts",
+		"filename": "extension/eui/core/ScrollPolicy.ts",
 		"description": "滚动条显示策略常量。Scroller 类的 <code>horizontalCanScroll</code> 和 <code>verticalCanScroll</code> 属性的值。",
 		"version": "eui 1.0",
 		"platform": "Web,Native",

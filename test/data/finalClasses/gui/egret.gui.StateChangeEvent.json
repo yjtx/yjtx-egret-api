@@ -697,7 +697,7 @@
 		"kind": "class",
 		"name": "StateChangeEvent",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/events/StateChangeEvent.ts",
+		"filename": "extension/gui/events/StateChangeEvent.ts",
 		"description": "视图状态改变事件",
 		"augments": [
 			"egret.Event",

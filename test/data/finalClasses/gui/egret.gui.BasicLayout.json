@@ -454,7 +454,7 @@
 		"kind": "class",
 		"name": "BasicLayout",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/layouts/BasicLayout.ts",
+		"filename": "extension/gui/layouts/BasicLayout.ts",
 		"description": "基本布局",
 		"augments": [
 			"egret.gui.LayoutBase",

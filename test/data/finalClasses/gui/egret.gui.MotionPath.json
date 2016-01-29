@@ -77,7 +77,7 @@
 		"kind": "class",
 		"name": "MotionPath",
 		"memberof": "egret.gui",
-		"filename": "../../../Egret/egret-core/egret-core-master/src/extension/gui/effect/animation/MotionPath.ts",
+		"filename": "extension/gui/effect/animation/MotionPath.ts",
 		"description": "MotionPath 类定义效果的 Keyframe 对象的集合，以及要设置动画的目标上属性的名称。",
 		"children": [
 			"egret.gui.SimpleMotionPath"
