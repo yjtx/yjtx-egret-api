@@ -3,16 +3,26 @@ function run() {
     content.style.display = "none";
 
     window.addEventListener("firstInit", function () {
-        content.style.display = "block";
-
-        window.dispatchEvent(new Event("resize"));
-    })
+        firstInitFunc();
+    });
 
     //取list 数据
     loadListData(function () {
         r_1();
 
     });
+}
+
+function firstInitFunc() {
+    var content = document.getElementById("content");
+    content.style.display = "block";
+
+    try {
+        window.dispatchEvent(new Event("resize"));
+    }
+    catch (e) {
+
+    }
 }
 
 function r_1() {
@@ -53,7 +63,7 @@ function r_initClass() {
 
             r_rClass();
 
-            window.dispatchEvent(new Event("firstInit"));
+            firstInitFunc();
         });
     }
 }

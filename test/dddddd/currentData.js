@@ -26,7 +26,7 @@ function changeClass(className) {
 }
 
 function gapChar(){
-    return "%E9%8C%";//"￥";
+    return "____";//"￥";
 }
 
 function getCurrentModule() {
