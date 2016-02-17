@@ -39,7 +39,8 @@ function v_initList() {
     var defaultFirstName = "";
 
     var innerHTML = "";
-    for (var i = 0; i < array.length; i++) {
+    lastSelectedIndex = 0;
+    for (var i = 0, count = 0; i < array.length; i++) {
         var classname = array[i];
 
         if (searchTxt.length <= 1 || isIn(searchTxt, classname)) {
@@ -49,17 +50,19 @@ function v_initList() {
             var tempStr = str.replace(/\{class_name_desc\}/g, array[i].replace('globalFunction', "全局函数").replace('globalMember', "全局变量"));
             tempStr = tempStr.replace(/\{class_href\}/g, "#" + moduleName + gapChar() + array[i]);
             tempStr = tempStr.replace(/\{class_name\}/g, array[i]);
-            tempStr = tempStr.replace(/\{data-index\}/g, i);
+            tempStr = tempStr.replace(/\{data-index\}/g, count);
 
             if (classname == currentClass) {
                 tempStr = tempStr.replace(/\{class_selected\}/g, "class_selected");
-                lastSelectedIndex = i;
+                lastSelectedIndex = count;
             }
             else {
                 tempStr = tempStr.replace(/\{class_selected\}/g, "class_unselected");
             }
 
             innerHTML += tempStr;
+
+            count++;
         }
     }
 
