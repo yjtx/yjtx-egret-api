@@ -2,6 +2,7 @@ var ts = require("typescript");
 var trim = require("../core/trim");
 var globals = require("../core/globals");
 var path = require("path");
+var file = require("../core/file");
 
 exports.run = function run(fileNames) {
     var options = {target: 2 /* ES6 */, module: 0 /* None */};
@@ -24,7 +25,7 @@ exports.run = function run(fileNames) {
         var filename = sourceFile.filename;
         filename = path.relative(globals.getSourcePath(), filename);
         for (var i = 0; i < libsNames.length; i++) {
-            if (filename.match(libsNames[i])) {
+            if (file.escapePath(filename).match(libsNames[i])) {
                 return;
             }
         }

@@ -200,6 +200,7 @@ exports.save = function (tempClassObjs) {
     }
 
     function getModuleName(filepath) {
+        filepath = file.escapePath(filepath);
         for (var tempKey in modules) {
             var item = modules[tempKey];
             if (typeof item == "string") {
