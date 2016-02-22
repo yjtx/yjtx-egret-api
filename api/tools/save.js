@@ -10,27 +10,15 @@ var file = require("../core/file.js");
 var property = require("../tools/apiProperty");
 
 
-var allModuleList = {};
 var relationList = {};
 function screen(moduleClassObjs, moduleKey) {
     var outputPath = globals.getOutputPath();
-
-    var tempModulesArr = {};
-    var tempModules = {};//所有的全局函数、全局属性
-
 
     for (var key in moduleClassObjs) {
         var item = moduleClassObjs[key];
         if (item.class) {
 
             saveFile(path.join(outputPath, "finalClasses", moduleKey, key + ".json"), JSON.stringify(item, null, "\t"));
-
-            var memberof = item.class.memberof;
-
-            if (tempModulesArr[memberof] == null) {
-                tempModulesArr[memberof] = [];
-            }
-            tempModulesArr[memberof].push(item.class.name);
 
             //加入到关系列表
             addToRelation(moduleKey, item.class, "class");
@@ -52,59 +40,6 @@ function screen(moduleClassObjs, moduleKey) {
                     addToRelation(moduleKey, item["globalFunction"][tempi], "globalFunction");
                 }
             }
-
-            var modeName = key;
-            tempModules[modeName] = {};
-            if (item["globalMember"] && item["globalMember"].length) {
-                tempModules[modeName]["globalMember"] = true;
-            }
-            if (item["globalFunction"] && item["globalFunction"].length) {
-                tempModules[modeName]["globalFunction"] = true;
-            }
-        }
-    }
-
-    if (allModuleList[moduleKey] == null) {
-        allModuleList[moduleKey] = [];
-    }
-
-    for (var key in tempModulesArr) {
-        var mod = tempModulesArr[key];
-        mod.sort();
-
-        if (tempModules[key]) {
-            if (tempModules[key]["globalFunction"]) {
-                mod.unshift("globalFunction");
-                tempModules[key]["globalFunction"] = false;
-            }
-            if (tempModules[key]["globalMember"]) {
-                mod.unshift("globalMember");
-                tempModules[key]["globalMember"] = false;
-            }
-        }
-
-        for (var key2 in mod) {
-            if (key == "") {
-                allModuleList[moduleKey].push(mod[key2]);
-            }
-            else {
-                allModuleList[moduleKey].push(key + "." + mod[key2]);
-            }
-        }
-    }
-
-    for (var key in tempModules) {
-        var mod = [];
-        if (tempModules[key]["globalFunction"]) {
-            mod.unshift("globalFunction");
-            tempModules[key]["globalFunction"] = false;
-        }
-        if (tempModules[key]["globalMember"]) {
-            mod.unshift("globalMember");
-            tempModules[key]["globalMember"] = false;
-        }
-        for (var key2 in mod) {
-            allModuleList[moduleKey].push(key + "." + mod[key2]);
         }
     }
 
@@ -198,55 +133,9 @@ exports.save = function (tempClassObjs) {
 
     var outputPath = globals.getOutputPath();
 
-    var tempModuleList = {};
-    for (var key1 in relationList) {
-        tempModuleList[key1] = [];
+    saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(getList(), null, "\t"));
 
-        for (var key2 in relationList[key1]) {
-            var memberofHeader = "";
-            if (key2 && key2 != "") {
-                memberofHeader += key2 + ".";
-            }
-
-            var tempModuleInfo = relationList[key1][key2];
-
-            var curClassList = [];
-            if (tempModuleInfo["class"]) {
-                for (var tempI = 0; tempI < tempModuleInfo["class"].length; tempI++) {
-                    var classname = tempModuleInfo["class"][tempI]["name"];
-
-                    curClassList.push(memberofHeader + classname);
-                }
-
-                curClassList.sort();
-            }
-
-
-            if (tempModuleInfo["globalFunction"]) {
-                curClassList.unshift(memberofHeader + "globalFunction");
-            }
-
-            if (tempModuleInfo["globalMember"]) {
-                curClassList.unshift(memberofHeader + "globalMember");
-            }
-
-            tempModuleList[key1] = tempModuleList[key1].concat(curClassList);
-        }
-
-    }
-    saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(tempModuleList, null, "\t"));
-
-    //for (var key1 in relationList) {
-    //    for (var key2 in relationList[key1]) {
-    //        console.log(key1, key2);
-    //        relationList[key1][key2].sort(charSort);
-    //    }
-    //}
     saveFile(path.join(outputPath, "/relation", "relation.json"), JSON.stringify(relationList, null, "\t"));
-
-    function charSort(a, b) {
-        return a.name < b.name;
-    }
 
     function addClass(item, key, moduleKey) {
         if (allModules[moduleKey] == null) {
@@ -293,6 +182,47 @@ exports.save = function (tempClassObjs) {
         return "yjtx";
     }
 };
+
+function getList() {
+    var tempModuleList = {};
+    for (var key1 in relationList) {
+        tempModuleList[key1] = [];
+
+        for (var key2 in relationList[key1]) {
+            var memberofHeader = "";
+            if (key2 && key2 != "") {
+                memberofHeader += key2 + ".";
+            }
+
+            var tempModuleInfo = relationList[key1][key2];
+
+            var curClassList = [];
+            if (tempModuleInfo["class"]) {
+                for (var tempI = 0; tempI < tempModuleInfo["class"].length; tempI++) {
+                    var classname = tempModuleInfo["class"][tempI]["name"];
+
+                    curClassList.push(memberofHeader + classname);
+                }
+
+                curClassList.sort();
+            }
+
+
+            if (tempModuleInfo["globalFunction"]) {
+                curClassList.unshift(memberofHeader + "globalFunction");
+            }
+
+            if (tempModuleInfo["globalMember"]) {
+                curClassList.unshift(memberofHeader + "globalMember");
+            }
+
+            tempModuleList[key1] = tempModuleList[key1].concat(curClassList);
+        }
+
+    }
+
+    return tempModuleList
+}
 
 function saveFile(filepath, value) {
     file.save(filepath, value);
