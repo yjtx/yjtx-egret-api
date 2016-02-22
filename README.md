@@ -18,9 +18,7 @@ node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output 
 
 * --examples 代码中对应 includeExample 的根路径。可不填
 
-* --language 代码块中对应的语言版本。忽略大小写
-    zh_cn
-    en_us
+* --language 代码块中对应的语言版本。忽略大小写 zh_cn en_us
 
 * --dependence 依赖文件夹，所依赖的文件不会生成，但是会将继承等关系注入path的生成文件中。可以不填，如果有多个，请以“,”分开。
 
