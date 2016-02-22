@@ -63,13 +63,31 @@ function getApiParserRoot() {
     return file.getDirectory(process.argv[1]);
 }
 
-exports.getDependence = function () {
+function getDependence() {
     var dependencePathStr = getOption(["--dependence"]);
     if (dependencePathStr) {
         return dependencePathStr.split(",");
     }
     return [];
-};
+}
+exports.getDependence = getDependence;
+
+function isInDependence(filename) {
+    var dependenceList = getDependence();
+
+    if (filename) {
+        for (var i = 0; i < dependenceList.length; i++) {
+            var tempPath = file.escapePath(dependenceList[i]);
+            if (filename.indexOf(tempPath) >= 0) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+exports.isInDependence = isInDependence;
+
 
 exports.clone = clone;
 exports.getApiParserRoot = getApiParserRoot;

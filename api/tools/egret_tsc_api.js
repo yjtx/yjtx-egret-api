@@ -23,11 +23,14 @@ exports.run = function run(fileNames) {
     var libsNames = ["tools/node_modules/typescript/bin", "core/typescript/lib.d.ts"];
     program.getSourceFiles().forEach(function (sourceFile) {
         var filename = sourceFile.filename;
-        filename = path.relative(globals.getSourcePath(), filename);
         for (var i = 0; i < libsNames.length; i++) {
             if (file.escapePath(filename).match(libsNames[i])) {
                 return;
             }
+        }
+
+        if (!globals.isInDependence(filename)) {
+            filename = path.relative(globals.getSourcePath(), filename);
         }
 
         var root = {"filename": filename, "$_tree_": {}};

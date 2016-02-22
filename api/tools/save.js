@@ -64,15 +64,9 @@ function addToRelation(moduleKey, classinfo, kind) {
 }
 
 function isInDependence(item) {
-    var dependences = globals.getDependence();
-
     if (item.filename) {
-        for (var i = 0; i < dependences.length; i++) {
-            var temppath = file.escapePath(dependences[i]);
-            if (item.filename.indexOf(temppath) >= 0) {
-                return true;
-            }
-        }
+
+        return globals.isInDependence(item.filename);
     }
 
     return false;
