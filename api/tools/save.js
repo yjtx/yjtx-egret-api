@@ -11,6 +11,7 @@ var property = require("../tools/apiProperty");
 
 
 var allModuleList = {};
+var relationList = {};
 function screen(moduleClassObjs, moduleKey) {
     var outputPath = globals.getOutputPath();
 
@@ -30,13 +31,26 @@ function screen(moduleClassObjs, moduleKey) {
                 tempModulesArr[memberof] = [];
             }
             tempModulesArr[memberof].push(item.class.name);
+
+            //加入到关系列表
+            addToRelation(moduleKey, item.class, "class");
         }
         else {
             if (item["globalMember"] && item["globalMember"].length) {
                 saveFile(path.join(outputPath, "finalClasses", moduleKey, key + "." + "globalMember.json"), JSON.stringify({"globalMember": item["globalMember"]}, null, "\t"));
+
+                //加入到关系列表
+                for (var tempi = 0; tempi < item["globalMember"].length; tempi++) {
+                    addToRelation(moduleKey, item["globalMember"][tempi], "globalMember");
+                }
             }
             if (item["globalFunction"] && item["globalFunction"].length) {
                 saveFile(path.join(outputPath, "finalClasses", moduleKey, key + "." + "globalFunction.json"), JSON.stringify({"globalFunction": item["globalFunction"]}, null, "\t"));
+
+                //加入到关系列表
+                for (var tempi = 0; tempi < item["globalFunction"].length; tempi++) {
+                    addToRelation(moduleKey, item["globalFunction"][tempi], "globalFunction");
+                }
             }
 
             var modeName = key;
@@ -97,6 +111,22 @@ function screen(moduleClassObjs, moduleKey) {
     saveGzip(path.join(outputPath, "finalClasses"), moduleKey);
 }
 
+function addToRelation(moduleKey, classinfo, kind) {
+    if (relationList[moduleKey] == null) {
+        relationList[moduleKey] = {};
+    }
+
+    if (relationList[moduleKey][kind] == null) {
+        relationList[moduleKey][kind] = [];
+    }
+
+    var name = classinfo["name"];
+    if (classinfo.memberof && classinfo.memberof != "") {
+        name = classinfo.memberof + "." + name;
+    }
+    relationList[moduleKey][kind].push({"name": name, "description" : classinfo.description});
+}
+
 function isInDependence(item) {
     var dependences = globals.getDependence();
 
@@ -114,13 +144,8 @@ function isInDependence(item) {
 
 exports.save = function (tempClassObjs) {
     var allModules = {};
-    var sourcePath = globals.getSourcePath();
 
     var modules = property.getModules();
-
-    //for (var tempKey in modules) {
-    //    modules[tempKey] = path.join(sourcePath, modules[tempKey]);
-    //}
 
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
@@ -171,10 +196,20 @@ exports.save = function (tempClassObjs) {
     }
 
     var outputPath = globals.getOutputPath();
-    //file.copy(path.join(globals.getApiParserRoot(), "normalJsons/global.Types.json"), path.join(outputPath, "finalClasses", "other", "global.Types.json"));
-    //allModuleList["other"] = ["global.Types"];
 
     saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(allModuleList, null, "\t"));
+
+    //for (var key1 in relationList) {
+    //    for (var key2 in relationList[key1]) {
+    //        console.log(key1, key2);
+    //        relationList[key1][key2].sort(charSort);
+    //    }
+    //}
+    saveFile(path.join(outputPath, "/relation", "relation.json"), JSON.stringify(relationList, null, "\t"));
+
+    function charSort(a, b) {
+        return a.name < b.name;
+    }
 
     function addClass(item, key, moduleKey) {
         if (allModules[moduleKey] == null) {
