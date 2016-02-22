@@ -150,7 +150,7 @@
 				{
 					"name": "key",
 					"type": "string",
-					"description": "对应配置文件里的 name 属性或 sbuKeys 属性的一项。"
+					"description": "对应配置文件里的 name 属性或 subKeys 属性的一项。"
 				}
 			],
 			"pType": "public"

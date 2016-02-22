@@ -116,15 +116,16 @@ function addToRelation(moduleKey, classinfo, kind) {
         relationList[moduleKey] = {};
     }
 
-    if (relationList[moduleKey][kind] == null) {
-        relationList[moduleKey][kind] = [];
+    var memberof = classinfo["memberof"] || "";
+    if (relationList[moduleKey][memberof] == null) {
+        relationList[moduleKey][memberof] = {};
     }
 
-    var name = classinfo["name"];
-    if (classinfo.memberof && classinfo.memberof != "") {
-        name = classinfo.memberof + "." + name;
+    if (relationList[moduleKey][memberof][kind] == null) {
+        relationList[moduleKey][memberof][kind] = [];
     }
-    relationList[moduleKey][kind].push({"name": name, "description" : classinfo.description});
+
+    relationList[moduleKey][memberof][kind].push({"name": classinfo.name, "description" : classinfo.description || ""});
 }
 
 function isInDependence(item) {
@@ -197,7 +198,43 @@ exports.save = function (tempClassObjs) {
 
     var outputPath = globals.getOutputPath();
 
-    saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(allModuleList, null, "\t"));
+    var tempModuleList = {};
+    for (var key1 in relationList) {
+        tempModuleList[key1] = [];
+
+        for (var key2 in relationList[key1]) {
+            var memberofHeader = "";
+            if (key2 && key2 != "") {
+                memberofHeader += key2 + ".";
+            }
+
+            var tempModuleInfo = relationList[key1][key2];
+
+            var curClassList = [];
+            if (tempModuleInfo["class"]) {
+                for (var tempI = 0; tempI < tempModuleInfo["class"].length; tempI++) {
+                    var classname = tempModuleInfo["class"][tempI]["name"];
+
+                    curClassList.push(memberofHeader + classname);
+                }
+
+                curClassList.sort();
+            }
+
+
+            if (tempModuleInfo["globalFunction"]) {
+                curClassList.unshift(memberofHeader + "globalFunction");
+            }
+
+            if (tempModuleInfo["globalMember"]) {
+                curClassList.unshift(memberofHeader + "globalMember");
+            }
+
+            tempModuleList[key1] = tempModuleList[key1].concat(curClassList);
+        }
+
+    }
+    saveFile(path.join(outputPath, "/relation", "list.json"), JSON.stringify(tempModuleList, null, "\t"));
 
     //for (var key1 in relationList) {
     //    for (var key2 in relationList[key1]) {

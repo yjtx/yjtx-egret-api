@@ -13,7 +13,7 @@ exports.run = function run(fileNames) {
     if (errors.length > 0) {
         errors.forEach(function (diagnostic) {
             var lineChar = diagnostic.file.getLineAndCharacterFromPosition(diagnostic.start);
-            //console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
+            console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
         });
         return;
     }
