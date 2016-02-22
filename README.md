@@ -6,7 +6,9 @@
 
 ~~~
 node api/tscdoc.js --path api/test/classes/EgretTest/src --output test/data/ --dependence api/test/classes/EgretTest/libs
+~~~
 
+~~~
 node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output test/data/ --examples ../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
 ~~~
 
@@ -46,7 +48,6 @@ node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output 
 * modules 生成的对应组，可以同时包含多个
 
 * exclude 不希望加入到生成列表的文件，为正则表达式。
-
 
 ### 运行
 
