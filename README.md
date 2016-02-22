@@ -22,7 +22,7 @@ node api/tscdoc.js --path ../../Egret/egret-core/egret-core-master/src --output 
 
 * --dependence 依赖文件夹，所依赖的文件不会生成，但是会将继承等关系注入path的生成文件中。可以不填，如果有多个，请以“,”分开。
 
-* --type 对应配置文件的名称。比如 egret，则需要配置文件 egret_modules.json。不填则所有的文件都在 yjtx 文件夹下。
+* --type 对应配置文件的名称。比如 egret，则需要配置文件 egret_modules.json。不填或者不在配置中的文件，则都在 yjtx 模块下。
 
 ~~~
 {
