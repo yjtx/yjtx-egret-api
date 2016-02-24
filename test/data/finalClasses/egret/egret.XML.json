@@ -13,7 +13,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "XMLNode[]",
+			"type": "egret.XMLNode[]",
 			"name": "children",
 			"memberof": "egret.XML",
 			"scope": "instance",

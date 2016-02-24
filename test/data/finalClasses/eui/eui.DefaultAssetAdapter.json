@@ -18,7 +18,7 @@
 				},
 				{
 					"name": "callBack",
-					"type": "(data:any, source:string) => void",
+					"type": "(data:any,source:string)=>void",
 					"description": "解析完成回调函数，示例：callBack(content:any,source:string):void;"
 				},
 				{

@@ -31,7 +31,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "Array<{url:string; size:number}>",
+			"type": "Array<{url:string;size:number}>",
 			"name": "getChangeList",
 			"memberof": "RES.IVersionController",
 			"scope": "instance",

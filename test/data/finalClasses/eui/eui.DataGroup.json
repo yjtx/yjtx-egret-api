@@ -676,7 +676,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "State[]",
+			"type": "eui.State[]",
 			"name": "states",
 			"memberof": "eui.Group",
 			"scope": "instance",

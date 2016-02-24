@@ -16,7 +16,7 @@
 				},
 				{
 					"name": "compFunc",
-					"type": "(content: any, source: any) => void",
+					"type": "(content:any,source:any)=>void",
 					"description": "解析完成回调函数，示例：compFunc(content:any,source:any):void;回调参数content接受两种类型：DisplayObject或Texture。"
 				},
 				{

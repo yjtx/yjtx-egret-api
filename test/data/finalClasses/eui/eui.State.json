@@ -27,7 +27,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "IOverride[]",
+			"type": "eui.IOverride[]",
 			"name": "overrides",
 			"memberof": "eui.State",
 			"scope": "instance",
@@ -65,7 +65,7 @@
 				},
 				{
 					"name": "overrides",
-					"type": "IOverride[]",
+					"type": "eui.IOverride[]",
 					"default": "[]",
 					"description": "该视图状态的覆盖，表现为实现 IOverride 接口的对象的数组。这些覆盖在进入状态时按顺序应用，在退出状态时按相反的顺序删除。"
 				}

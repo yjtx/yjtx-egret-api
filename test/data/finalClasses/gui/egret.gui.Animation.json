@@ -191,7 +191,7 @@
 			"params": [
 				{
 					"name": "updateFunction",
-					"type": "(animation:Animation)=>void",
+					"type": "(animation:egret.gui.Animation)=>void",
 					"description": "动画更新时的回调函数,updateFunction(animation:Animation):void"
 				},
 				{

@@ -243,7 +243,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "(value:number, maximum:number)=>string",
+			"type": "(value:number,maximum:number)=>string",
 			"name": "labelFunction",
 			"memberof": "eui.ProgressBar",
 			"scope": "instance",

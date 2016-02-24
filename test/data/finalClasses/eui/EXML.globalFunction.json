@@ -19,7 +19,7 @@
 				{
 					"name": "callBack",
 					"question": true,
-					"type": "(clazz:any, url:string) => void",
+					"type": "(clazz:any,url:string)=>void",
 					"description": "加载并解析完成后的回调函数，无论加载成功还是失败，此函数均会被回调。失败时将传入 undefined 作为回调函数参数。"
 				},
 				{
