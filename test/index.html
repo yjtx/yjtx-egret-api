@@ -218,7 +218,8 @@
                                class="signatureLink Method">
                                 <span>{name}</span>
                             </a>
-                            : <a href="{type_href}" data-class-name="{type_class}">{type}</a>
+                            :
+                            {a_type_href}
                             <span class="defaultValue"> = {default}</span>
 
                             <div class="summaryTableDescription">
@@ -281,14 +282,14 @@
                                             <span>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
+                                                {a_param_type_href}
                                                 <span>, </span>
                                             </span>
                                         </span>
                                 <span>)</span>
                                         <span class="functionType1">
                                             :
-                                            <a href="{type_href}" data-class-name="{type_class}">{type}</a>
+                                            {a_type_href}
                                         </span>
                             </div>
                             <div class="summaryTableDescription">
@@ -351,7 +352,7 @@
                             </table>
                             <div class="detailBody">
                                 {name} :
-                                <a href="{type_href}" data-class-name="{type_class}">{type}</a>
+                                {a_type_href}
 
                                 <p></p>
                                 <table cellpadding="0" cellspacing="0" border="0">
@@ -382,12 +383,13 @@
 
                                 <p class="getProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public get {name}():
-                                    <a href="{type_href}" data-class-name="{type_class}">{type}</a>
+                                    {a_type_href}
                                 </p>
 
                                 <p class="setProperty">
                                     &nbsp;&nbsp;&nbsp;&nbsp;public set {name}(value:
-                                    <a href="{type_href}" data-class-name="{type_class}">{type}</a>)
+                                    {a_type_href}
+                                    )
                                     <br>
                                 </p>
 
@@ -433,14 +435,14 @@
                                 <span>
                                     <span>{param_name}</span>
                                     <span>:</span>
-                                    <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
+                                    {a_param_type_href}
                                     <span>, </span>
                                 </span>
                             </span>
                                 <span>)</span>
                             <span class="functionType2">
                                 <span>:</span>
-                                <a href="{type_href}" data-class-name="{type_class}">{type}</a>
+                                {a_type_href}
                             </span>
 
                                 <p></p>
@@ -488,7 +490,7 @@
                                             <p>
                                                 <span>{param_name}</span>
                                                 <span>:</span>
-                                                <a href="{param_type_href}" data-class-name="{param_type_class}">{param_type}</a>
+                                                {a_param_type_href}
                                                 —
                                                 <span>{param_description}</span>
                                             </p>

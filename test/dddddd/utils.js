@@ -120,6 +120,7 @@ function replaceParam(paramsListStr, param) {
     str = str.replace(/\{param_type\}/g, replaceChars(param.type || "any"));
 
     str = str.replace(/\{param_type_href\}/g, getTypeHref(param.type));
+    str = str.replace(/\{a_param_type_href\}/g, getTypeA(param["type"]));
 
     str = str.replace(/\{param_description\}/g, param.description);
     return str;
@@ -139,11 +140,7 @@ function getReplacedStr(newNodestr, member) {
     newNodestr = newNodestr.replace(/\{version\}/g, member["version"] || "all");
     newNodestr = newNodestr.replace(/\{platform\}/g, member["platform"] || "Web,Runtime");
 
-
-    var typeclass= getTypeClassName(member["type"]);
-    newNodestr = newNodestr.replace(/\{type_class\}/g, typeclass);
-
-    newNodestr = newNodestr.replace(/\{type_href\}/g, getTypeHref(member["type"]));
+    newNodestr = newNodestr.replace(/\{a_type_href\}/g, getTypeA(member["type"]));
 
     var description = getFirstSpan(member["description"]);
     if (member["scope"] == "static") {
@@ -186,6 +183,26 @@ function replaceChars(str) {
     str = str.replace(">", "&gt;");
     return str;
 }
+
+function getTypeA(type) {
+    if (type && type.indexOf("|") >= 0) {
+        var array = type.split("|");
+        for (var i = 0; i < array.length; i++) {
+            array[i] = getTypeA(array[i]);
+        }
+        return array.join(" | ");
+    }
+
+    var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>'
+
+    link = link.replace(/\{type\}/g, replaceChars(type || "any"));
+    link = link.replace(/\{type_class\}/g, getTypeClassName(type));
+    link = link.replace(/\{type_href\}/g, getTypeHref(type));
+
+    return link;
+}
+
+
 
 function getTypeHref(type) {
     if (isNormalType(type)) {
