@@ -537,7 +537,7 @@
 			"params": [
 				{
 					"name": "EventClass",
-					"type": "{new (type:string, bubbles?:boolean, cancelable?:boolean): T;eventPool?:Event[]}",
+					"type": "{new (type:string,bubbles?:boolean,cancelable?:boolean):T;eventPool?:egret.Event[]}",
 					"description": "Event类名。"
 				},
 				{
