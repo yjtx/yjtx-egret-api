@@ -139,6 +139,7 @@
 		"dragonBones.ITextureAtlas",
 		"dragonBones.MathUtil",
 		"dragonBones.Matrix",
+		"dragonBones.ParentTransformObject",
 		"dragonBones.Point",
 		"dragonBones.Rectangle",
 		"dragonBones.SkinData",

@@ -91,6 +91,14 @@
 		},
 		{
 			"kind": "function",
+			"type": "dragonBones.DBTransform",
+			"name": "clone",
+			"memberof": "dragonBones.DBTransform",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
 			"type": "void",
 			"name": "copy",
 			"memberof": "dragonBones.DBTransform",

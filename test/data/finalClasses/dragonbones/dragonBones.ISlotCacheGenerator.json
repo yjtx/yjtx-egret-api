@@ -53,6 +53,14 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.ISlotCacheGenerator",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.ICacheUser",
 			"scope": "instance",

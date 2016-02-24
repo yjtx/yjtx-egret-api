@@ -62,6 +62,16 @@
 		},
 		{
 			"kind": "member",
+			"type": "string",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"rwType": 2,
+			"description": "播放子骨架的动画",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
 			"type": "boolean",
 			"name": "inheritRotation",
 			"memberof": "dragonBones.DBObject",

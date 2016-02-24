@@ -113,6 +113,16 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "A_DEFAULT_ANIMATION",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "默认动画",
+			"pType": "public",
+			"default": "\"defaultAnimation\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "A_DISPLAY_INDEX",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
@@ -219,6 +229,16 @@
 			"description": "帧的y坐标",
 			"pType": "public",
 			"default": "\"frameY\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "A_GOTOANDPLAY",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "播放子骨架的动画",
+			"pType": "public",
+			"default": "\"gotoAndPlay\""
 		},
 		{
 			"kind": "member",

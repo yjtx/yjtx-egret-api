@@ -38,6 +38,15 @@
 			"default": "new Matrix()",
 			"inherited": true,
 			"inherits": "dragonBones.FrameCache"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.SlotFrameCache",
+			"scope": "instance",
+			"description": "//\t\tpublic var zOrder:int;",
+			"pType": "public"
 		}
 	],
 	"function": [
@@ -46,7 +55,6 @@
 			"name": "SlotFrameCache",
 			"memberof": "dragonBones.SlotFrameCache",
 			"scope": "instance",
-			"description": "//\t\tpublic var zOrder:int;",
 			"pType": "public"
 		},
 		{

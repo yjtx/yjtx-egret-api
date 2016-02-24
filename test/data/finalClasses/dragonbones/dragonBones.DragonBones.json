@@ -13,6 +13,15 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "DATA_VERSION_4_5",
+			"memberof": "dragonBones.DragonBones",
+			"scope": "static",
+			"pType": "public",
+			"default": "\"4.5\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "PARENT_COORDINATE_DATA_VERSION",
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
@@ -26,7 +35,7 @@
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
 			"pType": "public",
-			"default": "\"4.3.5\""
+			"default": "\"4.5.2\""
 		}
 	],
 	"function": [

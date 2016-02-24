@@ -25,6 +25,15 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "defaultAnimation",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "默认动画",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",

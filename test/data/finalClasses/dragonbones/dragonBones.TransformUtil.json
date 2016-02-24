@@ -59,13 +59,93 @@
 				},
 				{
 					"name": "scaleXF",
-					"type": "Boolean",
+					"type": "boolean",
 					"description": "x方向的缩放"
 				},
 				{
 					"name": "scaleYF",
-					"type": "Boolean",
+					"type": "boolean",
 					"description": "y方向的缩放"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "matrixToTransformPosition",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				},
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "matrixToTransformRotation",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				},
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				},
+				{
+					"name": "scaleX",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "scaleY",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "matrixToTransformScale",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				},
+				{
+					"name": "transform",
+					"type": "dragonBones.DBTransform",
+					"description": ""
+				},
+				{
+					"name": "scaleXF",
+					"type": "boolean",
+					"description": ""
+				},
+				{
+					"name": "scaleYF",
+					"type": "boolean",
+					"description": ""
 				}
 			],
 			"pType": "public"
@@ -103,12 +183,6 @@
 					"name": "matrix",
 					"type": "dragonBones.Matrix",
 					"description": "转换后的矩阵数据"
-				},
-				{
-					"name": "keepScale",
-					"type": "boolean",
-					"default": "false",
-					"description": "是否保持缩放"
 				}
 			],
 			"pType": "public"

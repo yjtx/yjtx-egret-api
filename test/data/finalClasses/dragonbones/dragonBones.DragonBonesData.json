@@ -28,6 +28,16 @@
 			"scope": "instance",
 			"description": "DrabonBones数据的名字",
 			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "version",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "数据版本",
+			"pType": "public",
+			"default": "0"
 		}
 	],
 	"function": [

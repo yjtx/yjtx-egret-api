@@ -127,6 +127,17 @@
 		},
 		{
 			"kind": "member",
+			"type": "string",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
+			"description": "播放子骨架动画",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "member",
 			"type": "boolean",
 			"name": "hasChildArmature",
 			"memberof": "dragonBones.FastSlot",
@@ -274,6 +285,16 @@
 					"description": "slotData"
 				}
 			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.FastSlot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "updateChildArmatureAnimation",
+			"memberof": "dragonBones.FastSlot",
+			"scope": "instance",
 			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastSlot"
