@@ -27,10 +27,6 @@ var tempObj = [];
 function getClassFullName(className, memberof) {
     tempObj = [];
 
-    if (className.indexOf("component:") >= 0) {
-        console.log(111)
-    }
-
     var tempClassName = ansClassFullName(className, memberof);
 
     while (tempClassName.indexOf(preChar) >= 0) {
@@ -47,6 +43,7 @@ function getClassFullName(className, memberof) {
     return tempClassName;
 }
 
+//获取类全称
 function ansClassFullName(className, memberof) {
     className = className.trim();
     if (["void", "number", "string", "boolean", "any"].indexOf(className) >= 0) {
@@ -58,10 +55,6 @@ function ansClassFullName(className, memberof) {
     if (classesArr[className]) {
         return className;
     }
-
-    //if (!className) {
-    //    console.log(1);
-    //}
 
     if (className.indexOf("(") >= 0) { //
         var sIdx = className.lastIndexOf("(");
@@ -209,92 +202,6 @@ function ansClassFullName(className, memberof) {
     return className;
 }
 
-//获取类全称
-function getClassFullName1(className, memberof) {
-    className = trim.trimAll(className);
-
-    if (["void", "number", "string", "boolean", "any"].indexOf(className) >= 0) {
-        return className;
-    }
-
-    //有此类，则直接返回
-    if (classesArr[className]) {
-        return className;
-    }
-
-    if (className.indexOf(":") >= 0) {
-
-    }
-
-
-    if (className.indexOf("{") >= 0) {
-        return className;
-    }
-
-
-    //Array<ITextElement>
-    if (className.match(/^(\s)*Array(\s)*<[^>]*>(\s)*$/)) {
-
-        return "Array<" + getClassFullName(className.substring(className.indexOf("<") + 1, className.lastIndexOf(">")), memberof) + ">";
-    }
-
-    //(a1:ITextElement, a2:ITextElement)=>ITextElement
-    if (className.match(/=>/)) {
-        var array = className.split("=>");
-        var type = getClassFullName(array[1], memberof);
-        var paramStr = array[0];
-
-        paramStr = paramStr.replace(/\(|\)/g, "");
-
-        var paramResult = "(";
-        var params = paramStr.split(",");
-        for (var i = 0; i < params.length; i++) {
-            if (i != 0) {
-                paramResult += ", ";
-            }
-            var param = params[i];
-            var paramArr = param.split(":");
-            paramResult += paramArr[0];
-            if (paramArr[1]) {
-                paramResult += ":" + getClassFullName(paramArr[1], memberof);
-            }
-        }
-        paramResult += ")";
-
-        return paramResult + "=>" + type;
-    }
-
-    // number | string
-    if (className.indexOf("|") >= 0) {
-        var array = className.split("|");
-
-        for (var i = 0; i < array.length; i++) {
-            array[i] = getClassFullName(array[i], memberof);
-        }
-
-        return array.join("|");
-    }
-
-    //ITextElement[]
-    if (className.match(/\[(\s)*\]/)) {
-        return getClassFullName(className.substring(0, className.indexOf("[")), memberof) + '[]';
-    }
-
-    //根据当前
-    if (memberof) {
-        var arr = memberof.split(".");
-        while (arr.length) {
-            var tempMemberof = arr.join(".");
-            if (classesArr[tempMemberof + "." + className]) {
-                return tempMemberof + "." + className;
-            }
-
-            arr.pop();
-        }
-    }
-
-    return className;
-}
 
 function setClassFullType(classDes, memberof) {
     //继承e

@@ -197,18 +197,242 @@ function replaceChars(str) {
     return str;
 }
 
-function getTypeA(type) {
-    if (type && type.indexOf("|") >= 0) {
-        var array = type.split("|");
-        for (var i = 0; i < array.length; i++) {
-            array[i] = getTypeA(array[i]);
-        }
-        return array.join(" | ");
-    }
-    //Array<egret.ITextElement>
-    if (type && type.match(/(\s)*Array(\s)*<.*>/)) {
+//获取类全称
+function ansClassFullName(className, memberof) {
 
-        return getTypeA("Array") + "<" + getTypeA(type.substring(type.indexOf("<") + 1, type.lastIndexOf(">"))) + ">";
+    if (className) {
+        if (className.indexOf("(") >= 0) { //
+            var sIdx = className.lastIndexOf("(");
+            var eIdx = className.indexOf(")");
+
+            var paramStr = className.substring(sIdx + 1, eIdx);
+            var paramResult = "(";
+            var params = paramStr.split(",");
+            for (var i = 0; i < params.length; i++) {
+                if (i != 0) {
+                    paramResult += ", ";
+                }
+                var param = params[i];
+                param = param.trim();
+                var paramArr = param.split(":");
+                paramResult += paramArr[0];
+                if (paramArr[1]) {
+                    paramResult += ": " + ansClassFullName(paramArr[1], memberof);
+                }
+            }
+            paramResult += ")";
+            tempObj.push(paramResult);
+
+            className = className.substring(0, sIdx)
+                + preChar + (tempObj.length - 1) + nestChar
+                + className.substring(eIdx + 1);
+            return ansClassFullName(className, memberof);
+        }
+
+        var arr = className.match(/\[(\s)*[^\s\[\]]+[^\]]*\]/);
+        if (arr) { //
+            var paramStr = arr[0].substring(1, arr[0].length - 1);
+
+            var paramResult = "[";
+            var params = paramStr.split(",");
+            for (var i = 0; i < params.length; i++) {
+                if (i != 0) {
+                    paramResult += ", ";
+                }
+                var param = params[i];
+                param = param.trim();
+                var paramArr = param.split(":");
+                paramResult += paramArr[0];
+                if (paramArr[1]) {
+                    paramResult += ": " + ansClassFullName(paramArr[1], memberof);
+                }
+            }
+            paramResult += "]";
+            tempObj.push(paramResult);
+
+            className = className.replace(arr[0], preChar + (tempObj.length - 1) + nestChar);
+
+            return ansClassFullName(className, memberof);
+        }
+
+        if (className.lastIndexOf("{") >= 0) { //
+            var sIdx = className.lastIndexOf("{");
+            var eIdx = className.indexOf("}");
+
+            var paramStr = className.substring(sIdx + 1, eIdx);
+            var paramResult = "{";
+            var params = paramStr.split(";");
+            for (var i = 0; i < params.length; i++) {
+
+                if (i != 0) {
+                    paramResult += "; ";
+                }
+                var param = params[i];
+                param = param.trim();
+
+                var paramArr = param.split(":");
+                paramResult += paramArr[0];
+                if (paramArr[1]) {
+                    paramResult += ": " + ansClassFullName(paramArr[1], memberof);
+                }
+            }
+            paramResult += "}";
+            tempObj.push(paramResult);
+
+            className = className.substring(0, sIdx)
+                + preChar + (tempObj.length - 1) + nestChar
+                + className.substring(eIdx + 1);
+            return ansClassFullName(className, memberof);
+        }
+
+        //(a1:ITextElement, a2:ITextElement)=>ITextElement
+        if (className.match(/=>/)) {
+            var array = className.split("=>");
+            array[0] = array[0].trim();
+            var paramResult = " => " + ansClassFullName(array[1], memberof);
+            tempObj.push(paramResult);
+
+
+            return array[0]
+                + preChar + (tempObj.length - 1) + nestChar
+        }
+
+        if (className.indexOf("<") >= 0) {
+            var sIdx = className.lastIndexOf("<");
+            var eIdx = className.indexOf(">");
+
+            var paramResult = "<";
+            paramResult += ansClassFullName(className.substring(sIdx + 1, eIdx), memberof);
+            paramResult += ">";
+            tempObj.push(paramResult);
+
+            className = className.substring(0, sIdx)
+                + preChar + (tempObj.length - 1) + nestChar
+                + className.substring(eIdx + 1);
+            return ansClassFullName(className, memberof);
+        }
+
+        // number | string
+        if (className.indexOf("|") >= 0) {
+            var array = className.split("|");
+
+            for (var i = 0; i < array.length; i++) {
+                array[i] = ansClassFullName(array[i], memberof);
+            }
+
+            return array.join("|");
+        }
+
+        //ITextElement[]
+        if (className.match(/\[(\s)*\]/)) {
+            return ansClassFullName(className.substring(0, className.indexOf("[")), memberof) + '[]';
+        }
+    }
+
+    var tempClassName = className;
+    while (tempClassName && tempClassName.indexOf(preChar) == 0) {
+        var sIdx = 0;
+        var eIdx = tempClassName.indexOf(nestChar, sIdx);
+
+        var id = parseInt(tempClassName.substring(sIdx + preChar.length, eIdx));
+        tempClassName = tempObj[id]
+            + tempClassName.substring(eIdx + nestChar.length);
+    }
+
+    if (tempClassName && (tempClassName.indexOf("{") == 0 || tempClassName.indexOf("Array" + preChar) == 0)) {
+        //var link = '<span data-class-name="{type_class}">{type}</span>';
+        return className;
+    }
+    else {
+        var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';
+    }
+
+
+    link = link.replace(/\{type\}/g, replaceChars(className || "any"));
+    link = link.replace(/\{type_class\}/g, getTypeClassName(className));
+    link = link.replace(/\{type_href\}/g, getTypeHref(className));
+
+    return link;
+}
+
+var preChar = "%%-%%";
+var nestChar = "**-**";
+var tempObj = [];
+function getTypeA(className, memberof) {
+    tempObj = [];
+
+    var tempClassName = ansClassFullName(className, memberof);
+
+    while (tempClassName.indexOf(preChar) >= 0) {
+        var sIdx = tempClassName.lastIndexOf(preChar);
+        var eIdx = tempClassName.indexOf(nestChar, sIdx);
+
+        var id = parseInt(tempClassName.substring(sIdx + preChar.length, eIdx));
+        tempClassName = tempClassName.substring(0, sIdx)
+            + tempObj[id]
+            + tempClassName.substring(eIdx + nestChar.length);
+    }
+
+    tempObj = [];
+    return tempClassName;
+}
+
+function getTypeB(type) {
+    if (type && type.indexOf("{") >= 0) {
+
+        var link = '<span data-class-name="{type_class}">{type}</span>';
+
+        link = link.replace(/\{type\}/g, replaceChars(type || "any"));
+        link = link.replace(/\{type_class\}/g, getTypeClassName(type));
+
+        return link;
+    }
+    else if(type) {
+        //Array<egret.ITextElement>
+        if (type.match(/^(\s)*Array(\s)*<[^>]*>(\s)*$/)) {
+            return getTypeA("Array") + "<" + getTypeA(type.substring(type.indexOf("<") + 1, type.lastIndexOf(">"))) + ">";
+        }
+
+        //(a1:ITextElement, a2:ITextElement)=>ITextElement
+        if (type.match(/=>/)) {
+            var array = type.split("=>");
+            var type = getTypeA(array[1]);
+            var paramStr = array[0];
+
+            paramStr = paramStr.replace(/\(|\)/g, "");
+
+            var paramResult = "(";
+            var params = paramStr.split(",");
+            for (var i = 0; i < params.length; i++) {
+                if (i != 0) {
+                    paramResult += ", ";
+                }
+                var param = params[i];
+                var paramArr = param.split(":");
+                paramResult += paramArr[0];
+                if (paramArr[1]) {
+                    paramResult += ":" + getTypeA(paramArr[1]);
+                }
+            }
+            paramResult += ")";
+
+            return paramResult + "=>" + type;
+        }
+
+        if (type.indexOf("|") >= 0) {
+            var array = type.split("|");
+            for (var i = 0; i < array.length; i++) {
+                array[i] = getTypeA(array[i]);
+            }
+            return array.join(" | ");
+        }
+
+        //egret.ITextElement[]
+        if (type.match(/\[(\s)*\]/)) {
+
+            return getTypeA(type.substring(0, type.indexOf("["))) + "[]";
+        }
+
     }
 
     var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';

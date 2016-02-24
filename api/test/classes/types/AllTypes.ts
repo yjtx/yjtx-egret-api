@@ -13,6 +13,9 @@ module yjtx {
         b: A | number | string;
         c:(p1:number, p2:string)=>number;
 
+
+        skins: { [component: string]: string };
+
         constructor(type:string, bubbles?:boolean, cancelable?:boolean) {
 
         }
