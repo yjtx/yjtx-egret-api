@@ -192,8 +192,13 @@ function getTypeA(type) {
         }
         return array.join(" | ");
     }
+    //Array<egret.ITextElement>
+    if (type && type.match(/(\s)*Array(\s)*<.*>/)) {
 
-    var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>'
+        return "Array<" + getTypeA(type.substring(type.indexOf("<") + 1, type.lastIndexOf(">"))) + ">";
+    }
+
+    var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';
 
     link = link.replace(/\{type\}/g, replaceChars(type || "any"));
     link = link.replace(/\{type_class\}/g, getTypeClassName(type));
