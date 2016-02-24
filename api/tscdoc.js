@@ -46,6 +46,7 @@ function run(opts) {
     //对文件内member等按字母排序
     require("./tools/sort").sortWithName(tempClassArr);
 
+    //剔除不需要显示的
     require("./tools/screening").screening(tempClassArr);
 
     var outputPath = globals.getOutputPath();

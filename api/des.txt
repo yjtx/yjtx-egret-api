@@ -8,6 +8,7 @@ node tscdoc.js --path ../../../Support/Nest/sdk/Nest/libsrc/src/ --output ../tes
 node tscdoc.js --path test/classes --output ../test/data/ --examples test/examples --language zh_cn
 
 node tscdoc.js --path test/classes/empty --output ../test/data/ --examples test/examples --language zh_cn
+node tscdoc.js --path test/classes/types --output ../test/data/ --examples test/examples --language zh_cn
 
 node tscdoc.js --path test/classes/m --output test/output/ --examples test/examples --language zh_cn
 

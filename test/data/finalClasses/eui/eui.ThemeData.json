@@ -13,7 +13,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "{ [component: string]: string }",
+			"type": "{[component:string]:string}",
 			"name": "skins",
 			"memberof": "eui.ThemeData",
 			"scope": "instance",

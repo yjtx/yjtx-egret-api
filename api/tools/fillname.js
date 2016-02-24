@@ -21,8 +21,196 @@ exports.fillname = function (tempClassObjs) {
     }
 };
 
-//获取类全称
+var preChar = "-";
+var nestChar = "%";
+var tempObj = [];
 function getClassFullName(className, memberof) {
+    tempObj = [];
+
+    if (className.indexOf("component:") >= 0) {
+        console.log(111)
+    }
+
+    var tempClassName = ansClassFullName(className, memberof);
+
+    while (tempClassName.indexOf(preChar) >= 0) {
+        var sIdx = tempClassName.lastIndexOf(preChar);
+        var eIdx = tempClassName.indexOf(nestChar, sIdx);
+
+        var id = parseInt(tempClassName.substring(sIdx + 1, eIdx));
+        tempClassName = tempClassName.substring(0, sIdx)
+                        + tempObj[id]
+                        + tempClassName.substring(eIdx + 1);
+    }
+
+    tempObj = [];
+    return tempClassName;
+}
+
+function ansClassFullName(className, memberof) {
+    className = className.trim();
+    if (["void", "number", "string", "boolean", "any"].indexOf(className) >= 0) {
+        return className;
+    }
+
+
+    //有此类，则直接返回
+    if (classesArr[className]) {
+        return className;
+    }
+
+    //if (!className) {
+    //    console.log(1);
+    //}
+
+    if (className.indexOf("(") >= 0) { //
+        var sIdx = className.lastIndexOf("(");
+        var eIdx = className.indexOf(")");
+
+        var paramStr = className.substring(sIdx + 1, eIdx);
+        var paramResult = "(";
+        var params = paramStr.split(",");
+        for (var i = 0; i < params.length; i++) {
+            if (i != 0) {
+                paramResult += ",";
+            }
+            var param = params[i];
+            param = param.trim();
+            var paramArr = param.split(":");
+            paramResult += paramArr[0];
+            if (paramArr[1]) {
+                paramResult += ":" + ansClassFullName(paramArr[1], memberof);
+            }
+        }
+        paramResult += ")";
+        tempObj.push(paramResult);
+
+        className = className.substring(0, sIdx)
+                    + preChar + (tempObj.length - 1) + nestChar
+                    + className.substring(eIdx + 1);
+        return ansClassFullName(className, memberof);
+    }
+
+    var arr = className.match(/\[(\s)*[^\s\[\]]+[^\]]*\]/);
+    if (arr) { //
+        var paramStr = arr[0].substring(1, arr[0].length - 1);
+
+        var paramResult = "[";
+        var params = paramStr.split(",");
+        for (var i = 0; i < params.length; i++) {
+            if (i != 0) {
+                paramResult += ",";
+            }
+            var param = params[i];
+            param = param.trim();
+            var paramArr = param.split(":");
+            paramResult += paramArr[0];
+            if (paramArr[1]) {
+                paramResult += ":" + ansClassFullName(paramArr[1], memberof);
+            }
+        }
+        paramResult += "]";
+        tempObj.push(paramResult);
+
+        className = className.replace(arr[0], preChar + (tempObj.length - 1) + nestChar);
+
+        return ansClassFullName(className, memberof);
+    }
+
+
+    if (className.lastIndexOf("{") >= 0) { //
+        var sIdx = className.lastIndexOf("{");
+        var eIdx = className.indexOf("}");
+
+        var paramStr = className.substring(sIdx + 1, eIdx);
+        var paramResult = "{";
+        var params = paramStr.split(";");
+        for (var i = 0; i < params.length; i++) {
+
+            if (i != 0) {
+                paramResult += ";";
+            }
+            var param = params[i];
+            param = param.trim();
+
+            var paramArr = param.split(":");
+            paramResult += paramArr[0];
+            if (paramArr[1]) {
+                paramResult += ":" + ansClassFullName(paramArr[1], memberof);
+            }
+        }
+        paramResult += "}";
+        tempObj.push(paramResult);
+
+        className = className.substring(0, sIdx)
+            + preChar + (tempObj.length - 1) + nestChar
+            + className.substring(eIdx + 1);
+        return ansClassFullName(className, memberof);
+    }
+
+
+    //(a1:ITextElement, a2:ITextElement)=>ITextElement
+    if (className.match(/=>/)) {
+        var array = className.split("=>");
+        array[0] = array[0].trim();
+        var paramResult = "=>" + ansClassFullName(array[1], memberof);
+        tempObj.push(paramResult);
+
+
+        return array[0]
+            + preChar + (tempObj.length - 1) + nestChar
+    }
+
+    if (className.indexOf("<") >= 0) {
+        var sIdx = className.lastIndexOf("<");
+        var eIdx = className.indexOf(">");
+
+        var paramResult = "<";
+        paramResult += ansClassFullName(className.substring(sIdx + 1, eIdx), memberof);
+        paramResult += ">";
+        tempObj.push(paramResult);
+
+        className = className.substring(0, sIdx)
+            + preChar + (tempObj.length - 1) + nestChar
+            + className.substring(eIdx + 1);
+        return ansClassFullName(className, memberof);
+    }
+
+    // number | string
+    if (className.indexOf("|") >= 0) {
+        var array = className.split("|");
+
+        for (var i = 0; i < array.length; i++) {
+            array[i] = ansClassFullName(array[i], memberof);
+        }
+
+        return array.join("|");
+    }
+
+    //ITextElement[]
+    if (className.match(/\[(\s)*\]/)) {
+        return ansClassFullName(className.substring(0, className.indexOf("[")), memberof) + '[]';
+    }
+
+
+    //根据当前
+    if (memberof) {
+        var arr = memberof.split(".");
+        while (arr.length) {
+            var tempMemberof = arr.join(".");
+            if (classesArr[tempMemberof + "." + className]) {
+                return tempMemberof + "." + className;
+            }
+
+            arr.pop();
+        }
+    }
+
+    return className;
+}
+
+//获取类全称
+function getClassFullName1(className, memberof) {
     className = trim.trimAll(className);
 
     if (["void", "number", "string", "boolean", "any"].indexOf(className) >= 0) {
@@ -34,6 +222,49 @@ function getClassFullName(className, memberof) {
         return className;
     }
 
+    if (className.indexOf(":") >= 0) {
+
+    }
+
+
+    if (className.indexOf("{") >= 0) {
+        return className;
+    }
+
+
+    //Array<ITextElement>
+    if (className.match(/^(\s)*Array(\s)*<[^>]*>(\s)*$/)) {
+
+        return "Array<" + getClassFullName(className.substring(className.indexOf("<") + 1, className.lastIndexOf(">")), memberof) + ">";
+    }
+
+    //(a1:ITextElement, a2:ITextElement)=>ITextElement
+    if (className.match(/=>/)) {
+        var array = className.split("=>");
+        var type = getClassFullName(array[1], memberof);
+        var paramStr = array[0];
+
+        paramStr = paramStr.replace(/\(|\)/g, "");
+
+        var paramResult = "(";
+        var params = paramStr.split(",");
+        for (var i = 0; i < params.length; i++) {
+            if (i != 0) {
+                paramResult += ", ";
+            }
+            var param = params[i];
+            var paramArr = param.split(":");
+            paramResult += paramArr[0];
+            if (paramArr[1]) {
+                paramResult += ":" + getClassFullName(paramArr[1], memberof);
+            }
+        }
+        paramResult += ")";
+
+        return paramResult + "=>" + type;
+    }
+
+    // number | string
     if (className.indexOf("|") >= 0) {
         var array = className.split("|");
 
@@ -42,6 +273,11 @@ function getClassFullName(className, memberof) {
         }
 
         return array.join("|");
+    }
+
+    //ITextElement[]
+    if (className.match(/\[(\s)*\]/)) {
+        return getClassFullName(className.substring(0, className.indexOf("[")), memberof) + '[]';
     }
 
     //根据当前
@@ -87,12 +323,12 @@ function setFullType(obj, memberof) {
     if (obj instanceof Object) {
         for (var key in obj) {
             if (key == "type" && obj[key] != null) {
-                if (obj[key].match(/(\s)*Array(\s)*</)) {
-                    obj[key] = getArrayType(obj[key], memberof);
-                }
-                else {
+                //if (obj[key].match(/(\s)*Array(\s)*</)) {
+                //    obj[key] = getArrayType(obj[key], memberof);
+                //}
+                //else {
                     obj[key] = getClassFullName(obj[key], memberof);
-                }
+                //}
             }
             else {
                 setFullType(obj[key], memberof);
