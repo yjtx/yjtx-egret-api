@@ -81,14 +81,27 @@ function getModuleof(memberof, kind) {
     return getModule(memberof);
 }
 
-var globalTypes = ["number", "string", "Date", "any", "array", "boolean", "enum", "void", "Function"];
+var globalTypes1 = ["Date", "Function"];
+var globalTypes2 = ["number", "string", "any", "array", "boolean", "enum", "void"];
 
 function getGlobalTypeClass () {
     return "global.Types";
 }
 
 function isNormalType(type) {
-    return globalTypes.indexOf(type) >= 0;
+    return type && (globalTypes1.indexOf(type) >= 0 || globalTypes2.indexOf(type.toLowerCase()) >= 0);
+}
+
+function getNormalType(type) {
+    if (type) {
+        if (globalTypes1.indexOf(type) >= 0) {
+            return type;
+        }
+        else if (globalTypes2.indexOf(type.toLowerCase()) >= 0) {
+            return type.toLowerCase();
+        }
+    }
+    return type;
 }
 
 function getTypeClassName(type) {
@@ -195,7 +208,7 @@ function getTypeA(type) {
     //Array<egret.ITextElement>
     if (type && type.match(/(\s)*Array(\s)*<.*>/)) {
 
-        return "Array<" + getTypeA(type.substring(type.indexOf("<") + 1, type.lastIndexOf(">"))) + ">";
+        return getTypeA("Array") + "<" + getTypeA(type.substring(type.indexOf("<") + 1, type.lastIndexOf(">"))) + ">";
     }
 
     var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';
@@ -212,7 +225,7 @@ function getTypeA(type) {
 function getTypeHref(type) {
     if (isNormalType(type)) {
         var typeClass = getGlobalTypeClass();
-        return getLink(getModuleof(typeClass) + gapChar() + typeClass + gapChar() + type);
+        return getLink(getModuleof(typeClass) + gapChar() + typeClass + gapChar() + getNormalType(type));
     }
     else {
         return getClassHref(type);
