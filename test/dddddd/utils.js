@@ -320,7 +320,7 @@ function ansClassFullName(className, memberof) {
                 array[i] = ansClassFullName(array[i], memberof);
             }
 
-            return array.join("|");
+            return array.join(" | ");
         }
 
         //ITextElement[]

@@ -11,16 +11,18 @@ module yjtx {
         a2:Array<A | number>;
 
         b: A | number | string;
-        c:(p1:number, p2:string)=>number;
+        c1:(p1:number, p2:string)=>number;
+
+        c2:(p1:number, p2:string)=>A|boolean;
 
 
         skins: { [component: string]: string };
 
-        constructor(type:string, bubbles?:boolean, cancelable?:boolean) {
+        constructor(type:string | A, bubbles?:boolean|string, cancelable?:boolean) {
 
         }
 
-        public static create<T extends A>(EventClass:{new (type:string, bubbles?:boolean, cancelable?:boolean): T; eventPool?:A[]},
+        public static create<T extends A>(EventClass:{new (type:string | A, bubbles?:boolean|string, cancelable?:boolean): T; eventPool?:A[]},
                                               type:string, bubbles?:boolean, cancelable?:boolean):T {
 
             return new EventClass(type, bubbles, cancelable);
