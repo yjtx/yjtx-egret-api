@@ -34,6 +34,15 @@ function getClassFullName(className, memberof) {
         return className;
     }
 
+    if (className.indexOf("|") >= 0) {
+        var array = className.split("|");
+
+        for (var i = 0; i < array.length; i++) {
+            array[i] = getClassFullName(array[i], memberof);
+        }
+
+        return array.join("|");
+    }
 
     //根据当前
     if (memberof) {

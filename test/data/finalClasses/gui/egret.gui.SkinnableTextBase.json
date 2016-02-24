@@ -286,7 +286,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "DisplayObject|Rectangle",
+			"type": "egret.DisplayObject|egret.Rectangle",
 			"name": "mask",
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",

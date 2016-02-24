@@ -137,7 +137,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "DisplayObject|Rectangle",
+			"type": "egret.DisplayObject|egret.Rectangle",
 			"name": "mask",
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",
@@ -449,7 +449,7 @@
 				{
 					"name": "value",
 					"question": true,
-					"type": "BitmapData|Texture",
+					"type": "egret.BitmapData|egret.Texture",
 					"description": "被引用的 BitmapData|Texture 实例"
 				}
 			],

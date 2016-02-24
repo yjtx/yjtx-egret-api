@@ -2,7 +2,7 @@
 	"member": [
 		{
 			"kind": "member",
-			"type": "Array<string|EXMLFile>",
+			"type": "Array<string|eui.EXMLFile>",
 			"name": "exmls",
 			"memberof": "eui.ThemeData",
 			"scope": "instance",
