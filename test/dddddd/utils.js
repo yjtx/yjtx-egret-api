@@ -371,9 +371,6 @@ function getTypeA(className, memberof) {
     while (tempClassName.indexOf(preChar) >= 0) {
         var sIdx = tempClassName.lastIndexOf(preChar);
         var eIdx = tempClassName.indexOf(nestChar, sIdx);
-        if (eIdx == -1) {
-console.log(11)
-        }
 
         var id = parseInt(tempClassName.substring(sIdx + preChar.length, eIdx));
         tempClassName = tempClassName.substring(0, sIdx)
