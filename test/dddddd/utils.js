@@ -81,7 +81,7 @@ function getModuleof(memberof, kind) {
     return getModule(memberof);
 }
 
-var globalTypes1 = ["Date", "Function"];
+var globalTypes1 = ["Date", "Function", "T"];
 var globalTypes2 = ["number", "string", "any", "array", "boolean", "enum", "void"];
 
 function getGlobalTypeClass () {
@@ -203,7 +203,7 @@ function ansClassFullName(className, memberof) {
     if (className) {
         if (className.indexOf("(") >= 0) { //
             var sIdx = className.lastIndexOf("(");
-            var eIdx = className.indexOf(")");
+            var eIdx = className.indexOf(")", sIdx);
 
             var paramStr = className.substring(sIdx + 1, eIdx);
             var paramResult = "(";
@@ -257,7 +257,7 @@ function ansClassFullName(className, memberof) {
 
         if (className.lastIndexOf("{") >= 0) { //
             var sIdx = className.lastIndexOf("{");
-            var eIdx = className.indexOf("}");
+            var eIdx = className.indexOf("}", sIdx);
 
             var paramStr = className.substring(sIdx + 1, eIdx);
             var paramResult = "{";
@@ -299,7 +299,7 @@ function ansClassFullName(className, memberof) {
 
         if (className.indexOf("<") >= 0) {
             var sIdx = className.lastIndexOf("<");
-            var eIdx = className.indexOf(">");
+            var eIdx = className.indexOf(">", sIdx);
 
             var paramResult = "<";
             paramResult += ansClassFullName(className.substring(sIdx + 1, eIdx), memberof);

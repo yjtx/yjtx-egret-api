@@ -58,7 +58,7 @@ function ansClassFullName(className, memberof) {
 
     if (className.indexOf("(") >= 0) { //
         var sIdx = className.lastIndexOf("(");
-        var eIdx = className.indexOf(")");
+        var eIdx = className.indexOf(")", sIdx);
 
         var paramStr = className.substring(sIdx + 1, eIdx);
         var paramResult = "(";
@@ -113,7 +113,7 @@ function ansClassFullName(className, memberof) {
 
     if (className.lastIndexOf("{") >= 0) { //
         var sIdx = className.lastIndexOf("{");
-        var eIdx = className.indexOf("}");
+        var eIdx = className.indexOf("}", sIdx);
 
         var paramStr = className.substring(sIdx + 1, eIdx);
         var paramResult = "{";
@@ -156,7 +156,7 @@ function ansClassFullName(className, memberof) {
 
     if (className.indexOf("<") >= 0) {
         var sIdx = className.lastIndexOf("<");
-        var eIdx = className.indexOf(">");
+        var eIdx = className.indexOf(">", sIdx);
 
         var paramResult = "<";
         paramResult += ansClassFullName(className.substring(sIdx + 1, eIdx), memberof);

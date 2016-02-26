@@ -89,6 +89,16 @@
 			"platform": "all",
 			"description": "",
 			"example": "函数无任何返回类型：<br /><pre>var f:Function</pre>"
+		},
+		{
+			"kind": "member",
+			"type": "T",
+			"memberof": "global.Types",
+			"name": "T",
+			"version": "all",
+			"platform": "all",
+			"description": "",
+			"example": "模板类型：<br /><pre>createT<T>(EventClass:{new (type:string | A, bubbles?:boolean|string, cancelable?:boolean): T})</pre>"
 		}
 	],
 	"function": [],

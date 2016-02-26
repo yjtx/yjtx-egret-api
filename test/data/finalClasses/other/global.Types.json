@@ -22,6 +22,16 @@
 		},
 		{
 			"kind": "member",
+			"type": "T",
+			"memberof": "global.Types",
+			"name": "T",
+			"version": "all",
+			"platform": "all",
+			"description": "",
+			"example": "模板类型：<br /><pre>createT<T>(EventClass:{new (type:string | A, bubbles?:boolean|string, cancelable?:boolean): T})</pre>"
+		},
+		{
+			"kind": "member",
 			"type": "any",
 			"name": "any",
 			"memberof": "global.Types",

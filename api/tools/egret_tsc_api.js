@@ -233,8 +233,9 @@ function formatMembers(declaration, text, parent, isStatic) {
 function formatMember(member, text, parent, isStatic) {
     var flags = member.flags;
 
+    var name = "";
     if (member.kind == 164 /* VariableStatement */) {
-        var name = member.declarations[0].name.getText();
+        name = member.declarations[0].name.getText();
 
         if (parent[name] && parent[name]["bodyType"] == "interface") {
             parent[name]["bodyType"] = "class";
@@ -251,16 +252,37 @@ function formatMember(member, text, parent, isStatic) {
 
     }
     else if (member.kind == 126 /* Constructor */) {
-        var name = "constructor";
+        name = "constructor";
     }
     else if (member.kind == 130 /* ConstructSignature */) {
-        var name = "constructor";
+        name = "constructor";
+    }
+    else if (member.kind == 129 /* CallSignature */) {//(source: string, subString: string): boolean;
+        name = "(";
+        for (var i = 0; i < member.parameters.length; i++) {
+            if (i != 0) {
+                name += ", ";
+            }
+            name += member.parameters[i].getText();
+        }
+        name += ")";
+    }
+    else if (member.kind == 131 /* IndexSignature */) {//[key:string]:BBB;
+        name = "[";
+        for (var i = 0; i < member.parameters.length; i++) {
+            if (i != 0) {
+                name += ", ";
+            }
+            name += member.parameters[i].getText();
+        }
+        name += "]";
+
     }
     else {
         if (member.name == null) {
             console.log(member);
         }
-        var name = member.name.getText();
+        name = member.name.getText();
 
         //解决静态变量和属性重名后被替换的问题
         if (isStatic || flags & 128 /* Static */) {
@@ -268,14 +290,9 @@ function formatMember(member, text, parent, isStatic) {
         }
     }
 
-
     if (parent[name] == null || member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */) {
         parent[name] = {};
     }
-
-    //if (name == "f2") {
-    //    console.log("sdf")
-    //}
 
     if (member.kind == 128 /* SetAccessor */) {
         if (parent[name]["bodyType"] == "GetAccessor") {
@@ -313,11 +330,11 @@ function formatMember(member, text, parent, isStatic) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 125 /* Method */) {
+    else if (member.kind == 125 /* Method */ || member.kind == 129 /* CallSignature */) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 124 /* Property */) {
+    else if (member.kind == 124 /* Property */ || member.kind == 131 /* IndexSignature */) {
         parent[name]["bodyType"] = "Property";
         parent[name]["memberKind"] = "member";
     }

@@ -3,17 +3,19 @@
  */
 
 module yjtx {
-    export class A {
-        static eventPool:A[];
+    export class CA {
+        static eventPool:CA[];
 
-        a1:Array<A>;
+        a1:Array<CA>;
 
         a2:Array<A | number>;
 
-        b: A | number | string;
+        b: CA | number | string;
         c1:(p1:number, p2:string)=>number;
 
         c2:(p1:number, p2:string)=>A|boolean;
+
+        c3:(p1:number, p2:string)=>{a:(p1:number, p2:string)=>number|A};
 
         c3:(p1:(p1:number|A, p2:string)=>number|A, p2:string)=>A|boolean;
 
@@ -21,7 +23,15 @@ module yjtx {
         skins1: { [component: string]: string };
         skins2: { component: string };
 
+        //EventClass<T>:{new (type:string | A, bubbles?:boolean|string, cancelable?:boolean): T};
+
+
+
         constructor(type:string | A, bubbles?:boolean|string, cancelable?:boolean) {
+
+        }
+
+        public static createT<T>(EventClass:{new (type:string | A, bubbles?:boolean|string, cancelable?:boolean): T}){
 
         }
 
@@ -33,25 +43,50 @@ module yjtx {
     }
 
 
-    export interface BBB {
+    export interface B {
         name:string;
         isFile:boolean;
 
+
+        new (a:number, b:number);
+
         (source: string, subString: string): boolean;
+
     }
 
-    export interface AAA {
-        [key:string]:BBB;
+    export class B1 implements B {
 
-        d:{[key:string]:AAA};
+        constructor(a:number, b:number) {
+
+        }
+
+        name:string;
+        isFile:boolean;
+    }
+
+    export interface BB extends B {
+
+        b1:boolean;
+
+        fb:(b:B) => B;
+    }
+
+    export interface A {
+        [key:string]:B;
+
+        d:{[key:string]:A};
 
         a:boolean;
     }
 
+    export interface CCC extends A, BB {
+        c:string;
+    }
 
 
     //var a:AAA;
     //var b = a["test"].isFile;
+
 }
 
 
