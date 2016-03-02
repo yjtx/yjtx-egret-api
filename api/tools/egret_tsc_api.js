@@ -330,17 +330,19 @@ function formatMember(member, text, parent, isStatic) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 125 /* Method */ || member.kind == 129 /* CallSignature */) {
+    else if (member.kind == 125 /* Method */) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 124 /* Property */ || member.kind == 131 /* IndexSignature */) {
+    else if (member.kind == 124 /* Property */ || member.kind == 131 /* IndexSignature */ || member.kind == 129 /* CallSignature */) {
         parent[name]["bodyType"] = "Property";
         parent[name]["memberKind"] = "member";
     }
     else if (member.kind == 164 /* VariableStatement */) {
         parent[name]["bodyType"] = "modulevar";
         parent[name]["memberKind"] = "globalMember";
+
+
     }
     else if (member.kind == 184 /* FunctionDeclaration */) {
         parent[name]["bodyType"] = "modulefunction";
