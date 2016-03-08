@@ -12,7 +12,7 @@ exports.init = function () {
         propertyJson = JSON.parse(content);
     }
     else {
-        content = getOption("--typeConfig") || null;
+        content = globals.getOption("--typeConfig") || null;
         if (content) {
             propertyJson = JSON.parse(content);
         }
@@ -32,7 +32,7 @@ function getTypePath() {
         }
     }
 
-    configPath = getOption("--typePath") || null;
+    configPath = globals.getOption("--typePath") || null;
     if (configPath && file.exists(configPath))  {
         return configPath;
     }
