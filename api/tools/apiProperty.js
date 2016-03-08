@@ -6,16 +6,39 @@ var globals = require("../core/globals");
 var propertyJson = {};
 
 exports.init = function () {
-    var type = globals.getType();
-    var configPath = path.join(globals.getApiParserRoot(), type + "_modules.json");
-    if (file.exists(configPath)) {
+    var configPath = getTypePath();
+    if (configPath) {
         var content = file.read(configPath);
         propertyJson = JSON.parse(content);
     }
     else {
-        propertyJson = {};
+        content = getOption("--typeConfig") || null;
+        if (content) {
+            propertyJson = JSON.parse(content);
+        }
+        else {
+            propertyJson = {};
+        }
     }
 };
+
+function getTypePath() {
+    var configPath;
+    var type = globals.getType();
+    if (type) {
+        configPath = path.join(globals.getApiParserRoot(), type + "_modules.json");
+        if (file.exists(configPath)) {
+            return configPath;
+        }
+    }
+
+    configPath = getOption("--typePath") || null;
+    if (configPath && file.exists(configPath))  {
+        return configPath;
+    }
+
+    return null;
+}
 
 exports.getModules = function () {
     return propertyJson["modules"] || {};
