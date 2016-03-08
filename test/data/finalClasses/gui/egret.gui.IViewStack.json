@@ -1,0 +1,32 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "egret.gui.IVisualElement",
+			"name": "selectedChild",
+			"memberof": "egret.gui.IViewStack",
+			"scope": "instance",
+			"description": "当前可见的子元素。",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "selectedIndex",
+			"memberof": "egret.gui.IViewStack",
+			"scope": "instance",
+			"description": "当前可见子元素的索引。索引从0开始。",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IViewStack",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/core/IViewStack.ts",
+		"description": "层级堆叠容器接口"
+	}
+}

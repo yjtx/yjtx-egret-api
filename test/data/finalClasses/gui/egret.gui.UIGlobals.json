@@ -1,0 +1,33 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "egret.Stage",
+			"name": "stage",
+			"memberof": "egret.gui.UIGlobals",
+			"scope": "static",
+			"rwType": 1,
+			"description": "舞台引用，当第一个UIComponent添加到舞台时此属性被自动赋值",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "egret.gui.IUIStage",
+			"name": "uiStage",
+			"memberof": "egret.gui.UIGlobals",
+			"scope": "static",
+			"rwType": 1,
+			"description": "顶级应用容器",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "UIGlobals",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/core/UIGlobals.ts"
+	}
+}

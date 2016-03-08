@@ -1,0 +1,113 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "eui.State",
+			"scope": "instance",
+			"description": "视图状态的名称。给定组件的状态名称必须唯一。必须设置此属性。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "eui.IOverride[]",
+			"name": "overrides",
+			"memberof": "eui.State",
+			"scope": "instance",
+			"description": "该视图状态的覆盖，表现为实现 IOverride 接口的对象的数组。这些覆盖在进入状态时按顺序应用，在退出状态时按相反的顺序删除。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string[]",
+			"name": "stateGroups",
+			"memberof": "eui.State",
+			"scope": "instance",
+			"description": "此视图状态作为 string 数组所属的状态组。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "State",
+			"memberof": "eui.State",
+			"scope": "instance",
+			"description": "创建一个State实例。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "视图状态的名称。给定组件的状态名称必须唯一。必须设置此属性。"
+				},
+				{
+					"name": "overrides",
+					"type": "eui.IOverride[]",
+					"default": "[]",
+					"description": "该视图状态的覆盖，表现为实现 IOverride 接口的对象的数组。这些覆盖在进入状态时按顺序应用，在退出状态时按相反的顺序删除。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initialize",
+			"memberof": "eui.State",
+			"scope": "instance",
+			"description": "初始化视图状态",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "host",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "stage",
+					"type": "egret.Stage",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "State",
+		"memberof": "eui",
+		"filename": "extension/eui/states/State.ts",
+		"description": "State 类定义视图状态，即组件的特定视图。例如，产品缩略图可以有两个视图状态，包含最少信息的基本视图状态和包含附加信息的丰富视图状态。",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"augments": [
+			"egret.HashObject"
+		]
+	}
+}

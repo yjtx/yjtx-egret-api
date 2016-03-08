@@ -1,0 +1,154 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"description": "要修改的属性名",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "target",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"description": "目标实例名",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "value",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"description": "属性值",
+			"pType": "public",
+			"default": "null"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "SetProperty",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"description": "构造函数",
+			"params": [
+				{
+					"name": "target",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "name",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "value",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "apply",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initialize",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IStateClient",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.gui.OverrideBase"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "initializeFromObject",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"description": "从对象初始化，这是一个便利方法",
+			"returns": "",
+			"params": [
+				{
+					"name": "properties",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.gui.OverrideBase"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "remove",
+			"memberof": "egret.gui.SetProperty",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SetProperty",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/states/SetProperty.ts",
+		"description": "设置属性",
+		"augments": [
+			"egret.gui.OverrideBase",
+			"egret.HashObject"
+		]
+	}
+}

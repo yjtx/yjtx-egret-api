@@ -1,0 +1,77 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isMobile",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"rwType": 1,
+			"description": "表示程序内容是否运行在移动设备中（例如移动电话或平板电脑）。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "language",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"rwType": 1,
+			"description": "表示运行内容的系统的语言代码。语言指定为 ISO 639-1 中的小写双字母语言代码。对于中文，另外使用 ISO 3166 中的大写双字母国家/地区代码，以区分简体中文和繁体中文。<br/>以下是可能但不限于的语言和值：<ul><li>简体中文  zh-CN</li><li>繁体中文  zh-TW</li><li>英语      en</li><li>日语      ja</li><li>韩语      ko</li></ul>",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "os",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"rwType": 1,
+			"description": "指示当前的操作系统。os 属性返回下列字符串：<ul><li>苹果手机操作系统     \"iOS\"</li><li>安卓手机操作系统     \"Android\"</li><li>微软手机操作系统     \"Windows Phone\"</li><li>微软桌面操作系统     \"Windows PC\"</li><li>苹果桌面操作系统     \"Mac OS\"</li><li>未知操作系统        \"Unknown\"</li></ul>",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "runtimeType",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"rwType": 1,
+			"description": "指示当前的运行类型。runtimeType 属性返回下列字符串：<ul><li>运行在Web上     egret.RuntimeType.WEB</li><li>运行在Native上     egret.RuntimeType.NATIVE</li></ul>",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "supportVersion",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"description": "native support 的版本号",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"Unknown\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Capabilities",
+		"memberof": "egret",
+		"filename": "egret/system/Capabilities.ts",
+		"description": "Capabilities 类提供一些属性，这些属性描述了承载应用程序的系统和运行时。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了获取一些系统基本信息的方法。<br/>&nbsp;*/<br/>class&nbsp;CapabilitiesExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;text:egret.TextField;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;isMobile&nbsp;=&nbsp;egret.Capabilities.isMobile;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;language&nbsp;=&nbsp;egret.Capabilities.language;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;os&nbsp;=&nbsp;egret.Capabilities.os;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;runtimeType&nbsp;=&nbsp;egret.Capabilities.runtimeType;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.text&nbsp;=&nbsp;new&nbsp;egret.TextField();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.text.x&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.text.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.text.text&nbsp;=&nbsp;&quot;IsMobile:&nbsp;&quot;+isMobile+&quot;\\n&quot;+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Language:&nbsp;&quot;+language+&quot;\\n&quot;+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;OS:&nbsp;&quot;+os+&quot;\\n&quot;+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;RuntimeType:&nbsp;&quot;+runtimeType;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.text);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
+	}
+}

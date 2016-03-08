@@ -1,14 +1,1864 @@
 {
-	"yjtx": {
-		"": {
-			"class": [
+	"egret": {
+		"egret": {
+			"globalFunction": [
 				{
-					"name": "LoadingUI",
-					"description": "LoadingUI"
+					"name": "callLater",
+					"description": "延迟函数到屏幕重绘前执行。"
 				},
 				{
-					"name": "Main",
-					"description": "Main"
+					"name": "getDefinitionByName",
+					"description": "返回 name 参数指定的类的类对象引用。"
+				},
+				{
+					"name": "getOption",
+					"description": "获取浏览器或者Runtime参数，如果没有设置返回空字符串在浏览器中相当于获取url中参数，在Runtime获取对应setOption参数"
+				},
+				{
+					"name": "getQualifiedClassName",
+					"description": "返回对象的完全限定类名。"
+				},
+				{
+					"name": "getQualifiedSuperclassName",
+					"description": "返回 value 参数指定的对象的基类的完全限定类名。"
+				},
+				{
+					"name": "getTimer",
+					"description": "用于计算相对时间。此方法返回自启动 Egret 框架以来经过的毫秒数。"
+				},
+				{
+					"name": "hasDefinition",
+					"description": "检查指定的应用程序域之内是否存在一个公共定义。该定义可以是一个类、一个命名空间或一个函数的定义。"
+				},
+				{
+					"name": "is",
+					"description": "检查指定对象是否为 Egret 框架内指定接口或类或其子类的实例。此方法与使用 instanceOf 关键字相比具有更高的性能，并且能判断接口的实现。"
+				},
+				{
+					"name": "registerClass",
+					"description": "为一个类定义注册运行时类信息,用此方法往类定义上注册它自身以及所有接口对应的字符串。在运行时，这个类的实例将可以使用 egret.is() 方法传入一个字符串来判断实例类型。"
+				},
+				{
+					"name": "startTick",
+					"description": "注册并启动一个计时器，通常会以60FPS的速率触发回调方法，并传入当前时间戳。注意：注册后将会持续触发回调方法，若要停止回调，需要手动调用stopTick()方法。"
+				},
+				{
+					"name": "stopTick",
+					"description": "停止之前用 startTick() 方法启动的计时器。"
+				},
+				{
+					"name": "superGetter",
+					"description": "获取父类的getter属性值。代替其他语言的写法，如 super.alpha;"
+				},
+				{
+					"name": "superSetter",
+					"description": "调用父类的setter属性，代替其他语言的写法，如 super.alpha = 1;"
+				},
+				{
+					"name": "toColorString",
+					"description": "转换数字为颜色字符串"
+				}
+			],
+			"class": [
+				{
+					"name": "Bitmap",
+					"description": "Bitmap 类表示用于显示位图图片的显示对象。利用 Bitmap() 构造函数，可以创建包含对 BitmapData 对象引用的 Bitmap 对象。创建了 Bitmap 对象后，使用父级 DisplayObjectContainer 实例的 addChild() 或 addChildAt() 方法可以将位图放在显示列表中。一个 Bitmap 对象可在若干 Bitmap 对象之中共享其 texture 引用，与缩放或旋转属性无关。由于能够创建引用相同 texture 对象的多个 Bitmap 对象，因此，多个显示对象可以使用相同的 texture 对象，而不会因为每个显示对象实例使用一个 texture 对象而产生额外内存开销。"
+				},
+				{
+					"name": "BitmapData",
+					"description": "BitmapData 对象是一个包含像素数据的数组。此数据可以表示完全不透明的位图，或表示包含 Alpha 通道数据的透明位图。以上任一类型的 BitmapData 对象都作为 32 位整数的缓冲区进行存储。每个 32 位整数确定位图中单个像素的属性。<br/>每个 32 位整数都是四个 8 位通道值（从 0 到 255）的组合，这些值描述像素的 Alpha 透明度以及红色、绿色、蓝色 (ARGB) 值。（对于 ARGB 值，最高有效字节代表 Alpha 通道值，其后的有效字节分别代表红色、绿色和蓝色通道值。）"
+				},
+				{
+					"name": "BitmapFillMode",
+					"description": "BitmapFillMode 类定义Bitmap的图像填充方式。BitmapFillMode 类定义了调整大小模式的一个枚举，这些模式确定 Bitmap 如何填充由布局系统指定的尺寸。"
+				},
+				{
+					"name": "BlendMode",
+					"description": "提供混合模式可视效果的常量值的类,通常用于 DisplayObject 的 blendMode 属性上。"
+				},
+				{
+					"name": "DisplayObject",
+					"description": "DisplayObject 类是可放在显示列表中的所有对象的基类。该显示列表管理运行时中显示的所有对象。使用 DisplayObjectContainer 类排列显示列表中的显示对象。DisplayObjectContainer 对象可以有子显示对象，而其他显示对象（如 Shape 和 TextField 对象）是“叶”节点，没有子项，只有父级和同级。DisplayObject 类有一些基本的属性（如确定坐标位置的 x 和 y 属性），也有一些高级的对象属性（如 Matrix 矩阵变换）。<br/>DisplayObject 类包含若干广播事件。通常，任何特定事件的目标均为一个特定的 DisplayObject 实例。例如，added 事件的目标是已添加到显示列表的目标 DisplayObject 实例。若只有一个目标，则会将事件侦听器限制为只能监听在该目标上（在某些情况下，可监听在显示列表中该目标的祖代上）。但是对于广播事件，目标不是特定的 DisplayObject 实例，而是所有 DisplayObject 实例（包括那些不在显示列表中的实例）。这意味着您可以向任何DisplayObject 实例添加侦听器来侦听广播事件。"
+				},
+				{
+					"name": "DisplayObjectContainer",
+					"description": "DisplayObjectContainer 类是基本显示列表构造块：一个可包含子项的显示列表节点。"
+				},
+				{
+					"name": "GradientType",
+					"description": ""
+				},
+				{
+					"name": "Graphics",
+					"description": "Graphics 类包含一组可用来创建矢量形状的方法。支持绘制的显示对象包括 Sprite 和 Shape 对象。这些类中的每一个类都包括 graphics 属性，该属性是一个 Graphics 对象。以下是为便于使用而提供的一些辅助函数：drawRect()、drawRoundRect()、drawCircle() 和 drawEllipse()。"
+				},
+				{
+					"name": "RenderTexture",
+					"description": "RenderTexture 是动态纹理类，他实现了将显示对象及其子对象绘制成为一个纹理的功能"
+				},
+				{
+					"name": "Shape",
+					"description": "此类用于使用绘图应用程序编程接口 (API) 创建简单形状。Shape 类含有 graphics 属性，通过该属性您可以访问各种矢量绘图方法。"
+				},
+				{
+					"name": "Sprite",
+					"description": "Sprite 类是基本显示列表构造块：一个可包含子项的显示列表节点。"
+				},
+				{
+					"name": "SpriteSheet",
+					"description": "SpriteSheet 是一张由多个子位图拼接而成的集合位图，它包含多个 Texture 对象。每一个 Texture 都共享 SpriteSheet 的集合位图，但是指向它的不同的区域。在WebGL / OpenGL上，这种做法可以显著提升性能同时，SpriteSheet可以很方便的进行素材整合，降低HTTP请求数量SpriteSheet 格式的具体规范可以参见此文档  https://github.com/egret-labs/egret-core/wiki/Egret-SpriteSheet-Specification"
+				},
+				{
+					"name": "Stage",
+					"description": "Stage 类代表主绘图区。可以利用 DisplayObject 实例的 stage 属性进行访问。<br/>Stage 类具有多个祖代类: Sprite、DisplayObject 和 EventDispatcher，属性和方法便是从这些类继承而来的。从这些继承的许多属性和方法不适用于 Stage 对象。"
+				},
+				{
+					"name": "Texture",
+					"description": "纹理类是对不同平台不同的图片资源的封装在HTML5中，资源是一个HTMLElement对象在OpenGL / WebGL中，资源是一个提交GPU后获取的纹理idTexture类封装了这些底层实现的细节，开发者只需要关心接口即可"
+				},
+				{
+					"name": "Event",
+					"description": "Event 类作为创建事件实例的基类，当发生事件时，Event 实例将作为参数传递给事件侦听器。Event 类的属性包含有关事件的基本信息，例如事件的类型或者是否可以取消事件的默认行为。对于许多事件（如由 Event 类常量表示的事件），此基本信息就足够了。但其他事件可能需要更详细的信息。例如，与触摸关联的事件需要包括有关触摸事件的位置信息。您可以通过扩展 Event 类（TouchEvent 类执行的操作）将此类其他信息传递给事件侦听器。Egret API 为需要其他信息的常见事件定义多个 Event 子类。与每个 Event 子类关联的事件将在每个类的文档中加以介绍。Event 类的方法可以在事件侦听器函数中使用以影响事件对象的行为。某些事件有关联的默认行为，通过调用 preventDefault() 方法，您的事件侦听器可以取消此行为。可以通过调用 stopPropagation() 或 stopImmediatePropagation() 方法，将当前事件侦听器作为处理事件的最后一个事件侦听器。"
+				},
+				{
+					"name": "EventDispatcher",
+					"description": "EventDispatcher 是 Egret 的事件派发器类，负责进行事件的发送和侦听。事件目标是事件如何通过显示列表层次结构这一问题的焦点。当发生鼠标单击、触摸或按键等事件时，框架会将事件对象调度到从显示列表根开始的事件流中。然后该事件对象在显示列表中前进，直到到达事件目标，然后从这一点开始其在显示列表中的回程。在概念上，到事件目标的此往返行程被划分为三个阶段：捕获阶段包括从根到事件目标节点之前的最后一个节点的行程，目标阶段仅包括事件目标节点，冒泡阶段包括回程上遇到的任何后续节点到显示列表的根。通常，使用户定义的类能够调度事件的最简单方法是扩展 EventDispatcher。如果无法扩展（即，如果该类已经扩展了另一个类），则可以实现IEventDispatcher 接口，创建 EventDispatcher 成员，并编写一些简单的映射，将调用连接到聚合的 EventDispatcher 中。"
+				},
+				{
+					"name": "EventPhase",
+					"description": "EventPhase 可为 Event 类的 eventPhase 属性提供值。"
+				},
+				{
+					"name": "FocusEvent",
+					"description": "用户将焦点从显示列表中的一个对象更改到另一个对象时，对象将调度 FocusEvent 对象。目前只支持输入文本。焦点事件：FocusEvent.FOCUS_IN FocusEvent.FOCUS_OUT"
+				},
+				{
+					"name": "GeolocationEvent",
+					"description": "GeolocationEvent 提供设备的地理位置信息和获取位置时发生的错误信息"
+				},
+				{
+					"name": "HTTPStatusEvent",
+					"description": "在网络请求返回 HTTP 状态代码时，应用程序将调度 HTTPStatusEvent 对象。在错误或完成事件之前，将始终发送 HTTPStatusEvent 对象。HTTPStatusEvent 对象不一定表示错误条件；它仅反映网络堆栈提供的 HTTP 状态代码（如果有的话）。"
+				},
+				{
+					"name": "IEventDispatcher",
+					"description": "IEventDispatcher 接口定义用于添加或删除事件侦听器的方法，检查是否已注册特定类型的事件侦听器，并调度事件。事件目标是 Egret 事件模型的重要组成部分。事件目标是事件如何通过显示列表层次结构这一问题的焦点。当发生触摸轻拍事件时，会将事件对象调度到从显示列表根开始的事件流中。事件对象进行到事件目标的往返行程，在概念上，此往返行程被划分为三个阶段：<br/>捕获阶段包括从根到事件目标节点之前的最后一个节点的行程，目标阶段仅包括事件目标节点，冒泡阶段包括到显示列表的根的回程上遇到的任何后续节点。通常，使用户定义的类能够调度事件的最简单方法是扩展 EventDispatcher。如果无法扩展（即，如果该类已经扩展了另一个类），则可以实现 IEventDispatcher 接口，创建 EventDispatcher 成员，并编写一些简单的挂钩，将调用连接到聚合的 EventDispatcher 中。"
+				},
+				{
+					"name": "IOErrorEvent",
+					"description": "IO流事件，当错误导致输入或输出操作失败时调度 IOErrorEvent 对象。"
+				},
+				{
+					"name": "MotionEvent",
+					"description": "MotionEvent 类呈现设备运动的具体信息Acceleration 和 accelerationIncludingGravity 呈现设备三个维度的加速度信息RotationRate 呈现设备的旋转状态信息"
+				},
+				{
+					"name": "OrientationEvent",
+					"description": "OrientationEvent 提供设备的方向信息注意: 目前各个浏览器和操作系统处理方向的方式不完全相同，请根据使用场景做相应的校正，比如使用两次方向数据的变化而不是直接使用方向的值"
+				},
+				{
+					"name": "ProgressEvent",
+					"description": "当加载操作已开始或套接字已接收到数据时，将调度 ProgressEvent 对象。有两种类型的进程事件：ProgressEvent.PROGRESS 和 ProgressEvent.SOCKET_DATA。"
+				},
+				{
+					"name": "StageOrientationEvent",
+					"description": "当舞台的方向更改时，Stage 对象将调度 StageOrientationEvent 对象。"
+				},
+				{
+					"name": "TextEvent",
+					"description": "用户在富文本中单击超链接时，对象将调度 TextEvent 对象。文本事件类型：TextEvent.LINK。"
+				},
+				{
+					"name": "TimerEvent",
+					"description": "每当 Timer 对象达到由 Timer.delay 属性指定的间隔时，Timer 对象即会调度 TimerEvent 对象。"
+				},
+				{
+					"name": "Point",
+					"description": "Point 对象表示二维坐标系统中的某个位置，其中 x 表示水平轴，y 表示垂直轴。"
+				},
+				{
+					"name": "TouchEvent",
+					"description": "使用 TouchEvent 类，您可以处理设备上那些检测用户与设备之间的接触的事件。当用户与带有触摸屏的移动电话或平板电脑等设备交互时，用户通常使用手指或指针设备接触屏幕。可使用 TouchEvent类开发响应基本触摸事件（如单个手指点击）的应用程序。使用此类中定义的事件类型创建事件侦听器。注意：当对象嵌套在显示列表中时，触摸事件的目标将是显示列表中可见的最深的可能嵌套对象。此对象称为目标节点。要使目标节点的祖代（祖代是一个包含显示列表中所有目标节点的对象，从舞台到目标节点的父节点均包括在内）接收触摸事件的通知，请对祖代节点使用 EventDispatcher.on() 并将 type 参数设置为要检测的特定触摸事件。"
+				},
+				{
+					"name": "ExternalInterface",
+					"description": "h5与native交互。"
+				},
+				{
+					"name": "Matrix",
+					"description": "Matrix 类表示一个转换矩阵，它确定如何将点从一个坐标空间映射到另一个坐标空间。您可以对一个显示对象执行不同的图形转换，方法是设置 Matrix 对象的属性，将该 Matrix对象应用于显示对象的 matrix 属性。这些转换函数包括平移（x 和 y 重新定位）、旋转、缩放和倾斜。"
+				},
+				{
+					"name": "Rectangle",
+					"description": "Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。<br/>Rectangle 类的 x、y、width 和 height 属性相互独立；更改一个属性的值不会影响其他属性。但是，right 和 bottom 属性与这四个属性是整体相关的。例如，如果更改 right 属性的值，则 width属性的值将发生变化；如果更改 bottom 属性，则 height 属性的值将发生变化。"
+				},
+				{
+					"name": "Sound",
+					"description": "Sound 允许您在应用程序中使用声音。使用 Sound 类可以创建 Sound 对象、将外部音频文件加载到该对象并播放该文件。可通过 SoundChannel 对声音执行更精细的控制，如控制音量和监控播放进度。"
+				},
+				{
+					"name": "SoundChannel",
+					"description": "SoundChannel 类控制应用程序中的声音。每个声音均分配给一个声道，而且应用程序可以具有混合在一起的多个声道。SoundChannel 类包含 stop() 方法、用于设置音量和监视播放进度的属性。"
+				},
+				{
+					"name": "Video",
+					"description": "Video 允许您在应用程序中使用视频。使用 Video 类可以创建 Video 对象、将外部视频文件加载到该对象并播放该文件。<br/>注意: 在大多数移动设备中，视频是强制全屏播放的，所以你可以直接调用 play() 方法全屏播放视频，不用将它绘制在Stage中。"
+				},
+				{
+					"name": "HttpMethod",
+					"description": "HttpRequestMethod 类提供了一些值，这些值可指定在将数据发送到服务器时，HttpRequest 对象应使用 POST 方法还是 GET 方法。"
+				},
+				{
+					"name": "HttpRequest",
+					"description": "HttpRequest 类以文本或二进制数据的形式从 URL 下载数据。HttpRequest 对象会先从 URL 中下载所有数据，然后才将数据用于应用程序中的代码。它会发出有关下载进度的通知，通过 bytesLoaded 和 bytesTotal 属性以及已调度的事件，可以监视下载进度。"
+				},
+				{
+					"name": "HttpResponseType",
+					"description": "URLLoaderDataFormat 类提供了一些用于指定如何接收已下载数据的值。"
+				},
+				{
+					"name": "ImageLoader",
+					"description": "ImageLoader 类可用于加载图像（JPG、PNG 或 GIF）文件。使用 load() 方法来启动加载。被加载的图像对象数据将存储在 ImageLoader.data 属性上 。"
+				},
+				{
+					"name": "DirtyRegionPolicy",
+					"description": "脏矩形策略常量。"
+				},
+				{
+					"name": "StageScaleMode",
+					"description": "StageScaleMode 类为舞台缩放模式提供值。"
+				},
+				{
+					"name": "DeviceOrientation",
+					"description": "Orientation 监听设备方向的变化，当方向变化时派发 CHANGE 事件"
+				},
+				{
+					"name": "Geolocation",
+					"description": "Geolocation 能够从设备的定位服务获取设备的当前位置。当设备的位置发生改变时 Geolocation 会派发 CHANGE 事件。当定位请求被拒绝或该设备没有定位服务时 Geolocation 会派发 IO_ERROR 事件。"
+				},
+				{
+					"name": "Motion",
+					"description": "Motion 类从用户设备读取运动状态信息并派发 CHANGE 事件。当设备移动时，传感器会检测到此移动并返回设备加速度，重力和旋转数据。@see egret.MotionEventMotion 类提供了 start 和 stop 方法，来启动和停止运动信息检查"
+				},
+				{
+					"name": "DeviceRotationRate",
+					"description": "DeviceRotationRate 提供设备围绕三个轴旋转的角速度信息，单位是 角度/秒"
+				},
+				{
+					"name": "DeviceAcceleration",
+					"description": "DeviceAcceleration 提供设备在三个维度的加速度信息，加速度值的单位是 m/s2"
+				},
+				{
+					"name": "RuntimeType",
+					"description": "运行类型的类型。"
+				},
+				{
+					"name": "Capabilities",
+					"description": "Capabilities 类提供一些属性，这些属性描述了承载应用程序的系统和运行时。"
+				},
+				{
+					"name": "BitmapFont",
+					"description": "位图字体,是一个字体的纹理集，通常作为BitmapText.font属性的值。"
+				},
+				{
+					"name": "BitmapText",
+					"description": "位图字体采用了Bitmap+SpriteSheet的方式来渲染文字。"
+				},
+				{
+					"name": "HorizontalAlign",
+					"description": "HorizontalAlign 类为水平对齐方式定义可能的值。"
+				},
+				{
+					"name": "HtmlTextParser",
+					"description": "将html格式文本转换为可赋值给 egret.TextField#textFlow 属性的对象"
+				},
+				{
+					"name": "ITextStyle",
+					"description": "文本样式"
+				},
+				{
+					"name": "ITextElement",
+					"description": "用于建立多种样式混合文本的基本结构，主要用于设置 textFlow 属性"
+				},
+				{
+					"name": "TextField",
+					"description": "TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异如果开发者希望所有平台完全无差异，请使用BitmapText"
+				},
+				{
+					"name": "TextFieldType",
+					"description": "TextFieldType 类是在设置 TextField 类的 type 属性时使用的常数值的枚举。"
+				},
+				{
+					"name": "VerticalAlign",
+					"description": "VerticalAlign 类为垂直对齐方式定义可能的值。"
+				},
+				{
+					"name": "Endian",
+					"description": "Endian 类中包含一些值，它们表示用于表示多字节数字的字节顺序。字节顺序为 bigEndian（最高有效字节位于最前）或 littleEndian（最低有效字节位于最前）。"
+				},
+				{
+					"name": "ByteArray",
+					"description": "ByteArray 类提供用于优化读取、写入以及处理二进制数据的方法和属性。注意：ByteArray 类适用于需要在字节层访问数据的高级开发人员。"
+				},
+				{
+					"name": "IHashObject",
+					"description": "Egret顶级对象。框架内所有对象的基类，为对象实例提供唯一的hashCode值。"
+				},
+				{
+					"name": "HashObject",
+					"description": "Egret顶级对象。框架内所有对象的基类，为对象实例提供唯一的hashCode值。"
+				},
+				{
+					"name": "Logger",
+					"description": "Logger是引擎的日志处理模块入口"
+				},
+				{
+					"name": "NumberUtils",
+					"description": ""
+				},
+				{
+					"name": "Timer",
+					"description": "Timer 类是计时器的接口，它使您能按指定的时间序列运行代码。使用 start() 方法来启动计时器。为 timer 事件添加事件侦听器，以便将代码设置为按计时器间隔运行。可以创建 Timer 对象以运行一次或按指定间隔重复运行，从而按计划执行代码。根据 Egret 的帧速率或运行时环境（可用内存和其他因素），运行时调度事件的间隔可能稍有不同。"
+				},
+				{
+					"name": "XMLNode",
+					"description": "XML节点基类"
+				},
+				{
+					"name": "XML",
+					"description": "XML 类包含用于处理 XML 对象的属性。"
+				},
+				{
+					"name": "XMLText",
+					"description": "XMLText 类表示在XML中的文本节点"
+				}
+			]
+		},
+		"egret.localStorage": {
+			"globalFunction": [
+				{
+					"name": "clear",
+					"description": "将所有数据清空"
+				},
+				{
+					"name": "getItem",
+					"description": "读取数据"
+				},
+				{
+					"name": "removeItem",
+					"description": "删除数据"
+				},
+				{
+					"name": "setItem",
+					"description": "保存数据"
+				}
+			]
+		}
+	},
+	"game": {
+		"egret": {
+			"globalFunction": [
+				{
+					"name": "clearInterval",
+					"description": "清除指定延迟后运行的函数。"
+				},
+				{
+					"name": "clearTimeout",
+					"description": "清除指定延迟后运行的函数。"
+				},
+				{
+					"name": "setInterval",
+					"description": "以指定的延迟（以毫秒为单位）间隔循环调用指定的函数。"
+				},
+				{
+					"name": "setTimeout",
+					"description": "在指定的延迟（以毫秒为单位）后运行指定的函数。"
+				}
+			],
+			"class": [
+				{
+					"name": "MovieClip",
+					"description": "影片剪辑，可以通过影片剪辑播放序列帧动画。MovieClip 类从以下类继承而来：DisplayObject 和 EventDispatcher。不同于 DisplayObject 对象，MovieClip 对象拥有一个时间轴。"
+				},
+				{
+					"name": "MovieClipData",
+					"description": "使用 MovieClipData 类，您可以创建 MovieClip 对象和处理 MovieClip 对象的数据。MovieClipData 一般由MovieClipDataFactory生成"
+				},
+				{
+					"name": "MovieClipDataFactory",
+					"description": "使用 MovieClipDataFactory 类，可以生成 MovieClipData 对象用于创建MovieClip"
+				},
+				{
+					"name": "MovieClipEvent",
+					"description": "当动画的当前帧有事件，将调度 MovieClipEvent 对象。帧事件类型 MovieClipEvent.FRAME_LABEL."
+				},
+				{
+					"name": "ScrollView",
+					"description": "ScrollView 是用于滑动的辅助类，将一个显示对象传入构造函数即可。可以在指定的尺寸范围内显示超过该范围的显示对象。并可以在此范围内随意拖动。"
+				},
+				{
+					"name": "URLLoader",
+					"description": "URLLoader 类以文本、二进制数据或 URL 编码变量的形式从 URL 下载数据。在下载文本文件、XML 或其他用于动态数据驱动应用程序的信息时，它很有用。URLLoader 对象会先从 URL 中下载所有数据，然后才将数据用于应用程序中的代码。它会发出有关下载进度的通知，通过 bytesLoaded 和 bytesTotal 属性以及已调度的事件，可以监视下载进度。"
+				},
+				{
+					"name": "URLLoaderDataFormat",
+					"description": "URLLoaderDataFormat 类提供了一些用于指定如何接收已下载数据的值。"
+				},
+				{
+					"name": "URLRequest",
+					"description": "URLRequest 类可捕获单个 HTTP 请求中的所有信息。"
+				},
+				{
+					"name": "URLRequestHeader",
+					"description": "URLRequestHeader 对象封装了一个 HTTP 请求标头并由一个名称/值对组成。URLRequestHeader 对象在 URLRequest 类的 requestHeaders 属性中使用。注意：由于浏览器兼容性原因，在 html5 中并未实现"
+				},
+				{
+					"name": "URLRequestMethod",
+					"description": "URLRequestMethod 类提供了一些值，这些值可指定在将数据发送到服务器时，URLRequest 对象应使用 POST 方法还是 GET 方法。"
+				},
+				{
+					"name": "URLVariables",
+					"description": "使用 URLVariables 类可以在应用程序和服务器之间传输变量。将 URLVariables 对象与 URLLoader 类的方法、URLRequest 类的 data 属性一起使用。"
+				},
+				{
+					"name": "Ticker",
+					"description": ""
+				}
+			]
+		}
+	},
+	"dragonbones": {
+		"dragonBones": {
+			"class": [
+				{
+					"name": "DragonBones",
+					"description": "DragonBones"
+				},
+				{
+					"name": "Animation",
+					"description": "Animation实例隶属于Armature,用于控制Armature的动画播放。"
+				},
+				{
+					"name": "AnimationState",
+					"description": "AnimationState 实例由 Animation 实例播放动画时产生， 可以对单个动画的播放进行最细致的调节。"
+				},
+				{
+					"name": "IAnimatable",
+					"description": "可播放动画组件接口，Armature 和 WordClock都实现了该接口实现该接口的实例可以加到WorldClock时钟中统一由时钟控制动画的播放"
+				},
+				{
+					"name": "IAnimationState",
+					"description": "动画状态接口，目前只在动画缓存管理器中生成动画数据时使用"
+				},
+				{
+					"name": "SlotTimelineState",
+					"description": "SlotTimelineState 负责计算 Slot 的时间轴动画。SlotTimelineState 实例隶属于 AnimationState. AnimationState在创建时会为每个包含动作的 Slot生成一个 SlotTimelineState 实例."
+				},
+				{
+					"name": "TimelineState",
+					"description": "TimelineState 负责计算 Bone 的时间轴动画。TimelineState 实例隶属于 AnimationState. AnimationState在创建时会为每个包含动作的 Bone生成一个 TimelineState 实例."
+				},
+				{
+					"name": "WorldClock",
+					"description": "WorldClock 提供时钟的支持，为控制每个加入时钟的 IAnimatable 对象正确的播放动画。一般来说，每当 Armature 被创建出来后，只需要将之加入 WorldClock,之后只需要控制 WorldClock 的前进，就可以实现所有 Armature 的动画前进了"
+				},
+				{
+					"name": "Armature",
+					"description": "Armature 是 DragonBones 骨骼动画系统的核心。他包含需要加到场景的显示对象，所有的骨骼逻辑和动画系统A Armature instance is the core of the skeleton animation system. It contains the object to display, all sub-bones and the object animation(s)."
+				},
+				{
+					"name": "Bone",
+					"description": "Bone 实例代表 Armature 中的一个骨头。一个Armature实例可以由很多 Bone组成。Bone 在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现"
+				},
+				{
+					"name": "DBObject",
+					"description": "DBObject 是 Bone 和 Slot 的基类"
+				},
+				{
+					"name": "IArmature",
+					"description": "纹理集的接口"
+				},
+				{
+					"name": "IKConstraint",
+					"description": ""
+				},
+				{
+					"name": "Slot",
+					"description": "Slot 实例是骨头上的一个插槽，是显示图片的容器。一个 Bone 上可以有多个Slot，每个Slot中同一时间都会有一张图片用于显示，不同的Slot中的图片可以同时显示。每个 Slot 中可以包含多张图片，同一个 Slot 中的不同图片不能同时显示，但是可以在动画进行的过程中切换，用于实现帧动画。"
+				},
+				{
+					"name": "AnimationCache",
+					"description": "AnimationCache 实例是动画缓存的实体，包含一个动画的所有缓存数据。每个Slot的缓存数据存在各个SlotTimelineCache中。一般来说 AnimationCache 不需要开发者直接操控，而是由AnimationCacheManager代为管理。"
+				},
+				{
+					"name": "AnimationCacheManager",
+					"description": "AnimationCacheManager 实例是动画缓存管理器，他可以为一个或多个同类型的Armature生成动画缓存数据，从而提高动画运行效率。目前AnimationCacheManager只支持对FastArmatrue生成缓存，以后会扩展为对任何实现ICacheableArmature接口的Armature生成缓存。"
+				},
+				{
+					"name": "FrameCache",
+					"description": ""
+				},
+				{
+					"name": "ICacheUser",
+					"description": "ICacheUser 接口定义了可以使用帧缓存的接口。目前只有FastSlot实现了该接口。"
+				},
+				{
+					"name": "ICacheableArmature",
+					"description": "ICacheableArmature 接口定义了可以使用缓存的Armature的接口。目前只有FastArmature实现了该接口。"
+				},
+				{
+					"name": "ISlotCacheGenerator",
+					"description": "ICacheUser 接口定义了可以生成Slot帧缓存的接口。目前只有FastSlot实现了该接口。"
+				},
+				{
+					"name": "SlotFrameCache",
+					"description": "SlotFrameCache 存储了Slot的帧缓存数据。"
+				},
+				{
+					"name": "SlotTimelineCache",
+					"description": "SlotTimelineCache 存储了Slot的时间轴缓存数据。"
+				},
+				{
+					"name": "TimelineCache",
+					"description": "TimelineCache 是时间轴缓存基类存。"
+				},
+				{
+					"name": "AnimationEvent",
+					"description": "动画事件"
+				},
+				{
+					"name": "ArmatureEvent",
+					"description": "骨架事件"
+				},
+				{
+					"name": "Event",
+					"description": "事件"
+				},
+				{
+					"name": "EventDispatcher",
+					"description": "事件派发者"
+				},
+				{
+					"name": "FrameEvent",
+					"description": "帧事件"
+				},
+				{
+					"name": "SoundEvent",
+					"description": "声音事件"
+				},
+				{
+					"name": "SoundEventManager",
+					"description": ""
+				},
+				{
+					"name": "BaseFactory",
+					"description": "工厂的基类"
+				},
+				{
+					"name": "BuildArmatureDataPackage",
+					"description": ""
+				},
+				{
+					"name": "FastArmature",
+					"description": "FastArmature 是 DragonBones 高效率的骨骼动画系统。他能缓存动画数据，大大减少动画播放的计算不支持动态添加Bone和Slot，换装请通过更换Slot的dispaly或子骨架childArmature来实现"
+				},
+				{
+					"name": "FastBone",
+					"description": "FastBone 实例代表 FastArmature 中的一个骨头。一个FastArmature实例可以由很多 FastBone组成。FastBone 在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现和Bone相比，FastBone不能动态添加子骨骼和子插槽"
+				},
+				{
+					"name": "FastDBObject",
+					"description": "FastDBObject 是 FastBone 和 FastSlot 的基类"
+				},
+				{
+					"name": "FastIKConstraint",
+					"description": ""
+				},
+				{
+					"name": "FastSlot",
+					"description": "FastSlot 实例是骨头上的一个插槽，是显示图片的容器。一个 FastBone 上可以有多个FastSlot，每个FastSlot中同一时间都会有一张图片用于显示，不同的FastSlot中的图片可以同时显示。每个 FastSlot 中可以包含多张图片，同一个 FastSlot 中的不同图片不能同时显示，但是可以在动画进行的过程中切换，用于实现帧动画。"
+				},
+				{
+					"name": "FastAnimation",
+					"description": "FastAnimation实例隶属于FastArmature,用于控制FastArmature的动画播放。和Animation相比，FastAnimation为了优化性能，不支持动画融合，在开启缓存的情况下，不支持无极的平滑补间"
+				},
+				{
+					"name": "FastAnimationState",
+					"description": "FastAnimationState 实例代表播放的动画， 可以对单个动画的播放进行最细致的调节。"
+				},
+				{
+					"name": "FastBoneTimelineState",
+					"description": "FastBoneTimelineState 负责计算 Bone 的时间轴动画。FastBoneTimelineState 实例隶属于 FastAnimationState. FastAnimationState在创建时会为每个包含动作的 FastBone生成一个 FastBoneTimelineState 实例."
+				},
+				{
+					"name": "FastSlotTimelineState",
+					"description": "FastSlotTimelineState 负责计算 Slot 的时间轴动画。FastSlotTimelineState 实例隶属于 FastAnimationState. FastAnimationState在创建时会为每个包含动作的 Slot生成一个 FastSlotTimelineState 实例."
+				},
+				{
+					"name": "Matrix",
+					"description": "Matrix 类表示一个转换矩阵，它确定如何将点从一个坐标空间映射到另一个坐标空间。您可以对一个显示对象执行不同的图形转换，方法是设置 Matrix 对象的属性，将该 Matrix 对象应用于 Transform 对象的 matrix 属性，然后应用该 Transform 对象作为显示对象的 transform 属性。这些转换函数包括平移（x 和 y 重新定位）、旋转、缩放和倾斜。这些转换类型统称为仿射转换。仿射转换在转换时保持线条笔直，因此平行线保持平行。转换矩阵对象为具有如下内容的 3 x 3 的矩阵： a  c  tx b  d  ty u  v  w在传统的转换矩阵中，u、v 和 w 属性具有其他功能。Matrix 类只能在二维空间中操作，因此始终假定属性值 u 和 v 为 0.0，属性值 w 为 1.0。矩阵的有效值如下： a  c  tx b  d  ty 0  0  1您可以获取和设置 Matrix 对象的全部六个其他属性的值：a、b、c、d、tx 和 ty。Matrix 类支持四种主要类型的转换：平移、缩放、旋转和倾斜。您可以使用特定的方法来设置这些转换的其中三个，如下表中所述：转换\t              矩阵值                      说明平移（置换）\t                            将图像 tx 像素向右移动，将 ty 像素向下移动。                  1  0  tx                  0  1  ty                  0  0  1缩放                                     将每个像素的位置乘以 x 轴的 sx 和 y 轴的 sy，从而调整图像的大小。                  Sx  0  0                  0  Sy  0                  0  0   1旋转                                     将图像旋转一个以弧度为单位的角度 q。                  cos(q)  -sin(q)  0                  sin(q)  cos(q)   0                  0         0      1倾斜或剪切                               以平行于 x 轴或 y 轴的方向逐渐滑动图像。Matrix 对象的 b 属性表示斜角沿 y 轴的正切；Matrix 对象的 c 属性表示斜角沿 x 轴的正切。                 0        tan(skewX) 0                 tan(skewY)  0       0                  0          0       1每个转换函数都将更改当前矩阵的属性，所以您可以有效地合并多个转换。为此，请先调用多个转换函数，再将矩阵应用于其显示对象目标（通过使用该显示对象的 transform 属性）。"
+				},
+				{
+					"name": "Point",
+					"description": "Point 对象表示二维坐标系统中的某个位置，其中 x 表示水平轴，y 表示垂直轴。下面的代码在 (0,0) 处创建一个点：  var myPoint:Point = new Point();"
+				},
+				{
+					"name": "Rectangle",
+					"description": "Rectangle 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。Rectangle 类的 x、y、width 和 height 属性相互独立；更改一个属性的值不会影响其他属性。"
+				},
+				{
+					"name": "AnimationData",
+					"description": "保存动画数据"
+				},
+				{
+					"name": "ArmatureData",
+					"description": "armature数据 一个armature数据包含一个角色的骨骼，皮肤，动画的数据"
+				},
+				{
+					"name": "BoneData",
+					"description": "骨骼数据"
+				},
+				{
+					"name": "ColorTransform",
+					"description": "表示颜色的transform"
+				},
+				{
+					"name": "CurveData",
+					"description": ""
+				},
+				{
+					"name": "DBTransform",
+					"description": "Dragonbones中使用的transform可以表示位移，旋转，缩放三种属性"
+				},
+				{
+					"name": "DisplayData",
+					"description": "显示对象的数据，目前支持图片和子骨架"
+				},
+				{
+					"name": "DragonBonesData",
+					"description": "DragonBones的数据，包含了骨架数据和显示对象数据"
+				},
+				{
+					"name": "Frame",
+					"description": "关键帧数据"
+				},
+				{
+					"name": "IKData",
+					"description": ""
+				},
+				{
+					"name": "ParentTransformObject",
+					"description": "optimized by freem-trgIntermediate class for store the results of the parent transformation"
+				},
+				{
+					"name": "SkinData",
+					"description": "皮肤数据，皮肤是由一些插槽组成，每个插槽都有一个骨骼控制，骨骼的运动带动插槽的运动形成动画，插槽里可以放置显示对象，目前支持的显示对象有图片和子骨架两种"
+				},
+				{
+					"name": "SlotData",
+					"description": "插槽数据，插槽是由骨骼控制的，可以装入显示对象的容器，显示对象可以是图片或者子骨架插槽可插入一个或者多个显示对象，但是同一时刻只能显示一个显示对象插槽支持关键帧动画，如果有多个显示对象，可以指定哪一帧显示哪一个显示对象"
+				},
+				{
+					"name": "SlotFrame",
+					"description": "插槽的关键帧数据，包含插槽的显示序号，可见度，zOrder，colorTransform数据"
+				},
+				{
+					"name": "SlotTimeline",
+					"description": "插槽的时间轴数据，包含一个和多个关键帧数据"
+				},
+				{
+					"name": "Timeline",
+					"description": "保存时间轴相关的数据，包括关键帧，持续时间，时间缩放"
+				},
+				{
+					"name": "TransformFrame",
+					"description": "骨骼的关键帧数据，包含骨骼的缓动，旋转，transform数据和插槽的显示序号，可见度，zOrder，colorTransform数据"
+				},
+				{
+					"name": "TransformTimeline",
+					"description": "骨骼的时间轴数据，包含一个和多个关键帧数据"
+				},
+				{
+					"name": "Data3Parser",
+					"description": "老版本数据解析"
+				},
+				{
+					"name": "DataParser",
+					"description": "数据解析"
+				},
+				{
+					"name": "ITextureAtlas",
+					"description": "纹理集的接口"
+				},
+				{
+					"name": "TextureData",
+					"description": "纹理数据"
+				},
+				{
+					"name": "ColorTransformUtil",
+					"description": ""
+				},
+				{
+					"name": "ConstValues",
+					"description": "定义了常用的常量"
+				},
+				{
+					"name": "DBDataUtil",
+					"description": "DragonBons的数据工具类，提供一些对数据处理的静态方法"
+				},
+				{
+					"name": "MathUtil",
+					"description": "内部使用的有关数学计算的工具类"
+				},
+				{
+					"name": "TransformUtil",
+					"description": "提供了一些常用的转换的静态方法"
+				},
+				{
+					"name": "EgretFactory",
+					"description": "Egret引擎中DragonBones工厂的基类实现"
+				},
+				{
+					"name": "EgretFastSlot",
+					"description": "egret引擎使用的插槽"
+				},
+				{
+					"name": "EgretSheetAtlas",
+					"description": "Egret 引擎使用的sheet纹理集"
+				},
+				{
+					"name": "EgretSlot",
+					"description": "egret引擎使用的插槽"
+				},
+				{
+					"name": "EgretTextureAtlas",
+					"description": "egret引擎使用的纹理集"
+				}
+			]
+		}
+	},
+	"eui": {
+		"eui": {
+			"globalFunction": [
+				{
+					"name": "registerBindable",
+					"description": "标记实例的一个属性是可绑定的,此方法通常由 Watcher 类调用。"
+				},
+				{
+					"name": "registerProperty",
+					"description": "为一个类定义注册运行时属性类型，以便运行时的EXML文件解析过程能获取准确的属性类型。大多数情况下，您都不需要手动调用此方法显式注册属性类型。仅当您有一个自定义的 UI 组件，需要在EXML中用标签描述时可能需要显式注册，但以下情况除外：当属性类型为基本数据类型：boolean,number,string,Array这四种其中之一时，您只需要为自定义的属性赋值上正确的初始值，运行时EXML解析器就能通过初始值自动分析出正确的属性类型。若您无法为属性赋值上正确的初始值时(有初始值，比如null),运行时EXML解析器会把此属性当做string来处理，若完全没有初始值，将会报错找不到节点属性，这种情况下可以手动调用此方法显式注册属性类型。"
+				}
+			],
+			"class": [
+				{
+					"name": "Binding",
+					"description": "绑定工具类，用于执行数据绑定用的方法集。您可以使用此类中定义的方法来配置数据绑定。"
+				},
+				{
+					"name": "Watcher",
+					"description": "Watcher 类能够监视可绑定属性的改变，您可以定义一个事件处理函数作为 Watcher 的回调方法，在每次可绑定属性的值改变时都执行此函数。"
+				},
+				{
+					"name": "ArrayCollection",
+					"description": "ArrayCollection 类是数组的集合类数据结构包装器，可使用<code>ICollection</code>接口的方法和属性对其进行访问和处理。使用这种数据结构包装普通数组，能在数据源发生改变的时候主动通知视图刷新变更数据项。"
+				},
+				{
+					"name": "ICollection",
+					"description": "<code>ICollection</code>是一个列表的集合类数据源对象的查看接口。"
+				},
+				{
+					"name": "UIComponent",
+					"description": "Component 类定义可设置外观的组件的基类。Component 类所使用的外观通常是 Skin 类的子类。<p/>通过设置 component 类的 skinClass 样式属性，将 skin 类与 component 类相关联。"
+				},
+				{
+					"name": "BitmapLabel",
+					"description": "BitmapLabel 组件是一行或多行不可编辑的位图文本"
+				},
+				{
+					"name": "Button",
+					"description": "Button 组件是常用的矩形按钮。Button 组件看起来可以按压。默认外观具有一个文本标签和图标显示对象。"
+				},
+				{
+					"name": "CheckBox",
+					"description": "CheckBox 组件包含一个可选标签和一个小方框，该方框内可以包含/不包含复选标记。<p/>用户单击 CheckBox 组件或其关联文本时，CheckBox 组件会将其 selected 属性设置为 true（表示选中）或 false（表示取消选中）。"
+				},
+				{
+					"name": "Component",
+					"description": ""
+				},
+				{
+					"name": "DataGroup",
+					"description": "DataGroup 类将数据项目转换为可视元素以进行显示。尽管此容器可以包含可视元素，但它通常仅用于包含作为子项的数据项目。"
+				},
+				{
+					"name": "EditableText",
+					"description": "可编辑文本，用于显示、滚动、选择和编辑文本。"
+				},
+				{
+					"name": "State",
+					"description": "State 类定义视图状态，即组件的特定视图。例如，产品缩略图可以有两个视图状态，包含最少信息的基本视图状态和包含附加信息的丰富视图状态。"
+				},
+				{
+					"name": "Group",
+					"description": "Group 是自动布局的容器基类。如果包含的子项内容太大需要滚动显示，可以在在 Group 外部包裹一层 Scroller 组件(将 Group 实例赋值给 Scroller 组件的 viewport 属性)。Scroller 会为 Group 添加滚动的触摸操作功能，并显示垂直或水平的滚动条。"
+				},
+				{
+					"name": "HScrollBar",
+					"description": "HScrollBar（水平 ScrollBar）控件可以在因数据太多而不能在显示区域中以水平方向完全显示时控制显示的数据部分。<p>虽然 HScrollBar 控件可以单独使用，但通常将它与其他组件一起使用来提供滚动功能。</p>"
+				},
+				{
+					"name": "HSlider",
+					"description": "使用 HSlider（水平滑块）控件，用户可通过在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。"
+				},
+				{
+					"name": "DefaultAssetAdapter",
+					"description": "默认的IAssetAdapter接口实现。"
+				},
+				{
+					"name": "Image",
+					"description": "Image 控件允许您在运行时显示 JPEG、PNG 等图片文件文件。Image 继承至 Bitmap，因此您可以直接对其 bitmapData 属性，赋值从外部加载得到的位图数据以显示对应图片。同时，Image 还提供了更加方便的 source 属性，source 属性可以接受一个网络图片url作为值，赋值为url后，它内部会自动去加载并显示图片。并且您同样也可以直接把 BitmapData 对象赋值给 source 属性以显示图片。"
+				},
+				{
+					"name": "ItemRenderer",
+					"description": "ItemRenderer 类是项呈示器的基类。"
+				},
+				{
+					"name": "Label",
+					"description": "Label 是可以呈示一行或多行统一格式文本的UI组件。要显示的文本由 text 属性确定。文本格式由样式属性指定，例如 fontFamily 和 size。因为 Label 运行速度快且占用内存少，所以它特别适合用于显示多个小型非交互式文本的情况，例如，项呈示器和 Button 外观中的标签。在 Label 中，将以下三个字符序列识别为显式换行符：CR（“\\r”）、LF（“\\n”）和 CR+LF（“\\r\\n”）。如果没有为 Label 指定宽度，则由这些显式换行符确定的最长行确定 Label 的宽度。如果指定了宽度，则指定文本将在组件边界的右边缘换行，如果文本扩展到低于组件底部，则将被剪切。"
+				},
+				{
+					"name": "List",
+					"description": "List 控件可显示垂直或水平的项目列表。用户可以根据 <code>allowMultipleSelection</code> 属性的值从列表中选择一个或多个项目。"
+				},
+				{
+					"name": "Panel",
+					"description": "Panel 类定义一个容器，该容器为其子代提供标题栏、关闭按钮、可移动区域和内容区域。"
+				},
+				{
+					"name": "ProgressBar",
+					"description": "ProgressBar 控件为随时间而变的任务进度提供了形象化的表示。"
+				},
+				{
+					"name": "RadioButton",
+					"description": "RadioButton 组件使用户可在一组互相排斥的选择中做出一种选择"
+				},
+				{
+					"name": "RadioButtonGroup",
+					"description": "RadioButtonGroup 组件定义一组 RadioButton 组件，这些组件相互排斥；因此，用户每次只能选择一个 RadioButton 组件"
+				},
+				{
+					"name": "Rect",
+					"description": "Rect 组件矩形绘图元素。此组件可响应鼠标事件。"
+				},
+				{
+					"name": "Scroller",
+					"description": "Scroller 组件显示一个称为视域的单个可滚动组件，以及水平滚动条和垂直滚动条。该视域必须实现 IViewport 接口。<p>Group 组件实现 IViewport 接口，且可以用作 Scroller 控件的子代，如下例所示：</p><pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Scroller&nbsp;width=&quot;100&quot;&nbsp;height=&quot;100&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Image&nbsp;width=&quot;300&quot;&nbsp;height=&quot;400&quot;&nbsp;source=&quot;assets/logo.jpg&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/s:Group&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/s:Scroller&gt;<br/></pre>Image 控件的大小比其父 Group 容器设置得大。默认情况下，子代超过父容器的边界。Scroller 会指定将子代剪切到边界并显示滚动条，而不是让子代超过父容器的边界。"
+				},
+				{
+					"name": "Skin",
+					"description": "皮肤基类。通常情况下，您不需要手动创建这个类的实例，而是通过解析EXML文件后自动生成。<p/>"
+				},
+				{
+					"name": "TabBar",
+					"description": "TabBar 类显示一组相同的选项卡。一次可以选择一个选项卡，且默认情况下选择第一个选项卡。<p>该组选项卡由 <code>dataProvider</code> 属性定义。每个选项卡的外观由 <code>ItemRenderer</code> 定义。</p><p>可以使用 TabBar 控件设置 ViewStack 容器的活动子代，如下例所示：</p><pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:TabBar&nbsp;dataProvider=&quot;{viewStack}&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:ViewStack&nbsp;id=&quot;viewStack&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab1&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab2&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;s:Group&nbsp;name=&quot;tab3&quot;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/s:ViewStack&gt;<br/></pre>"
+				},
+				{
+					"name": "TextInput",
+					"description": "TextInput 是一个文本输入控件，供用户输入和编辑统一格式文本"
+				},
+				{
+					"name": "ToggleButton",
+					"description": "ToggleButton 组件定义切换按钮。单击该按钮会在弹起状态和按下状态之间进行切换。如果在按钮处于弹起状态时单击该按钮，则它会切换到按下状态。必须再次单击该按钮才可将其切换回弹起状态。<p>可以使用 <code>selected</code> 属性以编程方式获取或设置此状态。</p>"
+				},
+				{
+					"name": "ToggleSwitch",
+					"description": "ToggleSwitch 表示一个开关组件。"
+				},
+				{
+					"name": "UILayer",
+					"description": "UILayer 是 Group 的子类，它除了具有容器的所有标准功能，还能够自动保持自身尺寸始终与舞台尺寸相同（Stage.stageWidth,Stage.stageHeight）。当舞台尺寸发生改变时，它会跟随舞台尺寸改变。UILayer 跟普通容器一样，允许创建多个实例，但通常都将它作为UI显示列表的根节点使用。"
+				},
+				{
+					"name": "VScrollBar",
+					"description": "VScrollBar（垂直 ScrollBar）控件可以在因数据太多而不能在显示区域中以垂直方向完全显示时控制显示的数据部分。<p>虽然 VScrollBar 控件可以单独使用，但通常将它与其他组件一起使用来提供滚动功能。</p>"
+				},
+				{
+					"name": "VSlider",
+					"description": "使用 VSlider（垂直滑块）控件，用户可通过在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。"
+				},
+				{
+					"name": "ViewStack",
+					"description": "ViewStack 导航器容器由一组彼此上下堆叠的子容器组成，其中一次只可以显示一个子容器。选择另一个子容器后，它将显示在原来子容器的位置处，所以看起来好像此子容器替换了原来的子容器。但是，原来的子容器仍然存在，只不过它现在处于不可见状态。"
+				},
+				{
+					"name": "DefaultThemeAdapter",
+					"description": "默认的IThemeAdapter接口实现。"
+				},
+				{
+					"name": "ListBase",
+					"description": "ListBase 是列表控件基类。可显示垂直或水平的项目列表。其功能与 HTML 中的 SELECT 表单元素的功能相似。"
+				},
+				{
+					"name": "Range",
+					"description": "范围选取组件,该组件包含一个值和这个值所允许的最大最小约束范围。<code>value</code>属性的值永远被限制于当前的<code>minimum</code>和<code>maximum</code>之间，并且<code>minimum</code>和 <code>maximum</code>永远按照固定的顺序排列，即<code>(minimum&nbsp;&lt;=&nbsp;value&nbsp;&lt;=&nbsp;maximum)</code> 为真。如果<code>snapInterval</code>属性的值不是0，那么<code>value</code>的值也会被<code>snapInterval</code>所约束。"
+				},
+				{
+					"name": "ScrollBarBase",
+					"description": "<code>ScrollBarBase</code> 滚动条基类，该类帮助在因数据太多而不能在显示区域完全显示时定位显示的数据部分。ScrollBarBase 类显示视区的一部分和一个指示滑块。视区是一个IViewport接口实现的实例。"
+				},
+				{
+					"name": "SliderBase",
+					"description": "滑块控件基类，通过使用 SliderBase 类，用户可以在滑块轨道的端点之间移动滑块来选择值。滑块的当前值由滑块端点（对应于滑块的最小值和最大值）之间滑块的相对位置确定。SliderBase 类是 HSlider 和 VSlider 的基类。"
+				},
+				{
+					"name": "Direction",
+					"description": "定义进度条等控件增长方向的常量"
+				},
+				{
+					"name": "IAssetAdapter",
+					"description": "素材适配器接口。若项目需要自定义 Image.source的解析规则，需要实现这个接口，然后调用如下代码注入自定义实现到框架即可：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;assetAdapter&nbsp;=&nbsp;new&nbsp;YourAssetAdapter();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stage.registerImplementation(&quot;eui.IAssetAdapter&quot;,assetAdapter)<br/></pre>"
+				},
+				{
+					"name": "IDisplayText",
+					"description": "IDisplayText 接口定义简单文本显示的属性."
+				},
+				{
+					"name": "IItemRenderer",
+					"description": "列表类组件的项呈示器接口。"
+				},
+				{
+					"name": "IThemeAdapter",
+					"description": "主题适配器接口。若项目需要自定义主题需要实现这个接口，然后调用如下代码注入自定义实现到框架即可：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;themeAdapter&nbsp;=&nbsp;new&nbsp;YourThemeAdapter();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stage.registerImplementation(&quot;eui.IThemeAdapter&quot;,themeAdapter);<br/></pre>"
+				},
+				{
+					"name": "IViewport",
+					"description": "支持视区的组件接口。如果组件的内容子项比组件要大，而且您向往子项可以在父级组件的边缘处被裁减，您可以定义一个视区。视区是您希望显示的组件的区域的矩形子集，而不是显示整个组件。"
+				},
+				{
+					"name": "ScrollPolicy",
+					"description": "滚动条显示策略常量。Scroller 类的 <code>horizontalCanScroll</code> 和 <code>verticalCanScroll</code> 属性的值。"
+				},
+				{
+					"name": "ThemeData",
+					"description": ""
+				},
+				{
+					"name": "EXMLFile",
+					"description": ""
+				},
+				{
+					"name": "Theme",
+					"description": "皮肤主题。注意：皮肤主题是一次性设置的默认值,并不能运行时切换所有组件默认皮肤。切换单个皮肤您可以自行对Component.skinName赋值来修改。"
+				},
+				{
+					"name": "CollectionEvent",
+					"description": "集合类型数据改变事件"
+				},
+				{
+					"name": "CollectionEventKind",
+					"description": "定义 <code>CollectionEvent</code> 类 <code>kind</code> 属性的有效值的常量。这些常量指示对集合进行的更改类型。"
+				},
+				{
+					"name": "ItemTapEvent",
+					"description": "列表项触碰事件"
+				},
+				{
+					"name": "PropertyEvent",
+					"description": "对象的一个属性发生更改时传递到事件侦听器的事件。"
+				},
+				{
+					"name": "UIEvent",
+					"description": "UI事件"
+				},
+				{
+					"name": "BasicLayout",
+					"description": "BasicLayout 类根据其各个设置彼此独立地排列布局元素。BasicLayout（也称为绝对布局）要求显式定位每个容器子代。可以使用子代的 <code>x</code> 和 <code>y</code> 属性，或使用约束来定位每个子代。"
+				},
+				{
+					"name": "ColumnAlign",
+					"description": "ColumnAlign 类为 TileLayout 类的 <code>columnAlign</code> 属性定义可能的值。"
+				},
+				{
+					"name": "HorizontalLayout",
+					"description": "HorizontalLayout 类按水平顺序从左到右排列布局元素，在元素和围绕元素的可选填充之间带有可选间隙。"
+				},
+				{
+					"name": "JustifyAlign",
+					"description": "JustifyAlign 定义布局类中 horizontalAlign 与 verticalAlign 属性需要的两端对齐常量值。"
+				},
+				{
+					"name": "RowAlign",
+					"description": "RowAlign 类为 TileLayout 类的 <code>rowAlign</code> 属性定义可能的值。"
+				},
+				{
+					"name": "TileLayout",
+					"description": "TileLayout 类在单元格大小相等的列和行中排列布局元素。TileLayout 类使用许多属性来控制列和行的方向、计数、大小、间隙和两端对齐以及单元格内的元素对齐。"
+				},
+				{
+					"name": "TileOrientation",
+					"description": "TileOrientation 类为 TileLayout 类的 <code>orientation</code> 属性定义可能的值。"
+				},
+				{
+					"name": "VerticalLayout",
+					"description": "VerticalLayout 类按垂直顺序从上向下排列布局元素，在元素和围绕元素顺序的可选填充之间带有可选间隙。"
+				},
+				{
+					"name": "LayoutBase",
+					"description": "容器布局基类。若要创建使用 Group 容器的自定义布局，必须扩展 <code>LayoutBase</code> 或其子类之一。<p>子类必须实现 <code>updateDisplayList()</code> 方法（定位 <code>target</code> Group 的子项并调整这些子项的大小）和 <code>measure()</code> 方法（计算 <code>target</code> 的默认大小）。</p>"
+				},
+				{
+					"name": "LinearLayoutBase",
+					"description": "线性布局基类，通常作为 <code>HorizontalLayout</code> 和 <code>VerticalLayout</code> 的父类。"
+				},
+				{
+					"name": "AddItems",
+					"description": "视图添加状态显示元素操作"
+				},
+				{
+					"name": "IOverride",
+					"description": "IOverride 接口定义视图状态的覆盖操作。State 类 overrides 属性数组中的所有条目均必须实现此接口。"
+				},
+				{
+					"name": "SetProperty",
+					"description": "SetProperty 类指定只在父视图状态期间有效的属性值。可以在 State 类的 overrides 属性中使用该类。"
+				},
+				{
+					"name": "SetStateProperty",
+					"description": "SetProperty 类指定只在父视图状态期间有效的属性值。可以在 State 类的 overrides 属性中使用该类。"
+				}
+			]
+		},
+		"EXML": {
+			"globalMember": [
+				{
+					"name": "prefixURL",
+					"description": "设置 EXML 文件加载的根路径。设置后，再加载 EXML 文件时会自动把根路径加到文件路径前面"
+				}
+			],
+			"globalFunction": [
+				{
+					"name": "load",
+					"description": "加载并解析一个外部的 EXML 文件为一个类定义。您可以在 EXML 文件的根节点上声明 class 属性作为要注册到全局的类名。若指定的类名已经存在，将会注册失败，并输出一个警告。注册成功后，您也可以通过 egret.getDefinitionByName(className) 方法获取这个 EXML 文件对应的类定义。"
+				},
+				{
+					"name": "parse",
+					"description": "解析一个 EXML 文件的文本内容为一个类定义。您可以在 EXML 文件的根节点上声明 class 属性作为要注册到全局的类名。若指定的类名已经存在，将会注册失败，并输出一个警告。注册成功后，您也可以通过 egret.getDefinitionByName(className) 方法获取这个 EXML 文件对应的类定义。"
+				}
+			]
+		}
+	},
+	"gui": {
+		"egret.gui": {
+			"globalFunction": [
+				{
+					"name": "getScale9Grid",
+					"description": "返回字符串所对应的全局唯一Rectangle对象。此方法主要为了减少scale9Grid属性的实例个数。参数的相同的九宫格数据使用此方法可以全局共享同一个Rectangle对象。"
+				},
+				{
+					"name": "mapClass",
+					"description": "以类定义为值进行映射注入。"
+				},
+				{
+					"name": "mapValue",
+					"description": "以实例为值进行映射注入."
+				},
+				{
+					"name": "setProperties",
+					"description": "设置键值对的简便方法。此方法仅供exmlc编译器内部使用。"
+				}
+			],
+			"class": [
+				{
+					"name": "ArrayCollection",
+					"description": "数组的集合类数据结构包装器通常作为列表组件的数据源，使用这种数据结构包装普通数组，能在数据源发生改变的时候主动通知视图刷新变更的数据项"
+				},
+				{
+					"name": "ICollection",
+					"description": "列表的集合类数据源对象接口"
+				},
+				{
+					"name": "ITreeCollection",
+					"description": "Tree组件的集合类数据源对象接口"
+				},
+				{
+					"name": "ObjectCollection",
+					"description": "Object的集合类数据结构包装器,通常作为Tree组件的数据源。"
+				},
+				{
+					"name": "Alert",
+					"description": "弹出对话框，可能包含消息、标题、按钮（“确定”、“取消”、“是”和“否”的任意组合)。"
+				},
+				{
+					"name": "BitmapLabel",
+					"description": "一行或多行不可编辑的位图文本控件"
+				},
+				{
+					"name": "Button",
+					"description": "按钮控件"
+				},
+				{
+					"name": "ButtonSkin",
+					"description": "按钮组件的快速皮肤模板，能够快速制定哪个状态显示那个资源，实例化一次性专用的按钮皮肤。"
+				},
+				{
+					"name": "CheckBox",
+					"description": "复选框"
+				},
+				{
+					"name": "ClassFactory",
+					"description": "ClassFactory 实例是一个“工厂对象”，Egret 可用其生成其他类的实例，每个实例拥有相同的属性。"
+				},
+				{
+					"name": "ItemRenderer",
+					"description": "项呈示器基类"
+				},
+				{
+					"name": "DataGroup",
+					"description": "数据项目的容器基类将数据项目转换为可视元素以进行显示。"
+				},
+				{
+					"name": "DropDownList",
+					"description": "不可输入的下拉列表控件。带输入功能的下拉列表控件，请使用ComboBox。"
+				},
+				{
+					"name": "EditableText",
+					"description": ""
+				},
+				{
+					"name": "Group",
+					"description": "自动布局容器"
+				},
+				{
+					"name": "HScrollBar",
+					"description": "HScrollBar（水平 ScrollBar）控件可以在因数据太多而不能在显示区域中以水平方向完全显示时控制显示的数据部分。     尽管可以使用 HScrollBar 控件作为独立控件，但通常将其结合作为另一组组件的一部分来提供滚动功能"
+				},
+				{
+					"name": "HSlider",
+					"description": "水平滑块控件"
+				},
+				{
+					"name": "IItemRenderer",
+					"description": "列表类组件的项呈示器接口"
+				},
+				{
+					"name": "IItemRendererOwner",
+					"description": "项呈示器的主机组件接口"
+				},
+				{
+					"name": "ITreeItemRenderer",
+					"description": "树状列表组件的项呈示器接口"
+				},
+				{
+					"name": "Label",
+					"description": "一行或多行不可编辑的文本控件"
+				},
+				{
+					"name": "List",
+					"description": "列表组件"
+				},
+				{
+					"name": "Panel",
+					"description": "带有标题，内容区域的面板组件"
+				},
+				{
+					"name": "PopUpAnchor",
+					"description": "PopUpAnchor组件用于定位布局中的弹出控件或下拉控件"
+				},
+				{
+					"name": "ProgressBar",
+					"description": "进度条控件。"
+				},
+				{
+					"name": "ProgressBarDirection",
+					"description": "定义进度条控件增长方向的常量"
+				},
+				{
+					"name": "RadioButton",
+					"description": "RadioButton 组件使用户可在一组互相排斥的选择中做出一种选择"
+				},
+				{
+					"name": "RadioButtonGroup",
+					"description": "RadioButtonGroup 组件定义一组 RadioButton 组件，这些组件相互排斥；因此，用户每次只能选择一个 RadioButton 组件"
+				},
+				{
+					"name": "Rect",
+					"description": "矩形绘图元素。此组件可响应鼠标事件。"
+				},
+				{
+					"name": "Scroller",
+					"description": "滚动条组件"
+				},
+				{
+					"name": "Skin",
+					"description": "含有视图状态功能的皮肤基类。"
+				},
+				{
+					"name": "SkinnableComponent",
+					"description": "复杂可设置外观组件的基类，接受ISkin类或任何显示对象作为皮肤。当皮肤为ISkin时，将自动匹配两个实例内同名的公开属性(显示对象)，并将皮肤的属性引用赋值到此类定义的同名属性(必须没有默认值)上,如果要对公共属性添加事件监听或其他操作，请覆盖partAdded()和partRemoved()方法"
+				},
+				{
+					"name": "SkinnableContainer",
+					"description": "可设置外观的容器的基类"
+				},
+				{
+					"name": "SkinnableDataContainer",
+					"description": "可设置外观的数据项目容器基类"
+				},
+				{
+					"name": "Spacer",
+					"description": "占位组件,一个布局辅助类。自身完全不可见，但可以在父级容器的布局中分配空间，通常用于垂直和水平布局中，推挤其他组件。"
+				},
+				{
+					"name": "TabBar",
+					"description": "选项卡组件"
+				},
+				{
+					"name": "TabBarButton",
+					"description": "选项卡组件的按钮条目"
+				},
+				{
+					"name": "TextArea",
+					"description": ""
+				},
+				{
+					"name": "TextInput",
+					"description": "TextInput 是一个文本输入控件，供用户输入和编辑单行统一格式文本"
+				},
+				{
+					"name": "TitleWindow",
+					"description": "可移动窗口组件。注意，此窗口必须使用PopUpManager.addPopUp()弹出之后才能移动。"
+				},
+				{
+					"name": "ToggleButton",
+					"description": "切换按钮"
+				},
+				{
+					"name": "ToggleSwitch",
+					"description": "开关按钮"
+				},
+				{
+					"name": "TreeItemRenderer",
+					"description": "Tree组件的项呈示器基类"
+				},
+				{
+					"name": "Tree",
+					"description": "树状列表组件"
+				},
+				{
+					"name": "UIAsset",
+					"description": "素材和非GUI显示对象包装器。<p/>"
+				},
+				{
+					"name": "VScrollBar",
+					"description": "VScrollBar（垂直 ScrollBar）控件可以在因数据太多而不能在显示区域中以垂直方向完全显示时控制显示的数据部分"
+				},
+				{
+					"name": "VSlider",
+					"description": "垂直滑块控件"
+				},
+				{
+					"name": "ViewStack",
+					"description": "层级堆叠容器,一次只显示一个子对象。"
+				},
+				{
+					"name": "ButtonBase",
+					"description": "按钮组件基类"
+				},
+				{
+					"name": "DefaultAssetAdapter",
+					"description": "默认的IAssetAdapter接口实现"
+				},
+				{
+					"name": "DefaultSkinAdapter",
+					"description": "默认的ISkinAdapter接口实现"
+				},
+				{
+					"name": "DefaultThemeAdapter",
+					"description": "默认的IThemeAdapter接口实现"
+				},
+				{
+					"name": "DropDownController",
+					"description": "用于处理因用户交互而打开和关闭下拉列表的操作的控制器"
+				},
+				{
+					"name": "DropDownListBase",
+					"description": "下拉列表控件基类"
+				},
+				{
+					"name": "GroupBase",
+					"description": "自动布局容器基类"
+				},
+				{
+					"name": "ListBase",
+					"description": "支持选择内容的所有组件的基类。"
+				},
+				{
+					"name": "Range",
+					"description": "范围选取组件,该组件包含一个值和这个值所允许的最大最小约束范围。"
+				},
+				{
+					"name": "SkinBasicLayout",
+					"description": "皮肤简单布局类。"
+				},
+				{
+					"name": "SkinnableTextBase",
+					"description": ""
+				},
+				{
+					"name": "SliderBase",
+					"description": "滑块控件基类"
+				},
+				{
+					"name": "TextBase",
+					"description": "文本基类,实现对文本的自动布局，样式属性设置。"
+				},
+				{
+					"name": "Theme",
+					"description": ""
+				},
+				{
+					"name": "ToggleButtonBase",
+					"description": "切换按钮组件基类"
+				},
+				{
+					"name": "TrackBase",
+					"description": "TrackBase类是具有一个轨道和一个或多个滑块按钮的组件的一个基类，如 Slider 和 ScrollBar。"
+				},
+				{
+					"name": "IAssetAdapter",
+					"description": "素材适配器接口。若项目需要自定义UIAsset.source的解析规则，需要实现这个接口，"
+				},
+				{
+					"name": "IContainer",
+					"description": "容器接口"
+				},
+				{
+					"name": "IDisplayText",
+					"description": "简单文本显示控件接口。"
+				},
+				{
+					"name": "IEditableText",
+					"description": "可编辑文本控件接口"
+				},
+				{
+					"name": "IFactory",
+					"description": "IFactory 接口定义工厂类（如 ClassFactory）必须实现的接口。IFactory 类型的对象是“工厂对象”，Egret使用它来生成另一类的多个实例（每个实例具有相同的属性）。"
+				},
+				{
+					"name": "IInvalidateDisplay",
+					"description": "具有延迟应用属性功能的显示对象接口"
+				},
+				{
+					"name": "IInvalidating",
+					"description": "拥有失效验证机制组件接口"
+				},
+				{
+					"name": "ILayoutElement",
+					"description": "可布局元素接口"
+				},
+				{
+					"name": "ISkin",
+					"description": "皮肤对象接口。只有实现此接口的皮肤会被匹配公开同名变量,并注入到主机组件上。"
+				},
+				{
+					"name": "ISkinAdapter",
+					"description": "皮肤适配器接口。若项目需要自定义可设置外观组件的skinName属性的解析规则，需要实现这个接口，"
+				},
+				{
+					"name": "ISkinnableClient",
+					"description": "可设置外观的组件接口"
+				},
+				{
+					"name": "IStateClient",
+					"description": "具有视图状态的组件接口"
+				},
+				{
+					"name": "IStyleClient",
+					"description": "能够设置样式的组件接口"
+				},
+				{
+					"name": "IThemeAdapter",
+					"description": "主题适配器接口。"
+				},
+				{
+					"name": "IUIComponent",
+					"description": "UI组件接口"
+				},
+				{
+					"name": "IUIStage",
+					"description": ""
+				},
+				{
+					"name": "IViewStack",
+					"description": "层级堆叠容器接口"
+				},
+				{
+					"name": "IViewport",
+					"description": "支持视区的组件接口"
+				},
+				{
+					"name": "IVisualElement",
+					"description": "可视元素接口"
+				},
+				{
+					"name": "IVisualElementContainer",
+					"description": "具有管理IVisualElement子显示对象的容器接口"
+				},
+				{
+					"name": "NavigationUnit",
+					"description": ""
+				},
+				{
+					"name": "PopUpPosition",
+					"description": "定义弹出位置的常量值。该常量决定目标对象相对于父级组件的弹出位置。"
+				},
+				{
+					"name": "ScrollPolicy",
+					"description": "滚动条显示策略常量"
+				},
+				{
+					"name": "UIComponent",
+					"description": "显示对象基类"
+				},
+				{
+					"name": "UIGlobals",
+					"description": ""
+				},
+				{
+					"name": "UILayer",
+					"description": "UIStage的虚拟子容器"
+				},
+				{
+					"name": "UIStage",
+					"description": "系统管理器，应用程序顶级容器。通常情况下，一个程序应该只含有唯一的系统管理器,并且所有的组件都包含在它内部。它负责管理弹窗，鼠标样式，工具提示的显示层级，以及过滤鼠标和键盘事件为可以取消的。"
+				},
+				{
+					"name": "Animate",
+					"description": "Animate 效果可设置各个值之间的任意属性集的动画。通过设置 motionPaths 属性，指定要设置动画的属性和值。"
+				},
+				{
+					"name": "Linear",
+					"description": "Linear 类使用三个阶段定义缓动：加速、匀速运动和减速。"
+				},
+				{
+					"name": "AnimateTransform",
+					"description": "AnimateTransform 效果控制目标对象上所有与转换相关的动画。"
+				},
+				{
+					"name": "CompositeEffect",
+					"description": "复合效果的基类"
+				},
+				{
+					"name": "Effect",
+					"description": "定义所有效果的基类"
+				},
+				{
+					"name": "EffectInstance",
+					"description": "定义所有效果实例的基类"
+				},
+				{
+					"name": "Fade",
+					"description": "淡入淡出效果"
+				},
+				{
+					"name": "IEffect",
+					"description": ""
+				},
+				{
+					"name": "IEffectInstance",
+					"description": ""
+				},
+				{
+					"name": "Move",
+					"description": "Move 效果按 x 和 y 方向移动目标对象。"
+				},
+				{
+					"name": "Parallel",
+					"description": "Parallel 效果同时播放多个子效果。"
+				},
+				{
+					"name": "Rotate",
+					"description": "Rotate 效果围绕转换中心旋转目标对象。"
+				},
+				{
+					"name": "Scale",
+					"description": "Scale 效果围绕转换中心在 x 和 y 方向上缩放目标对象"
+				},
+				{
+					"name": "Sequence",
+					"description": "Sequence 效果以子效果的添加顺序依次播放多个子效果。"
+				},
+				{
+					"name": "Sine",
+					"description": "Sine 类使用 Sine 函数定义缓动功能。"
+				},
+				{
+					"name": "Animation",
+					"description": "Animation 类定义在指定的时间段上在属性的开始值和结束值之间发生的动画。"
+				},
+				{
+					"name": "Keyframe",
+					"description": "Keyframe 类用于定义位于效果过程中某个特定时间的属性的值。"
+				},
+				{
+					"name": "MotionPath",
+					"description": "MotionPath 类定义效果的 Keyframe 对象的集合，以及要设置动画的目标上属性的名称。"
+				},
+				{
+					"name": "RepeatBehavior",
+					"description": "RepeatBehavior类用于定义效果的重复行为的常量"
+				},
+				{
+					"name": "SimpleMotionPath",
+					"description": "SimpleMotionPath 类是只有两个关键帧的MotionPath的简单实现"
+				},
+				{
+					"name": "Bounce",
+					"description": "Bounce 类实现缓动功能，该功能模拟目标对象上的重力牵引和回弹目标对象。"
+				},
+				{
+					"name": "EaseInOutBase",
+					"description": "EaseInOutBase 类是提供缓动功能的基类。"
+				},
+				{
+					"name": "Elastic",
+					"description": "Elastic 类实现缓动功能，此时目标对象移动是由一个指数衰减正弦波定义的。"
+				},
+				{
+					"name": "IEaser",
+					"description": ""
+				},
+				{
+					"name": "Power",
+					"description": "Power 类通过使用多项式表达式定义缓动功能。"
+				},
+				{
+					"name": "AnimateInstance",
+					"description": "AnimateInstance 类用于实现 Animate 效果的实例类"
+				},
+				{
+					"name": "AnimateTransformInstance",
+					"description": "AnimateTransformInstance 类用于实现 AnimateTransform 效果的实例类"
+				},
+				{
+					"name": "CompositeEffectInstance",
+					"description": "CompositeEffectInstance 类用于实现 CompositeEffect 类的实例类"
+				},
+				{
+					"name": "FadeInstance",
+					"description": "FadeInstance 类用于实现 Fade 效果的实例类"
+				},
+				{
+					"name": "ParallelInstance",
+					"description": "ParallelInstance 类用于实现 Parallel 效果的实例类"
+				},
+				{
+					"name": "SequenceInstance",
+					"description": "SequenceInstance 类用于实现 Sequence 效果的实例类"
+				},
+				{
+					"name": "TransformUtil",
+					"description": ""
+				},
+				{
+					"name": "IInterpolator",
+					"description": ""
+				},
+				{
+					"name": "NumberInterpolator",
+					"description": "NumberInterpolator 类在表示为 number 实例的开始值和结束值之间提供插值。"
+				},
+				{
+					"name": "CloseEvent",
+					"description": "窗口关闭事件"
+				},
+				{
+					"name": "CollectionEvent",
+					"description": "集合类型数据改变事件"
+				},
+				{
+					"name": "CollectionEventKind",
+					"description": "定义  CollectionEvent 类 kind 属性的有效值的常量。这些常量指示对集合进行的更改类型。"
+				},
+				{
+					"name": "EffectEvent",
+					"description": ""
+				},
+				{
+					"name": "ElementExistenceEvent",
+					"description": "Group添加或移除元素时分派的事件。"
+				},
+				{
+					"name": "IndexChangeEvent",
+					"description": "索引改变事件"
+				},
+				{
+					"name": "ListEvent",
+					"description": "列表事件"
+				},
+				{
+					"name": "MoveEvent",
+					"description": "移动事件"
+				},
+				{
+					"name": "PopUpEvent",
+					"description": "弹出管理器事件"
+				},
+				{
+					"name": "PropertyChangeEvent",
+					"description": "对象的一个属性发生更改时传递到事件侦听器的事件"
+				},
+				{
+					"name": "PropertyChangeEventKind",
+					"description": "PropertyChangeEventKind 类定义 PropertyChangeEvent 类的 kind 属性的常量值。"
+				},
+				{
+					"name": "RendererExistenceEvent",
+					"description": "在DataGroup添加或删除项呈示器时分派的事件。"
+				},
+				{
+					"name": "ResizeEvent",
+					"description": "尺寸改变事件"
+				},
+				{
+					"name": "SkinPartEvent",
+					"description": "皮肤组件附加移除事件"
+				},
+				{
+					"name": "StateChangeEvent",
+					"description": "视图状态改变事件"
+				},
+				{
+					"name": "TrackBaseEvent",
+					"description": "从TrackBase组件分派的事件。"
+				},
+				{
+					"name": "TreeEvent",
+					"description": "Tree事件"
+				},
+				{
+					"name": "UIEvent",
+					"description": "UI事件"
+				},
+				{
+					"name": "BasicLayout",
+					"description": "基本布局"
+				},
+				{
+					"name": "ColumnAlign",
+					"description": "ColumnAlign 类为 TileLayout 类的 columnAlign 属性定义可能的值。"
+				},
+				{
+					"name": "HorizontalLayout",
+					"description": "水平布局"
+				},
+				{
+					"name": "ChildInfo",
+					"description": ""
+				},
+				{
+					"name": "RowAlign",
+					"description": "RowAlign 类为 TileLayout 类的 rowAlign 属性定义可能的值。"
+				},
+				{
+					"name": "TileLayout",
+					"description": "格子布局"
+				},
+				{
+					"name": "TileOrientation",
+					"description": "TileOrientation 类为 TileLayout 类的 orientation 属性定义可能的值。"
+				},
+				{
+					"name": "VerticalLayout",
+					"description": "垂直布局"
+				},
+				{
+					"name": "LayoutBase",
+					"description": "容器布局基类"
+				},
+				{
+					"name": "ILayoutManagerClient",
+					"description": "使用布局管理器的组件接口"
+				},
+				{
+					"name": "IPopUpManager",
+					"description": "窗口弹出管理器接口。若项目需要自定义弹出框管理器，请实现此接口"
+				},
+				{
+					"name": "LayoutManager",
+					"description": "布局管理器"
+				},
+				{
+					"name": "PopUpManager",
+					"description": "窗口弹出管理器<p/>若项目需要自定义弹出框管理器，请实现IPopUpManager接口"
+				},
+				{
+					"name": "PopUpManagerImpl",
+					"description": "窗口弹出管理器实现类"
+				},
+				{
+					"name": "PopUpData",
+					"description": ""
+				},
+				{
+					"name": "DepthQueue",
+					"description": "显示列表嵌套深度排序队列"
+				},
+				{
+					"name": "DepthBin",
+					"description": "列表项"
+				},
+				{
+					"name": "AddItems",
+					"description": "添加显示元素"
+				},
+				{
+					"name": "IOverride",
+					"description": "IOverride 接口用于视图状态覆盖。State 类 overrides 属性数组中的所有条目均必须实现此接口。"
+				},
+				{
+					"name": "InterruptionBehavior",
+					"description": ""
+				},
+				{
+					"name": "OverrideBase",
+					"description": "OverrideBase 类是视图状态所用的 override 类的基类。"
+				},
+				{
+					"name": "SetProperty",
+					"description": "设置属性"
+				},
+				{
+					"name": "State",
+					"description": "State 类定义视图状态，即组件的特定视图。"
+				},
+				{
+					"name": "Transition",
+					"description": ""
+				},
+				{
+					"name": "LayoutUtil",
+					"description": "布局工具类"
+				}
+			]
+		}
+	},
+	"res": {
+		"RES": {
+			"globalFunction": [
+				{
+					"name": "addEventListener",
+					"description": "添加事件侦听器,参考 ResourceEvent 定义的常量。"
+				},
+				{
+					"name": "createGroup",
+					"description": "创建自定义的加载资源组,注意：此方法仅在资源配置文件加载完成后执行才有效。<br>可以监听 ResourceEvent.CONFIG_COMPLETE 事件来确认配置加载完成。"
+				},
+				{
+					"name": "destroyRes",
+					"description": "销毁单个资源文件或一组资源的缓存数据,返回是否删除成功。"
+				},
+				{
+					"name": "getGroupByName",
+					"description": "根据组名获取组加载项列表。"
+				},
+				{
+					"name": "getRes",
+					"description": "同步方式获取缓存的已经加载成功的资源。<br>资源类型和对应的返回值类型关系如下：<br>RES.ResourceItem.TYPE_BIN : ArrayBuffer JavaScript 原生对象<br>RES.ResourceItem.TYPE_IMAGE : img Html 对象，或者 egret.BitmapData 接口。<br>RES.ResourceItem.TYPE_JSON : Object<br>RES.ResourceItem.TYPE_SHEET : Object<br>  1. 如果传入的参数是整个 SpriteSheet 的名称返回的是 {\"image1\":Texture,\"image2\":Texture} 这样的格式。<br>  2. 如果传入的是 \"sheet.image1\"，返回的是单个资源。<br>  3. 如果传入的是 \"image1\" 单个资源的名称，返回的是单个资源。但是如果有两张 SpriteSheet 中有单个图片资源名称相同，返回的是后加载的那个图片资源。<br>RES.ResourceItem.TYPE_SOUND : HtmlSound Html 对象<br>RES.ResourceItem.TYPE_TEXT : string"
+				},
+				{
+					"name": "getResAsync",
+					"description": "异步方式获取配置里的资源。只要是配置文件里存在的资源，都可以通过异步方式获取。"
+				},
+				{
+					"name": "getResByUrl",
+					"description": "通过完整URL方式获取外部资源。"
+				},
+				{
+					"name": "getVersionController",
+					"description": "获得版本控制器."
+				},
+				{
+					"name": "hasRes",
+					"description": "检查配置文件里是否含有指定的资源。"
+				},
+				{
+					"name": "isGroupLoaded",
+					"description": "检查某个资源组是否已经加载完成。"
+				},
+				{
+					"name": "loadConfig",
+					"description": "加载配置文件并解析。"
+				},
+				{
+					"name": "loadGroup",
+					"description": "根据组名加载一组资源。"
+				},
+				{
+					"name": "parseConfig",
+					"description": "运行时动态解析一个配置文件。"
+				},
+				{
+					"name": "registerAnalyzer",
+					"description": "以类定义为值进行映射注入。"
+				},
+				{
+					"name": "registerVersionController",
+					"description": "注册版本控制器,通过RES模块加载资源时会从版本控制器获取真实url"
+				},
+				{
+					"name": "removeEventListener",
+					"description": "移除事件侦听器,参考ResourceEvent定义的常量。"
+				},
+				{
+					"name": "setMaxLoadingThread",
+					"description": "设置最大并发加载线程数量，默认值是 2。"
+				},
+				{
+					"name": "setMaxRetryTimes",
+					"description": "设置资源加载失败时的重试次数，默认值是 3。"
+				}
+			],
+			"class": [
+				{
+					"name": "ResourceItem",
+					"description": "资源项。对应 resource.json 中 resources 数组中的一项。"
+				},
+				{
+					"name": "ResourceEvent",
+					"description": "资源加载事件。"
+				},
+				{
+					"name": "IVersionController",
+					"description": "版本控制加载的接口"
+				},
+				{
+					"name": "VersionController",
+					"description": "管理版本控制的类"
+				}
+			]
+		}
+	},
+	"socket": {
+		"egret": {
+			"class": [
+				{
+					"name": "WebSocket",
+					"description": "egret.WebSocket 类启用代码以建立传输控制协议 (TCP) 套接字连接，用于发送和接收字符串或二进制数据。要使用 egret.WebSocket 类的方法，请先使用构造函数 new egret.WebSocket 创建一个 egret.WebSocket 对象。套接字以异步方式传输和接收数据。"
+				}
+			]
+		}
+	},
+	"tween": {
+		"egret": {
+			"class": [
+				{
+					"name": "Ease",
+					"description": "缓动函数集合，使用不同的缓动函数使得动画按照对应的方程进行"
+				},
+				{
+					"name": "Tween",
+					"description": "Tween是Egret的动画缓动类"
 				}
 			]
 		}

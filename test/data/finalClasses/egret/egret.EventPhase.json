@@ -1,0 +1,53 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "AT_TARGET",
+			"memberof": "egret.EventPhase",
+			"scope": "static",
+			"description": "目标阶段，是事件流的第二个阶段。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "2"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "BUBBLING_PHASE",
+			"memberof": "egret.EventPhase",
+			"scope": "static",
+			"description": "冒泡阶段。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "3"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "CAPTURING_PHASE",
+			"memberof": "egret.EventPhase",
+			"scope": "static",
+			"description": "捕获阶段。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "1"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "enum",
+		"name": "EventPhase",
+		"memberof": "egret",
+		"filename": "egret/events/EventPhase.ts",
+		"description": "EventPhase 可为 Event 类的 eventPhase 属性提供值。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了事件的各个阶段。<br/>&nbsp;*/<br/>class&nbsp;EventPhaseExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.rotation&nbsp;=&nbsp;45;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;left:egret.Shape&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.graphics.beginFill(0xff0000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.graphics.drawRect(0,0,100,100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.x&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(left);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.touchEnabled&nbsp;=&nbsp;true;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left.addEventListener(egret.TouchEvent.TOUCH_TAP,&nbsp;function&nbsp;(event)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;点击左侧方块，eventPhase：&quot;&nbsp;+&nbsp;event.eventPhase);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;left);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;right:egret.Shape&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.graphics.beginFill(0x00ff00);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.graphics.drawRect(0,0,100,100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.x&nbsp;=&nbsp;145;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.y&nbsp;=&nbsp;-40;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(right);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.touchEnabled&nbsp;=&nbsp;true;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right.addEventListener(egret.TouchEvent.TOUCH_TAP,&nbsp;function&nbsp;(event)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;点击右侧方块，eventPhase：&quot;&nbsp;+&nbsp;event.eventPhase);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;right);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.touchEnabled&nbsp;=&nbsp;true;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addEventListener(egret.TouchEvent.TOUCH_TAP,&nbsp;function&nbsp;(event)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;容器冒泡侦听，eventPhase：&quot;&nbsp;+&nbsp;event.eventPhase);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addEventListener(egret.TouchEvent.TOUCH_TAP,&nbsp;function&nbsp;(event)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;容器捕获侦听，eventPhase：&quot;&nbsp;+&nbsp;event.eventPhase);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;this,&nbsp;true);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
+	}
+}

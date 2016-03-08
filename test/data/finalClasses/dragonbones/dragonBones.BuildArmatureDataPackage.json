@@ -1,0 +1,45 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.ArmatureData",
+			"name": "armatureData",
+			"memberof": "dragonBones.BuildArmatureDataPackage",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.DragonBonesData",
+			"name": "dragonBonesData",
+			"memberof": "dragonBones.BuildArmatureDataPackage",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "dragonBonesDataName",
+			"memberof": "dragonBones.BuildArmatureDataPackage",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "textureAtlas",
+			"memberof": "dragonBones.BuildArmatureDataPackage",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "BuildArmatureDataPackage",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/factories/BaseFactory.ts"
+	}
+}

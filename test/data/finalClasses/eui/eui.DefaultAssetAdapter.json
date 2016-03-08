@@ -1,0 +1,50 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "getAsset",
+			"memberof": "eui.DefaultAssetAdapter",
+			"scope": "instance",
+			"description": "解析素材",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "source",
+					"type": "string",
+					"description": "待解析的新素材标识符"
+				},
+				{
+					"name": "callBack",
+					"type": "(data:any,source:string)=>void",
+					"description": "解析完成回调函数，示例：callBack(content:any,source:string):void;"
+				},
+				{
+					"name": "thisObject",
+					"type": "any",
+					"description": "callBack的 this 引用"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DefaultAssetAdapter",
+		"memberof": "eui",
+		"filename": "extension/eui/components/supportClasses/DefaultAssetAdapter.ts",
+		"description": "默认的IAssetAdapter接口实现。",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"example": "<pre><br/>/**<br/>&nbsp;*&nbsp;下面的例子显示了如何使用&nbsp;DefaultAssetAdapter<br/>&nbsp;*/<br/>class&nbsp;DefaultAssetAdapterExample&nbsp;extends&nbsp;eui.Group&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.once(egret.Event.ADDED_TO_STAGE,&nbsp;this.onAddedToStage,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onAddedToStage(e:&nbsp;egret.Event)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;assetAdapter&nbsp;=&nbsp;new&nbsp;eui.DefaultAssetAdapter();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//eui内置组件需要加载外部资源时会使用注册的&nbsp;IAssetAdapter&nbsp;加载，这里我们把&nbsp;DefaultAssetAdapter&nbsp;的一个实例作为默认实现<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.stage.registerImplementation(&quot;eui.IAssetAdapter&quot;,&nbsp;assetAdapter);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//在程序的其他地方，需要加载资源时可以使用下面的方法<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;adapter:&nbsp;eui.IAssetAdapter&nbsp;=&nbsp;this.stage.getImplementation(&quot;eui.IAssetAdapter&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adapter.getAsset(&apos;resource/cloudy.png&apos;,&nbsp;this.assetLoaded,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;assetLoaded(content:&nbsp;any,&nbsp;source:&nbsp;string)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//由于我们请求的是一个图片&nbsp;URL&nbsp;所以这里拿到的&nbsp;content&nbsp;是一个&nbsp;BitmapData<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//注意，这里只是为了演示&nbsp;AssetAdapter&nbsp;的用法，在实际使用中&nbsp;eui.Image&nbsp;的构造函数可以直接指定一个&nbsp;URL，Image&nbsp;会自动处理加载过程<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;image&nbsp;=&nbsp;new&nbsp;eui.Image(content);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(image);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+		"implements": [
+			{
+				"name": "eui.IAssetAdapter"
+			}
+		]
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "DYNAMIC",
+			"memberof": "egret.TextFieldType",
+			"scope": "static",
+			"description": "用于指定动态文本",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"dynamic\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "INPUT",
+			"memberof": "egret.TextFieldType",
+			"scope": "static",
+			"description": "用于指定输入文本",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"input\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "TextFieldType",
+		"memberof": "egret",
+		"filename": "egret/text/TextFieldType.ts",
+		"description": "TextFieldType 类是在设置 TextField 类的 type 属性时使用的常数值的枚举。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

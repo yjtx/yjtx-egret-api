@@ -1,0 +1,29 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "dragonBones.DragonBonesData",
+			"name": "parseDragonBonesData",
+			"memberof": "dragonBones.Data3Parser",
+			"scope": "static",
+			"params": [
+				{
+					"name": "rawDataToParse",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Data3Parser",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/pasers/Data3Parser.ts",
+		"description": "老版本数据解析"
+	}
+}

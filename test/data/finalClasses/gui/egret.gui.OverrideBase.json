@@ -1,0 +1,110 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "OverrideBase",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "apply",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initialize",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IStateClient",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "initializeFromObject",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"description": "从对象初始化，这是一个便利方法",
+			"returns": "",
+			"params": [
+				{
+					"name": "properties",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "remove",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "OverrideBase",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/states/OverrideBase.ts",
+		"description": "OverrideBase 类是视图状态所用的 override 类的基类。",
+		"augments": [
+			"egret.HashObject"
+		],
+		"implements": [
+			{
+				"name": "egret.gui.IOverride"
+			}
+		],
+		"children": [
+			"egret.gui.AddItems",
+			"egret.gui.SetProperty"
+		]
+	}
+}

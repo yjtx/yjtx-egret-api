@@ -1,0 +1,76 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "easeInFraction",
+			"memberof": "egret.gui.EaseInOutBase",
+			"scope": "instance",
+			"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。有效值为 0.0 到 1.0。",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.gui.EaseInOutBase"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "exponent",
+			"memberof": "egret.gui.Power",
+			"scope": "instance",
+			"description": "在缓动计算中使用的指数。exponent 属性的值越大，加速和减速的速率越快。",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Power",
+			"memberof": "egret.gui.Power",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "easeInFraction",
+					"type": "number",
+					"default": "0.5",
+					"description": "在加速阶段中整个持续时间的部分，在 0.0 和 1.0 之间。"
+				},
+				{
+					"name": "exponent",
+					"type": "number",
+					"default": "2",
+					"description": "在缓动计算中使用的指数。exponent 属性的值越大，加速和减速的速率越快。"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "ease",
+			"memberof": "egret.gui.EaseInOutBase",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "fraction",
+					"type": "number",
+					"description": ""
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.gui.EaseInOutBase"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Power",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/effect/easing/Power.ts",
+		"description": "Power 类通过使用多项式表达式定义缓动功能。",
+		"augments": [
+			"egret.gui.EaseInOutBase"
+		]
+	}
+}

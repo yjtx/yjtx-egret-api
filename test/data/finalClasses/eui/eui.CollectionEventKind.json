@@ -1,0 +1,88 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ADD",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示集合添加了一个或多个项目。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"add\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REFRESH",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示集合应用了排序或/和筛选。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"refresh\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REMOVE",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示集合删除了一个或多个项目。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"remove\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "REPLACE",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示已替换由 CollectionEvent.location 属性确定的位置处的项目。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"replace\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RESET",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示集合已彻底更改，需要进行重置。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"reset\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "UPDATE",
+			"memberof": "eui.CollectionEventKind",
+			"scope": "static",
+			"description": "指示集合中一个或多个项目进行了更新。受影响的项目将存储在  CollectionEvent.items 属性中。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"update\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "CollectionEventKind",
+		"memberof": "eui",
+		"filename": "extension/eui/events/CollectionEventKind.ts",
+		"description": "定义 <code>CollectionEvent</code> 类 <code>kind</code> 属性的有效值的常量。这些常量指示对集合进行的更改类型。",
+		"version": "eui 1.0",
+		"platform": "Web,Native"
+	}
+}

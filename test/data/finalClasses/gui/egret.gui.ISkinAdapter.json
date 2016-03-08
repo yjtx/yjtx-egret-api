@@ -1,0 +1,36 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getSkin",
+			"memberof": "egret.gui.ISkinAdapter",
+			"scope": "instance",
+			"description": "获取皮肤显示对象",
+			"returns": "皮肤对象实例",
+			"params": [
+				{
+					"name": "skinName",
+					"type": "any",
+					"description": "待解析的皮肤标识符"
+				},
+				{
+					"name": "hostComponentKey",
+					"type": "string",
+					"description": "主机组件标识符"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "ISkinAdapter",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/core/ISkinAdapter.ts",
+		"description": "皮肤适配器接口。若项目需要自定义可设置外观组件的skinName属性的解析规则，需要实现这个接口，"
+	}
+}

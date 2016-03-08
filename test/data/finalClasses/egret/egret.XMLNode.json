@@ -1,0 +1,42 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "nodeType",
+			"memberof": "egret.XMLNode",
+			"scope": "instance",
+			"description": "节点类型，1：XML，2：XMLAttribute，3：XMLText",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "egret.XML",
+			"name": "parent",
+			"memberof": "egret.XMLNode",
+			"scope": "instance",
+			"description": "节点所属的父级节点",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "XMLNode",
+		"memberof": "egret",
+		"filename": "egret/utils/XML.ts",
+		"description": "XML节点基类",
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"children": [
+			"egret.XML",
+			"egret.XMLText"
+		]
+	}
+}

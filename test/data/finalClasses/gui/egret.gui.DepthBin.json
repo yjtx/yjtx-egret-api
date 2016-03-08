@@ -1,0 +1,32 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "items",
+			"memberof": "egret.gui.DepthBin",
+			"scope": "instance",
+			"pType": "public",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "length",
+			"memberof": "egret.gui.DepthBin",
+			"scope": "instance",
+			"pType": "public",
+			"default": "0"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DepthBin",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/managers/layoutClass/DepthQueue.ts",
+		"description": "列表项"
+	}
+}

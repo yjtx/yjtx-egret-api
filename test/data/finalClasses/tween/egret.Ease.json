@@ -1,0 +1,580 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "backIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "back in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getBackIn(1.7)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "backInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "back in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getBackInOut(1.7)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "backOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "back out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getBackOut(1.7)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "cubicIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "cubic in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowIn(3)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "cubicInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "cubic in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowInOut(3)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "cubicOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "cubic out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowOut(3)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "elasticIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "elastic in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getElasticIn(1, 0.3)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "elasticInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "elastic in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getElasticInOut(1, 0.3 * 1.5)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "elasticOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "elastic out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getElasticOut(1, 0.3)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quadIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quad in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowIn(2)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quadInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quad in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowInOut(2)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quadOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quad out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowOut(2)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quartIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quart in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowIn(4)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quartInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quart in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowInOut(4)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quartOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quart out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowOut(4)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quintIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quint in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowIn(5)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quintInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quint in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowInOut(5)"
+		},
+		{
+			"kind": "member",
+			"type": "Function",
+			"name": "quintOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "quint out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "Ease.getPowOut(5)"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Ease",
+			"memberof": "egret.Ease",
+			"scope": "instance",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "bounceIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "bounce in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "bounceInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "bounce in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "bounceOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "bounce out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "circIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "circ in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "circInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "circ in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "circOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "circ out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "get",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amount",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getBackIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get back in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amount",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getBackInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get back in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amount",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getBackOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get back out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amount",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getElasticIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get elastic in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amplitude",
+					"description": ""
+				},
+				{
+					"name": "period",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getElasticInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get elastic in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amplitude",
+					"description": ""
+				},
+				{
+					"name": "period",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getElasticOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get elastic out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "amplitude",
+					"description": ""
+				},
+				{
+					"name": "period",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getPowIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get pow in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "pow",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getPowInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get pow in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "pow",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "Function",
+			"name": "getPowOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "get pow out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "pow",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sineIn",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "sine in。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sineInOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "sine in out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sineOut",
+			"memberof": "egret.Ease",
+			"scope": "static",
+			"description": "sine out。请查看示例",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "t",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Ease",
+		"memberof": "egret",
+		"filename": "extension/tween/Ease.ts",
+		"description": "缓动函数集合，使用不同的缓动函数使得动画按照对应的方程进行",
+		"see": [
+			"http://edn.egret.com/cn/index.php/article/index/id/53 缓动效果演示"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

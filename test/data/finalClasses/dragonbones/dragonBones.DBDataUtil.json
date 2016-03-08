@@ -1,0 +1,119 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addHideTimeline",
+			"memberof": "dragonBones.DBDataUtil",
+			"scope": "static",
+			"description": "添加进隐藏的时间轴",
+			"params": [
+				{
+					"name": "animationData",
+					"type": "dragonBones.AnimationData",
+					"description": "animationData"
+				},
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				},
+				{
+					"name": "addHideSlot",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformAnimationData",
+			"memberof": "dragonBones.DBDataUtil",
+			"scope": "static",
+			"description": "把动画数据中的绝对的数据转换成相对的数据",
+			"params": [
+				{
+					"name": "animationData",
+					"type": "dragonBones.AnimationData",
+					"description": "动画数据"
+				},
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "骨架数据"
+				},
+				{
+					"name": "isGlobalData",
+					"type": "boolean",
+					"description": "是否是绝对数据"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformArmatureData",
+			"memberof": "dragonBones.DBDataUtil",
+			"scope": "static",
+			"description": "把ArmatureData的绝对数据转成成相对数据",
+			"params": [
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformArmatureDataAnimations",
+			"memberof": "dragonBones.DBDataUtil",
+			"scope": "static",
+			"description": "转换骨架数据中的动画数据把动画数据中的绝对的数据转换成相对的数据",
+			"params": [
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformRelativeAnimationData",
+			"memberof": "dragonBones.DBDataUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "animationData",
+					"type": "dragonBones.AnimationData",
+					"description": "animationData"
+				},
+				{
+					"name": "armatureData",
+					"type": "dragonBones.ArmatureData",
+					"description": "armatureData"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DBDataUtil",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/utils/DBDataUtil.ts",
+		"description": "DragonBons的数据工具类，提供一些对数据处理的静态方法"
+	}
+}

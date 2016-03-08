@@ -1,0 +1,33 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.gui.IFactory",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "newInstance",
+			"memberof": "egret.gui.IFactory",
+			"scope": "instance",
+			"description": "创建某一类（由实现 IFactory 的类确定）的实例。",
+			"returns": "",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IFactory",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/core/IFactory.ts",
+		"description": "IFactory 接口定义工厂类（如 ClassFactory）必须实现的接口。IFactory 类型的对象是“工厂对象”，Egret使用它来生成另一类的多个实例（每个实例具有相同的属性）。"
+	}
+}

@@ -1,0 +1,85 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "duration",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "持续时间，单位是帧",
+			"pType": "public",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.Frame>",
+			"name": "frameList",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取关键帧列表",
+			"returns": "",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scale",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Timeline",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "初始化数据duration为0，scale为1",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addFrame",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"description": "添加一个关键帧数据",
+			"see": [
+				"extension.dragonbones.model.Frame"
+			],
+			"params": [
+				{
+					"name": "frame",
+					"type": "dragonBones.Frame",
+					"description": "关键帧数据"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.Timeline",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Timeline",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/model/Timeline.ts",
+		"description": "保存时间轴相关的数据，包括关键帧，持续时间，时间缩放",
+		"children": [
+			"dragonBones.AnimationData",
+			"dragonBones.SlotTimeline",
+			"dragonBones.TransformTimeline"
+		]
+	}
+}
