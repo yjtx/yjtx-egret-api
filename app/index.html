@@ -1,0 +1,68 @@
+<!DOCTYPE>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+
+<style>
+    body {
+        padding: 0;
+        border: 0;
+        margin: 0;
+    }
+</style>
+
+<script src="js/index.js"></script>
+<body>
+
+<div id="config">
+    <div>
+        <span>源码路径：</span>
+        <input id="filesPath" placeholder="请选择源码的根目录">
+        <button onclick="onBtnPath()">浏览...</button>
+    </div>
+    <div>
+        <span>依赖路径：</span>
+        <input id="dependencePath" placeholder="请选择依赖的根目录">
+        <button onclick="onDependencePath()">浏览...</button>
+    </div>
+    <div>
+        <span>示例路径：</span>
+        <input id="examplesPath" placeholder="请选择示例的根目录">
+        <button onclick="onBtnExamples()">浏览...</button>
+    </div>
+    <div>
+        <span>配置文件：</span>
+        <input id="typeFile" placeholder="请选择对应的配置文件">
+        <button onclick="onBtnType()">浏览...</button>
+    </div>
+    <div>
+        <button type="submit" id="go" onclick="onBtnGo()">执行</button>
+    </div>
+    <p id="filePath"></p>
+</div>
+<div id="show" style="padding:0;border: 0;margin: 0;">
+    <iframe id="showFrame" name="showFrame" frameborder="0" border="none" padding="0px" marginwidth="0" marginheight="0"
+            style=""></iframe>
+</div>
+</body>
+<script>
+    window.onload = function () {
+        init();
+    };
+
+    window.onresize = function () {
+        init();
+    };
+
+    function init() {
+        var showFrame = document.getElementById("showFrame");
+        showFrame.style.width = document.documentElement.clientWidth + "px";
+        showFrame.style.height = document.documentElement.clientHeight + "px";
+
+        console.log(document.documentElement.clientHeight);
+    }
+</script>
+</html>
