@@ -16,21 +16,13 @@ var template = [
         label: 'File',
         submenu: [
             {
-                label: 'back',
-
-                // click: function(item, focusedWindow) {
-                //     if (focusedWindow)
-                //         focusedWindow.reload();
-                // }
-                click: function() {
-                    var config = document.getElementById("config");
-                    config.style.display = "block";
-                    var show = document.getElementById("show");
-                    var showFrame = document.getElementById("showFrame");
-                    
-                    show.style.display = "none";
-                    // alert('hello back');
-                }
+                label: '配置',
+                click: showConfig
+            },
+            {
+                label: 'api查看',
+                accelerator: 'CmdOrCtrl+Z',
+                click: showApi
             }
         ]
     },

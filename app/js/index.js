@@ -109,6 +109,29 @@ function onBtnGo() {
     console.log("cmd = " + cmd);
 }
 
+function showConfig() {
+    var config = document.getElementById("config");
+    config.style.display = "block";
+    var show = document.getElementById("show");
+    var showFrame = document.getElementById("showFrame");
+
+    show.style.display = "none";
+
+    console.log("showConfig");
+}
+
+function showApi() {
+    var config = document.getElementById("config");
+    var show = document.getElementById("show");
+    var showFrame = document.getElementById("showFrame");
+
+    config.style.display = "none";
+    show.style.display = "block";
+    showFrame.src = "../test/index.html";
+
+    console.log("showApi");
+}
+
 /**
  * @cmd  执行shell命令：如  node  xxx.js 
  */

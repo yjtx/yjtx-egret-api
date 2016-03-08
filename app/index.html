@@ -11,6 +11,8 @@
         padding: 0;
         border: 0;
         margin: 0;
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -59,10 +61,12 @@
 
     function init() {
         var showFrame = document.getElementById("showFrame");
-        showFrame.style.width = document.documentElement.clientWidth + "px";
-        showFrame.style.height = document.documentElement.clientHeight + "px";
+        showFrame.style.width = (document.documentElement.clientWidth) + "px";
+        showFrame.style.height = (document.documentElement.clientHeight) + "px";
 
         console.log(document.documentElement.clientHeight);
+        console.log(document.documentElement.offsetHeight);
+        console.log(document.documentElement.scrollHeight);
     }
 </script>
 <script>require('./js/menu.js')</script>
