@@ -14,38 +14,54 @@
         width: 100%;
         height: 100%;
     }
+
+    .myfont {
+        font-size: 30px;
+        left:100px;
+    }
+
+    .item {
+        margin: 4px;
+        position: relative;
+
+    }
+
+    .itemInput {
+        width:60%;
+    }
+
 </style>
 
 <script src="js/index.js"></script>
 <body>
 
-<div id="config">
-    <div>
-        <span>源码路径：</span>
-        <input id="filesPath" placeholder="请选择源码的根目录">
-        <button onclick="onBtnPath()">浏览...</button>
+<div id="config" class="myfont" style="max-width: 1800px;margin-left: 4px; vertical-align: middle">
+    <div class="item">
+        <span class="myfont">源码路径：</span>
+        <input class="myfont itemInput" id="filesPath" placeholder="请选择源码的根目录">
+        <button class="myfont" onclick="onBtnPath()" style="">浏览...</button>
+    </div>
+    <div class="item">
+        <span class="myfont">依赖路径：</span>
+        <input class="myfont itemInput" id="dependencePath" placeholder="请选择依赖的根目录">
+        <button class="myfont" onclick="onDependencePath()" style="left: 120px">浏览...</button>
+    </div>
+    <div class="item">
+        <span class="myfont">示例路径：</span>
+        <input class="myfont itemInput" id="examplesPath" placeholder="请选择示例的根目录">
+        <button class="myfont" onclick="onBtnExamples()" style="right: 0px">浏览...</button>
+    </div>
+    <div class="item">
+        <span class="myfont">配置文件：</span>
+        <input class="myfont itemInput" id="typeFile" placeholder="请选择对应的配置文件">
+        <button class="myfont" onclick="onBtnType()" style="right: 0px">浏览...</button>
     </div>
     <div>
-        <span>依赖路径：</span>
-        <input id="dependencePath" placeholder="请选择依赖的根目录">
-        <button onclick="onDependencePath()">浏览...</button>
-    </div>
-    <div>
-        <span>示例路径：</span>
-        <input id="examplesPath" placeholder="请选择示例的根目录">
-        <button onclick="onBtnExamples()">浏览...</button>
-    </div>
-    <div>
-        <span>配置文件：</span>
-        <input id="typeFile" placeholder="请选择对应的配置文件">
-        <button onclick="onBtnType()">浏览...</button>
-    </div>
-    <div>
-        <button type="submit" id="go" onclick="onBtnGo()">执行</button>
+        <button class="myfont" type="submit" id="go" onclick="onBtnGo()" style="right: 0px">执行</button>
     </div>
     <p id="filePath"></p>
 </div>
-<div id="show" style="padding:0;border: 0;margin: 0;">
+<div id="show" style="padding:0;border: 0;margin: 0;display:none">
     <iframe id="showFrame" name="showFrame" frameborder="0" border="none" padding="0px" marginwidth="0" marginheight="0"
             style=""></iframe>
 </div>
@@ -64,9 +80,9 @@
         showFrame.style.width = (document.documentElement.clientWidth) + "px";
         showFrame.style.height = (document.documentElement.clientHeight) + "px";
 
-        console.log(document.documentElement.clientHeight);
-        console.log(document.documentElement.offsetHeight);
-        console.log(document.documentElement.scrollHeight);
+//        console.log(document.documentElement.clientHeight);
+//        console.log(document.documentElement.offsetHeight);
+//        console.log(document.documentElement.scrollHeight);
     }
 </script>
 <script>require('./js/menu.js')</script>
