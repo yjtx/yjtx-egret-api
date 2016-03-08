@@ -94,7 +94,7 @@ function onBtnGo() {
             var showFrame = document.getElementById("showFrame");
 
             config.style.display = "none";
-
+            show.style.display = "block";
             showFrame.src = "../test/index.html";
             //window.open('../test/index.html');
         }
