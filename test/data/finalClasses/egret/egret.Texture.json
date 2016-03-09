@@ -1,0 +1,176 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "egret.BitmapData",
+			"name": "bitmapData",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "被引用的 BitmapData 对象。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "textureHeight",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "纹理高度，只读属性，不可以设置",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "textureWidth",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "纹理宽度，只读属性，不可以设置",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Texture",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "创建一个 egret.Texture 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "释放纹理",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number[]",
+			"name": "getPixel32",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "获取某一点像素的颜色值",
+			"returns": "指定像素点的颜色值",
+			"version": "Egret 2.4",
+			"platform": "Web",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"description": "像素点的X轴坐标"
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"description": "像素点的Y轴坐标"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "saveToFile",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "裁剪指定区域并保存成图片。native只支持 \"image/png\" 和 \"image/jpeg\"；Web中由于各个浏览器的实现不一样，因此建议也只用这2种。",
+			"version": "Egret 2.4",
+			"platform": "Native",
+			"params": [
+				{
+					"name": "type",
+					"type": "string",
+					"description": "转换的类型，如  \"image/png\""
+				},
+				{
+					"name": "filePath",
+					"type": "string",
+					"description": "图片的名称的路径（主目录为游戏的私有空间，路径中不能有 \"../\"，Web只支持传名称。）"
+				},
+				{
+					"name": "rect",
+					"question": true,
+					"type": "egret.Rectangle",
+					"description": "需要转换的区域"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "string",
+			"name": "toDataURL",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "转换成base64字符串，如果图片（或者包含的图片）跨域，则返回null",
+			"returns": "base64字符串",
+			"version": "Egret 2.4",
+			"params": [
+				{
+					"name": "type",
+					"type": "string",
+					"description": "转换的类型，如  \"image/png\""
+				},
+				{
+					"name": "rect",
+					"question": true,
+					"type": "egret.Rectangle",
+					"description": "需要转换的区域"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Texture",
+		"memberof": "egret",
+		"filename": "egret/display/Texture.ts",
+		"description": "纹理类是对不同平台不同的图片资源的封装在HTML5中，资源是一个HTMLElement对象在OpenGL / WebGL中，资源是一个提交GPU后获取的纹理idTexture类封装了这些底层实现的细节，开发者只需要关心接口即可",
+		"see": [
+			"http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用",
+			"http://docs.egret-labs.org/post/manual/loader/getres.html 获取资源的几种方式"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;URLLoader&nbsp;加载图片资源并使用&nbsp;Bitmap&nbsp;进行显示。<br/>&nbsp;*&nbsp;还可以配合&nbsp;RES&nbsp;模块更便捷的加载。<br/>&nbsp;*/<br/>class&nbsp;TextureExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;URLLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;new&nbsp;egret.URLLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置加载方式为纹理<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.dataFormat&nbsp;=&nbsp;egret.URLLoaderDataFormat.TEXTURE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url:string&nbsp;=&nbsp;&quot;resource/assets/egret_icon.png&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;request:egret.URLRequest&nbsp;=&nbsp;new&nbsp;egret.URLRequest(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(request);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;&lt;egret.URLLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture:egret.Texture&nbsp;=&nbsp;&lt;egret.Texture&gt;loader.data;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;Bitmap&nbsp;进行显示<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(new&nbsp;egret.Bitmap(texture));<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"augments": [
+			"egret.HashObject"
+		],
+		"children": [
+			"egret.RenderTexture"
+		]
+	}
+}

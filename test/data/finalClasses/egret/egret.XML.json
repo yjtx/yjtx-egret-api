@@ -1,0 +1,129 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "attributes",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "当前节点上的属性列表",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "egret.XMLNode[]",
+			"name": "children",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "当前节点的子节点列表",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "localName",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "节点的本地名称。例如节点 <s:Button/> 的 localName 为：Button",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "节点完整名称。例如节点 <s:Button/> 的 name 为：\"s:Button\"",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "namespace",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "节点的命名空间地址。例如节点 <s:Skin xmlns:s=\"http://ns.egret.com/eui\"/> 的 namespace 为： http://ns.egret.com/eui",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "nodeType",
+			"memberof": "egret.XMLNode",
+			"scope": "instance",
+			"description": "节点类型，1：XML，2：XMLAttribute，3：XMLText",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.XMLNode"
+		},
+		{
+			"kind": "member",
+			"type": "egret.XML",
+			"name": "parent",
+			"memberof": "egret.XMLNode",
+			"scope": "instance",
+			"description": "节点所属的父级节点",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.XMLNode"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "prefix",
+			"memberof": "egret.XML",
+			"scope": "instance",
+			"description": "节点的命名空间前缀。例如节点 <s:Button/> 的 prefix 为：s",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "egret.XML",
+			"name": "parse",
+			"memberof": "egret.XML",
+			"scope": "static",
+			"description": "解析字符串为XML对象",
+			"params": [
+				{
+					"name": "text",
+					"type": "string",
+					"description": "要解析的XML对象。"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "XML",
+		"memberof": "egret",
+		"filename": "egret/utils/XML.ts",
+		"description": "XML 类包含用于处理 XML 对象的属性。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>*&nbsp;&nbsp;&nbsp;使用以下代码进行XML到JSON的属性访问<br/>*/<br/>class&nbsp;XMLExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;source&nbsp;=<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&apos;&lt;familys&nbsp;xmlns=&quot;http://www.w3.org/2005/Atom&quot;&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;family&nbsp;doorNumber=&quot;1001&quot;&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;father&quot;&nbsp;name=&quot;John&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;mather&quot;&nbsp;name=&quot;Ada&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;daughter&quot;&nbsp;name=&quot;Lucy&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;/family&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;family&nbsp;doorNumber=&quot;1002&quot;&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;father&quot;&nbsp;name=&quot;Jack&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;mather&quot;&nbsp;name=&quot;Afra&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;member&nbsp;relation=&quot;son&quot;&nbsp;name=&quot;Jom&quot;/&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;/family&gt;&apos;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&apos;&lt;/familys&gt;&apos;;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;familys&nbsp;=&nbsp;egret.XML.parse(source);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(familys.name);&nbsp;//familys<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(familys.localName);&nbsp;//familys<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(familys.nodeType);&nbsp;//1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(familys.namespace);&nbsp;//http://www.w3.org/2005/Atom<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;children&nbsp;=&nbsp;familys.children;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(children.length);&nbsp;//2<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;family1:egret.XML&nbsp;=&nbsp;&lt;egret.XML&gt;&lt;any&gt;children[0];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1.name);&nbsp;//family<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1.localName);&nbsp;//family<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1.nodeType);&nbsp;//1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1.namespace);&nbsp;//http://www.w3.org/2005/Atom<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1.attributes.doorNumber);&nbsp;//1001<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(family1[&quot;$doorNumber&quot;]);&nbsp;//1001<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;father1:egret.XML&nbsp;=&nbsp;&lt;egret.XML&gt;&lt;any&gt;family1.children[0];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.name);&nbsp;//member<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.localName);&nbsp;//member<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.nodeType);&nbsp;//1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.namespace);&nbsp;//http://www.w3.org/2005/Atom<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.attributes.relation);&nbsp;//father<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1[&quot;$relation&quot;]);&nbsp;//father<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1.attributes.name);&nbsp;//John<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(father1[&quot;$name&quot;]);&nbsp;//John<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+		"augments": [
+			"egret.XMLNode"
+		]
+	}
+}

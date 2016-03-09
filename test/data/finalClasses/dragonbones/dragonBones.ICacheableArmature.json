@@ -1,0 +1,77 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "enableCache",
+			"memberof": "dragonBones.ICacheableArmature",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "enableEventDispatch",
+			"memberof": "dragonBones.ICacheableArmature",
+			"scope": "instance",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "advanceTime",
+			"memberof": "dragonBones.IAnimatable",
+			"scope": "instance",
+			"description": "使用这个方法更新动画状态。一般来说，这个方法需要在 ENTERFRAME 事件的响应函数中被调用",
+			"params": [
+				{
+					"name": "passedTime",
+					"type": "number",
+					"description": "动画向前播放的时间（单位：秒）"
+				}
+			],
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.IAnimatable"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getAnimation",
+			"memberof": "dragonBones.IArmature",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.IArmature"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "resetAnimation",
+			"memberof": "dragonBones.IArmature",
+			"scope": "instance",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "dragonBones.IArmature"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "ICacheableArmature",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/cache/ICacheableArmature.ts",
+		"description": "ICacheableArmature 接口定义了可以使用缓存的Armature的接口。目前只有FastArmature实现了该接口。",
+		"see": [
+			"dragonBones.FastArmature",
+			"dragonBones.IArmature"
+		],
+		"augments": [
+			"dragonBones.IArmature",
+			"dragonBones.IAnimatable"
+		]
+	}
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+
+<style>
+    body {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .myfont {
+        font-size: 24px;
+    }
+
+    .mybtn {
+        margin: 0px 0px 0px 10px;
+        font-size: 24px;
+    }
+
+    .itemInput {
+        width: 100%;
+
+        font-size: 20px;
+    }
+
+    .myltd {
+        width: 110px;
+    }
+
+    .myrtd {
+        width: 100px;
+    }
+
+    .config {
+        position: absolute;
+        bottom: 40%;
+        width: 100%;
+    }
+
+</style>
+
+<script src="js/index.js"></script>
+<body>
+<div id="config" class="config">
+    <table border="0" style=" width:80%;height:130px; margin: 10px auto; min-width: 400px">
+        <tr>
+            <td class="myltd"><span class="myfont">源码路径:</span></td>
+            <td><input class="myfont  itemInput" id="filesPath" placeholder="请选择源码的根目录"></td>
+            <td class="myrtd">
+                <button class="mybtn" onclick="onBtnPath()" style="">浏览...</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="myltd"><span class="myfont">依赖路径:</span></td>
+            <td><input class="myfont  itemInput" id="dependencePath" placeholder="请选择依赖的根目录"></td>
+            <td class="myrtd">
+                <button class="mybtn" onclick="onDependencePath()" style="">浏览...</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="myltd"><span class="myfont">示例路径:</span></td>
+            <td><input class="myfont  itemInput" id="examplesPath" placeholder="请选择示例的根目录"></td>
+            <td class="myrtd">
+                <button class="mybtn" onclick="onBtnExamples()" style="">浏览...</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="myltd"><span class="myfont">配置文件:</span></td>
+            <td><input class="myfont  itemInput" id="typeFile" placeholder="请选择对应的配置文件"></td>
+            <td class="myrtd">
+                <button class="mybtn" onclick="onBtnType()" style="">浏览...</button>
+            </td>
+        </tr>
+    </table>
+
+    <table style="width:250px; margin: auto">
+        <tr style="text-align: center">
+            <td class="" style="text-align: center">
+                <button class="mybtn" id="cancel" onclick="clean()" style="right: 0px">重置</button>
+            </td>
+            <td class="" style="text-align: center;padding-left: -10px">
+                <button class="mybtn" type="submit" id="go" onclick="onBtnGo()" style="right: 0px">执行</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="show" style="padding:0;border: 0;margin: 0;display:none">
+    <iframe id="showFrame" name="showFrame" frameborder="0" border="none" padding="0px" marginwidth="0" marginheight="0"
+            style=""></iframe>
+</div>
+</body>
+<script>
+    function clean () {
+        var inputs = document.getElementsByClassName("itemInput");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = "";
+        }
+
+    }
+
+    window.onload = function () {
+        init();
+    };
+
+    window.onresize = function () {
+        init();
+    };
+
+    function init() {
+        var showFrame = document.getElementById("showFrame");
+        showFrame.style.width = (document.documentElement.clientWidth) + "px";
+        showFrame.style.height = (document.documentElement.clientHeight) + "px";
+
+//        console.log(document.documentElement.clientHeight);
+//        console.log(document.documentElement.offsetHeight);
+//        console.log(document.documentElement.scrollHeight);
+    }
+</script>
+<script>require('./js/menu.js')</script>
+</html>

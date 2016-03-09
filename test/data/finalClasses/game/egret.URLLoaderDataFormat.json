@@ -1,0 +1,80 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BINARY",
+			"memberof": "egret.URLLoaderDataFormat",
+			"scope": "static",
+			"description": "指定以原始二进制数据形式接收下载的数据。",
+			"version": "Egret 2.4",
+			"platform": "Web",
+			"pType": "public",
+			"default": "\"binary\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SOUND",
+			"memberof": "egret.URLLoaderDataFormat",
+			"scope": "static",
+			"description": "指定以声音形式接收已下载的数据。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"sound\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TEXT",
+			"memberof": "egret.URLLoaderDataFormat",
+			"scope": "static",
+			"description": "指定以文本形式接收已下载的数据。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"text\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TEXTURE",
+			"memberof": "egret.URLLoaderDataFormat",
+			"scope": "static",
+			"description": "指定以位图纹理形式接收已下载的数据。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"texture\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "VARIABLES",
+			"memberof": "egret.URLLoaderDataFormat",
+			"scope": "static",
+			"description": "指定以 URL 编码变量形式接收下载的数据。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "\"variables\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "URLLoaderDataFormat",
+		"memberof": "egret",
+		"filename": "extension/game/net/URLLoaderDataFormat.ts",
+		"description": "URLLoaderDataFormat 类提供了一些用于指定如何接收已下载数据的值。",
+		"see": [
+			"http://docs.egret-labs.org/post/manual/net/netformat.html 读取不同数据格式"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;URLLoader&nbsp;设置不同的&nbsp;dataFormat&nbsp;加载不同的资源。<br/>&nbsp;*/<br/>class&nbsp;URLLoaderDataFormatExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad(egret.URLLoaderDataFormat.TEXTURE,&nbsp;&quot;resource/assets/egret_icon.png&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad(egret.URLLoaderDataFormat.TEXT,&nbsp;&quot;resource/assets/icons.json&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad(egret.URLLoaderDataFormat.SOUND,&nbsp;&quot;resource/assets/sound.mp3&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad(dataFormat:string,&nbsp;url:string):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;URLLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;new&nbsp;egret.URLLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置加载方式<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.dataFormat&nbsp;=&nbsp;dataFormat;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;request:egret.URLRequest&nbsp;=&nbsp;new&nbsp;egret.URLRequest(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(request);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;&lt;egret.URLLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;dataFormat&nbsp;:&nbsp;&quot;&nbsp;+&nbsp;loader.dataFormat);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;data:any&nbsp;=&nbsp;loader.data;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;data&nbsp;:&nbsp;&quot;&nbsp;+&nbsp;data);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
+	}
+}

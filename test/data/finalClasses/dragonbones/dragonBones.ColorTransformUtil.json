@@ -1,0 +1,90 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.ColorTransform",
+			"name": "originalColor",
+			"memberof": "dragonBones.ColorTransformUtil",
+			"scope": "static",
+			"pType": "public",
+			"default": "new ColorTransform()"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "ColorTransformUtil",
+			"memberof": "dragonBones.ColorTransformUtil",
+			"scope": "instance",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.ColorTransform",
+			"name": "cloneColor",
+			"memberof": "dragonBones.ColorTransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "color",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "isEqual",
+			"memberof": "dragonBones.ColorTransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "color1",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				},
+				{
+					"name": "color2",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "minus",
+			"memberof": "dragonBones.ColorTransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "color1",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				},
+				{
+					"name": "color2",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				},
+				{
+					"name": "outputColor",
+					"type": "dragonBones.ColorTransform",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ColorTransformUtil",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/utils/ColorTransformUtil.ts"
+	}
+}

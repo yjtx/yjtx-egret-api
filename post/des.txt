@@ -1,0 +1,4 @@
+node upload.js --files file2=resource/bg2.png,file3=resource/effect.mp3,filezip=resource/zips.zip --method post --port 80 --host 10.0.5.163 --path /cn/api/JkensAPIUpdate/add_post
+
+node upload.js --files '[["file1","resource/bg1.jpg",{"type":1212,"version":2323}]]' --method post --port 80 --host 10.0.5.163 --path /cn/api/JkensAPIUpdate/add_post
+

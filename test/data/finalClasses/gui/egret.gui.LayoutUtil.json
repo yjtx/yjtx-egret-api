@@ -1,0 +1,36 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "adjustRelativeByXY",
+			"memberof": "egret.gui.LayoutUtil",
+			"scope": "static",
+			"description": "根据对象当前的xy坐标调整其相对位置属性，使其在下一次的父级布局中过程中保持当前位置不变。",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "要调整相对位置属性的对象"
+				},
+				{
+					"name": "parent",
+					"type": "egret.DisplayObjectContainer",
+					"default": "null",
+					"description": "element的父级容器。若不设置，则取element.parent的值。若两者的值都为空，则放弃调整。"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "LayoutUtil",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/utils/LayoutUtil.ts",
+		"description": "布局工具类"
+	}
+}

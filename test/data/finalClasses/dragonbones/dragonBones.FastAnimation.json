@@ -1,0 +1,271 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationCacheManager",
+			"name": "animationCacheManager",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "动画缓存管理器.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<dragonBones.AnimationData>",
+			"name": "animationDataList",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "包含的所有动画数据列表",
+			"see": [
+				"dragonBones.AnimationData."
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "animationList",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "所有动画名称列表.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.FastAnimationState",
+			"name": "animationState",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "当前正在运行的动画实例.",
+			"pType": "public",
+			"default": "new FastAnimationState()"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isComplete",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "是否播放完成.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "lastAnimationName",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前播放动画的名字.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.FastAnimationState",
+			"name": "lastAnimationState",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前播放动画的实例.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "movementID",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "Unrecommended API. Recommend use lastAnimationName.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "movementList",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "Unrecommended API. Recommend use animationList.",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "timeScale",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "时间缩放倍数",
+			"pType": "public"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "FastAnimation",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "创建一个新的FastAnimation实例并赋给传入的FastArmature实例",
+			"params": [
+				{
+					"name": "armature",
+					"type": "dragonBones.FastArmature",
+					"description": "骨架实例"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "Qualifies all resources used by this Animation instance for garbage collection.",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.FastAnimationState",
+			"name": "gotoAndPlay",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "开始播放指定名称的动画。要播放的动画将经过指定时间的淡入过程，然后开始播放，同时之前播放的动画会经过相同时间的淡出过程。",
+			"see": [
+				"dragonBones.FastAnimationState."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "指定播放动画的名称."
+				},
+				{
+					"name": "fadeInTime",
+					"type": "number",
+					"default": "-1",
+					"description": "动画淡入时间 (>= 0), 默认值：-1 意味着使用动画数据中的淡入时间."
+				},
+				{
+					"name": "duration",
+					"type": "number",
+					"default": "-1",
+					"description": "动画播放时间。默认值：-1 意味着使用动画数据中的播放时间."
+				},
+				{
+					"name": "playTimes",
+					"type": "number",
+					"default": "NaN",
+					"description": "动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.FastAnimationState",
+			"name": "gotoAndStop",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "播放指定名称的动画并停止于某个时间点",
+			"see": [
+				"dragonBones.FastAnimationState."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": "指定播放的动画名称."
+				},
+				{
+					"name": "time",
+					"type": "number",
+					"description": "动画停止的绝对时间"
+				},
+				{
+					"name": "normalizedTime",
+					"type": "number",
+					"default": "-1",
+					"description": "动画停止的相对动画总时间的系数，这个参数和time参数是互斥的（例如 0.2：动画停止总时间的20%位置） 默认值：-1 意味着使用绝对时间。"
+				},
+				{
+					"name": "fadeInTime",
+					"type": "number",
+					"default": "0",
+					"description": "动画淡入时间 (>= 0), 默认值：0"
+				},
+				{
+					"name": "duration",
+					"type": "number",
+					"default": "-1",
+					"description": "动画播放时间。默认值：-1 意味着使用动画数据中的播放时间."
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "hasAnimation",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "check if contains a AnimationData by name.",
+			"returns": "Boolean.",
+			"see": [
+				"dragonBones.AnimationData."
+			],
+			"params": [
+				{
+					"name": "animationName",
+					"type": "string",
+					"description": ""
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "isPlaying",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "是否正在播放",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "play",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "从当前位置继续播放动画",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stop",
+			"memberof": "dragonBones.FastAnimation",
+			"scope": "instance",
+			"description": "暂停动画播放",
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "FastAnimation",
+		"memberof": "dragonBones",
+		"filename": "extension/dragonbones/core/fast/animation/FastAnimation.ts",
+		"description": "FastAnimation实例隶属于FastArmature,用于控制FastArmature的动画播放。和Animation相比，FastAnimation为了优化性能，不支持动画融合，在开启缓存的情况下，不支持无极的平滑补间",
+		"see": [
+			"dragonBones.FastBone",
+			"dragonBones.FastArmature",
+			"dragonBones.FastAnimationState",
+			"dragonBones.AnimationData."
+		],
+		"example": "<pre><br/>\t&nbsp;&nbsp;&nbsp;&nbsp;//获取动画数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;skeletonData&nbsp;=&nbsp;RES.getRes(&quot;skeleton&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;textureData&nbsp;=&nbsp;RES.getRes(&quot;textureConfig&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取纹理集图片<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture&nbsp;=&nbsp;RES.getRes(&quot;texture&quot;);<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建一个工厂，用来创建Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;factory:dragonBones.EgretFactory&nbsp;=&nbsp;new&nbsp;dragonBones.EgretFactory();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把动画数据添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把纹理集数据和图片添加到工厂里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory.addTextureAtlas(new&nbsp;dragonBones.EgretTextureAtlas(texture,&nbsp;textureData));<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取Armature的名字，dragonBones4.0的数据可以包含多个骨架，这里取第一个Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureName:string&nbsp;=&nbsp;skeletonData.armature[0].name;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//从工厂里创建出Armature<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armature:dragonBones.FastArmature&nbsp;=&nbsp;factory.buildFastArmature(armatureName);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取装载Armature的容器<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;armatureDisplay&nbsp;=&nbsp;armature.display;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把它添加到舞台上<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(armatureDisplay);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//以60fps的帧率开启动画缓存，缓存所有的动画数据<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;animationCachManager:dragonBones.AnimationCacheManager&nbsp;=&nbsp;armature.enableAnimationCache(60);<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//取得这个Armature动画列表中的第一个动画的名字<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;curAnimationName&nbsp;=&nbsp;armature.animation.animationList[0];<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//播放这个动画，gotoAndPlay各个参数说明<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一个参数&nbsp;animationName&nbsp;{string}&nbsp;指定播放动画的名称.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第二个参数&nbsp;fadeInTime&nbsp;{number}&nbsp;动画淡入时间&nbsp;(&gt;=&nbsp;0),&nbsp;默认值：-1&nbsp;意味着使用动画数据中的淡入时间.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第三个参数&nbsp;duration&nbsp;{number}&nbsp;动画播放时间。默认值：-1&nbsp;意味着使用动画数据中的播放时间.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第四个参数&nbsp;layTimes&nbsp;{number}&nbsp;动画播放次数(0:循环播放,&nbsp;&gt;=1:播放次数,&nbsp;NaN:使用动画数据中的播放时间),&nbsp;默认值：NaN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;armature.animation.gotoAndPlay(curAnimationName,0.3,-1,0);<br/>\t&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//把Armature添加到心跳时钟里<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.add(armature);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//心跳时钟开启<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(function&nbsp;(advancedTime)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dragonBones.WorldClock.clock.advanceTime(advancedTime&nbsp;/&nbsp;1000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre>"
+	}
+}

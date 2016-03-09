@@ -1,0 +1,72 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "cos",
+			"memberof": "egret.NumberUtils",
+			"scope": "static",
+			"description": "得到对应角度值的cos近似值",
+			"returns": "cos值",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "value",
+					"type": "number",
+					"description": "角度值"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "isNumber",
+			"memberof": "egret.NumberUtils",
+			"scope": "static",
+			"description": "判断是否是数值",
+			"returns": "",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "value",
+					"type": "any",
+					"description": "需要判断的参数"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "sin",
+			"memberof": "egret.NumberUtils",
+			"scope": "static",
+			"description": "得到对应角度值的sin近似值",
+			"returns": "sin值",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "value",
+					"type": "number",
+					"description": "角度值"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "NumberUtils",
+		"memberof": "egret",
+		"filename": "egret/utils/NumberUtils.ts",
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

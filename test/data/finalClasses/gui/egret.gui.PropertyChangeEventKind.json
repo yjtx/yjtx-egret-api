@@ -1,0 +1,34 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "DELETE",
+			"memberof": "egret.gui.PropertyChangeEventKind",
+			"scope": "static",
+			"description": "指示该属性已从此对象中删除。",
+			"pType": "public",
+			"default": "\"delete\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "UPDATE",
+			"memberof": "egret.gui.PropertyChangeEventKind",
+			"scope": "static",
+			"description": "指示该属性的值已更改。",
+			"pType": "public",
+			"default": "\"update\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "PropertyChangeEventKind",
+		"memberof": "egret.gui",
+		"filename": "extension/gui/events/PropertyChangeEventKind.ts",
+		"description": "PropertyChangeEventKind 类定义 PropertyChangeEvent 类的 kind 属性的常量值。"
+	}
+}

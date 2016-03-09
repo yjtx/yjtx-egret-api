@@ -1,0 +1,178 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any[]",
+			"name": "events",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "帧事件列表",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "frameRate",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "帧率",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "any[]",
+			"name": "frames",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "帧数据列表",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "any[]",
+			"name": "labels",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "帧标签列表",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "egret.MovieClipData",
+			"name": "mcData",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "MovieClip数据源",
+			"pType": "public"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "numFrames",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "总帧数",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "1"
+		},
+		{
+			"kind": "member",
+			"type": "egret.SpriteSheet",
+			"name": "spriteSheet",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "纹理集",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "textureData",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "纹理数据",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public",
+			"default": "null"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "MovieClipData",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "创建一个 egret.MovieClipData 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getKeyFrameData",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "根据指定帧序号获取该帧对应的关键帧数据",
+			"returns": "帧数据对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "frame",
+					"type": "number",
+					"description": "帧序号"
+				}
+			],
+			"pType": "public"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "getTextureByFrame",
+			"memberof": "egret.MovieClipData",
+			"scope": "instance",
+			"description": "根据指定帧序号获取该帧对应的Texture对象",
+			"returns": "Texture对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "frame",
+					"type": "number",
+					"description": "帧序号"
+				}
+			],
+			"pType": "public"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "MovieClipData",
+		"memberof": "egret",
+		"filename": "extension/game/display/MovieClipData.ts",
+		"description": "使用 MovieClipData 类，您可以创建 MovieClip 对象和处理 MovieClip 对象的数据。MovieClipData 一般由MovieClipDataFactory生成",
+		"see": [
+			"http://edn.egret.com/cn/docs/page/596 MovieClip序列帧动画"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"augments": [
+			"egret.HashObject"
+		]
+	}
+}

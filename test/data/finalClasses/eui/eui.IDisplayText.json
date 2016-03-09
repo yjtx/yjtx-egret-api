@@ -1,0 +1,28 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "text",
+			"memberof": "eui.IDisplayText",
+			"scope": "instance",
+			"description": "此文本组件所显示的文本。",
+			"rwType": 1,
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"pType": "public"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IDisplayText",
+		"memberof": "eui",
+		"filename": "extension/eui/core/IDisplayText.ts",
+		"description": "IDisplayText 接口定义简单文本显示的属性.",
+		"version": "eui 1.0",
+		"platform": "Web,Native"
+	}
+}

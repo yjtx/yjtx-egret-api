@@ -1,0 +1,14 @@
+{
+    "modules": {
+        "egret": "egret",
+        "game": "extension/game",
+        "gui": "extension/gui",
+        "res": "extension/resource",
+        "eui": "extension/eui",
+        "tween": [
+            "extension/tween",
+            "extension/socket"
+        ],
+        "dragonbones": "extension/dragonbones"
+    }
+}
