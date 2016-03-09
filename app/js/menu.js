@@ -99,7 +99,11 @@ var template = [
                 }
             },
             {
-                label: '说明',
+                label: '注释说明',
+                click: showDescription
+            },
+            {
+                label: '格式说明',
                 click: showDescription
             },
             {
