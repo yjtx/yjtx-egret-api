@@ -1,4 +1,3 @@
-
 var template = [
     {
         label: '编辑',
@@ -18,8 +17,10 @@ var template = [
             },
             {
                 label: '退出',
-                click: function() { app.quit(); },
-                accelerator: (function() {
+                click: function () {
+                    app.quit();
+                },
+                accelerator: (function () {
                     if (process.platform == 'darwin')
                         return 'Command+Q';
                     else
@@ -34,7 +35,7 @@ var template = [
             {
                 label: '配置',
                 click: showConfig,
-                accelerator: (function() {
+                accelerator: (function () {
                     if (process.platform == 'darwin')
                         return 'Command+F';
                     else
@@ -49,7 +50,7 @@ var template = [
             {
                 label: 'api查看',
                 click: showApi,
-                accelerator: (function() {
+                accelerator: (function () {
                     if (process.platform == 'darwin')
                         return 'Command+R';
                     else
@@ -87,11 +88,19 @@ var template = [
         submenu: [
             {
                 label: 'source',
-                click: function() { shell.openExternal('https://github.com/yjtx/yjtx-egret-api') }
+                click: function () {
+                    shell.openExternal('https://github.com/yjtx/yjtx-egret-api')
+                }
             },
             {
                 label: '关于',
-                click: function() { shell.openExternal('http://electron.atom.io') }
+                click: function () {
+                    shell.openExternal('http://electron.atom.io')
+                }
+            },
+            {
+                label: '说明',
+                click: showDescription
             },
             {
                 label: 'About ',
@@ -102,12 +111,11 @@ var template = [
 ];
 
 const electron = require('electron');
-const shell    = electron.shell;
+const shell = electron.shell;
 
-const remote     = electron.remote;
+const remote = electron.remote;
 var Menu = remote.require('menu');
 var app = remote.require('app');
-
 
 
 var menu = Menu.buildFromTemplate(template);

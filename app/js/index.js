@@ -132,6 +132,18 @@ function showApi() {
     console.log("showApi");
 }
 
+function showDescription() {
+    var config = document.getElementById("config");
+    var show = document.getElementById("show");
+    var showFrame = document.getElementById("showFrame");
+
+    config.style.display = "none";
+    show.style.display = "block";
+    showFrame.src = "../readme/api.htm";
+
+    console.log("showDescription");
+}
+
 /**
  * @cmd  执行shell命令：如  node  xxx.js 
  */
