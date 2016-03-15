@@ -1,6 +1,6 @@
 ## 格式支持
 
-#### module
+#### Module
 
 ~~~
 module yjtx {
@@ -78,11 +78,11 @@ skins1: { [component: string]: string };
 
 * a1:number[];
 
-#### multi Types
+#### Multi Types
 
 b: boolean | number | string;
 
-#### funciton
+#### Funciton
 
 * 全局函数  function f():void;
 
@@ -94,7 +94,7 @@ b: boolean | number | string;
 
 * f:(b:number) => number;
 
-#### member
+#### Variable
 
 * 全局变量 var a:number;
 

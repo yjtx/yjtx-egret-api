@@ -53,24 +53,23 @@ function formatFile(sourceFile, parent) {
         }
         //else
         if (statement.kind == 189 /* ModuleDeclaration */) {
-            formatModule(statement, text, parent);
+            formatModule(statement, text, parent, false);
         }
         else if (statement.kind == 164 /* VariableStatement */) {
-            formatMember(statement, text, parent);
+            formatMember(statement, text, parent, null, false);
         }
         else if (statement.kind == 184 /* FunctionDeclaration */) {
-            formatMember(statement, text, parent);
-
+            formatMember(statement, text, parent, null, false);
         }
         else if (statement.kind == 186 /* InterfaceDeclaration */
             || (statement.kind == 185 /* ClassDeclaration */)
             || (statement.kind == 188 /* EnumDeclaration */)) {
-            formatClass(statement, text, parent);
+            formatClass(statement, text, parent, false);
         }
     }
 }
 
-function formatModule(statement, text, parent) {
+function formatModule(statement, text, parent, isPrivate) {
     if (statement.flags & 2 /* Ambient */) {
         //return;
     }
@@ -82,6 +81,20 @@ function formatModule(statement, text, parent) {
         }
         var tempParent = parent[objName]["$_tree_"];
 
+        var comments = {};
+        getComments(text, statement.pos, comments);
+
+        if (!isPrivate) {
+            for (var i = 0; comments["docs"] && i < comments["docs"].length; i++) {
+                var tdoc = comments["docs"][i];
+                if (tdoc["private"] == true) {
+                    isPrivate = true;
+
+                    break;
+                }
+            }
+        }
+
         if (statement.body.statements) {
             var tempStatements = statement.body.statements;
             var length = tempStatements.length;
@@ -90,19 +103,19 @@ function formatModule(statement, text, parent) {
                 if (tempStatement.flags & 2 /* Ambient */) {
                 }
                 else if (tempStatement.kind == 189 /* ModuleDeclaration */) {
-                    formatModule(tempStatement, text, parent[objName]["$_tree_"]);
+                    formatModule(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
                 }
                 else if (tempStatement.kind == 164 /* VariableStatement */) {
-                    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
+                    formatMember(tempStatement, text, parent[objName]["$_tree_"], null, isPrivate);
                 }
                 else if (tempStatement.kind == 184 /* FunctionDeclaration */) {
-                    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
+                    formatMember(tempStatement, text, parent[objName]["$_tree_"], null, isPrivate);
 
                 }
                 else if (tempStatement.kind == 186 /* InterfaceDeclaration */
                     || (tempStatement.kind == 185 /* ClassDeclaration */)
                     || (tempStatement.kind == 188 /* EnumDeclaration */)) {
-                    formatClass(tempStatement, text, parent[objName]["$_tree_"]);
+                    formatClass(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
                 }
             }
         }
@@ -111,25 +124,14 @@ function formatModule(statement, text, parent) {
             if (tempStatement.flags & 2 /* Ambient */) {
             }
             else if (tempStatement.kind == 189 /* ModuleDeclaration */) {
-                formatModule(tempStatement, text, parent[objName]["$_tree_"]);
+                formatModule(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
             }
-            //else if (tempStatement.kind == 164 /* VariableStatement */) {
-            //    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
-            //}
-            //else if (tempStatement.kind == 184 /* FunctionDeclaration */) {
-            //    formatMember(tempStatement, text, parent[objName]["$_tree_"]);
-            //
-            //}
-            //else if (tempStatement.kind == 186 /* InterfaceDeclaration */
-            //    || (tempStatement.kind == 185 /* ClassDeclaration */)
-            //    || (tempStatement.kind == 188 /* EnumDeclaration */) ) {
-            //    formatClass(tempStatement, text, parent[objName]["$_tree_"]);
-            //}
         }
+
     }
 }
 
-function formatClass(statement, text, parent) {
+function formatClass(statement, text, parent, isPrivate) {
     var objName = statement.name.getText();
     parent[objName] = {"$_tree_": {}};
 
@@ -148,11 +150,14 @@ function formatClass(statement, text, parent) {
                 parent[objName]["bodyType"] = "class";
             }
 
-            if (isExport(statement)) {//
-                parent[objName]["public"] = "public";
+            if (isPrivate == true) {
+                parent[objName]["pType"] = "private";
+            }
+            else if (isExport(statement)) {//
+                parent[objName]["pType"] = "public";
             }
             else {
-                parent[objName]["public"] = "private";
+                parent[objName]["pType"] = "private";
                 //由于局部的enum可能会重复，导致生成问题，因此直接排除局部enum
                 if (statement.kind == 188 /* EnumDeclaration */) {
                     delete parent[objName];
@@ -160,7 +165,7 @@ function formatClass(statement, text, parent) {
                 }
             }
 
-            formatMembers(statement, text, parent[objName]["$_tree_"]);
+            formatMembers(statement, text, parent[objName]["$_tree_"], false, isPrivate);
 
             if (statement.heritageClauses) {
                 for (var i2 = 0; i2 < statement.heritageClauses.length; i2++) {
@@ -207,14 +212,14 @@ function initImplements(implementedTypes, obj, text) {
 }
 
 
-function formatMembers(declaration, text, parent, isStatic) {
+function formatMembers(declaration, text, parent, isStatic, isPrivate) {
     var members = declaration["members"];
     var length = members.length;
 
     var enumValue = 0;
     for (var i = 0; i < length; i++) {
         var member = members[i];
-        formatMember(member, text, parent, isStatic);
+        formatMember(member, text, parent, isStatic, isPrivate);
 
         if (member.kind == 200 /* EnumMember */) {
             var name = member.name.getText();
@@ -230,7 +235,7 @@ function formatMembers(declaration, text, parent, isStatic) {
     }
 }
 
-function formatMember(member, text, parent, isStatic) {
+function formatMember(member, text, parent, isStatic, isPrivate) {
     var flags = member.flags;
 
     var name = "";
@@ -240,7 +245,7 @@ function formatMember(member, text, parent, isStatic) {
         if (parent[name] && parent[name]["bodyType"] == "interface") {
             parent[name]["bodyType"] = "class";
 
-            formatMembers(member.declarations[0]["type"], text, parent[name]["$_tree_"], true);
+            formatMembers(member.declarations[0]["type"], text, parent[name]["$_tree_"], true, isPrivate);
             return;
         }
 
@@ -356,7 +361,10 @@ function formatMember(member, text, parent, isStatic) {
     }
 
     //作用域
-    if (name.charAt(0) == "$" || name.charAt(0) == "_") {
+    if (isPrivate == true) {
+        parent[name]["pType"] = "private";
+    }
+    else if (name.charAt(0) == "$" || name.charAt(0) == "_") {
         parent[name]["pType"] = "protected";
     }
     else if (member.kind == 164 /* VariableStatement */) {
