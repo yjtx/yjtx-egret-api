@@ -9,7 +9,6 @@
 			"description": "竖直从下到上增长",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"btt\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "水平从左到右增长",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"ltr\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "水平从右到左增长",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"rtl\""
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "竖直从上到下增长",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"ttb\""
 		}
 	],

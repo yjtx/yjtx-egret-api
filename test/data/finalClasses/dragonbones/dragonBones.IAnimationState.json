@@ -5,8 +5,7 @@
 			"type": "number",
 			"name": "progress",
 			"memberof": "dragonBones.IAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [],

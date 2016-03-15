@@ -14,8 +14,7 @@
 					"type": "string",
 					"description": "样式名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -30,8 +29,7 @@
 					"type": "String",
 					"description": "样式名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -46,8 +44,7 @@
 					"type": "string",
 					"description": "样式名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -62,8 +59,7 @@
 					"type": "any",
 					"description": "parentChain"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -83,8 +79,7 @@
 					"type": "any",
 					"description": "样式值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -99,8 +94,7 @@
 					"type": "string",
 					"description": "发生改变的样式名称，若为null表示所有样式都发生了改变。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

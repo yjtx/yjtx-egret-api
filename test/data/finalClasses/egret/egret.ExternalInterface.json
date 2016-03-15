@@ -21,8 +21,7 @@
 					"type": "(value)=>void",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -44,8 +43,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

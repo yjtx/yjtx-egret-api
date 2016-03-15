@@ -7,8 +7,7 @@
 			"memberof": "egret.gui.UIGlobals",
 			"scope": "static",
 			"rwType": 1,
-			"description": "舞台引用，当第一个UIComponent添加到舞台时此属性被自动赋值",
-			"pType": "public"
+			"description": "舞台引用，当第一个UIComponent添加到舞台时此属性被自动赋值"
 		},
 		{
 			"kind": "member",
@@ -17,8 +16,7 @@
 			"memberof": "egret.gui.UIGlobals",
 			"scope": "static",
 			"rwType": 1,
-			"description": "顶级应用容器",
-			"pType": "public"
+			"description": "顶级应用容器"
 		}
 	],
 	"function": [],

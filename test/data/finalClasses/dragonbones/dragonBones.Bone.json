@@ -10,7 +10,6 @@
 			"see": [
 				"dragonBones.Bone#offset"
 			],
-			"pType": "public",
 			"default": "true"
 		},
 		{
@@ -23,7 +22,6 @@
 			"see": [
 				"dragonBones.Bone#offset"
 			],
-			"pType": "public",
 			"default": "false"
 		},
 		{
@@ -36,7 +34,6 @@
 			"see": [
 				"dragonBones.Bone#offset"
 			],
-			"pType": "public",
 			"default": "true"
 		},
 		{
@@ -47,7 +44,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "The armature this DBObject instance belongs to.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -58,8 +54,7 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "不推荐的API,建议使用 slot.childArmature 替代",
-			"pType": "public"
+			"description": "不推荐的API,建议使用 slot.childArmature 替代"
 		},
 		{
 			"kind": "member",
@@ -67,7 +62,6 @@
 			"name": "childrenBones",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"pType": "public",
 			"default": "[]"
 		},
 		{
@@ -76,8 +70,7 @@
 			"name": "display",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "不推荐的API,建议使用 slot.display 替代",
-			"pType": "public"
+			"description": "不推荐的API,建议使用 slot.display 替代"
 		},
 		{
 			"kind": "member",
@@ -88,8 +81,7 @@
 			"description": "display控制者的名字，该名字对应一个 AnimationState 实例。当动画中有多个 AnimationState 存在时，我们可以通过指定 displayController 实现只有某个 AnimationState 能够控制 display 的切换。默认值：null。意味着所有 AnimationState 都能控制display的切换",
 			"see": [
 				"dragonBones.AnimationState."
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -99,7 +91,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "相对世界坐标的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -110,7 +101,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的旋转属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -121,7 +111,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的缩放属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -132,7 +121,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的平移属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -142,7 +130,6 @@
 			"name": "isIKConstraint",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"pType": "public",
 			"default": "false"
 		},
 		{
@@ -150,8 +137,7 @@
 			"type": "number",
 			"name": "length",
 			"memberof": "dragonBones.Bone",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -159,7 +145,6 @@
 			"name": "name",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -170,8 +155,7 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "不推荐的API,建议使用 offset 替代",
-			"pType": "public"
+			"description": "不推荐的API,建议使用 offset 替代"
 		},
 		{
 			"kind": "member",
@@ -181,7 +165,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "用于运行时动态调整的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -193,7 +176,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "骨架数据中的原始的相对父亲的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -205,7 +187,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -215,16 +196,14 @@
 			"name": "parentBoneRotation",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
 			"type": "number",
 			"name": "rotationIK",
 			"memberof": "dragonBones.Bone",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -233,8 +212,7 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "返回当前 Bone 实例包含的第一个 Slot 实例",
-			"pType": "public"
+			"description": "返回当前 Bone 实例包含的第一个 Slot 实例"
 		},
 		{
 			"kind": "member",
@@ -243,7 +221,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "存储额外的用户数据。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		}
@@ -253,8 +230,7 @@
 			"kind": "function",
 			"name": "Bone",
 			"memberof": "dragonBones.Bone",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -275,8 +251,7 @@
 					"default": "false",
 					"description": "是否延迟更新。默认false。当需要一次性添加很多 Bone 时，开启延迟更新能够提高效率"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -291,16 +266,14 @@
 					"type": "dragonBones.Slot",
 					"description": "需要添加的 Slot 实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "adjustGlobalTransformMatrixByIK",
 			"memberof": "dragonBones.Bone",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -316,8 +289,7 @@
 					"type": "dragonBones.DBObject",
 					"description": "Bone 实例 或者 Slot 实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -326,7 +298,6 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "清理使用的资源用于垃圾回收"
 		},
 		{
@@ -344,8 +315,7 @@
 					"default": "true",
 					"description": "是否返回拷贝。默认：true"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -362,8 +332,7 @@
 					"default": "true",
 					"description": "是否返回拷贝。默认：true"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -377,8 +346,7 @@
 					"type": "dragonBones.BoneData",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -386,8 +354,7 @@
 			"name": "invalidUpdate",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "在下一帧强制更新当前 Bone 实例及其包含的所有 Slot 的动画。",
-			"pType": "public"
+			"description": "在下一帧强制更新当前 Bone 实例及其包含的所有 Slot 的动画。"
 		},
 		{
 			"kind": "function",
@@ -408,8 +375,7 @@
 					"default": "false",
 					"description": "是否延迟更新。默认false。当需要一次性移除很多 Bone 时，开启延迟更新能够提高效率"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -424,8 +390,7 @@
 					"type": "dragonBones.Slot",
 					"description": "需要移除的 Slot 实例"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

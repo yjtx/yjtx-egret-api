@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "设备绕 Z 轴旋转的角速度信息，单位是 度/秒",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "设备绕 X 轴旋转的角速度信息，单位是 度/秒",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -30,8 +28,7 @@
 			"scope": "instance",
 			"description": "设备绕 Y 轴旋转的角速度信息，单位是 度/秒",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

@@ -14,8 +14,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -30,8 +29,7 @@
 					"type": "egret.gui.IStateClient",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -46,8 +44,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

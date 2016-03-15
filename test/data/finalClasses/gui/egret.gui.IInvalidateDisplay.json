@@ -7,8 +7,7 @@
 			"name": "validateNow",
 			"memberof": "egret.gui.IInvalidateDisplay",
 			"scope": "instance",
-			"description": "立即应用所有标记为延迟验证的属性",
-			"pType": "public"
+			"description": "立即应用所有标记为延迟验证的属性"
 		}
 	],
 	"globalMember": [],

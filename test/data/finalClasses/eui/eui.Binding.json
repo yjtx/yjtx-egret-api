@@ -32,8 +32,7 @@
 					"type": "any",
 					"description": "handler 方法绑定的this对象"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -66,8 +65,7 @@
 					"type": "string",
 					"description": "本次绑定要更新的目标属性名称。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

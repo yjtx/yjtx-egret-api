@@ -9,7 +9,6 @@
 			"description": "指示集合添加了一个或多个项目。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"add\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "指示集合应用了排序或/和筛选。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"refresh\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "指示集合删除了一个或多个项目。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"remove\""
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "指示已替换由 CollectionEvent.location 属性确定的位置处的项目。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"replace\""
 		},
 		{
@@ -57,7 +53,6 @@
 			"description": "指示集合已彻底更改，需要进行重置。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"reset\""
 		},
 		{
@@ -69,7 +64,6 @@
 			"description": "指示集合中一个或多个项目进行了更新。受影响的项目将存储在  CollectionEvent.items 属性中。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"update\""
 		}
 	],

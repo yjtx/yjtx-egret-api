@@ -6,8 +6,7 @@
 			"name": "numElements",
 			"memberof": "egret.gui.UILayer",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		}
 	],
 	"function": [
@@ -33,8 +32,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -50,8 +48,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "element"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -72,8 +69,7 @@
 					"type": "number",
 					"description": "index"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -89,8 +85,7 @@
 					"type": "number",
 					"description": "index"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -106,8 +101,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "element"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -123,8 +117,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "element"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -140,8 +133,7 @@
 					"type": "number",
 					"description": "index"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -161,8 +153,7 @@
 					"type": "number",
 					"description": "index"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

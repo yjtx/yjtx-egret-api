@@ -6,8 +6,7 @@
 			"name": "selectedChild",
 			"memberof": "egret.gui.IViewStack",
 			"scope": "instance",
-			"description": "当前可见的子元素。",
-			"pType": "public"
+			"description": "当前可见的子元素。"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "selectedIndex",
 			"memberof": "egret.gui.IViewStack",
 			"scope": "instance",
-			"description": "当前可见子元素的索引。索引从0开始。",
-			"pType": "public"
+			"description": "当前可见子元素的索引。索引从0开始。"
 		}
 	],
 	"function": [],

@@ -6,8 +6,7 @@
 			"name": "DefaultThemeAdapter",
 			"memberof": "egret.gui.DefaultThemeAdapter",
 			"scope": "instance",
-			"description": "构造函数",
-			"pType": "public"
+			"description": "构造函数"
 		},
 		{
 			"kind": "function",
@@ -37,8 +36,7 @@
 					"type": "any",
 					"description": "回调的this引用"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

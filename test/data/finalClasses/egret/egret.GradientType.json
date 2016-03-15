@@ -7,7 +7,6 @@
 			"memberof": "egret.GradientType",
 			"scope": "static",
 			"description": "用于指定线性渐变填充的值",
-			"pType": "public",
 			"default": "\"linear\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "egret.GradientType",
 			"scope": "static",
 			"description": "用于指定放射状渐变填充的值",
-			"pType": "public",
 			"default": "\"radial\""
 		}
 	],

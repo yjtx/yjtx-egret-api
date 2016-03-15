@@ -9,7 +9,6 @@
 			"description": "节点类型，1：XML，2：XMLAttribute，3：XMLText",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.XMLNode"
 		},
@@ -22,7 +21,6 @@
 			"description": "节点所属的父级节点",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.XMLNode"
 		},
@@ -34,8 +32,7 @@
 			"scope": "instance",
 			"description": "文本内容",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

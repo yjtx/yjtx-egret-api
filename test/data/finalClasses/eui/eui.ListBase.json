@@ -9,7 +9,6 @@
 			"description": "未设置缓存选中项的值",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "-2"
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "未选中任何项时的索引值",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "-1"
 		},
 		{
@@ -34,7 +32,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -48,7 +45,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -62,7 +58,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -79,7 +74,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -92,7 +86,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "距父级容器底部距离。",
@@ -108,7 +101,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -122,7 +114,6 @@
 			"copy": "eui.IViewport#contentHeight",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "视域的内容的高度。如果 <code>scrollEnabled</code> 为 true，则视域的 <code>contentHeight</code> 为垂直滚动定义限制，且视域的实际高度定义可见的内容量。要在内容中垂直滚动，请在 0 和 contentHeight - height之间更改 <code>scrollV</code>。"
@@ -137,7 +128,6 @@
 			"copy": "eui.IViewport#contentWidth",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "视域的内容的宽度。如果 <code>scrollEnabled</code> 为 true， 则视域的 <code>contentWidth</code> 为水平滚动定义限制，且视域的实际宽度定义可见的内容量。要在内容中水平滚动， 请在 0 和 contentWidth - width 之间更改 <code>scrollH</code> 。"
@@ -151,7 +141,6 @@
 			"copy": "eui.Component#currentState",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的当前视图状态。显式设置此属性，将采用显式设置的值去更新皮肤状态，而忽略组件内部 getCurrentState() 方法返回的值。将其设置为 \"\" 或 null 可将取消组件外部显式设置的视图状态名称，从而采用内部 getCurrentState() 方法返回的状态。"
@@ -169,7 +158,6 @@
 			],
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup"
 		},
@@ -183,7 +171,6 @@
 			"description": "此属性通常在 EXML 的解析器中调用，便于快速添加多个子项。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -196,7 +183,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "外部显式指定的高度。"
@@ -210,7 +196,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "外部显式指定的宽度。"
@@ -224,7 +209,6 @@
 			"copy": "eui.Skin#hasState()",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -238,7 +222,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -251,7 +234,6 @@
 			"description": "表示显示对象的高度，以像素为单位。高度是根据显示对象内容的范围来计算的。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -264,7 +246,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "在父级容器中距水平中心位置的距离。",
@@ -279,7 +260,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "指定此组件是否包含在父容器的布局中。若为false，则父级容器在测量和布局阶段都忽略此组件。注意，visible属性与此属性不同，设置visible为false，父级容器仍会对其布局。",
@@ -294,7 +274,6 @@
 			"description": "用于数据项目的项呈示器。您应该直接为此属性赋值自定义类的类定义，而不是一个实例。注意：该类必须实现 IItemRenderer 接口。<br/>rendererClass获取顺序：itemRendererFunction > itemRenderer > 默认ItemRenerer。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup"
 		},
@@ -307,7 +286,6 @@
 			"description": "为某个特定数据项返回一个项呈示器类定义的函数。rendererClass获取顺序：itemRendererFunction > itemRenderer > 默认ItemRenerer。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup"
 		},
@@ -320,7 +298,6 @@
 			"description": "条目渲染器的可选皮肤标识符。在实例化itemRenderer时，若其内部没有设置过skinName,则将此属性的值赋值给它的skinName。注意:若 itemRenderer 不是 Component 的子类，则此属性无效。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup"
 		},
@@ -333,7 +310,6 @@
 			"description": "此容器的布局对象。s@default eui.BasicLayout",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -346,7 +322,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "距父级容器离左边距离。",
@@ -362,7 +337,6 @@
 			"example": "以下代码改变了显示对象 mask 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMask:Rectangle&nbsp;=&nbsp;myDisplayObject.mask;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMask.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.mask&nbsp;=&nbsp;myMask;//设置完&nbsp;mask&nbsp;的x、y、width、height值之后，一定要对myDisplayObject重新赋值&nbsp;mask，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -376,7 +350,6 @@
 			"example": "以下代码改变了显示对象矩阵的tx属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMatrix:Matrix&nbsp;=&nbsp;myDisplayObject.matrix;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMatrix.tx&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.matrix&nbsp;=&nbsp;myMatrix;<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -389,7 +362,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的最大高度,同时影响测量和自动布局的尺寸。"
@@ -403,7 +375,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的最大高度。同时影响测量和自动布局的尺寸。"
@@ -419,7 +390,6 @@
 			"returns": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -434,7 +404,6 @@
 			"returns": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -447,7 +416,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的最小高度,此属性设置为大于maxHeight的值时无效。同时影响测量和自动布局的尺寸。"
@@ -461,7 +429,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的最小宽度,此属性设置为大于maxWidth的值时无效。同时影响测量和自动布局的尺寸。"
@@ -475,7 +442,6 @@
 			"description": "表示 DisplayObject 的实例名称。通过调用父显示对象容器的 getChildByName() 方法，可以在父显示对象容器的子列表中标识该对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -489,7 +455,6 @@
 			"description": "返回此对象的子项数目。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -503,7 +468,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup",
 			"description": "布局元素子项的数量。"
@@ -518,7 +482,6 @@
 			"description": "表示包含此显示对象的 DisplayObjectContainer 对象。使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -531,7 +494,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "相对父级容器高度的百分比。",
@@ -546,7 +508,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "相对父级容器宽度的百分比。",
@@ -560,8 +521,7 @@
 			"scope": "instance",
 			"description": "如果为 true，则控件中必须含有选中的数据项目。如果该值为 true，则始终将 selectedIndex 属性设置为 0 和 (dataProvider.length - 1) 之间的一个值。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -572,7 +532,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "距父级容器右边距离。",
@@ -588,7 +547,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -602,7 +560,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -616,7 +573,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -629,7 +585,6 @@
 			"copy": "eui.IViewport#scrollEnabled",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "是否启用容器滚动。如果为 true，则将子项剪切到视区的边界，配合设置scrollH和scrollV属性将能滚动视区。如果为 false，则容器子代会从容器边界扩展过去，而设置scrollH和scrollV也无效。默认false。",
@@ -644,7 +599,6 @@
 			"copy": "eui.IViewport#scrollH",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "可视区域水平方向起始点。"
@@ -659,7 +613,6 @@
 			"example": "以下代码改变了显示对象 scrollRect 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myRectangle:Rectangle&nbsp;=&nbsp;myDisplayObject.scrollRect;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myRectangle.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.scrollRect&nbsp;=&nbsp;myRectangle;//设置完scrollRect的x、y、width、height值之后，一定要对myDisplayObject重新赋值scrollRect，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -672,7 +625,6 @@
 			"copy": "eui.IViewport#scrollV",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "可视区域竖直方向起始点。"
@@ -686,8 +638,7 @@
 			"description": "选中项目的基于 0 的索引。或者如果未选中项目，则为-1。设置 selectedIndex 属性会取消选择当前选定的项目并选择指定索引位置的数据项目。<p/>这个值会之中在-1到<code>(dataProvider.length&nbsp;-&nbsp;1)</code>之间。如果从该组件中删除一个低于<code>selectedIndex</code>的值，则<code>selectedIndex</code>也会相应的调节选定的索引。<p/>如果删除的项为当前选中项，则该值会变为：<p/><ul>   <li>-1: 如果 <code>requireSelection&nbsp;==&nbsp;false</code> 或者已经没有剩余项目。</li>   <li> 0: 如果 <code>requireSelection&nbsp;==&nbsp;true</code> 并且当前至少还有一个剩余项目。</li></ul><p/>当用户通过与控件交互来更改 selectedIndex 属性时，此控件将分派 change 和 changing 事件。当以编程方式更改 selectedIndex 属性的值时，此控件不分派 change 和 changing 事件。",
 			"default": "-1",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -698,8 +649,7 @@
 			"description": "当前已选中的项目。设置此属性会取消选中当前选定的项目并选择新指定的项目。<p/>如果设置的<code>selectedItem</code>不在当前列表里那么<code>selectedItem</code>将被设置为<code>undefined</code>。<p/>如果选择项目被移除，那选择项会被设置为：<p/><ul>  <li><code>undefined</code>: 如果 <code>requireSelection&nbsp;==&nbsp;false</code>    或者已经没有剩余项。</li>  <li>第一项: 当 <code>requireSelection&nbsp;==&nbsp;true</code>    并且列表中还至少存有一项.</li></ul><p/>当用户通过与控件交互来更改 selectedItem 属性时，此控件将分派 change 和 changing 事件。当以编程方式更改 selectedItem 属性的值时，此控件不分派 change 和 changing 事件。<p/>",
 			"default": "undefined",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -711,7 +661,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -725,7 +674,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -739,7 +687,6 @@
 			"description": "显示对象的舞台。例如，您可以创建多个显示对象并加载到显示列表中，每个显示对象的 stage 属性是指向相同的 Stage 对象。<br/>如果显示对象未添加到显示列表，则其 stage 属性会设置为 null。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -752,7 +699,6 @@
 			"description": "为此组件定义的视图状态。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -765,7 +711,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "距父级容器顶部距离。",
@@ -781,7 +726,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -798,7 +742,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -811,7 +754,6 @@
 			"description": "触摸组件的背景透明区域是否可以穿透。设置为true表示可以穿透，反之透明区域也会响应触摸事件。默认 false。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -824,7 +766,6 @@
 			"copy": "eui.LayoutBase#useVirtualLayout",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup",
 			"description": "若要配置容器使用虚拟布局，请为与容器关联的布局的 <code>useVirtualLayout</code> 属性设置为 <code>true</code>。只有布局设置为 VerticalLayout、HorizontalLayout 或 TileLayout 的 DataGroup 才支持虚拟布局。不支持虚拟化的布局子类必须禁止更改此属性。",
@@ -839,7 +780,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "在父级容器中距竖直中心位置的距离。",
@@ -855,7 +795,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -868,7 +807,6 @@
 			"description": "表示显示对象的宽度，以像素为单位。宽度是根据显示对象内容的范围来计算的。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -882,7 +820,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -896,7 +833,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		}
@@ -909,8 +845,7 @@
 			"scope": "instance",
 			"description": "构造函数",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -932,7 +867,6 @@
 					"description": "要作为该 DisplayObjectContainer 实例的子项添加的 DisplayObject 实例。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -961,7 +895,6 @@
 					"description": "添加该子项的索引位置。 如果指定当前占用的索引位置，则该位置以及所有更高位置上的子对象会在子级列表中上移一个位置。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1003,7 +936,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表的所有节点上注册事件侦听器。成功注册一个事件侦听器后，无法通过额外调用 on() 来更改其优先级。要更改侦听器的优先级，必须先调用 removeEventListener()。然后，可以使用新的优先级再次注册该侦听器。注册该侦听器后，如果继续调用具有不同 type 或 useCapture值的 on()，则会创建单独的侦听器注册。<br/>如果不再需要某个事件侦听器，可调用 EventDispatcher.removeEventListener()删除它；否则会产生内存问题。由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。复制EventDispatcher 实例时并不复制其中附加的事件侦听器。（如果新近创建的节点需要一个事件侦听器，必须在创建该节点后附加该侦听器。）但是，如果移动 EventDispatcher 实例，则其中附加的事件侦听器也会随之移动。如果在正在处理事件的节点上注册事件侦听器，则不会在当前阶段触发事件侦听器，但会在事件流的稍后阶段触发，如冒泡阶段。如果从正在处理事件的节点中删除事件侦听器，则该事件侦听器仍由当前操作触发。删除事件侦听器后，决不会再次调用该事件侦听器（除非再次注册以备将来处理）。",
@@ -1029,7 +961,6 @@
 					"description": "要测试的子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1049,7 +980,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "将事件分派到事件流中。事件目标是对其调用 dispatchEvent() 方法的 EventDispatcher 对象。",
@@ -1083,7 +1013,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher"
 		},
@@ -1111,7 +1040,6 @@
 					"description": "可选参数，是否会计算锚点。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1135,7 +1063,6 @@
 					"description": "子对象的索引位置。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1160,7 +1087,6 @@
 					"description": "要返回的子项的名称。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1181,7 +1107,6 @@
 					"description": "要测试的子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1201,7 +1126,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup",
 			"description": "获取一个布局元素子项。"
@@ -1222,7 +1146,6 @@
 					"description": "可以放置结果的<code>egret.Rectangle</code>实例。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "组件的布局尺寸,常用于父级的<code>updateDisplayList()</code>方法中。<p/>按照：布局尺寸>外部显式设置尺寸>测量尺寸 的优先级顺序返回尺寸。<p/>注意此方法返回值已经包含scale和rotation。"
@@ -1243,7 +1166,6 @@
 					"description": "可以放置结果的<code>egret.Rectangle</code>实例。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "获取组件的首选尺寸,常用于父级的<code>measure()</code>方法中。<p/>按照：外部显式设置尺寸>测量尺寸 的优先级顺序返回尺寸。<p/>注意此方法返回值已经包含scale和rotation。"
@@ -1271,7 +1193,6 @@
 					"description": "一个用于存储结果的可复用Rectangle实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1291,7 +1212,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup"
 		},
@@ -1325,7 +1245,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1345,7 +1264,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 EventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。要确定特定事件类型是否确实会触发事件侦听器，请使用 IEventDispatcher.willTrigger()。hasEventListener()与 willTrigger() 的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 检查整个事件流以查找由 type 参数指定的事件。",
@@ -1382,7 +1300,6 @@
 					"description": "是检查对象 (true) 的实际像素，还是检查边框 (false) 的实际像素。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1395,7 +1312,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "标记需要验证显示列表，以便在稍后屏幕更新期间调用该组件的 updateDisplayList() 方法。<p/>Invalidation 是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改宽度和高度，如果在更改宽度后立即更新组件，然后在设置新高度后再次更新组件，就有些浪费。更改两个属性后再使用新的大小一次性呈示组件，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
@@ -1409,7 +1325,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "标记提交过需要延迟应用的属性，以便在稍后屏幕更新期间调用该组件的 commitProperties() 方法。<p/>这是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改文本颜色和大小，如果在更改颜色后立即进行更新，然后在设置大小后再更新大小，就有些浪费。同时更改两个属性后再使用新的大小和颜色一次性呈示文本，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
@@ -1423,7 +1338,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup",
 			"description": "标记提交过需要验证组件尺寸，以便在稍后屏幕更新期间调用该组件的 measure() 方法。<p/>Invalidation 是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改文本和字体大小，如果在更改文本后立即进行更新，然后在设置大小后再更新大小，就有些浪费。更改两个属性后再使用新的大小一次性呈示文本，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
@@ -1437,7 +1351,6 @@
 			"copy": "eui.Component#invalidateState()",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "标记组件当前的视图状态失效，调用此方法后，子类应该覆盖 <code>getCurrentState()</code> 方法来返回当前的视图状态名称。"
@@ -1472,7 +1385,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1514,7 +1426,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "添加仅回调一次的事件侦听器，此方法与on()方法不同，on()方法会持续产生回调，而此方法在第一次回调时就会自动移除监听。",
@@ -1543,7 +1454,6 @@
 					"description": "要删除的 DisplayObject 实例。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1567,7 +1477,6 @@
 					"description": "要删除的 DisplayObject 的子索引。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1584,7 +1493,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1620,7 +1528,6 @@
 					"description": "指出是为捕获阶段还是为冒泡阶段注册了侦听器。如果为捕获阶段以及冒泡阶段注册了侦听器，则需要对removeEventListener() 进行两次调用才能将这两个侦听器删除：一次调用将 useCapture 设置为 true，另一次调用将 useCapture 设置为 false。。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
@@ -1650,7 +1557,6 @@
 					"description": "生成的 child 显示对象的索引编号。当新的索引编号小于0或大于已有子元件数量时，新加入的DisplayObject对象将会放置于最上层。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1675,7 +1581,6 @@
 					"description": "<code>contentHeight</code> 的新值。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group"
 		},
@@ -1700,7 +1605,6 @@
 					"description": "边框左上角的 Y 坐标。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "设置元素在屏幕上进行绘制时所用的布局坐标。<p/>请注意，调用 setLayoutBoundSize() 方法会影响布局位置，因此请在调用 setLayoutBoundSize()之后再调用 setLayoutBoundPosition()。"
@@ -1726,7 +1630,6 @@
 					"description": "元素的布局高度。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "设置元素的布局大小。这是元素在屏幕上进行绘制时所用的大小。<p/>如果 width 和/或 height 参数尚未指定 (NaN))，则 EUI 会将该元素的布局大小设置为首选宽度和/或首选高度。<p/>请注意，调用 setLayoutBoundSize() 方法会影响布局位置，因此请在调用 setLayoutBoundSize()之后再调用 setLayoutBoundPosition()。"
@@ -1752,7 +1655,6 @@
 					"description": "测量高度"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "设置测量结果。"
@@ -1778,7 +1680,6 @@
 					"description": "可视元素结束索引（包括）"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.DataGroup",
 			"description": "在支持虚拟布局的容器中，设置容器内可见的子元素索引范围。此方法在不支持虚拟布局的容器中无效。通常在即将重新布局子项之前会被调用一次，容器覆盖此方法提前释放已经不可见的子元素。"
@@ -1807,7 +1708,6 @@
 					"description": "第二个子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1835,7 +1735,6 @@
 					"description": "第二个子对象的索引位置。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1864,8 +1763,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -1876,7 +1774,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "验证子项的位置和大小，并绘制其他可视内容。"
@@ -1890,7 +1787,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "验证并更新此对象的属性和布局，如果需要的话重绘对象。<p/>通常只有当脚本执行完毕后，才会处理要求进行大量计算的处理属性。<p/>例如，对 width 属性的设置可能会延迟，因为此设置需要重新计算这些对象的子项或父项的宽度。如果脚本多次设置了 width 属性，则延迟处理可防止进行多次处理。此方法允许您手动覆盖此行为。"
@@ -1904,7 +1800,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "由布局逻辑用于通过调用 commitProperties() 方法来验证组件的属性。通常，子类应覆盖 commitProperties() 方法，而不是覆盖此方法。"
@@ -1926,7 +1821,6 @@
 					"description": "如果为 true，则调用对象子项的此方法。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "eui.Group",
 			"description": "验证组件的尺寸。"
@@ -1947,7 +1841,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。将指定类型的事件调度给此EventDispatcher 对象或其任一后代时，如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。hasEventListener() 与 willTrigger() 方法的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 方法检查整个事件流以查找由 type 参数指定的事件。",

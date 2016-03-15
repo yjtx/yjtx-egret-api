@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.DisplayData",
 			"scope": "static",
 			"description": "子骨架类型",
-			"pType": "public",
 			"default": "\"armature\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "dragonBones.DisplayData",
 			"scope": "static",
 			"description": "图片类型",
-			"pType": "public",
 			"default": "\"image\""
 		},
 		{
@@ -26,8 +24,7 @@
 			"name": "name",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "显示对象的名字",
-			"pType": "public"
+			"description": "显示对象的名字"
 		},
 		{
 			"kind": "member",
@@ -35,8 +32,7 @@
 			"name": "pivot",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "注册点，旋转中心",
-			"pType": "public"
+			"description": "注册点，旋转中心"
 		},
 		{
 			"kind": "member",
@@ -44,8 +40,7 @@
 			"name": "transform",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "变换矩阵Transform表示位移，旋转，缩放，三种属性",
-			"pType": "public"
+			"description": "变换矩阵Transform表示位移，旋转，缩放，三种属性"
 		},
 		{
 			"kind": "member",
@@ -53,8 +48,7 @@
 			"name": "type",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "显示对象的类型，枚举型，目前支持图片IMAGE和子骨架ARMATURE",
-			"pType": "public"
+			"description": "显示对象的类型，枚举型，目前支持图片IMAGE和子骨架ARMATURE"
 		}
 	],
 	"function": [
@@ -63,8 +57,7 @@
 			"name": "DisplayData",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "初始化变换矩阵为单位矩阵注册点为{0，0}点",
-			"pType": "public"
+			"description": "初始化变换矩阵为单位矩阵注册点为{0，0}点"
 		},
 		{
 			"kind": "function",
@@ -72,8 +65,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.DisplayData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		}
 	],
 	"globalMember": [],

@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "static",
 			"description": "添加在相对对象之后",
-			"pType": "public",
 			"default": "\"after\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "static",
 			"description": "添加在相对对象之前",
-			"pType": "public",
 			"default": "\"before\""
 		},
 		{
@@ -27,7 +25,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "static",
 			"description": "添加父级容器的底层",
-			"pType": "public",
 			"default": "\"first\""
 		},
 		{
@@ -37,7 +34,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "static",
 			"description": "添加在父级容器的顶层",
-			"pType": "public",
 			"default": "\"last\""
 		},
 		{
@@ -50,7 +46,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -61,7 +56,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "instance",
 			"description": "添加的位置",
-			"pType": "public",
 			"default": "AddItems.LAST"
 		},
 		{
@@ -71,7 +65,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "instance",
 			"description": "要添加到的属性",
-			"pType": "public",
 			"default": "\"\""
 		},
 		{
@@ -81,7 +74,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "instance",
 			"description": "相对的显示元素的实例名",
-			"pType": "public",
 			"default": "null"
 		},
 		{
@@ -91,7 +83,6 @@
 			"memberof": "egret.gui.AddItems",
 			"scope": "instance",
 			"description": "目标实例名",
-			"pType": "public",
 			"default": "null"
 		}
 	],
@@ -123,8 +114,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -138,8 +128,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -153,8 +142,7 @@
 					"type": "egret.gui.IStateClient",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -171,7 +159,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.OverrideBase"
 		},
@@ -187,8 +174,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

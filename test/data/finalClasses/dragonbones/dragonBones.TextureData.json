@@ -6,8 +6,7 @@
 			"name": "frame",
 			"memberof": "dragonBones.TextureData",
 			"scope": "instance",
-			"description": "帧的区域",
-			"pType": "public"
+			"description": "帧的区域"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "region",
 			"memberof": "dragonBones.TextureData",
 			"scope": "instance",
-			"description": "区域",
-			"pType": "public"
+			"description": "区域"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "rotated",
 			"memberof": "dragonBones.TextureData",
 			"scope": "instance",
-			"description": "是否有旋转",
-			"pType": "public"
+			"description": "是否有旋转"
 		}
 	],
 	"function": [
@@ -51,8 +48,7 @@
 					"type": "boolean",
 					"description": "rotated"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

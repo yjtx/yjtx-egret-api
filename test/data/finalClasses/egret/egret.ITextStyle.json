@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "是否加粗",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "字体名称",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -30,8 +28,7 @@
 			"scope": "instance",
 			"description": "链接事件或者地址",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -41,8 +38,7 @@
 			"scope": "instance",
 			"description": "是否倾斜",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -52,8 +48,7 @@
 			"scope": "instance",
 			"description": "字号",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -63,8 +58,7 @@
 			"scope": "instance",
 			"description": "描边大小",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -74,8 +68,7 @@
 			"scope": "instance",
 			"description": "描边颜色值",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -85,8 +78,7 @@
 			"scope": "instance",
 			"description": "颜色值",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -96,8 +88,7 @@
 			"scope": "instance",
 			"description": "是否加下划线",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

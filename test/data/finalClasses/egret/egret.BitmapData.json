@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -23,8 +22,7 @@
 			"description": "位图图像的高度，以像素为单位。",
 			"rwType": 1,
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -35,8 +33,7 @@
 			"description": "位图图像的宽度，以像素为单位。",
 			"rwType": 1,
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

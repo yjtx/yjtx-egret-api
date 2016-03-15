@@ -6,8 +6,7 @@
 			"name": "duration",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "效果的持续时间（以毫秒为单位）。",
-			"pType": "public"
+			"description": "效果的持续时间（以毫秒为单位）。"
 		},
 		{
 			"kind": "member",
@@ -15,7 +14,6 @@
 			"name": "durationExplicitlySet",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"pType": "public",
 			"default": "false"
 		},
 		{
@@ -28,7 +26,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -38,8 +35,7 @@
 			"name": "instanceClass",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "一个 Class 类型的对象，用于指定此效果类的效果实例类。<p>Effect 类的所有子类都必须在其构造函数中设置此属性。</p>",
-			"pType": "public"
+			"description": "一个 Class 类型的对象，用于指定此效果类的效果实例类。<p>Effect 类的所有子类都必须在其构造函数中设置此属性。</p>"
 		},
 		{
 			"kind": "member",
@@ -48,8 +44,7 @@
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "是否处于暂停状态，当调用了paused()方法后此属性为true",
-			"pType": "public"
+			"description": "是否处于暂停状态，当调用了paused()方法后此属性为true"
 		},
 		{
 			"kind": "member",
@@ -58,8 +53,7 @@
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "如果当前正在播放效果的任一实例，则为 true；否则，则为 false。",
-			"pType": "public"
+			"description": "如果当前正在播放效果的任一实例，则为 true；否则，则为 false。"
 		},
 		{
 			"kind": "member",
@@ -67,8 +61,7 @@
 			"name": "perElementOffset",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "在效果的第一个目标之后，其他效果目标的附加延迟（以毫秒为单位）。此值将添加到 startDelay 属性的值中。",
-			"pType": "public"
+			"description": "在效果的第一个目标之后，其他效果目标的附加延迟（以毫秒为单位）。此值将添加到 startDelay 属性的值中。"
 		},
 		{
 			"kind": "member",
@@ -76,8 +69,7 @@
 			"name": "playReversed",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "是否在逆转播放",
-			"pType": "public"
+			"description": "是否在逆转播放"
 		},
 		{
 			"kind": "member",
@@ -85,8 +77,7 @@
 			"name": "playheadTime",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "效果的当前时间位置。此属性的值介于 0 和总持续时间（包括该效果的 startDelay、repeatCount 和 repeatDelay）之间。",
-			"pType": "public"
+			"description": "效果的当前时间位置。此属性的值介于 0 和总持续时间（包括该效果的 startDelay、repeatCount 和 repeatDelay）之间。"
 		},
 		{
 			"kind": "member",
@@ -95,7 +86,6 @@
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
 			"description": "效果的重复次数。可能的值为任何大于等于 0 的整数。值为 1 表示播放一次效果。值为 0 表示无限制地循环播放效果，直到通过调用 end() 方法停止播放。",
-			"pType": "public",
 			"default": "1"
 		},
 		{
@@ -105,7 +95,6 @@
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
 			"description": "重复播放效果前需要等待的时间（以毫秒为单位）。可能的值为任何大于等于 0 的整数。",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -115,7 +104,6 @@
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
 			"description": "开始播放效果前需要等待的时间（以毫秒为单位）。此值可以是任何大于或等于 0 的整数。如果使用 repeatCount 属性重复播放效果，则只在首次播放效果时应用 startDelay。",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -124,8 +112,7 @@
 			"name": "target",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "要应用此效果的对象。当效果触发器触发某个效果时，会自动将 target 属性设置为触发该效果的对象。",
-			"pType": "public"
+			"description": "要应用此效果的对象。当效果触发器触发某个效果时，会自动将 target 属性设置为触发该效果的对象。"
 		},
 		{
 			"kind": "member",
@@ -133,8 +120,7 @@
 			"name": "targets",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "一个对象 Array，这些对象都是效果的目标。播放效果时，会对各个目标并行执行效果。设置 target 属性将替换此 Array 中的所有对象。设置 targets 属性后，target 属性将返回此 Array 中的第一个项目。",
-			"pType": "public"
+			"description": "一个对象 Array，这些对象都是效果的目标。播放效果时，会对各个目标并行执行效果。设置 target 属性将替换此 Array 中的所有对象。设置 targets 属性后，target 属性将返回此 Array 中的第一个项目。"
 		}
 	],
 	"function": [
@@ -150,8 +136,7 @@
 					"default": "null",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -191,7 +176,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表的所有节点上注册事件侦听器。成功注册一个事件侦听器后，无法通过额外调用 on() 来更改其优先级。要更改侦听器的优先级，必须先调用 removeEventListener()。然后，可以使用新的优先级再次注册该侦听器。注册该侦听器后，如果继续调用具有不同 type 或 useCapture值的 on()，则会创建单独的侦听器注册。<br/>如果不再需要某个事件侦听器，可调用 EventDispatcher.removeEventListener()删除它；否则会产生内存问题。由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。复制EventDispatcher 实例时并不复制其中附加的事件侦听器。（如果新近创建的节点需要一个事件侦听器，必须在创建该节点后附加该侦听器。）但是，如果移动 EventDispatcher 实例，则其中附加的事件侦听器也会随之移动。如果在正在处理事件的节点上注册事件侦听器，则不会在当前阶段触发事件侦听器，但会在事件流的稍后阶段触发，如冒泡阶段。如果从正在处理事件的节点中删除事件侦听器，则该事件侦听器仍由当前操作触发。删除事件侦听器后，决不会再次调用该事件侦听器（除非再次注册以备将来处理）。",
@@ -215,8 +199,7 @@
 					"default": "null",
 					"description": "要使用此效果为其设置动画的对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -233,8 +216,7 @@
 					"default": "null",
 					"description": "要使用此效果设置动画的对象的数组。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -249,8 +231,7 @@
 					"type": "egret.gui.IEffectInstance",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -268,7 +249,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "将事件分派到事件流中。事件目标是对其调用 dispatchEvent() 方法的 EventDispatcher 对象。",
@@ -302,7 +282,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher"
 		},
@@ -320,8 +299,7 @@
 					"default": "null",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -339,7 +317,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 EventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。要确定特定事件类型是否确实会触发事件侦听器，请使用 IEventDispatcher.willTrigger()。hasEventListener()与 willTrigger() 的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 检查整个事件流以查找由 type 参数指定的事件。",
@@ -386,7 +363,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "添加仅回调一次的事件侦听器，此方法与on()方法不同，on()方法会持续产生回调，而此方法在第一次回调时就会自动移除监听。",
@@ -401,8 +377,7 @@
 			"name": "pause",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "暂停效果，直到调用 resume() 方法。",
-			"pType": "public"
+			"description": "暂停效果，直到调用 resume() 方法。"
 		},
 		{
 			"kind": "function",
@@ -425,8 +400,7 @@
 					"default": "false",
 					"description": "如果为 true，则向后播放效果。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -460,7 +434,6 @@
 					"description": "指出是为捕获阶段还是为冒泡阶段注册了侦听器。如果为捕获阶段以及冒泡阶段注册了侦听器，则需要对removeEventListener() 进行两次调用才能将这两个侦听器删除：一次调用将 useCapture 设置为 true，另一次调用将 useCapture 设置为 false。。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
@@ -471,8 +444,7 @@
 			"name": "resume",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "在效果由 pause() 方法暂停后继续播放效果。",
-			"pType": "public"
+			"description": "在效果由 pause() 方法暂停后继续播放效果。"
 		},
 		{
 			"kind": "function",
@@ -480,8 +452,7 @@
 			"name": "reverse",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "逆序播放效果；如果当前正在播放效果，则从该效果的当前位置开始逆序播放。",
-			"pType": "public"
+			"description": "逆序播放效果；如果当前正在播放效果，则从该效果的当前位置开始逆序播放。"
 		},
 		{
 			"kind": "function",
@@ -489,8 +460,7 @@
 			"name": "stop",
 			"memberof": "egret.gui.Effect",
 			"scope": "instance",
-			"description": "停止播放效果，使效果目标保持当前状态。与调用 pause() 方法不同，无法先调用 stop() 方法再调用 resume() 方法。不过，您可以调用 play() 方法重新播放效果。",
-			"pType": "public"
+			"description": "停止播放效果，使效果目标保持当前状态。与调用 pause() 方法不同，无法先调用 stop() 方法再调用 resume() 方法。不过，您可以调用 play() 方法重新播放效果。"
 		},
 		{
 			"kind": "function",
@@ -508,7 +478,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。将指定类型的事件调度给此EventDispatcher 对象或其任一后代时，如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。hasEventListener() 与 willTrigger() 方法的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 方法检查整个事件流以查找由 type 参数指定的事件。",

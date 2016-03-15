@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "当前节点上的属性列表",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "当前节点的子节点列表",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -30,8 +28,7 @@
 			"scope": "instance",
 			"description": "节点的本地名称。例如节点 <s:Button/> 的 localName 为：Button",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -41,8 +38,7 @@
 			"scope": "instance",
 			"description": "节点完整名称。例如节点 <s:Button/> 的 name 为：\"s:Button\"",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -52,8 +48,7 @@
 			"scope": "instance",
 			"description": "节点的命名空间地址。例如节点 <s:Skin xmlns:s=\"http://ns.egret.com/eui\"/> 的 namespace 为： http://ns.egret.com/eui",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -64,7 +59,6 @@
 			"description": "节点类型，1：XML，2：XMLAttribute，3：XMLText",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.XMLNode"
 		},
@@ -77,7 +71,6 @@
 			"description": "节点所属的父级节点",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.XMLNode"
 		},
@@ -89,8 +82,7 @@
 			"scope": "instance",
 			"description": "节点的命名空间前缀。例如节点 <s:Button/> 的 prefix 为：s",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -107,8 +99,7 @@
 					"type": "string",
 					"description": "要解析的XML对象。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

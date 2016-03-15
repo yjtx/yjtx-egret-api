@@ -6,8 +6,7 @@
 			"name": "animationCacheManager",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "动画缓存管理器.",
-			"pType": "public"
+			"description": "动画缓存管理器."
 		},
 		{
 			"kind": "member",
@@ -18,8 +17,7 @@
 			"description": "包含的所有动画数据列表",
 			"see": [
 				"dragonBones.AnimationData."
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -27,8 +25,7 @@
 			"name": "animationList",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "所有动画名称列表.",
-			"pType": "public"
+			"description": "所有动画名称列表."
 		},
 		{
 			"kind": "member",
@@ -37,7 +34,6 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"description": "当前正在运行的动画实例.",
-			"pType": "public",
 			"default": "new FastAnimationState()"
 		},
 		{
@@ -47,8 +43,7 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "是否播放完成.",
-			"pType": "public"
+			"description": "是否播放完成."
 		},
 		{
 			"kind": "member",
@@ -57,8 +52,7 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前播放动画的名字.",
-			"pType": "public"
+			"description": "当前播放动画的名字."
 		},
 		{
 			"kind": "member",
@@ -67,8 +61,7 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前播放动画的实例.",
-			"pType": "public"
+			"description": "当前播放动画的实例."
 		},
 		{
 			"kind": "member",
@@ -77,8 +70,7 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "Unrecommended API. Recommend use lastAnimationName.",
-			"pType": "public"
+			"description": "Unrecommended API. Recommend use lastAnimationName."
 		},
 		{
 			"kind": "member",
@@ -87,8 +79,7 @@
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "Unrecommended API. Recommend use animationList.",
-			"pType": "public"
+			"description": "Unrecommended API. Recommend use animationList."
 		},
 		{
 			"kind": "member",
@@ -96,8 +87,7 @@
 			"name": "timeScale",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "时间缩放倍数",
-			"pType": "public"
+			"description": "时间缩放倍数"
 		}
 	],
 	"function": [
@@ -113,8 +103,7 @@
 					"type": "dragonBones.FastArmature",
 					"description": "骨架实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -122,8 +111,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "Qualifies all resources used by this Animation instance for garbage collection.",
-			"pType": "public"
+			"description": "Qualifies all resources used by this Animation instance for garbage collection."
 		},
 		{
 			"kind": "function",
@@ -159,8 +147,7 @@
 					"default": "NaN",
 					"description": "动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -201,8 +188,7 @@
 					"default": "-1",
 					"description": "动画播放时间。默认值：-1 意味着使用动画数据中的播放时间."
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -221,8 +207,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -230,8 +215,7 @@
 			"name": "isPlaying",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "是否正在播放",
-			"pType": "public"
+			"description": "是否正在播放"
 		},
 		{
 			"kind": "function",
@@ -239,8 +223,7 @@
 			"name": "play",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "从当前位置继续播放动画",
-			"pType": "public"
+			"description": "从当前位置继续播放动画"
 		},
 		{
 			"kind": "function",
@@ -248,8 +231,7 @@
 			"name": "stop",
 			"memberof": "dragonBones.FastAnimation",
 			"scope": "instance",
-			"description": "暂停动画播放",
-			"pType": "public"
+			"description": "暂停动画播放"
 		}
 	],
 	"globalMember": [],

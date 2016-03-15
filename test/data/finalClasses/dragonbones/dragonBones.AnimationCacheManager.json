@@ -6,7 +6,6 @@
 			"name": "animationCacheDic",
 			"memberof": "dragonBones.AnimationCacheManager",
 			"scope": "instance",
-			"pType": "public",
 			"default": "{}"
 		},
 		{
@@ -14,24 +13,21 @@
 			"type": "dragonBones.ArmatureData",
 			"name": "armatureData",
 			"memberof": "dragonBones.AnimationCacheManager",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.ICacheableArmature",
 			"name": "cacheGeneratorArmature",
 			"memberof": "dragonBones.AnimationCacheManager",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "number",
 			"name": "frameRate",
 			"memberof": "dragonBones.AnimationCacheManager",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -40,7 +36,6 @@
 			"memberof": "dragonBones.AnimationCacheManager",
 			"scope": "instance",
 			"description": "//\t\tpublic var boneFrameCacheDic:Object = {};",
-			"pType": "public",
 			"default": "{}"
 		}
 	],
@@ -49,8 +44,7 @@
 			"kind": "function",
 			"name": "AnimationCacheManager",
 			"memberof": "dragonBones.AnimationCacheManager",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -68,8 +62,7 @@
 					"type": "dragonBones.FastArmature",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -87,8 +80,7 @@
 					"type": "Array<any>",
 					"description": "骨架列表。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -106,8 +98,7 @@
 					"type": "boolean",
 					"description": "要生成缓存的动画是否需要循环播放。如果该动画在播放时只需要播放一次，则设置为false。如果需要播放大于一次，则设置为true。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -130,8 +121,7 @@
 					"type": "boolean",
 					"description": "要生成缓存的动画是否需要循环播放。如果该动画在播放时只需要播放一次，则设置为false。如果需要播放大于一次，则设置为true。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -149,8 +139,7 @@
 					"type": "string",
 					"description": "动画名。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -161,8 +150,7 @@
 			"description": "为所有动画初始化AnimationCache实例。在生成动画缓存之前需要调用这个API生成相应的AnimationCache实例",
 			"see": [
 				"dragonBones.AnimationCache."
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -180,8 +168,7 @@
 					"type": "string",
 					"description": "动画名。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -205,8 +192,7 @@
 					"default": "0",
 					"description": "帧频。帧频决定生成数据缓存的采样率。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -217,8 +203,7 @@
 			"description": "将缓存生成器骨架重置，生成动画缓存后调用。",
 			"see": [
 				"dragonBones.ICacheableArmature"
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -236,8 +221,7 @@
 					"type": "dragonBones.FastArmature",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

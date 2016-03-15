@@ -9,8 +9,7 @@
 			"description": "此文本组件所显示的文本。",
 			"rwType": 1,
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

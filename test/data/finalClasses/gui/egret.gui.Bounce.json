@@ -5,8 +5,7 @@
 			"kind": "function",
 			"name": "Bounce",
 			"memberof": "egret.gui.Bounce",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -20,8 +19,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -50,8 +48,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

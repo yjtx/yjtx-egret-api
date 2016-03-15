@@ -6,8 +6,7 @@
 			"name": "x",
 			"memberof": "dragonBones.Point",
 			"scope": "instance",
-			"description": "该点的水平坐标。",
-			"pType": "public"
+			"description": "该点的水平坐标。"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "y",
 			"memberof": "dragonBones.Point",
 			"scope": "instance",
-			"description": "该点的垂直坐标。",
-			"pType": "public"
+			"description": "该点的垂直坐标。"
 		}
 	],
 	"function": [
@@ -39,8 +37,7 @@
 					"default": "0",
 					"description": "该点的垂直坐标。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -9,7 +9,6 @@
 			"description": "指定以原始二进制数据形式接收下载的数据。",
 			"version": "Egret 2.4",
 			"platform": "Web",
-			"pType": "public",
 			"default": "\"binary\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "指定以声音形式接收已下载的数据。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"sound\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "指定以文本形式接收已下载的数据。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"text\""
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "指定以位图纹理形式接收已下载的数据。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"texture\""
 		},
 		{
@@ -57,7 +53,6 @@
 			"description": "指定以 URL 编码变量形式接收下载的数据。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"variables\""
 		}
 	],

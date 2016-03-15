@@ -6,7 +6,6 @@
 			"name": "ALL",
 			"memberof": "dragonBones.Animation",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"all\""
 		},
 		{
@@ -15,7 +14,6 @@
 			"name": "NONE",
 			"memberof": "dragonBones.Animation",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"none\""
 		},
 		{
@@ -24,7 +22,6 @@
 			"name": "SAME_GROUP",
 			"memberof": "dragonBones.Animation",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"sameGroup\""
 		},
 		{
@@ -33,7 +30,6 @@
 			"name": "SAME_LAYER",
 			"memberof": "dragonBones.Animation",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"sameLayer\""
 		},
 		{
@@ -42,7 +38,6 @@
 			"name": "SAME_LAYER_AND_GROUP",
 			"memberof": "dragonBones.Animation",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"sameLayerAndGroup\""
 		},
 		{
@@ -54,8 +49,7 @@
 			"description": "包含的所有动画数据列表",
 			"see": [
 				"dragonBones.AnimationData."
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -64,8 +58,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "所有动画名称列表.",
-			"pType": "public"
+			"description": "所有动画名称列表."
 		},
 		{
 			"kind": "member",
@@ -74,8 +67,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "最近播放的动画是否播放完成.",
-			"pType": "public"
+			"description": "最近播放的动画是否播放完成."
 		},
 		{
 			"kind": "member",
@@ -84,8 +76,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "是否正在播放",
-			"pType": "public"
+			"description": "是否正在播放"
 		},
 		{
 			"kind": "member",
@@ -94,8 +85,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "最近播放的动画名称.",
-			"pType": "public"
+			"description": "最近播放的动画名称."
 		},
 		{
 			"kind": "member",
@@ -107,8 +97,7 @@
 			"description": "最近播放的 AnimationState 实例。",
 			"see": [
 				"dragonBones.AnimationState"
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -117,8 +106,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "不推荐的API.推荐使用 lastAnimationName.",
-			"pType": "public"
+			"description": "不推荐的API.推荐使用 lastAnimationName."
 		},
 		{
 			"kind": "member",
@@ -127,8 +115,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "不推荐的API.推荐使用 animationList.",
-			"pType": "public"
+			"description": "不推荐的API.推荐使用 animationList."
 		},
 		{
 			"kind": "member",
@@ -136,8 +123,7 @@
 			"name": "timeScale",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "时间缩放倍数",
-			"pType": "public"
+			"description": "时间缩放倍数"
 		},
 		{
 			"kind": "member",
@@ -145,8 +131,7 @@
 			"name": "tweenEnabled",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "标记是否开启自动补间。设置为 true时，Animation会根据动画数据的内容，在关键帧之间自动补间。设置为false时，所有动画均不补间默认值：true。",
-			"pType": "public"
+			"description": "标记是否开启自动补间。设置为 true时，Animation会根据动画数据的内容，在关键帧之间自动补间。设置为false时，所有动画均不补间默认值：true。"
 		}
 	],
 	"function": [
@@ -162,8 +147,7 @@
 					"type": "dragonBones.Armature",
 					"description": "骨架实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -171,8 +155,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "回收Animation实例用到的所有资源",
-			"pType": "public"
+			"description": "回收Animation实例用到的所有资源"
 		},
 		{
 			"kind": "function",
@@ -197,8 +180,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -265,8 +247,7 @@
 					"default": "true",
 					"description": "动画淡入时暂停播放"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -326,8 +307,7 @@
 					"default": "Animation.ALL",
 					"description": "动画淡出模式 (none, sameLayer, sameGroup, sameLayerAndGroup, all).默认值：sameLayerAndGroup"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -343,8 +323,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -352,8 +331,7 @@
 			"name": "play",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "从当前位置继续播放动画",
-			"pType": "public"
+			"description": "从当前位置继续播放动画"
 		},
 		{
 			"kind": "function",
@@ -361,8 +339,7 @@
 			"name": "stop",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "暂停动画播放",
-			"pType": "public"
+			"description": "暂停动画播放"
 		}
 	],
 	"globalMember": [],

@@ -5,16 +5,14 @@
 			"type": "dragonBones.DBTransform",
 			"name": "parentGlobalTransform",
 			"memberof": "dragonBones.ParentTransformObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.Matrix",
 			"name": "parentGlobalTransformMatrix",
 			"memberof": "dragonBones.ParentTransformObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -22,8 +20,7 @@
 			"kind": "function",
 			"name": "ParentTransformObject",
 			"memberof": "dragonBones.ParentTransformObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -31,8 +28,7 @@
 			"name": "create",
 			"memberof": "dragonBones.ParentTransformObject",
 			"scope": "static",
-			"description": "/// Create/take new clean object from the object pool",
-			"pType": "public"
+			"description": "/// Create/take new clean object from the object pool"
 		},
 		{
 			"kind": "function",
@@ -47,8 +43,7 @@
 					"type": "dragonBones.ParentTransformObject",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -56,8 +51,7 @@
 			"name": "release",
 			"memberof": "dragonBones.ParentTransformObject",
 			"scope": "instance",
-			"description": "/// Cleanup object and return it to the object pool",
-			"pType": "public"
+			"description": "/// Cleanup object and return it to the object pool"
 		},
 		{
 			"kind": "function",
@@ -77,8 +71,7 @@
 					"type": "dragonBones.Matrix",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

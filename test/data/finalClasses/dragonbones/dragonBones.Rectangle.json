@@ -6,8 +6,7 @@
 			"name": "height",
 			"memberof": "dragonBones.Rectangle",
 			"scope": "instance",
-			"description": "矩形的高度（以像素为单位）。",
-			"pType": "public"
+			"description": "矩形的高度（以像素为单位）。"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "width",
 			"memberof": "dragonBones.Rectangle",
 			"scope": "instance",
-			"description": "矩形的宽度（以像素为单位）",
-			"pType": "public"
+			"description": "矩形的宽度（以像素为单位）"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "x",
 			"memberof": "dragonBones.Rectangle",
 			"scope": "instance",
-			"description": "矩形左上角的 x 坐标。",
-			"pType": "public"
+			"description": "矩形左上角的 x 坐标。"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "y",
 			"memberof": "dragonBones.Rectangle",
 			"scope": "instance",
-			"description": "矩形左上角的 y 坐标。",
-			"pType": "public"
+			"description": "矩形左上角的 y 坐标。"
 		}
 	],
 	"function": [
@@ -69,8 +65,7 @@
 					"default": "0",
 					"description": "矩形的高度（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -6,8 +6,7 @@
 			"name": "bottom",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "距父级容器底部距离",
-			"pType": "public"
+			"description": "距父级容器底部距离"
 		},
 		{
 			"kind": "member",
@@ -19,7 +18,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -29,8 +27,7 @@
 			"name": "horizontalCenter",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "在父级容器中距水平中心位置的距离",
-			"pType": "public"
+			"description": "在父级容器中距水平中心位置的距离"
 		},
 		{
 			"kind": "member",
@@ -38,8 +35,7 @@
 			"name": "includeInLayout",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "指定此组件是否包含在父容器的布局中。若为false，则父级容器在测量和布局阶段都忽略此组件。默认值为true。注意，visible属性与此属性不同，设置visible为false，父级容器仍会对其布局。",
-			"pType": "public"
+			"description": "指定此组件是否包含在父容器的布局中。若为false，则父级容器在测量和布局阶段都忽略此组件。默认值为true。注意，visible属性与此属性不同，设置visible为false，父级容器仍会对其布局。"
 		},
 		{
 			"kind": "member",
@@ -47,8 +43,7 @@
 			"name": "layoutBoundsHeight",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的布局高度,常用于父级的updateDisplayList()方法中按照：布局高度>外部显式设置高度>测量高度 的优先级顺序返回高度注意:此数值已经包含了scaleY的值",
-			"pType": "public"
+			"description": "组件的布局高度,常用于父级的updateDisplayList()方法中按照：布局高度>外部显式设置高度>测量高度 的优先级顺序返回高度注意:此数值已经包含了scaleY的值"
 		},
 		{
 			"kind": "member",
@@ -56,8 +51,7 @@
 			"name": "layoutBoundsWidth",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的布局宽度,常用于父级的updateDisplayList()方法中按照：布局宽度>外部显式设置宽度>测量宽度 的优先级顺序返回宽度注意:此数值已经包含了scaleX的值",
-			"pType": "public"
+			"description": "组件的布局宽度,常用于父级的updateDisplayList()方法中按照：布局宽度>外部显式设置宽度>测量宽度 的优先级顺序返回宽度注意:此数值已经包含了scaleX的值"
 		},
 		{
 			"kind": "member",
@@ -65,8 +59,7 @@
 			"name": "layoutBoundsX",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件水平方向起始坐标",
-			"pType": "public"
+			"description": "组件水平方向起始坐标"
 		},
 		{
 			"kind": "member",
@@ -74,8 +67,7 @@
 			"name": "layoutBoundsY",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件竖直方向起始坐标",
-			"pType": "public"
+			"description": "组件竖直方向起始坐标"
 		},
 		{
 			"kind": "member",
@@ -83,8 +75,7 @@
 			"name": "left",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "距父级容器离左边距离",
-			"pType": "public"
+			"description": "距父级容器离左边距离"
 		},
 		{
 			"kind": "member",
@@ -92,8 +83,7 @@
 			"name": "maxHeight",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的最大测量高度,仅影响measuredHeight属性的取值范围。",
-			"pType": "public"
+			"description": "组件的最大测量高度,仅影响measuredHeight属性的取值范围。"
 		},
 		{
 			"kind": "member",
@@ -101,8 +91,7 @@
 			"name": "maxWidth",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的最大测量宽度,仅影响measuredWidth属性的取值范围。",
-			"pType": "public"
+			"description": "组件的最大测量宽度,仅影响measuredWidth属性的取值范围。"
 		},
 		{
 			"kind": "member",
@@ -110,8 +99,7 @@
 			"name": "minHeight",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的最小测量高度,此属性设置为大于maxHeight的值时无效。仅影响measuredHeight属性的取值范围。",
-			"pType": "public"
+			"description": "组件的最小测量高度,此属性设置为大于maxHeight的值时无效。仅影响measuredHeight属性的取值范围。"
 		},
 		{
 			"kind": "member",
@@ -119,8 +107,7 @@
 			"name": "minWidth",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的最小测量宽度,此属性设置为大于maxWidth的值时无效。仅影响measuredWidth属性的取值范围。",
-			"pType": "public"
+			"description": "组件的最小测量宽度,此属性设置为大于maxWidth的值时无效。仅影响measuredWidth属性的取值范围。"
 		},
 		{
 			"kind": "member",
@@ -128,8 +115,7 @@
 			"name": "percentHeight",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "相对父级容器高度的百分比",
-			"pType": "public"
+			"description": "相对父级容器高度的百分比"
 		},
 		{
 			"kind": "member",
@@ -137,8 +123,7 @@
 			"name": "percentWidth",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "相对父级容器宽度的百分比",
-			"pType": "public"
+			"description": "相对父级容器宽度的百分比"
 		},
 		{
 			"kind": "member",
@@ -146,8 +131,7 @@
 			"name": "preferredHeight",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的首选高度,常用于父级的measure()方法中按照：外部显式设置高度>测量高度 的优先级顺序返回高度注意:此数值已经包含了scaleY的值",
-			"pType": "public"
+			"description": "组件的首选高度,常用于父级的measure()方法中按照：外部显式设置高度>测量高度 的优先级顺序返回高度注意:此数值已经包含了scaleY的值"
 		},
 		{
 			"kind": "member",
@@ -155,8 +139,7 @@
 			"name": "preferredWidth",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的首选宽度,常用于父级的measure()方法中按照：外部显式设置宽度>测量宽度 的优先级顺序返回宽度注意:此数值已经包含了scaleX的值",
-			"pType": "public"
+			"description": "组件的首选宽度,常用于父级的measure()方法中按照：外部显式设置宽度>测量宽度 的优先级顺序返回宽度注意:此数值已经包含了scaleX的值"
 		},
 		{
 			"kind": "member",
@@ -164,8 +147,7 @@
 			"name": "preferredX",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的首选x坐标,常用于父级的measure()方法中",
-			"pType": "public"
+			"description": "组件的首选x坐标,常用于父级的measure()方法中"
 		},
 		{
 			"kind": "member",
@@ -173,8 +155,7 @@
 			"name": "preferredY",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "组件的首选y坐标,常用于父级的measure()方法中",
-			"pType": "public"
+			"description": "组件的首选y坐标,常用于父级的measure()方法中"
 		},
 		{
 			"kind": "member",
@@ -182,8 +163,7 @@
 			"name": "right",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "距父级容器右边距离",
-			"pType": "public"
+			"description": "距父级容器右边距离"
 		},
 		{
 			"kind": "member",
@@ -191,8 +171,7 @@
 			"name": "scaleX",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "表示从注册点开始应用的对象的水平缩放比例（百分比）。默认注册点为 (0,0)。1.0 等于 100% 缩放。",
-			"pType": "public"
+			"description": "表示从注册点开始应用的对象的水平缩放比例（百分比）。默认注册点为 (0,0)。1.0 等于 100% 缩放。"
 		},
 		{
 			"kind": "member",
@@ -200,8 +179,7 @@
 			"name": "scaleY",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "表示从对象注册点开始应用的对象的垂直缩放比例（百分比）。默认注册点为 (0,0)。1.0 是 100% 缩放。",
-			"pType": "public"
+			"description": "表示从对象注册点开始应用的对象的垂直缩放比例（百分比）。默认注册点为 (0,0)。1.0 是 100% 缩放。"
 		},
 		{
 			"kind": "member",
@@ -209,8 +187,7 @@
 			"name": "top",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "距父级容器顶部距离",
-			"pType": "public"
+			"description": "距父级容器顶部距离"
 		},
 		{
 			"kind": "member",
@@ -218,8 +195,7 @@
 			"name": "verticalCenter",
 			"memberof": "egret.gui.ILayoutElement",
 			"scope": "instance",
-			"description": "在父级容器中距竖直中心位置的距离",
-			"pType": "public"
+			"description": "在父级容器中距竖直中心位置的距离"
 		}
 	],
 	"function": [
@@ -265,7 +241,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		},
@@ -286,7 +261,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		},
@@ -310,7 +284,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		},
@@ -356,7 +329,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		},
@@ -392,7 +364,6 @@
 					"description": "指出是为捕获阶段还是为冒泡阶段注册了侦听器。如果为捕获阶段以及冒泡阶段注册了侦听器，则需要对removeEventListener() 进行两次调用才能将这两个侦听器删除：一次调用将 useCapture 设置为 true，另一次调用将 useCapture 设置为 false。。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		},
@@ -414,8 +385,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -435,8 +405,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -458,7 +427,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.IEventDispatcher"
 		}

@@ -21,8 +21,7 @@
 					"type": "egret.DisplayObjectContainer",
 					"description": "子项添加到的父级容器。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -44,8 +43,7 @@
 					"type": "egret.DisplayObjectContainer",
 					"description": "子项添加到的父级容器。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

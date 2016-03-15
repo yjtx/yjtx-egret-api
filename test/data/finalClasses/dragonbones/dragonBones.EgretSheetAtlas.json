@@ -6,8 +6,7 @@
 			"name": "name",
 			"memberof": "dragonBones.EgretSheetAtlas",
 			"scope": "instance",
-			"description": "纹理集的名称",
-			"pType": "public"
+			"description": "纹理集的名称"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "scale",
 			"memberof": "dragonBones.EgretSheetAtlas",
 			"scope": "instance",
-			"description": "纹理集的缩放",
-			"pType": "public"
+			"description": "纹理集的缩放"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "spriteSheet",
 			"memberof": "dragonBones.EgretSheetAtlas",
 			"scope": "instance",
-			"description": "spriteSheet",
-			"pType": "public"
+			"description": "spriteSheet"
 		}
 	],
 	"function": [
@@ -52,8 +49,7 @@
 					"default": "1",
 					"description": "缩放"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -61,8 +57,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.EgretSheetAtlas",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -78,8 +73,7 @@
 					"type": "string",
 					"description": "子纹理的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -95,8 +89,7 @@
 					"type": "string",
 					"description": "纹理的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

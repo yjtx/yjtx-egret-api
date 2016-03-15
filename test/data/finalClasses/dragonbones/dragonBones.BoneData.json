@@ -6,8 +6,7 @@
 			"name": "global",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "绝对的transform",
-			"pType": "public"
+			"description": "绝对的transform"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "inheritRotation",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "是否继承父骨骼的旋转属性",
-			"pType": "public"
+			"description": "是否继承父骨骼的旋转属性"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "inheritScale",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "是否继承父骨骼的缩放属性",
-			"pType": "public"
+			"description": "是否继承父骨骼的缩放属性"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "length",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "长度，目前没什么用，默认值为0",
-			"pType": "public"
+			"description": "长度，目前没什么用，默认值为0"
 		},
 		{
 			"kind": "member",
@@ -42,8 +38,7 @@
 			"name": "name",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "骨骼的名字",
-			"pType": "public"
+			"description": "骨骼的名字"
 		},
 		{
 			"kind": "member",
@@ -51,8 +46,7 @@
 			"name": "parent",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "父骨骼的名字",
-			"pType": "public"
+			"description": "父骨骼的名字"
 		},
 		{
 			"kind": "member",
@@ -60,8 +54,7 @@
 			"name": "transform",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "相对的transform",
-			"pType": "public"
+			"description": "相对的transform"
 		}
 	],
 	"function": [
@@ -70,8 +63,7 @@
 			"name": "BoneData",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "初始化各个属性",
-			"pType": "public"
+			"description": "初始化各个属性"
 		},
 		{
 			"kind": "function",
@@ -79,8 +71,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.BoneData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		}
 	],
 	"globalMember": [],

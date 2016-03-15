@@ -5,16 +5,14 @@
 			"type": "dragonBones.AnimationCache",
 			"name": "animationCache",
 			"memberof": "dragonBones.FastAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.AnimationData",
 			"name": "animationData",
 			"memberof": "dragonBones.FastAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -22,8 +20,7 @@
 			"name": "autoTween",
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
-			"description": "是否自动补间。",
-			"pType": "public"
+			"description": "是否自动补间。"
 		},
 		{
 			"kind": "member",
@@ -32,8 +29,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前播放次数",
-			"pType": "public"
+			"description": "当前播放次数"
 		},
 		{
 			"kind": "member",
@@ -42,8 +38,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "动画当前播放时间（单位：秒）",
-			"pType": "public"
+			"description": "动画当前播放时间（单位：秒）"
 		},
 		{
 			"kind": "member",
@@ -52,8 +47,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "是否播放完成",
-			"pType": "public"
+			"description": "是否播放完成"
 		},
 		{
 			"kind": "member",
@@ -62,16 +56,14 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "是否正在播放",
-			"pType": "public"
+			"description": "是否正在播放"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.FastAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -80,8 +72,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "播放次数 (0:循环播放， >0:播放次数)",
-			"pType": "public"
+			"description": "播放次数 (0:循环播放， >0:播放次数)"
 		},
 		{
 			"kind": "member",
@@ -90,8 +81,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "动画播放进度",
-			"pType": "public"
+			"description": "动画播放进度"
 		},
 		{
 			"kind": "member",
@@ -100,8 +90,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "动画总时长（单位：秒）",
-			"pType": "public"
+			"description": "动画总时长（单位：秒）"
 		}
 	],
 	"function": [
@@ -109,16 +98,14 @@
 			"kind": "function",
 			"name": "FastAnimationState",
 			"memberof": "dragonBones.FastAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "dispose",
 			"memberof": "dragonBones.FastAnimationState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -126,8 +113,7 @@
 			"name": "isUseCache",
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
-			"description": "是否使用缓存",
-			"pType": "public"
+			"description": "是否使用缓存"
 		},
 		{
 			"kind": "function",
@@ -136,8 +122,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"description": "播放当前动画。如果动画已经播放完毕, 将不会继续播放.",
-			"returns": "动画播放状态实例",
-			"pType": "public"
+			"returns": "动画播放状态实例"
 		},
 		{
 			"kind": "function",
@@ -151,8 +136,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -161,8 +145,7 @@
 			"memberof": "dragonBones.FastAnimationState",
 			"scope": "instance",
 			"description": "暂停当前动画的播放。",
-			"returns": "动画播放状态实例",
-			"pType": "public"
+			"returns": "动画播放状态实例"
 		}
 	],
 	"globalMember": [],

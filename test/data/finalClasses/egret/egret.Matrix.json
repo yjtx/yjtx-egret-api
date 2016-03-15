@@ -9,8 +9,7 @@
 			"description": "缩放或旋转图像时影响像素沿 x 轴定位的值",
 			"default": "1",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -21,8 +20,7 @@
 			"description": "旋转或倾斜图像时影响像素沿 y 轴定位的值",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -33,8 +31,7 @@
 			"description": "旋转或倾斜图像时影响像素沿 x 轴定位的值",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -45,8 +42,7 @@
 			"description": "缩放或旋转图像时影响像素沿 y 轴定位的值",
 			"default": "1",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -58,7 +54,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -71,8 +66,7 @@
 			"description": "沿 x 轴平移每个点的距离",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -83,8 +77,7 @@
 			"description": "沿 y 轴平移每个点的距离",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -133,8 +126,7 @@
 					"default": "0",
 					"description": "沿 y 轴平移每个点的距离。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -177,8 +169,7 @@
 					"type": "number",
 					"description": "沿 y 轴平移每个点的距离"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -188,8 +179,7 @@
 			"scope": "instance",
 			"description": "返回一个新的 Matrix 对象，它是此矩阵的克隆，带有与所含对象完全相同的副本。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -206,8 +196,7 @@
 					"type": "egret.Matrix",
 					"description": "要连接到源矩阵的矩阵。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -224,8 +213,7 @@
 					"type": "egret.Matrix",
 					"description": "要拷贝的目标矩阵"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -235,8 +223,7 @@
 			"scope": "static",
 			"description": "从对象池中取出或创建一个新的Matrix对象。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -276,8 +263,7 @@
 					"default": "0",
 					"description": "沿 y 轴向下平移（移动）的像素数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -317,8 +303,7 @@
 					"default": "0",
 					"description": "沿 y 轴向下平移的距离（以像素为单位）。此值将偏移 height 参数的一半"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -336,8 +321,7 @@
 					"type": "egret.Point",
 					"description": "想要获得其矩阵转换结果的点"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -355,8 +339,7 @@
 					"type": "egret.Matrix",
 					"description": "要比较的另一个矩阵对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -366,8 +349,7 @@
 			"scope": "instance",
 			"description": "为每个矩阵属性设置一个值，该值将导致矩阵无转换。通过应用恒等矩阵转换的对象将与原始对象完全相同。调用 identity() 方法后，生成的矩阵具有以下属性：a=1、b=0、c=0、d=1、tx=0 和 ty=0。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -377,8 +359,7 @@
 			"scope": "instance",
 			"description": "执行原始矩阵的逆转换。您可以将一个逆矩阵应用于对象来撤消在应用原始矩阵时执行的转换。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -421,8 +402,7 @@
 					"type": "number",
 					"description": "沿 y 轴平移每个点的距离"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -439,8 +419,7 @@
 					"type": "egret.Matrix",
 					"description": "需要回收的 matrix"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -457,8 +436,7 @@
 					"type": "number",
 					"description": "以弧度为单位的旋转角度。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -480,8 +458,7 @@
 					"type": "number",
 					"description": "用于沿 y 轴缩放对象的乘数。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -523,8 +500,7 @@
 					"type": "number",
 					"description": "沿 y 轴平移每个点的距离。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -553,8 +529,7 @@
 					"type": "egret.Point",
 					"description": "框架建议尽可能减少创建对象次数来优化性能，可以从外部传入一个复用的Point对象来存储结果，若不传入将创建一个新的Point对象返回。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -576,8 +551,7 @@
 					"type": "number",
 					"description": "沿 y 轴向下移动的量（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

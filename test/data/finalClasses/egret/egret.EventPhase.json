@@ -9,7 +9,6 @@
 			"description": "目标阶段，是事件流的第二个阶段。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "2"
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "冒泡阶段。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "3"
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "捕获阶段。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "1"
 		}
 	],

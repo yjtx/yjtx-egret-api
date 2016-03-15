@@ -42,8 +42,7 @@
 					"default": "0",
 					"description": "事件侦听器的优先级。优先级由一个带符号的 32 位整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -76,8 +75,7 @@
 					"default": "false",
 					"description": "是否覆盖已经存在的同名资源组,默认 false。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -105,8 +103,7 @@
 					"type": "boolean",
 					"description": "销毁一个资源组时其他资源组有同样资源情况资源是否会被删除，默认值 true。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -129,8 +126,7 @@
 					"type": "string",
 					"description": "组名。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -152,8 +148,7 @@
 					"type": "string",
 					"description": "对应配置文件里的 name 属性或 subKeys 属性的一项。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -184,8 +179,7 @@
 					"type": "any",
 					"description": "回调函数的 this 引用。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -220,8 +214,7 @@
 					"default": "\"\"",
 					"description": "文件类型(可选)。请使用 ResourceItem 类中定义的静态常量。若不设置将根据文件扩展名生成。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -232,8 +225,7 @@
 			"scope": "instance",
 			"description": "获得版本控制器.",
 			"version": "Egret 2.5",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -254,8 +246,7 @@
 					"type": "string",
 					"description": "对应配置文件里的 name 属性或 sbuKeys 属性的一项。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -277,8 +268,7 @@
 					"type": "string",
 					"description": "组名。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -310,8 +300,7 @@
 					"default": "\"json\"",
 					"description": "配置文件的格式。确定要用什么解析器来解析配置文件。默认\"json\""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -338,8 +327,7 @@
 					"default": "0",
 					"description": "加载优先级,可以为负数,默认值为 0。<br>低优先级的组必须等待高优先级组完全加载结束才能开始，同一优先级的组会同时加载。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -366,8 +354,7 @@
 					"default": "\"\"",
 					"description": "加载项的路径前缀。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -390,8 +377,7 @@
 					"type": "any",
 					"description": "注入类型需要解析的类。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -409,8 +395,7 @@
 					"type": "RES.VersionController",
 					"description": "注入的版本控制器。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -444,8 +429,7 @@
 					"default": "false",
 					"description": "是否使用捕获，这个属性只在显示列表中生效。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -466,8 +450,7 @@
 					"type": "number",
 					"description": "要设置的并发加载数。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/resource/Resource.ts",
@@ -486,8 +469,7 @@
 					"type": "number",
 					"description": "要设置的重试次数。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

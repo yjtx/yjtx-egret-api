@@ -5,8 +5,7 @@
 			"kind": "function",
 			"name": "Elastic",
 			"memberof": "egret.gui.Elastic",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -20,8 +19,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -62,8 +60,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

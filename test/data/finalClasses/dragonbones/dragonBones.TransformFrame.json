@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
 			"description": "帧标签",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
 		},
@@ -17,8 +16,7 @@
 			"name": "color",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "绑定到骨骼的插槽的颜色transform，颜色的transform可以表示颜色在红蓝绿透明四个通道的变化",
-			"pType": "public"
+			"description": "绑定到骨骼的插槽的颜色transform，颜色的transform可以表示颜色在红蓝绿透明四个通道的变化"
 		},
 		{
 			"kind": "member",
@@ -26,7 +24,6 @@
 			"name": "curve",
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
 		},
@@ -37,7 +34,6 @@
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
 			"description": "绑定到该骨骼的插槽的显示序号，当插槽有多个显示对象时，指定显示哪一个显示对象",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -47,7 +43,6 @@
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
 			"description": "持续时间",
-			"pType": "public",
 			"default": "0",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
@@ -59,7 +54,6 @@
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
 			"description": "帧事件",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
 		},
@@ -69,8 +63,7 @@
 			"name": "global",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "全局的transform",
-			"pType": "public"
+			"description": "全局的transform"
 		},
 		{
 			"kind": "member",
@@ -78,8 +71,7 @@
 			"name": "pivot",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "注册点，骨骼的旋转中心",
-			"pType": "public"
+			"description": "注册点，骨骼的旋转中心"
 		},
 		{
 			"kind": "member",
@@ -88,7 +80,6 @@
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
 			"description": "位置",
-			"pType": "public",
 			"default": "0",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
@@ -99,8 +90,7 @@
 			"name": "scaleOffset",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "缩放的偏移",
-			"pType": "public"
+			"description": "缩放的偏移"
 		},
 		{
 			"kind": "member",
@@ -109,7 +99,6 @@
 			"memberof": "dragonBones.Frame",
 			"scope": "instance",
 			"description": "帧声音",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Frame"
 		},
@@ -119,8 +108,7 @@
 			"name": "transform",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "骨骼的transform，transform可以表示位移，旋转，缩放三种属性",
-			"pType": "public"
+			"description": "骨骼的transform，transform可以表示位移，旋转，缩放三种属性"
 		},
 		{
 			"kind": "member",
@@ -128,8 +116,7 @@
 			"name": "tweenEasing",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "NaN:no tween, 10:auto tween, [-1, 0):ease in, 0:line easing, (0, 1]:ease out, (1, 2]:ease in out缓动值，当值为NaN时，没有缓动当值为10时，为自动当值为[-1,0)时，为缓进当值为0时，为线性缓动当值为(0, 1]时，为缓出当值为(1, 2]时，为缓进缓出",
-			"pType": "public"
+			"description": "NaN:no tween, 10:auto tween, [-1, 0):ease in, 0:line easing, (0, 1]:ease out, (1, 2]:ease in out缓动值，当值为NaN时，没有缓动当值为10时，为自动当值为[-1,0)时，为缓进当值为0时，为线性缓动当值为(0, 1]时，为缓出当值为(1, 2]时，为缓进缓出"
 		},
 		{
 			"kind": "member",
@@ -138,7 +125,6 @@
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
 			"description": "旋转几圈",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -147,8 +133,7 @@
 			"name": "tweenScale",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "补间是否对Scale起作用",
-			"pType": "public"
+			"description": "补间是否对Scale起作用"
 		},
 		{
 			"kind": "member",
@@ -156,8 +141,7 @@
 			"name": "visible",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "是否可见",
-			"pType": "public"
+			"description": "是否可见"
 		},
 		{
 			"kind": "member",
@@ -165,8 +149,7 @@
 			"name": "zOrder",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "绑定到该骨骼的插槽的zOrder值",
-			"pType": "public"
+			"description": "绑定到该骨骼的插槽的zOrder值"
 		}
 	],
 	"function": [
@@ -175,8 +158,7 @@
 			"name": "TransformFrame",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "构造函数，实例化一个TransformFrame",
-			"pType": "public"
+			"description": "构造函数，实例化一个TransformFrame"
 		},
 		{
 			"kind": "function",
@@ -184,8 +166,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.TransformFrame",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		}
 	],
 	"globalMember": [],

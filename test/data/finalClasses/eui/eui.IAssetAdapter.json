@@ -26,8 +26,7 @@
 					"type": "any",
 					"description": "callBack的this引用。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

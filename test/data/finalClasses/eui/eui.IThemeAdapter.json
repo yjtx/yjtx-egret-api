@@ -31,8 +31,7 @@
 					"type": "any",
 					"description": "回调的this引用"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

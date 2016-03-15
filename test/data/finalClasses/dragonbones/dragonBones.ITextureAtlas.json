@@ -6,8 +6,7 @@
 			"name": "name",
 			"memberof": "dragonBones.ITextureAtlas",
 			"scope": "instance",
-			"description": "这个ITextureAtlas的名字",
-			"pType": "public"
+			"description": "这个ITextureAtlas的名字"
 		}
 	],
 	"function": [
@@ -17,8 +16,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.ITextureAtlas",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -34,8 +32,7 @@
 					"type": "string",
 					"description": "资源的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

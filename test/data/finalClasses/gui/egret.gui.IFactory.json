@@ -5,8 +5,7 @@
 			"type": "number",
 			"name": "hashCode",
 			"memberof": "egret.gui.IFactory",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -17,8 +16,7 @@
 			"memberof": "egret.gui.IFactory",
 			"scope": "instance",
 			"description": "创建某一类（由实现 IFactory 的类确定）的实例。",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		}
 	],
 	"globalMember": [],

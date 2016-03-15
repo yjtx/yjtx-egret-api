@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "获取所有的骨架数据",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		},
 		{
 			"kind": "member",
@@ -17,8 +16,7 @@
 			"name": "isGlobal",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "数据的类型，是否是全局数据",
-			"pType": "public"
+			"description": "数据的类型，是否是全局数据"
 		},
 		{
 			"kind": "member",
@@ -26,8 +24,7 @@
 			"name": "name",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "DrabonBones数据的名字",
-			"pType": "public"
+			"description": "DrabonBones数据的名字"
 		},
 		{
 			"kind": "member",
@@ -36,7 +33,6 @@
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
 			"description": "数据版本",
-			"pType": "public",
 			"default": "0"
 		}
 	],
@@ -46,8 +42,7 @@
 			"name": "DragonBonesData",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "构造函数，实例化一个DragonBonesData类",
-			"pType": "public"
+			"description": "构造函数，实例化一个DragonBonesData类"
 		},
 		{
 			"kind": "function",
@@ -62,8 +57,7 @@
 					"type": "dragonBones.ArmatureData",
 					"description": "armatureData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -78,8 +72,7 @@
 					"type": "dragonBones.DisplayData",
 					"description": "需要被添加的显示对象数据"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -87,8 +80,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -104,8 +96,7 @@
 					"type": "string",
 					"description": "想要获取的骨架的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -121,8 +112,7 @@
 					"type": "string",
 					"description": "想要获取的显示对象数据的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -130,8 +120,7 @@
 			"name": "removeAllDisplayData",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "移除所有的显示对象数据",
-			"pType": "public"
+			"description": "移除所有的显示对象数据"
 		},
 		{
 			"kind": "function",
@@ -146,8 +135,7 @@
 					"type": "dragonBones.ArmatureData",
 					"description": "armatureData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -162,8 +150,7 @@
 					"type": "string",
 					"description": "想要移除的骨架的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -178,8 +165,7 @@
 					"type": "string",
 					"description": "显示对象的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

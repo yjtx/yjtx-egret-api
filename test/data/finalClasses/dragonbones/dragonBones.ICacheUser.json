@@ -5,16 +5,14 @@
 			"type": "dragonBones.FrameCache",
 			"name": "frameCache",
 			"memberof": "dragonBones.ICacheUser",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.ICacheUser",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [],

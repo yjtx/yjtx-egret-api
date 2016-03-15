@@ -10,7 +10,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -24,7 +23,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -38,7 +36,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -50,7 +47,6 @@
 			"scope": "instance",
 			"description": "指定文本字段是否具有背景填充。如果为 true，则文本字段具有背景填充。如果为 false，则文本字段没有背景填充。使用 backgroundColor 属性来设置文本字段的背景颜色。",
 			"default": "false",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -62,7 +58,6 @@
 			"scope": "instance",
 			"description": "文本字段背景的颜色。即使当前没有背景，也可检索或设置此属性，但只有当文本字段已将 background 属性设置为 true 时，才可以看到颜色。",
 			"default": "0xFFFFFF",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -79,7 +74,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -93,7 +87,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -105,7 +98,6 @@
 			"scope": "instance",
 			"description": "指定文本字段是否具有边框。如果为 true，则文本字段具有边框。如果为 false，则文本字段没有边框。使用 borderColor 属性来设置边框颜色。",
 			"default": "false",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -117,7 +109,6 @@
 			"scope": "instance",
 			"description": "文本字段边框的颜色。即使当前没有边框，也可检索或设置此属性，但只有当文本字段已将 border 属性设置为 true 时，才可以看到颜色。",
 			"default": "0x000000",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -130,7 +121,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "距父级容器底部距离。",
 			"default": "NaN"
 		},
@@ -144,7 +134,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -157,7 +146,6 @@
 			"description": "默认文本字体",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"Arial\"",
 			"inherited": true,
 			"inherits": "egret.TextField"
@@ -170,7 +158,6 @@
 			"scope": "instance",
 			"description": "指定文本字段是否是密码文本字段。如果此属性的值为 true，则文本字段被视为密码文本字段，并使用星号而不是实际字符来隐藏输入的字符。如果为 false，则不会将文本字段视为密码文本字段。",
 			"default": "false",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -183,7 +170,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "外部显式指定的高度。"
 		},
 		{
@@ -195,7 +181,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "外部显式指定的宽度。"
 		},
 		{
@@ -208,7 +193,6 @@
 			"default": "\"sans-serif\"",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -222,7 +206,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -235,7 +218,6 @@
 			"description": "表示显示对象的高度，以像素为单位。高度是根据显示对象内容的范围来计算的。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -248,7 +230,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "在父级容器中距水平中心位置的距离。",
 			"default": "NaN"
 		},
@@ -261,7 +242,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "指定此组件是否包含在父容器的布局中。若为false，则父级容器在测量和布局阶段都忽略此组件。注意，visible属性与此属性不同，设置visible为false，父级容器仍会对其布局。",
 			"default": "true"
 		},
@@ -275,7 +255,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -288,7 +267,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "距父级容器离左边距离。",
 			"default": "NaN"
 		},
@@ -302,7 +280,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -316,7 +293,6 @@
 			"example": "以下代码改变了显示对象 mask 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMask:Rectangle&nbsp;=&nbsp;myDisplayObject.mask;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMask.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.mask&nbsp;=&nbsp;myMask;//设置完&nbsp;mask&nbsp;的x、y、width、height值之后，一定要对myDisplayObject重新赋值&nbsp;mask，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -330,7 +306,6 @@
 			"example": "以下代码改变了显示对象矩阵的tx属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMatrix:Matrix&nbsp;=&nbsp;myDisplayObject.matrix;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMatrix.tx&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.matrix&nbsp;=&nbsp;myMatrix;<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -342,7 +317,6 @@
 			"scope": "instance",
 			"description": "文本字段中最多可包含的字符数（即用户输入的字符数）。脚本可以插入比 maxChars 允许的字符数更多的文本；maxChars 属性仅表示用户可以输入多少文本。如果此属性的值为 0，则用户可以输入无限数量的文本。",
 			"default": "0",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -355,7 +329,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "组件的最大高度,同时影响测量和自动布局的尺寸。"
 		},
 		{
@@ -368,7 +341,6 @@
 			"description": "scrollV 的最大值",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -381,7 +353,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "组件的最大高度。同时影响测量和自动布局的尺寸。"
 		},
 		{
@@ -395,7 +366,6 @@
 			"returns": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -410,7 +380,6 @@
 			"returns": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -423,7 +392,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "组件的最小高度,此属性设置为大于maxHeight的值时无效。同时影响测量和自动布局的尺寸。"
 		},
 		{
@@ -435,7 +403,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "组件的最小宽度,此属性设置为大于maxWidth的值时无效。同时影响测量和自动布局的尺寸。"
 		},
 		{
@@ -446,7 +413,6 @@
 			"scope": "instance",
 			"description": "表示字段是否为多行文本字段。注意，此属性仅在type为TextFieldType.INPUT时才有效。如果值为 true，则文本字段为多行文本字段；如果值为 false，则文本字段为单行文本字段。在类型为 TextFieldType.INPUT 的字段中，multiline 值将确定 Enter 键是否创建新行（如果值为 false，则将忽略 Enter 键）。",
 			"default": "false",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -459,7 +425,6 @@
 			"description": "表示 DisplayObject 的实例名称。通过调用父显示对象容器的 getChildByName() 方法，可以在父显示对象容器的子列表中标识该对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -473,7 +438,6 @@
 			"description": "文本行数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -487,7 +451,6 @@
 			"description": "表示包含此显示对象的 DisplayObjectContainer 对象。使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -500,7 +463,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "相对父级容器高度的百分比。",
 			"default": "NaN"
 		},
@@ -513,7 +475,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "相对父级容器宽度的百分比。",
 			"default": "NaN"
 		},
@@ -525,8 +486,7 @@
 			"scope": "instance",
 			"description": "当text属性为空字符串时要显示的文本内容。先创建文本控件时将显示提示文本。控件获得焦点时或控件的 text 属性为非空字符串时，提示文本将消失。控件失去焦点时提示文本将重新显示，但仅当未输入文本时（如果文本字段的值为空字符串）。<p/>对于文本控件，如果用户输入文本，但随后又将其删除，则控件失去焦点后，提示文本将重新显示。您还可以通过编程方式将文本控件的 text 属性设置为空字符串使提示文本重新显示。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -536,8 +496,7 @@
 			"scope": "instance",
 			"description": "默认文本的颜色",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -549,7 +508,6 @@
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"default": "null",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -562,7 +520,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "距父级容器右边距离。",
 			"default": "NaN"
 		},
@@ -576,7 +533,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -590,7 +546,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -604,7 +559,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -618,7 +572,6 @@
 			"example": "以下代码改变了显示对象 scrollRect 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myRectangle:Rectangle&nbsp;=&nbsp;myDisplayObject.scrollRect;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myRectangle.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.scrollRect&nbsp;=&nbsp;myRectangle;//设置完scrollRect的x、y、width、height值之后，一定要对myDisplayObject重新赋值scrollRect，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -629,7 +582,6 @@
 			"memberof": "egret.TextField",
 			"scope": "instance",
 			"description": "文本在文本字段中的垂直位置。scrollV 属性可帮助用户定位到长篇文章的特定段落，还可用于创建滚动文本字段。垂直滚动的单位是行，而水平滚动的单位是像素。如果显示的第一行是文本字段中的第一行，则 scrollV 设置为 1（而非 0）。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -643,7 +595,6 @@
 			"default": "30",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -657,7 +608,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -671,7 +621,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -685,7 +634,6 @@
 			"description": "显示对象的舞台。例如，您可以创建多个显示对象并加载到显示列表中，每个显示对象的 stage 属性是指向相同的 Stage 对象。<br/>如果显示对象未添加到显示列表，则其 stage 属性会设置为 null。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -697,7 +645,6 @@
 			"scope": "instance",
 			"description": "表示描边宽度。0为没有描边。",
 			"default": "0",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -709,7 +656,6 @@
 			"scope": "instance",
 			"description": "表示文本的描边颜色。包含三个 8 位 RGB 颜色成分的数字；例如，0xFF0000 为红色，0x00FF00 为绿色。",
 			"default": "0x000000",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -720,7 +666,6 @@
 			"memberof": "egret.TextField",
 			"scope": "instance",
 			"description": "作为文本字段中当前文本的字符串",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -733,7 +678,6 @@
 			"description": "文本的水平对齐方式。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -747,7 +691,6 @@
 			"default": "0x000000",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -761,7 +704,6 @@
 			"see": [
 				"http://edn.egret.com/cn/index.php/article/index/id/146"
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -775,7 +717,6 @@
 			"description": "获取文本测量高度",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -789,7 +730,6 @@
 			"description": "获取文本测量宽度",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -802,7 +742,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "距父级容器顶部距离。",
 			"default": "NaN"
 		},
@@ -819,7 +758,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -831,7 +769,6 @@
 			"scope": "instance",
 			"description": "文本字段的类型。以下 TextFieldType 常量中的任一个：TextFieldType.DYNAMIC（指定用户无法编辑的动态文本字段），或 TextFieldType.INPUT（指定用户可以编辑的输入文本字段）。",
 			"default": "egret.TextFieldType.DYNAMIC",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -844,7 +781,6 @@
 			"description": "文字的垂直对齐方式。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -857,7 +793,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "在父级容器中距竖直中心位置的距离。",
 			"default": "NaN"
 		},
@@ -871,7 +806,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -884,7 +818,6 @@
 			"description": "表示显示对象的宽度，以像素为单位。宽度是根据显示对象内容的范围来计算的。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -898,7 +831,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.TextField"
 		},
@@ -912,7 +844,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -926,7 +857,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		}
@@ -939,8 +869,7 @@
 			"scope": "instance",
 			"description": "构造函数。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -980,7 +909,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表的所有节点上注册事件侦听器。成功注册一个事件侦听器后，无法通过额外调用 on() 来更改其优先级。要更改侦听器的优先级，必须先调用 removeEventListener()。然后，可以使用新的优先级再次注册该侦听器。注册该侦听器后，如果继续调用具有不同 type 或 useCapture值的 on()，则会创建单独的侦听器注册。<br/>如果不再需要某个事件侦听器，可调用 EventDispatcher.removeEventListener()删除它；否则会产生内存问题。由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。复制EventDispatcher 实例时并不复制其中附加的事件侦听器。（如果新近创建的节点需要一个事件侦听器，必须在创建该节点后附加该侦听器。）但是，如果移动 EventDispatcher 实例，则其中附加的事件侦听器也会随之移动。如果在正在处理事件的节点上注册事件侦听器，则不会在当前阶段触发事件侦听器，但会在事件流的稍后阶段触发，如冒泡阶段。如果从正在处理事件的节点中删除事件侦听器，则该事件侦听器仍由当前操作触发。删除事件侦听器后，决不会再次调用该事件侦听器（除非再次注册以备将来处理）。",
@@ -1005,7 +933,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "将事件分派到事件流中。事件目标是对其调用 dispatchEvent() 方法的 EventDispatcher 对象。",
@@ -1039,7 +966,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher"
 		},
@@ -1067,7 +993,6 @@
 					"description": "可选参数，是否会计算锚点。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1087,7 +1012,6 @@
 					"description": "可以放置结果的<code>egret.Rectangle</code>实例。"
 				}
 			],
-			"pType": "public",
 			"description": "组件的布局尺寸,常用于父级的<code>updateDisplayList()</code>方法中。<p/>按照：布局尺寸>外部显式设置尺寸>测量尺寸 的优先级顺序返回尺寸。<p/>注意此方法返回值已经包含scale和rotation。"
 		},
 		{
@@ -1106,7 +1030,6 @@
 					"description": "可以放置结果的<code>egret.Rectangle</code>实例。"
 				}
 			],
-			"pType": "public",
 			"description": "获取组件的首选尺寸,常用于父级的<code>measure()</code>方法中。<p/>按照：外部显式设置尺寸>测量尺寸 的优先级顺序返回尺寸。<p/>注意此方法返回值已经包含scale和rotation。"
 		},
 		{
@@ -1132,7 +1055,6 @@
 					"description": "一个用于存储结果的可复用Rectangle实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1166,7 +1088,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1186,7 +1107,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 EventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。要确定特定事件类型是否确实会触发事件侦听器，请使用 IEventDispatcher.willTrigger()。hasEventListener()与 willTrigger() 的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 检查整个事件流以查找由 type 参数指定的事件。",
@@ -1223,7 +1143,6 @@
 					"description": "是检查对象 (true) 的实际像素，还是检查边框 (false) 的实际像素。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1236,7 +1155,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "标记需要验证显示列表，以便在稍后屏幕更新期间调用该组件的 updateDisplayList() 方法。<p/>Invalidation 是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改宽度和高度，如果在更改宽度后立即更新组件，然后在设置新高度后再次更新组件，就有些浪费。更改两个属性后再使用新的大小一次性呈示组件，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
 		},
 		{
@@ -1248,7 +1166,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "标记提交过需要延迟应用的属性，以便在稍后屏幕更新期间调用该组件的 commitProperties() 方法。<p/>这是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改文本颜色和大小，如果在更改颜色后立即进行更新，然后在设置大小后再更新大小，就有些浪费。同时更改两个属性后再使用新的大小和颜色一次性呈示文本，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
 		},
 		{
@@ -1260,7 +1177,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "标记提交过需要验证组件尺寸，以便在稍后屏幕更新期间调用该组件的 measure() 方法。<p/>Invalidation 是一个很有用的机制，可将组件更改延迟到稍后屏幕更新时进行处理，从而消除了重复的工作。<p/>例如，要更改文本和字体大小，如果在更改文本后立即进行更新，然后在设置大小后再更新大小，就有些浪费。更改两个属性后再使用新的大小一次性呈示文本，效率会更高。<p/>很少调用 Invalidation 方法。通常，在组件上设置属性会自动调用合适的 invalidation 方法。"
 		},
 		{
@@ -1293,7 +1209,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1335,7 +1250,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "添加仅回调一次的事件侦听器，此方法与on()方法不同，on()方法会持续产生回调，而此方法在第一次回调时就会自动移除监听。",
@@ -1376,7 +1290,6 @@
 					"description": "指出是为捕获阶段还是为冒泡阶段注册了侦听器。如果为捕获阶段以及冒泡阶段注册了侦听器，则需要对removeEventListener() 进行两次调用才能将这两个侦听器删除：一次调用将 useCapture 设置为 true，另一次调用将 useCapture 设置为 false。。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
@@ -1402,7 +1315,6 @@
 					"description": "边框左上角的 Y 坐标。"
 				}
 			],
-			"pType": "public",
 			"description": "设置元素在屏幕上进行绘制时所用的布局坐标。<p/>请注意，调用 setLayoutBoundSize() 方法会影响布局位置，因此请在调用 setLayoutBoundSize()之后再调用 setLayoutBoundPosition()。"
 		},
 		{
@@ -1426,7 +1338,6 @@
 					"description": "元素的布局高度。"
 				}
 			],
-			"pType": "public",
 			"description": "设置元素的布局大小。这是元素在屏幕上进行绘制时所用的大小。<p/>如果 width 和/或 height 参数尚未指定 (NaN))，则 EUI 会将该元素的布局大小设置为首选宽度和/或首选高度。<p/>请注意，调用 setLayoutBoundSize() 方法会影响布局位置，因此请在调用 setLayoutBoundSize()之后再调用 setLayoutBoundPosition()。"
 		},
 		{
@@ -1450,7 +1361,6 @@
 					"description": "测量高度"
 				}
 			],
-			"pType": "public",
 			"description": "设置测量结果。"
 		},
 		{
@@ -1462,7 +1372,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "验证子项的位置和大小，并绘制其他可视内容。"
 		},
 		{
@@ -1474,7 +1383,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "验证并更新此对象的属性和布局，如果需要的话重绘对象。<p/>通常只有当脚本执行完毕后，才会处理要求进行大量计算的处理属性。<p/>例如，对 width 属性的设置可能会延迟，因为此设置需要重新计算这些对象的子项或父项的宽度。如果脚本多次设置了 width 属性，则延迟处理可防止进行多次处理。此方法允许您手动覆盖此行为。"
 		},
 		{
@@ -1486,7 +1394,6 @@
 			"inheritDoc": true,
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "由布局逻辑用于通过调用 commitProperties() 方法来验证组件的属性。通常，子类应覆盖 commitProperties() 方法，而不是覆盖此方法。"
 		},
 		{
@@ -1506,7 +1413,6 @@
 					"description": "如果为 true，则调用对象子项的此方法。"
 				}
 			],
-			"pType": "public",
 			"description": "验证组件的尺寸。"
 		},
 		{
@@ -1525,7 +1431,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。将指定类型的事件调度给此EventDispatcher 对象或其任一后代时，如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。hasEventListener() 与 willTrigger() 方法的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 方法检查整个事件流以查找由 type 参数指定的事件。",

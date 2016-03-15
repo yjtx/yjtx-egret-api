@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
 			"description": "持续时间，单位是帧",
-			"pType": "public",
 			"default": "0",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
@@ -21,7 +20,6 @@
 			"rwType": 1,
 			"description": "获取关键帧列表",
 			"returns": "",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -31,8 +29,7 @@
 			"name": "name",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "时间轴的名称",
-			"pType": "public"
+			"description": "时间轴的名称"
 		},
 		{
 			"kind": "member",
@@ -40,8 +37,7 @@
 			"name": "offset",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "偏移量",
-			"pType": "public"
+			"description": "偏移量"
 		},
 		{
 			"kind": "member",
@@ -49,8 +45,7 @@
 			"name": "originPivot",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "第一帧的骨头的轴点",
-			"pType": "public"
+			"description": "第一帧的骨头的轴点"
 		},
 		{
 			"kind": "member",
@@ -58,8 +53,7 @@
 			"name": "originTransform",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "第一帧的Transform",
-			"pType": "public"
+			"description": "第一帧的Transform"
 		},
 		{
 			"kind": "member",
@@ -68,7 +62,6 @@
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
 			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -78,8 +71,7 @@
 			"name": "transformed",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "是否有动画",
-			"pType": "public"
+			"description": "是否有动画"
 		}
 	],
 	"function": [
@@ -88,8 +80,7 @@
 			"name": "TransformTimeline",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "构造函数，实例化一个TransformTimeline",
-			"pType": "public"
+			"description": "构造函数，实例化一个TransformTimeline"
 		},
 		{
 			"kind": "function",
@@ -108,7 +99,6 @@
 					"description": "关键帧数据"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -118,8 +108,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.TransformTimeline",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		}
 	],
 	"globalMember": [],

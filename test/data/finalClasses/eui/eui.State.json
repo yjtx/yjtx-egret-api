@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -22,8 +21,7 @@
 			"scope": "instance",
 			"description": "视图状态的名称。给定组件的状态名称必须唯一。必须设置此属性。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -33,8 +31,7 @@
 			"scope": "instance",
 			"description": "该视图状态的覆盖，表现为实现 IOverride 接口的对象的数组。这些覆盖在进入状态时按顺序应用，在退出状态时按相反的顺序删除。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -44,8 +41,7 @@
 			"scope": "instance",
 			"description": "此视图状态作为 string 数组所属的状态组。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -69,8 +65,7 @@
 					"default": "[]",
 					"description": "该视图状态的覆盖，表现为实现 IOverride 接口的对象的数组。这些覆盖在进入状态时按顺序应用，在退出状态时按相反的顺序删除。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -92,8 +87,7 @@
 					"type": "egret.Stage",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -9,7 +9,6 @@
 			"description": "逐列排列元素。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"columns\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "逐行排列元素。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"rows\""
 		}
 	],

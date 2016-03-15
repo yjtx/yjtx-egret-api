@@ -9,7 +9,6 @@
 			"description": "表示 URLRequest 对象是一个 GET。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"get\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "表示 URLRequest 对象是一个 POST。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"post\""
 		}
 	],

@@ -6,7 +6,6 @@
 			"name": "DOWN",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "40"
 		},
 		{
@@ -15,7 +14,6 @@
 			"name": "END",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "35"
 		},
 		{
@@ -24,7 +22,6 @@
 			"name": "HOME",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "36"
 		},
 		{
@@ -33,7 +30,6 @@
 			"name": "LEFT",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "37"
 		},
 		{
@@ -42,7 +38,6 @@
 			"name": "PAGE_DOWN",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "34"
 		},
 		{
@@ -51,7 +46,6 @@
 			"name": "PAGE_LEFT",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "0x2397"
 		},
 		{
@@ -60,7 +54,6 @@
 			"name": "PAGE_RIGHT",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "0x2398"
 		},
 		{
@@ -69,7 +62,6 @@
 			"name": "PAGE_UP",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "33"
 		},
 		{
@@ -78,7 +70,6 @@
 			"name": "RIGHT",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "39"
 		},
 		{
@@ -87,7 +78,6 @@
 			"name": "UP",
 			"memberof": "egret.gui.NavigationUnit",
 			"scope": "static",
-			"pType": "public",
 			"default": "38"
 		}
 	],

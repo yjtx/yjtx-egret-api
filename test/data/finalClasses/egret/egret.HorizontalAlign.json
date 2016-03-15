@@ -9,7 +9,6 @@
 			"description": "在容器的水平中心对齐内容。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"center\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "相对于容器对子项进行内容对齐。这会将所有子项的大小统一调整为容器的\"内容宽度\"。容器的\"内容宽度\"是最大子项的大小,如果所有子项都小于容器的宽度，则会将所有子项的大小调整为容器的宽度。注意：TextFiled不支持此对齐方式。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"contentJustify\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "水平两端对齐注意：TextFiled不支持此对齐方式。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"justify\""
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "将内容与容器的左侧对齐。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"left\""
 		},
 		{
@@ -57,7 +53,6 @@
 			"description": "将内容与容器的右侧对齐。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"right\""
 		}
 	],

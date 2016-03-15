@@ -5,8 +5,7 @@
 			"type": "dragonBones.ColorTransform",
 			"name": "colorTransform",
 			"memberof": "dragonBones.SlotFrameCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -14,7 +13,6 @@
 			"name": "displayIndex",
 			"memberof": "dragonBones.SlotFrameCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "-1"
 		},
 		{
@@ -23,7 +21,6 @@
 			"name": "globalTransform",
 			"memberof": "dragonBones.FrameCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new DBTransform()",
 			"inherited": true,
 			"inherits": "dragonBones.FrameCache"
@@ -34,7 +31,6 @@
 			"name": "globalTransformMatrix",
 			"memberof": "dragonBones.FrameCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new Matrix()",
 			"inherited": true,
 			"inherits": "dragonBones.FrameCache"
@@ -45,8 +41,7 @@
 			"name": "gotoAndPlay",
 			"memberof": "dragonBones.SlotFrameCache",
 			"scope": "instance",
-			"description": "//\t\tpublic var zOrder:int;",
-			"pType": "public"
+			"description": "//\t\tpublic var zOrder:int;"
 		}
 	],
 	"function": [
@@ -54,16 +49,14 @@
 			"kind": "function",
 			"name": "SlotFrameCache",
 			"memberof": "dragonBones.SlotFrameCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "clear",
 			"memberof": "dragonBones.SlotFrameCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -78,8 +71,7 @@
 					"type": "dragonBones.FrameCache",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

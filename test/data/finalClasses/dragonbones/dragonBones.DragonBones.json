@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
 			"description": "DragonBones当前数据格式版本",
-			"pType": "public",
 			"default": "\"4.0\""
 		},
 		{
@@ -16,7 +15,6 @@
 			"name": "DATA_VERSION_4_5",
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"4.5\""
 		},
 		{
@@ -25,7 +23,6 @@
 			"name": "PARENT_COORDINATE_DATA_VERSION",
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"3.0\""
 		},
 		{
@@ -34,8 +31,7 @@
 			"name": "VERSION",
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
-			"pType": "public",
-			"default": "\"4.5.8\""
+			"default": "\"4.5.9\""
 		}
 	],
 	"function": [
@@ -43,8 +39,7 @@
 			"kind": "function",
 			"name": "DragonBones",
 			"memberof": "dragonBones.DragonBones",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

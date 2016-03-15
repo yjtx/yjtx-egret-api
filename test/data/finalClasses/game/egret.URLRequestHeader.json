@@ -9,7 +9,6 @@
 			"description": "HTTP 请求标头名称，如 Content-Type",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "与 name 属性相关联的值，如 text/plain",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"\""
 		}
 	],
@@ -45,8 +43,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

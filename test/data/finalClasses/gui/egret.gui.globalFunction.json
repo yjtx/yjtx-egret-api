@@ -15,8 +15,7 @@
 					"type": "string",
 					"description": "以字符串形式表示Rectangle构造函数的四个参数:x，y，width，height。例如：\"7,7,46,46\"。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/gui/utils/Adapter.ts",
@@ -45,8 +44,7 @@
 					"default": "\"\"",
 					"description": "named 可选参数，在同一个类作为键需要映射多条规则时，可以传入此参数区分不同的映射。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/gui/utils/Adapter.ts",
@@ -73,8 +71,7 @@
 					"default": "\"\"",
 					"description": "named 可选参数，在同一个类作为键需要映射多条规则时，可以传入此参数区分不同的映射。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/gui/utils/setProperties.ts",
@@ -100,8 +97,7 @@
 					"type": "Array<string>",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

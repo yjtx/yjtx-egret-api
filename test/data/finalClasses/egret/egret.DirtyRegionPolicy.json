@@ -9,7 +9,6 @@
 			"description": "关闭自动脏矩形检测",
 			"version": "Egret 2.5",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"off\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "开启自动脏矩形检测",
 			"version": "Egret 2.5",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"on\""
 		}
 	],

@@ -9,7 +9,6 @@
 			"description": "表示 HttpRequest 对象是一个 GET。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"GET\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "表示 HttpRequest 对象是一个 POST。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"POST\""
 		}
 	],

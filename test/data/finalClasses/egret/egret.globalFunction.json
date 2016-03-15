@@ -26,8 +26,7 @@
 					"name": "...args",
 					"description": "函数参数列表"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/getDefinitionByName.ts",
@@ -46,8 +45,7 @@
 					"type": "string",
 					"description": "类的名称。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/getOption.ts",
@@ -65,8 +63,7 @@
 					"type": "string",
 					"description": "参数key"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/getQualifiedClassName.ts",
@@ -86,8 +83,7 @@
 					"type": "any",
 					"description": "需要完全限定类名称的对象，可以将任何 JavaScript 值传递给此方法，包括所有可用的 JavaScript 类型、对象实例、原始类型（如number)和类对象"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/getQualifiedSuperclassName.ts",
@@ -107,8 +103,7 @@
 					"type": "any",
 					"description": "需要取得父类的对象，可以将任何 JavaScript 值传递给此方法，包括所有可用的 JavaScript 类型、对象实例、原始类型（如number）和类对象"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/getTimer.ts",
@@ -121,8 +116,7 @@
 			"returns": "启动 Egret 框架以来经过的毫秒数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;getTimer&nbsp;获取启动&nbsp;Egret&nbsp;引擎以来经过的毫秒数。<br/>&nbsp;*/<br/>class&nbsp;getTimerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(this,&nbsp;{loop:true}).wait(1000).call(function&nbsp;(){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getTimer());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
-			"pType": "public"
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;getTimer&nbsp;获取启动&nbsp;Egret&nbsp;引擎以来经过的毫秒数。<br/>&nbsp;*/<br/>class&nbsp;getTimerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(this,&nbsp;{loop:true}).wait(1000).call(function&nbsp;(){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getTimer());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
 		},
 		{
 			"filename": "egret/utils/hasDefinition.ts",
@@ -142,8 +136,7 @@
 					"type": "string",
 					"description": "定义的名称。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/is.ts",
@@ -171,8 +164,7 @@
 					"type": "string",
 					"description": "类或接口的完全名称."
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/registerclass.ts",
@@ -202,8 +194,7 @@
 					"type": "string[]",
 					"description": "要注册的类所实现的接口名列表。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/startTick.ts",
@@ -226,8 +217,7 @@
 					"type": "any",
 					"description": "回调方法的this对象引用。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/stopTick.ts",
@@ -250,8 +240,7 @@
 					"type": "any",
 					"description": "回调方法的this对象引用。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/extends.ts",
@@ -278,8 +267,7 @@
 					"type": "string",
 					"description": "需要调用的setter属性名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/extends.ts",
@@ -308,8 +296,7 @@
 					"name": "...values",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/utils/toColorString.ts",
@@ -329,8 +316,7 @@
 					"type": "number",
 					"description": "颜色值，例如 0xffffff"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

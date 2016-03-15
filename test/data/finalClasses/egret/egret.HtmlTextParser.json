@@ -7,8 +7,7 @@
 			"memberof": "egret.HtmlTextParser",
 			"scope": "instance",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -26,8 +25,7 @@
 					"type": "string",
 					"description": "html文本"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

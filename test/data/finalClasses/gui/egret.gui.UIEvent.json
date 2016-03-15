@@ -9,7 +9,6 @@
 			"description": "游戏激活",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"activate\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -23,7 +22,6 @@
 			"description": "将显示对象添加到显示列表中时调度。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"added\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -37,7 +35,6 @@
 			"description": "在将显示对象直接添加到舞台显示列表或将包含显示对象的子树添加至舞台显示列表中时调度。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"addedToStage\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -49,7 +46,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "当用户按下ButtonBase控件时分派。如果 autoRepeat属性为 true，则只要按钮处于按下状态，就将重复分派此事件。",
-			"pType": "public",
 			"default": "\"buttonDown\""
 		},
 		{
@@ -61,7 +57,6 @@
 			"description": "属性值或状态发生改变。通常是按钮的选中状态，或者列表的选中项索引改变。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"change\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -73,7 +68,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "改变结束",
-			"pType": "public",
 			"default": "\"changeEnd\""
 		},
 		{
@@ -83,7 +77,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "改变开始",
-			"pType": "public",
 			"default": "\"changeStart\""
 		},
 		{
@@ -93,7 +86,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "正在改变中",
-			"pType": "public",
 			"default": "\"changing\""
 		},
 		{
@@ -103,7 +95,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "下拉框关闭事件",
-			"pType": "public",
 			"default": "\"close\""
 		},
 		{
@@ -115,7 +106,6 @@
 			"description": "网络请求加载完成",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"complete\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -129,7 +119,6 @@
 			"description": "Event.CONNECT 常量定义 connect 事件对象的 type 属性的值。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"connect\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -141,7 +130,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "UIAsset的content属性解析完成",
-			"pType": "public",
 			"default": "\"contentChanged\""
 		},
 		{
@@ -151,7 +139,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "组件创建完成",
-			"pType": "public",
 			"default": "\"creationComplete\""
 		},
 		{
@@ -163,7 +150,6 @@
 			"description": "取消激活",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"deactivate\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -177,7 +163,6 @@
 			"description": "动画声音等播放完成",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"ended\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -191,7 +176,6 @@
 			"description": "[广播事件] 进入新的一帧,监听此事件将会在下一帧开始时触发一次回调。这是一个广播事件，可以在任何一个显示对象上监听，无论它是否在显示列表中。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"enterFrame\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -205,7 +189,6 @@
 			"description": "TextInput实例获得焦点",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"focusIn\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -219,7 +202,6 @@
 			"description": "TextInput实例失去焦点",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"focusOut\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -231,7 +213,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "组件初始化开始",
-			"pType": "public",
 			"default": "\"initialize\""
 		},
 		{
@@ -243,7 +224,6 @@
 			"description": "Event.LEAVE_STAGE 常量定义 leaveStage 事件对象的 type 属性的值。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"leaveStage\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -257,7 +237,6 @@
 			"description": "循环完成",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"loopComplete\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -269,7 +248,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "下拉框弹出事件",
-			"pType": "public",
 			"default": "\"open\""
 		},
 		{
@@ -279,7 +257,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "UIMoveClip一次播放完成事件。仅当UIMovieClip.totalFrames>1时会抛出此事件。",
-			"pType": "public",
 			"default": "\"playComplete\""
 		},
 		{
@@ -291,7 +268,6 @@
 			"description": "将要从显示列表中删除显示对象时调度。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"removed\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -305,7 +281,6 @@
 			"description": "在从显示列表中直接删除显示对象或删除包含显示对象的子树时调度。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"removedFromStage\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -319,7 +294,6 @@
 			"description": "渲染事件，监听此事件将会在本帧末即将开始渲染的前一刻触发回调，这是一个广播事件，可以在任何一个显示对象上监听，无论它是否在显示列表中。注意：每次您希望 Egret 发送 Event.RENDER 事件时，都必须调用 stage.invalidate() 方法，由于每帧只会触发一次屏幕刷新，若在 Event.RENDER 回调函数执行期间再次调用stage.invalidate()，将会被忽略。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"render\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -333,7 +307,6 @@
 			"description": "舞台尺寸或UI组件尺寸发生改变",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"resize\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -345,7 +318,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "SkinnableComponent皮肤发生改变",
-			"pType": "public",
 			"default": "\"skinChanged\""
 		},
 		{
@@ -357,7 +329,6 @@
 			"description": "Event.SOUND_COMPLETE 常量定义 在声音完成播放后调度。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"soundComplete\"",
 			"inherited": true,
 			"inherits": "egret.Event"
@@ -369,7 +340,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "组件的一次三个延迟验证渲染阶段全部完成",
-			"pType": "public",
 			"default": "\"updateComplete\""
 		},
 		{
@@ -379,7 +349,6 @@
 			"memberof": "egret.gui.UIEvent",
 			"scope": "static",
 			"description": "值发生改变",
-			"pType": "public",
 			"default": "\"valueCommit\""
 		},
 		{
@@ -392,7 +361,6 @@
 			"description": "表示事件是否为冒泡事件。如果事件可以冒泡，则此值为 true；否则为 false。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -409,7 +377,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -423,7 +390,6 @@
 			"description": "当前正在使用某个事件侦听器处理 Event 对象的对象。例如，如果用户单击“确定”按钮，则当前目标可以是包含该按钮的节点，也可以是它的已为该事件注册了事件侦听器的始祖之一。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -436,7 +402,6 @@
 			"description": "与此事件对象关联的可选数据。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -453,7 +418,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -467,7 +431,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -481,7 +444,6 @@
 			"description": "事件目标。此属性包含目标节点。例如，如果用户单击“确定”按钮，则目标节点就是包含该按钮的显示列表节点。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -495,7 +457,6 @@
 			"description": "事件的类型。类型区分大小写。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		}
@@ -524,8 +485,7 @@
 					"default": "false",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -564,7 +524,6 @@
 					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -601,7 +560,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -623,8 +581,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -639,7 +596,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -656,7 +612,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -680,7 +635,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -697,7 +651,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		},
@@ -714,7 +667,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Event"
 		}

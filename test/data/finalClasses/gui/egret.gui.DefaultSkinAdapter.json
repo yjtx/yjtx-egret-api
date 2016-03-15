@@ -6,8 +6,7 @@
 			"name": "DefaultSkinAdapter",
 			"memberof": "egret.gui.DefaultSkinAdapter",
 			"scope": "instance",
-			"description": "构造函数",
-			"pType": "public"
+			"description": "构造函数"
 		},
 		{
 			"kind": "function",
@@ -28,8 +27,7 @@
 					"type": "string",
 					"description": "主机组件标识符"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -6,7 +6,6 @@
 			"name": "interpolator",
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
-			"pType": "public",
 			"default": "NumberInterpolator.getInstance()",
 			"inherited": true,
 			"inherits": "egret.gui.MotionPath"
@@ -18,7 +17,6 @@
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
 			"description": "表示属性在动画过程中所采用的时间/值对的 Keyframe 对象序列。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.MotionPath"
 		},
@@ -29,7 +27,6 @@
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
 			"description": "要设置动画的效果目标上属性的名称。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.MotionPath"
 		},
@@ -39,8 +36,7 @@
 			"name": "valueBy",
 			"memberof": "egret.gui.SimpleMotionPath",
 			"scope": "instance",
-			"description": "可指定用于计算 valueFrom 或 valueTo 值的 delta 的可选属性。",
-			"pType": "public"
+			"description": "可指定用于计算 valueFrom 或 valueTo 值的 delta 的可选属性。"
 		},
 		{
 			"kind": "member",
@@ -48,8 +44,7 @@
 			"name": "valueFrom",
 			"memberof": "egret.gui.SimpleMotionPath",
 			"scope": "instance",
-			"description": "动画过程中属性的起始值。",
-			"pType": "public"
+			"description": "动画过程中属性的起始值。"
 		},
 		{
 			"kind": "member",
@@ -57,8 +52,7 @@
 			"name": "valueTo",
 			"memberof": "egret.gui.SimpleMotionPath",
 			"scope": "instance",
-			"description": "已命名的属性将要设置动画的值。",
-			"pType": "public"
+			"description": "已命名的属性将要设置动画的值。"
 		}
 	],
 	"function": [
@@ -93,8 +87,7 @@
 					"default": "null",
 					"description": "用于指定 delta 的可选参数，该 delta 用于计算 from 或 to 值（如果其中一个值被忽略）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -103,7 +96,6 @@
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
 			"description": "返回此 MotionPath 对象的副本（包含每个关键帧的副本）。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.MotionPath"
 		},
@@ -122,7 +114,6 @@
 					"description": "效果的总体持续时间部分（从 0.0 到 1.0 之间的值）。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.MotionPath"
 		}

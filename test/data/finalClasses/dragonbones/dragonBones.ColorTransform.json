@@ -6,8 +6,7 @@
 			"name": "alphaMultiplier",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "透明度增幅，计算时用乘法",
-			"pType": "public"
+			"description": "透明度增幅，计算时用乘法"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "alphaOffset",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "透明度偏移，计算时用加法",
-			"pType": "public"
+			"description": "透明度偏移，计算时用加法"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "blueMultiplier",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "蓝色值增幅，计算时用乘法",
-			"pType": "public"
+			"description": "蓝色值增幅，计算时用乘法"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "blueOffset",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "蓝色值偏移，计算时用加法",
-			"pType": "public"
+			"description": "蓝色值偏移，计算时用加法"
 		},
 		{
 			"kind": "member",
@@ -42,8 +38,7 @@
 			"name": "greenMultiplier",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "绿色值增幅，计算时用乘法",
-			"pType": "public"
+			"description": "绿色值增幅，计算时用乘法"
 		},
 		{
 			"kind": "member",
@@ -51,8 +46,7 @@
 			"name": "greenOffset",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "绿色值偏移，计算时用加法",
-			"pType": "public"
+			"description": "绿色值偏移，计算时用加法"
 		},
 		{
 			"kind": "member",
@@ -60,8 +54,7 @@
 			"name": "redMultiplier",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "红色值增幅，计算时用乘法",
-			"pType": "public"
+			"description": "红色值增幅，计算时用乘法"
 		},
 		{
 			"kind": "member",
@@ -69,8 +62,7 @@
 			"name": "redOffset",
 			"memberof": "dragonBones.ColorTransform",
 			"scope": "instance",
-			"description": "红色值偏移，计算时用加法",
-			"pType": "public"
+			"description": "红色值偏移，计算时用加法"
 		}
 	],
 	"function": [
@@ -78,8 +70,7 @@
 			"kind": "function",
 			"name": "ColorTransform",
 			"memberof": "dragonBones.ColorTransform",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

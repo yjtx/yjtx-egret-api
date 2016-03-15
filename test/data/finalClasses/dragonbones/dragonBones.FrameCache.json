@@ -6,7 +6,6 @@
 			"name": "globalTransform",
 			"memberof": "dragonBones.FrameCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new DBTransform()"
 		},
 		{
@@ -15,7 +14,6 @@
 			"name": "globalTransformMatrix",
 			"memberof": "dragonBones.FrameCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new Matrix()"
 		}
 	],
@@ -24,16 +22,14 @@
 			"kind": "function",
 			"name": "FrameCache",
 			"memberof": "dragonBones.FrameCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "clear",
 			"memberof": "dragonBones.FrameCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -48,8 +44,7 @@
 					"type": "dragonBones.FrameCache",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

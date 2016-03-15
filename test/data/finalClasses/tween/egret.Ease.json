@@ -9,7 +9,6 @@
 			"description": "back in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getBackIn(1.7)"
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "back in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getBackInOut(1.7)"
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "back out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getBackOut(1.7)"
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "cubic in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowIn(3)"
 		},
 		{
@@ -57,7 +53,6 @@
 			"description": "cubic in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowInOut(3)"
 		},
 		{
@@ -69,7 +64,6 @@
 			"description": "cubic out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowOut(3)"
 		},
 		{
@@ -81,7 +75,6 @@
 			"description": "elastic in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getElasticIn(1, 0.3)"
 		},
 		{
@@ -93,7 +86,6 @@
 			"description": "elastic in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getElasticInOut(1, 0.3 * 1.5)"
 		},
 		{
@@ -105,7 +97,6 @@
 			"description": "elastic out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getElasticOut(1, 0.3)"
 		},
 		{
@@ -117,7 +108,6 @@
 			"description": "quad in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowIn(2)"
 		},
 		{
@@ -129,7 +119,6 @@
 			"description": "quad in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowInOut(2)"
 		},
 		{
@@ -141,7 +130,6 @@
 			"description": "quad out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowOut(2)"
 		},
 		{
@@ -153,7 +141,6 @@
 			"description": "quart in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowIn(4)"
 		},
 		{
@@ -165,7 +152,6 @@
 			"description": "quart in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowInOut(4)"
 		},
 		{
@@ -177,7 +163,6 @@
 			"description": "quart out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowOut(4)"
 		},
 		{
@@ -189,7 +174,6 @@
 			"description": "quint in。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowIn(5)"
 		},
 		{
@@ -201,7 +185,6 @@
 			"description": "quint in out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowInOut(5)"
 		},
 		{
@@ -213,7 +196,6 @@
 			"description": "quint out。请查看示例",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "Ease.getPowOut(5)"
 		}
 	],
@@ -224,8 +206,7 @@
 			"memberof": "egret.Ease",
 			"scope": "instance",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -241,8 +222,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -258,8 +238,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -275,8 +254,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -292,8 +270,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -309,8 +286,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -326,8 +302,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -343,8 +318,7 @@
 					"name": "amount",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -360,8 +334,7 @@
 					"name": "amount",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -377,8 +350,7 @@
 					"name": "amount",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -394,8 +366,7 @@
 					"name": "amount",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -415,8 +386,7 @@
 					"name": "period",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -436,8 +406,7 @@
 					"name": "period",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -457,8 +426,7 @@
 					"name": "period",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -474,8 +442,7 @@
 					"name": "pow",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -491,8 +458,7 @@
 					"name": "pow",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -508,8 +474,7 @@
 					"name": "pow",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -525,8 +490,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -542,8 +506,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -559,8 +522,7 @@
 					"name": "t",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.EaseInOutBase",
 			"scope": "instance",
 			"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。有效值为 0.0 到 1.0。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EaseInOutBase"
 		},
@@ -17,8 +16,7 @@
 			"name": "exponent",
 			"memberof": "egret.gui.Power",
 			"scope": "instance",
-			"description": "在缓动计算中使用的指数。exponent 属性的值越大，加速和减速的速率越快。",
-			"pType": "public"
+			"description": "在缓动计算中使用的指数。exponent 属性的值越大，加速和减速的速率越快。"
 		}
 	],
 	"function": [
@@ -40,8 +38,7 @@
 					"default": "2",
 					"description": "在缓动计算中使用的指数。exponent 属性的值越大，加速和减速的速率越快。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -56,7 +53,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EaseInOutBase"
 		}

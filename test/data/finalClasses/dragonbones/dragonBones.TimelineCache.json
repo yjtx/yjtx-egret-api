@@ -5,8 +5,7 @@
 			"type": "dragonBones.FrameCache",
 			"name": "currentFrameCache",
 			"memberof": "dragonBones.TimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -14,7 +13,6 @@
 			"name": "frameCacheList",
 			"memberof": "dragonBones.TimelineCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new Array<FrameCache>()"
 		},
 		{
@@ -22,8 +20,7 @@
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.TimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -31,16 +28,14 @@
 			"kind": "function",
 			"name": "TimelineCache",
 			"memberof": "dragonBones.TimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "addFrame",
 			"memberof": "dragonBones.TimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -54,8 +49,7 @@
 					"type": "dragonBones.ICacheUser",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -70,8 +64,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

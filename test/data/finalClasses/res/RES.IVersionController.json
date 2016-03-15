@@ -16,8 +16,7 @@
 					"type": "egret.AsyncCallback",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -28,8 +27,7 @@
 			"description": "获取所有有变化的文件。<br/>主要应用在native场景中。这里的变化包括新增文件、更新文件（文件名相同，但更改过的文件）。<br/>",
 			"returns": "所有有变化的文件列表。在Web端此列表为空。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -47,8 +45,7 @@
 					"type": "string",
 					"description": "游戏中使用的url"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

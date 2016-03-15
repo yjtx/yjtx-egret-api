@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
 			"description": "The armature this DBObject instance belongs to.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -17,8 +16,7 @@
 			"name": "blendMode",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "混合模式",
-			"pType": "public"
+			"description": "混合模式"
 		},
 		{
 			"kind": "member",
@@ -26,8 +24,7 @@
 			"name": "childArmature",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "当前的子骨架",
-			"pType": "public"
+			"description": "当前的子骨架"
 		},
 		{
 			"kind": "member",
@@ -35,8 +32,7 @@
 			"name": "colorChanged",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -44,8 +40,7 @@
 			"name": "colorTransform",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -53,8 +48,7 @@
 			"name": "display",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "当前的显示对象(可能是 display 或者 子骨架)",
-			"pType": "public"
+			"description": "当前的显示对象(可能是 display 或者 子骨架)"
 		},
 		{
 			"kind": "member",
@@ -62,8 +56,7 @@
 			"name": "displayIndex",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -71,8 +64,7 @@
 			"name": "displayList",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "显示对象列表(包含 display 或者 子骨架)",
-			"pType": "public"
+			"description": "显示对象列表(包含 display 或者 子骨架)"
 		},
 		{
 			"kind": "member",
@@ -81,7 +73,6 @@
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
 			"rwType": 2,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -96,7 +87,6 @@
 			"see": [
 				"dragonBones.DBTransform"
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -107,7 +97,6 @@
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -117,16 +106,14 @@
 			"name": "gotoAndPlay",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "播放子骨架动画",
-			"pType": "public"
+			"description": "播放子骨架动画"
 		},
 		{
 			"kind": "member",
 			"type": "boolean",
 			"name": "hasChildArmature",
 			"memberof": "dragonBones.FastSlot",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -134,7 +121,6 @@
 			"name": "inheritRotation",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -144,7 +130,6 @@
 			"name": "inheritScale",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -154,7 +139,6 @@
 			"name": "inheritTranslation",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -164,7 +148,6 @@
 			"name": "name",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -179,7 +162,6 @@
 			"see": [
 				"dragonBones.DBTransform"
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -191,7 +173,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -202,7 +183,6 @@
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
 			"description": "An object that can contain any user extra data.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.FastDBObject"
 		},
@@ -212,8 +192,7 @@
 			"name": "zOrder",
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
-			"description": "显示顺序。(支持小数用于实现动态插入slot)",
-			"pType": "public"
+			"description": "显示顺序。(支持小数用于实现动态插入slot)"
 		}
 	],
 	"function": [
@@ -221,8 +200,7 @@
 			"kind": "function",
 			"name": "FastSlot",
 			"memberof": "dragonBones.FastSlot",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -231,7 +209,6 @@
 			"memberof": "dragonBones.FastSlot",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "Cleans up any resources used by this DBObject instance."
 		},
 		{
@@ -246,8 +223,7 @@
 					"type": "Array<any>",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -262,16 +238,14 @@
 					"type": "dragonBones.SlotData",
 					"description": "slotData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "updateChildArmatureAnimation",
 			"memberof": "dragonBones.FastSlot",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

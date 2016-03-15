@@ -6,8 +6,7 @@
 			"name": "easeInFraction",
 			"memberof": "egret.gui.EaseInOutBase",
 			"scope": "instance",
-			"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。有效值为 0.0 到 1.0。",
-			"pType": "public"
+			"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。有效值为 0.0 到 1.0。"
 		}
 	],
 	"function": [
@@ -23,8 +22,7 @@
 					"default": "0.5",
 					"description": "缓入过程所占动画播放时间的百分比。剩余即为缓出的时间。默认值为 EasingFraction.IN_OUT，它会缓入前一半时间，并缓出剩余的一半时间。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -38,8 +36,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

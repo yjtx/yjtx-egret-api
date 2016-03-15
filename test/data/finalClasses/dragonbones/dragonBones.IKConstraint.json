@@ -6,7 +6,6 @@
 			"name": "animationCacheBend",
 			"memberof": "dragonBones.IKConstraint",
 			"scope": "instance",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -15,7 +14,6 @@
 			"name": "animationCacheWeight",
 			"memberof": "dragonBones.IKConstraint",
 			"scope": "instance",
-			"pType": "public",
 			"default": "-1"
 		},
 		{
@@ -23,32 +21,28 @@
 			"type": "number",
 			"name": "bendDirection",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "Array<dragonBones.Bone>",
 			"name": "bones",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.Bone",
 			"name": "target",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "number",
 			"name": "weight",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -68,16 +62,14 @@
 					"type": "dragonBones.Armature",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "compute",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -101,8 +93,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -141,16 +132,14 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "dispose",
 			"memberof": "dragonBones.IKConstraint",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

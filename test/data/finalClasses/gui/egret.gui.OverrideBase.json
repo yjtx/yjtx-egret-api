@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		}
@@ -20,8 +19,7 @@
 			"kind": "function",
 			"name": "OverrideBase",
 			"memberof": "egret.gui.OverrideBase",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -35,8 +33,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -50,8 +47,7 @@
 					"type": "egret.gui.IStateClient",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -67,8 +63,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -82,8 +77,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

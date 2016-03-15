@@ -7,8 +7,7 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "The armature this DBObject instance belongs to.",
-			"pType": "public"
+			"description": "The armature this DBObject instance belongs to."
 		},
 		{
 			"kind": "member",
@@ -17,8 +16,7 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "相对世界坐标的 DBTransform 实例。",
-			"pType": "public"
+			"description": "相对世界坐标的 DBTransform 实例。"
 		},
 		{
 			"kind": "member",
@@ -26,8 +24,7 @@
 			"name": "inheritRotation",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"description": "是否继承父亲的旋转属性。",
-			"pType": "public"
+			"description": "是否继承父亲的旋转属性。"
 		},
 		{
 			"kind": "member",
@@ -35,8 +32,7 @@
 			"name": "inheritScale",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"description": "是否继承父亲的缩放属性。",
-			"pType": "public"
+			"description": "是否继承父亲的缩放属性。"
 		},
 		{
 			"kind": "member",
@@ -44,16 +40,14 @@
 			"name": "inheritTranslation",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"description": "是否继承父亲的平移属性。",
-			"pType": "public"
+			"description": "是否继承父亲的平移属性。"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.DBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -62,8 +56,7 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "用于运行时动态调整的 DBTransform 实例。",
-			"pType": "public"
+			"description": "用于运行时动态调整的 DBTransform 实例。"
 		},
 		{
 			"kind": "member",
@@ -72,8 +65,7 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "骨架数据中的原始的相对父亲的 DBTransform 实例。",
-			"pType": "public"
+			"description": "骨架数据中的原始的相对父亲的 DBTransform 实例。"
 		},
 		{
 			"kind": "member",
@@ -82,8 +74,7 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
-			"pType": "public"
+			"description": "Indicates the Bone instance that directly contains this DBObject instance if any."
 		},
 		{
 			"kind": "member",
@@ -91,8 +82,7 @@
 			"name": "userData",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"description": "存储额外的用户数据。",
-			"pType": "public"
+			"description": "存储额外的用户数据。"
 		}
 	],
 	"function": [
@@ -100,8 +90,7 @@
 			"kind": "function",
 			"name": "DBObject",
 			"memberof": "dragonBones.DBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -109,8 +98,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"description": "清理使用的资源用于垃圾回收",
-			"pType": "public"
+			"description": "清理使用的资源用于垃圾回收"
 		}
 	],
 	"globalMember": [],

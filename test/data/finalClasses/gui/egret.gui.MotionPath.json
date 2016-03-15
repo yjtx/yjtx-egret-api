@@ -6,7 +6,6 @@
 			"name": "interpolator",
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
-			"pType": "public",
 			"default": "NumberInterpolator.getInstance()"
 		},
 		{
@@ -15,8 +14,7 @@
 			"name": "keyframes",
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
-			"description": "表示属性在动画过程中所采用的时间/值对的 Keyframe 对象序列。",
-			"pType": "public"
+			"description": "表示属性在动画过程中所采用的时间/值对的 Keyframe 对象序列。"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "property",
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
-			"description": "要设置动画的效果目标上属性的名称。",
-			"pType": "public"
+			"description": "要设置动画的效果目标上属性的名称。"
 		}
 	],
 	"function": [
@@ -41,8 +38,7 @@
 					"default": "null",
 					"description": "要设置动画的目标上属性的名称。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -50,8 +46,7 @@
 			"name": "clone",
 			"memberof": "egret.gui.MotionPath",
 			"scope": "instance",
-			"description": "返回此 MotionPath 对象的副本（包含每个关键帧的副本）。",
-			"pType": "public"
+			"description": "返回此 MotionPath 对象的副本（包含每个关键帧的副本）。"
 		},
 		{
 			"kind": "function",
@@ -67,8 +62,7 @@
 					"type": "number",
 					"description": "效果的总体持续时间部分（从 0.0 到 1.0 之间的值）。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

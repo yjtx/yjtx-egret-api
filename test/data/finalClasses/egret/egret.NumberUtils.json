@@ -17,8 +17,7 @@
 					"type": "number",
 					"description": "角度值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -36,8 +35,7 @@
 					"type": "any",
 					"description": "需要判断的参数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -55,8 +53,7 @@
 					"type": "number",
 					"description": "角度值"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

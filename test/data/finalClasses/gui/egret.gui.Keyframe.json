@@ -6,8 +6,7 @@
 			"name": "easer",
 			"memberof": "egret.gui.Keyframe",
 			"scope": "instance",
-			"description": "对运动路径中前一个 Keyframe 对象与此 Keyframe 对象之间的运动所应用的缓动行为。默认情况下，缓动是线性的，或者根本就没有缓动。",
-			"pType": "public"
+			"description": "对运动路径中前一个 Keyframe 对象与此 Keyframe 对象之间的运动所应用的缓动行为。默认情况下，缓动是线性的，或者根本就没有缓动。"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "time",
 			"memberof": "egret.gui.Keyframe",
 			"scope": "instance",
-			"description": "以毫秒为单位的时间，此关键帧的效果目标应该在此时间处具有 value 属性指定的值。此时间与用此关键帧定义的效果的起始时间相关。",
-			"pType": "public"
+			"description": "以毫秒为单位的时间，此关键帧的效果目标应该在此时间处具有 value 属性指定的值。此时间与用此关键帧定义的效果的起始时间相关。"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "value",
 			"memberof": "egret.gui.Keyframe",
 			"scope": "instance",
-			"description": "效果目标的属性在 time 属性指定的时间处所应该具有的值。",
-			"pType": "public"
+			"description": "效果目标的属性在 time 属性指定的时间处所应该具有的值。"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "valueBy",
 			"memberof": "egret.gui.Keyframe",
 			"scope": "instance",
-			"description": "用于计算此关键帧或前一个关键帧中的 value 的可选参数（如果已指定）。如果在前一个关键帧中未设置 value，但此关键帧中同时定义了 value 和 valueBy，则前一个关键帧中的 value 可以通过以此关键帧中的 value 减去此关键帧中的 valueBy 来计算。",
-			"pType": "public"
+			"description": "用于计算此关键帧或前一个关键帧中的 value 的可选参数（如果已指定）。如果在前一个关键帧中未设置 value，但此关键帧中同时定义了 value 和 valueBy，则前一个关键帧中的 value 可以通过以此关键帧中的 value 减去此关键帧中的 valueBy 来计算。"
 		}
 	],
 	"function": [
@@ -62,8 +58,7 @@
 					"default": "null",
 					"description": "可选参数，如果提供该可选参数，则可以通过将 valueBy 与 MotionPath 对象的关键帧集合中的前一个关键帧的 value 相加来动态地计算 value。如果是序列中的第一个 Keyframe，则会忽略此值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -71,8 +66,7 @@
 			"name": "clone",
 			"memberof": "egret.gui.Keyframe",
 			"scope": "instance",
-			"description": "返回此 Keyframe 对象的副本。",
-			"pType": "public"
+			"description": "返回此 Keyframe 对象的副本。"
 		}
 	],
 	"globalMember": [],

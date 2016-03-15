@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件上方弹出",
-			"pType": "public",
 			"default": "\"above\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件下方弹出",
-			"pType": "public",
 			"default": "\"below\""
 		},
 		{
@@ -27,7 +25,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件中心弹出",
-			"pType": "public",
 			"default": "\"center\""
 		},
 		{
@@ -37,7 +34,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件左边弹出",
-			"pType": "public",
 			"default": "\"left\""
 		},
 		{
@@ -47,7 +43,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件右边弹出",
-			"pType": "public",
 			"default": "\"right\""
 		},
 		{
@@ -57,7 +52,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在屏幕中心弹出",
-			"pType": "public",
 			"default": "\"screenCenter\""
 		},
 		{
@@ -67,7 +61,6 @@
 			"memberof": "egret.gui.PopUpPosition",
 			"scope": "static",
 			"description": "在组件左上角弹出",
-			"pType": "public",
 			"default": "\"topLeft\""
 		}
 	],

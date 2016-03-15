@@ -9,7 +9,6 @@
 			"description": "如果子项超出父级的尺寸，则允许滚动，反之不允许滚动。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"auto\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "从不允许滚动。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"off\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "总是允许滚动。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"on\""
 		}
 	],

@@ -5,32 +5,28 @@
 			"type": "dragonBones.ArmatureData",
 			"name": "armatureData",
 			"memberof": "dragonBones.BuildArmatureDataPackage",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.DragonBonesData",
 			"name": "dragonBonesData",
 			"memberof": "dragonBones.BuildArmatureDataPackage",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "dragonBonesDataName",
 			"memberof": "dragonBones.BuildArmatureDataPackage",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "any",
 			"name": "textureAtlas",
 			"memberof": "dragonBones.BuildArmatureDataPackage",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [],

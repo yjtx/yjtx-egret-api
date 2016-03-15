@@ -768,7 +768,7 @@
 				},
 				{
 					"name": "UIComponent",
-					"description": "Component 类定义可设置外观的组件的基类。Component 类所使用的外观通常是 Skin 类的子类。<p/>通过设置 component 类的 skinClass 样式属性，将 skin 类与 component 类相关联。"
+					"description": "UIComponent 类是所有可视组件（可定制皮肤和不可定制皮肤）的基类。"
 				},
 				{
 					"name": "BitmapLabel",
@@ -784,7 +784,7 @@
 				},
 				{
 					"name": "Component",
-					"description": ""
+					"description": "Component 类定义可设置外观的组件的基类。Component 类所使用的外观通常是 Skin 类的子类。<p/>通过设置 component 类的 skinName 属性，将 skin 类与 component 类相关联。"
 				},
 				{
 					"name": "DataGroup",
@@ -937,14 +937,6 @@
 				{
 					"name": "ScrollPolicy",
 					"description": "滚动条显示策略常量。Scroller 类的 <code>horizontalCanScroll</code> 和 <code>verticalCanScroll</code> 属性的值。"
-				},
-				{
-					"name": "ThemeData",
-					"description": ""
-				},
-				{
-					"name": "EXMLFile",
-					"description": ""
 				},
 				{
 					"name": "Theme",
@@ -1653,10 +1645,6 @@
 					"description": "水平布局"
 				},
 				{
-					"name": "ChildInfo",
-					"description": ""
-				},
-				{
 					"name": "RowAlign",
 					"description": "RowAlign 类为 TileLayout 类的 rowAlign 属性定义可能的值。"
 				},
@@ -1695,10 +1683,6 @@
 				{
 					"name": "PopUpManagerImpl",
 					"description": "窗口弹出管理器实现类"
-				},
-				{
-					"name": "PopUpData",
-					"description": ""
 				},
 				{
 					"name": "DepthQueue",

@@ -9,7 +9,6 @@
 			"description": "二进制文件。",
 			"version": "Egret 2.4",
 			"platform": "Web",
-			"pType": "public",
 			"default": "\"bin\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "BitmapTextSpriteSheet 文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"font\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "图片文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"image\""
 		},
 		{
@@ -45,7 +42,6 @@
 			"description": "JSON 文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"json\""
 		},
 		{
@@ -57,7 +53,6 @@
 			"description": "SpriteSheet 文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"sheet\""
 		},
 		{
@@ -69,7 +64,6 @@
 			"description": "声音文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"sound\""
 		},
 		{
@@ -81,7 +75,6 @@
 			"description": "文本文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"text\""
 		},
 		{
@@ -93,7 +86,6 @@
 			"description": "XML 文件。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"xml\""
 		},
 		{
@@ -105,7 +97,6 @@
 			"description": "被引用的原始数据对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "null"
 		},
 		{
@@ -117,7 +108,6 @@
 			"description": "资源所属的组名。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"\""
 		},
 		{
@@ -128,8 +118,7 @@
 			"scope": "instance",
 			"description": "加载完成的标志。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -139,8 +128,7 @@
 			"scope": "instance",
 			"description": "加载项名称。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -150,8 +138,7 @@
 			"scope": "instance",
 			"description": "加载项文件类型。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -161,8 +148,7 @@
 			"scope": "instance",
 			"description": "要加载的文件地址。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -190,8 +176,7 @@
 					"type": "string",
 					"description": "加载项文件类型。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "节点类型，1：XML，2：XMLAttribute，3：XMLText",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "节点所属的父级节点",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [],

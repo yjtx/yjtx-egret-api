@@ -6,8 +6,7 @@
 			"name": "armature",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"description": "The armature this DBObject instance belongs to.",
-			"pType": "public"
+			"description": "The armature this DBObject instance belongs to."
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "frameCache",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"rwType": 2,
-			"pType": "public"
+			"rwType": 2
 		},
 		{
 			"kind": "member",
@@ -28,8 +26,7 @@
 			"description": "This DBObject instance global transform instance.",
 			"see": [
 				"dragonBones.DBTransform"
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -37,40 +34,35 @@
 			"name": "globalTransformMatrix",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
 			"type": "boolean",
 			"name": "inheritRotation",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "boolean",
 			"name": "inheritScale",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "boolean",
 			"name": "inheritTranslation",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -82,8 +74,7 @@
 			"description": "This DBObject instance related to parent transform instance.",
 			"see": [
 				"dragonBones.DBTransform"
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "member",
@@ -92,8 +83,7 @@
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
-			"pType": "public"
+			"description": "Indicates the Bone instance that directly contains this DBObject instance if any."
 		},
 		{
 			"kind": "member",
@@ -101,16 +91,14 @@
 			"name": "userData",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"description": "An object that can contain any user extra data.",
-			"pType": "public"
+			"description": "An object that can contain any user extra data."
 		},
 		{
 			"kind": "member",
 			"type": "boolean",
 			"name": "visible",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -118,8 +106,7 @@
 			"kind": "function",
 			"name": "FastDBObject",
 			"memberof": "dragonBones.FastDBObject",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -127,8 +114,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.FastDBObject",
 			"scope": "instance",
-			"description": "Cleans up any resources used by this DBObject instance.",
-			"pType": "public"
+			"description": "Cleans up any resources used by this DBObject instance."
 		}
 	],
 	"globalMember": [],

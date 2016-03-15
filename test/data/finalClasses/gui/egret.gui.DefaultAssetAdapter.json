@@ -6,8 +6,7 @@
 			"name": "DefaultAssetAdapter",
 			"memberof": "egret.gui.DefaultAssetAdapter",
 			"scope": "instance",
-			"description": "构造函数",
-			"pType": "public"
+			"description": "构造函数"
 		},
 		{
 			"kind": "function",
@@ -37,8 +36,7 @@
 					"type": "any",
 					"description": "any 旧的内容对象,传入值有可能为null。对于某些类型素材，例如MovieClip，可以重用传入的显示对象,只修改其数据再返回。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -68,8 +66,7 @@
 					"type": "any",
 					"description": "回调的this引用"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

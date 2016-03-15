@@ -5,8 +5,7 @@
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.FastSlotTimelineState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"function": [
@@ -14,8 +13,7 @@
 			"kind": "function",
 			"name": "FastSlotTimelineState",
 			"memberof": "dragonBones.FastSlotTimelineState",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

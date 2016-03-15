@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "static",
 			"description": "默认的文本测量高度",
-			"pType": "public",
 			"default": "22",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
@@ -19,7 +18,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "static",
 			"description": "默认的文本测量宽度",
-			"pType": "public",
 			"default": "160",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
@@ -34,7 +32,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -48,7 +45,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -62,7 +58,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -79,7 +74,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -90,7 +84,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "是否显示为粗体，默认false。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -100,7 +93,6 @@
 			"name": "bottom",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -114,7 +106,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -126,7 +117,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "插入点（尖号）位置的索引。如果没有显示任何插入点，则在将焦点恢复到字段时，值将为插入点所在的位置（通常为插入点上次所在的位置，如果字段不曾具有焦点，则为 0）。<p/>选择范围索引是从零开始的（例如，第一个位置为 0、第二个位置为 1，依此类推）。"
 		},
 		{
@@ -136,7 +126,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "如果为 true，指定将子代剪切到视区的边界。如果为 false，则容器子代会从容器边界扩展过去，而不管组件的大小规范。默认false"
 		},
 		{
@@ -147,7 +136,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "视域的内容的高度。如果 clipAndEnabledScrolling 为 true，则视域的 contentHeight 为垂直滚动定义限制，且视域的实际高度定义可见的内容量。要在内容中垂直滚动，请在 0 和 contentHeight - height 之间更改 verticalScrollPosition。"
 		},
 		{
@@ -158,7 +146,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "视域的内容的宽度。如果 clipAndEnabledScrolling 为 true， 则视域的 contentWidth 为水平滚动定义限制，且视域的实际宽度定义可见的内容量。要在内容中水平滚动， 请在 0 和 contentWidth - width 之间更改 horizontalScrollPosition。"
 		},
 		{
@@ -168,7 +155,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "指定文本字段是否是密码文本字段。如果此属性的值为 true，则文本字段被视为密码文本字段，并使用星号而不是实际字符来隐藏输入的字符。如果为 false，则不会将文本字段视为密码文本字段。启用密码模式时，“剪切”和“复制”命令及其对应的键盘快捷键将不起作用。此安全机制可防止不良用户使用快捷键在无人看管的计算机上破译密码。"
 		},
 		{
@@ -178,7 +164,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "文本是否可编辑的标志。"
 		},
 		{
@@ -186,8 +171,7 @@
 			"name": "enabled",
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
-			"inheritDoc": true,
-			"pType": "public"
+			"inheritDoc": true
 		},
 		{
 			"kind": "member",
@@ -195,7 +179,6 @@
 			"name": "focusEnabled",
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -206,7 +189,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "字体名称 。默认值：SimSun",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -220,7 +202,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -231,7 +212,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "组件高度,默认值为NaN,设置为NaN将使用组件的measure()方法自动计算尺寸",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -241,8 +221,7 @@
 			"name": "heightInLines",
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
-			"description": "控件的默认高度（以行为单位测量）。 若设置了multiline属性为false，则忽略此属性。",
-			"pType": "public"
+			"description": "控件的默认高度（以行为单位测量）。 若设置了multiline属性为false，则忽略此属性。"
 		},
 		{
 			"kind": "member",
@@ -250,7 +229,6 @@
 			"name": "horizontalCenter",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -261,7 +239,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "可视区域水平方向起始点"
 		},
 		{
@@ -271,7 +248,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "组件 ID。此值将作为对象的实例名称，因此不应包含任何空格或特殊字符。应用程序中的每个组件都应具有唯一的 ID。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -281,7 +257,6 @@
 			"name": "includeInLayout",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -291,7 +266,6 @@
 			"name": "initialized",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -301,7 +275,6 @@
 			"name": "isPopUp",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -312,7 +285,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "是否显示为斜体，默认false。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -324,7 +296,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "组件的布局高度,常用于父级的updateDisplayList()方法中按照：布局高度>外部显式设置高度>测量高度 的优先级顺序返回高度",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -335,7 +306,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -346,7 +316,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -357,7 +326,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -367,7 +335,6 @@
 			"name": "left",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -378,7 +345,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "行间距",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -392,7 +358,6 @@
 			"example": "以下代码改变了显示对象 mask 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMask:Rectangle&nbsp;=&nbsp;myDisplayObject.mask;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMask.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.mask&nbsp;=&nbsp;myMask;//设置完&nbsp;mask&nbsp;的x、y、width、height值之后，一定要对myDisplayObject重新赋值&nbsp;mask，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -406,7 +371,6 @@
 			"example": "以下代码改变了显示对象矩阵的tx属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMatrix:Matrix&nbsp;=&nbsp;myDisplayObject.matrix;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMatrix.tx&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.matrix&nbsp;=&nbsp;myMatrix;<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -417,7 +381,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "文本字段中最多可包含的字符数（即用户输入的字符数）。脚本可以插入比 maxChars 允许的字符数更多的文本；maxChars 属性仅表示用户可以输入多少文本。如果此属性的值为 0，则用户可以输入无限数量的文本。"
 		},
 		{
@@ -426,7 +389,6 @@
 			"name": "maxHeight",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -436,7 +398,6 @@
 			"name": "maxWidth",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -447,7 +408,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "组件的默认高度（以像素为单位）。此值由 measure() 方法设置。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -458,7 +418,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "组件的默认宽度（以像素为单位）。此值由 measure() 方法设置。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -468,7 +427,6 @@
 			"name": "minHeight",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -478,7 +436,6 @@
 			"name": "minWidth",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -489,7 +446,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "表示字段是否为多行文本字段。如果值为 true，则文本字段为多行文本字段；如果值为 false，则文本字段为单行文本字段。在类型为 TextFieldType.INPUT 的字段中，multiline 值将确定 Enter 键是否创建新行（如果值为 false，则将忽略 Enter 键）。如果将文本粘贴到其 multiline 值为 false 的 TextField 中，则文本中将除去新行。"
 		},
 		{
@@ -501,7 +457,6 @@
 			"description": "表示 DisplayObject 的实例名称。通过调用父显示对象容器的 getChildByName() 方法，可以在父显示对象容器的子列表中标识该对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -511,7 +466,6 @@
 			"name": "nestLevel",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -525,7 +479,6 @@
 			"description": "返回此对象的子项数目。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -536,7 +489,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -550,7 +502,6 @@
 			"description": "表示包含此显示对象的 DisplayObjectContainer 对象。使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -560,7 +511,6 @@
 			"name": "percentHeight",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -570,7 +520,6 @@
 			"name": "percentWidth",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -581,7 +530,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -592,7 +540,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -603,7 +550,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -614,7 +560,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"rwType": 1,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -623,8 +568,7 @@
 			"type": "string",
 			"name": "restrict",
 			"memberof": "egret.gui.EditableText",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -632,7 +576,6 @@
 			"name": "right",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -646,7 +589,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -660,7 +602,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -674,7 +615,6 @@
 			"default": "1",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -688,7 +628,6 @@
 			"example": "以下代码改变了显示对象 scrollRect 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myRectangle:Rectangle&nbsp;=&nbsp;myDisplayObject.scrollRect;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myRectangle.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.scrollRect&nbsp;=&nbsp;myRectangle;//设置完scrollRect的x、y、width、height值之后，一定要对myDisplayObject重新赋值scrollRect，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -698,7 +637,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "一个布尔值，表示文本字段是否可选。值 true 表示文本可选。selectable 属性控制文本字段是否可选，而不控制文本字段是否可编辑。动态文本字段即使不可编辑，它也可能是可选的。如果动态文本字段是不可选的，则用户不能选择其中的文本。 <p/>如果 selectable 设置为 false，则文本字段中的文本不响应来自鼠标或键盘的选择命令，并且不能使用“复制”命令复制文本。如果 selectable 设置为 true，则可以使用鼠标或键盘选择文本字段中的文本，并且可以使用“复制”命令复制文本。即使文本字段是动态文本字段而不是输入文本字段，您也可以用这种方式选择文本。"
 		},
 		{
@@ -709,7 +647,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "当前所选内容中第一个字符从零开始的字符索引值。例如，第一个字符的索引值是 0，第二个字符的索引值是 1，依此类推。如果未选定任何文本，此属性为 caretIndex 的值。"
 		},
 		{
@@ -720,7 +657,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "当前所选内容中最后一个字符从零开始的字符索引值。例如，第一个字符的索引值是 0，第二个字符的索引值是 1，依此类推。如果未选定任何文本，此属性为 caretIndex 的值。"
 		},
 		{
@@ -730,7 +666,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "字号大小,默认值30 。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -744,7 +679,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -758,7 +692,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -772,7 +705,6 @@
 			"description": "显示对象的舞台。例如，您可以创建多个显示对象并加载到显示列表中，每个显示对象的 stage 属性是指向相同的 Stage 对象。<br/>如果显示对象未添加到显示列表，则其 stage 属性会设置为 null。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -783,7 +715,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "获得文体内容",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -794,7 +725,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "文字的水平对齐方式 ,请使用HorizontalAlign中定义的常量。默认值：HorizontalAlign.LEFT。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -805,7 +735,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "文本颜色",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -815,7 +744,6 @@
 			"name": "textFlow",
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -827,7 +755,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "文本全部显示时的高度（无行间距）",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -839,7 +766,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "文本全部显示时宽",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -849,7 +775,6 @@
 			"name": "top",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -863,7 +788,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -880,7 +804,6 @@
 			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -890,7 +813,6 @@
 			"name": "updateCompletePendingFlag",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -901,7 +823,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "文字的垂直对齐方式 ,请使用VerticalAlign中定义的常量。默认值：VerticalAlign.TOP。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -911,7 +832,6 @@
 			"name": "verticalCenter",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -922,7 +842,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "可视区域竖直方向起始点"
 		},
 		{
@@ -935,7 +854,6 @@
 			"default": "true",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -946,7 +864,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "组件宽度,默认值为NaN,设置为NaN将使用组件的measure()方法自动计算尺寸",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -956,8 +873,7 @@
 			"name": "widthInChars",
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
-			"description": "控件的默认宽度（使用字号：size为单位测量）。 若同时设置了maxChars属性，将会根据两者测量结果的最小值作为测量宽度。",
-			"pType": "public"
+			"description": "控件的默认宽度（使用字号：size为单位测量）。 若同时设置了maxChars属性，将会根据两者测量结果的最小值作为测量宽度。"
 		},
 		{
 			"kind": "member",
@@ -969,7 +885,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -983,7 +898,6 @@
 			"default": "0",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		}
@@ -993,8 +907,7 @@
 			"kind": "function",
 			"name": "EditableText",
 			"memberof": "egret.gui.EditableText",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -1012,7 +925,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1037,7 +949,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1079,7 +990,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号的整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "使用 EventDispatcher 对象注册事件侦听器对象，以使侦听器能够接收事件通知。可以为特定类型的事件、阶段和优先级在显示列表的所有节点上注册事件侦听器。成功注册一个事件侦听器后，无法通过额外调用 on() 来更改其优先级。要更改侦听器的优先级，必须先调用 removeEventListener()。然后，可以使用新的优先级再次注册该侦听器。注册该侦听器后，如果继续调用具有不同 type 或 useCapture值的 on()，则会创建单独的侦听器注册。<br/>如果不再需要某个事件侦听器，可调用 EventDispatcher.removeEventListener()删除它；否则会产生内存问题。由于垃圾回收器不会删除仍包含引用的对象，因此不会从内存中自动删除使用已注册事件侦听器的对象。复制EventDispatcher 实例时并不复制其中附加的事件侦听器。（如果新近创建的节点需要一个事件侦听器，必须在创建该节点后附加该侦听器。）但是，如果移动 EventDispatcher 实例，则其中附加的事件侦听器也会随之移动。如果在正在处理事件的节点上注册事件侦听器，则不会在当前阶段触发事件侦听器，但会在事件流的稍后阶段触发，如冒泡阶段。如果从正在处理事件的节点中删除事件侦听器，则该事件侦听器仍由当前操作触发。删除事件侦听器后，决不会再次调用该事件侦听器（除非再次注册以备将来处理）。",
@@ -1095,7 +1005,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "是否可以跳过测量尺寸阶段,返回true则不执行measure()方法",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1106,7 +1015,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "子项创建完成",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1124,7 +1032,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1135,8 +1042,7 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"description": "处理对组件设置的属性",
-			"inheritDoc": true,
-			"pType": "public"
+			"inheritDoc": true
 		},
 		{
 			"kind": "function",
@@ -1155,7 +1061,6 @@
 					"description": "要测试的子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1166,7 +1071,6 @@
 			"memberof": "egret.gui.TextBase",
 			"scope": "instance",
 			"description": "创建组件的子对象",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -1186,7 +1090,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "将事件分派到事件流中。事件目标是对其调用 dispatchEvent() 方法的 EventDispatcher 对象。",
@@ -1220,7 +1123,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher"
 		},
@@ -1248,7 +1150,6 @@
 					"description": "可选参数，是否会计算锚点。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1272,7 +1173,6 @@
 					"description": "子对象的索引位置。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1297,7 +1197,6 @@
 					"description": "要返回的子项的名称。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1318,7 +1217,6 @@
 					"description": "要测试的子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1336,8 +1234,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -1353,7 +1250,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1380,7 +1276,6 @@
 					"description": "一个用于存储结果的可复用Rectangle实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1398,8 +1293,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -1431,7 +1325,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1451,7 +1344,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 EventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。要确定特定事件类型是否确实会触发事件侦听器，请使用 IEventDispatcher.willTrigger()。hasEventListener()与 willTrigger() 的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 检查整个事件流以查找由 type 参数指定的事件。",
@@ -1488,7 +1380,6 @@
 					"description": "是检查对象 (true) 的实际像素，还是检查边框 (false) 的实际像素。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1498,7 +1389,6 @@
 			"name": "invalidateDisplayList",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1509,7 +1399,6 @@
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
 			"description": "标记父级容器的尺寸和显示列表为失效",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1519,7 +1408,6 @@
 			"name": "invalidateProperties",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1529,7 +1417,6 @@
 			"name": "invalidateSize",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1563,7 +1450,6 @@
 					"description": "一个用于存储结果的可复用 Point 实例，传入此参数能够减少内部创建对象的次数，从而获得更高的运行性能。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
 		},
@@ -1574,8 +1460,7 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"description": "计算组件的默认大小和（可选）默认最小大小",
-			"inheritDoc": true,
-			"pType": "public"
+			"inheritDoc": true
 		},
 		{
 			"kind": "function",
@@ -1591,7 +1476,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1633,7 +1517,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "添加仅回调一次的事件侦听器，此方法与on()方法不同，on()方法会持续产生回调，而此方法在第一次回调时就会自动移除监听。",
@@ -1655,7 +1538,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1673,7 +1555,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1691,7 +1572,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1711,7 +1591,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1731,7 +1610,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1748,7 +1626,6 @@
 			],
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1784,7 +1661,6 @@
 					"description": "指出是为捕获阶段还是为冒泡阶段注册了侦听器。如果为捕获阶段以及冒泡阶段注册了侦听器，则需要对removeEventListener() 进行两次调用才能将这两个侦听器删除：一次调用将 useCapture 设置为 true，另一次调用将 useCapture 设置为 false。。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
@@ -1796,7 +1672,6 @@
 			"memberof": "egret.gui.EditableText",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "选中所有文本。"
 		},
 		{
@@ -1817,7 +1692,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1846,7 +1720,6 @@
 					"description": "生成的 child 显示对象的索引编号。当新的索引编号小于0或大于已有子元件数量时，新加入的DisplayObject对象将会放置于最上层。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -1858,7 +1731,6 @@
 			"scope": "instance",
 			"description": "设置此组件的焦点",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.TextBase"
 		},
@@ -1880,7 +1752,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1902,7 +1773,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1925,7 +1795,6 @@
 					"description": "所选内容中最后一个字符从零开始的索引值。"
 				}
 			],
-			"pType": "public",
 			"description": "将第一个字符和最后一个字符的索引值（使用 beginIndex 和 endIndex 参数指定）指定的文本设置为所选内容。如果两个参数值相同，则此方法会设置插入点，就如同设置 caretIndex 属性一样。"
 		},
 		{
@@ -1947,7 +1816,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -1963,8 +1831,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -1990,7 +1857,6 @@
 					"description": "第二个子对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -2018,7 +1884,6 @@
 					"description": "第二个子对象的索引位置。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObjectContainer"
 		},
@@ -2040,8 +1905,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -2049,7 +1913,6 @@
 			"name": "validateDisplayList",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -2067,7 +1930,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -2077,7 +1939,6 @@
 			"name": "validateProperties",
 			"memberof": "egret.gui.UIComponent",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -2095,7 +1956,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.UIComponent"
 		},
@@ -2115,7 +1975,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。将指定类型的事件调度给此EventDispatcher 对象或其任一后代时，如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。hasEventListener() 与 willTrigger() 方法的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 方法检查整个事件流以查找由 type 参数指定的事件。",

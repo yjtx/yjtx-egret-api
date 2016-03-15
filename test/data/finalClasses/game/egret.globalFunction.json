@@ -17,8 +17,7 @@
 					"type": "number",
 					"description": "egret.setInterval所返回的索引"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/game/utils/setTimeout.ts",
@@ -36,8 +35,7 @@
 					"type": "number",
 					"description": "egret.setTimeout所返回的索引"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/game/utils/setInterval.ts",
@@ -71,8 +69,7 @@
 					"name": "...args",
 					"description": "参数列表"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/game/utils/setTimeout.ts",
@@ -106,8 +103,7 @@
 					"name": "...args",
 					"description": "参数列表"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

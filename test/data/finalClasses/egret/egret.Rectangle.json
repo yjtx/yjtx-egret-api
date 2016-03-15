@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "y 和 height 属性的和。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "由 right 和 bottom 属性的值确定的 Rectangle 对象的右下角的位置。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -32,7 +30,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -45,8 +42,7 @@
 			"description": "The height of the rectangle, in pixels.",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -56,8 +52,7 @@
 			"scope": "instance",
 			"description": "矩形左上角的 x 坐标。更改 Rectangle 对象的 left 属性对 y 和 height 属性没有影响。但是，它会影响 width 属性，而更改 x 值不会影响 width 属性。left 属性的值等于 x 属性的值。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -67,8 +62,7 @@
 			"scope": "instance",
 			"description": "x 和 width 属性的和。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -78,8 +72,7 @@
 			"scope": "instance",
 			"description": "矩形左上角的 y 坐标。更改 Rectangle 对象的 top 属性对 x 和 width 属性没有影响。但是，它会影响 height 属性，而更改 y 值不会影响 height 属性。<br/>top 属性的值等于 y 属性的值。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -89,8 +82,7 @@
 			"scope": "instance",
 			"description": "由该点的 x 和 y 坐标确定的 Rectangle 对象左上角的位置。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -101,8 +93,7 @@
 			"description": "矩形的宽度（以像素为单位）。",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -113,8 +104,7 @@
 			"description": "矩形左上角的 x 坐标。",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -125,8 +115,7 @@
 			"description": "矩形左上角的 y 坐标。",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -163,8 +152,7 @@
 					"default": "0",
 					"description": "矩形的高度（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -175,8 +163,7 @@
 			"description": "返回一个新的 Rectangle 对象，其 x、y、width 和 height 属性的值与原始 Rectangle 对象的对应值相同。",
 			"returns": "新的 Rectangle 对象，其 x、y、width 和 height 属性的值与原始 Rectangle 对象的对应值相同。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -199,8 +186,7 @@
 					"type": "number",
 					"description": "检测点的y轴"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -218,8 +204,7 @@
 					"type": "egret.Point",
 					"description": "包含点对象"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -237,8 +222,7 @@
 					"type": "egret.Rectangle",
 					"description": "所检查的 Rectangle 对象"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -255,8 +239,7 @@
 					"type": "egret.Rectangle",
 					"description": "要从中复制数据的 Rectangle 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -266,8 +249,7 @@
 			"scope": "static",
 			"description": "从对象池中取出或创建一个新的Rectangle对象。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -285,8 +267,7 @@
 					"type": "egret.Rectangle",
 					"description": "要与此 Rectangle 对象进行比较的矩形。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -308,8 +289,7 @@
 					"type": "number",
 					"description": "Rectangle 对象纵向增加的值。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -326,8 +306,7 @@
 					"type": "egret.Point",
 					"description": "The x property of this Point object is used to increase the horizontal dimension of the Rectangle object. The y property is used to increase the vertical dimension of the Rectangle object."
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -345,8 +324,7 @@
 					"type": "egret.Rectangle",
 					"description": "要对照比较以查看其是否与此 Rectangle 对象相交的 Rectangle 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -364,8 +342,7 @@
 					"type": "egret.Rectangle",
 					"description": "要与此 Rectangle 对象比较的 Rectangle 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -376,8 +353,7 @@
 			"description": "确定此 Rectangle 对象是否为空。",
 			"returns": "如果 Rectangle 对象的宽度或高度小于等于 0，则返回 true 值，否则返回 false。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -399,8 +375,7 @@
 					"type": "number",
 					"description": "将 Rectangle 对象的 t 值移动此数量。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -417,8 +392,7 @@
 					"type": "egret.Point",
 					"description": "要用于偏移此 Rectangle 对象的 Point 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -435,8 +409,7 @@
 					"type": "egret.Rectangle",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -446,8 +419,7 @@
 			"scope": "instance",
 			"description": "将 Rectangle 对象的所有属性设置为 0。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -479,8 +451,7 @@
 					"type": "number",
 					"description": "矩形的高度（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -498,8 +469,7 @@
 					"type": "egret.Rectangle",
 					"description": "要添加到此 Rectangle 对象的 Rectangle 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

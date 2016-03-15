@@ -9,8 +9,7 @@
 			"scope": "instance",
 			"description": "将所有数据清空",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"filename": "egret/localStorage/localStorage.ts",
@@ -28,8 +27,7 @@
 					"type": "string",
 					"description": "要读取的键名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/localStorage/localStorage.ts",
@@ -47,8 +45,7 @@
 					"type": "string",
 					"description": "要删除的键名称"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "egret/localStorage/localStorage.ts",
@@ -72,8 +69,7 @@
 					"type": "string",
 					"description": "要保存的值"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

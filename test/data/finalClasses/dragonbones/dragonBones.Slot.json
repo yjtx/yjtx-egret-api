@@ -8,7 +8,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "The armature this DBObject instance belongs to.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -18,8 +17,7 @@
 			"name": "blendMode",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "混合模式",
-			"pType": "public"
+			"description": "混合模式"
 		},
 		{
 			"kind": "member",
@@ -27,8 +25,7 @@
 			"name": "childArmature",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "当前的子骨架",
-			"pType": "public"
+			"description": "当前的子骨架"
 		},
 		{
 			"kind": "member",
@@ -36,8 +33,7 @@
 			"name": "display",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "当前的显示对象(可能是 display 或者 子骨架)",
-			"pType": "public"
+			"description": "当前的显示对象(可能是 display 或者 子骨架)"
 		},
 		{
 			"kind": "member",
@@ -45,8 +41,7 @@
 			"name": "displayList",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "显示对象列表(包含 display 或者 子骨架)",
-			"pType": "public"
+			"description": "显示对象列表(包含 display 或者 子骨架)"
 		},
 		{
 			"kind": "member",
@@ -56,7 +51,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "相对世界坐标的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -67,8 +61,7 @@
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
 			"rwType": 2,
-			"description": "播放子骨架的动画",
-			"pType": "public"
+			"description": "播放子骨架的动画"
 		},
 		{
 			"kind": "member",
@@ -77,7 +70,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的旋转属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -88,7 +80,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的缩放属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -99,7 +90,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "是否继承父亲的平移属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -109,7 +99,6 @@
 			"name": "name",
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -121,7 +110,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "用于运行时动态调整的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -133,7 +121,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "骨架数据中的原始的相对父亲的 DBTransform 实例。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -145,7 +132,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "Indicates the Bone instance that directly contains this DBObject instance if any.",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -156,7 +142,6 @@
 			"memberof": "dragonBones.DBObject",
 			"scope": "instance",
 			"description": "存储额外的用户数据。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.DBObject"
 		},
@@ -166,8 +151,7 @@
 			"name": "zOrder",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "显示顺序。(支持小数用于实现动态插入slot)",
-			"pType": "public"
+			"description": "显示顺序。(支持小数用于实现动态插入slot)"
 		}
 	],
 	"function": [
@@ -175,8 +159,7 @@
 			"kind": "function",
 			"name": "Slot",
 			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -185,7 +168,6 @@
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"description": "清理使用的资源用于垃圾回收"
 		},
 		{
@@ -194,8 +176,7 @@
 			"name": "getDisplay",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "不推荐的 API. 使用 display 属性代替",
-			"pType": "public"
+			"description": "不推荐的 API. 使用 display 属性代替"
 		},
 		{
 			"kind": "function",
@@ -210,8 +191,7 @@
 					"type": "dragonBones.SlotData",
 					"description": "slotData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -227,8 +207,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

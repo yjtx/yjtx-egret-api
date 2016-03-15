@@ -15,8 +15,7 @@
 					"type": "number",
 					"description": "输入一个弧度值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -36,8 +35,7 @@
 					"type": "dragonBones.DBTransform",
 					"description": "父亲的坐标变换"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -67,8 +65,7 @@
 					"type": "boolean",
 					"description": "y方向的缩放"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -87,8 +84,7 @@
 					"type": "dragonBones.DBTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -117,8 +113,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -147,8 +142,7 @@
 					"type": "boolean",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -163,8 +157,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -184,8 +177,7 @@
 					"type": "dragonBones.Matrix",
 					"description": "转换后的矩阵数据"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

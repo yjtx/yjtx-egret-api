@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.TileOrientation",
 			"scope": "static",
 			"description": "逐列排列元素。",
-			"pType": "public",
 			"default": "\"columns\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "egret.gui.TileOrientation",
 			"scope": "static",
 			"description": "逐行排列元素。",
-			"pType": "public",
 			"default": "\"rows\""
 		}
 	],

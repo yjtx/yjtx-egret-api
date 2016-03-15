@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.MathUtil",
 			"scope": "static",
 			"description": "角度转换为弧度",
-			"pType": "public",
 			"default": "Math.PI / 180"
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "dragonBones.MathUtil",
 			"scope": "static",
 			"description": "弧度转换为角度",
-			"pType": "public",
 			"default": "180 / Math.PI"
 		}
 	],
@@ -36,8 +34,7 @@
 					"type": "number",
 					"description": "角度值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -51,8 +48,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -68,8 +64,7 @@
 					"type": "number",
 					"description": "角度值"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

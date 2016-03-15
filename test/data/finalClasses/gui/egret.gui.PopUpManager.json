@@ -6,8 +6,7 @@
 			"name": "modalAlpha",
 			"memberof": "egret.gui.PopUpManager",
 			"scope": "static",
-			"description": "模态遮罩的透明度",
-			"pType": "public"
+			"description": "模态遮罩的透明度"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "modalColor",
 			"memberof": "egret.gui.PopUpManager",
 			"scope": "static",
-			"description": "模态遮罩的填充颜色",
-			"pType": "public"
+			"description": "模态遮罩的填充颜色"
 		},
 		{
 			"kind": "member",
@@ -25,8 +23,7 @@
 			"memberof": "egret.gui.PopUpManager",
 			"scope": "static",
 			"rwType": 1,
-			"description": "已经弹出的窗口列表",
-			"pType": "public"
+			"description": "已经弹出的窗口列表"
 		}
 	],
 	"function": [
@@ -35,8 +32,7 @@
 			"name": "PopUpManager",
 			"memberof": "egret.gui.PopUpManager",
 			"scope": "instance",
-			"description": "构造函数",
-			"pType": "public"
+			"description": "构造函数"
 		},
 		{
 			"kind": "function",
@@ -73,8 +69,7 @@
 					"default": "0",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -101,8 +96,7 @@
 					"default": "true",
 					"description": "是否居中窗口。等效于在外部调用centerPopUp()来居中。默认true。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -117,8 +111,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "要最前显示的窗口"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -133,8 +126,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "要居中显示的窗口"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -165,8 +157,7 @@
 					"default": "false",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -181,8 +172,7 @@
 					"type": "egret.gui.IVisualElement",
 					"description": "要移除的窗口"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

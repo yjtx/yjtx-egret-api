@@ -33,8 +33,7 @@
 					"default": "false",
 					"description": "使用缓存的EXML"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"filename": "extension/eui/exml/EXML.ts",
@@ -52,8 +51,7 @@
 					"type": "string",
 					"description": "要解析的 EXML 文件内容。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	]
 }

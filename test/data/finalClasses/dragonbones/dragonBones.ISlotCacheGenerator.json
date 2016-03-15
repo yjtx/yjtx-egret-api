@@ -5,24 +5,21 @@
 			"type": "boolean",
 			"name": "colorChanged",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.ColorTransform",
 			"name": "colorTransform",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "number",
 			"name": "displayIndex",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -30,7 +27,6 @@
 			"name": "frameCache",
 			"memberof": "dragonBones.ICacheUser",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.ICacheUser"
 		},
@@ -39,24 +35,21 @@
 			"type": "dragonBones.DBTransform",
 			"name": "global",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "dragonBones.Matrix",
 			"name": "globalTransformMatrix",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "gotoAndPlay",
 			"memberof": "dragonBones.ISlotCacheGenerator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -64,7 +57,6 @@
 			"name": "name",
 			"memberof": "dragonBones.ICacheUser",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.ICacheUser"
 		}

@@ -9,8 +9,7 @@
 			"rwType": 1,
 			"description": "可从字节数组的当前位置到数组末尾读取的数据的字节数。每次访问 ByteArray 对象时，将 bytesAvailable 属性与读取方法结合使用，以确保读取有效的数据。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -21,8 +20,7 @@
 			"description": "更改或读取数据的字节顺序；egret.Endian.BIG_ENDIAN 或 egret.Endian.LITTLE_ENDIAN。",
 			"default": "egret.Endian.BIG_ENDIAN",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -32,8 +30,7 @@
 			"scope": "instance",
 			"description": "ByteArray 对象的长度（以字节为单位）。如果将长度设置为大于当前长度的值，则用零填充字节数组的右侧。如果将长度设置为小于当前长度的值，将会截断该字节数组。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -43,8 +40,7 @@
 			"scope": "instance",
 			"description": "将文件指针的当前位置（以字节为单位）移动或返回到 ByteArray 对象中。下一次调用读取方法时将在此位置开始读取，或者下一次调用写入方法时将在此位置开始写入。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -62,8 +58,7 @@
 					"type": "ArrayBuffer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -73,8 +68,7 @@
 			"scope": "instance",
 			"description": "清除字节数组的内容，并将 length 和 position 属性重置为 0。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -85,8 +79,7 @@
 			"description": "从字节流中读取布尔值。读取单个字节，如果字节非零，则返回 true，否则返回 false",
 			"returns": "如果字节不为零，则返回 true，否则返回 false",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -97,8 +90,7 @@
 			"description": "从字节流中读取带符号的字节",
 			"returns": "介于 -128 和 127 之间的整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -127,8 +119,7 @@
 					"default": "0",
 					"description": "要读取的字节数。默认值 0 导致读取所有可用的数据"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -139,8 +130,7 @@
 			"description": "从字节流中读取一个 IEEE 754 双精度（64 位）浮点数",
 			"returns": "双精度（64 位）浮点数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -151,8 +141,7 @@
 			"description": "从字节流中读取一个 IEEE 754 单精度（32 位）浮点数",
 			"returns": "单精度（32 位）浮点数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -163,8 +152,7 @@
 			"description": "从字节流中读取一个带符号的 32 位整数",
 			"returns": "介于 -2147483648 和 2147483647 之间的 32 位带符号整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -175,8 +163,7 @@
 			"description": "从字节流中读取一个带符号的 16 位整数",
 			"returns": "介于 -32768 和 32767 之间的 16 位带符号整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -187,8 +174,7 @@
 			"description": "从字节流中读取一个 UTF-8 字符串。假定字符串的前缀是无符号的短整型（以字节表示长度）",
 			"returns": "UTF-8 编码的字符串",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -206,8 +192,7 @@
 					"type": "number",
 					"description": "指明 UTF-8 字节长度的无符号短整型数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -218,8 +203,7 @@
 			"description": "从字节流中读取无符号的字节",
 			"returns": "介于 0 和 255 之间的 32 位无符号整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -230,8 +214,7 @@
 			"description": "从字节流中读取一个无符号的 32 位整数",
 			"returns": "介于 0 和 4294967295 之间的 32 位无符号整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -242,8 +225,7 @@
 			"description": "从字节流中读取一个无符号的 16 位整数",
 			"returns": "介于 0 和 65535 之间的 16 位无符号整数",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -260,8 +242,7 @@
 					"type": "ArrayBuffer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -278,8 +259,7 @@
 					"type": "boolean",
 					"description": "确定写入哪个字节的布尔值。如果该参数为 true，则该方法写入 1；如果该参数为 false，则该方法写入 0"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -296,8 +276,7 @@
 					"type": "number",
 					"description": "一个 32 位整数。低 8 位将被写入字节流"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -326,8 +305,7 @@
 					"default": "0",
 					"description": "一个无符号整数，表示在缓冲区中的写入范围"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -344,8 +322,7 @@
 					"type": "number",
 					"description": "双精度（64 位）浮点数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -362,8 +339,7 @@
 					"type": "number",
 					"description": "单精度（32 位）浮点数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -380,8 +356,7 @@
 					"type": "number",
 					"description": "要写入字节流的整数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -398,8 +373,7 @@
 					"type": "number",
 					"description": "32 位整数，该整数的低 16 位将被写入字节流"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -416,8 +390,7 @@
 					"type": "string",
 					"description": "要写入的字符串值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -434,8 +407,7 @@
 					"type": "string",
 					"description": "要写入的字符串值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -452,8 +424,7 @@
 					"type": "number",
 					"description": "要写入字节流的无符号整数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -470,8 +441,7 @@
 					"type": "number",
 					"description": "要写入字节流的无符号整数"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

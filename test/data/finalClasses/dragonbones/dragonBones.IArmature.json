@@ -15,7 +15,6 @@
 					"description": "动画向前播放的时间（单位：秒）"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.IAnimatable"
 		},
@@ -24,16 +23,14 @@
 			"type": "any",
 			"name": "getAnimation",
 			"memberof": "dragonBones.IArmature",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "resetAnimation",
 			"memberof": "dragonBones.IArmature",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

@@ -5,8 +5,7 @@
 			"type": "dragonBones.ISlotCacheGenerator",
 			"name": "cacheGenerator",
 			"memberof": "dragonBones.SlotTimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -14,7 +13,6 @@
 			"name": "currentFrameCache",
 			"memberof": "dragonBones.TimelineCache",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.TimelineCache"
 		},
@@ -24,7 +22,6 @@
 			"name": "frameCacheList",
 			"memberof": "dragonBones.TimelineCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new Array<FrameCache>()",
 			"inherited": true,
 			"inherits": "dragonBones.TimelineCache"
@@ -35,7 +32,6 @@
 			"name": "name",
 			"memberof": "dragonBones.TimelineCache",
 			"scope": "instance",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.TimelineCache"
 		}
@@ -45,16 +41,14 @@
 			"kind": "function",
 			"name": "SlotTimelineCache",
 			"memberof": "dragonBones.SlotTimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "addFrame",
 			"memberof": "dragonBones.SlotTimelineCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -69,7 +63,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.TimelineCache"
 		},
@@ -87,7 +80,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.TimelineCache"
 		}

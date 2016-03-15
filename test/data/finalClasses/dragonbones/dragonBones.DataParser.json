@@ -15,8 +15,7 @@
 					"type": "any",
 					"description": "DragonBones的数据，xml或者json格式"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -38,8 +37,7 @@
 					"default": "1",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

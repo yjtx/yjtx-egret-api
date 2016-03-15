@@ -6,8 +6,7 @@
 			"name": "name",
 			"memberof": "dragonBones.SkinData",
 			"scope": "instance",
-			"description": "皮肤数据的名字",
-			"pType": "public"
+			"description": "皮肤数据的名字"
 		},
 		{
 			"kind": "member",
@@ -17,8 +16,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "获取所有的插槽数据",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		}
 	],
 	"function": [
@@ -27,8 +25,7 @@
 			"name": "SkinData",
 			"memberof": "dragonBones.SkinData",
 			"scope": "instance",
-			"description": "构造函数，实例化一个SkinData类",
-			"pType": "public"
+			"description": "构造函数，实例化一个SkinData类"
 		},
 		{
 			"kind": "function",
@@ -43,8 +40,7 @@
 					"type": "dragonBones.SlotData",
 					"description": "slotData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -52,8 +48,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.SkinData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -69,8 +64,7 @@
 					"type": "string",
 					"description": "想要获取的插槽的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

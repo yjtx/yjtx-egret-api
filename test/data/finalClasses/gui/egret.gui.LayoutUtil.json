@@ -20,8 +20,7 @@
 					"default": "null",
 					"description": "element的父级容器。若不设置，则取element.parent的值。若两者的值都为空，则放弃调整。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

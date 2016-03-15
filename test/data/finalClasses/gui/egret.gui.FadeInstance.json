@@ -6,8 +6,7 @@
 			"name": "alphaFrom",
 			"memberof": "egret.gui.FadeInstance",
 			"scope": "instance",
-			"description": "介于 0.0 和 1.0 之间的 alpha 属性的初始值",
-			"pType": "public"
+			"description": "介于 0.0 和 1.0 之间的 alpha 属性的初始值"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "alphaTo",
 			"memberof": "egret.gui.FadeInstance",
 			"scope": "instance",
-			"description": "介于 0.0 和 1.0 之间的 alpha 属性的最终值",
-			"pType": "public"
+			"description": "介于 0.0 和 1.0 之间的 alpha 属性的最终值"
 		},
 		{
 			"kind": "member",
@@ -25,7 +23,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "animation实例",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -36,7 +33,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "如果为 true，则对目标对象禁用任何布局约束。效果完成时，将还原这些属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -47,7 +43,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "效果的持续时间（以毫秒为单位）。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -58,7 +53,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "是否显式设置了持续时间",
-			"pType": "public",
 			"default": "false",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
@@ -70,7 +64,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "此效果的缓动行为",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -81,7 +74,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "创建此 IEffectInstance 对象的 IEffect 对象。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -95,7 +87,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -106,7 +97,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "Animation 实例所用的插补器，用于计算属性的开始值和结束值之间的值。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -117,7 +107,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "MotionPath 对象集，它定义随着时间的推移 Animation 将设置动画的属性和值。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -128,7 +117,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "实例对应效果的复杂效果的实例，如果不是复杂效果则为null",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -139,7 +127,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "指定效果是否在反向播放，在播放之前设置此属性",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -150,7 +137,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "效果的当前时间位置。此属性的值介于 0 和总持续时间（包括该效果的 startDelay、repeatCount 和 repeatDelay）之间。"
@@ -162,7 +148,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"description": "设置重复动画的行为。重复动画已将 repeatCount 属性设置为 0 或某个大于 1 的值。此值应该为 RepeatBehavior.LOOP（意味着每次动画按相同的顺序重复）或 RepeatBehavior.REVERSE（意味着对于每个迭代，动画都倒转方向）。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -173,7 +158,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "效果的重复次数。可能的值为任何大于等于 0 的整数。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -184,7 +168,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "重复播放效果前需要等待的时间（以毫秒为单位）。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -195,7 +178,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "开始播放效果前需要等待的时间（以毫秒为单位）。此值可以是任何大于或等于 0 的整数。如果使用 repeatCount 属性重复播放效果，则只在首次播放该效果时应用 startDelay 属性。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -206,7 +188,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "要应用此效果的对象。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		}
@@ -223,8 +204,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -261,7 +241,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -278,7 +257,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -295,7 +273,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -312,7 +289,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -329,7 +305,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -346,7 +321,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -364,7 +338,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -384,7 +357,6 @@
 					"description": "调度到事件流中的 Event 对象。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "将事件分派到事件流中。事件目标是对其调用 dispatchEvent() 方法的 EventDispatcher 对象。",
@@ -418,7 +390,6 @@
 					"description": "事件data"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher"
 		},
@@ -429,7 +400,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "中断当前播放的效果实例，立即跳转到效果的结束位置。通过调用 Effect.end() 方法可调用此方法。在实现过程中，它会调用 finishEffect() 方法。<p>如果调用此方法来结束播放效果，效果实例将分派 effectEnd 事件。</p>"
@@ -441,7 +411,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "在完成效果播放时由 end() 方法调用。此函数将为效果目标分派 endEffect 事件。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -452,7 +421,6 @@
 			"memberof": "egret.gui.EffectInstance",
 			"scope": "instance",
 			"description": "每次完成重复效果的迭代播放后调用。",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.EffectInstance"
 		},
@@ -469,7 +437,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -489,7 +456,6 @@
 					"description": "事件的类型。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。这样，您就可以确定 EventDispatcher 对象在事件流层次结构中的哪个位置改变了对事件类型的处理。要确定特定事件类型是否确实会触发事件侦听器，请使用 IEventDispatcher.willTrigger()。hasEventListener()与 willTrigger() 的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 检查整个事件流以查找由 type 参数指定的事件。",
@@ -536,7 +502,6 @@
 					"description": "事件侦听器的优先级。优先级由一个带符号整数指定。数字越大，优先级越高。优先级为 n 的所有侦听器会在优先级为 n -1 的侦听器之前得到处理。如果两个或更多个侦听器共享相同的优先级，则按照它们的添加顺序进行处理。默认优先级为 0。"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "添加仅回调一次的事件侦听器，此方法与on()方法不同，on()方法会持续产生回调，而此方法在第一次回调时就会自动移除监听。",
@@ -552,7 +517,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "暂停效果，直到调用 resume() 方法。"
@@ -562,8 +526,7 @@
 			"type": "void",
 			"name": "play",
 			"memberof": "egret.gui.FadeInstance",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -589,7 +552,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -600,7 +562,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "在效果由 pause() 方法暂停后继续播放效果。"
@@ -612,7 +573,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "从效果的当前位置开始反向播放效果。"
@@ -635,7 +595,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance"
 		},
@@ -646,7 +605,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "经过 startDelay 所占用的这段时间后，在目标上播放效果实例。由 Effect 类调用。在启动 EffectInstance 时，请使用此函数，而非 play() 方法。"
@@ -658,7 +616,6 @@
 			"memberof": "egret.gui.AnimateInstance",
 			"scope": "instance",
 			"inheritDoc": true,
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.AnimateInstance",
 			"description": "停止播放效果，使目标保持当前状态。您需要通过调用 Effect.stop() 方法来调用此方法。在实现过程中，它会调用 finishEffect() 方法。<p>如果调用此方法来结束播放效果，效果实例将分派 effectEnd 事件。</p>"
@@ -679,7 +636,6 @@
 					"description": "事件类型"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "检查是否用此 EventDispatcher 对象或其任何始祖为指定事件类型注册了事件侦听器。将指定类型的事件调度给此EventDispatcher 对象或其任一后代时，如果在事件流的任何阶段触发了事件侦听器，则此方法返回 true。hasEventListener() 与 willTrigger() 方法的区别是：hasEventListener() 只检查它所属的对象，而 willTrigger() 方法检查整个事件流以查找由 type 参数指定的事件。",

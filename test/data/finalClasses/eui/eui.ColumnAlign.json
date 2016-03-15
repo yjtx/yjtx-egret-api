@@ -9,7 +9,6 @@
 			"description": "通过增大水平间隙将行两端对齐。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"justifyUsingGap\""
 		},
 		{
@@ -21,7 +20,6 @@
 			"description": "通过增大行高度将行两端对齐。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"justifyUsingWidth\""
 		},
 		{
@@ -33,7 +31,6 @@
 			"description": "不将行两端对齐。",
 			"version": "eui 1.0",
 			"platform": "Web,Native",
-			"pType": "public",
 			"default": "\"left\""
 		}
 	],

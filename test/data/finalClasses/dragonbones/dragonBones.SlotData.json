@@ -6,8 +6,7 @@
 			"name": "blendMode",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "混合模式",
-			"pType": "public"
+			"description": "混合模式"
 		},
 		{
 			"kind": "member",
@@ -17,8 +16,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "获取所有的显示对象",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		},
 		{
 			"kind": "member",
@@ -26,16 +24,14 @@
 			"name": "displayIndex",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "初始的显示图片的序号",
-			"pType": "public"
+			"description": "初始的显示图片的序号"
 		},
 		{
 			"kind": "member",
 			"type": "string",
 			"name": "gotoAndPlay",
 			"memberof": "dragonBones.SlotData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -43,8 +39,7 @@
 			"name": "name",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "插槽数据的名字",
-			"pType": "public"
+			"description": "插槽数据的名字"
 		},
 		{
 			"kind": "member",
@@ -52,8 +47,7 @@
 			"name": "parent",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "绑定的骨骼的名字，一个插槽仅受一个骨骼控制",
-			"pType": "public"
+			"description": "绑定的骨骼的名字，一个插槽仅受一个骨骼控制"
 		},
 		{
 			"kind": "member",
@@ -61,8 +55,7 @@
 			"name": "zOrder",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "z轴排序，z轴是垂直于屏幕的轴，zOrder约小，越靠里所以如果有重叠，zOrder大的插槽会挡住zOrder小的插槽",
-			"pType": "public"
+			"description": "z轴排序，z轴是垂直于屏幕的轴，zOrder约小，越靠里所以如果有重叠，zOrder大的插槽会挡住zOrder小的插槽"
 		}
 	],
 	"function": [
@@ -71,8 +64,7 @@
 			"name": "SlotData",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "构造函数，实例化一个SlotData类",
-			"pType": "public"
+			"description": "构造函数，实例化一个SlotData类"
 		},
 		{
 			"kind": "function",
@@ -87,8 +79,7 @@
 					"type": "dragonBones.DisplayData",
 					"description": "displayData"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -96,8 +87,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.SlotData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -113,8 +103,7 @@
 					"type": "string",
 					"description": "想要获取的显示对象的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

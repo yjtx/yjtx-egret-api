@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.WorldClock",
 			"scope": "static",
 			"description": "可以直接使用的全局静态时钟实例.",
-			"pType": "public",
 			"default": "new WorldClock()"
 		},
 		{
@@ -16,8 +15,7 @@
 			"name": "time",
 			"memberof": "dragonBones.WorldClock",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -25,8 +23,7 @@
 			"name": "timeScale",
 			"memberof": "dragonBones.WorldClock",
 			"scope": "instance",
-			"description": "时间缩放系数。用于实现动画的变速播放",
-			"pType": "public"
+			"description": "时间缩放系数。用于实现动画的变速播放"
 		}
 	],
 	"function": [
@@ -49,8 +46,7 @@
 					"default": "1",
 					"description": "时间缩放系数"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -65,8 +61,7 @@
 					"type": "dragonBones.IAnimatable",
 					"description": "IAnimatable 实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -82,8 +77,7 @@
 					"default": "-1",
 					"description": "前进的时间，默认值为-1，DragonBones会自动为你计算当前帧与上一帧的时间差"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -91,8 +85,7 @@
 			"name": "clear",
 			"memberof": "dragonBones.WorldClock",
 			"scope": "instance",
-			"description": "从时钟中移除所有的 IAnimatable 实例.",
-			"pType": "public"
+			"description": "从时钟中移除所有的 IAnimatable 实例."
 		},
 		{
 			"kind": "function",
@@ -108,8 +101,7 @@
 					"type": "dragonBones.IAnimatable",
 					"description": "IAnimatable 实例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -124,8 +116,7 @@
 					"type": "dragonBones.IAnimatable",
 					"description": "IAnimatable 实例"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

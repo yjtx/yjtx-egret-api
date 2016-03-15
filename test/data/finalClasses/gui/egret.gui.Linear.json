@@ -6,8 +6,7 @@
 			"name": "easeInFraction",
 			"memberof": "egret.gui.Linear",
 			"scope": "instance",
-			"description": "在加速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。",
-			"pType": "public"
+			"description": "在加速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "easeOutFraction",
 			"memberof": "egret.gui.Linear",
 			"scope": "instance",
-			"description": "在减速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。",
-			"pType": "public"
+			"description": "在减速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
 		}
 	],
 	"function": [
@@ -38,8 +36,7 @@
 					"default": "0",
 					"description": "在减速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -53,8 +50,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

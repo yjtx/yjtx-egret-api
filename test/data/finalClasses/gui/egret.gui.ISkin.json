@@ -6,8 +6,7 @@
 			"name": "hostComponent",
 			"memberof": "egret.gui.ISkin",
 			"scope": "instance",
-			"description": "主机组件引用,仅当皮肤被应用后才会对此属性赋值",
-			"pType": "public"
+			"description": "主机组件引用,仅当皮肤被应用后才会对此属性赋值"
 		}
 	],
 	"function": [],

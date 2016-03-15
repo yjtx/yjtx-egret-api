@@ -8,8 +8,7 @@
 			"scope": "instance",
 			"description": "要更改的属性的名称。这个属性必须设置，在 SetProperty 构造函数中设置或通过直接设置该属性值设置。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -19,8 +18,7 @@
 			"scope": "instance",
 			"description": "包含要更改的属性的对象。如果属性值为 null，则 EUI 将使用 State 对象的直接父级。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -31,8 +29,7 @@
 			"description": "属性的新值。",
 			"default": "undefined",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -60,8 +57,7 @@
 					"type": "any",
 					"description": "视图状态中的属性值。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -84,7 +80,6 @@
 					"description": "子项添加到的父级容器。"
 				}
 			],
-			"pType": "public",
 			"description": "应用覆盖。将保留原始值，以便以后可以在 remove() 方法中恢复该值。<p/>该方法是当进入状态的时候自动调用的，请不要直接调用此方法。"
 		},
 		{
@@ -108,7 +103,6 @@
 					"description": "子项添加到的父级容器。"
 				}
 			],
-			"pType": "public",
 			"description": "删除覆盖。在 apply() 方法中记住的值将被恢复。"
 		}
 	],

@@ -5,8 +5,7 @@
 			"kind": "function",
 			"name": "NumberInterpolator",
 			"memberof": "egret.gui.NumberInterpolator",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -25,16 +24,14 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "egret.gui.NumberInterpolator",
 			"name": "getInstance",
 			"memberof": "egret.gui.NumberInterpolator",
-			"scope": "static",
-			"pType": "public"
+			"scope": "static"
 		},
 		{
 			"kind": "function",
@@ -53,8 +50,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -78,8 +74,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

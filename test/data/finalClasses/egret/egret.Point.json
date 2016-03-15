@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -23,8 +22,7 @@
 			"rwType": 1,
 			"description": "从 (0,0) 到此点的线段长度。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -35,8 +33,7 @@
 			"description": "该点的水平坐标。",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -47,8 +44,7 @@
 			"description": "该点的垂直坐标。",
 			"default": "0",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		}
 	],
 	"function": [
@@ -73,8 +69,7 @@
 					"default": "0",
 					"description": "该对象的y属性值，默认为0"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -92,8 +87,7 @@
 					"type": "egret.Point",
 					"description": "要添加的点。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -103,8 +97,7 @@
 			"scope": "instance",
 			"description": "克隆点对象",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -121,8 +114,7 @@
 					"type": "egret.Point",
 					"description": "要从中复制数据的 Point 对象。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -144,8 +136,7 @@
 					"type": "number",
 					"description": "该对象的y属性值，默认为0"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -168,8 +159,7 @@
 					"type": "egret.Point",
 					"description": "第二个点"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -187,8 +177,7 @@
 					"type": "egret.Point",
 					"description": "要比较的点。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -216,8 +205,7 @@
 					"type": "number",
 					"description": "两个点之间的内插级别。表示新点将位于 pt1 和 pt2 连成的直线上的什么位置。如果 f=1，则返回 pt1；如果 f=0，则返回 pt2。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -234,8 +222,7 @@
 					"type": "number",
 					"description": "缩放值。例如，如果当前点为 (0,5) 并且您将它规范化为 1，则返回的点位于 (0,1) 处。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -257,8 +244,7 @@
 					"type": "number",
 					"description": "水平坐标 y 的偏移量。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -280,8 +266,7 @@
 					"type": "number",
 					"description": "极坐标对的角度（以弧度表示）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -298,8 +283,7 @@
 					"type": "egret.Point",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -321,8 +305,7 @@
 					"type": "number",
 					"description": "该对象的y属性值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -340,8 +323,7 @@
 					"type": "egret.Point",
 					"description": "要减去的点。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

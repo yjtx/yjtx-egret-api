@@ -10,7 +10,6 @@
 			"description": "被引用的 BitmapData 对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		},
@@ -24,7 +23,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -38,7 +36,6 @@
 			"description": "纹理高度，只读属性，不可以设置",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		},
@@ -52,7 +49,6 @@
 			"description": "纹理宽度，只读属性，不可以设置",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		}
@@ -65,8 +61,7 @@
 			"scope": "instance",
 			"description": "创建一个 egret.RenderTexture 对象",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -77,7 +72,6 @@
 			"inheritDoc": true,
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"description": "释放纹理"
 		},
 		{
@@ -107,8 +101,7 @@
 					"default": "1",
 					"description": "缩放比例"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -132,7 +125,6 @@
 					"description": "像素点的Y轴坐标"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		},
@@ -163,7 +155,6 @@
 					"description": "需要转换的区域"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		},
@@ -189,7 +180,6 @@
 					"description": "需要转换的区域"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.Texture"
 		}

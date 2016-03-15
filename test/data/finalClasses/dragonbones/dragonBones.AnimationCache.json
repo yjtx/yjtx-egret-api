@@ -6,7 +6,6 @@
 			"name": "frameNum",
 			"memberof": "dragonBones.AnimationCache",
 			"scope": "instance",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -14,8 +13,7 @@
 			"type": "string",
 			"name": "name",
 			"memberof": "dragonBones.AnimationCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -24,7 +22,6 @@
 			"memberof": "dragonBones.AnimationCache",
 			"scope": "instance",
 			"description": "//\t\tpublic var boneTimelineCacheDic:Object = {};",
-			"pType": "public",
 			"default": "{}"
 		},
 		{
@@ -34,7 +31,6 @@
 			"memberof": "dragonBones.AnimationCache",
 			"scope": "instance",
 			"description": "//\t\tpublic var boneTimelineCacheList:Vector.<BoneTimelineCache> = new Vector.<BoneTimelineCache>();",
-			"pType": "public",
 			"default": "[]"
 		}
 	],
@@ -43,16 +39,14 @@
 			"kind": "function",
 			"name": "AnimationCache",
 			"memberof": "dragonBones.AnimationCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "addFrame",
 			"memberof": "dragonBones.AnimationCache",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -67,8 +61,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -88,8 +81,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -108,8 +100,7 @@
 					"type": "dragonBones.ArmatureData",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -123,8 +114,7 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

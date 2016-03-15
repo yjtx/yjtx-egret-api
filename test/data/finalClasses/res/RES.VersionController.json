@@ -6,8 +6,7 @@
 			"name": "VersionController",
 			"memberof": "RES.VersionController",
 			"scope": "instance",
-			"description": "初始化构造函数",
-			"pType": "public"
+			"description": "初始化构造函数"
 		},
 		{
 			"kind": "function",
@@ -25,7 +24,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "RES.IVersionController"
 		},
@@ -39,7 +37,6 @@
 			"returns": "所有有变化的文件列表。在Web端此列表为空。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "RES.IVersionController"
 		},
@@ -60,7 +57,6 @@
 					"description": "游戏中使用的url"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "RES.IVersionController"
 		}

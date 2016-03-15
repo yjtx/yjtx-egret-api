@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		},
@@ -21,7 +20,6 @@
 			"memberof": "egret.gui.SetProperty",
 			"scope": "instance",
 			"description": "要修改的属性名",
-			"pType": "public",
 			"default": "null"
 		},
 		{
@@ -31,7 +29,6 @@
 			"memberof": "egret.gui.SetProperty",
 			"scope": "instance",
 			"description": "目标实例名",
-			"pType": "public",
 			"default": "null"
 		},
 		{
@@ -41,7 +38,6 @@
 			"memberof": "egret.gui.SetProperty",
 			"scope": "instance",
 			"description": "属性值",
-			"pType": "public",
 			"default": "null"
 		}
 	],
@@ -68,8 +64,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -83,8 +78,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -99,7 +93,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.OverrideBase"
 		},
@@ -118,7 +111,6 @@
 					"description": ""
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.gui.OverrideBase"
 		},
@@ -134,8 +126,7 @@
 					"type": "egret.gui.IContainer",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

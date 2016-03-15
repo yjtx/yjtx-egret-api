@@ -10,7 +10,6 @@
 			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "egret.HashObject"
 		}
@@ -22,8 +21,7 @@
 			"memberof": "egret.Graphics",
 			"scope": "instance",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -46,8 +44,7 @@
 					"default": "1",
 					"description": "填充的 Alpha 值"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -85,8 +82,7 @@
 					"default": "null",
 					"description": "一个由 egret.Matrix 类定义的转换矩阵。egret.Matrix 类包括 createGradientBox() 方法，通过该方法可以方便地设置矩阵，以便与 beginGradientFill() 方法一起使用"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -96,8 +92,7 @@
 			"scope": "instance",
 			"description": "清除绘制到此 Graphics 对象的图形，并重置填充和线条样式设置。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -139,8 +134,7 @@
 					"type": "number",
 					"description": "指定锚点相对于父显示对象的注册点的垂直位置。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -172,8 +166,7 @@
 					"type": "number",
 					"description": "一个数字，指定下一个锚点相对于父显示对象注册点的垂直位置。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -216,8 +209,7 @@
 					"type": "boolean",
 					"description": "如果为 true，逆时针绘制圆弧，反之，顺时针绘制。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -244,8 +236,7 @@
 					"type": "number",
 					"description": "圆的半径（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -277,8 +268,7 @@
 					"type": "number",
 					"description": "矩形的高度（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -310,8 +300,7 @@
 					"type": "number",
 					"description": "矩形的高度（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -354,8 +343,7 @@
 					"type": "number",
 					"description": "用于绘制圆角的椭圆的高度（以像素为单位）。 （可选）如果未指定值，则默认值与为 ellipseWidth 参数提供的值相匹配。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -365,8 +353,7 @@
 			"scope": "instance",
 			"description": "对从上一次调用 beginFill()方法之后添加的直线和曲线应用填充。",
 			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -426,8 +413,7 @@
 					"default": "3",
 					"description": "用于表示剪切斜接的极限值的数字。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -449,8 +435,7 @@
 					"type": "number",
 					"description": "一个表示相对于父显示对象注册点的垂直位置的数字（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -472,8 +457,7 @@
 					"type": "number",
 					"description": "一个表示相对于父显示对象注册点的垂直位置的数字（以像素为单位）。"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

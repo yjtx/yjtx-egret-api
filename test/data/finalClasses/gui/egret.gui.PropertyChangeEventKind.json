@@ -7,7 +7,6 @@
 			"memberof": "egret.gui.PropertyChangeEventKind",
 			"scope": "static",
 			"description": "指示该属性已从此对象中删除。",
-			"pType": "public",
 			"default": "\"delete\""
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "egret.gui.PropertyChangeEventKind",
 			"scope": "static",
 			"description": "指示该属性的值已更改。",
-			"pType": "public",
 			"default": "\"update\""
 		}
 	],

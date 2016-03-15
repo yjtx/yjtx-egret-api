@@ -6,8 +6,7 @@
 			"name": "point1",
 			"memberof": "dragonBones.CurveData",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -15,16 +14,14 @@
 			"name": "point2",
 			"memberof": "dragonBones.CurveData",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
 			"type": "Array<any>",
 			"name": "pointList",
 			"memberof": "dragonBones.CurveData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -32,7 +29,6 @@
 			"name": "sampling",
 			"memberof": "dragonBones.CurveData",
 			"scope": "instance",
-			"pType": "public",
 			"default": "new Array<Point>(CurveData.SamplingTimes)"
 		}
 	],
@@ -41,8 +37,7 @@
 			"kind": "function",
 			"name": "CurveData",
 			"memberof": "dragonBones.CurveData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -56,24 +51,21 @@
 					"type": "number",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "boolean",
 			"name": "isCurve",
 			"memberof": "dragonBones.CurveData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "refreshSampling",
 			"memberof": "dragonBones.CurveData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

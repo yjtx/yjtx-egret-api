@@ -43,8 +43,7 @@
 					"default": "NaN",
 					"description": "新的旋转角度，如果为NaN则不设置"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -64,8 +63,7 @@
 					"default": "null",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

@@ -6,8 +6,7 @@
 			"name": "name",
 			"memberof": "dragonBones.EgretTextureAtlas",
 			"scope": "instance",
-			"description": "名字",
-			"pType": "public"
+			"description": "名字"
 		},
 		{
 			"kind": "member",
@@ -15,7 +14,6 @@
 			"name": "rotatedDic",
 			"memberof": "dragonBones.EgretTextureAtlas",
 			"scope": "static",
-			"pType": "public",
 			"default": "{}"
 		},
 		{
@@ -24,8 +22,7 @@
 			"name": "scale",
 			"memberof": "dragonBones.EgretTextureAtlas",
 			"scope": "instance",
-			"description": "缩放",
-			"pType": "public"
+			"description": "缩放"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "spriteSheet",
 			"memberof": "dragonBones.EgretTextureAtlas",
 			"scope": "instance",
-			"description": "spriteSheet",
-			"pType": "public"
+			"description": "spriteSheet"
 		}
 	],
 	"function": [
@@ -61,8 +57,7 @@
 					"default": "1",
 					"description": "缩放"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -70,8 +65,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.EgretTextureAtlas",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -87,8 +81,7 @@
 					"type": "string",
 					"description": "子纹理的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -104,8 +97,7 @@
 					"type": "string",
 					"description": "子纹理的名字"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -121,8 +113,7 @@
 					"type": "string",
 					"description": "纹理的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

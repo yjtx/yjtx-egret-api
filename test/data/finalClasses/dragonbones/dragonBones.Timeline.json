@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
 			"description": "持续时间，单位是帧",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -18,8 +17,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "获取关键帧列表",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		},
 		{
 			"kind": "member",
@@ -27,8 +25,7 @@
 			"name": "scale",
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
-			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1",
-			"pType": "public"
+			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1"
 		}
 	],
 	"function": [
@@ -37,8 +34,7 @@
 			"name": "Timeline",
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
-			"description": "初始化数据duration为0，scale为1",
-			"pType": "public"
+			"description": "初始化数据duration为0，scale为1"
 		},
 		{
 			"kind": "function",
@@ -56,16 +52,14 @@
 					"type": "dragonBones.Frame",
 					"description": "关键帧数据"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "dispose",
 			"memberof": "dragonBones.Timeline",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],

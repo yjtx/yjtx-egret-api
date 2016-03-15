@@ -6,7 +6,6 @@
 			"name": "originalColor",
 			"memberof": "dragonBones.ColorTransformUtil",
 			"scope": "static",
-			"pType": "public",
 			"default": "new ColorTransform()"
 		}
 	],
@@ -15,8 +14,7 @@
 			"kind": "function",
 			"name": "ColorTransformUtil",
 			"memberof": "dragonBones.ColorTransformUtil",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -30,8 +28,7 @@
 					"type": "dragonBones.ColorTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -50,8 +47,7 @@
 					"type": "dragonBones.ColorTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -75,8 +71,7 @@
 					"type": "dragonBones.ColorTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

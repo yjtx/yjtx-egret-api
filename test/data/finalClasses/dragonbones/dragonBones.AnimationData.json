@@ -6,8 +6,7 @@
 			"name": "autoTween",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "是否开启缓动，默认是true，就是开启缓动",
-			"pType": "public"
+			"description": "是否开启缓动，默认是true，就是开启缓动"
 		},
 		{
 			"kind": "member",
@@ -16,7 +15,6 @@
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
 			"description": "持续时间，单位是帧",
-			"pType": "public",
 			"default": "0",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
@@ -27,8 +25,7 @@
 			"name": "fadeTime",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "动画过渡时间，表示从其他动画过渡到这个动画需要的时间",
-			"pType": "public"
+			"description": "动画过渡时间，表示从其他动画过渡到这个动画需要的时间"
 		},
 		{
 			"kind": "member",
@@ -39,7 +36,6 @@
 			"rwType": 1,
 			"description": "获取关键帧列表",
 			"returns": "",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -50,7 +46,6 @@
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
 			"description": "动画的帧率，表示每一秒钟播放多少帧",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -58,16 +53,14 @@
 			"type": "Array<string>",
 			"name": "hideSlotTimelineNameMap",
 			"memberof": "dragonBones.AnimationData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
 			"type": "Array<string>",
 			"name": "hideTimelineNameMap",
 			"memberof": "dragonBones.AnimationData",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "member",
@@ -76,7 +69,6 @@
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
 			"description": "最后一帧持续的帧数",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -85,8 +77,7 @@
 			"name": "name",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "动画的名字",
-			"pType": "public"
+			"description": "动画的名字"
 		},
 		{
 			"kind": "member",
@@ -95,7 +86,6 @@
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
 			"description": "播放次数 0为一直播放，默认为0",
-			"pType": "public",
 			"default": "0"
 		},
 		{
@@ -105,7 +95,6 @@
 			"memberof": "dragonBones.Timeline",
 			"scope": "instance",
 			"description": "时间缩放，设置为2，时间放慢一倍，设置为0.5，时间加快一倍，默认为1",
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -115,8 +104,7 @@
 			"name": "slotTimelineList",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"rwType": 1,
-			"pType": "public"
+			"rwType": 1
 		},
 		{
 			"kind": "member",
@@ -126,8 +114,7 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "时间轴列表",
-			"returns": "",
-			"pType": "public"
+			"returns": ""
 		},
 		{
 			"kind": "member",
@@ -135,8 +122,7 @@
 			"name": "tweenEasing",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "动画的缓动参数，取值范围是[-1,2],其中[-1, 0)表示缓进，(0, 1]表示缓出(1, 2]表示缓进缓出，0表示不缓动，线性渐变这个参数会被帧数据中的tweenEasing覆盖",
-			"pType": "public"
+			"description": "动画的缓动参数，取值范围是[-1,2],其中[-1, 0)表示缓进，(0, 1]表示缓出(1, 2]表示缓进缓出，0表示不缓动，线性渐变这个参数会被帧数据中的tweenEasing覆盖"
 		}
 	],
 	"function": [
@@ -145,8 +131,7 @@
 			"name": "AnimationData",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "创建一个AnimationData实例",
-			"pType": "public"
+			"description": "创建一个AnimationData实例"
 		},
 		{
 			"kind": "function",
@@ -165,7 +150,6 @@
 					"description": "关键帧数据"
 				}
 			],
-			"pType": "public",
 			"inherited": true,
 			"inherits": "dragonBones.Timeline"
 		},
@@ -181,8 +165,7 @@
 					"type": "dragonBones.SlotTimeline",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -197,8 +180,7 @@
 					"type": "dragonBones.TransformTimeline",
 					"description": "需要被添加的时间轴数据"
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -206,8 +188,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.AnimationData",
 			"scope": "instance",
-			"description": "释放资源",
-			"pType": "public"
+			"description": "释放资源"
 		},
 		{
 			"kind": "function",
@@ -221,8 +202,7 @@
 					"type": "string",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -238,8 +218,7 @@
 					"type": "string",
 					"description": "时间轴的名字"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

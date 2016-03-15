@@ -31,8 +31,7 @@
 					"type": "eui.Watcher",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -43,8 +42,7 @@
 			"description": "检索观察的属性或属性链的当前值，当宿主对象为空时此值为空。",
 			"example": "<pre><br/>watch(obj,&nbsp;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;],&nbsp;...).getValue()&nbsp;===&nbsp;obj.a.b.c<br/></pre>",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -61,8 +59,7 @@
 					"type": "egret.IEventDispatcher",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -84,8 +81,7 @@
 					"type": "any",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -95,8 +91,7 @@
 			"scope": "instance",
 			"description": "从当前宿主中断开此 Watcher 实例及其处理函数。",
 			"version": "eui 1.0",
-			"platform": "Web,Native",
-			"pType": "public"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -129,8 +124,7 @@
 					"type": "any",
 					"description": "handler 方法绑定的this对象"
 				}
-			],
-			"pType": "public"
+			]
 		}
 	],
 	"globalMember": [],

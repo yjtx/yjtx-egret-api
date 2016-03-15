@@ -7,7 +7,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "角度转换为弧度",
-			"pType": "public",
 			"default": "Math.PI / 180"
 		},
 		{
@@ -17,7 +16,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "动画",
-			"pType": "public",
 			"default": "\"animation\""
 		},
 		{
@@ -27,7 +25,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "骨架",
-			"pType": "public",
 			"default": "\"armature\""
 		},
 		{
@@ -37,7 +34,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "动作",
-			"pType": "public",
 			"default": "\"action\""
 		},
 		{
@@ -47,7 +43,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "透明度的倍数",
-			"pType": "public",
 			"default": "\"aM\""
 		},
 		{
@@ -57,7 +52,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "透明度的偏移",
-			"pType": "public",
 			"default": "\"aO\""
 		},
 		{
@@ -67,7 +61,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "自动补间",
-			"pType": "public",
 			"default": "\"autoTween\""
 		},
 		{
@@ -76,7 +69,6 @@
 			"name": "A_BENDPOSITIVE",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"bendPositive\""
 		},
 		{
@@ -86,7 +78,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "混合模式",
-			"pType": "public",
 			"default": "\"blendMode\""
 		},
 		{
@@ -96,7 +87,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "蓝色的倍数",
-			"pType": "public",
 			"default": "\"bM\""
 		},
 		{
@@ -106,7 +96,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "蓝色的偏移",
-			"pType": "public",
 			"default": "\"bO\""
 		},
 		{
@@ -115,7 +104,6 @@
 			"name": "A_BONES",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"bone\""
 		},
 		{
@@ -124,7 +112,6 @@
 			"name": "A_CHAIN",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"chain\""
 		},
 		{
@@ -134,7 +121,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "动画曲线",
-			"pType": "public",
 			"default": "\"curve\""
 		},
 		{
@@ -144,7 +130,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "默认动画",
-			"pType": "public",
 			"default": "\"defaultAnimation\""
 		},
 		{
@@ -154,7 +139,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "显示对象序号",
-			"pType": "public",
 			"default": "\"displayIndex\""
 		},
 		{
@@ -164,7 +148,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "持续时长",
-			"pType": "public",
 			"default": "\"duration\""
 		},
 		{
@@ -174,7 +157,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "事件",
-			"pType": "public",
 			"default": "\"event\""
 		},
 		{
@@ -184,7 +166,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "事件参数",
-			"pType": "public",
 			"default": "\"eventParameters\""
 		},
 		{
@@ -194,7 +175,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "缓入事件",
-			"pType": "public",
 			"default": "\"fadeInTime\""
 		},
 		{
@@ -204,7 +184,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "旋转修正",
-			"pType": "public",
 			"default": "\"fixedRotation\""
 		},
 		{
@@ -214,7 +193,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧的高度",
-			"pType": "public",
 			"default": "\"frameHeight\""
 		},
 		{
@@ -224,7 +202,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧速率",
-			"pType": "public",
 			"default": "\"frameRate\""
 		},
 		{
@@ -234,7 +211,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧的宽度",
-			"pType": "public",
 			"default": "\"frameWidth\""
 		},
 		{
@@ -244,7 +220,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧的x坐标",
-			"pType": "public",
 			"default": "\"frameX\""
 		},
 		{
@@ -254,7 +229,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧的y坐标",
-			"pType": "public",
 			"default": "\"frameY\""
 		},
 		{
@@ -264,7 +238,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "播放子骨架的动画",
-			"pType": "public",
 			"default": "\"gotoAndPlay\""
 		},
 		{
@@ -274,7 +247,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "绿色的倍数",
-			"pType": "public",
 			"default": "\"gM\""
 		},
 		{
@@ -284,7 +256,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "绿色的偏移",
-			"pType": "public",
 			"default": "\"gO\""
 		},
 		{
@@ -294,7 +265,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "高度",
-			"pType": "public",
 			"default": "\"height\""
 		},
 		{
@@ -304,7 +274,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "隐藏",
-			"pType": "public",
 			"default": "\"hide\""
 		},
 		{
@@ -314,7 +283,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "图片路径",
-			"pType": "public",
 			"default": "\"imagePath\""
 		},
 		{
@@ -324,7 +292,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "继承旋转",
-			"pType": "public",
 			"default": "\"inheritRotation\""
 		},
 		{
@@ -334,7 +301,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "继承缩放",
-			"pType": "public",
 			"default": "\"inheritScale\""
 		},
 		{
@@ -344,7 +310,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "是否是全局",
-			"pType": "public",
 			"default": "\"isGlobal\""
 		},
 		{
@@ -354,7 +319,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "长度",
-			"pType": "public",
 			"default": "\"length\""
 		},
 		{
@@ -364,7 +328,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "循环",
-			"pType": "public",
 			"default": "\"loop\""
 		},
 		{
@@ -374,7 +337,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "名字",
-			"pType": "public",
 			"default": "\"name\""
 		},
 		{
@@ -384,7 +346,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "偏移",
-			"pType": "public",
 			"default": "\"offset\""
 		},
 		{
@@ -394,7 +355,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "父亲",
-			"pType": "public",
 			"default": "\"parent\""
 		},
 		{
@@ -404,7 +364,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "轴点的x坐标",
-			"pType": "public",
 			"default": "\"pX\""
 		},
 		{
@@ -414,7 +373,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "轴点的y坐标",
-			"pType": "public",
 			"default": "\"pY\""
 		},
 		{
@@ -423,7 +381,6 @@
 			"name": "A_PLAY_TIMES",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"playTimes\""
 		},
 		{
@@ -433,7 +390,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "红色的倍数",
-			"pType": "public",
 			"default": "\"rM\""
 		},
 		{
@@ -443,7 +399,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "红色的偏移",
-			"pType": "public",
 			"default": "\"rO\""
 		},
 		{
@@ -453,7 +408,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "旋转",
-			"pType": "public",
 			"default": "\"rotated\""
 		},
 		{
@@ -463,7 +417,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "缩放",
-			"pType": "public",
 			"default": "\"scale\""
 		},
 		{
@@ -473,7 +426,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "缩放模式",
-			"pType": "public",
 			"default": "\"scaleMode\""
 		},
 		{
@@ -483,7 +435,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "x方向缩放",
-			"pType": "public",
 			"default": "\"scX\""
 		},
 		{
@@ -493,7 +444,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "x方向缩放的偏移",
-			"pType": "public",
 			"default": "\"scXOffset\""
 		},
 		{
@@ -503,7 +453,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "y方向缩放",
-			"pType": "public",
 			"default": "\"scY\""
 		},
 		{
@@ -513,7 +462,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "y方向的偏移",
-			"pType": "public",
 			"default": "\"scYOffset\""
 		},
 		{
@@ -523,7 +471,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "x方向斜切",
-			"pType": "public",
 			"default": "\"skX\""
 		},
 		{
@@ -533,7 +480,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "y方向斜切",
-			"pType": "public",
 			"default": "\"skY\""
 		},
 		{
@@ -543,7 +489,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "声音",
-			"pType": "public",
 			"default": "\"sound\""
 		},
 		{
@@ -552,7 +497,6 @@
 			"name": "A_TARGET",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"target\""
 		},
 		{
@@ -562,7 +506,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "补间缓动",
-			"pType": "public",
 			"default": "\"tweenEasing\""
 		},
 		{
@@ -572,7 +515,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "补间旋转",
-			"pType": "public",
 			"default": "\"tweenRotate\""
 		},
 		{
@@ -582,7 +524,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "补间缩放",
-			"pType": "public",
 			"default": "\"tweenScale\""
 		},
 		{
@@ -592,7 +533,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "类型",
-			"pType": "public",
 			"default": "\"type\""
 		},
 		{
@@ -602,7 +542,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "版本",
-			"pType": "public",
 			"default": "\"version\""
 		},
 		{
@@ -611,7 +550,6 @@
 			"name": "A_WEIGHT",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"weight\""
 		},
 		{
@@ -621,7 +559,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "宽度",
-			"pType": "public",
 			"default": "\"width\""
 		},
 		{
@@ -631,7 +568,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "x轴",
-			"pType": "public",
 			"default": "\"x\""
 		},
 		{
@@ -641,7 +577,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "y轴",
-			"pType": "public",
 			"default": "\"y\""
 		},
 		{
@@ -651,7 +586,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "z轴",
-			"pType": "public",
 			"default": "\"z\""
 		},
 		{
@@ -661,7 +595,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "骨骼",
-			"pType": "public",
 			"default": "\"bone\""
 		},
 		{
@@ -670,7 +603,6 @@
 			"name": "COLOR",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"pType": "public",
 			"default": "\"color\""
 		},
 		{
@@ -680,7 +612,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "颜色变换",
-			"pType": "public",
 			"default": "\"colorTransform\""
 		},
 		{
@@ -690,7 +621,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "显示对象",
-			"pType": "public",
 			"default": "\"display\""
 		},
 		{
@@ -700,7 +630,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "龙骨",
-			"pType": "public",
 			"default": "\"dragonBones\""
 		},
 		{
@@ -710,7 +639,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "椭圆",
-			"pType": "public",
 			"default": "\"ellipse\""
 		},
 		{
@@ -720,7 +648,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "帧",
-			"pType": "public",
 			"default": "\"frame\""
 		},
 		{
@@ -730,7 +657,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "ik",
-			"pType": "public",
 			"default": "\"ik\""
 		},
 		{
@@ -740,7 +666,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "弧度转换为角度",
-			"pType": "public",
 			"default": "180 / Math.PI"
 		},
 		{
@@ -750,7 +675,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "矩形",
-			"pType": "public",
 			"default": "\"rectangle\""
 		},
 		{
@@ -760,7 +684,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "皮肤",
-			"pType": "public",
 			"default": "\"skin\""
 		},
 		{
@@ -770,7 +693,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "插槽",
-			"pType": "public",
 			"default": "\"slot\""
 		},
 		{
@@ -780,7 +702,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "子纹理",
-			"pType": "public",
 			"default": "\"SubTexture\""
 		},
 		{
@@ -790,7 +711,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "纹理集",
-			"pType": "public",
 			"default": "\"TextureAtlas\""
 		},
 		{
@@ -800,7 +720,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "时间轴",
-			"pType": "public",
 			"default": "\"timeline\""
 		},
 		{
@@ -810,7 +729,6 @@
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
 			"description": "变换",
-			"pType": "public",
 			"default": "\"transform\""
 		}
 	],

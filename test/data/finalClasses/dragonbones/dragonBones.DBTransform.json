@@ -6,8 +6,7 @@
 			"name": "rotation",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "旋转，用弧度表示",
-			"pType": "public"
+			"description": "旋转，用弧度表示"
 		},
 		{
 			"kind": "member",
@@ -15,8 +14,7 @@
 			"name": "scaleX",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "x方向的缩放",
-			"pType": "public"
+			"description": "x方向的缩放"
 		},
 		{
 			"kind": "member",
@@ -24,8 +22,7 @@
 			"name": "scaleY",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "y方向的缩放",
-			"pType": "public"
+			"description": "y方向的缩放"
 		},
 		{
 			"kind": "member",
@@ -33,8 +30,7 @@
 			"name": "skewX",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "x方向的斜切，一般和skewY一起变化，可以表示旋转",
-			"pType": "public"
+			"description": "x方向的斜切，一般和skewY一起变化，可以表示旋转"
 		},
 		{
 			"kind": "member",
@@ -42,8 +38,7 @@
 			"name": "skewY",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "y方向的斜切，一般和skewX一起变化，可以表示旋转",
-			"pType": "public"
+			"description": "y方向的斜切，一般和skewX一起变化，可以表示旋转"
 		},
 		{
 			"kind": "member",
@@ -51,8 +46,7 @@
 			"name": "x",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "x坐标值",
-			"pType": "public"
+			"description": "x坐标值"
 		},
 		{
 			"kind": "member",
@@ -60,8 +54,7 @@
 			"name": "y",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "y坐标值",
-			"pType": "public"
+			"description": "y坐标值"
 		}
 	],
 	"function": [
@@ -70,8 +63,7 @@
 			"name": "DBTransform",
 			"memberof": "dragonBones.DBTransform",
 			"scope": "instance",
-			"description": "创建一个 DBTransform 实例.",
-			"pType": "public"
+			"description": "创建一个 DBTransform 实例."
 		},
 		{
 			"kind": "function",
@@ -86,16 +78,14 @@
 					"type": "dragonBones.DBTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "dragonBones.DBTransform",
 			"name": "clone",
 			"memberof": "dragonBones.DBTransform",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -110,8 +100,7 @@
 					"type": "dragonBones.DBTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
@@ -126,16 +115,14 @@
 					"type": "dragonBones.DBTransform",
 					"description": ""
 				}
-			],
-			"pType": "public"
+			]
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "normalizeRotation",
 			"memberof": "dragonBones.DBTransform",
-			"scope": "instance",
-			"pType": "public"
+			"scope": "instance"
 		}
 	],
 	"globalMember": [],
