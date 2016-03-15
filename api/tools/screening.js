@@ -68,5 +68,9 @@ function deleteList(list) {
 }
 
 function needDelete(item) {
-    return item.private == true || item.pType == "private" || item.pType == "protected";
+    var bo = item.private == true || item.pType == "private" || item.pType == "protected";
+
+    delete item.pType;
+
+    return bo;
 }
