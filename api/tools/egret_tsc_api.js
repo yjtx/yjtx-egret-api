@@ -64,7 +64,7 @@ function formatFile(sourceFile, parent) {
         else if (statement.kind == 186 /* InterfaceDeclaration */
             || (statement.kind == 185 /* ClassDeclaration */)
             || (statement.kind == 188 /* EnumDeclaration */)) {
-            formatClass(statement, text, parent, false);
+            formatClass(statement, text, parent, false, false);
         }
     }
 }
@@ -115,7 +115,7 @@ function formatModule(statement, text, parent, isPrivate) {
                 else if (tempStatement.kind == 186 /* InterfaceDeclaration */
                     || (tempStatement.kind == 185 /* ClassDeclaration */)
                     || (tempStatement.kind == 188 /* EnumDeclaration */)) {
-                    formatClass(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
+                    formatClass(tempStatement, text, parent[objName]["$_tree_"], true, isPrivate);
                 }
             }
         }
@@ -131,7 +131,7 @@ function formatModule(statement, text, parent, isPrivate) {
     }
 }
 
-function formatClass(statement, text, parent, isPrivate) {
+function formatClass(statement, text, parent, hasModule, isPrivate) {
     var objName = statement.name.getText();
     parent[objName] = {"$_tree_": {}};
 
@@ -152,6 +152,9 @@ function formatClass(statement, text, parent, isPrivate) {
 
             if (isPrivate == true) {
                 parent[objName]["pType"] = "private";
+            }
+            else if (!hasModule) {
+                parent[objName]["pType"] = "public";
             }
             else if (isExport(statement)) {//
                 parent[objName]["pType"] = "public";
