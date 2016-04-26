@@ -39,6 +39,15 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "A_ACTIONS",
+			"memberof": "dragonBones.ConstValues",
+			"scope": "static",
+			"description": "动作",
+			"default": "\"actions\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "A_ALPHA_MULTIPLIER",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
@@ -126,11 +135,11 @@
 		{
 			"kind": "member",
 			"type": "string",
-			"name": "A_DEFAULT_ANIMATION",
+			"name": "A_DEFAULT_ACTIONS",
 			"memberof": "dragonBones.ConstValues",
 			"scope": "static",
-			"description": "默认动画",
-			"default": "\"defaultAnimation\""
+			"description": "默认动作",
+			"default": "\"defaultActions\""
 		},
 		{
 			"kind": "member",

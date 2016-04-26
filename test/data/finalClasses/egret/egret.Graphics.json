@@ -63,17 +63,17 @@
 				},
 				{
 					"name": "colors",
-					"type": "Array<number>",
+					"type": "number[]",
 					"description": "渐变中使用的 RGB 十六进制颜色值的数组（例如，红色为 0xFF0000，蓝色为 0x0000FF，等等）。对于每种颜色，请在 alphas 和 ratios 参数中指定对应值。"
 				},
 				{
 					"name": "alphas",
-					"type": "Array<number>",
+					"type": "number[]",
 					"description": "colors 数组中对应颜色的 alpha 值数组。"
 				},
 				{
 					"name": "ratios",
-					"type": "Array<number>",
+					"type": "number[]",
 					"description": "颜色分布比率的数组。有效值为 0 到 255。"
 				},
 				{
@@ -201,7 +201,7 @@
 				{
 					"name": "endAngle",
 					"type": "number",
-					"description": "圆弧的重点， 单位以弧度表示。"
+					"description": "圆弧的终点， 单位以弧度表示。"
 				},
 				{
 					"name": "anticlockwise",
@@ -232,7 +232,7 @@
 					"description": "相对于父显示对象注册点的圆心的 y 位置（以像素为单位）。"
 				},
 				{
-					"name": "r",
+					"name": "radius",
 					"type": "number",
 					"description": "圆的半径（以像素为单位）。"
 				}
@@ -399,13 +399,13 @@
 					"name": "caps",
 					"type": "string",
 					"default": "null",
-					"description": "用于指定线条末端处端点类型的 CapsStyle 类的值。"
+					"description": "用于指定线条末端处端点类型的 CapsStyle 类的值。默认值：CapsStyle.ROUND"
 				},
 				{
 					"name": "joints",
 					"type": "string",
 					"default": "null",
-					"description": "指定用于拐角的连接外观的类型。"
+					"description": "指定用于拐角的连接外观的类型。默认值：JointStyle.ROUND"
 				},
 				{
 					"name": "miterLimit",

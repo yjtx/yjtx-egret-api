@@ -30,7 +30,7 @@
 		"kind": "class",
 		"name": "DirtyRegionPolicy",
 		"memberof": "egret",
-		"filename": "egret/player/DirtyRegionPolicy.ts",
+		"filename": "egret/display/DirtyRegionPolicy.ts",
 		"description": "脏矩形策略常量。",
 		"version": "Egret 2.5",
 		"platform": "Web,Native"

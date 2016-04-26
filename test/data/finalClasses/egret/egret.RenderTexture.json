@@ -58,21 +58,14 @@
 			"kind": "function",
 			"name": "RenderTexture",
 			"memberof": "egret.RenderTexture",
-			"scope": "instance",
-			"description": "创建一个 egret.RenderTexture 对象",
-			"version": "Egret 2.4",
-			"platform": "Web,Native"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
 			"type": "void",
 			"name": "dispose",
 			"memberof": "egret.RenderTexture",
-			"scope": "instance",
-			"inheritDoc": true,
-			"version": "Egret 2.4",
-			"platform": "Web,Native",
-			"description": "释放纹理"
+			"scope": "instance"
 		},
 		{
 			"kind": "function",
@@ -107,26 +100,20 @@
 			"kind": "function",
 			"type": "number[]",
 			"name": "getPixel32",
-			"memberof": "egret.Texture",
+			"memberof": "egret.RenderTexture",
 			"scope": "instance",
-			"description": "获取某一点像素的颜色值",
-			"returns": "指定像素点的颜色值",
-			"version": "Egret 2.4",
-			"platform": "Web",
 			"params": [
 				{
 					"name": "x",
 					"type": "number",
-					"description": "像素点的X轴坐标"
+					"description": ""
 				},
 				{
 					"name": "y",
 					"type": "number",
-					"description": "像素点的Y轴坐标"
+					"description": ""
 				}
-			],
-			"inherited": true,
-			"inherits": "egret.Texture"
+			]
 		},
 		{
 			"kind": "function",

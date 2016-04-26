@@ -3,6 +3,31 @@
 	"function": [
 		{
 			"kind": "function",
+			"type": "dragonBones.Point",
+			"name": "applyMatrixToPoint",
+			"memberof": "dragonBones.TransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "targetPoint",
+					"type": "dragonBones.Point",
+					"description": ""
+				},
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				},
+				{
+					"name": "returnNewPoint",
+					"type": "Boolean",
+					"default": "false",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
 			"type": "number",
 			"name": "formatRadian",
 			"memberof": "dragonBones.TransformUtil",

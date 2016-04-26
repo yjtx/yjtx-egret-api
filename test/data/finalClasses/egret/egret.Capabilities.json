@@ -36,6 +36,17 @@
 		{
 			"kind": "member",
 			"type": "string",
+			"name": "renderMode",
+			"memberof": "egret.Capabilities",
+			"scope": "static",
+			"description": "当前渲染模式",
+			"version": "Egret 3.0.7",
+			"platform": "Web,Native",
+			"default": "\"Unknown\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
 			"name": "runtimeType",
 			"memberof": "egret.Capabilities",
 			"scope": "static",

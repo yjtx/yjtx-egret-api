@@ -7,6 +7,8 @@
 			"memberof": "egret.GradientType",
 			"scope": "static",
 			"description": "用于指定线性渐变填充的值",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
 			"default": "\"linear\""
 		},
 		{
@@ -16,6 +18,8 @@
 			"memberof": "egret.GradientType",
 			"scope": "static",
 			"description": "用于指定放射状渐变填充的值",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
 			"default": "\"radial\""
 		}
 	],
@@ -26,6 +30,12 @@
 		"kind": "class",
 		"name": "GradientType",
 		"memberof": "egret",
-		"filename": "egret/display/GradientType.ts"
+		"filename": "egret/display/GradientType.ts",
+		"description": "GradientType 类为 egret.Graphics 类的 beginGradientFill() 方法中的 type 参数提供值。",
+		"see": [
+			"egret.Graphics#beginGradientFill()"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
 	}
 }

@@ -1,0 +1,19 @@
+{
+	"globalMember": [
+		{
+			"filename": "egret/player/RenderBuffer.ts",
+			"kind": "globalMember",
+			"name": "hitTestBuffer",
+			"memberof": "egret.sys",
+			"scope": "instance",
+			"description": "共享的用于碰撞检测的渲染缓冲"
+		},
+		{
+			"filename": "egret/player/SystemRenderer.ts",
+			"kind": "globalMember",
+			"name": "systemRenderer",
+			"memberof": "egret.sys",
+			"scope": "instance"
+		}
+	]
+}

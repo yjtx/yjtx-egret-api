@@ -336,7 +336,7 @@
 			"name": "parseConfig",
 			"memberof": "RES",
 			"scope": "instance",
-			"description": "运行时动态解析一个配置文件。",
+			"description": "运行时动态解析一个配置文件,此操作不会清空之前已存在的配置。",
 			"see": [
 				"#setMaxRetryTimes"
 			],

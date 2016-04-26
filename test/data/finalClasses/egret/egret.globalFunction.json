@@ -147,7 +147,7 @@
 			"scope": "instance",
 			"description": "检查指定对象是否为 Egret 框架内指定接口或类或其子类的实例。此方法与使用 instanceOf 关键字相比具有更高的性能，并且能判断接口的实现。",
 			"returns": "返回true表示当前对象是指定类或接口的实例。",
-			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;instance&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,egret.Types.Sprite))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,egret.Types.DisplayObjectContainer))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,egret.Types.Bitmap))&nbsp;&nbsp;//false<br/></pre>",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;instance&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Sprite&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.DisplayObjectContainer&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Bitmap&quot;))&nbsp;&nbsp;//false<br/></pre>",
 			"see": [
 				"egret.registerClass()"
 			],

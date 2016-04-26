@@ -77,6 +77,14 @@
 					"description": "提供混合模式可视效果的常量值的类,通常用于 DisplayObject 的 blendMode 属性上。"
 				},
 				{
+					"name": "CapsStyle",
+					"description": "CapsStyle 类是可指定在绘制线条中使用的端点样式的常量值枚举。常量可用作 egret.Graphics.lineStyle() 方法的 caps 参数中的值。"
+				},
+				{
+					"name": "DirtyRegionPolicy",
+					"description": "脏矩形策略常量。"
+				},
+				{
 					"name": "DisplayObject",
 					"description": "DisplayObject 类是可放在显示列表中的所有对象的基类。该显示列表管理运行时中显示的所有对象。使用 DisplayObjectContainer 类排列显示列表中的显示对象。DisplayObjectContainer 对象可以有子显示对象，而其他显示对象（如 Shape 和 TextField 对象）是“叶”节点，没有子项，只有父级和同级。DisplayObject 类有一些基本的属性（如确定坐标位置的 x 和 y 属性），也有一些高级的对象属性（如 Matrix 矩阵变换）。<br/>DisplayObject 类包含若干广播事件。通常，任何特定事件的目标均为一个特定的 DisplayObject 实例。例如，added 事件的目标是已添加到显示列表的目标 DisplayObject 实例。若只有一个目标，则会将事件侦听器限制为只能监听在该目标上（在某些情况下，可监听在显示列表中该目标的祖代上）。但是对于广播事件，目标不是特定的 DisplayObject 实例，而是所有 DisplayObject 实例（包括那些不在显示列表中的实例）。这意味着您可以向任何DisplayObject 实例添加侦听器来侦听广播事件。"
 				},
@@ -86,11 +94,19 @@
 				},
 				{
 					"name": "GradientType",
-					"description": ""
+					"description": "GradientType 类为 egret.Graphics 类的 beginGradientFill() 方法中的 type 参数提供值。"
 				},
 				{
 					"name": "Graphics",
 					"description": "Graphics 类包含一组可用来创建矢量形状的方法。支持绘制的显示对象包括 Sprite 和 Shape 对象。这些类中的每一个类都包括 graphics 属性，该属性是一个 Graphics 对象。以下是为便于使用而提供的一些辅助函数：drawRect()、drawRoundRect()、drawCircle() 和 drawEllipse()。"
+				},
+				{
+					"name": "JointStyle",
+					"description": "JointStyle 类是指定要在绘制线条中使用的联接点样式的常量值枚举。提供的这些常量用作 egret.Graphics.lineStyle() 方法的 joints 参数中的值。"
+				},
+				{
+					"name": "OrientationMode",
+					"description": "OrientationMode 类为舞台初始旋转模式提供值。"
 				},
 				{
 					"name": "RenderTexture",
@@ -221,10 +237,6 @@
 					"description": "ImageLoader 类可用于加载图像（JPG、PNG 或 GIF）文件。使用 load() 方法来启动加载。被加载的图像对象数据将存储在 ImageLoader.data 属性上 。"
 				},
 				{
-					"name": "DirtyRegionPolicy",
-					"description": "脏矩形策略常量。"
-				},
-				{
 					"name": "StageScaleMode",
 					"description": "StageScaleMode 类为舞台缩放模式提供值。"
 				},
@@ -331,6 +343,30 @@
 				{
 					"name": "XMLText",
 					"description": "XMLText 类表示在XML中的文本节点"
+				}
+			]
+		},
+		"egret.sys": {
+			"globalMember": [
+				{
+					"name": "hitTestBuffer",
+					"description": "共享的用于碰撞检测的渲染缓冲"
+				},
+				{
+					"name": "systemRenderer",
+					"description": ""
+				}
+			],
+			"globalFunction": [
+				{
+					"name": "measureText",
+					"description": "测量文本在指定样式下的宽度。"
+				}
+			],
+			"class": [
+				{
+					"name": "PathType",
+					"description": "路径类型"
 				}
 			]
 		},
@@ -1780,7 +1816,7 @@
 				},
 				{
 					"name": "parseConfig",
-					"description": "运行时动态解析一个配置文件。"
+					"description": "运行时动态解析一个配置文件,此操作不会清空之前已存在的配置。"
 				},
 				{
 					"name": "registerAnalyzer",

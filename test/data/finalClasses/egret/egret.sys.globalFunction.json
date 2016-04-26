@@ -1,0 +1,40 @@
+{
+	"globalFunction": [
+		{
+			"filename": "egret/text/TextMeasurer.ts",
+			"kind": "globalFunction",
+			"type": "number",
+			"name": "measureText",
+			"memberof": "egret.sys",
+			"scope": "instance",
+			"description": "测量文本在指定样式下的宽度。",
+			"params": [
+				{
+					"name": "text",
+					"type": "string",
+					"description": "要测量的文本内容。"
+				},
+				{
+					"name": "fontFamily",
+					"type": "string",
+					"description": "字体名称"
+				},
+				{
+					"name": "fontSize",
+					"type": "number",
+					"description": "字体大小"
+				},
+				{
+					"name": "bold",
+					"type": "boolean",
+					"description": "是否粗体"
+				},
+				{
+					"name": "italic",
+					"type": "boolean",
+					"description": "是否斜体"
+				}
+			]
+		}
+	]
+}

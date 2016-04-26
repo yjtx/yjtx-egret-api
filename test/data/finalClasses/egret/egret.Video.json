@@ -115,6 +115,17 @@
 		},
 		{
 			"kind": "member",
+			"type": "number",
+			"name": "length",
+			"memberof": "egret.Video",
+			"scope": "instance",
+			"description": "当前视频的长度（以秒为单位）。",
+			"version": "Egret 3.0.8",
+			"platform": "Web,Native",
+			"rwType": 1
+		},
+		{
+			"kind": "member",
 			"type": "egret.DisplayObject|egret.Rectangle",
 			"name": "mask",
 			"memberof": "egret.DisplayObject",

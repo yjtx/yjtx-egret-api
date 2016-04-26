@@ -190,7 +190,7 @@
 			"memberof": "egret.TextField",
 			"scope": "instance",
 			"description": "要使用的字体的名称或用逗号分隔的字体名称列表。",
-			"default": "\"sans-serif\"",
+			"default": "\"Arial\"",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"inherited": true,
@@ -1281,6 +1281,18 @@
 			"inherited": true,
 			"inherits": "egret.DisplayObject",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setFocus",
+			"memberof": "egret.TextField",
+			"scope": "instance",
+			"description": "输入文本自动进入到输入状态，仅在类型是输入文本并且是在用户交互下才可以调用。",
+			"version": "Egret 3.0.8",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.TextField"
 		},
 		{
 			"kind": "function",
