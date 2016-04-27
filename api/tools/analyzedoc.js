@@ -319,7 +319,7 @@ exports.analyze = function analyze(doc) {
 
             var docItems = item.match(/^(\S)+/);
             if (docItems == null) {
-                console.log(1)
+                console.warn("@ " + item);
             }
 
             var docName =docItems[0];
