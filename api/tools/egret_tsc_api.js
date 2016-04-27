@@ -4,25 +4,27 @@ var globals = require("../core/globals");
 var path = require("path");
 var file = require("../core/file");
 
+var TYPEFLAG = require("../tools/enumflag").getEnumFlag();
+
 exports.run = function run(fileNames) {
     var options = {target: 2 /* ES6 */, module: 0 /* None */};
     var host = ts.createCompilerHost(options);
     var program = ts.createProgram(fileNames, options, host);
     //console.log(fileNames);
-    var errors = program.getDiagnostics();
-    if (errors.length > 0) {
-        errors.forEach(function (diagnostic) {
-            var lineChar = diagnostic.file.getLineAndCharacterFromPosition(diagnostic.start);
-            console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
-        });
-        return;
-    }
+    //var errors = program.getDiagnostics();
+    //if (errors.length > 0) {
+    //    errors.forEach(function (diagnostic) {
+    //        var lineChar = diagnostic.file.getLineAndCharacterFromPosition(diagnostic.start);
+    //        console.log("" + diagnostic.file.filename + " (" + lineChar.line + "," + lineChar.character + "): " + diagnostic.messageText);
+    //    });
+    //    return;
+    //}
 
     var apiArr = [];
 
     var libsNames = ["tools/node_modules/typescript/bin", "core/typescript/lib.d.ts"];
     program.getSourceFiles().forEach(function (sourceFile) {
-        var filename = sourceFile.filename;
+        var filename = sourceFile.fileName;
         for (var i = 0; i < libsNames.length; i++) {
             if (file.escapePath(filename).match(libsNames[i])) {
                 return;
@@ -49,32 +51,32 @@ function formatFile(sourceFile, parent) {
     for (var i = 0; i < length; i++) {
         var statement = statements[i];
 
-        if (statement.flags & 2 /* Ambient */) {
+        if (statement.flags & TYPEFLAG.Ambient /* Ambient */) {
         }
         //else
-        if (statement.kind == 189 /* ModuleDeclaration */) {
+        if (statement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
             formatModule(statement, text, parent, false);
         }
-        else if (statement.kind == 164 /* VariableStatement */) {
+        else if (statement.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
             formatMember(statement, text, parent, null, false);
         }
-        else if (statement.kind == 184 /* FunctionDeclaration */) {
+        else if (statement.kind == TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */) {
             formatMember(statement, text, parent, null, false);
         }
-        else if (statement.kind == 186 /* InterfaceDeclaration */
-            || (statement.kind == 185 /* ClassDeclaration */)
-            || (statement.kind == 188 /* EnumDeclaration */)) {
-            formatClass(statement, text, parent, false);
+        else if (statement.kind == TYPEFLAG.InterfaceDeclaration /* InterfaceDeclaration */
+            || (statement.kind == TYPEFLAG.ClassDeclaration /* ClassDeclaration */)
+            || (statement.kind == TYPEFLAG.EnumDeclaration /* EnumDeclaration */)) {
+            formatClass(statement, text, parent, false, false);
         }
     }
 }
 
 function formatModule(statement, text, parent, isPrivate) {
-    if (statement.flags & 2 /* Ambient */) {
+    if (statement.flags & TYPEFLAG.Ambient /* Ambient */) {
         //return;
     }
 
-    if (statement.kind == 189 /* ModuleDeclaration */) {
+    if (statement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
         var objName = statement.name.text;
         if (parent[objName] == null) {
             parent[objName] = {"$_tree_": {}, "bodyType": "module"};
@@ -100,30 +102,30 @@ function formatModule(statement, text, parent, isPrivate) {
             var length = tempStatements.length;
             for (var i = 0; i < length; i++) {
                 var tempStatement = tempStatements[i];
-                if (tempStatement.flags & 2 /* Ambient */) {
+                if (tempStatement.flags & TYPEFLAG.Ambient /* Ambient */) {
                 }
-                else if (tempStatement.kind == 189 /* ModuleDeclaration */) {
+                else if (tempStatement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
                     formatModule(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
                 }
-                else if (tempStatement.kind == 164 /* VariableStatement */) {
+                else if (tempStatement.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
                     formatMember(tempStatement, text, parent[objName]["$_tree_"], null, isPrivate);
                 }
-                else if (tempStatement.kind == 184 /* FunctionDeclaration */) {
+                else if (tempStatement.kind == TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */) {
                     formatMember(tempStatement, text, parent[objName]["$_tree_"], null, isPrivate);
 
                 }
-                else if (tempStatement.kind == 186 /* InterfaceDeclaration */
-                    || (tempStatement.kind == 185 /* ClassDeclaration */)
-                    || (tempStatement.kind == 188 /* EnumDeclaration */)) {
-                    formatClass(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
+                else if (tempStatement.kind == TYPEFLAG.InterfaceDeclaration /* InterfaceDeclaration */
+                    || (tempStatement.kind == TYPEFLAG.ClassDeclaration /* ClassDeclaration */)
+                    || (tempStatement.kind == TYPEFLAG.EnumDeclaration /* EnumDeclaration */)) {
+                    formatClass(tempStatement, text, parent[objName]["$_tree_"], true, isPrivate);
                 }
             }
         }
         else {
             var tempStatement = statement.body;
-            if (tempStatement.flags & 2 /* Ambient */) {
+            if (tempStatement.flags & TYPEFLAG.Ambient /* Ambient */) {
             }
-            else if (tempStatement.kind == 189 /* ModuleDeclaration */) {
+            else if (tempStatement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
                 formatModule(tempStatement, text, parent[objName]["$_tree_"], isPrivate);
             }
         }
@@ -131,20 +133,20 @@ function formatModule(statement, text, parent, isPrivate) {
     }
 }
 
-function formatClass(statement, text, parent, isPrivate) {
-    var objName = statement.name.getText();
+function formatClass(statement, text, parent, hasModule, isPrivate) {
+    var objName = statement.name.text;
     parent[objName] = {"$_tree_": {}};
 
     switch (statement.kind) {
-        case 188 /* EnumDeclaration */
+        case TYPEFLAG.EnumDeclaration /* EnumDeclaration */
         :
             parent[objName]["bodyType"] = "enum";
-        case 186 /* InterfaceDeclaration */
+        case TYPEFLAG.InterfaceDeclaration /* InterfaceDeclaration */
         :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "interface";
             }
-        case 185 /* ClassDeclaration */
+        case TYPEFLAG.ClassDeclaration /* ClassDeclaration */
         :
             if (parent[objName]["bodyType"] == null) {
                 parent[objName]["bodyType"] = "class";
@@ -153,13 +155,16 @@ function formatClass(statement, text, parent, isPrivate) {
             if (isPrivate == true) {
                 parent[objName]["pType"] = "private";
             }
+            else if (!hasModule) {
+                parent[objName]["pType"] = "public";
+            }
             else if (isExport(statement)) {//
                 parent[objName]["pType"] = "public";
             }
             else {
                 parent[objName]["pType"] = "private";
                 //由于局部的enum可能会重复，导致生成问题，因此直接排除局部enum
-                if (statement.kind == 188 /* EnumDeclaration */) {
+                if (statement.kind == TYPEFLAG.EnumDeclaration /* EnumDeclaration */) {
                     delete parent[objName];
                     return;
                 }
@@ -170,10 +175,10 @@ function formatClass(statement, text, parent, isPrivate) {
             if (statement.heritageClauses) {
                 for (var i2 = 0; i2 < statement.heritageClauses.length; i2++) {
                     var heritageClause = statement.heritageClauses[i2];
-                    if (heritageClause.token == 100 /*ImplementsKeyword*/) {
+                    if (heritageClause.token == TYPEFLAG.ImplementsKeyword /*ImplementsKeyword*/) {
                         initImplements(heritageClause["types"], parent[objName], text);
                     }
-                    else if (heritageClause.token == 77 /*ExtendsKeyword*/) {
+                    else if (heritageClause.token == TYPEFLAG.ExtendsKeyword /*ExtendsKeyword*/) {
                         initExtends(heritageClause["types"], parent[objName], text);
                     }
                 }
@@ -195,7 +200,7 @@ function initExtends(baseTypes, obj, text) {
         if (baseType == null) {
             continue;
         }
-        obj["augments"].push(baseType.getText());
+        obj["augments"].push(baseType["expression"]["text"] || text.substring(baseType["expression"].pos, baseType["expression"].end));
     }
 }
 
@@ -207,7 +212,7 @@ function initImplements(implementedTypes, obj, text) {
     obj["implements"] = [];
     for (var i = 0; i < implementedTypes.length; i++) {
         var implementedType = implementedTypes[i];
-        obj["implements"].push(implementedTypes[i]["typeName"]["text"] || text.substring(implementedType["typeName"].pos, implementedType["typeName"].end));
+        obj["implements"].push(implementedType["expression"]["text"] || text.substring(implementedType["expression"].pos, implementedType["expression"].end));
     }
 }
 
@@ -221,8 +226,8 @@ function formatMembers(declaration, text, parent, isStatic, isPrivate) {
         var member = members[i];
         formatMember(member, text, parent, isStatic, isPrivate);
 
-        if (member.kind == 200 /* EnumMember */) {
-            var name = member.name.getText();
+        if (member.kind == TYPEFLAG.EnumMember /* EnumMember */) {
+            var name = member.name.text;
             parent[name]["type"] = "number";
             if (parent[name]["default"] == null) {
                 parent[name]["default"] = enumValue + "";
@@ -239,46 +244,54 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     var flags = member.flags;
 
     var name = "";
-    if (member.kind == 164 /* VariableStatement */) {
-        name = member.declarations[0].name.getText();
+    if (member.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
+        var declarations = member.declarationList.declarations;
+        name = declarations[0].name.text;
 
         if (parent[name] && parent[name]["bodyType"] == "interface") {
             parent[name]["bodyType"] = "class";
 
-            formatMembers(member.declarations[0]["type"], text, parent[name]["$_tree_"], true, isPrivate);
+            formatMembers(declarations[0]["type"], text, parent[name]["$_tree_"], true, isPrivate);
             return;
         }
 
-        if (member.declarations && member.declarations.length > 0 && member.declarations[0]["type"] && member.declarations[0]["type"]["parameters"]) {
-            member.parameters = member.declarations[0]["type"]["parameters"];
-            member.type = member.declarations[0]["type"]["type"];
-            member.kind = 184 /* FunctionDeclaration */;
+        if (declarations && declarations.length > 0 && declarations[0]["type"] && declarations[0]["type"]["parameters"]) {
+            member.parameters = declarations[0]["type"]["parameters"];
+            member.type = declarations[0]["type"]["type"];
+            member.kind = TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */;
         }
 
     }
-    else if (member.kind == 126 /* Constructor */) {
+    else if (member.kind == TYPEFLAG.Constructor /* Constructor */) {
         name = "constructor";
     }
-    else if (member.kind == 130 /* ConstructSignature */) {
+    else if (member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */) {
         name = "constructor";
     }
-    else if (member.kind == 129 /* CallSignature */) {//(source: string, subString: string): boolean;
+    else if (member.kind == TYPEFLAG.CallSignature /* CallSignature */) {//(source: string, subString: string): boolean;
         name = "(";
         for (var i = 0; i < member.parameters.length; i++) {
             if (i != 0) {
                 name += ", ";
             }
-            name += member.parameters[i].getText();
+            //name += member.parameters[i].text;
+
+
+            var parameter = member.parameters[i];
+            name += parameter.name.text + ":" + (parameter.type.text || text.substring(parameter.type.pos, parameter.type.end));
         }
         name += ")";
     }
-    else if (member.kind == 131 /* IndexSignature */) {//[key:string]:BBB;
+    else if (member.kind == TYPEFLAG.IndexSignature /* IndexSignature */) {//[key:string]:BBB;
         name = "[";
         for (var i = 0; i < member.parameters.length; i++) {
             if (i != 0) {
                 name += ", ";
             }
-            name += member.parameters[i].getText();
+            //name += parameter.text || text.substring(parameter.type.pos, member.type.end);
+
+            var parameter = member.parameters[i];
+            name += parameter.name.text + ":" + (parameter.type.text || text.substring(parameter.type.pos, parameter.type.end));
         }
         name += "]";
 
@@ -287,19 +300,19 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         if (member.name == null) {
             console.log(member);
         }
-        name = member.name.getText();
+        name = member.name.text;
 
         //解决静态变量和属性重名后被替换的问题
-        if (isStatic || flags & 128 /* Static */) {
+        if (isStatic || flags & TYPEFLAG.Static /* Static */) {
             name += "_#static";
         }
     }
 
-    if (parent[name] == null || member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */) {
+    if (parent[name] == null || member.kind == TYPEFLAG.Constructor /* Constructor */ || member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */) {
         parent[name] = {};
     }
 
-    if (member.kind == 128 /* SetAccessor */) {
+    if (member.kind == TYPEFLAG.SetAccessor /* SetAccessor */) {
         if (parent[name]["bodyType"] == "GetAccessor") {
             parent[name]["bodyType"] = "Property";
 
@@ -315,7 +328,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
             parent[name]["memberKind"] = "member";
         }
     }
-    else if (member.kind == 127 /* GetAccessor */) {
+    else if (member.kind == TYPEFLAG.GetAccessor /* GetAccessor */) {
         if (parent[name]["bodyType"] == "SetAccessor") {
             parent[name]["bodyType"] = "Property";
 
@@ -331,30 +344,36 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
             parent[name]["memberKind"] = "member";
         }
     }
-    else if (member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */) {
+    else if (member.kind == TYPEFLAG.Constructor /* Constructor */ || member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 125 /* Method */) {
+    else if (member.kind == TYPEFLAG.Method /* Method */
+        || member.kind == TYPEFLAG.MethodSignature /* MethodSignature */
+        || member.kind == TYPEFLAG.MethodDeclaration /* MethodDeclaration */) {
         parent[name]["bodyType"] = "function";
         parent[name]["memberKind"] = "function";
     }
-    else if (member.kind == 124 /* Property */ || member.kind == 131 /* IndexSignature */ || member.kind == 129 /* CallSignature */) {
+    else if (member.kind == TYPEFLAG.Property /* Property */
+        || member.kind == TYPEFLAG.PropertySignature /* PropertySignature */
+        || member.kind == TYPEFLAG.PropertyDeclaration /* PropertyDeclaration */
+        || member.kind == TYPEFLAG.IndexSignature /* IndexSignature */
+        || member.kind == TYPEFLAG.CallSignature /* CallSignature */) {
         parent[name]["bodyType"] = "Property";
         parent[name]["memberKind"] = "member";
     }
-    else if (member.kind == 164 /* VariableStatement */) {
+    else if (member.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
         parent[name]["bodyType"] = "modulevar";
         parent[name]["memberKind"] = "globalMember";
 
 
     }
-    else if (member.kind == 184 /* FunctionDeclaration */) {
+    else if (member.kind == TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */) {
         parent[name]["bodyType"] = "modulefunction";
         parent[name]["memberKind"] = "globalFunction";
 
     }
-    else if (member.kind == 200 /* EnumMember */) {
+    else if (member.kind == TYPEFLAG.EnumMember /* EnumMember */) {
         parent[name]["bodyType"] = "Property";
         parent[name]["memberKind"] = "member";
 
@@ -367,7 +386,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     else if (name.charAt(0) == "$" || name.charAt(0) == "_") {
         parent[name]["pType"] = "protected";
     }
-    else if (member.kind == 164 /* VariableStatement */) {
+    else if (member.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
         if (isExport(member)) {
             parent[name]["pType"] = "public";
         }
@@ -375,7 +394,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
             parent[name]["pType"] = "private";
         }
     }
-    else if (member.kind == 184 /* FunctionDeclaration */) {
+    else if (member.kind == TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */) {
         if (isExport(member)) {
             parent[name]["pType"] = "public";
         }
@@ -384,20 +403,20 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         }
     }
     else {
-        if (flags == 0 || (flags & 16 /* Public */)) {
+        if (flags == 0 || (flags & TYPEFLAG.Public /* Public */)) {
             parent[name]["pType"] = "public";
         }
-        else if (flags & 64 /* Protected */) {
+        else if (flags & TYPEFLAG.Protected /* Protected */) {
             parent[name]["pType"] = "protected";
         }
-        else if (flags & 32 /* Private */) {
+        else if (flags & TYPEFLAG.Private /* Private */) {
             parent[name]["pType"] = "private";
         }
         else {
             parent[name]["pType"] = "public";
         }
     }
-    if (member.type && !(member.kind == 126 /* Constructor */ || member.kind == 130 /* ConstructSignature */)) {//类型
+    if (member.type && !(member.kind == TYPEFLAG.Constructor /* Constructor */ || member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */)) {//类型
         parent[name]["type"] = text.substring(member.type.pos, member.type.end);
     }
 
@@ -407,10 +426,10 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     if (name == "constructor") {
         parent[name]["scope"] = "instance";
     }
-    else if (flags & 128 /* Static */) {
+    else if (flags & TYPEFLAG.Static /* Static */) {
         parent[name]["scope"] = "static";
     }
-    else if (member.kind == 200 /* EnumMember */) {
+    else if (member.kind == TYPEFLAG.EnumMember /* EnumMember */) {
         parent[name]["scope"] = "static";
     }
     else if (isStatic) {
@@ -423,7 +442,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     if (member.parameters) {
         parent[name]["parameters"] = [];
         if (member.parameters.length) {
-            if (member.kind == 128 /* SetAccessor */) {
+            if (member.kind == TYPEFLAG.SetAccessor /* SetAccessor */) {
                 var parameter = member.parameters[0];
                 parent[name]["type"] = trim.trimAll(text.substring(parameter.type.pos, parameter.type.end));
             }
@@ -432,7 +451,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
                     var parameter = member.parameters[i1];
 
                     var tempParam = {};
-                    tempParam["name"] = parameter.name.getText();
+                    tempParam["name"] = parameter.name.text;
                     if (parameter.dotDotDotToken) {
                         tempParam["name"] = "..." + tempParam["name"];
                     }
@@ -468,7 +487,7 @@ function getComments(text, pos, obj) {
     var contentpos = pos;
 
     var note1 = ts.getLeadingCommentRanges(text, pos);
-    var noteStringBlocks = []
+    var noteStringBlocks = [];
     for (var i1 = 0; note1 && i1 < note1.length; i1++) {
         noteStringBlocks.push(text.substring(note1[i1]["pos"], note1[i1]["end"]));
 
@@ -528,7 +547,7 @@ function getComments(text, pos, obj) {
 }
 
 function isExport(statement) {
-    if (!(statement.flags & 1 /* Export */)) {
+    if (!(statement.flags & TYPEFLAG.Export /* Export */)) {
         return false;
     }
     return true;

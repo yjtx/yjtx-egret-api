@@ -4,6 +4,8 @@ node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ..
 
 node tscdoc.js --path ../../../Support/Nest/sdk/Nest/libsrc/src/ --output ../test/data/ --examples test/examples --language zh_cn --type nest
 
+node tscdoc.js --path /Users/yjtx/Sites/Egret/egret-3d/egret-3d-master/Egret3d --output ../test/data/ --examples /Users/yjtx/Sites/Egret/egret-3d/egret-3d-master/ClassSample --language zh_cn 
+
 //ts 示例测试
 node tscdoc.js --path test/classes --output ../test/data/ --examples test/examples --language zh_cn
 

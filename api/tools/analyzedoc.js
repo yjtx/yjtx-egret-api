@@ -7,9 +7,6 @@ var trim = require("../core/trim");
 var globals = require("../core/globals");
 var path = require("path");
 
-var flags = require("../tools/enumflag").getEnumFlag();
-
-
 var splitStr = "@**@@";
 function simplify(doc) {
     var docs = [];
@@ -319,7 +316,13 @@ exports.analyze = function analyze(doc) {
             docInfo["defaultProperty"] = {"name" : des1};
         }
         else {//其他非特殊的标签  default version platform
-            var docName = item.match(/^(\S)+/)[0];
+
+            var docItems = item.match(/^(\S)+/);
+            if (docItems == null) {
+                console.warn("@ " + item);
+            }
+
+            var docName =docItems[0];
             var arr = [ "copy", "default", "example",
                 "includeExample", "inheritDoc",
                 "param", "params", "private",
