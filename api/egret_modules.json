@@ -7,7 +7,7 @@
         "eui": "extension/eui",
         "socket": "extension/socket",
         "tween": "extension/tween",
-        "dragonbones": "extension/dragonbones"
+        "dragonbones": "extension/dragonBones"
     },
     "exclude" : [
         "jslib"

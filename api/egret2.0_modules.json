@@ -6,7 +6,7 @@
         "socket": "extension/socket",
         "version": "extension/version",
         "oldVersion": "extension/oldVersion",
-        "dragonbones": "extension/dragonbones"
+        "dragonbones": "extension/dragonBones"
     },
     "exclude" : [
         "oldVersion.*NativeVersionController.ts"
