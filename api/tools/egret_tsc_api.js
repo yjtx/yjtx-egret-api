@@ -6,6 +6,8 @@ var file = require("../core/file");
 
 var TYPEFLAG = require("../tools/enumflag").getEnumFlag();
 
+
+var currentFileName = "";
 exports.run = function run(fileNames) {
     var options = {target: 2 /* ES6 */, module: 0 /* None */};
     var host = ts.createCompilerHost(options);
@@ -34,6 +36,8 @@ exports.run = function run(fileNames) {
         if (!globals.isInDependence(filename)) {
             filename = path.relative(globals.getSourcePath(), filename);
         }
+
+        currentFileName = filename;
 
         var root = {"filename": filename, "$_tree_": {}};
         formatFile(sourceFile, root["$_tree_"]);
@@ -298,8 +302,14 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     }
     else {
         if (member.name == null) {
-            console.log(member);
+            console.log("文件有问题  " + currentFileName);
+
+            if(text.substring(member.pos, member.end) == ";") {
+                return;
+            }
+            console.log(text.substring(member.pos, member.end));
         }
+
         name = member.name.text;
 
         //解决静态变量和属性重名后被替换的问题

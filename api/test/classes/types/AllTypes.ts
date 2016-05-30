@@ -83,7 +83,64 @@ module yjtx {
         c:string;
     }
 
+    export const enum BitmapKeys {
+        bitmapData,
+        image,
+        bitmapX,
+        bitmapY,
+        bitmapWidth
+    }
+    
+    /**
+    * 摄像机类型
+    * @version Egret 3.0
+    * @platform Web,Native
+    */
+    export enum CameraType {
 
+        /**
+        * 透视投影
+        * @version Egret 3.0
+        * @platform Web,Native
+        */
+        perspective,
+
+        /**
+        * 正交投影
+        * @version Egret 3.0
+        * @platform Web,Native
+        */
+        orthogonal,
+
+        /**
+        * VR投影
+        * @version Egret 3.0
+        * @platform Web,Native
+        */
+        VR
+    };
+
+    /**
+    * VR类型
+    * @version Egret 3.0
+    * @platform Web,Native
+    */
+    export enum VRType {
+
+        /**
+        * 左眼
+        * @version Egret 3.0
+        * @platform Web,Native
+        */
+        left,
+
+        /**
+        * 右眼
+        * @version Egret 3.0
+        * @platform Web,Native
+        */
+        right
+    };
     //var a:AAA;
     //var b = a["test"].isFile;
 
