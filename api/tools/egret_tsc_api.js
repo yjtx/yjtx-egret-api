@@ -302,11 +302,11 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     }
     else {
         if (member.name == null) {
-            console.log("文件有问题  " + currentFileName);
 
             if(text.substring(member.pos, member.end) == ";") {
                 return;
             }
+            console.log("文件有问题  " + currentFileName);
             console.log(text.substring(member.pos, member.end));
         }
 
