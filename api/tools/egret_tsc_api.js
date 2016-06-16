@@ -223,13 +223,11 @@ function initImplements(implementedTypes, obj, text) {
 
 function formatMembers(declaration, text, parent, isStatic, isPrivate) {
     var members = declaration["members"];
-    var length = members.length;
     if (members == null) {
-        console.log(currentFileName);
-
-        console.log(text.substring(declaration.pos, declaration.end));
         return;
     }
+    var length = members.length;
+    
     var enumValue = 0;
     for (var i = 0; i < length; i++) {
         var member = members[i];
