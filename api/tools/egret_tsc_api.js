@@ -262,10 +262,16 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
             return;
         }
 
-        if (declarations && declarations.length > 0 && declarations[0]["type"] && declarations[0]["type"]["parameters"]) {
-            member.parameters = declarations[0]["type"]["parameters"];
-            member.type = declarations[0]["type"]["type"];
-            member.kind = TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */;
+        if (declarations && declarations.length > 0 && declarations[0]["type"]) {
+            if ( declarations[0]["type"]["parameters"]) {
+                member.parameters = declarations[0]["type"]["parameters"];
+                member.type = declarations[0]["type"]["type"];
+                member.kind = TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */;
+            }
+            else {
+                member.type = declarations[0]["type"];
+            }
+
         }
 
     }
@@ -320,6 +326,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
             name += "_#static";
         }
     }
+
 
     if (parent[name] == null || member.kind == TYPEFLAG.Constructor /* Constructor */ || member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */) {
         parent[name] = {};
