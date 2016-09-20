@@ -174,7 +174,7 @@ function formatClass(statement, text, parent, hasModule, isPrivate) {
                 }
             }
 
-            formatMembers(statement, text, parent[objName]["$_tree_"], false, isPrivate);
+            formatMembers(statement["members"], text, parent[objName]["$_tree_"], false, isPrivate);
 
             if (statement.heritageClauses) {
                 for (var i2 = 0; i2 < statement.heritageClauses.length; i2++) {
@@ -221,8 +221,7 @@ function initImplements(implementedTypes, obj, text) {
 }
 
 
-function formatMembers(declaration, text, parent, isStatic, isPrivate) {
-    var members = declaration["members"];
+function formatMembers(members, text, parent, isStatic, isPrivate) {
     if (members == null) {
         return;
     }
@@ -258,8 +257,21 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         if (parent[name] && parent[name]["bodyType"] == "interface") {
             parent[name]["bodyType"] = "class";
 
-            formatMembers(declarations[0]["type"], text, parent[name]["$_tree_"], true, isPrivate);
+            formatMembers(declarations[0]["type"]["members"], text, parent[name]["$_tree_"], true, isPrivate);
             return;
+        }
+
+        if (declarations && declarations.length > 0) {
+            if (declarations[0].initializer && declarations[0].initializer.properties) {
+                parent[name] = {};
+                parent[name]["bodyType"] = "class";
+                parent[name]["$_tree_"] = {};
+
+                formatMembers(declarations[0].initializer.properties, text, parent[name]["$_tree_"], true, isPrivate);
+
+                getComments(text, member.pos, parent[name]);
+                return;
+            }
         }
 
         if (declarations && declarations.length > 0 && declarations[0]["type"]) {
@@ -397,6 +409,10 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         parent[name]["bodyType"] = "Property";
         parent[name]["memberKind"] = "member";
 
+    }
+    else if (member.kind == TYPEFLAG.PropertyAssignment /* PropertyAssignment */) {
+        parent[name]["bodyType"] = "Property";
+        parent[name]["memberKind"] = "member";
     }
 
     //作用域

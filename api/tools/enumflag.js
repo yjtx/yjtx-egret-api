@@ -81,6 +81,7 @@ Const:ts.NodeFlags.Const,
     MethodSignature:ts.SyntaxKind.MethodSignature,
     MethodDeclaration:ts.SyntaxKind.MethodDeclaration,
     PropertyDeclaration:ts.SyntaxKind.PropertyDeclaration,
+    PropertyAssignment:ts.SyntaxKind.PropertyAssignment,
 
     CallSignature:ts.SyntaxKind.CallSignature,
     ConstructSignature:ts.SyntaxKind.ConstructSignature,
