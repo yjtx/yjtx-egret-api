@@ -1,4 +1,5 @@
 node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
+node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/build --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret_bin
 
 node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret2.0
 
@@ -23,3 +24,4 @@ node tscdoc.js --path test/classes/EgretTest/src --output ../test/data/ --depend
 node tscdoc.js --path test/classes/EgretTest/libs --output ../test/data/
 
 
+node tscdoc.js --path /Users/yjtx/Sites/Egret/egret-game-library/tiled/libsrc/src --dependence /Users/yjtx/Sites/Egret/egret-core/egret-core-master/src --output ../test/data/
