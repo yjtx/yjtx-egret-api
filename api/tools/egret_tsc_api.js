@@ -455,6 +455,18 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     if (member.type && !(member.kind == TYPEFLAG.Constructor /* Constructor */ || member.kind == TYPEFLAG.ConstructSignature /* ConstructSignature */)) {//类型
         parent[name]["type"] = text.substring(member.type.pos, member.type.end);
     }
+    else if (member.kind == TYPEFLAG.PropertyAssignment /* PropertyAssignment */) {
+        var tempT = text.substring(member.initializer.pos, member.initializer.end).trim();
+        if (tempT == "true" || tempT == "false") {
+            parent[name]["type"] = "boolean";
+        }
+        else if (!isNaN(tempT)) {
+            parent[name]["type"] = "number";
+        }
+        else {
+            parent[name]["type"] = "string";
+        }
+    }
 
     //默认值
     getDefault(member, parent[name], text);
