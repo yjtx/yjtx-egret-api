@@ -10,6 +10,6 @@
         "dragonbones": "extension/dragonBones"
     },
     "exclude" : [
-        "jslib"
+        "jslib","Defines.release.ts","Defines.debug.ts"
     ]
 }

@@ -1,0 +1,16 @@
+{
+    "modules": {
+        "egret": "egret",
+        "game": "game",
+        "gui": "gui",
+        "res": "res",
+        "eui": "eui",
+        "socket": "socket",
+        "tween": "tween",
+        "dragonbones": "dragonBones",
+        "nest": "nest",
+        "egret3d": "egret3d"
+    },
+    "exclude" : [
+    ]
+}

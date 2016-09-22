@@ -59,18 +59,20 @@ function formatFile(sourceFile, parent) {
         }
         //else
         if (statement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
-            formatModule(statement, text, parent, false);
+            formatModule(statement, text, parent, statement.flags == TYPEFLAG.Ambient /* Ambient */ || statement.flags == 65540 ? -1 : 0);
         }
         else if (statement.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
-            formatMember(statement, text, parent, null, false);
+            formatMember(statement, text, parent, null, -1);
         }
         else if (statement.kind == TYPEFLAG.FunctionDeclaration /* FunctionDeclaration */) {
-            formatMember(statement, text, parent, null, false);
+            formatMember(statement, text, parent, null, -1);
         }
-        else if (statement.kind == TYPEFLAG.InterfaceDeclaration /* InterfaceDeclaration */
-            || (statement.kind == TYPEFLAG.ClassDeclaration /* ClassDeclaration */)
+        else if (statement.kind == TYPEFLAG.InterfaceDeclaration /* InterfaceDeclaration */) {
+            formatClass(statement, text, parent, false, -1);
+        }
+        else if ((statement.kind == TYPEFLAG.ClassDeclaration /* ClassDeclaration */)
             || (statement.kind == TYPEFLAG.EnumDeclaration /* EnumDeclaration */)) {
-            formatClass(statement, text, parent, false, false);
+            formatClass(statement, text, parent, false, -1);
         }
     }
 }
@@ -90,11 +92,11 @@ function formatModule(statement, text, parent, isPrivate) {
         var comments = {};
         getComments(text, statement.pos, comments);
 
-        if (!isPrivate) {
+        if (isPrivate != 1) {
             for (var i = 0; comments["docs"] && i < comments["docs"].length; i++) {
                 var tdoc = comments["docs"][i];
                 if (tdoc["private"] == true) {
-                    isPrivate = true;
+                    isPrivate = 1;
 
                     break;
                 }
@@ -156,8 +158,11 @@ function formatClass(statement, text, parent, hasModule, isPrivate) {
                 parent[objName]["bodyType"] = "class";
             }
 
-            if (isPrivate == true) {
+            if (isPrivate == 1) {
                 parent[objName]["pType"] = "private";
+            }
+            else if (isPrivate == -1) {
+                parent[objName]["pType"] = "public";
             }
             else if (!hasModule) {
                 parent[objName]["pType"] = "public";
@@ -262,15 +267,27 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         }
 
         if (declarations && declarations.length > 0) {
-            if (declarations[0].initializer && declarations[0].initializer.properties) {
-                parent[name] = {};
-                parent[name]["bodyType"] = "class";
-                parent[name]["$_tree_"] = {};
+            if (member.declarationList.flags & TYPEFLAG.Const /* Const */) {
+                var nextMembers;
 
-                formatMembers(declarations[0].initializer.properties, text, parent[name]["$_tree_"], true, isPrivate);
+                if (declarations[0].initializer && declarations[0].initializer.properties) {
+                    nextMembers = declarations[0].initializer.properties;
+                }
+                else if (declarations[0].type && declarations[0].type.members) {
+                    nextMembers = declarations[0].type.members;
+                }
 
-                getComments(text, member.pos, parent[name]);
-                return;
+                if (nextMembers) {
+                    parent[name] = {};
+                    parent[name]["bodyType"] = "class";
+                    parent[name]["$_tree_"] = {};
+
+                    formatMembers(nextMembers, text, parent[name]["$_tree_"], true, isPrivate);
+
+                    getComments(text, member.pos, parent[name]);
+                    return;
+                }
+
             }
         }
 
@@ -416,11 +433,22 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     }
 
     //作用域
-    if (isPrivate == true) {
+    if (isPrivate == 1) {
         parent[name]["pType"] = "private";
     }
     else if (name.charAt(0) == "$" || name.charAt(0) == "_") {
         parent[name]["pType"] = "protected";
+    }
+    else if (isPrivate == -1) {
+        if (flags & TYPEFLAG.Protected /* Protected */) {
+            parent[name]["pType"] = "protected";
+        }
+        else if (flags & TYPEFLAG.Private /* Private */) {
+            parent[name]["pType"] = "private";
+        }
+        else {
+            parent[name]["pType"] = "public";
+        }
     }
     else if (member.kind == TYPEFLAG.VariableStatement /* VariableStatement */) {
         if (isExport(member)) {
@@ -595,6 +623,10 @@ function getComments(text, pos, obj) {
 }
 
 function isExport(statement) {
+    if (statement.flags == 0) {
+        console.log(1111)
+    }
+
     if (!(statement.flags & TYPEFLAG.Export /* Export */)) {
         return false;
     }
