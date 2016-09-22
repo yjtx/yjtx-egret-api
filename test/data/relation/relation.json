@@ -3,8 +3,16 @@
 		"egret": {
 			"globalFunction": [
 				{
+					"name": "assert",
+					"description": "判断参数assertion是否为true，若为false则抛出异常并且在console输出相应信息，反之什么也不做。"
+				},
+				{
 					"name": "callLater",
 					"description": "延迟函数到屏幕重绘前执行。"
+				},
+				{
+					"name": "error",
+					"description": "输出一个错误信息到控制台。"
 				},
 				{
 					"name": "getDefinitionByName",
@@ -35,6 +43,10 @@
 					"description": "检查指定对象是否为 Egret 框架内指定接口或类或其子类的实例。此方法与使用 instanceOf 关键字相比具有更高的性能，并且能判断接口的实现。"
 				},
 				{
+					"name": "log",
+					"description": "输出一个日志信息到控制台。"
+				},
+				{
 					"name": "registerClass",
 					"description": "为一个类定义注册运行时类信息,用此方法往类定义上注册它自身以及所有接口对应的字符串。在运行时，这个类的实例将可以使用 egret.is() 方法传入一个字符串来判断实例类型。"
 				},
@@ -57,16 +69,16 @@
 				{
 					"name": "toColorString",
 					"description": "转换数字为颜色字符串"
+				},
+				{
+					"name": "warn",
+					"description": "输出一个警告信息到控制台。"
 				}
 			],
 			"class": [
 				{
 					"name": "Bitmap",
 					"description": "Bitmap 类表示用于显示位图图片的显示对象。利用 Bitmap() 构造函数，可以创建包含对 BitmapData 对象引用的 Bitmap 对象。创建了 Bitmap 对象后，使用父级 DisplayObjectContainer 实例的 addChild() 或 addChildAt() 方法可以将位图放在显示列表中。一个 Bitmap 对象可在若干 Bitmap 对象之中共享其 texture 引用，与缩放或旋转属性无关。由于能够创建引用相同 texture 对象的多个 Bitmap 对象，因此，多个显示对象可以使用相同的 texture 对象，而不会因为每个显示对象实例使用一个 texture 对象而产生额外内存开销。"
-				},
-				{
-					"name": "BitmapData",
-					"description": "BitmapData 对象是一个包含像素数据的数组。此数据可以表示完全不透明的位图，或表示包含 Alpha 通道数据的透明位图。以上任一类型的 BitmapData 对象都作为 32 位整数的缓冲区进行存储。每个 32 位整数确定位图中单个像素的属性。<br/>每个 32 位整数都是四个 8 位通道值（从 0 到 255）的组合，这些值描述像素的 Alpha 透明度以及红色、绿色、蓝色 (ARGB) 值。（对于 ARGB 值，最高有效字节代表 Alpha 通道值，其后的有效字节分别代表红色、绿色和蓝色通道值。）"
 				},
 				{
 					"name": "BitmapFillMode",
@@ -201,6 +213,22 @@
 					"description": "h5与native交互。"
 				},
 				{
+					"name": "BlurFilter",
+					"description": "可使用 BlurFilter 类将模糊视觉效果应用于显示对象。模糊效果可以柔化图像的细节。您可以生成一些模糊效果，范围从创建一个柔化的、未聚焦的外观到高斯模糊（就像通过半透明玻璃查看图像一样的朦胧的外观）。"
+				},
+				{
+					"name": "ColorMatrixFilter",
+					"description": "使用 ColorMatrixFilter 类可以将 4 x 5 矩阵转换应用于输入图像上的每个像素的 RGBA 颜色和 Alpha 值，以生成具有一组新的 RGBA 颜色和 Alpha 值的结果。该类允许饱和度更改、色相旋转、亮度为 Alpha 以及各种其他效果。"
+				},
+				{
+					"name": "DropShadowFilter",
+					"description": "可使用 DropShadowFilter 类向显示对象添加投影。"
+				},
+				{
+					"name": "GlowFilter",
+					"description": "使用 GlowFilter 类可以对显示对象应用发光效果。在投影滤镜的 distance 和 angle 属性设置为 0 时，发光滤镜与投影滤镜极为相似。"
+				},
+				{
 					"name": "Matrix",
 					"description": "Matrix 类表示一个转换矩阵，它确定如何将点从一个坐标空间映射到另一个坐标空间。您可以对一个显示对象执行不同的图形转换，方法是设置 Matrix 对象的属性，将该 Matrix对象应用于显示对象的 matrix 属性。这些转换函数包括平移（x 和 y 重新定位）、旋转、缩放和倾斜。"
 				},
@@ -297,6 +325,10 @@
 					"description": "TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异如果开发者希望所有平台完全无差异，请使用BitmapText"
 				},
 				{
+					"name": "TextFieldInputType",
+					"description": "TextFieldInputType 类是在设置 TextField 类的 inputType 属性时使用的常数值的枚举。"
+				},
+				{
 					"name": "TextFieldType",
 					"description": "TextFieldType 类是在设置 TextField 类的 type 属性时使用的常数值的枚举。"
 				},
@@ -343,30 +375,6 @@
 				{
 					"name": "XMLText",
 					"description": "XMLText 类表示在XML中的文本节点"
-				}
-			]
-		},
-		"egret.sys": {
-			"globalMember": [
-				{
-					"name": "hitTestBuffer",
-					"description": "共享的用于碰撞检测的渲染缓冲"
-				},
-				{
-					"name": "systemRenderer",
-					"description": ""
-				}
-			],
-			"globalFunction": [
-				{
-					"name": "measureText",
-					"description": "测量文本在指定样式下的宽度。"
-				}
-			],
-			"class": [
-				{
-					"name": "PathType",
-					"description": "路径类型"
 				}
 			]
 		},
@@ -1879,6 +1887,42 @@
 				{
 					"name": "Tween",
 					"description": "Tween是Egret的动画缓动类"
+				}
+			]
+		},
+		"egret.tween": {
+			"class": [
+				{
+					"name": "TweenProps",
+					"description": ""
+				},
+				{
+					"name": "BasePath",
+					"description": "抽象类，表示一个基本动作"
+				},
+				{
+					"name": "To",
+					"description": "表示一个to动作，参见<code>Tween.to</code>"
+				},
+				{
+					"name": "Wait",
+					"description": "表示一个wait动作，参见<code>Tween.wait</code>"
+				},
+				{
+					"name": "Set",
+					"description": "表示一个set动作，参见<code>Tween.set</code>"
+				},
+				{
+					"name": "Tick",
+					"description": "表示一个tick动作，参见<code>Tween.tick</code>"
+				},
+				{
+					"name": "TweenItem",
+					"description": "TweenItem是对Tween的包装器，能通过设置属性和添加Path的方式设置Tween的行为。通常用于使用在EXML中定义组件的动画。"
+				},
+				{
+					"name": "TweenGroup",
+					"description": "TweenGroup是TweenItem的集合，可以并行播放每一个Item"
 				}
 			]
 		}

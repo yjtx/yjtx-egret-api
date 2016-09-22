@@ -1,0 +1,248 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "alpha",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "颜色的 Alpha 透明度值。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "angle",
+			"memberof": "egret.DropShadowFilter",
+			"scope": "instance",
+			"description": "阴影的角度。",
+			"version": "Egret 3.1.4",
+			"platform": "Web"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blurX",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "水平模糊量。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blurY",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "垂直模糊量。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "color",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "光晕颜色。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "distance",
+			"memberof": "egret.DropShadowFilter",
+			"scope": "instance",
+			"description": "阴影的偏移距离，以像素为单位。",
+			"version": "Egret 3.1.4",
+			"platform": "Web"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "hideObject",
+			"memberof": "egret.DropShadowFilter",
+			"scope": "instance",
+			"description": "表示是否隐藏对象。",
+			"version": "Egret 3.1.4",
+			"platform": "Web"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inner",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "指定发光是否为内侧发光。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "knockout",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "指定对象是否具有挖空效果。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "quality",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "应用滤镜的次数。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "strength",
+			"memberof": "egret.GlowFilter",
+			"scope": "instance",
+			"description": "印记或跨页的强度。",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.GlowFilter"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "type",
+			"memberof": "egret.Filter",
+			"scope": "instance",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "null",
+			"inherited": true,
+			"inherits": "egret.Filter"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "DropShadowFilter",
+			"memberof": "egret.DropShadowFilter",
+			"scope": "instance",
+			"description": "初始化 DropShadowFilter 对象",
+			"version": "Egret 3.1.4",
+			"platform": "Web",
+			"params": [
+				{
+					"name": "distance",
+					"type": "number",
+					"default": "4.0",
+					"description": "阴影的偏移距离，以像素为单位。"
+				},
+				{
+					"name": "angle",
+					"type": "number",
+					"default": "45",
+					"description": "阴影的角度，0 到 360 度（浮点）。"
+				},
+				{
+					"name": "color",
+					"type": "number",
+					"default": "0",
+					"description": "光晕颜色，采用十六进制格式 0xRRGGBB。默认值为 0xFF0000。"
+				},
+				{
+					"name": "alpha",
+					"type": "number",
+					"default": "1.0",
+					"description": "颜色的 Alpha 透明度值。有效值为 0 到 1。例如，0.25 设置透明度值为 25%。"
+				},
+				{
+					"name": "blurX",
+					"type": "number",
+					"default": "4.0",
+					"description": "水平模糊量。有效值为 0 到 255（浮点）。"
+				},
+				{
+					"name": "blurY",
+					"type": "number",
+					"default": "4.0",
+					"description": "垂直模糊量。有效值为 0 到 255（浮点）。"
+				},
+				{
+					"name": "strength",
+					"type": "number",
+					"default": "1.0",
+					"description": "印记或跨页的强度。该值越高，压印的颜色越深，而且发光与背景之间的对比度也越强。有效值为 0 到 255。"
+				},
+				{
+					"name": "quality",
+					"type": "number",
+					"default": "1",
+					"description": "应用滤镜的次数。暂未实现。"
+				},
+				{
+					"name": "inner",
+					"type": "boolean",
+					"default": "false",
+					"description": "指定发光是否为内侧发光。值 true 指定发光是内侧发光。值 false 指定发光是外侧发光（对象外缘周围的发光）。"
+				},
+				{
+					"name": "knockout",
+					"type": "boolean",
+					"default": "false",
+					"description": "指定对象是否具有挖空效果。值为 true 将使对象的填充变为透明，并显示文档的背景颜色。"
+				},
+				{
+					"name": "hideObject",
+					"type": "boolean",
+					"default": "false",
+					"description": "表示是否隐藏对象。如果值为 true，则表示没有绘制对象本身，只有阴影是可见的。默认值为 false（显示对象）。"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DropShadowFilter",
+		"memberof": "egret",
+		"filename": "egret/filters/DropShadowFilter.ts",
+		"description": "可使用 DropShadowFilter 类向显示对象添加投影。",
+		"version": "Egret 3.1.4",
+		"platform": "Web,Native",
+		"augments": [
+			"egret.GlowFilter"
+		]
+	}
+}

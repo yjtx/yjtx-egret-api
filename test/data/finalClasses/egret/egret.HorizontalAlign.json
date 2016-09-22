@@ -28,7 +28,7 @@
 			"name": "JUSTIFY",
 			"memberof": "egret.HorizontalAlign",
 			"scope": "static",
-			"description": "水平两端对齐注意：TextFiled不支持此对齐方式。",
+			"description": "水平两端对齐。注意：TextFiled不支持此对齐方式。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"default": "\"justify\""

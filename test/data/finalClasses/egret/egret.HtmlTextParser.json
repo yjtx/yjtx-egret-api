@@ -37,7 +37,7 @@
 		"filename": "egret/text/HtmlTextParser.ts",
 		"description": "将html格式文本转换为可赋值给 egret.TextField#textFlow 属性的对象",
 		"see": [
-			"http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html 多种样式文本混合"
+			"http://edn.egret.com/cn/docs/page/146 多种样式文本混合"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

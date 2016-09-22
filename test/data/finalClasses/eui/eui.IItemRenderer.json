@@ -57,7 +57,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "bottom",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",
@@ -118,6 +118,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "Array<egret.Filter>",
+			"name": "filters",
+			"memberof": "egret.DisplayObject",
+			"scope": "instance",
+			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。注意 : 目前只有 WebGL 下支持，Canvs 渲染以及 native 均不支持。",
+			"version": "Egret 3.1.0",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
 			"type": "number",
 			"name": "height",
 			"memberof": "egret.DisplayObject",
@@ -130,7 +142,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "horizontalCenter",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",
@@ -166,7 +178,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "left",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",
@@ -333,7 +345,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "right",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",
@@ -447,7 +459,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "top",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",
@@ -476,7 +488,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "verticalCenter",
 			"memberof": "eui.UIComponent",
 			"scope": "instance",

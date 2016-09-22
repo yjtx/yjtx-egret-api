@@ -2,20 +2,22 @@
 	"egret": [
 		"egret.globalFunction",
 		"egret.Bitmap",
-		"egret.BitmapData",
 		"egret.BitmapFillMode",
 		"egret.BitmapFont",
 		"egret.BitmapText",
 		"egret.BlendMode",
+		"egret.BlurFilter",
 		"egret.ByteArray",
 		"egret.Capabilities",
 		"egret.CapsStyle",
+		"egret.ColorMatrixFilter",
 		"egret.DeviceAcceleration",
 		"egret.DeviceOrientation",
 		"egret.DeviceRotationRate",
 		"egret.DirtyRegionPolicy",
 		"egret.DisplayObject",
 		"egret.DisplayObjectContainer",
+		"egret.DropShadowFilter",
 		"egret.Endian",
 		"egret.Event",
 		"egret.EventDispatcher",
@@ -24,6 +26,7 @@
 		"egret.FocusEvent",
 		"egret.Geolocation",
 		"egret.GeolocationEvent",
+		"egret.GlowFilter",
 		"egret.GradientType",
 		"egret.Graphics",
 		"egret.HTTPStatusEvent",
@@ -62,6 +65,7 @@
 		"egret.StageScaleMode",
 		"egret.TextEvent",
 		"egret.TextField",
+		"egret.TextFieldInputType",
 		"egret.TextFieldType",
 		"egret.Texture",
 		"egret.Timer",
@@ -72,9 +76,6 @@
 		"egret.XML",
 		"egret.XMLNode",
 		"egret.XMLText",
-		"egret.sys.globalMember",
-		"egret.sys.globalFunction",
-		"egret.sys.PathType",
 		"egret.localStorage.globalFunction"
 	],
 	"game": [
@@ -423,7 +424,15 @@
 	],
 	"tween": [
 		"egret.Ease",
-		"egret.Tween"
+		"egret.Tween",
+		"egret.tween.BasePath",
+		"egret.tween.Set",
+		"egret.tween.Tick",
+		"egret.tween.To",
+		"egret.tween.TweenGroup",
+		"egret.tween.TweenItem",
+		"egret.tween.TweenProps",
+		"egret.tween.Wait"
 	],
 	"other": [
 		"global.Types"

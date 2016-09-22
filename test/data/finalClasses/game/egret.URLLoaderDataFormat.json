@@ -66,7 +66,7 @@
 		"filename": "extension/game/net/URLLoaderDataFormat.ts",
 		"description": "URLLoaderDataFormat 类提供了一些用于指定如何接收已下载数据的值。",
 		"see": [
-			"http://docs.egret-labs.org/post/manual/net/netformat.html 读取不同数据格式"
+			"http://edn.egret.com/cn/docs/page/600 读取不同数据格式"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

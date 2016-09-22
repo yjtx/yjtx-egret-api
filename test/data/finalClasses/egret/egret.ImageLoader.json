@@ -148,6 +148,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,
@@ -320,7 +326,8 @@
 			}
 		],
 		"see": [
-			"egret.HttpRequest"
+			"egret.HttpRequest",
+			"http://edn.egret.com/cn/docs/page/590 加载位图文件"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

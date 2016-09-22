@@ -137,6 +137,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "Array<egret.Filter>",
+			"name": "filters",
+			"memberof": "egret.DisplayObject",
+			"scope": "instance",
+			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。注意 : 目前只有 WebGL 下支持，Canvs 渲染以及 native 均不支持。",
+			"version": "Egret 3.1.0",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
 			"type": "string",
 			"name": "fontFamily",
 			"memberof": "egret.TextField",
@@ -170,6 +182,14 @@
 			"platform": "Web,Native",
 			"inherited": true,
 			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "inputType",
+			"memberof": "egret.TextField",
+			"scope": "instance",
+			"description": "弹出键盘的类型。TextFieldInputType 常量中的任一个。"
 		},
 		{
 			"kind": "member",
@@ -579,8 +599,8 @@
 			"name": "wordWrap",
 			"memberof": "egret.TextField",
 			"scope": "instance",
-			"description": "一个布尔值，表示文本字段是否自动换行。如果 wordWrap 的值为 true，则该文本字段自动换行；如果值为 false，则该文本字段不自动换行,如果同时显式设置过宽度，超出宽度的部分将被截断。",
-			"default": "true",
+			"description": "一个布尔值，表示文本字段是否按单词换行。如果值为 true，则该文本字段按单词换行；如果值为 false，则该文本字段按字符换行。",
+			"default": "false",
 			"version": "Egret 2.4",
 			"platform": "Web,Native"
 		},
@@ -713,6 +733,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,
@@ -1018,7 +1044,7 @@
 		"filename": "egret/text/TextField.ts",
 		"description": "TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异如果开发者希望所有平台完全无差异，请使用BitmapText",
 		"see": [
-			"http://docs.egret-labs.org/post/manual/text/createtext.html 创建文本"
+			"http://edn.egret.com/cn/docs/page/141 创建文本"
 		],
 		"event": [
 			{

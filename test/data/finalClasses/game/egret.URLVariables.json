@@ -70,7 +70,7 @@
 		"filename": "extension/game/net/URLVariables.ts",
 		"description": "使用 URLVariables 类可以在应用程序和服务器之间传输变量。将 URLVariables 对象与 URLLoader 类的方法、URLRequest 类的 data 属性一起使用。",
 		"see": [
-			"http://docs.egret-labs.org/post/manual/net/senddata.html 发送带参数的请求"
+			"http://edn.egret.com/cn/docs/page/598 发送带参数的请求"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

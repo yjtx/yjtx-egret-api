@@ -52,8 +52,8 @@
 			"name": "beginGradientFill",
 			"memberof": "egret.Graphics",
 			"scope": "instance",
-			"description": "指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他 Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用。调用 clear() 方法会清除填充。注：该方法目前仅支持H5 Canvas",
-			"platform": "Web",
+			"description": "指定一种渐变填充，用于随后调用对象的其他 Graphics 方法（如 lineTo() 或 drawCircle()）。调用 clear() 方法会清除填充。",
+			"platform": "Web,Native",
 			"version": "Egret 2.4",
 			"params": [
 				{
@@ -469,7 +469,7 @@
 		"filename": "egret/display/Graphics.ts",
 		"description": "Graphics 类包含一组可用来创建矢量形状的方法。支持绘制的显示对象包括 Sprite 和 Shape 对象。这些类中的每一个类都包括 graphics 属性，该属性是一个 Graphics 对象。以下是为便于使用而提供的一些辅助函数：drawRect()、drawRoundRect()、drawCircle() 和 drawEllipse()。",
 		"see": [
-			"http://docs.egret-labs.org/post/manual/graphics/drawrect.html  绘制矩形"
+			"http://edn.egret.com/cn/docs/page/136 绘制矩形"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",

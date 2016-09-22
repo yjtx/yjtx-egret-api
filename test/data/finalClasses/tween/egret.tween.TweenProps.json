@@ -1,0 +1,69 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "ignoreGlobalPause",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "loop",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "()=>void",
+			"name": "onChange",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "onChangeObj",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "override",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "paused",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "position",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "useTicks",
+			"memberof": "egret.tween.TweenProps",
+			"scope": "instance"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "TweenProps",
+		"memberof": "egret.tween",
+		"filename": "extension/tween/TweenWrapper.ts"
+	}
+}

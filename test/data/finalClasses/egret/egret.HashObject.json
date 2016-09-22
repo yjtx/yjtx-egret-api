@@ -39,7 +39,6 @@
 			}
 		],
 		"children": [
-			"egret.BitmapData",
 			"egret.Graphics",
 			"egret.SpriteSheet",
 			"egret.Texture",

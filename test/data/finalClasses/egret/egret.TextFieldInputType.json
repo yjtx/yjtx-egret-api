@@ -1,0 +1,49 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "PASSWORD",
+			"memberof": "egret.TextFieldInputType",
+			"scope": "static",
+			"description": "password 类型",
+			"version": "Egret 3.1.2",
+			"platform": "Web,Native",
+			"default": "\"password\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TEL",
+			"memberof": "egret.TextFieldInputType",
+			"scope": "static",
+			"description": "电话号码 input 类型",
+			"version": "Egret 3.1.2",
+			"platform": "Web,Native",
+			"default": "\"tel\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TEXT",
+			"memberof": "egret.TextFieldInputType",
+			"scope": "static",
+			"description": "默认 input 类型",
+			"version": "Egret 3.1.2",
+			"platform": "Web,Native",
+			"default": "\"text\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "TextFieldInputType",
+		"memberof": "egret",
+		"filename": "egret/text/TextFieldInputType.ts",
+		"description": "TextFieldInputType 类是在设置 TextField 类的 inputType 属性时使用的常数值的枚举。",
+		"version": "Egret 3.1.2",
+		"platform": "Web,Native"
+	}
+}

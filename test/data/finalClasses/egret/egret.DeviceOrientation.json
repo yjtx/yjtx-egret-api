@@ -114,6 +114,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,
@@ -287,6 +293,9 @@
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
 		"example": "<pre>class&nbsp;DeviceOrientationExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;egret.TextField;<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label&nbsp;=&nbsp;new&nbsp;egret.TextField();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.y&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.x&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.label);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;orientation&nbsp;=&nbsp;new&nbsp;egret.DeviceOrientation();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orientation.addEventListener(egret.Event.CHANGE,this.onOrientation,this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orientation.start();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;onOrientation(e:egret.OrientationEvent){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;方向:&nbsp;\\nalpha:&quot;+e.alpha<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&quot;,\\nbeta:&quot;+e.beta<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&quot;,\\ngamma:&quot;+e.gamma;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+		"see": [
+			"http://edn.egret.com/cn/docs/page/661 获取设备旋转角度"
+		],
 		"augments": [
 			"egret.EventDispatcher",
 			"egret.HashObject"

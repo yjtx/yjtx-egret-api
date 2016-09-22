@@ -80,13 +80,25 @@
 		},
 		{
 			"kind": "member",
+			"type": "Array<egret.Filter>",
+			"name": "filters",
+			"memberof": "egret.DisplayObject",
+			"scope": "instance",
+			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。注意 : 目前只有 WebGL 下支持，Canvs 渲染以及 native 均不支持。",
+			"version": "Egret 3.1.0",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
 			"type": "boolean",
 			"name": "fullscreen",
 			"memberof": "egret.Video",
 			"scope": "instance",
 			"description": "是否全屏播放这个视频（默认值是 true）。目前移动端 web 只支持全屏。",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -211,7 +223,7 @@
 			"scope": "instance",
 			"description": "当前视频是否在暂停状态。",
 			"version": "Egret 2.4",
-			"platform": "Web",
+			"platform": "Web,Native",
 			"rwType": 1
 		},
 		{
@@ -222,7 +234,7 @@
 			"scope": "instance",
 			"description": "当播放视频时，position 属性表示视频文件中当前播放的位置（以秒为单位）",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -232,7 +244,7 @@
 			"scope": "instance",
 			"description": "视频加载前，或者在不支持将 video 画在 canvas 的设备上，想要显示的视频截图地址。",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -320,7 +332,7 @@
 			"scope": "instance",
 			"description": "想要播放的视频的URL",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -372,7 +384,7 @@
 			"scope": "instance",
 			"description": "音量范围从 0（静音）至 1（最大音量）。",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "member",
@@ -418,7 +430,21 @@
 			"kind": "function",
 			"name": "Video",
 			"memberof": "egret.Video",
-			"scope": "instance"
+			"scope": "instance",
+			"params": [
+				{
+					"name": "url",
+					"question": true,
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "cache",
+					"question": true,
+					"type": "boolean",
+					"description": ""
+				}
+			]
 		},
 		{
 			"kind": "function",
@@ -474,7 +500,7 @@
 			"scope": "instance",
 			"description": "关闭该流，从而停止所有数据的下载。",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -523,6 +549,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,
@@ -677,12 +709,18 @@
 			"scope": "instance",
 			"description": "启动从指定 URL 加载外部视频文件的过程。",
 			"version": "Egret 2.4",
-			"platform": "Web",
+			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "url",
 					"type": "string",
 					"description": "需要加载的视频文件URL"
+				},
+				{
+					"name": "cache",
+					"question": true,
+					"type": "boolean",
+					"description": "是否需要缓存到本地，只在 Native 上使用"
 				}
 			]
 		},
@@ -773,7 +811,7 @@
 			"scope": "instance",
 			"description": "暂停播放。",
 			"version": "Egret 2.4",
-			"platform": "Web"
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",
@@ -782,7 +820,7 @@
 			"scope": "instance",
 			"description": "播放该视频",
 			"version": "Egret 2.4",
-			"platform": "Web",
+			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "startTime",
@@ -868,7 +906,7 @@
 		"filename": "egret/media/Video.ts",
 		"description": "Video 允许您在应用程序中使用视频。使用 Video 类可以创建 Video 对象、将外部视频文件加载到该对象并播放该文件。<br/>注意: 在大多数移动设备中，视频是强制全屏播放的，所以你可以直接调用 play() 方法全屏播放视频，不用将它绘制在Stage中。",
 		"see": [
-			"http://edn.egret.com/cn/index.php/article/index/id/657 视频系统"
+			"http://edn.egret.com/cn/docs/page/657 视频系统"
 		],
 		"event": [
 			{

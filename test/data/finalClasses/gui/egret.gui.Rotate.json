@@ -405,6 +405,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,

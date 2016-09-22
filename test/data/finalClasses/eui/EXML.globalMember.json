@@ -3,6 +3,7 @@
 		{
 			"filename": "extension/eui/exml/EXML.ts",
 			"kind": "globalMember",
+			"type": "string",
 			"name": "prefixURL",
 			"memberof": "EXML",
 			"scope": "instance",

@@ -297,6 +297,7 @@
 				},
 				{
 					"name": "type",
+					"type": "string",
 					"default": "\"json\"",
 					"description": "配置文件的格式。确定要用什么解析器来解析配置文件。默认\"json\""
 				}

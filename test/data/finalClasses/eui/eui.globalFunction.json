@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "extension/eui/utils/registerbindable.ts",
+			"filename": "extension/eui/utils/registerBindable.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerBindable",
@@ -24,7 +24,7 @@
 			]
 		},
 		{
-			"filename": "extension/eui/utils/registerproperty.ts",
+			"filename": "extension/eui/utils/registerProperty.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "registerProperty",

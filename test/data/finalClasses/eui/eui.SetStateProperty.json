@@ -16,8 +16,13 @@
 					"description": ""
 				},
 				{
-					"name": "chain",
-					"type": "string[]",
+					"name": "templates",
+					"type": "any[]",
+					"description": ""
+				},
+				{
+					"name": "chainIndex",
+					"type": "number[]",
 					"description": ""
 				},
 				{

@@ -79,7 +79,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "bottom",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -202,6 +202,18 @@
 		},
 		{
 			"kind": "member",
+			"type": "Array<egret.Filter>",
+			"name": "filters",
+			"memberof": "egret.DisplayObject",
+			"scope": "instance",
+			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。注意 : 目前只有 WebGL 下支持，Canvs 渲染以及 native 均不支持。",
+			"version": "Egret 3.1.0",
+			"platform": "Web",
+			"inherited": true,
+			"inherits": "egret.DisplayObject"
+		},
+		{
+			"kind": "member",
 			"type": "(stateName:string)=>boolean",
 			"name": "hasState",
 			"memberof": "eui.Group",
@@ -239,7 +251,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "horizontalCenter",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -315,7 +327,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "left",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -525,7 +537,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "right",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -704,7 +716,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "top",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -773,7 +785,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "number",
+			"type": "any",
 			"name": "verticalCenter",
 			"memberof": "eui.Group",
 			"scope": "instance",
@@ -1011,6 +1023,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			],
 			"inherited": true,

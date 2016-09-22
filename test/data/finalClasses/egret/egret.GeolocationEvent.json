@@ -662,6 +662,9 @@
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
 		"example": "<pre>class&nbsp;GeolocationExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;egret.TextField;<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label&nbsp;=&nbsp;new&nbsp;egret.TextField();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.y&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.x&nbsp;=&nbsp;50;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.label);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;gps&nbsp;=&nbsp;new&nbsp;egret.Geolocation();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gps.addEventListener(egret.Event.CHANGE,this.onGotLocation,this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gps.start();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;onGotLocation(e:egret.GeolocationEvent){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;当前位置:&quot;+e.latitude.toFixed(1)+&quot;,&quot;+e.longitude.toFixed(1);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+		"see": [
+			"http://edn.egret.com/cn/docs/page/662 获取位置信息"
+		],
 		"augments": [
 			"egret.Event",
 			"egret.HashObject"

@@ -121,6 +121,12 @@
 					"question": true,
 					"type": "any",
 					"description": "事件data"
+				},
+				{
+					"name": "cancelable",
+					"question": true,
+					"type": "boolean",
+					"description": "确定是否可以取消 Event 对象。默认值为 false。"
 				}
 			]
 		},
@@ -278,7 +284,6 @@
 			"egret.Geolocation",
 			"egret.Motion",
 			"egret.Timer",
-			"dragonBones.EventDispatcher",
 			"eui.ArrayCollection",
 			"eui.RadioButtonGroup",
 			"eui.Skin",
@@ -298,7 +303,10 @@
 			"egret.gui.LayoutManager",
 			"egret.gui.PopUpManagerImpl",
 			"egret.WebSocket",
-			"egret.Tween"
+			"egret.Tween",
+			"egret.tween.BasePath",
+			"egret.tween.TweenItem",
+			"egret.tween.TweenGroup"
 		]
 	}
 }

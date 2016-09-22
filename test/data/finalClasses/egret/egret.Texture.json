@@ -151,8 +151,8 @@
 		"filename": "egret/display/Texture.ts",
 		"description": "纹理类是对不同平台不同的图片资源的封装在HTML5中，资源是一个HTMLElement对象在OpenGL / WebGL中，资源是一个提交GPU后获取的纹理idTexture类封装了这些底层实现的细节，开发者只需要关心接口即可",
 		"see": [
-			"http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用",
-			"http://docs.egret-labs.org/post/manual/loader/getres.html 获取资源的几种方式"
+			"http://edn.egret.com/cn/docs/page/135 纹理集的使用",
+			"http://edn.egret.com/cn/docs/page/123 获取资源的几种方式"
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
