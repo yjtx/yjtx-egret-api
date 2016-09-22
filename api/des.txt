@@ -13,6 +13,8 @@ node tscdoc.js --path test/classes --output ../test/data/ --examples test/exampl
 node tscdoc.js --path test/classes/empty --output ../test/data/ --examples test/examples --language zh_cn
 node tscdoc.js --path test/classes/types --output ../test/data/ --examples test/examples --language zh_cn
 
+node tscdoc.js --path test/classes/dts --output ../test/data/ --examples test/examples --language zh_cn
+
 node tscdoc.js --path test/classes/m --output test/output/ --examples test/examples --language zh_cn
 
 

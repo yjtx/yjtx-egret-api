@@ -7,7 +7,7 @@ var trim = require("../core/trim");
 var globals = require("../core/globals");
 
 var classesArr = {};
-var windowArr = [];
+var windowArr = {};
 
 
 var modulesArr = {};
@@ -25,6 +25,10 @@ exports.screening = function (apiArr) {
     }
 
     var tempClassArr = globals.clone(classesArr);
+
+    for (var key in windowArr) {
+        tempClassArr[key] = windowArr[key];
+    }
 
     return tempClassArr;
 };
@@ -80,6 +84,9 @@ function analyze(item, name, parent, filename) {
             tempClass["kind"] = item.bodyType;
             tempClass["name"] = name;
             tempClass["memberof"] = tempParent.join(".");
+
+
+
             tempClass["filename"] = filename;
 
             initDesc(item["docs"], item["parameters"], tempClass, true);
@@ -106,7 +113,7 @@ function analyze(item, name, parent, filename) {
             member["kind"] = item["memberKind"];
             member["type"] = item["type"];
             member["name"] = name;
-            member["memberof"] = tempParent.join(".");
+            member["memberof"] = tempParent.join(".") || "window";
             member["scope"] = item["scope"];
 
             switch (item.bodyType) {
@@ -123,7 +130,10 @@ function analyze(item, name, parent, filename) {
 
 
             if (classesArr[member["memberof"]] == null) {
-                windowArr.push(member);
+                var moduleInfo = addClassInfo(member["memberof"], tempParent);
+                tempParent.push(member["memberof"]);
+                classesArr[member["memberof"]][member["kind"]].push(member);
+                //windowArr[name] = member;
             }
             else {
                 classesArr[member["memberof"]][member["kind"]].push(member);
