@@ -1,0 +1,22 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "VERSION",
+			"memberof": "dragonBones.DragonBones",
+			"scope": "static",
+			"default": "\"4.7.2\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DragonBones",
+		"memberof": "dragonBones",
+		"filename": "core\\DragonBones.ts",
+		"description": "DragonBones"
+	}
+}

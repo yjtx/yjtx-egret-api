@@ -1,0 +1,102 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "BaseObject",
+		"memberof": "dragonBones",
+		"filename": "core\\BaseObject.ts",
+		"description": "基础对象。",
+		"version": "DragonBones 4.5",
+		"children": [
+			"dragonBones.Animation",
+			"dragonBones.AnimationState",
+			"dragonBones.Armature",
+			"dragonBones.TransformObject",
+			"dragonBones.EventObject",
+			"dragonBones.ArmatureData",
+			"dragonBones.BoneData",
+			"dragonBones.SlotData",
+			"dragonBones.SkinData",
+			"dragonBones.DragonBonesData",
+			"dragonBones.TextureAtlasData"
+		]
+	}
+}

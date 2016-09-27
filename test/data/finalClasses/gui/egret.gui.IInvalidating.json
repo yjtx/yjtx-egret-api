@@ -1,0 +1,54 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidateDisplayList",
+			"memberof": "egret.gui.IInvalidating",
+			"scope": "instance",
+			"description": "标记需要验证显示列表"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidateProperties",
+			"memberof": "egret.gui.IInvalidating",
+			"scope": "instance",
+			"description": "标记提交过需要延迟应用的属性"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidateSize",
+			"memberof": "egret.gui.IInvalidating",
+			"scope": "instance",
+			"description": "标记提交过需要验证组件尺寸"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "validateNow",
+			"memberof": "egret.gui.IInvalidating",
+			"scope": "instance",
+			"description": "立即应用组件及其子项的所有属性",
+			"params": [
+				{
+					"name": "skipDisplayList",
+					"question": true,
+					"type": "boolean",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IInvalidating",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\core\\IInvalidating.ts",
+		"description": "拥有失效验证机制组件接口"
+	}
+}

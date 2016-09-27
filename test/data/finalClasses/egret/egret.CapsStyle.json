@@ -1,0 +1,52 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "NONE",
+			"memberof": "egret.CapsStyle",
+			"scope": "static",
+			"description": "用于在 egret.Graphics.lineStyle() 方法的 caps 参数中指定没有端点。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"none\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ROUND",
+			"memberof": "egret.CapsStyle",
+			"scope": "static",
+			"description": "用于在 egret.Graphics.lineStyle() 方法的 caps 参数中指定圆头端点。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"round\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SQUARE",
+			"memberof": "egret.CapsStyle",
+			"scope": "static",
+			"description": "用于在 egret.Graphics.lineStyle() 方法的 caps 参数中指定方头端点。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"square\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "CapsStyle",
+		"memberof": "egret",
+		"filename": "egret\\display\\CapsStyle.ts",
+		"description": "CapsStyle 类是可指定在绘制线条中使用的端点样式的常量值枚举。常量可用作 egret.Graphics.lineStyle() 方法的 caps 参数中的值。",
+		"see": [
+			"egret.Graphics#lineStyle()"
+		],
+		"version": "Egret 2.5",
+		"platform": "Web,Native"
+	}
+}

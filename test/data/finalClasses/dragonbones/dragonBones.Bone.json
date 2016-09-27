@@ -1,0 +1,355 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "armature",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所属的骨架。",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "global",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架坐标系的变换。",
+			"see": [
+				"dragonBones.Transform"
+			],
+			"version": "DragonBones 3.0",
+			"default": "new Transform()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Matrix",
+			"name": "globalTransformMatrix",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架坐标系的矩阵。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Bone",
+			"name": "ik",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前的 IK 约束目标。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "ikBendPositive",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "IK 约束时骨骼方向是否为顺时针方向。 [true: 顺时针, false: 逆时针]",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "ikWeight",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "IK 约束的权重。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritRotation",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "是否继承父骨骼的旋转。 [true: 继承, false: 不继承]",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritScale",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "是否继承父骨骼的缩放。 [true: 继承, false: 不继承]",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritTranslation",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "是否继承父骨骼的平移。 [true: 继承, false: 不继承]",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "length",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "骨骼长度。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "对象的名称。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "offset",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架或父骨骼坐标系的偏移变换。",
+			"see": [
+				"dragonBones.Transform"
+			],
+			"version": "DragonBones 3.0",
+			"default": "new Transform()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "origin",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架或父骨骼坐标系的绑定变换。",
+			"see": [
+				"dragonBones.Transform"
+			],
+			"version": "DragonBones 3.0",
+			"default": "new Transform()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Bone",
+			"name": "parent",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所属的父骨骼。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Slot",
+			"name": "slot",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"rwType": 1,
+			"deprecated": true,
+			"see": [
+				"dragonBones.Armature#getSlot()"
+			]
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "可以用于存储临时数据。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "visible",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "控制此骨骼所有插槽的显示。",
+			"default": "true",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "contains",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "是否包含某个指定的骨骼或插槽。",
+			"returns": "[true: 包含，false: 不包含]",
+			"see": [
+				"dragonBones.TransformObject"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "child",
+					"type": "dragonBones.TransformObject",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "Array<dragonBones.Bone>",
+			"name": "getBones",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "所有的子骨骼。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "Array<dragonBones.Slot>",
+			"name": "getSlots",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "所有的插槽。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidUpdate",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"description": "下一帧更新变换。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Bone",
+		"memberof": "dragonBones",
+		"filename": "armature\\Bone.ts",
+		"description": "骨骼，一个骨架中可以包含多个骨骼，骨骼以树状结构组成骨架。骨骼在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现。",
+		"see": [
+			"dragonBones.BoneData",
+			"dragonBones.Armature",
+			"dragonBones.Slot"
+		],
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.TransformObject",
+			"dragonBones.BaseObject"
+		]
+	}
+}

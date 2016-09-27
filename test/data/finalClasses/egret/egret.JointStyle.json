@@ -1,0 +1,52 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BEVEL",
+			"memberof": "egret.JointStyle",
+			"scope": "static",
+			"description": "在 egret.Graphics.lineStyle() 方法的 joints 参数中指定斜角连接。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"bevel\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "MITER",
+			"memberof": "egret.JointStyle",
+			"scope": "static",
+			"description": "在 egret.Graphics.lineStyle() 方法的 joints 参数中指定尖角连接。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"miter\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ROUND",
+			"memberof": "egret.JointStyle",
+			"scope": "static",
+			"description": "在 egret.Graphics.lineStyle() 方法的 joints 参数中指定圆角连接。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native",
+			"default": "\"round\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "JointStyle",
+		"memberof": "egret",
+		"filename": "egret\\display\\JointStyle.ts",
+		"description": "JointStyle 类是指定要在绘制线条中使用的联接点样式的常量值枚举。提供的这些常量用作 egret.Graphics.lineStyle() 方法的 joints 参数中的值。",
+		"see": [
+			"egret.Graphics#lineStyle()"
+		],
+		"version": "Egret 2.5",
+		"platform": "Web,Native"
+	}
+}

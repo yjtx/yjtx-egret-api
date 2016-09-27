@@ -1,0 +1,193 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "AFTER",
+			"memberof": "egret.gui.AddItems",
+			"scope": "static",
+			"description": "添加在相对对象之后",
+			"default": "\"after\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BEFORE",
+			"memberof": "egret.gui.AddItems",
+			"scope": "static",
+			"description": "添加在相对对象之前",
+			"default": "\"before\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FIRST",
+			"memberof": "egret.gui.AddItems",
+			"scope": "static",
+			"description": "添加父级容器的底层",
+			"default": "\"first\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LAST",
+			"memberof": "egret.gui.AddItems",
+			"scope": "static",
+			"description": "添加在父级容器的顶层",
+			"default": "\"last\""
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "position",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"description": "添加的位置",
+			"default": "AddItems.LAST"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "propertyName",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"description": "要添加到的属性",
+			"default": "\"\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "relativeTo",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"description": "相对的显示元素的实例名",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "target",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"description": "目标实例名",
+			"default": "null"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "AddItems",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"description": "构造函数",
+			"params": [
+				{
+					"name": "target",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "propertyName",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "position",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "relativeTo",
+					"type": "string",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "apply",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "initialize",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IStateClient",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "initializeFromObject",
+			"memberof": "egret.gui.OverrideBase",
+			"scope": "instance",
+			"description": "从对象初始化，这是一个便利方法",
+			"returns": "",
+			"params": [
+				{
+					"name": "properties",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"inherited": true,
+			"inherits": "egret.gui.OverrideBase"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "remove",
+			"memberof": "egret.gui.AddItems",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "parent",
+					"type": "egret.gui.IContainer",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "AddItems",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\states\\AddItems.ts",
+		"description": "添加显示元素",
+		"augments": [
+			"egret.gui.OverrideBase",
+			"egret.HashObject"
+		]
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "GET",
+			"memberof": "egret.HttpMethod",
+			"scope": "static",
+			"description": "表示 HttpRequest 对象是一个 GET。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"GET\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "POST",
+			"memberof": "egret.HttpMethod",
+			"scope": "static",
+			"description": "表示 HttpRequest 对象是一个 POST。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"POST\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "HttpMethod",
+		"memberof": "egret",
+		"filename": "egret\\net\\HttpMethod.ts",
+		"description": "HttpRequestMethod 类提供了一些值，这些值可指定在将数据发送到服务器时，HttpRequest 对象应使用 POST 方法还是 GET 方法。",
+		"see": [
+			"egret.HttpRequest"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

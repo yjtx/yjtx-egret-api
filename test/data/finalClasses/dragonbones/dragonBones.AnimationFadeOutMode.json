@@ -1,0 +1,68 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "All",
+			"memberof": "dragonBones.AnimationFadeOutMode",
+			"scope": "static",
+			"description": "淡出所有动画。",
+			"version": "DragonBones 4.5",
+			"default": "4"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "None",
+			"memberof": "dragonBones.AnimationFadeOutMode",
+			"scope": "static",
+			"description": "不淡出动画。",
+			"version": "DragonBones 4.5",
+			"default": "0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "SameGroup",
+			"memberof": "dragonBones.AnimationFadeOutMode",
+			"scope": "static",
+			"description": "淡出同组的动画。",
+			"version": "DragonBones 4.5",
+			"default": "2"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "SameLayer",
+			"memberof": "dragonBones.AnimationFadeOutMode",
+			"scope": "static",
+			"description": "淡出同层的动画。",
+			"version": "DragonBones 4.5",
+			"default": "1"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "SameLayerAndGroup",
+			"memberof": "dragonBones.AnimationFadeOutMode",
+			"scope": "static",
+			"description": "淡出同层并且同组的动画。",
+			"version": "DragonBones 4.5",
+			"default": "3"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "enum",
+		"name": "AnimationFadeOutMode",
+		"memberof": "dragonBones",
+		"filename": "animation\\Animation.ts",
+		"description": "动画混合时，使用的淡出方式。",
+		"see": [
+			"dragonBones.Animation#fadeIn()"
+		],
+		"version": "DragonBones 4.5"
+	}
+}

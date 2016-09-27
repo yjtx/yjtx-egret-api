@@ -1,0 +1,15 @@
+{
+	"globalMember": [
+		{
+			"filename": "extension\\eui\\exml\\EXML.ts",
+			"kind": "globalMember",
+			"type": "string",
+			"name": "prefixURL",
+			"memberof": "EXML",
+			"scope": "instance",
+			"description": "设置 EXML 文件加载的根路径。设置后，再加载 EXML 文件时会自动把根路径加到文件路径前面",
+			"version": "eui 1.0",
+			"platform": "Web,Native"
+		}
+	]
+}

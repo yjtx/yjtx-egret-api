@@ -1,0 +1,74 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "BOTTOM",
+			"memberof": "egret.VerticalAlign",
+			"scope": "static",
+			"description": "将内容与容器的底部对齐。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"bottom\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CONTENT_JUSTIFY",
+			"memberof": "egret.VerticalAlign",
+			"scope": "static",
+			"description": "相对于容器对子项进行内容对齐。这会将所有子项的大小统一调整为容器的\"内容高度\"。容器的\"内容高度\"是最大子项的大小,如果所有子项都小于容器的高度，则会将所有子项的大小调整为容器的高度。注意：TextFiled不支持此对齐方式。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"contentJustify\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "JUSTIFY",
+			"memberof": "egret.VerticalAlign",
+			"scope": "static",
+			"description": "垂直两端对齐注意：TextFiled不支持此对齐方式。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"justify\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "MIDDLE",
+			"memberof": "egret.VerticalAlign",
+			"scope": "static",
+			"description": "在容器的垂直中心对齐内容。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"middle\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TOP",
+			"memberof": "egret.VerticalAlign",
+			"scope": "static",
+			"description": "将内容与容器的顶部对齐。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"top\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "VerticalAlign",
+		"memberof": "egret",
+		"filename": "egret\\text\\VerticalAlign.ts",
+		"description": "VerticalAlign 类为垂直对齐方式定义可能的值。",
+		"see": [
+			"egret.TextField#verticalAlign"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

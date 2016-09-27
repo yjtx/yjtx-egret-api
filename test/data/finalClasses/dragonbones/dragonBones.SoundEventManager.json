@@ -1,0 +1,28 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "dragonBones.EgretArmatureDisplay",
+			"name": "getInstance",
+			"memberof": "dragonBones.SoundEventManager",
+			"scope": "static",
+			"deprecated": true,
+			"see": [
+				"dragonBones.EgretFactory#soundEventManater"
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "SoundEventManager",
+		"memberof": "dragonBones",
+		"filename": "EgretArmatureDisplay.ts",
+		"deprecated": true,
+		"see": [
+			"dragonBones.EgretFactory#soundEventManater"
+		]
+	}
+}

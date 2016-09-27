@@ -1,0 +1,95 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blurX",
+			"memberof": "egret.BlurFilter",
+			"scope": "instance",
+			"description": "水平模糊量。",
+			"version": "Egret 3.1.0",
+			"platform": "Web"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "blurY",
+			"memberof": "egret.BlurFilter",
+			"scope": "instance",
+			"description": "垂直模糊量。",
+			"version": "Egret 3.1.0",
+			"platform": "Web"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "type",
+			"memberof": "egret.Filter",
+			"scope": "instance",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "null",
+			"inherited": true,
+			"inherits": "egret.Filter"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "BlurFilter",
+			"memberof": "egret.BlurFilter",
+			"scope": "instance",
+			"description": "创建一个 BlurFilter 对象。",
+			"version": "Egret 3.1.0",
+			"platform": "Web",
+			"params": [
+				{
+					"name": "blurX",
+					"type": "number",
+					"default": "4",
+					"description": "水平模糊量。有效值为 0 到 255（浮点）。"
+				},
+				{
+					"name": "blurY",
+					"type": "number",
+					"default": "4",
+					"description": "垂直模糊量。有效值为 0 到 255（浮点）。"
+				},
+				{
+					"name": "quality",
+					"type": "number",
+					"default": "1",
+					"description": "应用滤镜的次数。暂未实现。"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "BlurFilter",
+		"memberof": "egret",
+		"filename": "egret\\filters\\BlurFilter.ts",
+		"description": "可使用 BlurFilter 类将模糊视觉效果应用于显示对象。模糊效果可以柔化图像的细节。您可以生成一些模糊效果，范围从创建一个柔化的、未聚焦的外观到高斯模糊（就像通过半透明玻璃查看图像一样的朦胧的外观）。",
+		"version": "Egret 3.1.0",
+		"platform": "Web",
+		"see": [
+			"http://edn.egret.com/cn/docs/page/947#模糊滤镜 模糊滤镜"
+		],
+		"augments": []
+	}
+}

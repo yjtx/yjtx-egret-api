@@ -1,0 +1,173 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "numElements",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"rwType": 1
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "UILayer",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "构造函数",
+			"params": [
+				{
+					"name": "owner",
+					"type": "egret.gui.IUIStage",
+					"description": ""
+				},
+				{
+					"name": "lowerBoundReference",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "upperBoundReference",
+					"type": "string",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.IVisualElement",
+			"name": "addElement",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "将可视元素添加到此容器中",
+			"returns": "",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "element"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.IVisualElement",
+			"name": "addElementAt",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "将可视元素添加到此容器中",
+			"returns": "",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "element"
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"description": "index"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.IVisualElement",
+			"name": "getElementAt",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "返回指定索引处的可视元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"description": "index"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "getElementIndex",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "返回可视元素的索引位置",
+			"returns": "",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "element"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.IVisualElement",
+			"name": "removeElement",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "从此容器的子列表中删除指定的可视元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "element"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.IVisualElement",
+			"name": "removeElementAt",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "从容器中的指定索引位置删除可视元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"description": "index"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setElementIndex",
+			"memberof": "egret.gui.UILayer",
+			"scope": "instance",
+			"description": "在可视容器中更改现有可视元素的位置",
+			"params": [
+				{
+					"name": "element",
+					"type": "egret.gui.IVisualElement",
+					"description": "element"
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"description": "index"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "UILayer",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\core\\UILayer.ts",
+		"description": "UIStage的虚拟子容器",
+		"implements": [
+			{
+				"name": "egret.gui.IContainer"
+			}
+		]
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "AUTO",
+			"memberof": "eui.ScrollPolicy",
+			"scope": "static",
+			"description": "如果子项超出父级的尺寸，则允许滚动，反之不允许滚动。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"default": "\"auto\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "OFF",
+			"memberof": "eui.ScrollPolicy",
+			"scope": "static",
+			"description": "从不允许滚动。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"default": "\"off\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ON",
+			"memberof": "eui.ScrollPolicy",
+			"scope": "static",
+			"description": "总是允许滚动。",
+			"version": "eui 1.0",
+			"platform": "Web,Native",
+			"default": "\"on\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ScrollPolicy",
+		"memberof": "eui",
+		"filename": "extension\\eui\\core\\ScrollPolicy.ts",
+		"description": "滚动条显示策略常量。Scroller 类的 <code>horizontalCanScroll</code> 和 <code>verticalCanScroll</code> 属性的值。",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例使用&nbsp;ScrollPolicyExample&nbsp;类来控制滚动条的策略<br/>&nbsp;*/<br/>class&nbsp;ScrollPolicyExample&nbsp;extends&nbsp;egret.Sprite&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;scrollerAuto&nbsp;=&nbsp;this.getScroller();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerAuto.scrollPolicyV&nbsp;=&nbsp;eui.ScrollPolicy.AUTO;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerAuto.height&nbsp;=&nbsp;190;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(scrollerAuto);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;txt1&nbsp;=&nbsp;this.getTxt(eui.ScrollPolicy.AUTO);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt1.y&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(txt1);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;scrollerAuto2&nbsp;=&nbsp;this.getScroller();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerAuto2.x&nbsp;=&nbsp;120;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerAuto2.scrollPolicyV&nbsp;=&nbsp;eui.ScrollPolicy.AUTO;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerAuto2.height&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(scrollerAuto2);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;txt2&nbsp;=&nbsp;this.getTxt(eui.ScrollPolicy.AUTO);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt2.x&nbsp;=&nbsp;120;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt2.y&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(txt2);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;scrollerON&nbsp;=&nbsp;this.getScroller();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerON.scrollPolicyV&nbsp;=&nbsp;eui.ScrollPolicy.ON;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerON.x&nbsp;=&nbsp;240;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerON.height&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(scrollerON);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;txt3&nbsp;=&nbsp;this.getTxt(eui.ScrollPolicy.ON);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt3.x&nbsp;=&nbsp;240;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt3.y&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(txt3);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;scrollerOFF&nbsp;=&nbsp;this.getScroller();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerOFF.scrollPolicyV&nbsp;=&nbsp;eui.ScrollPolicy.OFF;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerOFF.x&nbsp;=&nbsp;360;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrollerOFF.height&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(scrollerOFF);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;txt4&nbsp;=&nbsp;this.getTxt(eui.ScrollPolicy.OFF);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt4.x&nbsp;=&nbsp;360;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt4.y&nbsp;=&nbsp;400;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(txt4);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;getScroller():&nbsp;eui.Scroller&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;list&nbsp;=&nbsp;new&nbsp;eui.List();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;arr&nbsp;=&nbsp;new&nbsp;eui.ArrayCollection([1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6,&nbsp;7,&nbsp;8,&nbsp;9,&nbsp;10]);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list.dataProvider&nbsp;=&nbsp;arr;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list.itemRenderer&nbsp;=&nbsp;IR_ScrollPolicy;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;scroller&nbsp;=&nbsp;new&nbsp;eui.Scroller();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scroller.viewport&nbsp;=&nbsp;list;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;scroller;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;getTxt(value:&nbsp;string):&nbsp;egret.TextField&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;txt&nbsp;=&nbsp;new&nbsp;egret.TextField;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt.size&nbsp;=&nbsp;20;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt.textColor&nbsp;=&nbsp;0xffffff;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;txt.text&nbsp;=&nbsp;value;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;txt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/>class&nbsp;IR_ScrollPolicy&nbsp;extends&nbsp;eui.ItemRenderer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;label:&nbsp;eui.Label;<br/>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label&nbsp;=&nbsp;new&nbsp;eui.Label();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.label);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;dataChanged():&nbsp;void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;label:&quot;&nbsp;+&nbsp;this.data.toString();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>"
+	}
+}

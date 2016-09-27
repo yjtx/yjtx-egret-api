@@ -1,0 +1,38 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "OFF",
+			"memberof": "egret.DirtyRegionPolicy",
+			"scope": "static",
+			"description": "关闭自动脏矩形检测",
+			"version": "Egret 3.0",
+			"platform": "Web,Native",
+			"default": "\"off\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "ON",
+			"memberof": "egret.DirtyRegionPolicy",
+			"scope": "static",
+			"description": "开启自动脏矩形检测",
+			"version": "Egret 3.0",
+			"platform": "Web,Native",
+			"default": "\"on\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DirtyRegionPolicy",
+		"memberof": "egret",
+		"filename": "egret\\display\\DirtyRegionPolicy.ts",
+		"description": "脏矩形策略常量。",
+		"version": "Egret 3.0",
+		"platform": "Web,Native"
+	}
+}

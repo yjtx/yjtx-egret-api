@@ -1,0 +1,230 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "childArmature",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "此时显示的子骨架。",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Movie",
+			"name": "childMovie",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "null",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.Movie>",
+			"name": "childMovies",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "{}",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "egret.ColorMatrixFilter",
+			"name": "colorFilter",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "null",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "colorIndex",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "-1",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "SlotConfig",
+			"name": "config",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "null",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "display",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "此时显示的显示对象。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "DisplayConfig",
+			"name": "displayConfig",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "null",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "displayController",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "显示对象受到控制的对象，应设置为动画状态的名称或组名称，设置为 null 则表示受所有的动画状态控制。",
+			"default": "null",
+			"see": [
+				"dragonBones.AnimationState#displayControl",
+				"dragonBones.AnimationState#name",
+				"dragonBones.AnimationState#group"
+			],
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "displayIndex",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "此时显示的显示对象在显示列表中的索引。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "Array<any>",
+			"name": "displayList",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "包含显示对象或子骨架的显示列表。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritAnimation",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "子骨架是否继承父骨架的动画。 [true: 继承, false: 不继承]",
+			"default": "true",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "transformIndex",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"default": "-1",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "transformUpdateEnabled",
+			"memberof": "dragonBones.EgretSlot",
+			"scope": "instance",
+			"description": "是否更新显示对象的变换属性。为了更好的性能, 并不会更新 display 的变换属性 (x, y, rotation, scaleX, scaleX), 如果需要正确访问这些属性, 则需要设置为 true 。",
+			"default": "false",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "EgretSlot",
+			"memberof": "dragonBones.EgretSlot",
+			"scope": "instance",
+			"description": "创建一个空的插槽。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getDisplay",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"deprecated": true,
+			"see": [
+				"#display"
+			],
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidUpdate",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "在下一帧更新显示对象的状态。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretSlot",
+		"memberof": "dragonBones",
+		"filename": "EgretSlot.ts",
+		"description": "Egret 插槽。",
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.Slot",
+			"egret.HashObject"
+		]
+	}
+}

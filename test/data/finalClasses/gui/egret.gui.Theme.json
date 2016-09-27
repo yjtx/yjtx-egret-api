@@ -1,0 +1,55 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Theme",
+			"memberof": "egret.gui.Theme",
+			"scope": "instance",
+			"description": "构造函数",
+			"params": [
+				{
+					"name": "configURL",
+					"type": "string",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getDefaultSkin",
+			"memberof": "egret.gui.Theme",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "client",
+					"type": "egret.gui.SkinnableComponent",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "load",
+			"memberof": "egret.gui.Theme",
+			"scope": "static",
+			"params": [
+				{
+					"name": "configURL",
+					"type": "string",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Theme",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\components\\supportClasses\\Theme.ts"
+	}
+}

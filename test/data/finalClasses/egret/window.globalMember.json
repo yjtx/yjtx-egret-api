@@ -1,0 +1,26 @@
+{
+	"globalMember": [
+		{
+			"filename": "Defines.debug.ts",
+			"kind": "globalMember",
+			"type": "boolean",
+			"name": "DEBUG",
+			"memberof": "window",
+			"scope": "instance",
+			"description": "是否为 debug 模式。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native"
+		},
+		{
+			"filename": "Defines.debug.ts",
+			"kind": "globalMember",
+			"type": "boolean",
+			"name": "RELEASE",
+			"memberof": "window",
+			"scope": "instance",
+			"description": "是否为 release 模式。",
+			"version": "Egret 2.5",
+			"platform": "Web,Native"
+		}
+	]
+}

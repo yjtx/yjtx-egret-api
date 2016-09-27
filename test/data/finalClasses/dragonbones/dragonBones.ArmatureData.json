@@ -1,0 +1,289 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.AnimationData>",
+			"name": "animations",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "所有的动画数据。",
+			"see": [
+				"dragonBones.AnimationData"
+			],
+			"version": "DragonBones 3.0",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.BoneData>",
+			"name": "bones",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "所有的骨骼数据。",
+			"see": [
+				"dragonBones.BoneData"
+			],
+			"version": "DragonBones 3.0",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationData",
+			"name": "defaultAnimation",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取默认的动画数据。",
+			"see": [
+				"dragonBones.AnimationData"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.SkinData",
+			"name": "defaultSkin",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取默认的皮肤数据。",
+			"see": [
+				"dragonBones.SkinData"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "frameRate",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "动画帧率。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "数据名称。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.SkinData>",
+			"name": "skins",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "所有的皮肤数据。",
+			"see": [
+				"dragonBones.SkinData"
+			],
+			"version": "DragonBones 3.0",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.SlotData>",
+			"name": "slots",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "所有的插槽数据。",
+			"see": [
+				"dragonBones.SlotData"
+			],
+			"version": "DragonBones 3.0",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ArmatureType",
+			"name": "type",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "骨架类型。",
+			"see": [
+				"dragonBones.ArmatureType"
+			],
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationData",
+			"name": "getAnimation",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "获取指定名称的动画数据。",
+			"see": [
+				"dragonBones.AnimationData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "动画数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.BoneData",
+			"name": "getBone",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "获取指定名称的骨骼数据。",
+			"see": [
+				"dragonBones.BoneData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "骨骼数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.SkinData",
+			"name": "getSkin",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "获取指定名称的皮肤数据。",
+			"see": [
+				"dragonBones.SkinData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "皮肤数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.SlotData",
+			"name": "getSlot",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"description": "获取指定名称的插槽数据。",
+			"see": [
+				"dragonBones.SlotData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "插槽数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ArmatureData",
+		"memberof": "dragonBones",
+		"filename": "model\\ArmatureData.ts",
+		"description": "骨架数据。",
+		"see": [
+			"dragonBones.Armature"
+		],
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.BaseObject"
+		]
+	}
+}

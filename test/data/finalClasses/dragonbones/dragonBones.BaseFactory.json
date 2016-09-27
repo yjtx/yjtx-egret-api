@@ -1,0 +1,431 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "autoSearch",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)",
+			"see": [
+				"dragonBones.DragonBonesData#autoSearch",
+				"dragonBones.TextureAtlasData#autoSearch"
+			],
+			"version": "DragonBones 4.5",
+			"default": "false"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addDragonBonesData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "添加龙骨数据。",
+			"see": [
+				"#parseDragonBonesData()",
+				"#getDragonBonesData()",
+				"#removeDragonBonesData()",
+				"dragonBones.DragonBonesData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "data",
+					"type": "dragonBones.DragonBonesData",
+					"description": "龙骨数据。"
+				},
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"default": "null",
+					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addTextureAtlasData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "添加贴图集数据。",
+			"see": [
+				"#parseTextureAtlasData()",
+				"#getTextureAtlasData()",
+				"#removeTextureAtlasData()",
+				"dragonBones.textures.TextureAtlasData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "data",
+					"type": "dragonBones.TextureAtlasData",
+					"description": "贴图集数据。"
+				},
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"default": "null",
+					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Armature",
+			"name": "buildArmature",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "创建一个指定名称的骨架。",
+			"returns": "骨架",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "armatureName",
+					"type": "string",
+					"description": "骨架数据名称。"
+				},
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"default": "null",
+					"description": "龙骨数据名称，如果未设置，将检索所有的龙骨数据，当多个龙骨数据中包含同名的骨架数据时，可能无法创建出准确的骨架。"
+				},
+				{
+					"name": "skinName",
+					"type": "string",
+					"default": "null",
+					"description": "皮肤名称，如果未设置，则使用默认皮肤。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clear",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "清除所有的数据。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "disposeData",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "copyAnimationsToArmature",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "将指定骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)",
+			"returns": "是否替换成功。 [true: 成功, false: 不成功]",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "toArmature",
+					"type": "dragonBones.Armature",
+					"description": "指定的骨架。"
+				},
+				{
+					"name": "fromArmatreName",
+					"type": "string",
+					"description": "其他骨架的名称。"
+				},
+				{
+					"name": "fromSkinName",
+					"type": "string",
+					"default": "null",
+					"description": "其他骨架的皮肤名称，如果未设置，则使用默认皮肤。"
+				},
+				{
+					"name": "fromDragonBonesDataName",
+					"type": "string",
+					"default": "null",
+					"description": "其他骨架属于的龙骨数据名称，如果未设置，则检索所有的龙骨数据。"
+				},
+				{
+					"name": "ifRemoveOriginalAnimationList",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否移除原有的动画。 [true: 移除, false: 不移除]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.DragonBonesData",
+			"name": "getDragonBonesData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "获取指定名称的龙骨数据。",
+			"returns": "DragonBonesData",
+			"see": [
+				"#parseDragonBonesData()",
+				"#addDragonBonesData()",
+				"#removeDragonBonesData()",
+				"dragonBones.DragonBonesData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "Array<dragonBones.TextureAtlasData>",
+			"name": "getTextureAtlasData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "获取指定名称的贴图集数据列表。",
+			"returns": "贴图集数据列表。",
+			"see": [
+				"#parseTextureAtlasData()",
+				"#addTextureAtlasData()",
+				"#removeTextureAtlasData()",
+				"dragonBones.textures.TextureAtlasData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"description": "数据名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.DragonBonesData",
+			"name": "parseDragonBonesData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "解析并添加龙骨数据。",
+			"returns": "DragonBonesData",
+			"see": [
+				"#getDragonBonesData()",
+				"#addDragonBonesData()",
+				"#removeDragonBonesData()",
+				"dragonBones.DragonBonesData"
+			],
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "rawData",
+					"type": "any",
+					"description": "需要解析的原始数据。 (JSON)"
+				},
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"default": "null",
+					"description": "为数据提供一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.TextureAtlasData",
+			"name": "parseTextureAtlasData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "解析并添加贴图集数据。",
+			"returns": "贴图集数据",
+			"see": [
+				"#getTextureAtlasData()",
+				"#addTextureAtlasData()",
+				"#removeTextureAtlasData()",
+				"dragonBones.TextureAtlasData"
+			],
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "rawData",
+					"type": "any",
+					"description": "需要解析的原始数据。 (JSON)"
+				},
+				{
+					"name": "textureAtlas",
+					"type": "Object",
+					"description": "贴图集数据。 (JSON)"
+				},
+				{
+					"name": "name",
+					"type": "string",
+					"default": "null",
+					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				},
+				{
+					"name": "scale",
+					"type": "number",
+					"default": "0",
+					"description": "为贴图集设置一个缩放值。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeDragonBonesData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "移除龙骨数据。",
+			"see": [
+				"#parseDragonBonesData()",
+				"#getDragonBonesData()",
+				"#addDragonBonesData()",
+				"dragonBones.DragonBonesData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"description": "数据名称。"
+				},
+				{
+					"name": "disposeData",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeTextureAtlasData",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "移除贴图集数据。",
+			"see": [
+				"#parseTextureAtlasData()",
+				"#getTextureAtlasData()",
+				"#addTextureAtlasData()",
+				"dragonBones.textures.TextureAtlasData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"description": "数据名称。"
+				},
+				{
+					"name": "disposeData",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "replaceSlotDisplay",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "将指定插槽的显示对象替换为指定资源创造出的显示对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"description": "指定的龙骨数据名称。"
+				},
+				{
+					"name": "armatureName",
+					"type": "string",
+					"description": "指定的骨架名称。"
+				},
+				{
+					"name": "slotName",
+					"type": "string",
+					"description": "指定的插槽名称。"
+				},
+				{
+					"name": "displayName",
+					"type": "string",
+					"description": "指定的显示对象名称。"
+				},
+				{
+					"name": "slot",
+					"type": "dragonBones.Slot",
+					"description": "指定的插槽实例。"
+				},
+				{
+					"name": "displayIndex",
+					"type": "number",
+					"default": "-1",
+					"description": "要替换的显示对象的索引，如果未设置，则替换当前正在显示的显示对象。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "replaceSlotDisplayList",
+			"memberof": "dragonBones.BaseFactory",
+			"scope": "instance",
+			"description": "将指定插槽的显示对象列表替换为指定资源创造出的显示对象列表。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "dragonBonesName",
+					"type": "string",
+					"description": "指定的 DragonBonesData 名称。"
+				},
+				{
+					"name": "armatureName",
+					"type": "string",
+					"description": "指定的骨架名称。"
+				},
+				{
+					"name": "slotName",
+					"type": "string",
+					"description": "指定的插槽名称。"
+				},
+				{
+					"name": "slot",
+					"type": "dragonBones.Slot",
+					"description": "指定的插槽实例。"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "BaseFactory",
+		"memberof": "dragonBones",
+		"filename": "factory\\BaseFactory.ts",
+		"description": "生成骨架的基础工厂。 (通常只需要一个全局工厂实例)",
+		"see": [
+			"dragonBones.DragonBonesData",
+			"dragonBones.TextureAtlasData",
+			"dragonBones.ArmatureData",
+			"dragonBones.Armature"
+		],
+		"version": "DragonBones 3.0",
+		"children": [
+			"dragonBones.EgretFactory"
+		]
+	}
+}

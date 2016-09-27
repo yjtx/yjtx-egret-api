@@ -1,0 +1,124 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "DepthQueue",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "insert",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "插入一个元素",
+			"params": [
+				{
+					"name": "client",
+					"type": "egret.gui.ILayoutManagerClient",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "isEmpty",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "队列是否为空",
+			"returns": ""
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.ILayoutManagerClient",
+			"name": "pop",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "从队列尾弹出深度最大的一个对象",
+			"returns": ""
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.ILayoutManagerClient",
+			"name": "remove",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "移除一个元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "client",
+					"type": "egret.gui.ILayoutManagerClient",
+					"description": ""
+				},
+				{
+					"name": "level",
+					"type": "number",
+					"default": "-1",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeAll",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "清空队列"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "removeLargestChild",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "移除大于等于指定组件层级的元素中最大的元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "client",
+					"type": "egret.gui.ILayoutManagerClient",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "removeSmallestChild",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "移除大于等于指定组件层级的元素中最小的元素",
+			"returns": "",
+			"params": [
+				{
+					"name": "client",
+					"type": "egret.gui.ILayoutManagerClient",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.gui.ILayoutManagerClient",
+			"name": "shift",
+			"memberof": "egret.gui.DepthQueue",
+			"scope": "instance",
+			"description": "从队列首弹出深度最小的一个对象",
+			"returns": ""
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DepthQueue",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\managers\\layoutClass\\DepthQueue.ts",
+		"description": "显示列表嵌套深度排序队列"
+	}
+}

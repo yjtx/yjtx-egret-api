@@ -1,0 +1,137 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.WorldClock",
+			"name": "clock",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "static",
+			"rwType": 1,
+			"description": "一个可以直接使用的全局 WorldClock 实例.",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "time",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "当前的时间。 (以秒为单位)",
+			"version": "DragonBones 3.0",
+			"default": "new Date().getTime() / DragonBones.SECOND_TO_MILLISECOND"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "timeScale",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "时间流逝的速度，用于实现动画的变速播放。 [0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]",
+			"default": "1",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "WorldClock",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "创建一个新的 WorldClock 实例。通常并不需要单独创建 WorldClock 的实例，可以直接使用 WorldClock.clock 静态实例。(创建更多独立的 WorldClock 可以更灵活的为需要更新的 IAnimateble 实例分组，实现不同组不同速度的动画播放)",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "add",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "添加指定的 IAnimatable 实例。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.IAnimateble",
+					"description": "IAnimatable 实例。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "advanceTime",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "为所有的 IAnimatable 实例向前播放一个指定的时间。 (通常这个方法需要在 ENTER_FRAME 事件的响应函数中被调用)",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "passedTime",
+					"type": "number",
+					"description": "前进的时间。 (以秒为单位，当设置为 -1 时将自动计算当前帧与上一帧的时间差)"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clear",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "清除所有的 IAnimatable 实例。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "contains",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "是否包含指定的 IAnimatable 实例",
+			"returns": "[true: 包含，false: 不包含]。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.IAnimateble",
+					"description": "指定的 IAnimatable 实例。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "remove",
+			"memberof": "dragonBones.WorldClock",
+			"scope": "instance",
+			"description": "移除指定的 IAnimatable 实例。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.IAnimateble",
+					"description": "IAnimatable 实例。"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "WorldClock",
+		"memberof": "dragonBones",
+		"filename": "animation\\WorldClock.ts",
+		"description": "WorldClock 提供时钟的支持，为每个加入到时钟的 IAnimatable 对象更新时间。",
+		"see": [
+			"dragonBones.IAnimatable",
+			"dragonBones.Armature"
+		],
+		"version": "DragonBones 3.0",
+		"implements": [
+			{
+				"name": "dragonBones.IAnimateble"
+			}
+		]
+	}
+}

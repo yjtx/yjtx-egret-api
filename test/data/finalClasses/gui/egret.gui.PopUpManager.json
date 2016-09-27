@@ -1,0 +1,187 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "modalAlpha",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "模态遮罩的透明度"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "modalColor",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "模态遮罩的填充颜色"
+		},
+		{
+			"kind": "member",
+			"type": "Array<any>",
+			"name": "popUpList",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"rwType": 1,
+			"description": "已经弹出的窗口列表"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "PopUpManager",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "instance",
+			"description": "构造函数"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addEventListener",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "添加事件监听,参考PopUpEvent定义的常量。",
+			"params": [
+				{
+					"name": "type",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": ""
+				},
+				{
+					"name": "thisObject",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "useCapture",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				},
+				{
+					"name": "priority",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addPopUp",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "弹出一个窗口。<br/>",
+			"params": [
+				{
+					"name": "popUp",
+					"type": "egret.gui.IVisualElement",
+					"description": "要弹出的窗口"
+				},
+				{
+					"name": "modal",
+					"type": "boolean",
+					"default": "false",
+					"description": "是否启用模态。即禁用弹出窗口所在层以下的鼠标事件。默认false。"
+				},
+				{
+					"name": "center",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否居中窗口。等效于在外部调用centerPopUp()来居中。默认true。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "bringToFront",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "将指定窗口的层级调至最前",
+			"params": [
+				{
+					"name": "popUp",
+					"type": "egret.gui.IVisualElement",
+					"description": "要最前显示的窗口"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "centerPopUp",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "将指定窗口居中显示",
+			"params": [
+				{
+					"name": "popUp",
+					"type": "egret.gui.IVisualElement",
+					"description": "要居中显示的窗口"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeEventListener",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "移除事件监听,参考PopUpEvent定义的常量。",
+			"params": [
+				{
+					"name": "type",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": ""
+				},
+				{
+					"name": "thisObject",
+					"type": "any",
+					"description": ""
+				},
+				{
+					"name": "useCapture",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removePopUp",
+			"memberof": "egret.gui.PopUpManager",
+			"scope": "static",
+			"description": "移除由addPopUp()方法弹出的窗口。",
+			"params": [
+				{
+					"name": "popUp",
+					"type": "egret.gui.IVisualElement",
+					"description": "要移除的窗口"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "PopUpManager",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\managers\\PopUpManager.ts",
+		"description": "窗口弹出管理器<p/>若项目需要自定义弹出框管理器，请实现IPopUpManager接口"
+	}
+}

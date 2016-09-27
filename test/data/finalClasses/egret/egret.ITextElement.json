@@ -1,0 +1,40 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "egret.ITextStyle",
+			"name": "style",
+			"memberof": "egret.ITextElement",
+			"scope": "instance",
+			"description": "文本样式",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "text",
+			"memberof": "egret.ITextElement",
+			"scope": "instance",
+			"description": "字符串内容",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "ITextElement",
+		"memberof": "egret",
+		"filename": "egret\\text\\ITextElement.ts",
+		"description": "用于建立多种样式混合文本的基本结构，主要用于设置 textFlow 属性",
+		"see": [
+			"http://edn.egret.com/cn/docs/page/146 多种样式文本混合"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"children": []
+	}
+}

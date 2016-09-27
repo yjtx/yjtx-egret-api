@@ -1,0 +1,41 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "rotation",
+			"memberof": "dragonBones.Transform",
+			"scope": "instance",
+			"description": "旋转。 (以弧度为单位)",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "dragonBones.Transform",
+			"name": "toMatrix",
+			"memberof": "dragonBones.Transform",
+			"scope": "instance",
+			"description": "转换为矩阵。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Transform",
+		"memberof": "dragonBones",
+		"filename": "geom\\Transform.ts",
+		"description": "2D 变换。",
+		"version": "DragonBones 3.0"
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "easeInFraction",
+			"memberof": "egret.gui.Linear",
+			"scope": "instance",
+			"description": "在加速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "easeOutFraction",
+			"memberof": "egret.gui.Linear",
+			"scope": "instance",
+			"description": "在减速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Linear",
+			"memberof": "egret.gui.Linear",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "easeInFraction",
+					"type": "number",
+					"default": "0",
+					"description": "在加速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
+				},
+				{
+					"name": "easeOutFraction",
+					"type": "number",
+					"default": "0",
+					"description": "在减速阶段中持续时间占总时间的百分比，在 0.0 和 1.0 之间。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "ease",
+			"memberof": "egret.gui.Linear",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "fraction",
+					"type": "number",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Linear",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\effect\\easing\\Linear.ts",
+		"description": "Linear 类使用三个阶段定义缓动：加速、匀速运动和减速。",
+		"implements": [
+			{
+				"name": "egret.gui.IEaser"
+			}
+		]
+	}
+}

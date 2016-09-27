@@ -1,0 +1,193 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_BIN",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "二进制文件。",
+			"version": "Egret 2.4",
+			"platform": "Web",
+			"default": "\"bin\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_FONT",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "BitmapTextSpriteSheet 文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"font\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_IMAGE",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "图片文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"image\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_JSON",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "JSON 文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"json\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_SHEET",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "SpriteSheet 文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"sheet\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_SOUND",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "声音文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"sound\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_TEXT",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "文本文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"text\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "TYPE_XML",
+			"memberof": "RES.ResourceItem",
+			"scope": "static",
+			"description": "XML 文件。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"xml\""
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "data",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "被引用的原始数据对象。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "groupName",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "资源所属的组名。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"\""
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "loaded",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "加载完成的标志。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "加载项名称。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "type",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "加载项文件类型。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "url",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "要加载的文件地址。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "ResourceItem",
+			"memberof": "RES.ResourceItem",
+			"scope": "instance",
+			"description": "构造函数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "加载项名称。"
+				},
+				{
+					"name": "url",
+					"type": "string",
+					"description": "要加载的文件地址。"
+				},
+				{
+					"name": "type",
+					"type": "string",
+					"description": "加载项文件类型。"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ResourceItem",
+		"memberof": "RES",
+		"filename": "extension\\resource\\core\\ResourceItem.ts",
+		"description": "资源项。对应 resource.json 中 resources 数组中的一项。",
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

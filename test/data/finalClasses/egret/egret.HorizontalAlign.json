@@ -1,0 +1,74 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CENTER",
+			"memberof": "egret.HorizontalAlign",
+			"scope": "static",
+			"description": "在容器的水平中心对齐内容。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"center\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "CONTENT_JUSTIFY",
+			"memberof": "egret.HorizontalAlign",
+			"scope": "static",
+			"description": "相对于容器对子项进行内容对齐。这会将所有子项的大小统一调整为容器的\"内容宽度\"。容器的\"内容宽度\"是最大子项的大小,如果所有子项都小于容器的宽度，则会将所有子项的大小调整为容器的宽度。注意：TextFiled不支持此对齐方式。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"contentJustify\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "JUSTIFY",
+			"memberof": "egret.HorizontalAlign",
+			"scope": "static",
+			"description": "水平两端对齐。注意：TextFiled不支持此对齐方式。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"justify\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LEFT",
+			"memberof": "egret.HorizontalAlign",
+			"scope": "static",
+			"description": "将内容与容器的左侧对齐。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"left\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "RIGHT",
+			"memberof": "egret.HorizontalAlign",
+			"scope": "static",
+			"description": "将内容与容器的右侧对齐。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"default": "\"right\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "HorizontalAlign",
+		"memberof": "egret",
+		"filename": "egret\\text\\HorizontalAlign.ts",
+		"description": "HorizontalAlign 类为水平对齐方式定义可能的值。",
+		"see": [
+			"egret.TextField#textAlign"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native"
+	}
+}

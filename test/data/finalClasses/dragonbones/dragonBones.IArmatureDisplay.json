@@ -1,0 +1,148 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.Animation",
+			"name": "animation",
+			"memberof": "dragonBones.IArmatureDisplay",
+			"scope": "instance",
+			"description": "获取使用骨架的动画控制器。",
+			"rwType": 1,
+			"see": [
+				"dragonBones.Animation"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "armature",
+			"memberof": "dragonBones.IArmatureDisplay",
+			"scope": "instance",
+			"description": "获取使用这个显示容器的骨架。",
+			"rwType": 1,
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 4.5"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "添加事件。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.IEventDispatcher"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "advanceTimeBySelf",
+			"memberof": "dragonBones.IArmatureDisplay",
+			"scope": "instance",
+			"description": "由显示容器来更新骨架和动画。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "on",
+					"type": "boolean",
+					"description": "开启或关闭显示容器对骨架与动画的更新。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.IArmatureDisplay",
+			"scope": "instance",
+			"description": "释放显示对象和骨架。 (骨架会回收到内存池)",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "hasEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "是否包含指定类型的事件。",
+			"returns": "[true: 包含, false: 不包含]",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.IEventDispatcher"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "移除事件。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.IEventDispatcher"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IArmatureDisplay",
+		"memberof": "dragonBones",
+		"filename": "armature\\IArmatureDisplay.ts",
+		"description": "骨架显示容器和事件的接口。",
+		"see": [
+			"dragonBones.Armature#display"
+		],
+		"version": "DragonBones 4.5",
+		"augments": [
+			"dragonBones.IEventDispatcher"
+		]
+	}
+}

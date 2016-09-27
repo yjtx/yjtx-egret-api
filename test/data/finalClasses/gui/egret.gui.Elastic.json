@@ -1,0 +1,80 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Elastic",
+			"memberof": "egret.gui.Elastic",
+			"scope": "instance"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "ease",
+			"memberof": "egret.gui.Elastic",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "fraction",
+					"type": "number",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "easeOut",
+			"memberof": "egret.gui.Elastic",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "t",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "b",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "c",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "d",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "a",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				},
+				{
+					"name": "p",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Elastic",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\effect\\easing\\Elastic.ts",
+		"description": "Elastic 类实现缓动功能，此时目标对象移动是由一个指数衰减正弦波定义的。",
+		"implements": [
+			{
+				"name": "egret.gui.IEaser"
+			}
+		]
+	}
+}

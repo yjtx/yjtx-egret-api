@@ -1,0 +1,51 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "getTheme",
+			"memberof": "eui.DefaultThemeAdapter",
+			"scope": "instance",
+			"description": "解析主题",
+			"params": [
+				{
+					"name": "url",
+					"type": "string",
+					"description": "待解析的主题url"
+				},
+				{
+					"name": "compFunc",
+					"type": "Function",
+					"description": "解析完成回调函数，示例：compFunc(e:egret.Event):void;"
+				},
+				{
+					"name": "errorFunc",
+					"type": "Function",
+					"description": "解析失败回调函数，示例：errorFunc():void;"
+				},
+				{
+					"name": "thisObject",
+					"type": "any",
+					"description": "回调的this引用"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DefaultThemeAdapter",
+		"memberof": "eui",
+		"filename": "extension\\eui\\components\\supportClasses\\DefaultThemeAdapter.ts",
+		"description": "默认的IThemeAdapter接口实现。",
+		"version": "eui 1.0",
+		"platform": "Web,Native",
+		"implements": [
+			{
+				"name": "eui.IThemeAdapter"
+			}
+		]
+	}
+}

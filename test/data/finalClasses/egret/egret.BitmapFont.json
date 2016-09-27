@@ -1,0 +1,154 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "BitmapFont",
+			"memberof": "egret.BitmapFont",
+			"scope": "instance",
+			"description": "创建一个 egret.BitmapFont 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "texture",
+					"type": "egret.Texture",
+					"description": "使用TextureMerger生成的纹理集"
+				},
+				{
+					"name": "config",
+					"type": "any",
+					"description": "使用TextureMerger生成的配置数据"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "createTexture",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "为 SpriteSheet 上的指定区域创建一个新的 Texture 对象并缓存它",
+			"returns": "创建的 Texture 对象",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "缓存这个 Texture 对象所使用的名称，如果名称已存在，将会覆盖之前的 Texture 对象"
+				},
+				{
+					"name": "bitmapX",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的起始坐标x"
+				},
+				{
+					"name": "bitmapY",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的起始坐标y"
+				},
+				{
+					"name": "bitmapWidth",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的宽度"
+				},
+				{
+					"name": "bitmapHeight",
+					"type": "number",
+					"description": "纹理区域在 bitmapData 上的高度"
+				},
+				{
+					"name": "offsetX",
+					"type": "number",
+					"default": "0",
+					"description": "原始位图的非透明区域 x 起始点"
+				},
+				{
+					"name": "offsetY",
+					"type": "number",
+					"default": "0",
+					"description": "原始位图的非透明区域 y 起始点"
+				},
+				{
+					"name": "textureWidth",
+					"question": true,
+					"type": "number",
+					"description": "原始位图的高度，若不传入，则使用 bitmapWidth 的值。"
+				},
+				{
+					"name": "textureHeight",
+					"question": true,
+					"type": "number",
+					"description": "原始位图的宽度，若不传入，则使用 bitmapHeight 的值。"
+				}
+			],
+			"inherited": true,
+			"inherits": "egret.SpriteSheet"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "egret.SpriteSheet",
+			"scope": "instance",
+			"description": "释放纹理",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.SpriteSheet"
+		},
+		{
+			"kind": "function",
+			"type": "egret.Texture",
+			"name": "getTexture",
+			"memberof": "egret.BitmapFont",
+			"scope": "instance",
+			"description": "通过 name 属性获取对应纹理",
+			"returns": "",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "name属性"
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "BitmapFont",
+		"memberof": "egret",
+		"filename": "egret\\text\\BitmapFont.ts",
+		"description": "位图字体,是一个字体的纹理集，通常作为BitmapText.font属性的值。",
+		"see": [
+			"http://bbs.egret-labs.org/thread-918-1-1.html TextureMerger",
+			"http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=251 文本(含位图字体具体用法)"
+		],
+		"version": "Egret 2.4",
+		"platform": "Web,Native",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;BitmapText&nbsp;显示特殊字体。<br/>&nbsp;*/<br/>class&nbsp;BitmapFontExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RES.getResByUrl(&quot;resource/assets/font.fnt&quot;,&nbsp;this.onLoadComplete,&nbsp;this,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RES.ResourceItem.TYPE_FONT);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(font:egret.BitmapFont):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;bitmapText:egret.BitmapText&nbsp;=&nbsp;new&nbsp;egret.BitmapText();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bitmapText.font&nbsp;=&nbsp;font;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(bitmapText);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bitmapText.text&nbsp;=&nbsp;&quot;Hello&nbsp;Egret&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"augments": [
+			"egret.SpriteSheet",
+			"egret.HashObject"
+		]
+	}
+}

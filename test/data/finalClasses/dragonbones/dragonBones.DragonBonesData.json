@@ -1,0 +1,192 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "armatureNames",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所有的骨架数据名称。",
+			"see": [
+				"#armatures"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "Map<dragonBones.ArmatureData>",
+			"name": "armatures",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "所有的骨架数据。",
+			"see": [
+				"dragonBones.ArmatureData"
+			],
+			"version": "DragonBones 3.0",
+			"default": "{}"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "autoSearch",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]",
+			"default": "false",
+			"see": [
+				"dragonBones.ArmatureData"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "frameRate",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "动画帧频。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "数据名称。",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"deprecated": true,
+			"see": [
+				"dragonBones.BaseFactory#removeDragonBonesData()"
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.ArmatureData",
+			"name": "getArmature",
+			"memberof": "dragonBones.DragonBonesData",
+			"scope": "instance",
+			"description": "获取指定名称的骨架。",
+			"see": [
+				"dragonBones.ArmatureData"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "骨架数据骨架名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "DragonBonesData",
+		"memberof": "dragonBones",
+		"filename": "model\\DragonBonesData.ts",
+		"description": "龙骨数据，包含多个骨架数据。",
+		"see": [
+			"dragonBones.ArmatureData"
+		],
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.BaseObject"
+		]
+	}
+}

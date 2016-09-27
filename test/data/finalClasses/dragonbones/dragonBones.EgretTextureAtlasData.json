@@ -1,0 +1,171 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "autoSearch",
+			"memberof": "dragonBones.TextureAtlasData",
+			"scope": "instance",
+			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]",
+			"default": "false",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.TextureAtlasData"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "imagePath",
+			"memberof": "dragonBones.TextureAtlasData",
+			"scope": "instance",
+			"description": "贴图集图片路径。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TextureAtlasData"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.TextureAtlasData",
+			"scope": "instance",
+			"description": "贴图集名称。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TextureAtlasData"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "scale",
+			"memberof": "dragonBones.TextureAtlasData",
+			"scope": "instance",
+			"description": "贴图集缩放系数。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TextureAtlasData"
+		},
+		{
+			"kind": "member",
+			"type": "egret.Texture",
+			"name": "texture",
+			"memberof": "dragonBones.EgretTextureAtlasData",
+			"scope": "instance",
+			"description": "Egret 贴图。",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.EgretTextureAtlasData",
+			"scope": "instance",
+			"deprecated": true,
+			"see": [
+				"dragonBones.BaseFactory#removeDragonBonesData()"
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EgretTextureAtlasData",
+		"memberof": "dragonBones",
+		"filename": "EgretTextureData.ts",
+		"description": "Egret 贴图集数据。",
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.TextureAtlasData",
+			"dragonBones.BaseObject"
+		],
+		"children": [
+			"dragonBones.EgretTextureAtlas"
+		]
+	}
+}

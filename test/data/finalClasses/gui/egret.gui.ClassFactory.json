@@ -1,0 +1,68 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "generator",
+			"memberof": "egret.gui.ClassFactory",
+			"scope": "instance",
+			"description": "newInstance() 方法根据工厂对象生成对象时使用的 Class。",
+			"default": "null"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "egret.HashObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
+			"version": "Egret 2.4",
+			"platform": "Web,Native",
+			"inherited": true,
+			"inherits": "egret.HashObject"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"name": "ClassFactory",
+			"memberof": "egret.gui.ClassFactory",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "generator",
+					"type": "any",
+					"default": "null",
+					"description": "newInstance() 方法根据工厂对象生成对象时使用的 Class。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "newInstance",
+			"memberof": "egret.gui.ClassFactory",
+			"scope": "instance",
+			"description": "生产一个新的实例",
+			"returns": ""
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "ClassFactory",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\core\\ClassFactory.ts",
+		"description": "ClassFactory 实例是一个“工厂对象”，Egret 可用其生成其他类的实例，每个实例拥有相同的属性。",
+		"augments": [
+			"egret.HashObject"
+		],
+		"implements": [
+			{
+				"name": "egret.gui.IFactory"
+			}
+		]
+	}
+}

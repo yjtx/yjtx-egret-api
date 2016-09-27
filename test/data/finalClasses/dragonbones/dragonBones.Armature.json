@@ -1,0 +1,573 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "dragonBones.Animation",
+			"name": "animation",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获得动画控制器。",
+			"see": [
+				"dragonBones.Animation"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.ArmatureData",
+			"name": "armatureData",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取骨架数据。",
+			"see": [
+				"dragonBones.ArmatureData"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "cacheFrameRate",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "动画缓存的帧率，当设置一个大于 0 的帧率时，将会开启动画缓存。通过将动画数据缓存在内存中来提高运行性能，会有一定的内存开销。帧率不宜设置的过高，通常跟动画的帧率相当且低于程序运行的帧率。开启动画缓存后，某些功能将会失效，比如 Bone 和 Slot 的 offset 属性等。",
+			"see": [
+				"dragonBones.DragonBonesData#frameRate",
+				"dragonBones.ArmatureData#frameRate"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.IArmatureDisplay|any",
+			"name": "display",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取显示容器，插槽的显示对象都会以此显示容器为父级，根据渲染平台的不同，类型会不同，通常是 DisplayObjectContainer 类型。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "enableCache",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"deprecated": true,
+			"see": [
+				"#cacheFrameRate"
+			],
+			"default": "false"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "骨架名称。",
+			"see": [
+				"dragonBones.ArmatureData#name"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Slot",
+			"name": "parent",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取父插槽。 (当此骨架是某个骨架的子骨架时，可以通过此属性向上查找从属关系)",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "可以用于存储临时数据。",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addBone",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "将一个指定的骨骼添加到骨架中。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Bone",
+					"description": "需要添加的骨骼。"
+				},
+				{
+					"name": "parentName",
+					"type": "string",
+					"default": "null",
+					"description": "需要添加到父骨骼的名称，如果未设置，则添加到骨架根部。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addEventListener",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "添加事件。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addSlot",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "将一个指定的插槽添加到骨架中。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Slot",
+					"description": "需要添加的插槽。"
+				},
+				{
+					"name": "parentName",
+					"type": "string",
+					"description": "需要添加到的父骨骼名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "advanceTime",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "更新骨架和动画。 (可以使用时钟实例或显示容器来更新)",
+			"see": [
+				"dragonBones.IAnimateble",
+				"dragonBones.WorldClock",
+				"dragonBones.IArmatureDisplay"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "passedTime",
+					"type": "number",
+					"description": "两帧之前的时间间隔。 (以秒为单位)"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "dispose",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "释放骨架。 (会回收到内存池)",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "enableAnimationCache",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "开启动画缓存。",
+			"see": [
+				"#cacheFrameRate"
+			],
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "frameRate",
+					"type": "number",
+					"description": "动画缓存的帧率"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Bone",
+			"name": "getBone",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "获取指定名称的骨骼。",
+			"returns": "骨骼。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "骨骼的名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Bone",
+			"name": "getBoneByDisplay",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "通过显示对象获取骨骼。",
+			"returns": "包含这个显示对象的骨骼。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "display",
+					"type": "any",
+					"description": "显示对象。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "Array<dragonBones.Bone>",
+			"name": "getBones",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "获取所有骨骼。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "any",
+			"name": "getDisplay",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"deprecated": true,
+			"see": [
+				"#display"
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Slot",
+			"name": "getSlot",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "获取指定名称的插槽。",
+			"returns": "插槽。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "插槽的名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Slot",
+			"name": "getSlotByDisplay",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "通过显示对象获取插槽。",
+			"returns": "包含这个显示对象的插槽。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "display",
+					"type": "any",
+					"description": "显示对象。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "Array<dragonBones.Slot>",
+			"name": "getSlots",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "获取所有插槽。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "hasEventListener",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "是否包含指定类型的事件。",
+			"returns": "[true: 包含, false: 不包含]",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invalidUpdate",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "更新骨骼和插槽的变换。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)",
+			"see": [
+				"dragonBones.Bone",
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "boneName",
+					"type": "string",
+					"default": "null",
+					"description": "指定的骨骼名称，如果未设置，将更新所有骨骼。"
+				},
+				{
+					"name": "updateSlotDisplay",
+					"type": "boolean",
+					"default": "false",
+					"description": "是否更新插槽的显示对象。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeBone",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "将一个指定的骨骼从骨架中移除。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Bone",
+					"description": "需要移除的骨骼。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeEventListener",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "移除事件。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeSlot",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "将一个指定的插槽从骨架中移除。",
+			"see": [
+				"dragonBones.Slot"
+			],
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Slot",
+					"description": "需要移除的插槽"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "replaceTexture",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图数据。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "texture",
+					"type": "any",
+					"description": "用来替换的贴图，根据渲染平台的不同，类型会有所不同，一般是 Texture 类型。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Armature",
+		"memberof": "dragonBones",
+		"filename": "armature\\Armature.ts",
+		"description": "骨架，是骨骼动画系统的核心，由显示容器、骨骼、插槽、动画、事件系统构成。",
+		"see": [
+			"dragonBones.ArmatureData",
+			"dragonBones.Bone",
+			"dragonBones.Slot",
+			"dragonBones.Animation",
+			"dragonBones.IArmatureDisplayContainer"
+		],
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.BaseObject"
+		],
+		"implements": [
+			{
+				"name": "dragonBones.IAnimateble"
+			}
+		]
+	}
+}

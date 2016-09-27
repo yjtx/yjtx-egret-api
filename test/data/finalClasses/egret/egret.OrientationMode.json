@@ -1,0 +1,50 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "AUTO",
+			"memberof": "egret.OrientationMode",
+			"scope": "static",
+			"description": "适配屏幕",
+			"default": "\"auto\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LANDSCAPE",
+			"memberof": "egret.OrientationMode",
+			"scope": "static",
+			"description": "默认横屏，舞台顺时针旋转90度",
+			"default": "\"landscape\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LANDSCAPE_FLIPPED",
+			"memberof": "egret.OrientationMode",
+			"scope": "static",
+			"description": "默认横屏，舞台逆时针旋转90度",
+			"default": "\"landscapeFlipped\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "PORTRAIT",
+			"memberof": "egret.OrientationMode",
+			"scope": "static",
+			"description": "默认竖屏",
+			"default": "\"portrait\""
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "OrientationMode",
+		"memberof": "egret",
+		"filename": "egret\\display\\OrientationMode.ts",
+		"description": "OrientationMode 类为舞台初始旋转模式提供值。"
+	}
+}

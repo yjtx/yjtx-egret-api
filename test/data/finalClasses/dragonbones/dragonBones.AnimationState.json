@@ -1,0 +1,397 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "additiveBlending",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "是否以叠加的方式混合动画。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationData",
+			"name": "animationData",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "动画数据。",
+			"see": [
+				"dragonBones.AnimationData"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "autoFadeOutTime",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "自动淡出时需要的时间，当设置一个大于等于 0 的值，动画状态将会在播放完成后自动淡出。 (以秒为单位)",
+			"default": "-1",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "autoTween",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"deprecated": true,
+			"default": "false"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationData",
+			"name": "clip",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"deprecated": true,
+			"see": [
+				"#animationData"
+			]
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "currentPlayTimes",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前动画的播放次数。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "currentTime",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "当前动画的播放时间。 (以秒为单位)",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "displayControl",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "是否对插槽的颜色，显示序列索引，深度排序，行为等拥有控制的权限。",
+			"see": [
+				"dragonBones.Slot#displayController"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "group",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "动画组。",
+			"see": [
+				"dragonBones.Animation#fadeIn()"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isCompleted",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "是否播放完毕。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "isPlaying",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "是否正在播放。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "layer",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "动画图层。",
+			"see": [
+				"dragonBones.Animation#fadeIn()"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "动画名称。",
+			"see": [
+				"dragonBones.AnimationData#name"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "playTimes",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "需要播放的次数。 [0: 无限循环播放, [1~N]: 循环播放 N 次]",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "timeScale",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]",
+			"default": "1",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "totalTime",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "当前动画的总时间。 (以秒为单位)",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "weight",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "进行动画混合时的权重。",
+			"default": "1",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addBoneMask",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "添加指定的骨骼遮罩。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "recursive",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否为该骨骼的子骨骼添加遮罩。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "containsBoneMask",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "是否包含指定的骨骼遮罩。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": "指定的骨骼名称。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "fadeOut",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "淡出动画。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "fadeOutTime",
+					"type": "number",
+					"description": "淡出时间。 (以秒为单位)"
+				},
+				{
+					"name": "pausePlayhead",
+					"type": "boolean",
+					"default": "true",
+					"description": "淡出时是否暂停动画。 [true: 暂停, false: 不暂停]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "play",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "继续播放。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeAllBoneMask",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "删除所有骨骼遮罩。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeBoneMask",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "删除指定的骨骼遮罩。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "name",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "recursive",
+					"type": "boolean",
+					"default": "true",
+					"description": "是否删除该骨骼的子骨骼遮罩。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stop",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "暂停播放。",
+			"version": "DragonBones 3.0"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "AnimationState",
+		"memberof": "dragonBones",
+		"filename": "animation\\AnimationState.ts",
+		"description": "动画状态，播放动画时产生，可以对单个动画的播放进行更细致的控制和调节。",
+		"see": [
+			"dragonBones.Animation",
+			"dragonBones.AnimationData"
+		],
+		"version": "DragonBones 3.0",
+		"augments": [
+			"dragonBones.BaseObject"
+		]
+	}
+}

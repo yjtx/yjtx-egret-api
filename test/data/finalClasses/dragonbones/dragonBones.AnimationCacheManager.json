@@ -1,0 +1,17 @@
+{
+	"member": [],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "AnimationCacheManager",
+		"memberof": "dragonBones",
+		"filename": "EgretArmatureDisplay.ts",
+		"deprecated": true,
+		"see": [
+			"dragonBones.Armature#cacheFrameRate",
+			"dragonBones.Armature#enableAnimationCache()"
+		]
+	}
+}

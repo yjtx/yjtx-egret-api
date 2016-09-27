@@ -1,0 +1,93 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "DOWN",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "40"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "END",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "35"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "HOME",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "36"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "LEFT",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "37"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "PAGE_DOWN",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "34"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "PAGE_LEFT",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "0x2397"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "PAGE_RIGHT",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "0x2398"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "PAGE_UP",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "33"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "RIGHT",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "39"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "UP",
+			"memberof": "egret.gui.NavigationUnit",
+			"scope": "static",
+			"default": "38"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "NavigationUnit",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\core\\NavigationUnit.ts"
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "addEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "添加事件。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "hasEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "是否包含指定类型的事件。",
+			"returns": "[true: 包含, false: 不包含]",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "removeEvent",
+			"memberof": "dragonBones.IEventDispatcher",
+			"scope": "instance",
+			"description": "移除事件。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "type",
+					"type": "EventStringType",
+					"description": "事件类型。"
+				},
+				{
+					"name": "listener",
+					"type": "Function",
+					"description": "事件回调。"
+				},
+				{
+					"name": "target",
+					"type": "any",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "interface",
+		"name": "IEventDispatcher",
+		"memberof": "dragonBones",
+		"filename": "event\\EventObject.ts",
+		"description": "事件接口。",
+		"version": "DragonBones 4.5",
+		"children": [
+			"dragonBones.IArmatureDisplay"
+		]
+	}
+}

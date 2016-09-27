@@ -1,0 +1,141 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Matrix",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "a",
+					"type": "number",
+					"default": "1",
+					"description": ""
+				},
+				{
+					"name": "b",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				},
+				{
+					"name": "c",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				},
+				{
+					"name": "d",
+					"type": "number",
+					"default": "1",
+					"description": ""
+				},
+				{
+					"name": "tx",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				},
+				{
+					"name": "ty",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "concat",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"description": "将当前矩阵与另一个矩阵相乘。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Matrix",
+					"description": "需要相乘的矩阵。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "copyFrom",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"description": "复制矩阵。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Matrix",
+					"description": "需要复制的矩阵。"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "identity",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"description": "转换为恒等矩阵。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "invert",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"description": "转换为逆矩阵。",
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformPoint",
+			"memberof": "dragonBones.Matrix",
+			"scope": "instance",
+			"description": "将矩阵转换应用于指定点。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"description": "横坐标。"
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"description": "纵坐标。"
+				},
+				{
+					"name": "result",
+					"type": "{x:number, y}",
+					"description": "应用转换之后的坐标。"
+				},
+				{
+					"name": "delta",
+					"type": "boolean",
+					"default": "false",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Matrix",
+		"memberof": "dragonBones",
+		"filename": "geom\\Matrix.ts",
+		"description": "2D 矩阵。",
+		"version": "DragonBones 3.0"
+	}
+}

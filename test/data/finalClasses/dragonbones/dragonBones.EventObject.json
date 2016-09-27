@@ -1,0 +1,264 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "COMPLETE",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画播放完成。",
+			"version": "DragonBones 4.5",
+			"default": "\"complete\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FADE_IN",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画淡入开始。",
+			"version": "DragonBones 4.5",
+			"default": "\"fadeIn\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FADE_IN_COMPLETE",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画淡入完成。",
+			"version": "DragonBones 4.5",
+			"default": "\"fadeInComplete\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FADE_OUT",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画淡出开始。",
+			"version": "DragonBones 4.5",
+			"default": "\"fadeOut\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FADE_OUT_COMPLETE",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画淡出完成。",
+			"version": "DragonBones 4.5",
+			"default": "\"fadeOutComplete\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "FRAME_EVENT",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画帧事件。",
+			"version": "DragonBones 4.5",
+			"default": "\"frameEvent\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "LOOP_COMPLETE",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画循环播放一次完成。",
+			"version": "DragonBones 4.5",
+			"default": "\"loopComplete\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "SOUND_EVENT",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画声音事件。",
+			"version": "DragonBones 4.5",
+			"default": "\"soundEvent\""
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "START",
+			"memberof": "dragonBones.EventObject",
+			"scope": "static",
+			"description": "动画开始。",
+			"version": "DragonBones 4.5",
+			"default": "\"start\""
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationState",
+			"name": "animationState",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "发出事件的动画状态。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Armature",
+			"name": "armature",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "发出事件的骨架。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Bone",
+			"name": "bone",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "发出事件的骨骼。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "data",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "扩展的数据。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "hashCode",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "事件名称。 (帧标签的名称或声音的名称)",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Slot",
+			"name": "slot",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "发出事件的插槽。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "EventStringType",
+			"name": "type",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "事件类型。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.EventObject",
+			"scope": "instance",
+			"description": "用户数据。",
+			"version": "DragonBones 4.5"
+		}
+	],
+	"function": [
+		{
+			"kind": "function",
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "EventObject",
+		"memberof": "dragonBones",
+		"filename": "event\\EventObject.ts",
+		"description": "事件数据。",
+		"version": "DragonBones 4.5",
+		"augments": [
+			"dragonBones.BaseObject"
+		]
+	}
+}

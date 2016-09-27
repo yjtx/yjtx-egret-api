@@ -1,0 +1,116 @@
+{
+	"globalFunction": [
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "addMovieGroup",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "添加动画组。",
+			"version": "DragonBones 4.7",
+			"params": [
+				{
+					"name": "groupData",
+					"type": "ArrayBuffer",
+					"description": "动画二进制数据。"
+				},
+				{
+					"name": "textureAtlas",
+					"type": "egret.Texture|egret.Texture[]",
+					"description": "贴图集或贴图集列表。"
+				},
+				{
+					"name": "groupName",
+					"type": "string",
+					"default": "null",
+					"description": "为动画组指定一个名称，如果未设置，则使用数据中的名称。"
+				}
+			]
+		},
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "dragonBones.Movie",
+			"name": "buildMovie",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "创建一个动画。",
+			"version": "DragonBones 4.7",
+			"params": [
+				{
+					"name": "movieName",
+					"type": "string",
+					"description": "动画的名称。"
+				},
+				{
+					"name": "groupName",
+					"type": "string",
+					"default": "null",
+					"description": "动画组的名称，如果未设置，将检索所有的动画组，当多个动画组中包含同名的动画时，可能无法创建出准确的动画。"
+				}
+			]
+		},
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "string[]",
+			"name": "getMovieNames",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "获取指定动画组内包含的所有动画名称。",
+			"version": "DragonBones 4.7",
+			"params": [
+				{
+					"name": "groupName",
+					"type": "string",
+					"description": "动画组的名称。"
+				}
+			]
+		},
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "boolean",
+			"name": "hasMovieGroup",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "是否包含指定名称的动画组。",
+			"version": "DragonBones 4.7",
+			"params": [
+				{
+					"name": "groupName",
+					"type": "string",
+					"description": "动画组的名称。"
+				}
+			]
+		},
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "removeAllMovieGroup",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "移除所有的动画组。",
+			"version": "DragonBones 4.7"
+		},
+		{
+			"filename": "Movie.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "removeMovieGroup",
+			"memberof": "dragonBones",
+			"scope": "instance",
+			"description": "移除动画组。",
+			"version": "DragonBones 4.7",
+			"params": [
+				{
+					"name": "groupName",
+					"type": "string",
+					"description": "动画组的名称。"
+				}
+			]
+		}
+	]
+}

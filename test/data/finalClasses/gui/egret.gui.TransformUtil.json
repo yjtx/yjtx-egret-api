@@ -1,0 +1,77 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "transformAround",
+			"memberof": "egret.gui.TransformUtil",
+			"scope": "static",
+			"description": "将显示对象按照给定的转换中心调整位置",
+			"params": [
+				{
+					"name": "obj",
+					"type": "egret.DisplayObject",
+					"description": "要转换的显示对象"
+				},
+				{
+					"name": "transformCenter",
+					"type": "egret.Point",
+					"description": "转换中心点，以显示对象为坐标系"
+				},
+				{
+					"name": "translation",
+					"type": "egret.Point",
+					"default": "null",
+					"description": "新的转换中心的位置，以显示对象的父容器为坐标系"
+				},
+				{
+					"name": "scaleX",
+					"type": "number",
+					"default": "NaN",
+					"description": "新的缩放值scaleX，如果为NaN则不设置"
+				},
+				{
+					"name": "scaleY",
+					"type": "number",
+					"default": "NaN",
+					"description": "新的缩放值scaleY，如果为NaN则不设置"
+				},
+				{
+					"name": "rotation",
+					"type": "number",
+					"default": "NaN",
+					"description": "新的旋转角度，如果为NaN则不设置"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "egret.Point",
+			"name": "transformPointToParent",
+			"memberof": "egret.gui.TransformUtil",
+			"scope": "static",
+			"params": [
+				{
+					"name": "obj",
+					"type": "egret.DisplayObject",
+					"description": ""
+				},
+				{
+					"name": "localPosition",
+					"type": "egret.Point",
+					"default": "null",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "TransformUtil",
+		"memberof": "egret.gui",
+		"filename": "extension\\gui\\effect\\effectClasses\\TransformUtil.ts"
+	}
+}
