@@ -33,8 +33,18 @@ exports.run = function run(fileNames) {
             }
         }
 
+        var sourcePaths = globals.getSourcePaths();
         if (!globals.isInDependence(filename)) {
-            filename = path.relative(globals.getSourcePath(), filename);
+            for (var pi = 0; pi < sourcePaths.length; pi++) {
+                var tmpath = sourcePaths[pi];
+
+
+                if (filename.indexOf(tmpath) == 0) {
+                    filename = path.relative(tmpath, filename).replace(/\//g, "\\");
+                    break;
+                }
+
+            }
         }
 
         currentFileName = filename;

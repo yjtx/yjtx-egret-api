@@ -12,6 +12,13 @@ function getOption(type) {
     return null;
 }
 
+function getOptions(type) {
+    if (params.getArgv()["opts"][type]) {
+        return params.getArgv()["opts"][type];
+    }
+    return null;
+}
+
 function getExampleRootPath() {
     return getOption("-examples-path") || getOption("--examples");
 }
@@ -20,8 +27,8 @@ function getOutputPath() {
     return getOption("--output");
 }
 
-function getSourcePath() {
-    return getOption("--path");
+function getSourcePaths() {
+    return getOptions("--path");
 }
 
 function getLanguage() {
@@ -97,5 +104,5 @@ exports.addQuotes = addQuotes;
 exports.getExampleRootPath = getExampleRootPath;
 exports.getOutputPath = getOutputPath;
 exports.getLanguage = getLanguage;
-exports.getSourcePath = getSourcePath;
+exports.getSourcePaths = getSourcePaths;
 exports.getType = getType;

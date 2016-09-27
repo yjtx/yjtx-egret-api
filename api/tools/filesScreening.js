@@ -10,11 +10,18 @@ var file = require("../core/file.js");
 var property = require("../tools/apiProperty");
 
 exports.screening = function () {
-    var egretPath = globals.getSourcePath();
+    var egretPaths = globals.getSourcePaths();
     var dependencePaths = globals.getDependence();
 
+console.log(egretPaths);
+
+    var tsList = [];
+    for (var i = 0; i < egretPaths.length; i++) {
+        tsList = tsList.concat(file.getDirectoryAllListing(path.join(egretPaths[i])));
+    }
+
     //获取所有的文件
-    var tsList = file.getDirectoryAllListing(path.join(egretPath));
+    // var tsList = file.getDirectoryAllListing(path.join(egretPaths));
     for (var i = 0; i < dependencePaths.length; i++) {
         tsList = tsList.concat(file.getDirectoryAllListing(path.join(dependencePaths[i])));
     }
