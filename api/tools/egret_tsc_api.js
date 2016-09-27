@@ -40,7 +40,7 @@ exports.run = function run(fileNames) {
 
 
                 if (filename.indexOf(tmpath) == 0) {
-                    filename = path.relative(tmpath, filename).replace(/\//g, "\\");
+                    // filename = path.relative(tmpath, filename).replace(/\//g, "\\");
                     break;
                 }
 
@@ -633,9 +633,6 @@ function getComments(text, pos, obj) {
 }
 
 function isExport(statement) {
-    if (statement.flags == 0) {
-        console.log(1111)
-    }
 
     if (!(statement.flags & TYPEFLAG.Export /* Export */)) {
         return false;

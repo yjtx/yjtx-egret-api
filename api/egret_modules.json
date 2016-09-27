@@ -1,6 +1,6 @@
 {
     "modules": {
-        "egret": "egret",
+        "egret": ["egret","Defines.release.ts","Defines.debug.ts"],
         "game": "extension/game",
         "gui": "extension/gui",
         "res": "extension/resource",
@@ -10,6 +10,6 @@
         "dragonbones": "extension/dragonBones"
     },
     "exclude" : [
-        "jslib","Defines.release.ts","Defines.debug.ts"
+        "jslib"
     ]
 }

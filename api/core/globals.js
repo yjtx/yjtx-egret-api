@@ -35,8 +35,8 @@ function getLanguage() {
     return getOption("--language") || "zh_cn";
 }
 
-function getType() {
-    return getOption("--type") || null;
+function getTypes() {
+    return getOptions("--type") || null;
 }
 
 
@@ -105,4 +105,4 @@ exports.getExampleRootPath = getExampleRootPath;
 exports.getOutputPath = getOutputPath;
 exports.getLanguage = getLanguage;
 exports.getSourcePaths = getSourcePaths;
-exports.getType = getType;
+exports.getTypes = getTypes;

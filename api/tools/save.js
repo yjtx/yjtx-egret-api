@@ -14,6 +14,9 @@ var relationList = {};
 function screen(moduleClassObjs, moduleKey) {
     var outputPath = globals.getOutputPath();
 
+    require("../tools/filepath").relative(moduleClassObjs);
+
+
     for (var key in moduleClassObjs) {
         var item = moduleClassObjs[key];
         if (item.class) {
@@ -46,6 +49,9 @@ function screen(moduleClassObjs, moduleKey) {
     saveGzip(path.join(outputPath, "finalClasses"), moduleKey);
 }
 
+
+
+
 function addToRelation(moduleKey, classinfo, kind) {
     if (relationList[moduleKey] == null) {
         relationList[moduleKey] = {};
@@ -74,8 +80,6 @@ function isInDependence(item) {
 
 exports.save = function (tempClassObjs) {
     var allModules = {};
-
-    var modules = property.getModules();
 
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
@@ -155,25 +159,7 @@ exports.save = function (tempClassObjs) {
     }
 
     function getModuleName(filepath) {
-        filepath = file.escapePath(filepath);
-        for (var tempKey in modules) {
-            var item = modules[tempKey];
-            if (typeof item == "string") {
-                if (filepath.indexOf(item) == 0) {
-                    return tempKey;
-                }
-            }
-            else {
-                var items = modules[tempKey];
-                for (var i = 0; i < items.length; i++) {
-                    var item = items[i];
-                    if (filepath.indexOf(item) == 0) {
-                        return tempKey;
-                    }
-                }
-            }
-        }
-        return "yjtx";
+        return property.getModule(filepath);
     }
 };
 

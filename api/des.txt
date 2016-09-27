@@ -27,3 +27,7 @@ node tscdoc.js --path test/classes/EgretTest/libs --output ../test/data/
 
 
 node tscdoc.js --path /Users/yjtx/Sites/Egret/egret-game-library/tiled/libsrc/src --dependence /Users/yjtx/Sites/Egret/egret-core/egret-core-master/src --output ../test/data/
+
+
+//发布
+node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src /Users/yjtx/Sites/Egret/DragonBones/core /Users/yjtx/Sites/Egret/DragonBones/renderer/egret/src/dragonbones --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret db db
