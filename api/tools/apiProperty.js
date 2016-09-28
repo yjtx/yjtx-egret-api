@@ -102,7 +102,13 @@ exports.getExclude = function () {
     for (var pi = 0; pi < sourcePaths.length; pi++) {
         var tmpath = sourcePaths[pi];
 
-        var arr = typemodules[pi]['exclude'] || [];
+        if (typemodules[pi]) {
+            var arr = typemodules[pi]['exclude'] || [];
+        }
+        else {
+            arr = [];
+        }
+        
 
         for (var j = 0; j < arr.length; j++) {
             excludes.push(path.join(tmpath, arr[j]));
@@ -111,3 +117,4 @@ exports.getExclude = function () {
 
     return excludes;
 };
+

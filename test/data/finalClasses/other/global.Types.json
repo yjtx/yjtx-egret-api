@@ -22,6 +22,16 @@
 		},
 		{
 			"kind": "member",
+			"type": "Map",
+			"name": "Map",
+			"memberof": "global.Types",
+			"version": "all",
+			"platform": "all",
+			"description": "定义Map",
+			"example": ""
+		},
+		{
+			"kind": "member",
 			"type": "T",
 			"memberof": "global.Types",
 			"name": "T",

@@ -36,7 +36,7 @@ function getLanguage() {
 }
 
 function getTypes() {
-    return getOptions("--type") || null;
+    return getOptions("--type") || [];
 }
 
 
@@ -106,3 +106,5 @@ exports.getOutputPath = getOutputPath;
 exports.getLanguage = getLanguage;
 exports.getSourcePaths = getSourcePaths;
 exports.getTypes = getTypes;
+
+
