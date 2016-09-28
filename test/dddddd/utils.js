@@ -351,6 +351,15 @@ function ansClassFullName(className, memberof) {
 
         return link + tempClassName.substring(5);
     }
+    else if (tempClassName && tempClassName.indexOf("Map" + preChar) == 0) {
+        var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';
+        link = link.replace(/\{type\}/g, replaceChars("Map"));
+        link = link.replace(/\{type_class\}/g, getTypeClassName("Map"));
+        link = link.replace(/\{type_href\}/g, getTypeHref("Map"));
+
+        return link + tempClassName.substring(3);
+    }
+
 
     var link = '<a href="{type_href}" data-class-name="{type_class}">{type}</a>';
     link = link.replace(/\{type\}/g, replaceChars(className || "any"));
