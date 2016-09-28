@@ -311,7 +311,7 @@ function createMethods(dataList) {
         for (var j = 0; member.params && j < member.params.length; j++) {
             var param = member.params[j];
 
-            var str = replaceParam(paramsListStr, param);
+            var str = replaceParam(paramsListStr, param, true);
 
             var tempNode = document.createElement("span");
             tempNode.innerHTML = str;
@@ -375,7 +375,7 @@ function createMethodDetails(dataList) {
         for (var j = 0; member.params && j < member.params.length; j++) {
             var param = member.params[j];
 
-            var str = replaceParam(paramsList2Str, param);
+            var str = replaceParam(paramsList2Str, param, true);
 
             var paramsNode2 = document.createElement("span");
             paramsNode2.innerHTML = str;
