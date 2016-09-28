@@ -81,7 +81,7 @@ function getModuleof(memberof, kind) {
     return getModule(memberof);
 }
 
-var globalTypes1 = ["Date", "Function", "T"];
+var globalTypes1 = ["Date", "Function", "T", "Map"];
 var globalTypes2 = ["number", "string", "any", "array", "boolean", "enum", "void"];
 
 function getGlobalTypeClass () {
@@ -126,13 +126,23 @@ function getClassHref(className) {
 }
 
 
-function replaceParam(paramsListStr, param) {
+function replaceParam(paramsListStr, param, needDefault) {
     var str = paramsListStr.replace(/\{param_name\}/g, param.name);
 
     str = str.replace(/\{param_type_class\}/g, getTypeClassName(param.type));
     str = str.replace(/\{param_type\}/g, replaceChars(param.type || "any"));
 
-    str = str.replace(/\{param_type_href\}/g, getTypeHref(param.type));
+    if (needDefault) {
+
+        if (param.question == true) {
+            str = str.replace(/:/, "?:");
+        }
+    
+        if (param.default) {
+            str = str.replace(/\{a_param_type_href\}/g, '{a_param_type_href} = ' + param.default);
+        }
+    }
+
     str = str.replace(/\{a_param_type_href\}/g, getTypeA(param["type"]));
 
     str = str.replace(/\{param_description\}/g, param.description);
@@ -158,19 +168,23 @@ function getReplacedStr(newNodestr, member) {
     var description = getFirstSpan(member["description"]);
     if (member["scope"] == "static") {
         if (member["kind"] == "member") {
-            description = "[常量] " + description;
+            description = "【常量】" + description;
         }
         else {
-            description = "[静态] " + description;
+            description = "【静态】" + description;
         }
         newNodestr = newNodestr.replace(/\{default\}/g, member["default"]);
     }
 
     if (member["rwType"] == 1) {
-        description = "[只读] " + description;
+        description = "【只读】" + description;
     }
     if (member["rwType"] == 2) {
-        description = "[只写] " + description;
+        description = "【只写】" + description;
+    }
+
+    if (member["deprecated"] == true) {
+        description = "【废弃】" + description;
     }
 
     newNodestr = newNodestr.replace(/\{description_1\}/g, description);
