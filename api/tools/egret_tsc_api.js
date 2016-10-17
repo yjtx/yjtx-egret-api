@@ -587,41 +587,57 @@ function getComments(text, pos, obj) {
 
     var language = globals.getLanguage();
     var noteIdx = -1;
+    var baseIdx = -1;
     for (var i2 = noteStringBlocks.length - 1; i2 >= 0; i2--) {
         var doc = noteStringBlocks[i2].toLowerCase();
-        var reg = new RegExp("@language.*" + language);
+        var reg = new RegExp("@language[\\s]+" + language);
 
         if (doc.match(reg)) {
             noteIdx = i2;
-            break;
+        }
+        else if (!doc.match(/@language[\s]+/) && !doc.match(/^[\s]*\/\/+/)) {
+            baseIdx = i2;
         }
     }
 
-    var noteInfoBlocks = [];
+    var notes = {};
+    if (baseIdx != -1) {
+        var doc = noteStringBlocks[baseIdx];
+        if (doc == null) {
+            console.log("sss")
+        }
+
+        addTo(notes, analyzedoc.analyze(doc));
+    }
+
     if (noteIdx != -1) {//当前语言的注释
         var doc = noteStringBlocks[noteIdx];
         if (doc == null) {
             console.log("sss")
         }
-        noteInfoBlocks.push(analyzedoc.analyze(doc));
-        obj["noNote"] = false;
+        addTo(notes, analyzedoc.analyze(doc));
     }
-    else {
-        if (noteStringBlocks.length) {
-            //for (var i = 0; i < noteStringBlocks.length; i++) {
-            //    var doc = noteStringBlocks[i];
-            //    noteInfoBlocks.push(analyzedoc.analyze(doc));
-            //}
+
+    var noteInfoBlocks = [];
+
+    if (baseIdx == -1 && noteIdx == -1) {//没有找到基础注释
+        if (noteStringBlocks.length) {//找到注释的最后靠近api的那个注释
             var doc = noteStringBlocks[noteStringBlocks.length - 1];
 
             var docInfo = analyzedoc.analyze(doc);
             noteInfoBlocks.push(docInfo);
+
             obj["noNote"] = (docInfo["copy"] == null && docInfo["inheritDoc"] == null) && (docInfo["description"] == null || docInfo["description"] == "");
         }
         else {
             obj["noNote"] = true;
         }
     }
+    else {
+        obj["noNote"] = (notes["copy"] == null && notes["inheritDoc"] == null) && (notes["description"] == null || notes["description"] == "");
+        noteInfoBlocks.push(notes);
+    }
+
     obj["docs"] = noteInfoBlocks;
 
     if (text.indexOf("{", contentpos) >= 0) {
@@ -629,6 +645,12 @@ function getComments(text, pos, obj) {
     }
     else {
         obj["content"] = trim.trimAll(text.substring(contentpos));
+    }
+}
+
+function addTo(orgObj, addObj) {
+    for (var key in addObj) {
+        orgObj[key] = addObj[key];
     }
 }
 
