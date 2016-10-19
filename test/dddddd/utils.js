@@ -183,8 +183,8 @@ function getReplacedStr(newNodestr, member) {
         description = "【只写】" + description;
     }
 
-    if (member["deprecated"] == true) {
-        description = "【废弃】" + description;
+    if (member["deprecated"] != null) {
+        description = "【废弃】" + description + " " + member["deprecated"] ;
     }
 
     newNodestr = newNodestr.replace(/\{description_1\}/g, description);
