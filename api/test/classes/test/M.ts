@@ -26,11 +26,12 @@ module yjtx {
 
         /**
          * yjtxM1m3
+         * @deprecated
          */
         m3:string = "yjtxM1m3";
 
         /**
-         * @deprecated
+         * @deprecated asdfasdf
          */
         m4:string;
 

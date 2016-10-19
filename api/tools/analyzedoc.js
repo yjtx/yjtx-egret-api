@@ -176,11 +176,15 @@ exports.analyze = function analyze(doc) {
             item = item.substring(1);
         }
 
-        if (item.indexOf("private") == 0) {//private
+        if (item.indexOf("private") == 0 || item.indexOf("internal") == 0) {//private，internal
             docInfo["private"] = true;
         }
         else if (item.indexOf("deprecated") == 0) {//deprecated
-            docInfo["deprecated"] = true;
+            //docInfo["deprecated"] = true;
+
+            var temp = item.match(/^deprecated(\s)*/)[0];
+            var des1 = item.substring(temp.length);
+            docInfo["deprecated"] = trim.trimAll(des1);
         }
         else if (item.indexOf("readOnly") == 0) {//readOnly
             docInfo["rwType"] = 1;
@@ -188,7 +192,7 @@ exports.analyze = function analyze(doc) {
         else if (item.indexOf("writeOnly") == 0) {//writeOnly
             docInfo["rwType"] = 2;
         }
-        else if (item.indexOf("inheritDoc") == 0) {//deprecated
+        else if (item.indexOf("inheritDoc") == 0) {//inheritDoc
             docInfo["inheritDoc"] = true;
         }
         else if (item.indexOf("param") == 0) {//param
@@ -325,7 +329,7 @@ exports.analyze = function analyze(doc) {
             var docName =docItems[0];
             var arr = [ "copy", "default", "example",
                 "includeExample", "inheritDoc",
-                "param", "params", "private",
+                "param", "params", "private", "internal",
                 "return", "returns", "event",
                 "version", "platform", "deprecated",
                 "see", "state", "skinPart"];
