@@ -6,7 +6,6 @@
 			"name": "bitmapData",
 			"memberof": "egret.Texture",
 			"scope": "instance",
-			"rwType": 1,
 			"description": "被引用的 BitmapData 对象。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
@@ -65,7 +64,9 @@
 			"type": "void",
 			"name": "dispose",
 			"memberof": "egret.RenderTexture",
-			"scope": "instance"
+			"scope": "instance",
+			"inheritDoc": true,
+			"description": "释放纹理"
 		},
 		{
 			"kind": "function",
@@ -102,6 +103,7 @@
 			"name": "getPixel32",
 			"memberof": "egret.RenderTexture",
 			"scope": "instance",
+			"inheritDoc": true,
 			"params": [
 				{
 					"name": "x",
@@ -114,6 +116,43 @@
 					"description": ""
 				}
 			]
+		},
+		{
+			"kind": "function",
+			"type": "number[]",
+			"name": "getPixels",
+			"memberof": "egret.Texture",
+			"scope": "instance",
+			"description": "获取指定像素区域的颜色值",
+			"returns": "指定像素区域的颜色值",
+			"version": "Egret 3.2.1",
+			"platform": "Web",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"description": "像素区域的X轴坐标"
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"description": "像素区域的Y轴坐标"
+				},
+				{
+					"name": "width",
+					"type": "number",
+					"default": "1",
+					"description": "像素点的Y轴坐标"
+				},
+				{
+					"name": "height",
+					"type": "number",
+					"default": "1",
+					"description": "像素点的Y轴坐标"
+				}
+			],
+			"inherited": true,
+			"inherits": "egret.Texture"
 		},
 		{
 			"kind": "function",
@@ -181,7 +220,7 @@
 		"description": "RenderTexture 是动态纹理类，他实现了将显示对象及其子对象绘制成为一个纹理的功能",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
-		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;RenderTexture&nbsp;类绘制显示对象。<br/>&nbsp;*/<br/>class&nbsp;RenderTextureExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;URLLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;new&nbsp;egret.URLLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置加载方式为纹理<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.dataFormat&nbsp;=&nbsp;egret.URLLoaderDataFormat.TEXTURE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url:string&nbsp;=&nbsp;&quot;resource/assets/egret_icon.png&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;request:egret.URLRequest&nbsp;=&nbsp;new&nbsp;egret.URLRequest(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(request);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.URLLoader&nbsp;=&nbsp;&lt;egret.URLLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture:egret.Texture&nbsp;=&nbsp;&lt;egret.Texture&gt;loader.data;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//使用&nbsp;RenderTexture&nbsp;进行显示<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;renderTexture:egret.RenderTexture&nbsp;=&nbsp;new&nbsp;egret.RenderTexture();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;renderTexture.drawToTexture(new&nbsp;egret.Bitmap(texture));<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//将绘制好的&nbsp;RenderTexture&nbsp;进行显示<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;bitmap:egret.Bitmap&nbsp;=&nbsp;new&nbsp;egret.Bitmap(renderTexture);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(bitmap);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;RenderTexture&nbsp;类绘制显示对象。<br/>&nbsp;*/<br/>class&nbsp;RenderTextureExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.startLoad();<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;startLoad():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;ImageLoader&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.ImageLoader&nbsp;=&nbsp;new&nbsp;egret.ImageLoader();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加加载完成侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.addEventListener(egret.Event.COMPLETE,&nbsp;this.onLoadComplete,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url:string&nbsp;=&nbsp;&quot;resource/assets/egret_icon.png&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//开始加载<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loader.load(url);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onLoadComplete(event:egret.Event):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;loader:egret.ImageLoader&nbsp;=&nbsp;&lt;egret.ImageLoader&gt;event.target;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取加载到的纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;bitmapData:egret.BitmapData&nbsp;=&nbsp;loader.data;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建纹理对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;texture&nbsp;=&nbsp;new&nbsp;egret.Texture();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texture.bitmapData&nbsp;=&nbsp;bitmapData;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//使用&nbsp;RenderTexture&nbsp;进行显示<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;renderTexture:egret.RenderTexture&nbsp;=&nbsp;new&nbsp;egret.RenderTexture();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;renderTexture.drawToTexture(new&nbsp;egret.Bitmap(texture));<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//将绘制好的&nbsp;RenderTexture&nbsp;进行显示<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;bitmap:egret.Bitmap&nbsp;=&nbsp;new&nbsp;egret.Bitmap(renderTexture);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(bitmap);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 		"augments": [
 			"egret.Texture",
 			"egret.HashObject"

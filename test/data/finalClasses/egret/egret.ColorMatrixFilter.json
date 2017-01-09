@@ -15,7 +15,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<number>",
+			"type": "number[]",
 			"name": "matrix",
 			"memberof": "egret.ColorMatrixFilter",
 			"scope": "instance",
@@ -48,7 +48,7 @@
 			"params": [
 				{
 					"name": "matrix",
-					"type": "Array<number>",
+					"type": "number[]",
 					"default": "null",
 					"description": ""
 				}

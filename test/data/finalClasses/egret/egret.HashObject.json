@@ -39,6 +39,7 @@
 			}
 		],
 		"children": [
+			"egret.BitmapData",
 			"egret.Graphics",
 			"egret.SpriteSheet",
 			"egret.Texture",
@@ -55,8 +56,7 @@
 			"egret.gui.ClassFactory",
 			"egret.gui.SkinBasicLayout",
 			"egret.gui.OverrideBase",
-			"egret.gui.State",
-			"dragonBones.Slot"
+			"egret.gui.State"
 		]
 	}
 }

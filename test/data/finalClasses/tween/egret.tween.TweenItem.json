@@ -243,7 +243,15 @@
 			"scope": "instance",
 			"description": "播放Tween",
 			"version": "Egret 3.1.8",
-			"platform": "Web,Native"
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "time",
+					"question": true,
+					"type": "number",
+					"description": ""
+				}
+			]
 		},
 		{
 			"kind": "function",
@@ -280,6 +288,16 @@
 			"inherited": true,
 			"inherits": "egret.EventDispatcher",
 			"description": "从 EventDispatcher 对象中删除侦听器。如果没有向 EventDispatcher 对象注册任何匹配的侦听器，则对此方法的调用没有任何效果。"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "stop",
+			"memberof": "egret.tween.TweenItem",
+			"scope": "instance",
+			"description": "停止Tween",
+			"version": "Egret 3.1.8",
+			"platform": "Web,Native"
 		},
 		{
 			"kind": "function",

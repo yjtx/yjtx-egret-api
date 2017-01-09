@@ -20,7 +20,7 @@
 			"name": "Ticker",
 			"memberof": "egret.Ticker",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native"
 		},
@@ -137,7 +137,7 @@
 			"returns": "",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"deprecated": true
+			"deprecated": ""
 		},
 		{
 			"kind": "function",
@@ -216,7 +216,7 @@
 			"memberof": "egret.Ticker",
 			"scope": "instance",
 			"description": "暂停",
-			"deprecated": true
+			"deprecated": ""
 		},
 		{
 			"kind": "function",
@@ -227,7 +227,7 @@
 			"description": "注册帧回调事件，同一函数的重复监听会被忽略。推荐使用 egret.startTick 替代此方法。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"deprecated": true,
+			"deprecated": "",
 			"params": [
 				{
 					"name": "listener",
@@ -290,7 +290,7 @@
 			"memberof": "egret.Ticker",
 			"scope": "instance",
 			"description": "继续",
-			"deprecated": true
+			"deprecated": ""
 		},
 		{
 			"kind": "function",
@@ -301,7 +301,7 @@
 			"description": "取消侦听enterFrame事件。推荐使用 egret.stopTick 替代此方法。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"deprecated": true,
+			"deprecated": "",
 			"params": [
 				{
 					"name": "listener",
@@ -349,7 +349,7 @@
 		"filename": "extension\\game\\player\\Ticker.ts",
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
-		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;Ticker&nbsp;注册和删除帧函数。<br/>&nbsp;*/<br/>class&nbsp;TickerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//注册事件侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;register&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;passTime:number&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onTick(dt:number):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//累加时间，dt是帧时间间隔以毫秒为单位<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.passTime&nbsp;+=&nbsp;dt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onTick&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//经过5秒后删除帧函数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.passTime&nbsp;&gt;&nbsp;5000)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().unregister(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;unregister&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;Ticker&nbsp;注册和删除帧函数。<br/>&nbsp;*/<br/>class&nbsp;TickerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//注册事件侦听<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().register(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;register&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;passTime:number&nbsp;=&nbsp;0;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onTick(dt:number):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//累加时间，dt是帧时间间隔以毫秒为单位<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.passTime&nbsp;+=&nbsp;dt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;onTick&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//经过5秒后删除帧函数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(this.passTime&nbsp;&gt;&nbsp;5000)&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Ticker.getInstance().unregister(this.onTick,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;unregister&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 		"augments": [
 			"egret.EventDispatcher",
 			"egret.HashObject"
