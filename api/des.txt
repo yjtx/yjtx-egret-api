@@ -1,4 +1,4 @@
-node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
+node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/src --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret
 node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/build --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret_bin
 
 node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret2.0
@@ -17,6 +17,7 @@ node tscdoc.js --path test/classes/dts --output ../test/data/ --examples test/ex
 
 node tscdoc.js --path test/classes/m --output ../test/data/ --examples test/examples --language zh_cn
 node tscdoc.js --path test/examples --output ../test/data/ --examples test/examples --language zh_cn
+node tscdoc.js --path test/classes/base --output ../test/data/ --examples test/examples --language zh_cn
 
 
 
@@ -32,3 +33,5 @@ node tscdoc.js --path /Users/yjtx/Sites/Egret/egret-game-library/tiled/libsrc/sr
 
 //发布
 node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src /Users/yjtx/Sites/Egret/DragonBones/core /Users/yjtx/Sites/Egret/DragonBones/renderer/egret/src/dragonbones --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret db db
+
+node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret

@@ -65,8 +65,6 @@ function formatFile(sourceFile, parent) {
     for (var i = 0; i < length; i++) {
         var statement = statements[i];
 
-        if (statement.flags & TYPEFLAG.Ambient /* Ambient */) {
-        }
         //else
         if (statement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
             formatModule(statement, text, parent, statement.flags == TYPEFLAG.Ambient /* Ambient */ || statement.flags == 65540 ? -1 : 0);
@@ -88,9 +86,6 @@ function formatFile(sourceFile, parent) {
 }
 
 function formatModule(statement, text, parent, isPrivate) {
-    if (statement.flags & TYPEFLAG.Ambient /* Ambient */) {
-        //return;
-    }
 
     if (statement.kind == TYPEFLAG.ModuleDeclaration /* ModuleDeclaration */) {
         var objName = statement.name.text;
@@ -152,7 +147,10 @@ function formatModule(statement, text, parent, isPrivate) {
 function formatClass(statement, text, parent, hasModule, isPrivate) {
     var objName = statement.name.text;
     parent[objName] = {"$_tree_": {}};
-
+    
+        if (objName == "Bitmap") {
+            console.log(1);
+        }
     switch (statement.kind) {
         case TYPEFLAG.EnumDeclaration /* EnumDeclaration */
         :
@@ -277,7 +275,9 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         }
 
         if (declarations && declarations.length > 0) {
-            if (member.declarationList.flags & TYPEFLAG.Const /* Const */) {
+            if (checkKey(member, TYPEFLAG.ConstKeyword)) {
+            // }
+            // if (member.declarationList.flags & TYPEFLAG.Const /* Const */) {
                 var nextMembers;
 
                 if (declarations[0].initializer && declarations[0].initializer.properties) {
@@ -359,9 +359,11 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         }
 
         name = member.name.text;
-
+        if (name == "boundsForUpdate") {
+            console.log(1);
+        }
         //解决静态变量和属性重名后被替换的问题
-        if (isStatic || flags & TYPEFLAG.Static /* Static */) {
+        if (isStatic || checkKey(member, TYPEFLAG.StaticKeyword)) {
             name += "_#static";
         }
     }
@@ -450,10 +452,10 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         parent[name]["pType"] = "protected";
     }
     else if (isPrivate == -1) {
-        if (flags & TYPEFLAG.Protected /* Protected */) {
+        if (checkKey(member, TYPEFLAG.ProtectedKeyword)) {
             parent[name]["pType"] = "protected";
         }
-        else if (flags & TYPEFLAG.Private /* Private */) {
+        if (checkKey(member, TYPEFLAG.PrivateKeyword)) {
             parent[name]["pType"] = "private";
         }
         else {
@@ -477,13 +479,14 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
         }
     }
     else {
-        if (flags == 0 || (flags & TYPEFLAG.Public /* Public */)) {
+        
+        if (checkKey(member, TYPEFLAG.PublicKeyword)) {
             parent[name]["pType"] = "public";
         }
-        else if (flags & TYPEFLAG.Protected /* Protected */) {
+        else if (checkKey(member, TYPEFLAG.ProtectedKeyword)) {
             parent[name]["pType"] = "protected";
         }
-        else if (flags & TYPEFLAG.Private /* Private */) {
+        else if (checkKey(member, TYPEFLAG.PrivateKeyword)) {
             parent[name]["pType"] = "private";
         }
         else {
@@ -512,7 +515,7 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
     if (name == "constructor") {
         parent[name]["scope"] = "instance";
     }
-    else if (flags & TYPEFLAG.Static /* Static */) {
+    else if (checkKey(member, TYPEFLAG.StaticKeyword)) {
         parent[name]["scope"] = "static";
     }
     else if (member.kind == TYPEFLAG.EnumMember /* EnumMember */) {
@@ -654,10 +657,29 @@ function addTo(orgObj, addObj) {
     }
 }
 
-function isExport(statement) {
-
-    if (!(statement.flags & TYPEFLAG.Export /* Export */)) {
-        return false;
+function checkKey(statement, kindKey) {
+    var keys = getKindKeys(statement);
+    if (keys.indexOf(kindKey) >= 0) {
+        return true;
     }
-    return true;
+    
+    return false;
+}
+
+function isExport(statement) {
+    return checkKey(statement, TYPEFLAG.ExportKeyword);
+}
+
+function getKindKeys(statement) {
+     if (statement.modifiers) {
+         var arr = [];
+         for (var i = 0; i < statement.modifiers.length; i++) {
+             var modifier = statement.modifiers[i];
+             arr.push(modifier.kind);
+         }
+        
+        return arr;
+    }
+
+    return [];
 }

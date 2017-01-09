@@ -4,6 +4,7 @@
 
 exports.screening = function (tempClassObjs) {
     //去掉非公共的
+    console.log("screening")
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
 

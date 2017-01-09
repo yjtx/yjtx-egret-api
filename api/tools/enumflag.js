@@ -11,7 +11,6 @@ var id4 = {
     InterfaceDeclaration:186,
     ClassDeclaration:185,
     EnumDeclaration:188,
-    ModuleDeclaration:189,
     ImplementsKeyword:100,
     ExtendsKeyword:77,
     EnumMember:200,
@@ -41,7 +40,6 @@ var id8 = {
     InterfaceDeclaration:218,
     ClassDeclaration:217,
     EnumDeclaration:220,
-    ModuleDeclaration:221,
     ImplementsKeyword:106,
     ExtendsKeyword:83,
     EnumMember:250,
@@ -63,15 +61,21 @@ var id8 = {
 };
 
 var idOb = {
-    Export : ts.NodeFlags.Export,
-    Ambient : ts.NodeFlags.Ambient,
-    Public:ts.NodeFlags.Public,
-Private:ts.NodeFlags.Private,
-Protected:ts.NodeFlags.Protected,
-Static:ts.NodeFlags.Static,
-Abstract:ts.NodeFlags.Abstract,
-Const:ts.NodeFlags.Const,
+    // Export : ts.ModifierFlags.Export,
+    Ambient : ts.ModifierFlags.Ambient,
+    // Public:ts.ModifierFlags.Public,
+    // Private:ts.ModifierFlags.Private,
+    // Protected:ts.ModifierFlags.Protected,
+    // Static:ts.ModifierFlags.Static,
+    // Abstract:ts.ModifierFlags.Abstract,
+    // Const:ts.ModifierFlags.Const,
 
+    ProtectedKeyword:ts.SyntaxKind.ProtectedKeyword,
+    PrivateKeyword:ts.SyntaxKind.PrivateKeyword,
+    PublicKeyword:ts.SyntaxKind.PublicKeyword,
+    ConstKeyword:ts.SyntaxKind.ConstKeyword,
+    StaticKeyword:ts.SyntaxKind.StaticKeyword,
+    ExportKeyword:ts.SyntaxKind.ExportKeyword,
     ExtendsKeyword:ts.SyntaxKind.ExtendsKeyword,
     ImplementsKeyword:ts.SyntaxKind.ImplementsKeyword,
     Constructor:ts.SyntaxKind.Constructor,
@@ -105,8 +109,4 @@ Const:ts.NodeFlags.Const,
 
 exports.getEnumFlag = function () {
     return idOb;
-};
-
-exports.getTscApi = function () {
-    return require('../core/typescript/tsc_api_1.4.js');
 };

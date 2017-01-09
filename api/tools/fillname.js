@@ -77,7 +77,6 @@ function ansClassFullName(className, memberof) {
         }
         paramResult += ")";
         tempObj.push(paramResult);
-
         className = className.substring(0, sIdx)
                     + preChar + (tempObj.length - 1) + nestChar
                     + className.substring(eIdx + 1);

@@ -25,6 +25,8 @@ module yjtx {
             return 1;
         }
 
+        readonly a5:number;
+
         f2(a:string, b:boolean):number {
             return 1;
         }
