@@ -1,7 +1,7 @@
 {
 	"globalFunction": [
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "addMovieGroup",
@@ -29,7 +29,7 @@
 			]
 		},
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "dragonBones.Movie",
 			"name": "buildMovie",
@@ -52,7 +52,7 @@
 			]
 		},
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "string[]",
 			"name": "getMovieNames",
@@ -69,7 +69,7 @@
 			]
 		},
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "boolean",
 			"name": "hasMovieGroup",
@@ -86,7 +86,7 @@
 			]
 		},
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "removeAllMovieGroup",
@@ -96,7 +96,7 @@
 			"version": "DragonBones 4.7"
 		},
 		{
-			"filename": "Movie.ts",
+			"filename": "egret\\Movie.ts",
 			"kind": "globalFunction",
 			"type": "void",
 			"name": "removeMovieGroup",

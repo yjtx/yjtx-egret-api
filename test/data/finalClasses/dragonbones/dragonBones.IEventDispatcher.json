@@ -34,7 +34,6 @@
 			"memberof": "dragonBones.IEventDispatcher",
 			"scope": "instance",
 			"description": "是否包含指定类型的事件。",
-			"returns": "[true: 包含, false: 不包含]",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
@@ -77,11 +76,11 @@
 		"kind": "interface",
 		"name": "IEventDispatcher",
 		"memberof": "dragonBones",
-		"filename": "event\\EventObject.ts",
+		"filename": "event\\IEventDispatcher.ts",
 		"description": "事件接口。",
 		"version": "DragonBones 4.5",
 		"children": [
-			"dragonBones.IArmatureDisplay"
+			"dragonBones.IArmatureProxy"
 		]
 	}
 }

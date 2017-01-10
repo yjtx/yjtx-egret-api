@@ -119,12 +119,15 @@
 		},
 		{
 			"kind": "member",
-			"type": "any",
+			"type": "dragonBones.CustomData",
 			"name": "data",
 			"memberof": "dragonBones.EventObject",
 			"scope": "instance",
-			"description": "扩展的数据。",
-			"version": "DragonBones 4.5"
+			"description": "自定义数据",
+			"see": [
+				"dragonBones.CustomData"
+			],
+			"version": "DragonBones 5.0"
 		},
 		{
 			"kind": "member",
@@ -163,15 +166,6 @@
 			"memberof": "dragonBones.EventObject",
 			"scope": "instance",
 			"description": "事件类型。",
-			"version": "DragonBones 4.5"
-		},
-		{
-			"kind": "member",
-			"type": "any",
-			"name": "userData",
-			"memberof": "dragonBones.EventObject",
-			"scope": "instance",
-			"description": "用户数据。",
 			"version": "DragonBones 4.5"
 		}
 	],

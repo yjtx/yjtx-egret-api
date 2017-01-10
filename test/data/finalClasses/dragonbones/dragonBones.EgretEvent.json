@@ -45,7 +45,7 @@
 			"name": "ANIMATION_FRAME_EVENT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FRAME_EVENT"
 			],
@@ -57,7 +57,7 @@
 			"name": "BONE_FRAME_EVENT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FRAME_EVENT"
 			],
@@ -108,6 +108,7 @@
 			"name": "COMPLETE",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.COMPLETE"
 			],
@@ -171,6 +172,7 @@
 			"name": "FADE_IN",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FADE_IN"
 			],
@@ -182,6 +184,7 @@
 			"name": "FADE_IN_COMPLETE",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FADE_IN_COMPLETE"
 			],
@@ -193,6 +196,7 @@
 			"name": "FADE_OUT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FADE_OUT"
 			],
@@ -204,6 +208,7 @@
 			"name": "FADE_OUT_COMPLETE",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FADE_OUT_COMPLETE"
 			],
@@ -241,6 +246,7 @@
 			"name": "FRAME_EVENT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FRAME_EVENT"
 			],
@@ -265,6 +271,7 @@
 			"name": "LOOP_COMPLETE",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.LOOP_COMPLETE"
 			],
@@ -276,7 +283,7 @@
 			"name": "MOVEMENT_FRAME_EVENT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.FRAME_EVENT"
 			],
@@ -340,7 +347,7 @@
 			"name": "SOUND",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.SOUND_EVENT"
 			],
@@ -365,6 +372,7 @@
 			"name": "SOUND_EVENT",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.SOUND_EVENT"
 			],
@@ -376,6 +384,7 @@
 			"name": "START",
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "static",
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject.START"
 			],
@@ -388,7 +397,9 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
+			"deprecated": "",
 			"see": [
+				"#eventObject",
 				"dragonBones.EventObject#animationName"
 			]
 		},
@@ -399,7 +410,9 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
+			"deprecated": "",
 			"see": [
+				"#eventObject",
 				"dragonBones.EventObject#animationState"
 			]
 		},
@@ -410,7 +423,9 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
+			"deprecated": "",
 			"see": [
+				"#eventObject",
 				"dragonBones.EventObject#armature"
 			]
 		},
@@ -421,7 +436,9 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
+			"deprecated": "",
 			"see": [
+				"#eventObject",
 				"dragonBones.EventObject#bone"
 			]
 		},
@@ -487,6 +504,9 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "事件对象。",
+			"see": [
+				"dragonBones.EventObject"
+			],
 			"version": "DragonBones 4.5"
 		},
 		{
@@ -512,7 +532,7 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject#name"
 			]
@@ -537,7 +557,7 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#animationName"
 			]
@@ -549,7 +569,9 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
+			"deprecated": "",
 			"see": [
+				"#eventObject",
 				"dragonBones.EventObject#slot"
 			]
 		},
@@ -560,7 +582,7 @@
 			"memberof": "dragonBones.EgretEvent",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EventObject#name"
 			]
@@ -600,7 +622,7 @@
 			"memberof": "egret.Event",
 			"scope": "static",
 			"description": "从对象池中取出或创建一个新的事件实例。我们建议您尽可能使用Event.create()和Event.release() 这一对方法来创建和释放事件对象，这一对方法会将事件实例在内部缓存下来供下次循环使用，减少对象的创建次数,从而获得更高的代码运行性能。<br/>注意：若使用此方法来创建自定义事件的实例，自定义的构造函数参数列表必须跟Event类一致。",
-			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;var&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;let&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
 			"see": [
 				"#clean()"
 			],
@@ -708,7 +730,7 @@
 			"memberof": "egret.Event",
 			"scope": "static",
 			"description": "释放一个事件对象，并缓存到对象池。我们建议您尽可能使用Event.create()和Event.release() 这一对方法来创建和释放事件对象，这一对方法会将事件实例在内部缓存下来供下次循环使用，减少对象的创建次数,从而获得更高的代码运行性能。<br/>注意：此方法只能传入由Event.create()创建的事件实例，传入非法对象实例可能会导致报错。",
-			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;var&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;let&nbsp;event&nbsp;=&nbsp;Event.create(Event,type,&nbsp;bubbles);<br/>&nbsp;&nbsp;&nbsp;event.data&nbsp;=&nbsp;data;&nbsp;&nbsp;&nbsp;//可选，若指定义事件上需要附加其他参数，可以在获取实例后在此处设置。<br/>&nbsp;&nbsp;&nbsp;this.dispatchEvent(event);<br/>&nbsp;&nbsp;&nbsp;Event.release(event);<br/></pre>",
 			"see": [
 				"#clean()"
 			],
@@ -763,7 +785,7 @@
 		"kind": "class",
 		"name": "EgretEvent",
 		"memberof": "dragonBones",
-		"filename": "EgretArmatureDisplay.ts",
+		"filename": "egret\\EgretArmatureDisplay.ts",
 		"description": "Egret 事件。",
 		"version": "DragonBones 4.5",
 		"augments": [

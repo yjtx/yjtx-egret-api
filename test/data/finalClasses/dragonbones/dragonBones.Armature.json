@@ -32,7 +32,7 @@
 			"name": "cacheFrameRate",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "动画缓存的帧率，当设置一个大于 0 的帧率时，将会开启动画缓存。通过将动画数据缓存在内存中来提高运行性能，会有一定的内存开销。帧率不宜设置的过高，通常跟动画的帧率相当且低于程序运行的帧率。开启动画缓存后，某些功能将会失效，比如 Bone 和 Slot 的 offset 属性等。",
+			"description": "动画缓存帧率，当设置的值大于 0 的时，将会开启动画缓存。通过将动画数据缓存在内存中来提高运行性能，会有一定的内存开销。帧率不宜设置的过高，通常跟动画的帧率相当且低于程序运行的帧率。开启动画缓存后，某些功能将会失效，比如 Bone 和 Slot 的 offset 属性等。",
 			"see": [
 				"dragonBones.DragonBonesData#frameRate",
 				"dragonBones.ArmatureData#frameRate"
@@ -41,7 +41,15 @@
 		},
 		{
 			"kind": "member",
-			"type": "dragonBones.IArmatureDisplay|any",
+			"type": "dragonBones.WorldClock",
+			"name": "clock",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"inheritDoc": true
+		},
+		{
+			"kind": "member",
+			"type": "any",
 			"name": "display",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
@@ -55,11 +63,21 @@
 			"name": "enableCache",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#cacheFrameRate"
 			],
 			"default": "false"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.IEventDispatcher",
+			"name": "eventDispatcher",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "获取事件监听器。",
+			"version": "DragonBones 5.0"
 		},
 		{
 			"kind": "member",
@@ -72,6 +90,16 @@
 			"default": "BaseObject._hashCode++",
 			"inherited": true,
 			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
+			"name": "inheritAnimation",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "是否继承父骨架的动画状态。",
+			"default": "true",
+			"version": "DragonBones 4.5"
 		},
 		{
 			"kind": "member",
@@ -102,10 +130,19 @@
 		{
 			"kind": "member",
 			"type": "any",
+			"name": "replacedTexture",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图数据。",
+			"version": "DragonBones 4.5"
+		},
+		{
+			"kind": "member",
+			"type": "any",
 			"name": "userData",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "可以用于存储临时数据。",
+			"description": "用于存储临时数据。",
 			"version": "DragonBones 3.0"
 		}
 	],
@@ -116,22 +153,18 @@
 			"name": "addBone",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "将一个指定的骨骼添加到骨架中。",
-			"see": [
-				"dragonBones.Bone"
-			],
-			"version": "DragonBones 3.0",
+			"deprecated": "",
 			"params": [
 				{
 					"name": "value",
 					"type": "dragonBones.Bone",
-					"description": "需要添加的骨骼。"
+					"description": ""
 				},
 				{
 					"name": "parentName",
 					"type": "string",
 					"default": "null",
-					"description": "需要添加到父骨骼的名称，如果未设置，则添加到骨架根部。"
+					"description": ""
 				}
 			]
 		},
@@ -141,18 +174,20 @@
 			"name": "addEventListener",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "添加事件。",
-			"version": "DragonBones 3.0",
+			"deprecated": "",
+			"see": [
+				"dragonBones.Armature#eventDispatcher"
+			],
 			"params": [
 				{
 					"name": "type",
 					"type": "EventStringType",
-					"description": "事件类型。"
+					"description": ""
 				},
 				{
 					"name": "listener",
 					"type": "Function",
-					"description": "事件回调。"
+					"description": ""
 				},
 				{
 					"name": "target",
@@ -167,21 +202,17 @@
 			"name": "addSlot",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "将一个指定的插槽添加到骨架中。",
-			"see": [
-				"dragonBones.Slot"
-			],
-			"version": "DragonBones 3.0",
+			"deprecated": "",
 			"params": [
 				{
 					"name": "value",
 					"type": "dragonBones.Slot",
-					"description": "需要添加的插槽。"
+					"description": ""
 				},
 				{
 					"name": "parentName",
 					"type": "string",
-					"description": "需要添加到的父骨骼名称。"
+					"description": ""
 				}
 			]
 		},
@@ -191,18 +222,17 @@
 			"name": "advanceTime",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "更新骨架和动画。 (可以使用时钟实例或显示容器来更新)",
+			"description": "更新骨架和动画。",
 			"see": [
 				"dragonBones.IAnimateble",
-				"dragonBones.WorldClock",
-				"dragonBones.IArmatureDisplay"
+				"dragonBones.WorldClock"
 			],
 			"version": "DragonBones 3.0",
 			"params": [
 				{
 					"name": "passedTime",
 					"type": "number",
-					"description": "两帧之前的时间间隔。 (以秒为单位)"
+					"description": "两帧之间的时间间隔。 (以秒为单位)"
 				}
 			]
 		},
@@ -245,11 +275,32 @@
 		},
 		{
 			"kind": "function",
+			"type": "dragonBones.Slot",
+			"name": "containsPoint",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "判断点是否在所有插槽的自定义包围盒内。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"description": "点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"description": "点的垂直坐标。（骨架内坐标系）"
+				}
+			]
+		},
+		{
+			"kind": "function",
 			"type": "void",
 			"name": "dispose",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "释放骨架。 (会回收到内存池)",
+			"description": "释放骨架。 (回收到对象池)",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -258,16 +309,15 @@
 			"name": "enableAnimationCache",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "开启动画缓存。",
+			"deprecated": "",
 			"see": [
 				"#cacheFrameRate"
 			],
-			"version": "DragonBones 4.5",
 			"params": [
 				{
 					"name": "frameRate",
 					"type": "number",
-					"description": "动画缓存的帧率"
+					"description": ""
 				}
 			]
 		},
@@ -329,7 +379,7 @@
 			"name": "getDisplay",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#display"
 			]
@@ -340,7 +390,7 @@
 			"name": "getSlot",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "获取指定名称的插槽。",
+			"description": "获取插槽。",
 			"returns": "插槽。",
 			"see": [
 				"dragonBones.Slot"
@@ -388,18 +438,69 @@
 		},
 		{
 			"kind": "function",
-			"type": "void",
+			"type": "boolean",
 			"name": "hasEventListener",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "是否包含指定类型的事件。",
-			"returns": "[true: 包含, false: 不包含]",
-			"version": "DragonBones 3.0",
+			"deprecated": "",
+			"see": [
+				"dragonBones.Armature#eventDispatcher"
+			],
 			"params": [
 				{
 					"name": "type",
 					"type": "EventStringType",
-					"description": "事件类型。"
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Slot",
+			"name": "intersectsSegment",
+			"memberof": "dragonBones.Armature",
+			"scope": "instance",
+			"description": "判断线段是否与骨架的所有插槽的自定义包围盒相交。",
+			"returns": "线段从起点到终点相交的第一个自定义包围盒的插槽。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "xA",
+					"type": "number",
+					"description": "线段起点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "yA",
+					"type": "number",
+					"description": "线段起点的垂直坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "xB",
+					"type": "number",
+					"description": "线段终点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "yB",
+					"type": "number",
+					"description": "线段终点的垂直坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "intersectionPointA",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "线段从起点到终点与包围盒相交的第一个交点。（骨架内坐标系）"
+				},
+				{
+					"name": "intersectionPointB",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "线段从终点到起点与包围盒相交的第一个交点。（骨架内坐标系）"
+				},
+				{
+					"name": "normalRadians",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "碰撞点处包围盒切线的法线弧度。 [x: 第一个碰撞点处切线的法线弧度, y: 第二个碰撞点处切线的法线弧度]"
 				}
 			]
 		},
@@ -409,7 +510,7 @@
 			"name": "invalidUpdate",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "更新骨骼和插槽的变换。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)",
+			"description": "更新骨骼和插槽。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)",
 			"see": [
 				"dragonBones.Bone",
 				"dragonBones.Slot"
@@ -436,16 +537,12 @@
 			"name": "removeBone",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "将一个指定的骨骼从骨架中移除。",
-			"see": [
-				"dragonBones.Bone"
-			],
-			"version": "DragonBones 3.0",
+			"deprecated": "",
 			"params": [
 				{
 					"name": "value",
 					"type": "dragonBones.Bone",
-					"description": "需要移除的骨骼。"
+					"description": ""
 				}
 			]
 		},
@@ -455,18 +552,20 @@
 			"name": "removeEventListener",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "移除事件。",
-			"version": "DragonBones 3.0",
+			"deprecated": "",
+			"see": [
+				"dragonBones.Armature#eventDispatcher"
+			],
 			"params": [
 				{
 					"name": "type",
 					"type": "EventStringType",
-					"description": "事件类型。"
+					"description": ""
 				},
 				{
 					"name": "listener",
 					"type": "Function",
-					"description": "事件回调。"
+					"description": ""
 				},
 				{
 					"name": "target",
@@ -481,16 +580,12 @@
 			"name": "removeSlot",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "将一个指定的插槽从骨架中移除。",
-			"see": [
-				"dragonBones.Slot"
-			],
-			"version": "DragonBones 3.0",
+			"deprecated": "",
 			"params": [
 				{
 					"name": "value",
 					"type": "dragonBones.Slot",
-					"description": "需要移除的插槽"
+					"description": ""
 				}
 			]
 		},
@@ -500,13 +595,13 @@
 			"name": "replaceTexture",
 			"memberof": "dragonBones.Armature",
 			"scope": "instance",
-			"description": "替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图数据。",
+			"description": "替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图类型。",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
 					"name": "texture",
 					"type": "any",
-					"description": "用来替换的贴图，根据渲染平台的不同，类型会有所不同，一般是 Texture 类型。"
+					"description": "贴图。"
 				}
 			]
 		},
@@ -557,8 +652,7 @@
 			"dragonBones.ArmatureData",
 			"dragonBones.Bone",
 			"dragonBones.Slot",
-			"dragonBones.Animation",
-			"dragonBones.IArmatureDisplayContainer"
+			"dragonBones.Animation"
 		],
 		"version": "DragonBones 3.0",
 		"augments": [

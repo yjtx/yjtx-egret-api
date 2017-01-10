@@ -13,6 +13,66 @@
 	"function": [
 		{
 			"kind": "function",
+			"name": "Transform",
+			"memberof": "dragonBones.Transform",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "skewX",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "skewY",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "scaleX",
+					"type": "number",
+					"default": "1.0",
+					"description": ""
+				},
+				{
+					"name": "scaleY",
+					"type": "number",
+					"default": "1.0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.Transform",
+			"name": "fromMatrix",
+			"memberof": "dragonBones.Transform",
+			"scope": "instance",
+			"description": "矩阵转换为变换。",
+			"version": "DragonBones 3.0",
+			"params": [
+				{
+					"name": "matrix",
+					"type": "dragonBones.Matrix",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
 			"type": "dragonBones.Transform",
 			"name": "toMatrix",
 			"memberof": "dragonBones.Transform",

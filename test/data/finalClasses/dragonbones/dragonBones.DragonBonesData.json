@@ -7,7 +7,7 @@
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "所有的骨架数据名称。",
+			"description": "所有骨架数据名称。",
 			"see": [
 				"#armatures"
 			],
@@ -19,7 +19,7 @@
 			"name": "armatures",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "所有的骨架数据。",
+			"description": "所有骨架数据。",
 			"see": [
 				"dragonBones.ArmatureData"
 			],
@@ -32,11 +32,8 @@
 			"name": "autoSearch",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]",
+			"description": "是否开启共享搜索。",
 			"default": "false",
-			"see": [
-				"dragonBones.ArmatureData"
-			],
 			"version": "DragonBones 4.5"
 		},
 		{
@@ -114,7 +111,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#removeDragonBonesData()"
 			]
@@ -125,7 +122,7 @@
 			"name": "getArmature",
 			"memberof": "dragonBones.DragonBonesData",
 			"scope": "instance",
-			"description": "获取指定名称的骨架。",
+			"description": "获取骨架。",
 			"see": [
 				"dragonBones.ArmatureData"
 			],
@@ -134,7 +131,7 @@
 				{
 					"name": "name",
 					"type": "string",
-					"description": "骨架数据骨架名称。"
+					"description": "骨架数据名称。"
 				}
 			]
 		},
@@ -180,7 +177,7 @@
 		"name": "DragonBonesData",
 		"memberof": "dragonBones",
 		"filename": "model\\DragonBonesData.ts",
-		"description": "龙骨数据，包含多个骨架数据。",
+		"description": "龙骨数据。一个龙骨数据包含多个骨架数据。",
 		"see": [
 			"dragonBones.ArmatureData"
 		],

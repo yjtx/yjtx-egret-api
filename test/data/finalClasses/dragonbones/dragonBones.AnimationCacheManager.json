@@ -7,8 +7,8 @@
 		"kind": "class",
 		"name": "AnimationCacheManager",
 		"memberof": "dragonBones",
-		"filename": "EgretArmatureDisplay.ts",
-		"deprecated": true,
+		"filename": "egret\\EgretArmatureDisplay.ts",
+		"deprecated": "",
 		"see": [
 			"dragonBones.Armature#cacheFrameRate",
 			"dragonBones.Armature#enableAnimationCache()"

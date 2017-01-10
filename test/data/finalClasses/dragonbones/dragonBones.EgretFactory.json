@@ -6,7 +6,7 @@
 			"name": "autoSearch",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)",
+			"description": "是否开启共享搜索。如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)",
 			"see": [
 				"dragonBones.DragonBonesData#autoSearch",
 				"dragonBones.TextureAtlasData#autoSearch"
@@ -23,7 +23,7 @@
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "static",
 			"rwType": 1,
-			"description": "一个可以直接使用的全局工厂实例.",
+			"description": "一个可以直接使用的全局工厂实例。",
 			"version": "DragonBones 4.7"
 		},
 		{
@@ -75,7 +75,7 @@
 					"description": "龙骨数据。"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
@@ -90,7 +90,7 @@
 			"name": "addSkeletonData",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#addDragonBonesData()"
 			],
@@ -114,7 +114,7 @@
 			"name": "addTextureAtlas",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#addTextureAtlasData()"
 			],
@@ -153,7 +153,7 @@
 					"description": "贴图集数据。"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
@@ -168,9 +168,10 @@
 			"name": "buildArmature",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "创建一个指定名称的骨架。",
+			"description": "创建一个骨架。",
 			"returns": "骨架",
 			"see": [
+				"dragonBones.ArmatureData",
 				"dragonBones.Armature"
 			],
 			"version": "DragonBones 3.0",
@@ -191,6 +192,12 @@
 					"type": "string",
 					"default": "null",
 					"description": "皮肤名称，如果未设置，则使用默认皮肤。"
+				},
+				{
+					"name": "textureAtlasName",
+					"type": "string",
+					"default": "null",
+					"description": "贴图集数据名称，如果未设置，则使用龙骨数据名称。"
 				}
 			],
 			"inherited": true,
@@ -205,14 +212,14 @@
 			"description": "创建一个指定名称的骨架，并使用骨架的显示容器来更新骨架动画。",
 			"returns": "骨架的显示容器。",
 			"see": [
-				"dragonBones.IArmatureDisplayContainer"
+				"dragonBones.EgretArmatureDisplay"
 			],
 			"version": "DragonBones 4.5",
 			"params": [
 				{
 					"name": "armatureName",
 					"type": "string",
-					"description": "骨架数据名称。"
+					"description": "骨架名称。"
 				},
 				{
 					"name": "dragonBonesName",
@@ -225,6 +232,12 @@
 					"type": "string",
 					"default": "null",
 					"description": "皮肤名称，如果未设置，则使用默认皮肤。"
+				},
+				{
+					"name": "textureAtlasName",
+					"type": "string",
+					"default": "null",
+					"description": "贴图集数据名称，如果未设置，则使用龙骨数据。"
 				}
 			]
 		},
@@ -234,7 +247,7 @@
 			"name": "buildFastArmature",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#buildArmature()"
 			],
@@ -262,18 +275,20 @@
 			"kind": "function",
 			"type": "void",
 			"name": "clear",
-			"memberof": "dragonBones.EgretFactory",
+			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"inheritDoc": true,
 			"description": "清除所有的数据。",
+			"version": "DragonBones 4.5",
 			"params": [
 				{
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
-			]
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseFactory"
 		},
 		{
 			"kind": "function",
@@ -281,10 +296,11 @@
 			"name": "copyAnimationsToArmature",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)",
-			"returns": "是否替换成功。 [true: 成功, false: 不成功]",
+			"description": "将骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)",
+			"returns": "是否替换成功。",
 			"see": [
-				"dragonBones.Armature"
+				"dragonBones.Armature",
+				"dragonBones.ArmatureData"
 			],
 			"version": "DragonBones 4.5",
 			"params": [
@@ -311,10 +327,10 @@
 					"description": "其他骨架属于的龙骨数据名称，如果未设置，则检索所有的龙骨数据。"
 				},
 				{
-					"name": "ifRemoveOriginalAnimationList",
+					"name": "replaceOriginalAnimation",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否移除原有的动画。 [true: 移除, false: 不移除]"
+					"description": "是否替换原有的同名动画。"
 				}
 			],
 			"inherited": true,
@@ -326,7 +342,7 @@
 			"name": "dispose",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#clear()"
 			]
@@ -361,7 +377,7 @@
 			"name": "getSkeletonData",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#getDragonBonesData()"
 			],
@@ -378,7 +394,7 @@
 			"name": "getTextureAtlas",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#getTextureAtlasData()"
 			],
@@ -407,7 +423,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				}
@@ -430,10 +446,10 @@
 					"description": "指定的贴图名称。"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "textureAtlasName",
 					"type": "string",
 					"default": "null",
-					"description": "指定的龙骨数据名称，如果未设置，将检索所有的龙骨数据。"
+					"description": "指定的贴图集数据名称，如果未设置，将检索所有的贴图集数据。"
 				}
 			]
 		},
@@ -459,10 +475,16 @@
 					"description": "需要解析的原始数据。 (JSON)"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据提供一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				},
+				{
+					"name": "scale",
+					"type": "number",
+					"default": "1.0",
+					"description": ""
 				}
 			],
 			"inherited": true,
@@ -503,7 +525,7 @@
 				{
 					"name": "scale",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": "为贴图集设置一个缩放值。"
 				}
 			],
@@ -526,7 +548,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				},
@@ -534,7 +556,7 @@
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
 			],
 			"inherited": true,
@@ -546,7 +568,7 @@
 			"name": "removeSkeletonData",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#removeSkeletonData()"
 			],
@@ -564,7 +586,7 @@
 			"name": "removeTextureAtlas",
 			"memberof": "dragonBones.EgretFactory",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.BaseFactory#removeTextureAtlasData()"
 			],
@@ -592,7 +614,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				},
@@ -600,7 +622,7 @@
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
 			],
 			"inherited": true,
@@ -612,7 +634,7 @@
 			"name": "replaceSlotDisplay",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定插槽的显示对象替换为指定资源创造出的显示对象。",
+			"description": "用指定资源替换插槽的显示对象。",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
@@ -656,7 +678,7 @@
 			"name": "replaceSlotDisplayList",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定插槽的显示对象列表替换为指定资源创造出的显示对象列表。",
+			"description": "用指定资源列表替换插槽的显示对象列表。",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
@@ -690,7 +712,7 @@
 		"kind": "class",
 		"name": "EgretFactory",
 		"memberof": "dragonBones",
-		"filename": "EgretFactory.ts",
+		"filename": "egret\\EgretFactory.ts",
 		"description": "Egret 工厂。",
 		"version": "DragonBones 3.0",
 		"augments": [

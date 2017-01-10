@@ -1,0 +1,66 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Rectangle",
+			"memberof": "dragonBones.Rectangle",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "width",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "height",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clear",
+			"memberof": "dragonBones.Rectangle",
+			"scope": "instance"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "copyFrom",
+			"memberof": "dragonBones.Rectangle",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Rectangle",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Rectangle",
+		"memberof": "dragonBones",
+		"filename": "geom\\Rectangle.ts"
+	}
+}

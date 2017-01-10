@@ -3,10 +3,26 @@
 		{
 			"kind": "member",
 			"type": "dragonBones.Armature",
-			"name": "childArmature",
+			"name": "armature",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所属的骨架。",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.BoundingBoxData",
+			"name": "boundingBoxData",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "此时显示的子骨架。",
+			"rwType": 1,
+			"description": "插槽此时的自定义包围盒数据。",
 			"see": [
 				"dragonBones.Armature"
 			],
@@ -16,51 +32,15 @@
 		},
 		{
 			"kind": "member",
-			"type": "dragonBones.Movie",
-			"name": "childMovie",
+			"type": "dragonBones.Armature",
+			"name": "childArmature",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"default": "null",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
-			"type": "Map<dragonBones.Movie>",
-			"name": "childMovies",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "{}",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
-			"type": "egret.ColorMatrixFilter",
-			"name": "colorFilter",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "null",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
-			"type": "number",
-			"name": "colorIndex",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "-1",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
-			"type": "SlotConfig",
-			"name": "config",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "null",
+			"description": "此时显示的子骨架。",
+			"see": [
+				"dragonBones.Armature"
+			],
+			"version": "DragonBones 3.0",
 			"inherited": true,
 			"inherits": "dragonBones.Slot"
 		},
@@ -77,21 +57,11 @@
 		},
 		{
 			"kind": "member",
-			"type": "DisplayConfig",
-			"name": "displayConfig",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "null",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
 			"type": "string",
 			"name": "displayController",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"description": "显示对象受到控制的对象，应设置为动画状态的名称或组名称，设置为 null 则表示受所有的动画状态控制。",
+			"description": "显示对象受到控制的动画状态或混合组名称，设置为 null 则表示受所有的动画状态控制。",
 			"default": "null",
 			"see": [
 				"dragonBones.AnimationState#displayControl",
@@ -126,38 +96,101 @@
 		},
 		{
 			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "global",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架坐标系的变换。",
+			"see": [
+				"dragonBones.Transform"
+			],
+			"rwType": 1,
+			"version": "DragonBones 3.0",
+			"default": "new Transform()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Matrix",
+			"name": "globalTransformMatrix",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架坐标系的矩阵。",
+			"rwType": 1,
+			"version": "DragonBones 3.0",
+			"default": "new Matrix()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
 			"type": "number",
 			"name": "hashCode",
-			"memberof": "egret.HashObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "对象的唯一标识。",
+			"version": "DragonBones 4.5",
+			"default": "BaseObject._hashCode++",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "member",
+			"type": "string",
+			"name": "name",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "对象的名称。",
+			"rwType": 1,
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "offset",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架或父骨骼坐标系的偏移变换。",
+			"see": [
+				"dragonBones.Transform"
+			],
+			"version": "DragonBones 3.0",
+			"default": "new Transform()",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Transform",
+			"name": "origin",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "相对于骨架或父骨骼坐标系的绑定变换。",
+			"rwType": 1,
+			"see": [
+				"dragonBones.Transform"
+			],
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.Bone",
+			"name": "parent",
+			"memberof": "dragonBones.TransformObject",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "返回此对象唯一的哈希值,用于唯一确定一个对象。hashCode为大于等于1的整数。",
-			"version": "Egret 2.4",
-			"platform": "Web,Native",
+			"description": "所属的父骨骼。",
+			"see": [
+				"dragonBones.Bone"
+			],
+			"version": "DragonBones 3.0",
 			"inherited": true,
-			"inherits": "egret.HashObject"
-		},
-		{
-			"kind": "member",
-			"type": "boolean",
-			"name": "inheritAnimation",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"description": "子骨架是否继承父骨架的动画。 [true: 继承, false: 不继承]",
-			"default": "true",
-			"version": "DragonBones 4.5",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
-		},
-		{
-			"kind": "member",
-			"type": "number",
-			"name": "transformIndex",
-			"memberof": "dragonBones.Slot",
-			"scope": "instance",
-			"default": "-1",
-			"inherited": true,
-			"inherits": "dragonBones.Slot"
+			"inherits": "dragonBones.TransformObject"
 		},
 		{
 			"kind": "member",
@@ -168,23 +201,77 @@
 			"description": "是否更新显示对象的变换属性。为了更好的性能, 并不会更新 display 的变换属性 (x, y, rotation, scaleX, scaleX), 如果需要正确访问这些属性, 则需要设置为 true 。",
 			"default": "false",
 			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
+			"type": "any",
+			"name": "userData",
+			"memberof": "dragonBones.TransformObject",
+			"scope": "instance",
+			"description": "可以用于存储临时数据。",
+			"version": "DragonBones 3.0",
+			"inherited": true,
+			"inherits": "dragonBones.TransformObject"
 		}
 	],
 	"function": [
 		{
 			"kind": "function",
-			"name": "EgretSlot",
-			"memberof": "dragonBones.EgretSlot",
-			"scope": "instance",
-			"description": "创建一个空的插槽。",
-			"version": "DragonBones 3.0"
+			"type": "T",
+			"name": "borrowObject",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "从对象池中创建指定对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "{new ():T;}",
+					"description": "对象类。"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
 		},
 		{
 			"kind": "function",
 			"type": "void",
-			"name": "dispose",
+			"name": "clearPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "清除对象池缓存的对象。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"default": "null",
+					"description": "对象类。 (不设置则清除所有缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "boolean",
+			"name": "containsPoint",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
+			"description": "判断指定的点是否在插槽的自定义包围盒内。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"description": "点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"description": "点的垂直坐标。（骨架内坐标系）"
+				}
+			],
 			"inherited": true,
 			"inherits": "dragonBones.Slot"
 		},
@@ -194,9 +281,61 @@
 			"name": "getDisplay",
 			"memberof": "dragonBones.Slot",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#display"
+			],
+			"inherited": true,
+			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "intersectsSegment",
+			"memberof": "dragonBones.Slot",
+			"scope": "instance",
+			"description": "判断指定的线段与插槽的自定义包围盒是否相交。",
+			"returns": "相交的情况。 [-1: 不相交且线段在包围盒内, 0: 不相交, 1: 相交且有一个交点且终点在包围盒内, 2: 相交且有一个交点且起点在包围盒内, 3: 相交且有两个交点, N: 相交且有 N 个交点]",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "xA",
+					"type": "number",
+					"description": "线段起点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "yA",
+					"type": "number",
+					"description": "线段起点的垂直坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "xB",
+					"type": "number",
+					"description": "线段终点的水平坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "yB",
+					"type": "number",
+					"description": "线段终点的垂直坐标。（骨架内坐标系）"
+				},
+				{
+					"name": "intersectionPointA",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "线段从起点到终点与包围盒相交的第一个交点。（骨架内坐标系）"
+				},
+				{
+					"name": "intersectionPointB",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "线段从终点到起点与包围盒相交的第一个交点。（骨架内坐标系）"
+				},
+				{
+					"name": "normalRadians",
+					"type": "{x:number,y:number}",
+					"default": "null",
+					"description": "碰撞点处包围盒切线的法线弧度。 [x: 第一个碰撞点处切线的法线弧度, y: 第二个碰撞点处切线的法线弧度]"
+				}
 			],
 			"inherited": true,
 			"inherits": "dragonBones.Slot"
@@ -211,6 +350,40 @@
 			"version": "DragonBones 4.5",
 			"inherited": true,
 			"inherits": "dragonBones.Slot"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "returnToPool",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "instance",
+			"description": "清除数据并返还对象池。",
+			"version": "DragonBones 4.5",
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "setMaxCount",
+			"memberof": "dragonBones.BaseObject",
+			"scope": "static",
+			"description": "设置每种对象池的最大缓存数量。",
+			"version": "DragonBones 4.5",
+			"params": [
+				{
+					"name": "objectConstructor",
+					"type": "typeof BaseObject",
+					"description": "对象类。"
+				},
+				{
+					"name": "maxCount",
+					"type": "number",
+					"description": "最大缓存数量。 (设置为 0 则不缓存)"
+				}
+			],
+			"inherited": true,
+			"inherits": "dragonBones.BaseObject"
 		}
 	],
 	"globalMember": [],
@@ -219,12 +392,13 @@
 		"kind": "class",
 		"name": "EgretSlot",
 		"memberof": "dragonBones",
-		"filename": "EgretSlot.ts",
+		"filename": "egret\\EgretSlot.ts",
 		"description": "Egret 插槽。",
 		"version": "DragonBones 3.0",
 		"augments": [
 			"dragonBones.Slot",
-			"egret.HashObject"
+			"dragonBones.TransformObject",
+			"dragonBones.BaseObject"
 		]
 	}
 }

@@ -1,0 +1,47 @@
+{
+	"member": [
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "Ellipse",
+			"memberof": "dragonBones.BoundingBoxType",
+			"scope": "static",
+			"default": "1"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "None",
+			"memberof": "dragonBones.BoundingBoxType",
+			"scope": "static",
+			"default": "-1"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "Polygon",
+			"memberof": "dragonBones.BoundingBoxType",
+			"scope": "static",
+			"default": "2"
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "Rectangle",
+			"memberof": "dragonBones.BoundingBoxType",
+			"scope": "static",
+			"default": "0"
+		}
+	],
+	"function": [],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "enum",
+		"name": "BoundingBoxType",
+		"memberof": "dragonBones",
+		"filename": "core\\DragonBones.ts",
+		"description": "包围盒类型。",
+		"version": "DragonBones 5.0"
+	}
+}

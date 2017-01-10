@@ -10,44 +10,44 @@
 				{
 					"name": "a",
 					"type": "number",
-					"default": "1",
+					"default": "1.0",
 					"description": ""
 				},
 				{
 					"name": "b",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": ""
 				},
 				{
 					"name": "c",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": ""
 				},
 				{
 					"name": "d",
 					"type": "number",
-					"default": "1",
+					"default": "1.0",
 					"description": ""
 				},
 				{
 					"name": "tx",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": ""
 				},
 				{
 					"name": "ty",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": ""
 				}
 			]
 		},
 		{
 			"kind": "function",
-			"type": "void",
+			"type": "dragonBones.Matrix",
 			"name": "concat",
 			"memberof": "dragonBones.Matrix",
 			"scope": "instance",
@@ -63,7 +63,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "void",
+			"type": "dragonBones.Matrix",
 			"name": "copyFrom",
 			"memberof": "dragonBones.Matrix",
 			"scope": "instance",
@@ -79,7 +79,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "void",
+			"type": "dragonBones.Matrix",
 			"name": "identity",
 			"memberof": "dragonBones.Matrix",
 			"scope": "instance",
@@ -88,7 +88,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "void",
+			"type": "dragonBones.Matrix",
 			"name": "invert",
 			"memberof": "dragonBones.Matrix",
 			"scope": "instance",
@@ -116,7 +116,7 @@
 				},
 				{
 					"name": "result",
-					"type": "{x:number, y}",
+					"type": "{x:number,y:number}",
 					"description": "应用转换之后的坐标。"
 				},
 				{

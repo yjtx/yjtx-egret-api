@@ -1687,104 +1687,60 @@
 			],
 			"class": [
 				{
-					"name": "BaseObject",
-					"description": "基础对象。"
-				},
-				{
-					"name": "DragonBones",
-					"description": "DragonBones"
-				},
-				{
-					"name": "IEventDispatcher",
-					"description": "事件接口。"
-				},
-				{
-					"name": "EventObject",
-					"description": "事件数据。"
-				},
-				{
-					"name": "Transform",
-					"description": "2D 变换。"
-				},
-				{
-					"name": "Matrix",
-					"description": "2D 矩阵。"
-				},
-				{
-					"name": "DragonBonesData",
-					"description": "龙骨数据，包含多个骨架数据。"
-				},
-				{
-					"name": "ArmatureData",
-					"description": "骨架数据。"
-				},
-				{
-					"name": "BoneData",
-					"description": "骨骼数据。"
-				},
-				{
-					"name": "SlotData",
-					"description": "插槽数据。"
-				},
-				{
-					"name": "SkinData",
-					"description": "皮肤数据。"
-				},
-				{
-					"name": "AnimationData",
-					"description": "动画数据。"
-				},
-				{
-					"name": "AnimationFadeOutMode",
-					"description": "动画混合时，使用的淡出方式。"
-				},
-				{
-					"name": "IAnimateble",
-					"description": "播放动画组件接口。 (Armature 和 WordClock 都实现了该接口)任何实现了此接口的实例都可以加到 WorldClock 时钟中，由时钟统一控制动画的播放。"
-				},
-				{
 					"name": "Animation",
 					"description": "动画控制器，用来播放动画数据，管理动画状态。"
 				},
 				{
 					"name": "AnimationState",
-					"description": "动画状态，播放动画时产生，可以对单个动画的播放进行更细致的控制和调节。"
+					"description": "动画状态，播放动画时产生，可以对每个播放的动画进行更细致的控制和调节。"
+				},
+				{
+					"name": "IAnimateble",
+					"description": "播放动画接口。 (Armature 和 WordClock 都实现了该接口)任何实现了此接口的实例都可以加到 WorldClock 实例中，由 WorldClock 统一更新时间。"
 				},
 				{
 					"name": "WorldClock",
-					"description": "WorldClock 提供时钟的支持，为每个加入到时钟的 IAnimatable 对象更新时间。"
+					"description": "WorldClock 提供时钟支持，为每个加入到时钟的 IAnimatable 对象更新时间。"
 				},
 				{
 					"name": "Armature",
 					"description": "骨架，是骨骼动画系统的核心，由显示容器、骨骼、插槽、动画、事件系统构成。"
 				},
 				{
-					"name": "TransformObject",
-					"description": "基础变换对象。"
-				},
-				{
 					"name": "Bone",
 					"description": "骨骼，一个骨架中可以包含多个骨骼，骨骼以树状结构组成骨架。骨骼在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现。"
 				},
 				{
+					"name": "IArmatureProxy",
+					"description": "骨架代理接口。"
+				},
+				{
 					"name": "IArmatureDisplay",
-					"description": "骨架显示容器和事件的接口。"
+					"description": ""
 				},
 				{
 					"name": "Slot",
 					"description": "插槽，附着在骨骼上，控制显示对象的显示状态和属性。一个骨骼上可以包含多个插槽。一个插槽中可以包含多个显示对象，同一时间只能显示其中的一个显示对象，但可以在动画播放的过程中切换显示对象实现帧动画。显示对象可以是普通的图片纹理，也可以是子骨架的显示容器，网格显示对象，还可以是自定义的其他显示对象。"
 				},
 				{
-					"name": "BaseFactory",
-					"description": "创建骨架的基础工厂。 (通常只需要一个全局工厂实例)"
+					"name": "TransformObject",
+					"description": "基础变换对象。"
 				},
 				{
-					"name": "TextureAtlasData",
-					"description": "贴图集数据。"
+					"name": "BaseObject",
+					"description": "基础对象。"
 				},
 				{
-					"name": "EgretTextureAtlasData",
-					"description": "Egret 贴图集数据。"
+					"name": "BoundingBoxType",
+					"description": "包围盒类型。"
+				},
+				{
+					"name": "AnimationFadeOutMode",
+					"description": "动画混合的淡出方式。"
+				},
+				{
+					"name": "DragonBones",
+					"description": "DragonBones"
 				},
 				{
 					"name": "EgretEvent",
@@ -1839,12 +1795,80 @@
 					"description": "Egret 插槽。"
 				},
 				{
+					"name": "EgretTextureAtlasData",
+					"description": "Egret 贴图集数据。"
+				},
+				{
 					"name": "MovieEvent",
 					"description": "动画事件。"
 				},
 				{
 					"name": "Movie",
 					"description": "通过读取缓存的二进制动画数据来更新动画，具有良好的运行性能，同时对内存的占用也非常低。"
+				},
+				{
+					"name": "EventObject",
+					"description": "事件数据。"
+				},
+				{
+					"name": "IEventDispatcher",
+					"description": "事件接口。"
+				},
+				{
+					"name": "BaseFactory",
+					"description": "创建骨架的基础工厂。 (通常只需要一个全局工厂实例)"
+				},
+				{
+					"name": "Matrix",
+					"description": "2D 矩阵。"
+				},
+				{
+					"name": "Point",
+					"description": ""
+				},
+				{
+					"name": "Rectangle",
+					"description": ""
+				},
+				{
+					"name": "Transform",
+					"description": "2D 变换。"
+				},
+				{
+					"name": "AnimationConfig",
+					"description": ""
+				},
+				{
+					"name": "AnimationData",
+					"description": "动画数据。"
+				},
+				{
+					"name": "ArmatureData",
+					"description": "骨架数据。"
+				},
+				{
+					"name": "BoneData",
+					"description": "骨骼数据。"
+				},
+				{
+					"name": "SlotData",
+					"description": "插槽数据。"
+				},
+				{
+					"name": "BoundingBoxData",
+					"description": "自定义包围盒数据。"
+				},
+				{
+					"name": "CustomData",
+					"description": "自定义数据。"
+				},
+				{
+					"name": "DragonBonesData",
+					"description": "龙骨数据。一个龙骨数据包含多个骨架数据。"
+				},
+				{
+					"name": "TextureAtlasData",
+					"description": "贴图集数据。"
 				}
 			]
 		}

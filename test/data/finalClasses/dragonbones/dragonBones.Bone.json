@@ -25,6 +25,7 @@
 			"see": [
 				"dragonBones.Transform"
 			],
+			"rwType": 1,
 			"version": "DragonBones 3.0",
 			"default": "new Transform()",
 			"inherited": true,
@@ -37,7 +38,9 @@
 			"memberof": "dragonBones.TransformObject",
 			"scope": "instance",
 			"description": "相对于骨架坐标系的矩阵。",
+			"rwType": 1,
 			"version": "DragonBones 3.0",
+			"default": "new Matrix()",
 			"inherited": true,
 			"inherits": "dragonBones.TransformObject"
 		},
@@ -60,26 +63,25 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前的 IK 约束目标。",
-			"version": "DragonBones 4.5"
-		},
-		{
-			"kind": "member",
-			"type": "boolean",
-			"name": "ikBendPositive",
-			"memberof": "dragonBones.Bone",
-			"scope": "instance",
-			"description": "IK 约束时骨骼方向是否为顺时针方向。 [true: 顺时针, false: 逆时针]",
-			"version": "DragonBones 4.5"
+			"deprecated": ""
 		},
 		{
 			"kind": "member",
 			"type": "number",
-			"name": "ikWeight",
+			"name": "ikChain",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "IK 约束的权重。",
-			"version": "DragonBones 4.5"
+			"rwType": 1,
+			"deprecated": ""
+		},
+		{
+			"kind": "member",
+			"type": "number",
+			"name": "ikChainIndex",
+			"memberof": "dragonBones.Bone",
+			"scope": "instance",
+			"rwType": 1,
+			"deprecated": ""
 		},
 		{
 			"kind": "member",
@@ -87,7 +89,7 @@
 			"name": "inheritRotation",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "是否继承父骨骼的旋转。 [true: 继承, false: 不继承]",
+			"description": "是否继承父骨骼的旋转。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -96,7 +98,7 @@
 			"name": "inheritScale",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "是否继承父骨骼的缩放。 [true: 继承, false: 不继承]",
+			"description": "是否继承父骨骼的缩放。",
 			"version": "DragonBones 4.5"
 		},
 		{
@@ -105,7 +107,7 @@
 			"name": "inheritTranslation",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "是否继承父骨骼的平移。 [true: 继承, false: 不继承]",
+			"description": "是否继承父骨骼的平移。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -124,6 +126,7 @@
 			"memberof": "dragonBones.TransformObject",
 			"scope": "instance",
 			"description": "对象的名称。",
+			"rwType": 1,
 			"version": "DragonBones 3.0",
 			"inherited": true,
 			"inherits": "dragonBones.TransformObject"
@@ -150,11 +153,11 @@
 			"memberof": "dragonBones.TransformObject",
 			"scope": "instance",
 			"description": "相对于骨架或父骨骼坐标系的绑定变换。",
+			"rwType": 1,
 			"see": [
 				"dragonBones.Transform"
 			],
 			"version": "DragonBones 3.0",
-			"default": "new Transform()",
 			"inherited": true,
 			"inherits": "dragonBones.TransformObject"
 		},
@@ -180,7 +183,7 @@
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.Armature#getSlot()"
 			]
@@ -202,7 +205,7 @@
 			"name": "visible",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "控制此骨骼所有插槽的显示。",
+			"description": "控制此骨骼所有插槽的可见。",
 			"default": "true",
 			"see": [
 				"dragonBones.Slot"
@@ -254,8 +257,8 @@
 			"name": "contains",
 			"memberof": "dragonBones.Bone",
 			"scope": "instance",
-			"description": "是否包含某个指定的骨骼或插槽。",
-			"returns": "[true: 包含，false: 不包含]",
+			"description": "是否包含骨骼或插槽。",
+			"returns": "",
 			"see": [
 				"dragonBones.TransformObject"
 			],

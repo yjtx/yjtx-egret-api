@@ -6,7 +6,7 @@
 			"name": "autoSearch",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)",
+			"description": "是否开启共享搜索。如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)",
 			"see": [
 				"dragonBones.DragonBonesData#autoSearch",
 				"dragonBones.TextureAtlasData#autoSearch"
@@ -37,7 +37,7 @@
 					"description": "龙骨数据。"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
@@ -65,7 +65,7 @@
 					"description": "贴图集数据。"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
@@ -78,9 +78,10 @@
 			"name": "buildArmature",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "创建一个指定名称的骨架。",
+			"description": "创建一个骨架。",
 			"returns": "骨架",
 			"see": [
+				"dragonBones.ArmatureData",
 				"dragonBones.Armature"
 			],
 			"version": "DragonBones 3.0",
@@ -101,6 +102,12 @@
 					"type": "string",
 					"default": "null",
 					"description": "皮肤名称，如果未设置，则使用默认皮肤。"
+				},
+				{
+					"name": "textureAtlasName",
+					"type": "string",
+					"default": "null",
+					"description": "贴图集数据名称，如果未设置，则使用龙骨数据名称。"
 				}
 			]
 		},
@@ -117,7 +124,7 @@
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
 			]
 		},
@@ -127,10 +134,11 @@
 			"name": "copyAnimationsToArmature",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)",
-			"returns": "是否替换成功。 [true: 成功, false: 不成功]",
+			"description": "将骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)",
+			"returns": "是否替换成功。",
 			"see": [
-				"dragonBones.Armature"
+				"dragonBones.Armature",
+				"dragonBones.ArmatureData"
 			],
 			"version": "DragonBones 4.5",
 			"params": [
@@ -157,10 +165,10 @@
 					"description": "其他骨架属于的龙骨数据名称，如果未设置，则检索所有的龙骨数据。"
 				},
 				{
-					"name": "ifRemoveOriginalAnimationList",
+					"name": "replaceOriginalAnimation",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否移除原有的动画。 [true: 移除, false: 不移除]"
+					"description": "是否替换原有的同名动画。"
 				}
 			]
 		},
@@ -204,7 +212,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				}
@@ -232,10 +240,16 @@
 					"description": "需要解析的原始数据。 (JSON)"
 				},
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"default": "null",
 					"description": "为数据提供一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。"
+				},
+				{
+					"name": "scale",
+					"type": "number",
+					"default": "1.0",
+					"description": ""
 				}
 			]
 		},
@@ -274,7 +288,7 @@
 				{
 					"name": "scale",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": "为贴图集设置一个缩放值。"
 				}
 			]
@@ -295,7 +309,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				},
@@ -303,7 +317,7 @@
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
 			]
 		},
@@ -323,7 +337,7 @@
 			"version": "DragonBones 3.0",
 			"params": [
 				{
-					"name": "dragonBonesName",
+					"name": "name",
 					"type": "string",
 					"description": "数据名称。"
 				},
@@ -331,7 +345,7 @@
 					"name": "disposeData",
 					"type": "boolean",
 					"default": "true",
-					"description": "是否释放数据。 [false: 不释放, true: 释放]"
+					"description": "是否释放数据。"
 				}
 			]
 		},
@@ -341,7 +355,7 @@
 			"name": "replaceSlotDisplay",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定插槽的显示对象替换为指定资源创造出的显示对象。",
+			"description": "用指定资源替换插槽的显示对象。",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
@@ -383,7 +397,7 @@
 			"name": "replaceSlotDisplayList",
 			"memberof": "dragonBones.BaseFactory",
 			"scope": "instance",
-			"description": "将指定插槽的显示对象列表替换为指定资源创造出的显示对象列表。",
+			"description": "用指定资源列表替换插槽的显示对象列表。",
 			"version": "DragonBones 4.5",
 			"params": [
 				{
@@ -416,7 +430,7 @@
 		"name": "BaseFactory",
 		"memberof": "dragonBones",
 		"filename": "factory\\BaseFactory.ts",
-		"description": "生成骨架的基础工厂。 (通常只需要一个全局工厂实例)",
+		"description": "创建骨架的基础工厂。 (通常只需要一个全局工厂实例)",
 		"see": [
 			"dragonBones.DragonBonesData",
 			"dragonBones.TextureAtlasData",

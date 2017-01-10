@@ -2,6 +2,16 @@
 	"member": [
 		{
 			"kind": "member",
+			"type": "Array<number>",
+			"name": "floats",
+			"memberof": "dragonBones.CustomData",
+			"scope": "instance",
+			"description": "自定义浮点数。",
+			"version": "DragonBones 5.0",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
 			"type": "number",
 			"name": "hashCode",
 			"memberof": "dragonBones.BaseObject",
@@ -14,12 +24,23 @@
 		},
 		{
 			"kind": "member",
-			"type": "string",
-			"name": "name",
-			"memberof": "dragonBones.SkinData",
+			"type": "Array<number>",
+			"name": "ints",
+			"memberof": "dragonBones.CustomData",
 			"scope": "instance",
-			"description": "数据名称。",
-			"version": "DragonBones 3.0"
+			"description": "自定义整数。",
+			"version": "DragonBones 5.0",
+			"default": "[]"
+		},
+		{
+			"kind": "member",
+			"type": "Array<string>",
+			"name": "strings",
+			"memberof": "dragonBones.CustomData",
+			"scope": "instance",
+			"description": "自定义字符串。",
+			"version": "DragonBones 5.0",
+			"default": "[]"
 		}
 	],
 	"function": [
@@ -62,6 +83,57 @@
 		},
 		{
 			"kind": "function",
+			"type": "number",
+			"name": "getFloat",
+			"memberof": "dragonBones.CustomData",
+			"scope": "instance",
+			"description": "获取自定义浮点数。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "number",
+			"name": "getInt",
+			"memberof": "dragonBones.CustomData",
+			"scope": "instance",
+			"description": "获取自定义整数。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "string",
+			"name": "getString",
+			"memberof": "dragonBones.CustomData",
+			"scope": "instance",
+			"description": "获取自定义字符串。",
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "index",
+					"type": "number",
+					"default": "0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
 			"type": "void",
 			"name": "returnToPool",
 			"memberof": "dragonBones.BaseObject",
@@ -99,11 +171,11 @@
 	"globalFunction": [],
 	"class": {
 		"kind": "class",
-		"name": "SkinData",
+		"name": "CustomData",
 		"memberof": "dragonBones",
-		"filename": "model\\ArmatureData.ts",
-		"description": "皮肤数据。",
-		"version": "DragonBones 3.0",
+		"filename": "model\\DragonBonesData.ts",
+		"description": "自定义数据。",
+		"version": "DragonBones 5.0",
 		"augments": [
 			"dragonBones.BaseObject"
 		]

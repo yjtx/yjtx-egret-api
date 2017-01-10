@@ -2,11 +2,24 @@
 	"member": [
 		{
 			"kind": "member",
+			"type": "Array<string>",
+			"name": "animationNames",
+			"memberof": "dragonBones.ArmatureData",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "所有动画数据名称。",
+			"see": [
+				"#armatures"
+			],
+			"version": "DragonBones 3.0"
+		},
+		{
+			"kind": "member",
 			"type": "Map<dragonBones.AnimationData>",
 			"name": "animations",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "所有的动画数据。",
+			"description": "所有动画数据。",
 			"see": [
 				"dragonBones.AnimationData"
 			],
@@ -19,7 +32,7 @@
 			"name": "bones",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "所有的骨骼数据。",
+			"description": "所有骨骼数据。",
 			"see": [
 				"dragonBones.BoneData"
 			],
@@ -33,22 +46,9 @@
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "获取默认的动画数据。",
+			"description": "获取默认动画数据。",
 			"see": [
 				"dragonBones.AnimationData"
-			],
-			"version": "DragonBones 4.5"
-		},
-		{
-			"kind": "member",
-			"type": "dragonBones.SkinData",
-			"name": "defaultSkin",
-			"memberof": "dragonBones.ArmatureData",
-			"scope": "instance",
-			"rwType": 1,
-			"description": "获取默认的皮肤数据。",
-			"see": [
-				"dragonBones.SkinData"
 			],
 			"version": "DragonBones 4.5"
 		},
@@ -84,16 +84,15 @@
 		},
 		{
 			"kind": "member",
-			"type": "Map<dragonBones.SkinData>",
-			"name": "skins",
+			"type": "dragonBones.DragonBonesData",
+			"name": "parent",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "所有的皮肤数据。",
+			"description": "所属的龙骨数据。",
 			"see": [
-				"dragonBones.SkinData"
+				"dragonBones.DragonBonesData"
 			],
-			"version": "DragonBones 3.0",
-			"default": "{}"
+			"version": "DragonBones 4.5"
 		},
 		{
 			"kind": "member",
@@ -101,24 +100,12 @@
 			"name": "slots",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "所有的插槽数据。",
+			"description": "所有插槽数据。",
 			"see": [
 				"dragonBones.SlotData"
 			],
 			"version": "DragonBones 3.0",
 			"default": "{}"
-		},
-		{
-			"kind": "member",
-			"type": "dragonBones.ArmatureType",
-			"name": "type",
-			"memberof": "dragonBones.ArmatureData",
-			"scope": "instance",
-			"description": "骨架类型。",
-			"see": [
-				"dragonBones.ArmatureType"
-			],
-			"version": "DragonBones 3.0"
 		}
 	],
 	"function": [
@@ -165,7 +152,7 @@
 			"name": "getAnimation",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "获取指定名称的动画数据。",
+			"description": "获取动画数据。",
 			"see": [
 				"dragonBones.AnimationData"
 			],
@@ -184,7 +171,7 @@
 			"name": "getBone",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "获取指定名称的骨骼数据。",
+			"description": "获取骨骼数据。",
 			"see": [
 				"dragonBones.BoneData"
 			],
@@ -199,30 +186,11 @@
 		},
 		{
 			"kind": "function",
-			"type": "dragonBones.SkinData",
-			"name": "getSkin",
-			"memberof": "dragonBones.ArmatureData",
-			"scope": "instance",
-			"description": "获取指定名称的皮肤数据。",
-			"see": [
-				"dragonBones.SkinData"
-			],
-			"version": "DragonBones 3.0",
-			"params": [
-				{
-					"name": "name",
-					"type": "string",
-					"description": "皮肤数据名称。"
-				}
-			]
-		},
-		{
-			"kind": "function",
 			"type": "dragonBones.SlotData",
 			"name": "getSlot",
 			"memberof": "dragonBones.ArmatureData",
 			"scope": "instance",
-			"description": "获取指定名称的插槽数据。",
+			"description": "获取插槽数据。",
 			"see": [
 				"dragonBones.SlotData"
 			],

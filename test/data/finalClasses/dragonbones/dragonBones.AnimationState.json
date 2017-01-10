@@ -3,10 +3,19 @@
 		{
 			"kind": "member",
 			"type": "boolean",
+			"name": "actionEnabled",
+			"memberof": "dragonBones.AnimationState",
+			"scope": "instance",
+			"description": "是否能触发行为。",
+			"version": "DragonBones 5.0"
+		},
+		{
+			"kind": "member",
+			"type": "boolean",
 			"name": "additiveBlending",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "是否以叠加的方式混合动画。",
+			"description": "是否以增加的方式混合。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -28,8 +37,7 @@
 			"name": "autoFadeOutTime",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "自动淡出时需要的时间，当设置一个大于等于 0 的值，动画状态将会在播放完成后自动淡出。 (以秒为单位)",
-			"default": "-1",
+			"description": "自动淡出时间。 [-1: 不自动淡出, [0~N]: 淡出时间] (以秒为单位)当设置一个大于等于 0 的值，动画状态将会在播放完成后自动淡出。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -38,7 +46,7 @@
 			"name": "autoTween",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"default": "false"
 		},
 		{
@@ -48,7 +56,7 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#animationData"
 			]
@@ -60,7 +68,7 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前动画的播放次数。",
+			"description": "当前播放次数。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -69,7 +77,7 @@
 			"name": "currentTime",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "当前动画的播放时间。 (以秒为单位)",
+			"description": "动画播放的时间。 (以秒为单位)",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -78,7 +86,7 @@
 			"name": "displayControl",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "是否对插槽的颜色，显示序列索引，深度排序，行为等拥有控制的权限。",
+			"description": "是否对插槽的显示对象有控制权。",
 			"see": [
 				"dragonBones.Slot#displayController"
 			],
@@ -91,10 +99,7 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "动画组。",
-			"see": [
-				"dragonBones.Animation#fadeIn()"
-			],
+			"description": "混合组。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -136,10 +141,7 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "动画图层。",
-			"see": [
-				"dragonBones.Animation#fadeIn()"
-			],
+			"description": "混合图层。",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -150,9 +152,6 @@
 			"scope": "instance",
 			"rwType": 1,
 			"description": "动画名称。",
-			"see": [
-				"dragonBones.AnimationData#name"
-			],
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -161,7 +160,7 @@
 			"name": "playTimes",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "需要播放的次数。 [0: 无限循环播放, [1~N]: 循环播放 N 次]",
+			"description": "播放次数。 [0: 无限循环播放, [1~N]: 循环播放 N 次]",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -171,7 +170,6 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"description": "播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]",
-			"default": "1",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -181,7 +179,7 @@
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "当前动画的总时间。 (以秒为单位)",
+			"description": "动画的总时间。 (以秒为单位)",
 			"version": "DragonBones 3.0"
 		},
 		{
@@ -190,8 +188,7 @@
 			"name": "weight",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "进行动画混合时的权重。",
-			"default": "1",
+			"description": "混合权重。",
 			"version": "DragonBones 3.0"
 		}
 	],
@@ -202,7 +199,7 @@
 			"name": "addBoneMask",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "添加指定的骨骼遮罩。",
+			"description": "添加骨骼遮罩。",
 			"version": "DragonBones 3.0",
 			"params": [
 				{
@@ -261,7 +258,7 @@
 			"name": "containsBoneMask",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "是否包含指定的骨骼遮罩。",
+			"description": "是否包含骨骼遮罩。",
 			"version": "DragonBones 3.0",
 			"params": [
 				{
@@ -289,7 +286,7 @@
 					"name": "pausePlayhead",
 					"type": "boolean",
 					"default": "true",
-					"description": "淡出时是否暂停动画。 [true: 暂停, false: 不暂停]"
+					"description": "淡出时是否暂停动画。"
 				}
 			]
 		},
@@ -317,7 +314,7 @@
 			"name": "removeBoneMask",
 			"memberof": "dragonBones.AnimationState",
 			"scope": "instance",
-			"description": "删除指定的骨骼遮罩。",
+			"description": "删除骨骼遮罩。",
 			"version": "DragonBones 3.0",
 			"params": [
 				{
@@ -384,7 +381,7 @@
 		"name": "AnimationState",
 		"memberof": "dragonBones",
 		"filename": "animation\\AnimationState.ts",
-		"description": "动画状态，播放动画时产生，可以对单个动画的播放进行更细致的控制和调节。",
+		"description": "动画状态，播放动画时产生，可以对每个播放的动画进行更细致的控制和调节。",
 		"see": [
 			"dragonBones.Animation",
 			"dragonBones.AnimationData"

@@ -284,7 +284,6 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
 
         // if (declarations && declarations.length > 0) {
             if (name == "JointStyle") {
-                console.log(111)
             }
             if (checkKey(member, TYPEFLAG.ConstKeyword)) {
                 var nextMembers;
@@ -369,10 +368,8 @@ function formatMember(member, text, parent, isStatic, isPrivate) {
 
         name = member.name.text;
         if (name == "boundsForUpdate") {
-            console.log(1);
         }
             if (name == "getBackInOut") {
-                console.log(111)
             }
 
         //解决静态变量和属性重名后被替换的问题
@@ -646,7 +643,6 @@ function getTypeStr(type, text) {
 
         var ttt;
         if (type.typeName == null) {
-            console.log(111)
             ttt = trim.trimAll(text.substring(type.pos, type.end));
         }
         else {

@@ -6,7 +6,7 @@
 			"name": "VERSION",
 			"memberof": "dragonBones.DragonBones",
 			"scope": "static",
-			"default": "\"4.7.2\""
+			"default": "\"5.0.0\""
 		}
 	],
 	"function": [],

@@ -1,0 +1,54 @@
+{
+	"member": [],
+	"function": [
+		{
+			"kind": "function",
+			"name": "Point",
+			"memberof": "dragonBones.Point",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "x",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"default": "0.0",
+					"description": ""
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "clear",
+			"memberof": "dragonBones.Point",
+			"scope": "instance"
+		},
+		{
+			"kind": "function",
+			"type": "void",
+			"name": "copyFrom",
+			"memberof": "dragonBones.Point",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "value",
+					"type": "dragonBones.Point",
+					"description": ""
+				}
+			]
+		}
+	],
+	"globalMember": [],
+	"globalFunction": [],
+	"class": {
+		"kind": "class",
+		"name": "Point",
+		"memberof": "dragonBones",
+		"filename": "geom\\Point.ts"
+	}
+}

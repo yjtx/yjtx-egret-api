@@ -11,9 +11,7 @@
 			"see": [
 				"dragonBones.Animation"
 			],
-			"version": "DragonBones 4.5",
-			"inherited": true,
-			"inherits": "dragonBones.IArmatureProxy"
+			"version": "DragonBones 4.5"
 		},
 		{
 			"kind": "member",
@@ -26,9 +24,7 @@
 			"see": [
 				"dragonBones.Armature"
 			],
-			"version": "DragonBones 4.5",
-			"inherited": true,
-			"inherits": "dragonBones.IArmatureProxy"
+			"version": "DragonBones 4.5"
 		}
 	],
 	"function": [
@@ -74,9 +70,7 @@
 					"type": "boolean",
 					"description": ""
 				}
-			],
-			"inherited": true,
-			"inherits": "dragonBones.IArmatureProxy"
+			]
 		},
 		{
 			"kind": "function",
@@ -129,16 +123,16 @@
 	"globalFunction": [],
 	"class": {
 		"kind": "interface",
-		"name": "IArmatureDisplay",
+		"name": "IArmatureProxy",
 		"memberof": "dragonBones",
 		"filename": "armature\\IArmatureProxy.ts",
-		"deprecated": "",
-		"see": [
-			"dragonBones.core.IArmatureProxy"
-		],
+		"description": "骨架代理接口。",
+		"version": "DragonBones 5.0",
 		"augments": [
-			"dragonBones.IArmatureProxy",
 			"dragonBones.IEventDispatcher"
+		],
+		"children": [
+			"dragonBones.IArmatureDisplay"
 		]
 	}
 }

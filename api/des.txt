@@ -1,5 +1,5 @@
 node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/src --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret
-node tscdoc.js --path ../../../Egret/egret-core/egret-core-master/build --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret_bin
+node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/build --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret_bin
 
 node tscdoc.js --path ../../../Egret/egret-core/egret-core-2.0.x/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret2.0
 
@@ -37,4 +37,4 @@ node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac
 node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
 
 
-node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/src ../../../Work/Egret/egret-core/egret-core-master/build/dragonBones --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret db
+node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/src ../../../Work/Egret/dragonBones --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret db

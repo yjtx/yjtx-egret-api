@@ -58,11 +58,8 @@
 		"kind": "enum",
 		"name": "AnimationFadeOutMode",
 		"memberof": "dragonBones",
-		"filename": "animation\\Animation.ts",
-		"description": "动画混合时，使用的淡出方式。",
-		"see": [
-			"dragonBones.Animation#fadeIn()"
-		],
+		"filename": "core\\DragonBones.ts",
+		"description": "动画混合的淡出方式。",
 		"version": "DragonBones 4.5"
 	}
 }

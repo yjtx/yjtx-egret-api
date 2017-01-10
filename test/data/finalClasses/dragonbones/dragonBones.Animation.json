@@ -2,12 +2,80 @@
 	"member": [
 		{
 			"kind": "member",
+			"name": "All",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"deprecated": "",
+			"see": [
+				"dragonBones.AnimationFadeOutMode.All"
+			],
+			"default": "AnimationFadeOutMode.All"
+		},
+		{
+			"kind": "member",
+			"name": "None",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"deprecated": "",
+			"see": [
+				"dragonBones.AnimationFadeOutMode.None"
+			],
+			"default": "AnimationFadeOutMode.None"
+		},
+		{
+			"kind": "member",
+			"name": "SameGroup",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"deprecated": "",
+			"see": [
+				"dragonBones.AnimationFadeOutMode.SameGroup"
+			],
+			"default": "AnimationFadeOutMode.SameGroup"
+		},
+		{
+			"kind": "member",
+			"name": "SameLayer",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"deprecated": "",
+			"see": [
+				"dragonBones.AnimationFadeOutMode.SameLayer"
+			],
+			"default": "AnimationFadeOutMode.SameLayer"
+		},
+		{
+			"kind": "member",
+			"name": "SameLayerAndGroup",
+			"memberof": "dragonBones.Animation",
+			"scope": "static",
+			"deprecated": "",
+			"see": [
+				"dragonBones.AnimationFadeOutMode.SameLayerAndGroup"
+			],
+			"default": "AnimationFadeOutMode.SameLayerAndGroup"
+		},
+		{
+			"kind": "member",
+			"type": "dragonBones.AnimationConfig",
+			"name": "animationConfig",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"rwType": 1,
+			"description": "一个可以快速使用的动画配置实例。",
+			"see": [
+				"dragonBones.AnimationConfig"
+			],
+			"version": "DragonBones 5.0"
+		},
+		{
+			"kind": "member",
 			"type": "Array<dragonBones.AnimationData>",
 			"name": "animationDataList",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#animationNames",
 				"#animations"
@@ -20,7 +88,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#animationNames",
 				"#animations"
@@ -45,7 +113,7 @@
 			"name": "animations",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "所有的动画数据。",
+			"description": "所有动画数据。",
 			"see": [
 				"dragonBones.AnimationData"
 			],
@@ -93,7 +161,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"rwType": 1,
-			"description": "上一个正在播放的动画状态的名称。",
+			"description": "上一个正在播放的动画状态名称。",
 			"see": [
 				"#lastAnimationState"
 			],
@@ -118,7 +186,7 @@
 			"name": "timeScale",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "动画的播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]",
+			"description": "动画播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]",
 			"default": "1",
 			"version": "DragonBones 3.0"
 		}
@@ -167,8 +235,8 @@
 			"name": "fadeIn",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "淡入播放指定名称的动画。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "淡入播放动画。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationFadeOutMode",
 				"dragonBones.AnimationState"
@@ -178,61 +246,37 @@
 				{
 					"name": "animationName",
 					"type": "string",
-					"description": "动画数据的名称。"
+					"description": "动画数据名称。"
 				},
 				{
 					"name": "fadeInTime",
 					"type": "number",
-					"default": "-1",
-					"description": "淡入的时间。 [-1: 使用数据默认值, [0~N]: N 秒淡入完毕] (以秒为单位)"
+					"default": "-1.0",
+					"description": "淡入时间。 [-1: 使用动画数据默认值, [0~N]: 淡入时间] (以秒为单位)"
 				},
 				{
 					"name": "playTimes",
 					"type": "number",
 					"default": "-1",
-					"description": "循环播放的次数。 [-1: 使用数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+					"description": "播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
 				},
 				{
 					"name": "layer",
 					"type": "number",
 					"default": "0",
-					"description": "混合的图层，图层高会优先获取混合权重。"
+					"description": "混合图层，图层高会优先获取混合权重。"
 				},
 				{
 					"name": "group",
 					"type": "string",
 					"default": "null",
-					"description": "混合的组，用于给动画状态编组，方便混合淡出控制。"
+					"description": "混合组，用于动画状态编组，方便控制淡出。"
 				},
 				{
 					"name": "fadeOutMode",
 					"type": "dragonBones.AnimationFadeOutMode",
 					"default": "AnimationFadeOutMode.SameLayerAndGroup",
-					"description": "淡出的模式。"
-				},
-				{
-					"name": "additiveBlending",
-					"type": "boolean",
-					"default": "false",
-					"description": "以叠加的形式混合。"
-				},
-				{
-					"name": "displayControl",
-					"type": "boolean",
-					"default": "true",
-					"description": "是否对显示对象属性可控。"
-				},
-				{
-					"name": "pauseFadeOut",
-					"type": "boolean",
-					"default": "true",
-					"description": "暂停需要淡出的动画。"
-				},
-				{
-					"name": "pauseFadeIn",
-					"type": "boolean",
-					"default": "true",
-					"description": "暂停需要淡入的动画，直到淡入结束才开始播放。"
+					"description": "淡出模式。"
 				}
 			]
 		},
@@ -242,7 +286,7 @@
 			"name": "getState",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "获取指定名称的动画状态。",
+			"description": "获取动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -261,7 +305,7 @@
 			"name": "gotoAndPlay",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#play()",
 				"#fadeIn()",
@@ -331,8 +375,8 @@
 			"name": "gotoAndPlayByFrame",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "指定名称的动画从指定帧开始播放。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "从指定帧开始播放动画。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -353,7 +397,7 @@
 					"name": "playTimes",
 					"type": "number",
 					"default": "-1",
-					"description": "动画循环播放的次数。[-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+					"description": "播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
 				}
 			]
 		},
@@ -363,8 +407,8 @@
 			"name": "gotoAndPlayByProgress",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "指定名称的动画从指定进度开始播放。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "从指定进度开始播放动画。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -378,14 +422,14 @@
 				{
 					"name": "progress",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": "进度。 [0~1]"
 				},
 				{
 					"name": "playTimes",
 					"type": "number",
 					"default": "-1",
-					"description": "动画循环播放的次数。[-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+					"description": "播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
 				}
 			]
 		},
@@ -395,8 +439,8 @@
 			"name": "gotoAndPlayByTime",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "指定名称的动画从指定时间开始播放。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "从指定时间开始播放动画。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -410,14 +454,14 @@
 				{
 					"name": "time",
 					"type": "number",
-					"default": "0",
-					"description": "时间。 (以秒为单位)"
+					"default": "0.0",
+					"description": "开始时间。 (以秒为单位)"
 				},
 				{
 					"name": "playTimes",
 					"type": "number",
 					"default": "-1",
-					"description": "动画循环播放的次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+					"description": "播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
 				}
 			]
 		},
@@ -427,7 +471,7 @@
 			"name": "gotoAndStop",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"#gotoAndStopByTime()",
 				"#gotoAndStopByFrame()",
@@ -453,8 +497,8 @@
 			"name": "gotoAndStopByFrame",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "播放指定名称的动画到指定的帧并停止。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "将动画停止到指定的帧。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -479,8 +523,8 @@
 			"name": "gotoAndStopByProgress",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "播放指定名称的动画到指定的进度并停止。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "将动画停止到指定的进度。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -494,8 +538,8 @@
 				{
 					"name": "progress",
 					"type": "number",
-					"default": "0",
-					"description": "进度。 [0~1]"
+					"default": "0.0",
+					"description": "进度。 [0 ~ 1]"
 				}
 			]
 		},
@@ -505,8 +549,8 @@
 			"name": "gotoAndStopByTime",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "播放指定名称的动画到指定的时间并停止。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"description": "将动画停止到指定的时间。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -520,7 +564,7 @@
 				{
 					"name": "time",
 					"type": "number",
-					"default": "0",
+					"default": "0.0",
 					"description": "时间。 (以秒为单位)"
 				}
 			]
@@ -531,7 +575,7 @@
 			"name": "hasAnimation",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "是否包含指定名称的动画数据。",
+			"description": "是否包含动画数据。",
 			"see": [
 				"dragonBones.AnimationData"
 			],
@@ -551,7 +595,7 @@
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
 			"description": "播放动画。",
-			"returns": "返回控制这个动画数据的动画状态。",
+			"returns": "对应的动画状态。",
 			"see": [
 				"dragonBones.AnimationState"
 			],
@@ -561,13 +605,33 @@
 					"name": "animationName",
 					"type": "string",
 					"default": "null",
-					"description": "动画数据的名称，如果未设置，则播放默认动画，或将暂停状态切换为播放状态，或重新播放上一个正在播放的动画。"
+					"description": "动画数据名称，如果未设置，则播放默认动画，或将暂停状态切换为播放状态，或重新播放上一个正在播放的动画。"
 				},
 				{
 					"name": "playTimes",
 					"type": "number",
 					"default": "-1",
-					"description": "动画需要播放的次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+					"description": "播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "dragonBones.AnimationState",
+			"name": "playConfig",
+			"memberof": "dragonBones.Animation",
+			"scope": "instance",
+			"returns": "对应的动画状态。",
+			"see": [
+				"dragonBones.AnimationConfig",
+				"dragonBones.AnimationState"
+			],
+			"version": "DragonBones 5.0",
+			"params": [
+				{
+					"name": "animationConfig",
+					"type": "dragonBones.AnimationConfig",
+					"description": "动画配置。"
 				}
 			]
 		},
@@ -577,7 +641,10 @@
 			"name": "reset",
 			"memberof": "dragonBones.Animation",
 			"scope": "instance",
-			"description": "清除所有正在播放的动画状态。",
+			"description": "清除所有动画状态。",
+			"see": [
+				"dragonBones.AnimationState"
+			],
 			"version": "DragonBones 4.5"
 		},
 		{

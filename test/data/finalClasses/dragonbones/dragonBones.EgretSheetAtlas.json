@@ -6,7 +6,7 @@
 			"name": "autoSearch",
 			"memberof": "dragonBones.TextureAtlasData",
 			"scope": "instance",
-			"description": "是否开启共享搜索。 [true: 开启, false: 不开启]",
+			"description": "是否开启共享搜索。",
 			"default": "false",
 			"version": "DragonBones 4.5",
 			"inherited": true,
@@ -113,9 +113,9 @@
 			"name": "dispose",
 			"memberof": "dragonBones.EgretTextureAtlasData",
 			"scope": "instance",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
-				"dragonBones.BaseFactory#removeDragonBonesData()"
+				"dragonBones.BaseFactory#removeTextureAtlasData()"
 			],
 			"inherited": true,
 			"inherits": "dragonBones.EgretTextureAtlasData"
@@ -161,8 +161,8 @@
 		"kind": "class",
 		"name": "EgretSheetAtlas",
 		"memberof": "dragonBones",
-		"filename": "EgretArmatureDisplay.ts",
-		"deprecated": true,
+		"filename": "egret\\EgretArmatureDisplay.ts",
+		"deprecated": "",
 		"see": [
 			"dragonBones.EgretTextureAtlasData"
 		],

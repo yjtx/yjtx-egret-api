@@ -7,7 +7,7 @@
 			"name": "getInstance",
 			"memberof": "dragonBones.SoundEventManager",
 			"scope": "static",
-			"deprecated": true,
+			"deprecated": "",
 			"see": [
 				"dragonBones.EgretFactory#soundEventManater"
 			]
@@ -19,8 +19,8 @@
 		"kind": "class",
 		"name": "SoundEventManager",
 		"memberof": "dragonBones",
-		"filename": "EgretArmatureDisplay.ts",
-		"deprecated": true,
+		"filename": "egret\\EgretArmatureDisplay.ts",
+		"deprecated": "",
 		"see": [
 			"dragonBones.EgretFactory#soundEventManater"
 		]

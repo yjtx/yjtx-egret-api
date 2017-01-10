@@ -91,10 +91,12 @@
 			"dragonBones.Armature",
 			"dragonBones.TransformObject",
 			"dragonBones.EventObject",
+			"dragonBones.AnimationConfig",
 			"dragonBones.ArmatureData",
 			"dragonBones.BoneData",
 			"dragonBones.SlotData",
-			"dragonBones.SkinData",
+			"dragonBones.BoundingBoxData",
+			"dragonBones.CustomData",
 			"dragonBones.DragonBonesData",
 			"dragonBones.TextureAtlasData"
 		]
