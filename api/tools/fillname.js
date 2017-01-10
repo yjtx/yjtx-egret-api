@@ -11,6 +11,9 @@ exports.fillname = function (tempClassObjs) {
 
     for (var key in tempClassObjs) {
         var item = tempClassObjs[key];
+    if (key == "egret.Tween") {
+        console.log(1)
+    }
         if (item.class) {
             setClassFullType(item.class, item["class"]["memberof"]);
             setFullType(item, item["class"]["memberof"]);
@@ -46,7 +49,7 @@ function getClassFullName(className, memberof) {
 //获取类全称
 function ansClassFullName(className, memberof) {
     className = className.trim();
-    if (["void", "number", "string", "boolean", "any"].indexOf(className) >= 0) {
+    if (["void", "number", "string", "Function", "boolean", "any"].indexOf(className) >= 0) {
         return className;
     }
 
@@ -55,7 +58,6 @@ function ansClassFullName(className, memberof) {
     if (classesArr[className]) {
         return className;
     }
-
     if (className.indexOf("(") >= 0) { //
         var sIdx = className.lastIndexOf("(");
         var eIdx = className.indexOf(")", sIdx);
@@ -116,11 +118,19 @@ function ansClassFullName(className, memberof) {
 
         var paramStr = className.substring(sIdx + 1, eIdx);
         var paramResult = "{";
-        var params = paramStr.split(";");
+        
+        var splitChar;
+        if (paramStr.indexOf(";") >= 0) {
+            splitChar = ";";
+        }
+        if (paramStr.indexOf(",") >= 0) {
+            splitChar = ",";
+        }
+        var params = paramStr.split(splitChar);
         for (var i = 0; i < params.length; i++) {
 
             if (i != 0) {
-                paramResult += ";";
+                paramResult += splitChar;
             }
             var param = params[i];
             param = param.trim();
@@ -131,6 +141,8 @@ function ansClassFullName(className, memberof) {
                 paramResult += ":" + ansClassFullName(paramArr[1], memberof);
             }
         }
+
+
         paramResult += "}";
         tempObj.push(paramResult);
 
@@ -228,6 +240,9 @@ function setClassFullType(classDes, memberof) {
 function setFullType(obj, memberof) {
     if (obj instanceof Object) {
         for (var key in obj) {
+            if(key == "get_#static") {
+                console.log(1)
+            }
             if (key == "type" && obj[key] != null) {
                 //if (obj[key].match(/(\s)*Array(\s)*</)) {
                 //    obj[key] = getArrayType(obj[key], memberof);

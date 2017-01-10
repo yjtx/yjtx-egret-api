@@ -280,7 +280,7 @@
 				},
 				{
 					"name": "childInfoArray",
-					"type": "Array<any>",
+					"type": "any[]",
 					"description": ""
 				}
 			]

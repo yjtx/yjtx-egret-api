@@ -660,7 +660,7 @@
 			"name": "setActualSize",
 			"memberof": "egret.gui.IUIComponent",
 			"scope": "instance",
-			"description": "设置组件的宽高，w,h均不包含scale值。此方法不同于直接设置width,height属性，不会影响显式标记尺寸属性widthExplicitlySet,_heightExplicitlySet",
+			"description": "外部显式指定的高度",
 			"params": [
 				{
 					"name": "newWidth",

@@ -3,6 +3,7 @@
 		"window.globalMember",
 		"egret.globalFunction",
 		"egret.Bitmap",
+		"egret.BitmapData",
 		"egret.BitmapFillMode",
 		"egret.BitmapFont",
 		"egret.BitmapText",

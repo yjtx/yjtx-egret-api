@@ -32,7 +32,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "stateGroups",
 			"memberof": "egret.gui.State",
 			"scope": "instance",

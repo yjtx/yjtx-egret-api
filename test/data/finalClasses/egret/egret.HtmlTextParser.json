@@ -11,8 +11,8 @@
 		},
 		{
 			"kind": "function",
-			"type": "Array<egret.ITextElement>",
-			"name": "parser",
+			"type": "egret.ITextElement[]",
+			"name": "parse",
 			"memberof": "egret.HtmlTextParser",
 			"scope": "instance",
 			"description": "将html格式文本转换为可赋值给 egret.TextField#textFlow 属性的对象",
@@ -24,6 +24,21 @@
 					"name": "htmltext",
 					"type": "string",
 					"description": "html文本"
+				}
+			]
+		},
+		{
+			"kind": "function",
+			"type": "Array<egret.ITextElement>",
+			"name": "parser",
+			"memberof": "egret.HtmlTextParser",
+			"scope": "instance",
+			"deprecated": "请使用 parse 代替",
+			"params": [
+				{
+					"name": "htmltext",
+					"type": "string",
+					"description": ""
 				}
 			]
 		}

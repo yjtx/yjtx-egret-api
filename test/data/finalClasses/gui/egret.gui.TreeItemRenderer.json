@@ -147,7 +147,7 @@
 			"name": "filters",
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",
-			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。注意 : 目前只有 WebGL 下支持，Canvs 渲染以及 native 均不支持。",
+			"description": "包含当前与显示对象关联的每个滤镜对象的索引数组。",
 			"version": "Egret 3.1.0",
 			"platform": "Web",
 			"inherited": true,
@@ -361,7 +361,7 @@
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",
 			"description": "调用显示对象被指定的 mask 对象遮罩。要确保当舞台缩放时蒙版仍然有效，mask 显示对象必须处于显示列表的活动部分。但不绘制 mask 对象本身。将 mask 设置为 null 可删除蒙版。要能够缩放遮罩对象，它必须在显示列表中。要能够拖动蒙版对象，它必须在显示列表中。<br/>注意：单个 mask 对象不能用于遮罩多个执行调用的显示对象。在将 mask 分配给第二个显示对象时，会撤消其作为第一个对象的遮罩，该对象的 mask 属性将变为 null。下面例子为 mask 为 Rectangle 类型对象，这种情况下，修改 mask 的值后，一定要对 myDisplayObject 重新赋值 mask，不然会出问题。",
-			"example": "以下代码改变了显示对象 mask 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMask:Rectangle&nbsp;=&nbsp;myDisplayObject.mask;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMask.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.mask&nbsp;=&nbsp;myMask;//设置完&nbsp;mask&nbsp;的x、y、width、height值之后，一定要对myDisplayObject重新赋值&nbsp;mask，不然会出问题。<br/></pre>",
+			"example": "以下代码改变了显示对象 mask 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;myMask:Rectangle&nbsp;=&nbsp;myDisplayObject.mask;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMask.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.mask&nbsp;=&nbsp;myMask;//设置完&nbsp;mask&nbsp;的x、y、width、height值之后，一定要对myDisplayObject重新赋值&nbsp;mask，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"inherited": true,
@@ -374,7 +374,7 @@
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",
 			"description": "一个 Matrix 对象，其中包含更改显示对象的缩放、旋转和平移的值。<br/>注意：要改变一个显示对象矩阵的值，您必引用整个矩阵对象，然后将它重新赋值给显示对象的 matrix 属性。",
-			"example": "以下代码改变了显示对象矩阵的tx属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myMatrix:Matrix&nbsp;=&nbsp;myDisplayObject.matrix;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMatrix.tx&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.matrix&nbsp;=&nbsp;myMatrix;<br/></pre>",
+			"example": "以下代码改变了显示对象矩阵的tx属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;myMatrix:Matrix&nbsp;=&nbsp;myDisplayObject.matrix;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myMatrix.tx&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.matrix&nbsp;=&nbsp;myMatrix;<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"inherited": true,
@@ -643,7 +643,7 @@
 			"memberof": "egret.DisplayObject",
 			"scope": "instance",
 			"description": "显示对象的滚动矩形范围。显示对象被裁切为矩形定义的大小，当您更改 scrollRect 对象的 x 和 y 属性时，它会在矩形内滚动。滚动的显示对象始终以整像素为增量进行滚动。您可以通过设置 scrollRect Rectangle 对象的 x 属性来左右滚动对象， 还可以通过设置scrollRect 对象的 y 属性来上下滚动对象。如果显示对象旋转了 90 度，并且您左右滚动它，则实际上显示对象会上下滚动。<br/>注意：要改变一个显示对象 scrollRect 属性的值，您必引用整个 scrollRect 对象，然后将它重新赋值给显示对象的 scrollRect 属性。",
-			"example": "以下代码改变了显示对象 scrollRect 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;myRectangle:Rectangle&nbsp;=&nbsp;myDisplayObject.scrollRect;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myRectangle.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.scrollRect&nbsp;=&nbsp;myRectangle;//设置完scrollRect的x、y、width、height值之后，一定要对myDisplayObject重新赋值scrollRect，不然会出问题。<br/></pre>",
+			"example": "以下代码改变了显示对象 scrollRect 的 x 属性值：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;myRectangle:Rectangle&nbsp;=&nbsp;myDisplayObject.scrollRect;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myRectangle.x&nbsp;+=&nbsp;10;<br/>&nbsp;&nbsp;&nbsp;&nbsp;myDisplayObject.scrollRect&nbsp;=&nbsp;myRectangle;//设置完scrollRect的x、y、width、height值之后，一定要对myDisplayObject重新赋值scrollRect，不然会出问题。<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"inherited": true,
@@ -847,7 +847,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"returns": "",
 			"params": [
 				{
@@ -866,7 +866,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"returns": "",
 			"params": [
 				{
@@ -1673,7 +1673,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"returns": "",
 			"params": [
 				{
@@ -1692,7 +1692,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"returns": "",
 			"params": [
 				{
@@ -1784,7 +1784,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"params": [
 				{
 					"name": "child",
@@ -1887,7 +1887,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"params": [
 				{
 					"name": "child1",
@@ -1910,7 +1910,7 @@
 			"memberof": "egret.gui.SkinnableComponent",
 			"scope": "instance",
 			"description": "不支持此方法",
-			"deprecated": true,
+			"deprecated": "",
 			"params": [
 				{
 					"name": "index1",

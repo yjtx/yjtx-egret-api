@@ -220,6 +220,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -236,6 +237,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -252,6 +254,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -268,6 +271,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -284,6 +288,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -300,6 +305,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -316,6 +322,7 @@
 			"params": [
 				{
 					"name": "amount",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -332,6 +339,7 @@
 			"params": [
 				{
 					"name": "amount",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -348,6 +356,7 @@
 			"params": [
 				{
 					"name": "amount",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -364,6 +373,7 @@
 			"params": [
 				{
 					"name": "amount",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -380,10 +390,12 @@
 			"params": [
 				{
 					"name": "amplitude",
+					"type": "number",
 					"description": ""
 				},
 				{
 					"name": "period",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -400,10 +412,12 @@
 			"params": [
 				{
 					"name": "amplitude",
+					"type": "number",
 					"description": ""
 				},
 				{
 					"name": "period",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -420,10 +434,12 @@
 			"params": [
 				{
 					"name": "amplitude",
+					"type": "number",
 					"description": ""
 				},
 				{
 					"name": "period",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -440,6 +456,7 @@
 			"params": [
 				{
 					"name": "pow",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -456,6 +473,7 @@
 			"params": [
 				{
 					"name": "pow",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -472,6 +490,7 @@
 			"params": [
 				{
 					"name": "pow",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -488,6 +507,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -504,6 +524,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]
@@ -520,6 +541,7 @@
 			"params": [
 				{
 					"name": "t",
+					"type": "number",
 					"description": ""
 				}
 			]

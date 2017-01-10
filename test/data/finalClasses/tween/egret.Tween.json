@@ -86,7 +86,7 @@
 				},
 				{
 					"name": "params",
-					"type": "Array<any>",
+					"type": "any[]",
 					"default": "undefined",
 					"description": "回调方法参数"
 				}
@@ -167,8 +167,8 @@
 				},
 				{
 					"name": "props",
-					"type": "any",
-					"default": "null",
+					"question": true,
+					"type": "{loop?:boolean,onChange?:Function,onChangeObj?:any}",
 					"description": "参数，支持loop(循环播放) onChange(变化函数) onChangeObj(变化函数作用域)"
 				},
 				{
@@ -396,20 +396,20 @@
 			"name": "set",
 			"memberof": "egret.Tween",
 			"scope": "instance",
-			"description": "立即将指定对象的属性修改为指定值",
-			"returns": "Tween对象本身",
+			"description": "Now modify the properties of the specified object to the specified value",
+			"returns": "Tween object itself",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
 				{
 					"name": "props",
 					"type": "any",
-					"description": "对象的属性集合"
+					"description": "Property set of an object"
 				},
 				{
 					"name": "target",
 					"default": "null",
-					"description": "要继续播放 Tween 的对象"
+					"description": "The object whose Tween to be resumed"
 				}
 			]
 		},
@@ -433,7 +433,6 @@
 		},
 		{
 			"kind": "function",
-			"type": "egret.Tween",
 			"name": "to",
 			"memberof": "egret.Tween",
 			"scope": "instance",
@@ -523,7 +522,7 @@
 		],
 		"version": "Egret 2.4",
 		"platform": "Web,Native",
-		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;Tween&nbsp;实现简单动画。<br/>&nbsp;*/<br/>class&nbsp;TweenExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;shape:egret.Shape&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.beginFill(0xff0000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.drawRect(0,&nbsp;0,&nbsp;100,&nbsp;100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.x&nbsp;=&nbsp;shape.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(shape);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;Tween&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(shape,&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop:&nbsp;true,//设置循环播放<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChange:&nbsp;this.onChange,//设置更新函数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChangeObj:&nbsp;this//更新函数作用域<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.to({rotation:&nbsp;360},&nbsp;2000)//设置2000毫秒内&nbsp;rotation&nbsp;属性变为360<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.wait(1000)//设置等待1000毫秒<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.call(this.onComplete,&nbsp;this,&nbsp;[&quot;param1&quot;,&nbsp;{key:&nbsp;&quot;key&quot;,&nbsp;value:&nbsp;3}]);//设置回调函数及作用域，可用于侦听动画完成<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onChange():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onChange&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onComplete(param1:string,&nbsp;param2:any):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onComplete&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(param1);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(param2);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+		"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;Tween&nbsp;实现简单动画。<br/>&nbsp;*/<br/>class&nbsp;TweenExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;shape:egret.Shape&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.beginFill(0xff0000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.drawRect(0,&nbsp;0,&nbsp;100,&nbsp;100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.x&nbsp;=&nbsp;shape.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(shape);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;Tween&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(shape,&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop:&nbsp;true,//设置循环播放<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChange:&nbsp;this.onChange,//设置更新函数<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChangeObj:&nbsp;this//更新函数作用域<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.to({rotation:&nbsp;360},&nbsp;2000)//设置2000毫秒内&nbsp;rotation&nbsp;属性变为360<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.wait(1000)//设置等待1000毫秒<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.call(this.onComplete,&nbsp;this,&nbsp;[&quot;param1&quot;,&nbsp;{key:&nbsp;&quot;key&quot;,&nbsp;value:&nbsp;3}]);//设置回调函数及作用域，可用于侦听动画完成<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onChange():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;onChange&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onComplete(param1:string,&nbsp;param2:any):void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;onComplete&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(param1);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(param2);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
 		"augments": [
 			"egret.EventDispatcher",
 			"egret.HashObject"

@@ -23,7 +23,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "openNodes",
 			"memberof": "egret.gui.ObjectCollection",
 			"scope": "instance",

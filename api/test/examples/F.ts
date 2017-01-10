@@ -16,6 +16,8 @@ module yjtx {
      * @link http://docs.egret-labs.org/post/manual/displaycon/movieclip.html  MovieClip序列帧动画
      */
     export class F1 {
+        public static FOCUS_IN:"focusIn" = "focusIn";
+        
         /**
          * @language zh_CN
          * yjtxF1f1

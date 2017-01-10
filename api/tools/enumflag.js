@@ -68,8 +68,16 @@ var idOb = {
     // Protected:ts.ModifierFlags.Protected,
     // Static:ts.ModifierFlags.Static,
     // Abstract:ts.ModifierFlags.Abstract,
-    // Const:ts.ModifierFlags.Const,
+    Const:ts.NodeFlags.Const,
 
+    StringLiteral:ts.SyntaxKind.StringLiteral,
+    DotDotDotToken:ts.SyntaxKind.DotDotDotToken,
+    CallExpression:ts.SyntaxKind.CallExpression,
+    FunctionExpression:ts.SyntaxKind.FunctionExpression,
+    BinaryExpression:ts.SyntaxKind.BinaryExpression,
+
+    VoidKeyword:ts.SyntaxKind.VoidKeyword,
+    DeclareKeyword:ts.SyntaxKind.DeclareKeyword,
     ProtectedKeyword:ts.SyntaxKind.ProtectedKeyword,
     PrivateKeyword:ts.SyntaxKind.PrivateKeyword,
     PublicKeyword:ts.SyntaxKind.PublicKeyword,

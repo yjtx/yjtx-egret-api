@@ -55,7 +55,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "targets",
 			"memberof": "egret.gui.IEffect",
 			"scope": "instance",
@@ -127,7 +127,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "createInstances",
 			"memberof": "egret.gui.IEffect",
 			"scope": "instance",
@@ -137,7 +137,7 @@
 				{
 					"name": "targets",
 					"question": true,
-					"type": "Array<any>",
+					"type": "any[]",
 					"description": "要使用此效果设置动画的对象的数组。"
 				}
 			]
@@ -271,7 +271,7 @@
 		},
 		{
 			"kind": "function",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "play",
 			"memberof": "egret.gui.IEffect",
 			"scope": "instance",
@@ -281,7 +281,7 @@
 				{
 					"name": "targets",
 					"question": true,
-					"type": "Array<any>",
+					"type": "any[]",
 					"description": "播放此效果的目标对象的数组。如果已指定此参数，则不会使用效果的 targets 属性。"
 				},
 				{

@@ -41,16 +41,22 @@ function _analyze(docsInfo, parent, filename) {
     }
 }
 
+function clearClassInfo(name, parent) {
+    var l = parent.concat([name]);
+    classesArr[l.join(".")] = {
+        "memberof": parent.join("."),
+        "member": [],
+        "function": [],
+        "globalMember": [],
+        "globalFunction": []
+    };
+    return classesArr[l.join(".")];
+}
+
 function addClassInfo(name, parent) {
     var l = parent.concat([name]);
     if (classesArr[l.join(".")] == null) {
-        classesArr[l.join(".")] = {
-            "memberof": parent.join("."),
-            "member": [],
-            "function": [],
-            "globalMember": [],
-            "globalFunction": []
-        };
+        return clearClassInfo(name, parent);
     }
 
     return classesArr[l.join(".")];
@@ -77,8 +83,19 @@ function analyze(item, name, parent, filename) {
         case "class":
         case "enum":
 
+            if (name == "Timer") {
+                console.log(1111)
+            }
             var classInfo = addClassInfo(name, tempParent);
             delete classInfo["memberof"];
+
+            if (classInfo["class"] && item.bodyType == "interface") {
+                return;
+            }
+            if (classInfo["class"] && item.bodyType == "class") {
+                classInfo = clearClassInfo(name, tempParent);
+                delete classInfo["memberof"];
+            }
 
             var tempClass = classInfo["class"] = {};
             tempClass["kind"] = item.bodyType;

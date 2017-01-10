@@ -141,7 +141,7 @@
 			"params": [
 				{
 					"name": "childSet",
-					"type": "Array<any>",
+					"type": "any[]",
 					"description": ""
 				}
 			],

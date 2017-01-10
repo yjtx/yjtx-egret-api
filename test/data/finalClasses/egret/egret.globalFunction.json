@@ -38,7 +38,7 @@
 			"description": "延迟函数到屏幕重绘前执行。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;callLater&nbsp;实现延迟函数。<br/>&nbsp;*/<br/>class&nbsp;callLaterExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;label:egret.TextField;<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;TextField&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label&nbsp;=&nbsp;new&nbsp;egret.TextField();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置文本颜色<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.textColor&nbsp;=&nbsp;0xFF0000;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置字号<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.size&nbsp;=&nbsp;30;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置显示文本<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;Hello&nbsp;Egret&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加到显示列表<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.label);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;beforeCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.callLater(this.onCallLater,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;afterCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onCallLater():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;onCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;callLater&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;callLater&nbsp;实现延迟函数。<br/>&nbsp;*/<br/>class&nbsp;callLaterExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;label:egret.TextField;<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//创建&nbsp;TextField&nbsp;对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label&nbsp;=&nbsp;new&nbsp;egret.TextField();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置文本颜色<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.textColor&nbsp;=&nbsp;0xFF0000;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置字号<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.size&nbsp;=&nbsp;30;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//设置显示文本<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;Hello&nbsp;Egret&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//添加到显示列表<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(this.label);<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;beforeCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.callLater(this.onCallLater,&nbsp;this);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;afterCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;onCallLater():void&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(&quot;onCallLater&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.label.text&nbsp;=&nbsp;&quot;callLater&quot;;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 			"params": [
 				{
 					"name": "method",
@@ -88,12 +88,31 @@
 			"description": "返回 name 参数指定的类的类对象引用。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getDefinitionByName&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getDefinitionByNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getDefinitionByName(&quot;egret.DisplayObject&quot;));//egret.DisplayObject对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getDefinitionByName(&quot;egret.Nothing&quot;));//null<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;cls:any&nbsp;=&nbsp;egret.getDefinitionByName(&quot;egret.Shape&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;shape:egret.Shape&nbsp;=&nbsp;new&nbsp;cls();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.beginFill(0xff0000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.drawRect(0,&nbsp;0,&nbsp;100,&nbsp;100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.x&nbsp;=&nbsp;shape.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(shape);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getDefinitionByName&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getDefinitionByNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getDefinitionByName(&quot;egret.DisplayObject&quot;));//egret.DisplayObject对象<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getDefinitionByName(&quot;egret.Nothing&quot;));//null<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;cls:any&nbsp;=&nbsp;egret.getDefinitionByName(&quot;egret.Shape&quot;);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;shape:egret.Shape&nbsp;=&nbsp;new&nbsp;cls();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.beginFill(0xff0000);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.drawRect(0,&nbsp;0,&nbsp;100,&nbsp;100);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.graphics.endFill();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape.x&nbsp;=&nbsp;shape.y&nbsp;=&nbsp;100;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.addChild(shape);<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 			"params": [
 				{
 					"name": "name",
 					"type": "string",
 					"description": "类的名称。"
+				}
+			]
+		},
+		{
+			"filename": "egret\\system\\Implementation.ts",
+			"kind": "globalFunction",
+			"type": "any",
+			"name": "getImplementation",
+			"memberof": "egret",
+			"scope": "instance",
+			"description": "获取一个接口实现。此方法通常由框架内部调用。获取项目注入的自定义实现实例。",
+			"returns": "返回实现此接口的实例。",
+			"version": "Egret 3.2.1",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "interfaceName",
+					"type": "string",
+					"description": "要获取的接口名称。例如：\"eui.IAssetAdapter\",\"eui.Theme\""
 				}
 			]
 		},
@@ -124,7 +143,7 @@
 			"scope": "instance",
 			"description": "返回对象的完全限定类名。",
 			"returns": "包含完全限定类名称的字符串。",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getQualifiedClassNameExample&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getQualifiedClassNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getQualifiedClassName(egret.DisplayObject));//egret.DisplayObject<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getQualifiedClassName(window));//Window<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getQualifiedClassNameExample&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getQualifiedClassNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getQualifiedClassName(egret.DisplayObject));//egret.DisplayObject<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getQualifiedClassName(window));//Window<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
@@ -144,7 +163,7 @@
 			"scope": "instance",
 			"description": "返回 value 参数指定的对象的基类的完全限定类名。",
 			"returns": "完全限定的基类名称，或 null（如果不存在基类名称）。",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getQualifiedClassNameExample&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getQualifiedSuperClassNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sp1&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sp2&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getQualifiedSuperclassName(sp1));//egret.DisplayObjectContainer<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getQualifiedSuperclassName(sp2));//egret.DisplayObject<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;getQualifiedClassNameExample&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;getQualifiedSuperClassNameExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sp1&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;sp2&nbsp;=&nbsp;new&nbsp;egret.Shape();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getQualifiedSuperclassName(sp1));//egret.DisplayObjectContainer<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getQualifiedSuperclassName(sp2));//egret.DisplayObject<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}<br/></pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
@@ -152,6 +171,26 @@
 					"name": "value",
 					"type": "any",
 					"description": "需要取得父类的对象，可以将任何 JavaScript 值传递给此方法，包括所有可用的 JavaScript 类型、对象实例、原始类型（如number）和类对象"
+				}
+			]
+		},
+		{
+			"filename": "Defines.debug.ts",
+			"kind": "globalFunction",
+			"type": "string",
+			"name": "getString",
+			"memberof": "egret",
+			"scope": "instance",
+			"params": [
+				{
+					"name": "code",
+					"type": "number",
+					"description": ""
+				},
+				{
+					"name": "...params",
+					"type": "any[]",
+					"description": ""
 				}
 			]
 		},
@@ -166,7 +205,7 @@
 			"returns": "启动 Egret 框架以来经过的毫秒数。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;getTimer&nbsp;获取启动&nbsp;Egret&nbsp;引擎以来经过的毫秒数。<br/>&nbsp;*/<br/>class&nbsp;getTimerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(this,&nbsp;{loop:true}).wait(1000).call(function&nbsp;(){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.getTimer());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了使用&nbsp;getTimer&nbsp;获取启动&nbsp;Egret&nbsp;引擎以来经过的毫秒数。<br/>&nbsp;*/<br/>class&nbsp;getTimerExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.Tween.get(this,&nbsp;{loop:true}).wait(1000).call(function&nbsp;(){<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.getTimer());<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>"
 		},
 		{
 			"filename": "egret\\utils\\hasDefinition.ts",
@@ -177,7 +216,7 @@
 			"scope": "instance",
 			"description": "检查指定的应用程序域之内是否存在一个公共定义。该定义可以是一个类、一个命名空间或一个函数的定义。",
 			"returns": "公共定义是否存在",
-			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;hasDefinition&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;hasDefinitionExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.hasDefinition(&quot;egret.DisplayObject&quot;));//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.hasDefinition(&quot;egret.Nothing&quot;));//false<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+			"example": "<pre>/**<br/>&nbsp;*&nbsp;以下示例演示了&nbsp;hasDefinition&nbsp;的使用方式。<br/>&nbsp;*/<br/>class&nbsp;hasDefinitionExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.hasDefinition(&quot;egret.DisplayObject&quot;));//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.hasDefinition(&quot;egret.Nothing&quot;));//false<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
@@ -197,7 +236,7 @@
 			"scope": "instance",
 			"description": "检查指定对象是否为 Egret 框架内指定接口或类或其子类的实例。此方法与使用 instanceOf 关键字相比具有更高的性能，并且能判断接口的实现。",
 			"returns": "返回true表示当前对象是指定类或接口的实例。",
-			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;instance&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Sprite&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.DisplayObjectContainer&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Bitmap&quot;))&nbsp;&nbsp;//false<br/></pre>",
+			"example": "<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;instance&nbsp;=&nbsp;new&nbsp;egret.Sprite();<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Sprite&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.DisplayObjectContainer&quot;))&nbsp;&nbsp;//true<br/>&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(instance,&quot;egret.Bitmap&quot;))&nbsp;&nbsp;//false<br/></pre>",
 			"see": [
 				"egret.registerClass()"
 			],
@@ -246,7 +285,7 @@
 			"memberof": "egret",
 			"scope": "instance",
 			"description": "为一个类定义注册运行时类信息,用此方法往类定义上注册它自身以及所有接口对应的字符串。在运行时，这个类的实例将可以使用 egret.is() 方法传入一个字符串来判断实例类型。",
-			"example": "以下代码演示了如何为EventDispatcher类注册运行时类信息并判断类型：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//为egret.EventDispatcher类注册运行时类信息，由于它实现了IEventDispatcher接口，这里应同时传入接口名对应的字符串。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.registerClass(egret.EventDispatcher,&quot;egret.EventDispatcher&quot;,[&quot;egret.IEventDispatcher&quot;]);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;dispatcher&nbsp;=&nbsp;new&nbsp;egret.EventDispatcher();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.IEventDispatcher&quot;));&nbsp;&nbsp;//true。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.EventDispatcher&quot;));&nbsp;&nbsp;&nbsp;//true。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.Bitmap&quot;));&nbsp;&nbsp;&nbsp;//false。<br/></pre>注意：若您使用 TypeScript 来编写程序，egret 命令行会自动帮您生成类信息注册代码行到最终的 Javascript 文件中。因此您不需要手动调用此方法。",
+			"example": "以下代码演示了如何为EventDispatcher类注册运行时类信息并判断类型：<pre><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//为egret.EventDispatcher类注册运行时类信息，由于它实现了IEventDispatcher接口，这里应同时传入接口名对应的字符串。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.registerClass(egret.EventDispatcher,&quot;egret.EventDispatcher&quot;,[&quot;egret.IEventDispatcher&quot;]);<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;dispatcher&nbsp;=&nbsp;new&nbsp;egret.EventDispatcher();<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.IEventDispatcher&quot;));&nbsp;&nbsp;//true。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.EventDispatcher&quot;));&nbsp;&nbsp;&nbsp;//true。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.is(dispatcher,&nbsp;&quot;egret.Bitmap&quot;));&nbsp;&nbsp;&nbsp;//false。<br/></pre>注意：若您使用 TypeScript 来编写程序，egret 命令行会自动帮您生成类信息注册代码行到最终的 Javascript 文件中。因此您不需要手动调用此方法。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
 			"params": [
@@ -265,6 +304,69 @@
 					"question": true,
 					"type": "string[]",
 					"description": "要注册的类所实现的接口名列表。"
+				}
+			]
+		},
+		{
+			"filename": "egret\\utils\\FontMapping.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "registerFontMapping",
+			"memberof": "egret",
+			"scope": "instance",
+			"description": "注册字体映射",
+			"version": "Egret 3.2.3",
+			"platform": "Native",
+			"params": [
+				{
+					"name": "fontFamily",
+					"type": "string",
+					"description": "要注册的字体名称"
+				},
+				{
+					"name": "value",
+					"type": "string",
+					"description": "注册的字体值"
+				}
+			]
+		},
+		{
+			"filename": "egret\\system\\Implementation.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "registerImplementation",
+			"memberof": "egret",
+			"scope": "instance",
+			"description": "注册一个接口实现。",
+			"version": "Egret 3.2.1",
+			"platform": "Web,Native",
+			"params": [
+				{
+					"name": "interfaceName",
+					"type": "string",
+					"description": "注入的接口名称。例如：\"eui.IAssetAdapter\",\"eui.Theme\""
+				},
+				{
+					"name": "instance",
+					"type": "any",
+					"description": "实现此接口的实例。"
+				}
+			]
+		},
+		{
+			"filename": "egret\\player\\EgretEntry.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "runEgret",
+			"memberof": "egret",
+			"scope": "instance",
+			"description": "egret工程入口函数",
+			"params": [
+				{
+					"name": "options",
+					"question": true,
+					"type": "{renderMode?:string;audioType?:number;screenAdapter?:egret.sys.IScreenAdapter}",
+					"description": "一个可选对象，包含初始化Egret引擎需要的参数。"
 				}
 			]
 		},
@@ -381,7 +483,7 @@
 			"returns": "颜色字符串，例如\"#ffffff\"。",
 			"version": "Egret 2.4",
 			"platform": "Web,Native",
-			"example": "<pre>/**<br/>*&nbsp;&nbsp;&nbsp;使用以下代码将红色进行进制转换<br/>*/<br/>class&nbsp;toColorStringExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;color1:&nbsp;number&nbsp;=&nbsp;0xFF0000;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(color1);&nbsp;&nbsp;//16711680&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(egret.toColorString(color1));&nbsp;&nbsp;//#FF0000&nbsp;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
+			"example": "<pre>/**<br/>*&nbsp;&nbsp;&nbsp;使用以下代码将红色进行进制转换<br/>*/<br/>class&nbsp;toColorStringExample&nbsp;extends&nbsp;egret.DisplayObjectContainer&nbsp;{<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;constructor()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super();<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;color1:&nbsp;number&nbsp;=&nbsp;0xFF0000;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(color1);&nbsp;&nbsp;//16711680&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;egret.log(egret.toColorString(color1));&nbsp;&nbsp;//#FF0000&nbsp;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>}</pre>",
 			"params": [
 				{
 					"name": "value",
@@ -389,6 +491,15 @@
 					"description": "颜色值，例如 0xffffff"
 				}
 			]
+		},
+		{
+			"filename": "egret\\player\\EgretEntry.ts",
+			"kind": "globalFunction",
+			"type": "void",
+			"name": "updateAllScreens",
+			"memberof": "egret",
+			"scope": "instance",
+			"description": "刷新屏幕显示"
 		},
 		{
 			"filename": "egret\\system\\Console.ts",

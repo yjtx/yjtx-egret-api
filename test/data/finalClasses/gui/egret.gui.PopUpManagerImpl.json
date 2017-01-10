@@ -31,7 +31,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "popUpList",
 			"memberof": "egret.gui.PopUpManagerImpl",
 			"scope": "instance",

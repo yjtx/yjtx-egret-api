@@ -89,12 +89,12 @@
 				},
 				{
 					"name": "keys",
-					"type": "Array<string>",
+					"type": "string[]",
 					"description": ""
 				},
 				{
 					"name": "values",
-					"type": "Array<string>",
+					"type": "string[]",
 					"description": ""
 				}
 			]

@@ -22,7 +22,7 @@ node tscdoc.js --path test/classes/base --output ../test/data/ --examples test/e
 
 
 //egret 项目注释生成
-node tscdoc.js --path test/classes/EgretTest/src --output ../test/data/ --dependence /Users/yjtx/Sites/Egret/egret-core/egret-core-master/src
+node tscdoc.js --path test/classes/EgretTest/src --output ../test/data/ --dependence ../../../Work/Egret/egret-core/egret-core-master/src
 node tscdoc.js --path test/classes/EgretTest/src --output ../test/data/ --dependence test/classes/EgretTest/libs
 
 node tscdoc.js --path test/classes/EgretTest/libs --output ../test/data/
@@ -35,3 +35,6 @@ node tscdoc.js --path /Users/yjtx/Sites/Egret/egret-game-library/tiled/libsrc/sr
 node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src /Users/yjtx/Sites/Egret/DragonBones/core /Users/yjtx/Sites/Egret/DragonBones/renderer/egret/src/dragonbones --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret db db
 
 node tscdoc.js --path /Applications/Egret/EgretEngine.app/Contents/Resources/mac/egret/src --output ../test/data/ --examples ../../../Egret/egret-examples/CoreExample/src --language zh_cn --type egret
+
+
+node tscdoc.js --path ../../../Work/Egret/egret-core/egret-core-master/src ../../../Work/Egret/egret-core/egret-core-master/build/dragonBones --output ../test/data/ --examples ../../../Work/Egret/egret-examples/CoreExample/src --language zh_cn --type egret db

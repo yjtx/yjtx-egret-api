@@ -23,7 +23,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "source",
 			"memberof": "egret.gui.ArrayCollection",
 			"scope": "instance",
@@ -40,7 +40,7 @@
 			"params": [
 				{
 					"name": "source",
-					"type": "Array<any>",
+					"type": "any[]",
 					"default": "null",
 					"description": "数据源"
 				}
@@ -417,7 +417,7 @@
 			"params": [
 				{
 					"name": "newSource",
-					"type": "Array<any>",
+					"type": "any[]",
 					"description": "新的数据源"
 				}
 			]

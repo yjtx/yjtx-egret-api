@@ -10,7 +10,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "elementsContent",
 			"memberof": "egret.gui.Skin",
 			"scope": "instance",
@@ -125,7 +125,7 @@
 		},
 		{
 			"kind": "member",
-			"type": "Array<any>",
+			"type": "any[]",
 			"name": "states",
 			"memberof": "egret.gui.Skin",
 			"scope": "instance",
