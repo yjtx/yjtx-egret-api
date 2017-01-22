@@ -215,7 +215,7 @@ function saveGzip(dicRoot, module) {
     var zip = new ZipWriter();
 
     for (var tempKey in files) {
-        zip.addFile(path.join(module, file.getFileName(files[tempKey]) + ".json"), path.resolve(files[tempKey]));
+        zip.addFile(path.join(file.getFileName(files[tempKey]) + ".json"), path.resolve(files[tempKey]));
     }
     zip.toBuffer(function (buf) {
     });
