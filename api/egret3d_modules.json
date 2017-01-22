@@ -1,5 +1,6 @@
 {
     "modules": {
+    	"egret3d":"./"
     },
     "exclude" : [
     ]
